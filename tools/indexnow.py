@@ -11,7 +11,7 @@ if urls == ["--all"]:
     urls = re.findall(r"<loc>(.*?)</loc>", sm)
 host = C.SITE_URL.split("//")[1]
 body = json.dumps({"host": host, "key": C.INDEXNOW_KEY, "keyLocation": f"{C.SITE_URL}/{C.INDEXNOW_KEY}.txt", "urlList": urls[:10000]}).encode()
-req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body, headers={"Content-Type": "application/json; charset=utf-8"})
+req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body, headers={"Content-Type": "application/json; charset=utf-8", "User-Agent": "Mozilla/5.0 (compatible; EastbridgeIndexNow/1.0; +https://eastbridgestrategicpartners.com)"})
 try:
     r = urllib.request.urlopen(req, timeout=30); print("IndexNow", r.status, len(urls), "URLs")
 except Exception as e:
