@@ -38,7 +38,7 @@ Calculator: all live-updating text is translated (fixed in the October review ro
 2. **Fees**: published (`PUBLISH_FEES = True`, figures in `FEES`). Set it to False to hide them.
 3. **Hero film**: `HERO_VIDEO = False` by default (see the section below). Enable only after the Vimeo embed domain is allowed.
 4. **Analytics and verification**: set `GA4_ID` (e.g. `G-XXXXXXX`), `GSC_VERIFICATION` (Google Search Console HTML-tag code) and optionally `BING_VERIFICATION`. Rebuild and deploy, then verify the property in Search Console and Bing Webmaster Tools and submit `https://eastbridgestrategicpartners.com/sitemap.xml` in both.
-5. **Netlify**: link the site to the GitHub repository (build settings come from `netlify.toml`). In Netlify Forms, turn on form detection and set email notifications for the `brief` and `notes` forms.
+5. **Netlify** — done 31 Oct 2026: linked to `pcc40/eastbridge-website` (auto-publish from `main`, deploys from non-team Git contributors auto-approved), form detection on, `brief`, `checklist` and `notes` forms active, submission emails to philip@eastbridgestrategicpartners.com.
 6. **Netlify environment variables** for `submission-created` (Project configuration → Environment variables). Without the first two, forms still work but no emails are sent:
    - `EMAIL_API_KEY` — Resend API key (or Postmark server token) — required for email
    - `EMAIL_FROM` — e.g. `Eastbridge Strategic Partners <philip@eastbridgestrategicpartners.com>`; the domain must be verified with the email provider (DNS records) — required for email
