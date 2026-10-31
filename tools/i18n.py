@@ -263,7 +263,8 @@ def translate_page(f, lang, tr, missing):
                     node.append(c)
     if soup.title:
         v = T(soup.title.get_text())
-        if v: soup.title.string = v
+        # untranslated title: keep it unique per language until the translation lands
+        soup.title.string = v if v else f"{soup.title.get_text()} ({NATIVE[lang]})"
     for el, a, orig in attrs:
         v = T(orig)
         if v: el[a] = re.sub(r"<[^>]+>", "", v)
