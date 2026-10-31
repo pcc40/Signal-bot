@@ -205,6 +205,26 @@ def work_hub():
            "Award-winning private houses, estates, developments and hotel work built by P Chapman Construction, the company Eastbridge founder Philip Chapman led for 21 years.",
            body, crumbs, og=B.og_image("owers-house-02"))
 
+def project_case_html(p):
+    """A real UK project written up as a case study: brief, role, constraints, work delivered, documented outcome."""
+    c = p.get("case")
+    if not c:
+        return ""
+    li = lambda xs: "".join(f"<li>{esc(x)}</li>" for x in xs)
+    src_t, src_u = c["source"]
+    return f'''<section class="section stone" id="case-study" aria-labelledby="case-study-h"><div class="wrap">
+<div class="head-row"><div><span class="kicker">UK project case study</span><h2 id="case-study-h">{esc(p["name"])}: the project in detail</h2></div>
+<p class="muted">UK contracting work by P Chapman Construction as main contractor. It is not an Eastbridge appointment or a UAE project.</p></div>
+<div class="split"><div class="prose">
+<h3>The brief</h3><p>{esc(c["brief"])}</p>
+<h3>P Chapman Construction's role</h3><p>{esc(c["role"])}</p>
+<h3>Constraints</h3><ul>{li(c["constraints"])}</ul></div>
+<div class="prose">
+<h3>The work delivered</h3><ul>{li(c["delivered"])}</ul>
+<h3>Documented outcome</h3><ul>{li(c["outcome"])}</ul>
+<p class="small muted">These awards recognise the house and its project team, led by the architect. They are not personal awards to Philip Chapman or awards to Eastbridge. Architect: {esc(p["architect"])}. Photography: {esc(p["photo"])}. Source: <a href="{src_u}" rel="noopener">{esc(src_t)}</a>.</p>
+</div></div></div></section>'''
+
 def project_page(p):
     path = f"/work/{p['slug']}/"
     crumbs = [("Home", "/"), ("Work", "/work/"), (p["name"], path)]
@@ -223,8 +243,9 @@ def project_page(p):
     nxt = PROJECTS[(idx + 1) % len(PROJECTS)]
     body = B.banner(crumbs, esc(p["name"]), esc(p["summary"]), imgs[0]["base"], credit) + f'''
 <section class="section"><div class="wrap split">
-<div><dl class="facts"><div><dt>Location</dt><dd>{esc(p["place"])}</dd></div><div><dt>Project</dt><dd>{esc(p["type"])}</dd></div><div><dt>Built by</dt><dd>P Chapman Construction</dd></div>{('<div><dt>Architect</dt><dd>' + esc(p["architect"]) + '</dd></div>') if p["architect"] else ""}{('<div><dt>Recognition</dt><dd>' + esc(p["recognition"]) + '</dd></div>') if p["recognition"] else ""}</dl>{('<p class="small muted" style="margin-top:14px">Design team: ' + esc(p["team"]) + '</p>') if p["team"] else ""}</div>
+<div><dl class="facts"><div><dt>Location</dt><dd>{esc(p["place"])}</dd></div><div><dt>Project</dt><dd>{esc(p["type"])}</dd></div><div><dt>Built by</dt><dd>P Chapman Construction</dd></div>{('<div><dt>Architect</dt><dd>' + esc(p["architect"]) + '</dd></div>') if p["architect"] else ""}{('<div><dt>Recognition</dt><dd>' + esc(p["recognition"]) + '</dd></div>') if p["recognition"] else ""}</dl>{('<p class="small muted" style="margin-top:14px">Project team: ' + esc(p["team"]) + '</p>') if p["team"] else ""}</div>
 <div class="prose">{p["text"]}<h2>Why it matters for a Dubai villa</h2><p>{esc(p["dubai"])}</p></div></div></section>
+{project_case_html(p)}
 {video}
 <section class="section--tight"><div class="wrap"><div class="gallery">{"".join(figs)}</div><p class="small muted" style="margin-top:12px">{esc(credit)}</p></div></section>
 <section class="section paper"><div class="wrap split"><div><p class="muted">Next project</p><h2><a href="/work/{nxt["slug"]}/" style="text-decoration:none">{esc(nxt["name"])}</a></h2><p class="muted">{esc(nxt["type"])}, {esc(nxt["place"])}</p></div>
@@ -232,7 +253,12 @@ def project_page(p):
 {B.cta_band()}'''
     schema = [{"@context": "https://schema.org", "@type": "CreativeWork", "name": f"{p['name']}, {p['place']}",
                "about": p["type"], "description": p["summary"], "image": [B.url(f"/assets/img/{m['base']}-1280.webp") for m in imgs[:4]],
-               "creator": {"@id": B.ORG_ID}, "locationCreated": {"@type": "Place", "name": p["place"]}}]
+               "contributor": {"@type": "Organization", "name": "P Chapman Construction", "url": C.FOUNDER["company_uk_url"]},
+               "locationCreated": {"@type": "Place", "name": p["place"]}}]
+    if p["architect"]:
+        schema[0]["creator"] = {"@type": "Organization", "name": p["architect"]}
+    if p.get("case"):
+        schema[0]["award"] = [o for o in p["case"]["outcome"] if "Award" in o or "longlist" in o]
     B.page(path, f"{p['name']}, {p['place'].replace(', Cornwall', '')} | Eastbridge Work",
            (f"{p['name']}, {p['place']}: {p['summary']} Built by P Chapman Construction." if len(p['summary']) < 105 else f"{p['name']}, {p['place']}: {p['summary']}"),
            body, crumbs, schema, og=B.og_image(imgs[0]["base"]), preload=f"/assets/img/{imgs[0]['base']}-1280.webp")
@@ -427,7 +453,7 @@ def contact():
         ("A written next step", "If we can help, a scope and fixed fee for the first stage. If we can't, we will say so and, where we can, point you to someone who can."),
     ]
     reads = [("/why-a-client-side-project-manager/", "Why a client-side project manager", "What the role is, and where it pays for itself."),
-             ("/case-studies/island-e-waterfront-villa/", "Illustrative case study", "How we would run an Island E waterfront villa, from plot to keys."),
+             ("/case-studies/island-e-waterfront-villa/", "Island E: worked project example", "A hypothetical example of how we would manage an Island E villa, from plot to keys."),
              ("/insights/villa-construction-cost-dubai/", "What it costs to build a villa in Dubai", "Published 2026 build costs, tier by tier.")]
     read_html = "".join(f'<li><a href="{u}"><b>{esc(t)}</b><span>{esc(d)}</span></a></li>' for u, t, d in reads)
     tcrumbs = [("Home", "/"), ("Contact", "/contact/"), ("Thank you", "/contact/thanks/")]

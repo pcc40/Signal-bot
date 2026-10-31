@@ -280,7 +280,7 @@ def header(path):
     mega = (f'<div class="mega"><div><h4>For your project</h4><ul>{l1}</ul></div>'
             f'<div><h4>At every stage</h4><ul>{l2}</ul></div>'
             f'<a class="mega-feature" href="/case-studies/island-e-waterfront-villa/">{picture("saqqara-01", "", "240px")}'
-            f'<span>Illustrative case study: an Island E waterfront villa, from plot to keys</span></a></div>')
+            f'<span>Worked project example (hypothetical): how we would manage an Island E villa</span></a></div>')
     svc_cur = cur if path.startswith("/services/") else ""
     return f'''<a class="skip" href="#main">Skip to content</a>
 <div class="utility"><div class="wrap"><span class="u-left">Client-side project management for private villas in Dubai and Abu Dhabi</span>
@@ -290,7 +290,7 @@ def header(path):
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
 <nav class="nav" id="nav" aria-label="Main"><button class="menu-close" type="button" aria-label="Close menu">Close</button><ul>
 <li class="has-mega"><a href="/services/"{svc_cur}>Services</a>{mega}</li>
-{a("Why client-side", "/why-a-client-side-project-manager/")}{a("Case study", "/case-studies/")}{a("Work", "/work/")}{a("Insights", "/insights/")}{a("About", "/about/")}
+{a("Why client-side", "/why-a-client-side-project-manager/")}{a("Case studies", "/case-studies/")}{a("Work", "/work/")}{a("Insights", "/insights/")}{a("About", "/about/")}
 </ul><a class="btn" href="/contact/">Start a brief</a></nav>
 </div></header>'''
 
@@ -310,7 +310,7 @@ def footer():
 <p>{esc(C.ADDRESS["street"])}<br>{esc(C.ADDRESS["locality"])}, {esc(C.ADDRESS["country_name"])}</p></div>
 <div><h3>Services</h3><ul>{svc}<li><a href="/services/">All services</a></li></ul></div>
 <div><h3>Where we work</h3><ul>{ar}<li><a href="/areas/">All areas</a></li></ul></div>
-<div><h3>Firm</h3><ul><li><a href="/why-a-client-side-project-manager/">Why client-side</a></li><li><a href="/case-studies/">Case study</a></li><li><a href="/work/">Work</a></li><li><a href="/about/">About</a></li><li><a href="/approach/">How we work</a></li><li><a href="/independence/">Independence pledge</a></li><li><a href="/fees/">How fees work</a></li><li><a href="/tools/villa-build-cost-calculator/">Cost calculator</a></li><li><a href="/insights/">Insights</a></li><li><a href="/guides/villa-owner-checklist/">Pre-construction checklist</a></li><li><a href="/faq/">Questions</a></li><li><a href="/glossary/">Glossary</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+<div><h3>Firm</h3><ul><li><a href="/why-a-client-side-project-manager/">Why client-side</a></li><li><a href="/case-studies/">Case studies</a></li><li><a href="/work/">Work</a></li><li><a href="/about/">About</a></li><li><a href="/approach/">How we work</a></li><li><a href="/independence/">Independence pledge</a></li><li><a href="/fees/">How fees work</a></li><li><a href="/tools/villa-build-cost-calculator/">Cost calculator</a></li><li><a href="/insights/">Insights</a></li><li><a href="/guides/villa-owner-checklist/">Pre-construction checklist</a></li><li><a href="/faq/">Questions</a></li><li><a href="/glossary/">Glossary</a></li><li><a href="/contact/">Contact</a></li></ul></div>
 </div>
 <div class="legal"><span>© {year} {C.LEGAL}. {C.LICENCE}. Eastbridge acts as the client's project manager and representative. It is not a contractor and does not replace the registered consultant of record required by the authorities.</span>
 <span><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/sitemap.xml">Sitemap</a></span></div>
@@ -575,10 +575,11 @@ def llms_facts():
             "- Working language: English",
             f"- Founder: {C.FOUNDER['name']}, who founded and led P Chapman Construction (UK premium residential contractor) for 21 years: {url('/about/#founder')}",
             "- Portfolio: homes built by P Chapman Construction (UK), the contractor founded and led by Philip Chapman; recognition includes a RIBA South West Award (Owers House, 2016), an LABC Building Excellence Award (2018 winner) and a Highly Commended in 2020; a home featured on Channel 4's Grand Designs",
-            f"- Case study: {url('/case-studies/island-e-waterfront-villa/')} (illustrative, modelled scenario, not a completed Eastbridge project)"]
+            f"- UK project case study: {url('/work/owers-house/')} (Owers House, built by P Chapman Construction as main contractor; architect John Pardey Architects; RIBA South West Award 2016)",
+            f"- Worked project example: {url('/case-studies/island-e-waterfront-villa/')} (hypothetical, showing method only; not a completed Eastbridge project, a real client or a promise of savings; all outcomes are modelled)"]
 
 LLMS_FULL_PAGES = ["/about/", "/why-a-client-side-project-manager/", "/services/"]  # + every service page
-LLMS_FULL_TAIL = ["/approach/", "/independence/", "/fees/", "/faq/", "/case-studies/island-e-waterfront-villa/",
+LLMS_FULL_TAIL = ["/approach/", "/independence/", "/fees/", "/faq/", "/work/owers-house/", "/case-studies/island-e-waterfront-villa/",
                   "/tools/villa-build-cost-calculator/", "/glossary/", "/guides/villa-owner-checklist/"]
 LLMS_DROP = ("script", "style", "svg", "noscript", "form", "button", "img", "picture", "iframe")
 LLMS_DROP_CLASS = {"crumbs", "cta-band", "credit", "toc", "article-aside", "post-cards", "strip", "work-grid",
@@ -667,7 +668,8 @@ def write_llms(posts):
         f"- Full text of the key pages and every article, in one file: {url('/llms-full.txt')}",
         "", "## Start here",
         f"- [Why a client-side project manager]({url('/why-a-client-side-project-manager/')}): what an owner's representative does, and why it pays for itself",
-        f"- [Illustrative case study: Island E waterfront villa]({url('/case-studies/island-e-waterfront-villa/')}): a modelled plot-to-keys scenario on Dubai Islands",
+        f"- [Island E: worked project example]({url('/case-studies/island-e-waterfront-villa/')}): a hypothetical example of how we would manage a villa on Dubai Islands: budget structure, cash flow, tender comparison and programme (not a completed project)",
+        f"- [Owers House, UK project case study]({url('/work/owers-house/')}): a RIBA award-winning house built by P Chapman Construction as main contractor",
         f"- [Full text for AI assistants]({url('/llms-full.txt')}): services, about, fees, FAQ and all insights as plain text",
         "", "## Services"] + [f"- [{s['name']}]({url('/services/' + s['slug'] + '/')}): {s['description']}" for s in SERVICES] + \
         ["", "## Areas"] + [f"- [{a['name']}]({url('/areas/' + a['slug'] + '/')}): {a['tag']}; master developer {a['developer']}" for a in AREAS] + \
