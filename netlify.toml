@@ -5,6 +5,11 @@
 [build.environment]
   PYTHON_VERSION = "3.11"
 
+# Event-triggered function: netlify/functions/submission-created.js runs after each
+# verified form submission (auto-acknowledgement + lead log). See business/automation-blueprint.md.
+[functions]
+  directory = "netlify/functions"
+
 [[headers]]
   for = "/*"
   [headers.values]

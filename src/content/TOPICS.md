@@ -38,3 +38,20 @@
 - [ ] remote-villa-reporting-template | The weekly report every remote villa owner should get | construction progress report template | include a free template
 - [ ] villa-build-insurance-uae | Insurance on a villa build: CAR, liability and who holds it | contractor all risks uae | general guide; take broker advice
 - [ ] off-plan-villa-customisation | Customising an off-plan villa before handover | customise off plan villa dubai | what developers allow and when
+- [ ] which-dubai-authority-covers-my-villa | Dubai Municipality, Trakhees or DDA: how to find out which applies to your plot | dubai municipality vs trakhees vs dda | why the answer changes your programme; confirm with your consultant, never assume by community
+- [ ] villa-renovation-timeline-dubai | How long a villa renovation takes in Dubai | villa renovation timeline dubai | NOC, permit and long-lead items set the date, not the site work
+- [ ] villa-extension-dubai | Extending a Dubai villa: built-up area, approvals and cost | villa extension dubai | remaining allowable area, structure tie-ins, the extension that costs more than a rebuild
+- [ ] villa-renovation-mistakes-dubai | Villa renovation mistakes we saw from the contractor's side | villa renovation mistakes dubai | starting on site before the scope is frozen; ordering finishes late
+- [ ] older-villa-mep-renovation | Rewiring and replumbing an older Dubai villa | villa mep renovation dubai | what you find behind the walls and how contractors price the unknown
+- [ ] design-build-vs-separate-architect-villa | Design-and-build or separate architect and contractor? | design and build vs traditional villa dubai | who checks whom under each route
+- [ ] how-to-choose-client-side-project-manager | How to choose a client-side project manager for your villa | hire project manager villa dubai | independence questions to ask anyone, including us
+- [ ] emaar-community-villa-renovation | Renovating in an Emaar community: approvals and sequence | emaar noc villa renovation | developer NOC before authority permit; contractor access rules
+- [ ] dubai-building-code-villa-owners | The Dubai Building Code: what a villa owner needs to know | dubai building code villa | where code decisions drive cost; AI drawing checks (DM, Aug 2026)
+- [ ] al-safat-green-building-villa | Al Sa'fat green building rules on a new Dubai villa | al safat villa requirements | glazing, insulation and plant choices that are cheaper at design stage
+- [ ] summer-midday-break-villa-programme | Building through a Dubai summer: the midday break and your programme | midday break construction uae | how contractors plan around it and what owners should expect
+- [ ] construction-cost-inflation-uae | Will villa build costs rise in 2026? | construction cost inflation uae | escalation clauses, fixed-price validity, when to lock prices
+- [ ] abu-dhabi-minor-works-permit-villa | Pools, canopies and small extensions in Abu Dhabi: the minor works route | abu dhabi minor works permit | what the contractor can apply for directly and what still needs a consultant
+- [ ] abu-dhabi-private-villa-regulations-2025 | Abu Dhabi's 2025 private villa rule changes explained | abu dhabi private villa regulations | rooftop majlis, setbacks, annex basements and what they mean for design
+- [ ] jumeirah-islands-villa-renovation | Renovating a Jumeirah Islands villa | jumeirah islands villa renovation | Nakheel NOC sequence, lakeside works, older MEP
+- [ ] owner-supplied-items-ffe-villa | Owner-supplied items and FF&E: who carries the risk? | ffe villa dubai | attendance, storage, damage and programme when the owner buys direct
+- [ ] renovating-villa-to-sell-dubai | Renovating a Dubai villa to sell: where the budget should go | villa renovation roi dubai | what buyers pay for versus owner taste; no promised returns
