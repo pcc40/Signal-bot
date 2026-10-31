@@ -248,17 +248,27 @@ def approach():
 <h3>Every month</h3><ul><li>A written report: progress against programme, cost to complete, risks and issues</li><li>Our recommendation on the contractor's payment application</li><li>A review of variations, approved, rejected or pending</li></ul>
 <h3>At every key stage</h3><ul><li>A walk-round with you, in person or by video</li><li>A check that the next stage can start without avoidable risk</li></ul>
 <h3>Always</h3><ul><li>A decision log, so nothing you agree is forgotten or reopened</li><li>An issues log with owners and dates</li></ul>
+<p>The exact rhythm, including how often we are on site at each stage, is agreed in writing in your appointment.</p>
 </div></div></section>
 <section class="section paper"><div class="wrap split"><div><h2>Who does what</h2></div><div class="prose table-wrap">
 <table><thead><tr><th>Party</th><th>Their role</th></tr></thead><tbody>
 <tr><td>You, the owner</td><td>Decide, approve and pay. Appoint the consultant and contractor.</td></tr>
 <tr><td>Eastbridge</td><td>Represent you: brief, budget, programme, appointments advice, cost control, reporting, variations and claims, handover.</td></tr>
-<tr><td>registered consultant</td><td>Statutory design, authority submissions and the supervision duties required by law.</td></tr>
+<tr><td>Registered consultant</td><td>Statutory design, authority submissions and the supervision duties required by law.</td></tr>
 <tr><td>Main contractor</td><td>Build the villa to the contract, manage subcontractors and site safety.</td></tr>
+<tr><td>Other specialists</td><td>Quantity surveyors, engineers, testing labs and lawyers, appointed and paid by you when the project needs them.</td></tr>
 <tr><td>Master developer</td><td>Review the design against the community guidelines and issue NOCs.</td></tr>
 <tr><td>Permitting authority</td><td>Dubai Municipality, Trakhees or the Dubai Development Authority depending on your plot; the municipality via TAMM in Abu Dhabi.</td></tr>
 </tbody></table>
 <p>Read more in <a href="/insights/owners-representative-vs-project-manager-vs-consultant/">owner's representative vs project manager vs consultant</a>.</p></div></div></section>
+<section class="section" id="uae-appointments"><div class="wrap split"><div><h2>How an appointment works in the UAE</h2><p class="muted">What you can expect from us on a villa in Dubai or Abu Dhabi, and where our role stops.</p></div><div class="prose">
+<h3>Who leads your project</h3><p>Our founder, Philip Chapman, leads every Eastbridge appointment personally. He is the person you speak to from the first conversation to handover.</p>
+<h3>Site attendance and reporting</h3><p>How often we attend site, which meetings we attend on your behalf and the reports you receive are agreed in writing in the scope of each appointment, before work starts. Attendance follows the stage of the project: typically weekly during active construction, and more often at key stages such as waterproofing, first fix and pre-handover. Agreeing this up front means the time committed to your project is clear from the start.</p>
+<h3>Consultants, quantity surveyors, engineers and specialists</h3><p>Where the project needs a registered consultant, a quantity surveyor, an engineer or another specialist, you appoint them and pay them directly. We help you define what is needed, compare proposals like-for-like and choose. We take no commission or referral fee from any of them, and money never passes through us.</p>
+<h3>What we do, and what we don't</h3>
+<p>We provide commercial and project management on your side of the table: the brief, budget and programme, cost reporting, review of payments and variations, commercial and contractual advice, client-side site visits and reporting, decision and issues logs, and handover.</p>
+<p>We do not carry out statutory design, authority submissions or permit applications, statutory supervision or certification of the works. Those duties sit with the registered consultant you appoint. We do not give legal advice; where it is needed, take advice from a UAE-qualified lawyer, and we will work alongside them.</p>
+</div></div></section>
 <section class="section"><div class="wrap split"><div><h2>Why a builder's background matters</h2></div><div class="prose">
 <p>Most owner's representatives come from consultancy. Philip came from contracting. For 21 years our founder, Philip Chapman, ran P Chapman Construction, an award-winning premium building company, pricing tenders, running sites, preparing and defending extension of time and variation claims under JCT contracts, and handing over houses to demanding owners and architects.</p>
 <p>That background is unusual on the client side, and it is the point. We know where a contractor's price has room, where a programme has float, and which details get closed up before anyone looks. We use that knowledge fairly. Good contractors welcome an informed client, because informed clients make decisions on time and pay what is due.</p>
@@ -295,26 +305,59 @@ def fees():
     crumbs = [("Home", "/"), ("How fees work", "/fees/")]
     f = C.FEES
     show = C.PUBLISH_FEES
-    def amt(k, fallback):
-        return f'<strong>{esc(f[k])}</strong>' if show else fallback
+    def fixed(k):
+        # A figure appears only when the owner has approved publishing (config.PUBLISH_FEES).
+        return f'Fixed fee: <strong>{esc(f[k])}</strong>, confirmed in writing before we start.' if show else "Fixed fee, quoted in writing before we start."
+    rep_fee = (f'Monthly fee from <strong>{esc(f["monthly_from"])}</strong>, or <strong>{esc(f["percent_band"])}</strong> of construction cost. '
+               if show else "Monthly fee, or a percentage of construction cost. ")
+    steps = [
+        ("A free 30-minute call", "No cost and no obligation. You tell us about the plot, the villa or the project you are already in; we ask the questions a builder would ask and tell you plainly whether you need us, and which first step would help."),
+        ("A fixed-fee first review", "A plot and pre-purchase review, or a health check on a project already under way. We send the scope, what you will receive and the fee in writing, and start only when you have agreed it."),
+        ("An appointment, if you want one", "If you want us to carry on, we propose a written appointment for the stages you need, with the scope, site attendance, reporting and fee set out up front. The review does not commit you to it."),
+    ]
+    later = [
+        ("Brief, budget and team appointment", "The brief, a realistic budget and programme, and help choosing and appointing your consultant and contractor.",
+         "Fixed fee per stage, based on the size and complexity of the villa and the number of appointments you need to make."),
+        ('<a href="/services/owners-representative/">Owner\'s representation</a> during design and construction', "Cost and programme control, payment and variation review, client-side site visits, reporting, the decision log and handover.",
+         rep_fee + "Set by the scope, the site attendance and reporting agreed in your appointment, and the expected duration."),
+        ('<a href="/services/snagging-and-handover/">Snagging and handover</a> only', "Snagging inspections on your behalf, tracking of defects to close-out, and the handover documents.",
+         "Fixed fee, based on the size of the villa and the number of inspections needed."),
+        ('<a href="/services/variations-delays-and-claims/">Variations and claims advice</a>', "A review of a variation, delay or claim position, and support in negotiation.",
+         "Fixed fee per review, or hourly for negotiations. Quoted per matter once we have seen the papers."),
+    ]
+    later_rows = "".join(f"<tr><td>{a}</td><td>{esc(b)}</td><td>{c}</td></tr>" for a, b, c in later)
     body = B.banner(crumbs, "How our fees work", "Clear, fixed where possible, and paid only by you. We'd rather tell you the structure up front than surprise you later.", "owers-house-11", credit_of("owers-house-11")) + f'''
-<section class="section"><div class="wrap prose table-wrap">
-<table><thead><tr><th>Service</th><th>How it's charged</th><th>Typical fee</th></tr></thead><tbody>
-<tr><td><a href="/services/plot-due-diligence/">Plot and pre-purchase review</a></td><td>Fixed fee, agreed before we start</td><td>{amt("plot_review", "Fixed, quoted on request")}</td></tr>
-<tr><td><a href="/services/stalled-project-rescue/">Stalled project review</a></td><td>Fixed fee for the initial review</td><td>{amt("rescue_review", "Fixed, quoted on request")}</td></tr>
-<tr><td>Brief, budget and team appointment</td><td>Fixed fee per stage</td><td>Quoted on the size of the project</td></tr>
-<tr><td><a href="/services/owners-representative/">Owner's representation</a> during design and construction</td><td>Monthly fee, or a percentage of construction cost</td><td>{("From " + amt("monthly_from","") + " a month, or " + amt("percent_band","") + " of construction cost") if show else "Quoted on scope, site days and duration"}</td></tr>
-<tr><td><a href="/services/snagging-and-handover/">Snagging and handover</a> only</td><td>Fixed fee</td><td>Quoted on the size of the villa</td></tr>
-<tr><td><a href="/services/variations-delays-and-claims/">Variations and claims advice</a></td><td>Fixed fee per review, or hourly for negotiations</td><td>Quoted per matter</td></tr>
+<section class="section starts" aria-labelledby="fees-starts-h"><div class="wrap"><div class="head-row"><div><span class="kicker">How it starts</span><h2 id="fees-starts-h">From a free call to an appointment</h2></div><p class="muted">The call is free. After that, you decide at each step whether to go on.</p></div>
+{B.steps_html(steps)}</div></section>
+<section class="section paper" id="first-review"><div class="wrap split"><div><span class="kicker">First paid step</span><h2>Plot and pre-purchase review</h2>
+<dl class="facts"><div><dt>Who it's for</dt><dd>Buyers considering a villa plot, before they commit</dd></div><div><dt>How it's charged</dt><dd>{fixed("plot_review")}</dd></div><div><dt>Timing</dt><dd>Usually within five working days of receiving the plot documents</dd></div></dl>
+<p class="small"><a class="link" href="/services/plot-due-diligence/">About the plot review</a></p></div><div class="prose">
+<h3>Scope</h3><ul><li>The master developer's design guidelines: coverage, heights, setbacks and materials</li><li>Build-by deadlines and any penalties in the sale terms</li><li>Access, levels, neighbouring plots and practical buildability</li><li>A realistic build budget range for the house you want, and the total cost of ownership</li></ul>
+<h3>You receive</h3><ul><li>A short written report you can read in fifteen minutes</li><li>A total project budget range, not just a plot price</li><li>The risks that matter, and a list of questions to put to the seller or developer</li></ul>
+<h3>Not included</h3><ul><li>Legal advice on title or the sale contract: take advice from a UAE-qualified lawyer</li><li>Valuation: use a RICS or RERA-registered valuer</li><li>Design, surveys, ground investigation or authority submissions</li></ul>
+<h3>How the quotation is set</h3><p>By the number of plots you want reviewed, the documents available and the timetable you are working to. We confirm the fee and the scope in writing before we start.</p>
+</div></div></section>
+<section class="section"><div class="wrap split"><div><span class="kicker">First paid step</span><h2>Project health check</h2>
+<dl class="facts"><div><dt>Who it's for</dt><dd>Owners whose project is under way and stalled, late, over budget or in dispute</dd></div><div><dt>How it's charged</dt><dd>{fixed("rescue_review")}</dd></div><div><dt>Timing</dt><dd>We can usually start within a week; the full picture within two to three weeks</dd></div></dl>
+<p class="small"><a class="link" href="/services/stalled-project-rescue/">About stalled project rescue</a></p></div><div class="prose">
+<h3>Scope</h3><ul><li>An independent review of progress, quality, payments and the contract position</li><li>A realistic cost and time to complete</li><li>The options: continue, renegotiate or replace the contractor</li></ul>
+<h3>You receive</h3><ul><li>The full picture: where the project stands on progress, quality, payments and the contract</li><li>Clear options, each with its costs and risks</li><li>A recovery plan for the option you choose</li></ul>
+<h3>Not included</h3><ul><li>Legal advice on withholding payment, termination or disputes: take advice from a UAE-qualified lawyer</li><li>Statutory supervision, certification of work or engineering investigation, which remain with the registered consultant and any engineer you appoint</li><li>Running the recovery through to completion, which would be a separate appointment if you want one</li></ul>
+<h3>How the quotation is set</h3><p>By the size and stage of the villa, the volume of contract and payment records to review, and the site visits the review needs. We confirm the fee and the scope in writing before we start.</p>
+</div></div></section>
+<section class="section paper"><div class="wrap prose table-wrap"><h2>After the first review</h2>
+<p>Later stages are quoted once we understand the project. Each quotation sets out the scope and the fee in writing before any work starts.</p>
+<table><thead><tr><th>Service</th><th>What it covers</th><th>How the fee is set</th></tr></thead><tbody>
+{later_rows}
 </tbody></table>
 <h2>What's included</h2><ul><li>All our time, reporting and site visits as set out in your appointment</li><li>Travel within Dubai and to Abu Dhabi</li></ul>
-<h2>What's not included</h2><ul><li>Fees of the consultant, contractor, surveyors, testing labs or lawyers you appoint; you pay them directly</li><li>Authority and master developer fees</li><li>International travel at your request</li></ul>
+<h2>What's not included</h2><ul><li>Fees of the consultant, contractor, quantity surveyors, engineers, testing labs or lawyers you appoint; you pay them directly</li><li>Authority and master developer fees</li><li>International travel at your request</li></ul>
 <h2>What we never charge</h2><p>We never take commission, referral fees, mark-ups or rebates from anyone on your project. See our <a href="/independence/">independence pledge</a>.</p>
-<h2>Is it worth it?</h2><p>On a bespoke villa, one avoided variation dispute, one month of avoided delay or one design change caught before construction typically exceeds our fee. If we don't think your project needs us, we'll say so in the first conversation.</p>
+<h2>Is it worth it?</h2><p>Our fee is an addition to your project budget, so it should earn its place. What it pays for is regular cost reporting, programme monitoring, review of every payment and variation, a record of decisions, and early warning of risks while they are still cheap to deal with. If we don't think your project needs us, we'll say so in the free call.</p>
 </div></section>
-{B.cta_band("Ask for a fee proposal for your project.")}'''
+{B.cta_band("Start with a free 30-minute call.", f"{C.RESPONSE_PROMISE} to arrange a time. We will tell you which first step, if any, would help.")}'''
     B.page("/fees/", "Owner's Representative Fees in Dubai: How We Charge | Eastbridge",
-           "How we charge for villa owner's representation in Dubai: fixed fees for reviews, monthly or percentage fees in construction, and no commissions.",
+           "How we charge for villa owner's representation in Dubai: a free first call, a fixed-fee plot review or project health check, then a written appointment.",
            body, crumbs)
 
 def about():
@@ -344,6 +387,14 @@ def about():
 <li>We are a client-side project manager and owner's representative. We are not a contractor, an engineering consultancy, a law firm or an estate agency.</li>
 <li>We are paid only by the owner we represent. See our <a href="/independence/">independence pledge</a>.</li>
 </ul></div></div></section>
+<section class="section paper"><div class="wrap split"><div><h2>Working with us in the UAE</h2></div><div class="prose">
+<ul>
+<li>Philip leads every appointment personally.</li>
+<li>Site attendance and reporting are agreed in writing in the scope of each appointment, before work starts.</li>
+<li>Registered consultants, quantity surveyors, engineers and other specialists are appointed and paid by you directly when the project needs them. We help you compare proposals and choose.</li>
+<li>Our role is commercial and project management on your side. Statutory design, authority submissions and supervision stay with your registered consultant, and legal advice with your UAE-qualified lawyer.</li>
+</ul>
+<p>More detail in <a href="/approach/#uae-appointments">how an appointment works in the UAE</a> and <a href="/fees/">how our fees work</a>.</p></div></div></section>
 {B.cta_band()}'''
     B.page("/about/", "About Eastbridge and Founder Philip Chapman | Dubai",
            "Eastbridge is led by Philip Chapman, who built P Chapman Construction into an award-winning £17m premium contractor over 21 years. Now he works only for villa owners.",
@@ -353,8 +404,14 @@ def about():
 FAQ_ALL = [
  ("What is an owner's representative?", "An owner's representative is a professional who acts only for the person paying for a building project. On a villa, we set the budget and programme, help appoint the consultant and contractor, control cost and time, report progress, handle variations and claims, and lead handover."),
  ("Do I need an owner's representative to build a villa in Dubai?", "It isn't required by law. It is most valuable on bespoke villas, major renovations, and projects where the owner is often abroad or has not built before. We will tell you honestly if you don't need us."),
- ("How is that different from the consultant I have to appoint?", "In Dubai, a registered consultant carries the statutory design, submission and supervision responsibilities. They work for the project's compliance and design. We work only for you, alongside them, on cost, time, decisions, contracts and quality."),
+ ("How is that different from the consultant I have to appoint?", "In Dubai, a registered consultant carries the statutory design, submission and supervision responsibilities. Those duties are theirs and they matter. We work only for you, alongside them, on cost, time, decisions, contracts and quality."),
+ ("Who will lead my project?", "Our founder, Philip Chapman, leads every Eastbridge appointment personally and is the person you speak to from the first conversation to handover."),
+ ("How often will you be on site?", "It is agreed in writing in the scope of your appointment, before work starts. Attendance follows the stage of the project: typically weekly during active construction and more often at key stages. See <a href=\"/approach/#uae-appointments\">how an appointment works in the UAE</a>."),
+ ("Who appoints the quantity surveyor, engineers and other specialists?", "You do, and you pay them directly. We help you work out what is needed, compare proposals like-for-like and choose. We take no commission or referral fee from anyone we help you appoint."),
+ ("Do you handle permits, supervision or legal advice?", "No. Statutory design, authority submissions and supervision are the duties of the registered consultant you appoint, and legal advice should come from a UAE-qualified lawyer. Our role is commercial and project management on your side, alongside them."),
  ("Do you take commission from contractors?", "Never. We are paid only by you. See our <a href=\"/independence/\">independence pledge</a>."),
+ ("How do your fees work?", "The first call is free and takes about 30 minutes. If we can help, the first paid step is usually a fixed-fee review, either a plot and pre-purchase review or a health check on a project under way, scoped and quoted in writing before we start. Any later appointment is proposed separately, with its fee agreed up front. See <a href=\"/fees/\">how fees work</a>."),
+ ("How do I arrange the free call?", "Send the short form on our <a href=\"/contact/\">contact page</a>, message us on WhatsApp or call. Philip replies personally to agree a time that suits you; there is no automatic booking."),
  ("What does it cost to build a villa in Dubai?", "Published 2025–26 guides put construction at roughly AED 300–500 per sq ft for a standard villa, AED 900–1,400 for luxury, and AED 1,200 and above for ultra-luxury, before land, design fees, approvals, interiors and landscaping. See our <a href=\"/insights/villa-construction-cost-dubai/\">full cost guide</a>."),
  ("How long does it take?", "Market guides put plot to keys at roughly 12 to 24 months, and 24 to 36 months for custom luxury villas. See <a href=\"/insights/how-to-build-a-villa-in-dubai/\">how to build a villa in Dubai</a>."),
  ("Do you work in Abu Dhabi?", "Yes. We represent owners in Dubai and Abu Dhabi, always alongside a locally registered consultant of record."),
@@ -384,17 +441,18 @@ def contact():
     methods = "".join(f'<label class="choice"><input type="radio" name="contact_method" value="{v}"{" checked" if v == "Email" else ""}> {v}</label>'
                       for v in ["Email", "Phone call", "WhatsApp"])
     opt = '<span class="opt">Optional</span>'
+    req = '<span class="req">Required</span>'
     def err(i, msg):
         return f'<p class="err" id="{i}-err" hidden>{msg}</p>'
     steps = B.start_steps()
     next_steps = [("We reply within one working day", "A personal reply from Philip, by the method you choose in the form.")] + steps
-    body = B.banner(crumbs, "Start a private brief", "Tell us a little about your project. Philip will reply personally within one working day. Nothing you send is shared or published.", "the-lookout-02", credit_of("the-lookout-02")) + f'''
+    body = B.banner(crumbs, "Arrange a free 30-minute call", "Tell us a little about your project and how you would like us to reply. Philip will reply personally within one working day to agree a time; the form does not book a slot automatically. Nothing you send is shared or published.", "the-lookout-02", credit_of("the-lookout-02")) + f'''
 <section class="section--tight"><div class="wrap split contact-grid">
 <div class="contact-side">
 <h2 class="h-sm">Prefer to talk?</h2>
 <p class="contact-actions"><a class="btn" href="{B.wa_link()}" rel="noopener">Message us on WhatsApp</a><a class="btn btn--ghost" href="tel:{C.PHONE_E164}">Call {C.PHONE_DISPLAY}</a></p>
 <p>Email <a href="mailto:{C.EMAIL}">{C.EMAIL}</a></p>
-<p class="muted small">{esc(C.HOURS)}. UK and European clients are welcome to book calls in their own time zone.</p>
+<p class="muted small">{esc(C.HOURS)}. UK and European clients are welcome to arrange calls in their own time zone.</p>
 <h2 class="h-sm">What happens next</h2>
 {B.steps_html(next_steps, "steps steps--compact")}
 <p class="small"><a class="link" href="/fees/">How fees work</a></p>
@@ -402,23 +460,23 @@ def contact():
 <form class="form" id="brief" name="brief" method="POST" action="/contact/thanks/" data-netlify="true" netlify-honeypot="company_site" data-enquiry>
 <input type="hidden" name="form-name" value="brief">
 <p class="hp"><label>Leave this empty <input name="company_site" tabindex="-1" autocomplete="off"></label></p>
-<p class="form-note small muted">Three things are required: your name, your email and a few words about the project. Everything else helps us reply usefully.</p>
-<div class="row"><div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required aria-describedby="f-name-err">{err("f-name", "Please tell us your name.")}</div>
-<div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="f-email-err">{err("f-email", "Please enter an email address we can reply to, such as name@example.com.")}</div></div>
-<fieldset class="field"><legend>How would you like us to reply?</legend><div class="checks">{methods}</div></fieldset>
+<p class="form-note small muted">Three fields are required: your name, your email and a few words about the project. Fields marked Optional help us reply usefully, but you can leave them blank.</p>
+<div class="row"><div class="field"><label for="f-name">Your name {req}</label><input id="f-name" name="name" autocomplete="name" required aria-describedby="f-name-err">{err("f-name", "Please tell us your name.")}</div>
+<div class="field"><label for="f-email">Email {req}</label><input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="f-email-err">{err("f-email", "Please enter an email address we can reply to, such as name@example.com.")}</div></div>
+<fieldset class="field"><legend>How would you like us to reply? {opt}</legend><div class="checks">{methods}</div></fieldset>
 <div class="row"><div class="field"><label for="f-phone">Phone or WhatsApp number <span class="opt ph-opt">Optional</span><span class="opt ph-req" hidden>Needed for a call or WhatsApp</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" minlength="7" aria-describedby="f-phone-hint f-phone-err"><p class="hint" id="f-phone-hint">Include the country code, for example +971 or +44.</p>{err("f-phone", "Please enter a phone number with its country code, for example +971 50 123 4567.")}</div>
 <div class="field"><label for="f-based">Where are you based? {opt}</label><select id="f-based" name="based"><option value="">Choose</option>{based}</select></div></div>
 <div class="row"><div class="field"><label for="f-stage">Project stage {opt}</label><select id="f-stage" name="stage"><option value="">Choose a stage</option>{stages}</select></div>
 <div class="field"><label for="f-area">Where is the project? {opt}</label><select id="f-area" name="area"><option value="">Choose a location</option>{areas}</select></div></div>
 <div class="field"><label for="f-budget">Approximate construction budget {opt}</label><select id="f-budget" name="budget" aria-describedby="f-budget-hint"><option value="">Choose a range</option>{budgets}</select><p class="hint" id="f-budget-hint">A rough band is enough. It helps us judge the scale, and is never shared.</p></div>
-<div class="field"><label for="f-msg">Tell us about the project</label><textarea id="f-msg" name="message" required minlength="10" aria-describedby="f-msg-hint f-msg-err"></textarea><p class="hint" id="f-msg-hint">The house you want, the plot or villa you have, and anything that is worrying you.</p>{err("f-msg", "Please add a few words about your project.")}</div>
+<div class="field"><label for="f-msg">Tell us about the project {req}</label><textarea id="f-msg" name="message" required minlength="10" aria-describedby="f-msg-hint f-msg-err"></textarea><p class="hint" id="f-msg-hint">The house you want, the plot or villa you have, and anything that is worrying you.</p>{err("f-msg", "Please add a few words about your project.")}</div>
 <div class="reassure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="1"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg>
 <p><b>Confidential.</b> Read personally by Philip and used only to reply to you. We never share or publish client names, addresses or projects without written permission. See our <a href="/privacy/">privacy notice</a>.</p></div>
-<p class="submit-row"><button class="btn" type="submit">Send your brief</button><span class="small muted">{esc(C.RESPONSE_PROMISE)}.</span></p>
+<p class="submit-row"><button class="btn" type="submit">Send your enquiry</button><span class="small muted">{esc(C.RESPONSE_PROMISE)}.</span></p>
 </form></div></section>'''
     schema = [{"@context": "https://schema.org", "@type": "ContactPage", "url": B.url("/contact/"), "about": {"@id": B.ORG_ID}}]
-    B.page("/contact/", "Contact Eastbridge: Start a Private Villa Project Brief | Dubai",
-           "Start a confidential brief for your villa build or renovation in Dubai or Abu Dhabi. A senior reply within one working day, by email, phone or WhatsApp.",
+    B.page("/contact/", "Contact Eastbridge: Arrange a Free 30-Minute Call | Dubai",
+           "Arrange a free 30-minute call about your villa build or renovation in Dubai or Abu Dhabi. A personal reply within one working day, by email, phone or WhatsApp.",
            body, crumbs, schema)
 
     thanks_steps = [
@@ -519,7 +577,7 @@ def insights(posts):
 {guide_cta()}
 <p class="small muted" style="margin-top:2em">This article is general information, not advice for your specific project. Figures are from the sources cited and change over time.</p>
 </div>
-<aside class="article-aside" aria-label="Talk to us"><div class="aside-card">{pic(svc_img_for(p), "", "(max-width:980px) 100vw, 30vw")}<div><h3>Planning a villa in Dubai?</h3><p>Talk it through with Philip. The first conversation is free and confidential.</p><a class="btn" href="/contact/">Start a private brief</a></div></div>
+<aside class="article-aside" aria-label="Talk to us"><div class="aside-card">{pic(svc_img_for(p), "", "(max-width:980px) 100vw, 30vw")}<div><h3>Planning a villa in Dubai?</h3><p>Talk it through with Philip. The first conversation is free and confidential.</p><a class="btn" href="/contact/">Arrange a free 30-minute call</a></div></div>
 <div class="aside-links"><b>Services</b>{"".join(f'<a href="/services/{x}/">{esc(SVC[x]["short"])}</a>' for x in ("owners-representative","villa-construction-project-management","villa-renovation-project-management","plot-due-diligence"))}</div></aside>
 </div></section></article>
 <section class="section paper"><div class="wrap"><h2>Read next</h2>{post_cards(rel)}</div></section>

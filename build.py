@@ -200,7 +200,7 @@ def cta_band(title="Tell us about the house you want to build.", text=None, imag
     image = image or CTA_IMAGES[len(PAGES) % len(CTA_IMAGES)]
     return f'''<section class="cta-band" aria-labelledby="cta-h">{picture(image, "", "100vw")}
 <div class="wrap"><div><h2 id="cta-h">{esc(title)}</h2><p style="margin-top:1em;max-width:46ch">{esc(text)}</p></div>
-<div class="actions"><a class="btn" href="/contact/">Start a private brief</a><a class="btn btn--ghost" href="{wa_link()}" rel="noopener">WhatsApp us</a></div></div></section>'''
+<div class="actions"><a class="btn" href="/contact/">Arrange a free 30-minute call</a><a class="btn btn--ghost" href="{wa_link()}" rel="noopener">WhatsApp us</a></div></div></section>'''
 
 def banner(crumbs, h1, lede=None, image="quay-house-01", credit=None, extra=""):
     l = f'<p class="lede">{lede}</p>' if lede else ""
@@ -240,7 +240,7 @@ def how_it_starts():
             f'<div class="head-row"><div><span class="kicker">How it starts</span><h2 id="starts-h">Three steps from first call to appointment</h2></div>'
             f'<p class="muted">The call is free. After that, you decide at each step whether to go on. <a class="link" href="/fees/">How fees work</a></p></div>'
             f'{steps_html(start_steps())}'
-            f'<p class="starts-cta"><a class="btn" href="/contact/">Book the free call</a>'
+            f'<p class="starts-cta"><a class="btn" href="/contact/">Arrange a free 30-minute call</a>'
             f'<a class="btn btn--ghost" href="{wa_link()}" rel="noopener">Or message us on WhatsApp</a></p>'
             f'</div></section>')
 
