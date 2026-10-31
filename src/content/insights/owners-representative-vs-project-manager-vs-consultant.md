@@ -70,9 +70,9 @@ Every party on a villa build has a legitimate commercial interest. Conflicts ari
 
 **Design-and-build firms.** One company designs, prices and builds. That can be efficient, with a single point of responsibility. But the same firm decides how much building the design contains, prices it, and then prices every change. Nobody independent is testing whether the design is efficient or the price is fair, unless you arrange it.
 
-**Consultants checking their own design.** When the consultant who designed the villa also reviews the contractor's claims for design-related changes, they are judging, in part, their own drawings. Most consultants handle this professionally. But a variation caused by a design gap is a difficult thing for the designer to call. In August 2025, Dubai Municipality warned villa consultancies about over-designing structures and inflating build costs, suspending two offices for six months (Gulf News). A design that is heavier than it needs to be is expensive, and the person best placed to spot it is not the person who drew it.
+**Consultants checking their own design.** When the consultant who designed the villa also reviews the contractor's claims for design-related changes, they are judging, in part, their own drawings. Most consultants handle this professionally. But a variation caused by a design gap is a difficult thing for the designer to call. In August 2025, Dubai Municipality warned villa consultancies about over-designing structures and inflating build costs (Gulf News). A design that is heavier than it needs to be is expensive, and a second, independent look is the simplest way to test it.
 
-**Fees tied to construction value.** Consultant fees in Dubai are commonly a percentage of construction cost. That is market practice, not wrongdoing, but it means nobody on a percentage fee is rewarded for making the building cheaper.
+**Fees tied to construction value.** Consultant fees in Dubai are commonly a percentage of construction cost. That is market practice, not wrongdoing, but it means the fee structure itself does not reward making the building cheaper.
 
 **Contractor-employed project managers.** The contractor's project manager is there to deliver the contractor's job profitably. That is their job. It is not the same job as protecting your budget.
 

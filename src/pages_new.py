@@ -29,12 +29,12 @@ def creds_band():
 
 def triad_svg():
     nodes = [  # x, y, title, line2
-        (120, 70, "Architect and consultant", "Paid to design and to meet the code"),
-        (520, 70, "Contractor", "Paid on price, variations and claims"),
-        (120, 350, "Interior designer", "Paid to specify the finish"),
+        (120, 70, "Architect and consultant", "Design, approvals, statutory duties"),
+        (520, 70, "Contractor", "Builds to the contract and its price"),
+        (120, 350, "Interior designer", "Specifies the interiors and finish"),
         (520, 350, "Developer and authority", "Protect the community and the rules"),
     ]
-    g = ['<svg class="triad" viewBox="0 0 640 420" role="img" aria-label="Everyone on a villa project has their own interest. The owner sits at the centre; Eastbridge sits beside the owner and works only for them.">']
+    g = ['<svg class="triad" viewBox="0 0 640 420" role="img" aria-label="Everyone on a villa project has their own role and commercial position. The owner sits at the centre; Eastbridge sits beside the owner, coordinating on the owner\'s behalf.">']
     for x, y, *_ in nodes:
         g.append(f'<path class="edge" d="M320 200 L{x} {y}"/>')
     g.append('<path class="edge-eb" d="M320 254 L320 300"/>')
@@ -50,7 +50,7 @@ def triad_svg():
 
 COMPARE = [
  ("A budget that is a hope, set before anyone has priced the risk", "A budget built from cost per square foot, the plot rules and a contingency you hold"),
- ("A design that grows until the tender comes back over budget", "A cost check at every design stage, so the drawings never outrun the money"),
+ ("A design that grows until the tender comes back over budget", "A cost check at every design stage, before the drawings move on"),
  ("Bids compared on the headline number", "Bids put on a like-for-like basis: exclusions, provisional sums, preliminaries, programme"),
  ("Payments approved from a photograph", "Every payment measured against the work actually on site"),
  ("Variations agreed on site, priced later", "Every change priced and its time effect stated before you instruct it"),
@@ -88,112 +88,72 @@ def svc_cards(items, imgs):
 
 # ---------------------------------------------------------------- home
 HERO_SLIDES = ["quay-house-01", "owers-house-01", "sea-glass-house-01", "the-lookout-02"]
+OWERS_URL = "https://www.johnpardeyarchitects.com/modern-architecture/one-off-houses-architecture/owers-house/"
+LABC_2020_URL = "https://www.labc.co.uk/news/labc-south-west-winners-amp-highly-commended-2020"
 
 def home(posts, post_cards, stages_html, svc_img):
+    """Order (review brief 2026-10-31, section 5): proposition and contact; founder evidence; three routes;
+    one real UK project; how an appointment starts, with independence; owner questions and final contact.
+    Detail lives on its own pages. posts, post_cards, stages_html and svc_img stay in the signature for pages.home()."""
     slides = "".join(f'<figure>{pic(b, "", "100vw", eager=(i == 0))}</figure>' for i, b in enumerate(HERO_SLIDES))
     doors = [
-     ("villa-construction-project-management", "Build a new villa", "From the plot and the first budget to the day you move in.", "sea-glass-house-02"),
-     ("villa-renovation-project-management", "Renovate or extend", "Palm Jumeirah, Emirates Hills, Dubai Hills. Approvals, budget, contractor and handover.", "menwinnion-01"),
-     ("stalled-project-rescue", "Rescue a stalled build", "Over budget, behind programme or in dispute. We find out where it stands and get it finished.", "polgreen-manor-01"),
+     ("villa-construction-project-management", "Build a new villa", "From the plot and the first budget to handover, alongside your consultant and contractor.", "sea-glass-house-02"),
+     ("villa-renovation-project-management", "Renovate or extend", "Surveys, the approvals route, budget, contractor and handover for an existing villa.", "menwinnion-01"),
+     ("stalled-project-rescue", "A project in difficulty", "Over budget, behind programme or in dispute. We establish where it stands and set out the options to complete.", "polgreen-manor-01"),
     ]
     door_html = "".join(f'<a class="door" href="/services/{s}/">{pic(img, "", "(max-width:900px) 100vw, 33vw")}<div><h3>{esc(t)}</h3><p>{esc(d)}</p><span class="go">How we help</span></div></a>' for s, t, d, img in doors)
-    mosaic_items = [("m1", "quay-house-02"), ("m2", "owers-house-09"), ("m3", "the-lookout-03"), ("m4", "saqqara-06"),
-                    ("m5", "sea-glass-house-04"), ("m6", "gooden-heane-01"), ("m7", "polgreen-manor-03"), ("m8", "st-michaels-02")]
-    mosaic = "".join(f'<a class="{c}" href="/work/{proj_of(b)["slug"]}/">{pic(b, proj_of(b)["name"] + ", " + proj_of(b)["place"], "(max-width:760px) 100vw, 58vw")}<span>{esc(proj_of(b)["name"])}, {esc(proj_of(b)["place"])}</span></a>' for c, b in mosaic_items)
-    arch = "".join(f"<li>{esc(a)}</li>" for a in ARCHITECTS[:6])
-    areas = "".join(f'<li><a href="/areas/{a["slug"]}/">{esc(a["name"])}</a><span>{esc(a["tag"])}</span></li>' for a in AREAS)
+    owers = PROJ["owers-house"]
     faqs = [
-     ("What does a client-side project manager do?", "We run your villa build or renovation on your behalf. We set the budget and programme with you, help you choose and appoint the architect, consultant and contractor, check the design against the budget, monitor cost, time and quality on site, review every payment and variation, and lead handover. We are paid only by you."),
-     ("Why not leave it to the architect or the contractor?", "Both are essential, and both have their own commercial interest. The architect is paid to design; the contractor is paid on the price, variations and claims. Neither is paid to protect your budget. <a href=\"/why-a-client-side-project-manager/\">Why client-side matters</a>."),
-     ("Who is behind Eastbridge?", "Philip Chapman, who founded and ran P Chapman Construction for 21 years, building award-winning private homes, estates, developments and hotel work. <a href=\"/about/\">About Philip</a>."),
-     ("Do you replace the registered consultant?", "No. Your villa needs a registered consultant for the statutory design, permits and supervision duties. We help you choose them and make sure they, and the contractor, deliver what you are paying for."),
-     ("How are you paid?", "Only by you. We take no commission, referral fee or discount from any contractor, consultant or supplier. See <a href=\"/fees/\">how fees work</a>."),
+     ("What does a client-side project manager do?", "We manage your villa build or renovation on your behalf. We set the budget and programme with you, help you compare and choose the consultant and contractor you appoint, check the design against the budget, monitor cost, programme and quality, review payments and variations before you pay, and lead handover."),
+     ("Why not leave it to the architect or the contractor?", "A properly appointed consultant has real duties for the design, approvals and statutory supervision, and the contractor is responsible for building to the contract. Each also has its own commercial position, and neither is usually appointed to coordinate the whole project and test every price, payment and claim from your side. That independent coordination and commercial scrutiny is what we add. <a href=\"/why-a-client-side-project-manager/\">Why client-side matters</a>."),
+     ("Do you replace the registered consultant?", "No. Your villa needs a registered consultant for the statutory design, permit submissions and supervision duties. We help you choose them and work alongside them and the contractor, so that what is delivered matches what you agreed to pay for."),
+     ("Can you guarantee the budget or the completion date?", "No one can honestly guarantee either on a construction project. What we provide are controls that bring problems to light early: a cost plan and a monthly cost-to-complete, programme monitoring, payment review against work done, variations priced before you instruct them, a decision log and records kept from the first day."),
+     ("How are you paid?", "By you alone. We take no commission, referral fee or discount from any contractor, consultant or supplier. See <a href=\"/fees/\">how fees work</a>."),
+     ("What happens after I get in touch?", "Send a short note through the contact form or on WhatsApp and we will reply to arrange the free 30-minute call at a time that suits you. There is no obligation to go further."),
     ]
-    k = CS
     body = f'''
 <section class="hero" aria-labelledby="hero-h"><div class="slides">{slides}</div>
 {B.hero_video_html()}<div class="wrap"><span class="kicker">Client-side project management · Dubai and Abu Dhabi</span>
 <h1 id="hero-h">Your villa, managed from your side of the table.</h1>
-<p class="lede">An independent project manager, paid only by you. We set the budget, help you choose the team, check every payment and claim, and get you the keys on time. Led personally by Philip Chapman, who built award-winning homes for 21 years.</p>
-<div class="actions"><a class="btn" href="/contact/">Start a private brief</a><a class="btn btn--ghost" href="/why-a-client-side-project-manager/">Why client-side matters</a></div></div>
+<p class="lede">An independent project manager for villa builds and renovations. We set the budget and programme with you, help you choose the team, review every payment and claim, and keep the decisions in your hands. Led personally by Philip Chapman.</p>
+<div class="actions"><a class="btn" href="/contact/">{esc(B.CTA_LABEL)}</a><a class="btn btn--ghost" href="/why-a-client-side-project-manager/">Why client-side matters</a></div></div>
 <p class="hero-meta">Homes built by P Chapman Construction, founded by Philip Chapman.</p><span class="scroll-cue" aria-hidden="true"></span></section>
-{creds_band()}
 
-<section class="section" aria-labelledby="what-h"><div class="wrap">
-<div class="head-row"><h2 id="what-h">What we do</h2>
-<p class="lede">A client-side project manager, also called an owner's representative, runs your build for you. We don't design and we don't build, and we are paid only by you, so our one job is to deliver the house you want, for the budget you set, when you were promised it.</p></div>
+<section class="section" aria-labelledby="founder-h"><div class="wrap feature">
+<figure class="portrait">{pic("philip-chapman-01", "Philip Chapman, Founding Partner of Eastbridge Strategic Partners", "(max-width:900px) 100vw, 42vw", cls="reveal")}</figure>
+<div><span class="kicker">Who leads your project</span><h2 id="founder-h">Philip Chapman, Founding Partner</h2>
+<p>Philip founded P Chapman Construction and led it for 21 years, growing it into a premium UK contractor with an annual turnover of around £17 million. Houses the company built have won a <a href="{OWERS_URL}" rel="noopener">RIBA South West Award</a> (Owers House, 2016, designed by John Pardey Architects) and <a href="{LABC_2020_URL}" rel="noopener">LABC Building Excellence Awards</a> (a 2018 win and a 2020 Highly Commended), and one was featured on Channel 4's Grand Designs.</p>
+<p class="muted">He knows how a contractor prices a job, where variations come from and how delay claims are built. In Dubai and Abu Dhabi he puts that knowledge to work for the owner, fairly, and leads each Eastbridge appointment personally.</p>
+<p><a class="link" href="/about/">About Philip and Eastbridge</a></p></div>
+</div></section>
+
+<section class="section stone" aria-labelledby="what-h"><div class="wrap">
+<div class="head-row"><h2 id="what-h">Three ways we help</h2>
+<p class="lede">A client-side project manager, also called an owner's representative, does not design or build. We work alongside your registered consultant and your contractor, adding independent cost, programme and commercial control on your behalf.</p></div>
 <div class="doors">{door_html}</div>
 <p style="margin-top:30px"><a class="link" href="/services/">All services</a> &nbsp; <a class="link" href="/approach/">How a project runs</a></p>
 </div></section>
 
-<section class="section stone" aria-labelledby="why-h"><div class="wrap">
-<div class="split" style="align-items:center">
-<div><span class="kicker">Why client-side</span><h2 id="why-h">Everyone on your project is good at their job. Only one of them is paid to protect your money.</h2>
-<p class="muted">The architect is paid to design. The contractor is paid on the price, the variations and the claims. The developer and the authority protect the community and the rules. All of that is legitimate. None of it is your budget. That is the gap a client-side project manager fills.</p>
-<p><a class="btn" href="/why-a-client-side-project-manager/">Why it pays for itself</a></p></div>
-<div>{triad_svg()}</div></div>
+<section class="section" aria-labelledby="work-h"><div class="wrap feature">
+<figure>{pic("owers-house-02", "Owers House, Feock: dark timber living wing cantilevered over the falling site above the Fal estuary", "(max-width:900px) 100vw, 58vw", cls="reveal")}<figcaption>{esc(credit_of("owers-house-02"))}. Architect: {esc(owers["architect"])}.</figcaption></figure>
+<div><span class="kicker">UK project · Main contractor</span><h2 id="work-h">Owers House, above the Fal estuary</h2>
+<p class="muted">A steep site, a Grade II listed neighbour below and a living wing cantilevered over the falling ground. P Chapman Construction built it as main contractor to the design of {esc(owers["architect"])}, and the house won a RIBA South West Award in 2016. This was UK contracting work, not an Eastbridge appointment.</p>
+<p><a class="btn" href="/work/owers-house/#case-study">Read the case study</a> &nbsp; <a class="link" href="/work/">See more of the work</a></p></div>
 </div></section>
 
-<section class="section band-dark" aria-labelledby="case-h"><div class="wrap case-feature">
-<div><span class="kicker">Worked project example</span><h2 id="case-h">How we would manage an Island E villa</h2>
-<div class="notice" style="margin:22px 0"><b>Hypothetical</b>{esc(CASE_DISCLOSURE)}</div>
-<p class="muted">Worked through with Nakheel's published plot information, its draft development controls and published Dubai costs, it shows what an owner would receive from us:</p>
-<div class="outputs">
-<div><b>Budget structure</b><span>Every cost line, quantified or awaiting quotation, including registration fees and VAT</span></div>
-<div><b>Cash-flow planning</b><span>Plot instalments and build costs, year by year</span></div>
-<div><b>Tender comparison</b><span>Bids put on a like-for-like basis</span></div>
-<div><b>Programme review</b><span>Plot review to keys, with the assumptions stated</span></div></div>
-<p><a class="btn" href="{CASE_URL}">See the worked example</a></p></div>
-<figure class="chart-dark">{CS.svg_site()}<figcaption>Indicative plot plan and section within Nakheel's draft controls: basement, ground and two upper floors, 12.5 m maximum height.</figcaption></figure>
+<section class="section--tight starts" aria-labelledby="starts-h"><div class="wrap">
+<div class="head-row"><div><span class="kicker">How it starts</span><h2 id="starts-h">From first call to appointment</h2></div>
+<p class="muted">You decide at each step whether to go on. <a class="link" href="/fees/">How fees work</a></p></div>
+{B.steps_html(B.start_steps())}
+<div class="split" style="margin-top:clamp(28px,3vw,44px)"><p><strong>Independent.</strong> You appoint and pay your consultant and contractor directly. We take no commission, referral fee or discount from anyone on your project. <a class="link" href="/independence/">Our independence pledge</a></p>
+<p class="muted">To see the method applied to a Dubai plot, read our <a href="{CASE_URL}">Island E worked example</a>. It is hypothetical, not a completed project.</p></div>
 </div></section>
 
-<section class="section" aria-labelledby="work-h"><div class="wrap">
-<div class="head-row"><div><span class="kicker">Selected work</span><h2 id="work-h">Built by P Chapman Construction</h2></div>
-<p class="muted">A selection from 21 years of private houses, country estates, developments and hotel work, built to the most exacting standards. It is the standard we hold every project to.</p></div>
-<div class="mosaic">{mosaic}</div>
-<p style="margin-top:clamp(36px,4vw,56px)"><a class="btn btn--ghost" href="/work/">See the work</a></p>
-</div></section>
-
-<section class="section band-dark" aria-labelledby="quotes-h"><div class="wrap">
-<div class="head-row"><h2 id="quotes-h">In our clients' words</h2><p class="muted">Owners and developers on P Chapman Construction. The same standards now apply on the client's side.</p></div>
-{quotes_html(TESTIMONIALS[:3])}
-</div></section>
-
-<section class="section" aria-labelledby="founder-h"><div class="wrap feature">
-<figure class="portrait">{pic("philip-chapman-01", "Philip Chapman, Founding Partner of Eastbridge Strategic Partners", "(max-width:900px) 100vw, 42vw", cls="reveal")}</figure>
-<div><span class="kicker">Founding Partner</span><h2 id="founder-h">Philip Chapman</h2>
-<p>Philip founded P Chapman Construction and led it for 21 years, growing it into a premium contractor with an annual turnover of around £17 million. His company's homes have won RIBA and LABC awards, been reported in The Times and featured on Grand Designs.</p>
-<p class="muted">He knows how a contractor prices a job, where variations come from and how delay claims are built, because for two decades that was his business. In Dubai and Abu Dhabi he works only for the owner, and leads every Eastbridge appointment personally.</p>
-<p><a class="link" href="/about/">About Philip and Eastbridge</a></p></div>
-</div></section>
-
-<section class="section dark" aria-labelledby="stages-h"><div class="wrap">
-<div class="head-row"><h2 id="stages-h">Plot to keys, in six stages</h2>
-<p class="muted">Join us at any stage. The earlier we start, the more of the budget we protect, because most of the outcome is decided before anything is built.</p></div>
-{stages_html()}
-</div></section>
-
-<section class="section" aria-labelledby="svc-h"><div class="wrap">
-<div class="head-row"><h2 id="svc-h">The whole project, or the part you need</h2>
-<p class="muted">Independent and paid only by you. <a class="link" href="/independence/">Our independence pledge</a></p></div>
-{svc_cards([SVC[s] for s in ("owners-representative","plot-due-diligence","design-and-approvals","consultant-and-contractor-selection","site-visits-and-reporting","snagging-and-handover")], svc_img)}
-</div></section>
-
-<section class="section stone" aria-labelledby="areas-h"><div class="wrap">
-<div class="head-row"><h2 id="areas-h">Where we work</h2><p class="muted">Each community has its own master developer, design rules and practical constraints.</p></div>
-<ul class="area-list">{areas}</ul></div></section>
-
-<section class="section" aria-labelledby="ins-h"><div class="wrap">
-<div class="head-row"><h2 id="ins-h">Insights</h2><p class="muted">Straight answers for villa owners, written from the builder's side. <a class="link" href="/insights/">All insights</a></p></div>
-{post_cards(posts[:3])}
-{__import__("pages_guides").cta_block(compact=True)}
-</div></section>
-
-<section class="section--tight" aria-labelledby="hfaq-h"><div class="wrap split"><h2 id="hfaq-h">Questions</h2>{B.faq_html(faqs)}</div></section>
-{B.how_it_starts()}
+<section class="section--tight" aria-labelledby="hfaq-h"><div class="wrap split"><div><h2 id="hfaq-h">Questions owners ask</h2>
+<p class="muted" style="margin-top:1em"><a class="link" href="/faq/">More questions</a> &nbsp; <a class="link" href="/insights/">Insights</a> &nbsp; <a class="link" href="/guides/villa-owner-checklist/">Owner's checklist</a> &nbsp; <a class="link" href="/areas/">Where we work</a></p></div>{B.faq_html(faqs)}</div></section>
 {B.cta_band("Tell us about the house you want to build.", image="sea-glass-house-08")}'''
     B.page("/", "Villa Project Management Dubai | Client-Side Project Manager",
-           "Client-side project management for villa builds and renovations in Dubai and Abu Dhabi, led by Philip Chapman, 21 years building award-winning homes. Paid only by you.",
+           "Independent client-side project management for villa builds and renovations in Dubai and Abu Dhabi, led by Philip Chapman, founder of an award-winning UK builder.",
            body, schema=[B.faq_schema(faqs)], preload="/assets/img/quay-house-01-1280.webp", hero=True)
 
 # ---------------------------------------------------------------- why client-side
@@ -213,21 +173,21 @@ def why_page():
     crumbs = [("Home", "/"), ("Why client-side", path)]
     moments = "".join(f"<li><b>{esc(t)}</b><span>{esc(d)}</span></li>" for t, d in MOMENTS)
     faqs = [
-     ("Isn't the architect supposed to protect my budget?", "A good architect will design to a budget if asked, but their job is the design, and design fees are often a percentage of construction cost. In August 2025 Dubai Municipality formally warned villa consultancies about over-designing villas and inflating build costs. An independent cost check at every design stage is the protection."),
-     ("Doesn't the registered consultant supervise the contractor?", "The consultant of record carries statutory supervision duties: that the building is built to the approved design and the code. That is not the same as checking every payment, pricing every variation, testing delay claims or managing your programme and budget. We do that, alongside them."),
+     ("Isn't the architect supposed to protect my budget?", "A good architect will design to a budget if asked, but their job is the design, and design fees are often a percentage of construction cost. In August 2025 Dubai Municipality formally warned villa consultancies about over-designing villas and inflating build costs. An independent cost check at every design stage is a sensible safeguard alongside the architect's own work."),
+     ("Doesn't the registered consultant supervise the contractor?", "The consultant of record carries statutory supervision duties: that the building is built to the approved design and the code. That is an important duty, but it is not usually the same scope as reviewing every payment from your side, testing the price of every variation and every delay claim, or managing your overall programme and budget. We add that, alongside them."),
      ("Will good contractors resent an owner's project manager?", "In our experience the opposite. Good contractors prefer an informed client: decisions are made on time, information arrives when it should and payments are made promptly for work done. The contractors who dislike scrutiny are the ones you most need it with."),
      ("When is it too late to bring you in?", "It is never too late to help, but the earlier the better. Most of a project's cost is fixed by the brief, the design and the contract. We also take on projects that have stalled or are in dispute."),
-     ("What does it cost?", "Fixed fees for plot reviews and early stages, then a monthly or percentage fee during construction. See <a href=\"/fees/\">how fees work</a>. On a bespoke villa, one avoided variation dispute or one month of avoided delay usually covers the fee for that stage."),
+     ("What does it cost?", "Fixed fees for plot reviews and early stages, then a monthly or percentage fee during construction. See <a href=\"/fees/\">how fees work</a>. We agree the fee in writing before we start, and will tell you if we do not think your project needs us."),
     ]
-    body = B.banner(crumbs, "Why a client-side project manager pays for itself",
-                    "On a private villa, everyone at the table is good at their job. Only one of them is paid to look after your money.",
+    body = B.banner(crumbs, "Why appoint a client-side project manager",
+                    "On a private villa, everyone at the table has their own role and duties. We add independent coordination and commercial scrutiny on your side.",
                     "quay-house-02", credit_of("quay-house-02")) + f'''
 <section class="section"><div class="wrap split" style="align-items:center">
 <div><h2>The gap in every villa project</h2>
 <p>A private villa in Dubai brings together a master developer, a permitting authority, an architect, a registered consultant, a main contractor, specialist subcontractors and an interior designer. Each is competent. Each has their own commercial interest, and that is how it should be.</p>
-<p>The result is a project in which nobody's only job is the owner's budget, programme and quality. Owners fill the gap themselves, between their own work and family, often from another country. That is how good projects drift: a loose brief, a design that grows, a bid that looked cheapest, a payment made ahead of the work, a claim answered with opinion.</p>
-<p>A client-side project manager closes the gap. We sit beside you, paid only by you, and make sure everyone else delivers what you are paying for.</p></div>
-<figure>{triad_svg()}<figcaption>We don't replace anyone on your team. We make sure the team works for you.</figcaption></figure>
+<p>The result is a project in which each party covers its own part, but nobody is appointed to look at the whole from the owner's side: budget, programme, decisions and quality together. Owners fill the gap themselves, between their own work and family, often from another country. That is how good projects drift: a loose brief, a design that grows, a bid that looked cheapest, a payment made ahead of the work, a claim answered with opinion.</p>
+<p>A client-side project manager closes the gap. We sit beside you, paid only by you, and work with everyone else to keep the project to what you agreed to pay for.</p></div>
+<figure>{triad_svg()}<figcaption>We don't replace anyone on your team. We help the team work together for you.</figcaption></figure>
 </div></section>
 
 <section class="section stone"><div class="wrap">
@@ -243,11 +203,11 @@ def why_page():
 <section class="section band-dark"><div class="wrap feature">
 <figure>{pic("polgreen-manor-05", "Polgreen Manor, slate roofs and rooflights joining old and new buildings", "(max-width:900px) 100vw, 58vw")}<figcaption>Polgreen Manor, Mawgan Porth. LABC Building Excellence Awards 2020, Highly Commended.</figcaption></figure>
 <div><span class="kicker">Why us</span><h2 class="statement">For 21 years Philip was the builder. He knows where the money goes.</h2>
-<p class="muted">Most project managers come from consultancy. Philip came from contracting. Philip Chapman spent two decades pricing tenders, running sites, preparing and defending extension of time claims and handing over award-winning homes. On your side of the table, that knowledge is hard to replace.</p>
+<p class="muted">Many project managers come from consultancy. Philip came from contracting: he spent two decades pricing tenders, running sites, preparing and defending extension of time claims and handing over award-winning homes. On your side of the table, that knowledge is hard to replace.</p>
 <p><a class="btn" href="/about/">About Philip</a></p></div></div></section>
 
 <section class="section"><div class="wrap">
-<div class="head-row"><h2>Eight moments where it pays for itself</h2><p class="muted">In the order they arrive on a villa project. Miss the early ones and the later ones get more expensive.</p></div>
+<div class="head-row"><h2>Eight moments where it matters</h2><p class="muted">In the order they arrive on a villa project. Miss the early ones and the later ones get more expensive.</p></div>
 <ol class="moments">{moments}</ol>
 </div></section>
 
@@ -261,11 +221,11 @@ def why_page():
 
 <section class="section"><div class="wrap split"><h2>Questions</h2>{B.faq_html(faqs)}</div></section>
 {B.cta_band("See where your project stands.", "Send us your plot number, your drawings or your contractor's latest valuation. The first conversation is free.", "owers-house-04")}'''
-    article = {"@context": "https://schema.org", "@type": "Article", "headline": "Why a client-side project manager pays for itself",
+    article = {"@context": "https://schema.org", "@type": "Article", "headline": "Why appoint a client-side project manager",
                "author": {"@id": B.PERSON_ID}, "publisher": {"@id": B.ORG_ID}, "mainEntityOfPage": B.url(path),
                "image": B.url(B.og_image("quay-house-02")), "inLanguage": "en-GB"}
     B.page(path, "Why Use a Client-Side Project Manager for a Dubai Villa",
-           "Why a client-side project manager pays for itself on a Dubai villa: who on your project protects your budget, the evidence on overruns, and the moments that matter.",
+           "Why appoint a client-side project manager on a Dubai villa: what each party is responsible for, the gap an owner's side fills, and the moments that matter.",
            body, crumbs, [B.faq_schema(faqs), article], og=B.og_image("quay-house-02"))
 
 # ---------------------------------------------------------------- case studies

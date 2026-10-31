@@ -9,19 +9,19 @@ SERVICES = [
   "name": "Owner's representative for villa builds in Dubai and Abu Dhabi",
   "title": "Owner\'s Representative Dubai | Villa Builds | Eastbridge",
   "description": "Independent owner\'s representation for villa builds and renovations in Dubai and Abu Dhabi. We act only for you and take nothing from contractors.",
-  "h1": "One person on the project who works only for you",
-  "lede": "Your architect works for the design. Your contractor works for his margin. We work for you, from the plot to the day you move in.",
+  "h1": "An independent representative on your side of the project",
+  "lede": "Your consultant is responsible for the design and its statutory duties. Your contractor is responsible for building it. We represent you, from the plot to the day you move in.",
   "image": "quay-house-01",
   "stage": "From the first budget to the end of the defects period",
-  "intro": """<p>A private villa in Dubai brings together a master developer, a permitting authority, a registered consultant, a main contractor, a dozen specialist subcontractors and an interior designer. Each of them is competent and each of them has their own commercial interest. On most projects nobody at the table has the owner's interest as their only job.</p>
-<p>That is the role we fill. We sit beside you, set the budget and programme with you, help you appoint the right consultant and contractor, then keep every party honest to what was agreed until handover. Philip spent 21 years running an award-winning building company, so we know how a tender is priced, where variations come from and how delay claims are assembled. That knowledge now works for you.</p>""",
+  "intro": """<p>A private villa in Dubai brings together a master developer, a permitting authority, a registered consultant, a main contractor, a dozen specialist subcontractors and an interior designer. Each of them has real duties and each has their own commercial position. What is often missing is someone appointed to coordinate the whole project and look at every price, payment and decision from the owner's side.</p>
+<p>That is the role we fill. We sit beside you, set the budget and programme with you, help you appoint the right consultant and contractor, then work alongside them to keep the project to what was agreed until handover. Philip spent 21 years running an award-winning building company, so we know how a tender is priced, where variations come from and how delay claims are assembled. That knowledge now works for you.</p>""",
   "does": [
    "Set a realistic budget, programme and brief before any design money is spent",
    "Help you choose and appoint a registered consultant and a main contractor, and agree fair terms with each",
    "Run the decision log, so every choice you make is recorded with its cost and time effect",
    "Visit site on your behalf and report progress, quality and risks in plain English",
    "Review every payment application and variation before you pay it",
-   "Handle disputes early, before they become claims",
+   "Deal with disagreements early, on the facts, before they become formal claims",
    "Lead snagging, handover documents and the defects period",
   ],
   "gets": [
@@ -33,9 +33,9 @@ SERVICES = [
   "builder_view": "On the contractor's side, the jobs that ran best were the ones where the owner had someone experienced checking the valuations. Payments were fair and on time, and the whole job ran tighter. An owner's representative does not slow a good contractor down. It removes the ambiguity that bad projects live on.",
   "faqs": [
    ("What does an owner's representative do on a villa build?", "We act as your single point of control. We set the budget and programme with you, help you appoint the consultant and contractor, track cost and time, review payments and variations, report progress and lead handover. We do not replace the registered consultant, who remains responsible for the statutory design, permit submissions and supervision duties."),
-   ("Is an owner's representative worth it on a villa?", "On a straightforward build with an experienced owner who lives in Dubai, perhaps not. On a bespoke villa, a major renovation, or any project where you are often abroad, the fee is usually smaller than one avoided variation dispute or one month of avoided delay. We will tell you honestly if you don't need us."),
+   ("Is an owner's representative worth it on a villa?", "On a straightforward build with an experienced owner who lives in Dubai, perhaps not. On a bespoke villa, a major renovation, or any project where you are often abroad, independent control of cost, programme, payments and decisions is usually worth considering. We will tell you honestly if you don't need us."),
    ("Do you take commission from contractors or suppliers?", "No. We take no commission, referral fee or discount from any consultant, contractor or supplier. Our only income on your project is the fee you pay us. That is written into our appointment."),
-   ("Do you replace the architect or the consultant?", "No. Your registered consultant designs, submits for permits and carries the statutory responsibilities. We represent you alongside them and make sure the design stays within your budget and brief."),
+   ("Do you replace the architect or the consultant?", "No. Your registered consultant designs, submits for permits and carries the statutory responsibilities. We represent you alongside them and check the design against your budget and brief at each stage."),
   ],
   "related": ["villa-construction-project-management", "cost-and-programme-control", "variations-delays-and-claims"],
  },
@@ -46,14 +46,14 @@ SERVICES = [
   "title": "Villa Construction Project Management Dubai | Eastbridge",
   "description": "Building a villa in Dubai or Abu Dhabi? We manage it from your side: budget, programme, appointments, cost control, site reports and handover.",
   "h1": "Building a new villa, managed from your side of the table",
-  "lede": "A bespoke villa is a two-year project and, for most owners, a once-in-a-lifetime one. We make sure it lands on budget, on time and as you imagined it.",
+  "lede": "A bespoke villa is a two-year project and, for most owners, a once-in-a-lifetime one. We keep cost, programme and quality under control from your side, so problems surface early and decisions stay with you.",
   "image": "sea-glass-house-01",
   "stage": "Plot to keys",
   "intro": """<p>Most villa builds that go wrong do so in the first three months, long before anything is built. The brief is loose, the budget is a guess, the design runs ahead of the money and the contract is signed before anyone has priced the risk. By the time the slab is poured, the outcome is mostly decided.</p>
-<p>We start before design. We test the brief against the plot's design guidelines and a realistic cost per square foot, then hold the project to it through design, approvals, appointment, construction and handover. Your consultant designs and carries the statutory responsibilities; your contractor builds; we make sure both deliver what you are paying for.</p>""",
+<p>We start before design. We test the brief against the plot's design guidelines and a realistic cost per square foot, then hold the project to it through design, approvals, appointment, construction and handover. Your consultant designs and carries the statutory responsibilities; your contractor builds; we work alongside both, checking cost, programme and quality against what you are paying for.</p>""",
   "does": [
    "Brief, budget and programme set before design starts",
-   "Design reviews against cost at each stage, so the drawings never outrun the money",
+   "Design reviews against cost at each stage, so the drawings stay aligned with the budget",
    "Coordination with the master developer and authority route through your consultant",
    "Help comparing contractor bids like-for-like and agreeing the contract",
    "Cost and programme control throughout construction",
@@ -62,7 +62,7 @@ SERVICES = [
    "Snagging, handover documents and defects follow-up",
   ],
   "gets": [
-   "A budget you can bank on, with contingency held by you, not the contractor",
+   "A budget built from the brief and the plot, with contingency held by you, not the contractor",
    "A programme with the decisions you need to make, and when",
    "Monthly cost-to-complete and programme reports",
    "A clean handover file: completion certificate, as-built drawings, warranties and manuals",
@@ -71,7 +71,7 @@ SERVICES = [
   "faqs": [
    ("How long does it take to build a villa in Dubai?", "Market guides put plot to keys at roughly 12 to 24 months, and 24 to 36 months for a custom luxury villa, split across design, approvals, construction and snagging. The biggest variable is how quickly the design is fixed. See our <a href=\"/insights/how-to-build-a-villa-in-dubai/\">step-by-step guide</a>."),
    ("What does it cost to build a luxury villa in Dubai?", "Published 2025–26 guides put luxury construction at roughly AED 850 to 1,400 per sq ft, before land, design fees, authority fees, furniture and landscaping. Our <a href=\"/insights/villa-construction-cost-dubai/\">cost guide</a> breaks this down."),
-   ("When should we appoint you?", "Ideally before you appoint the architect, or before you buy the plot. The earlier we are involved, the more of the budget we can protect."),
+   ("When should we appoint you?", "Ideally before you appoint the architect, or before you buy the plot. The earlier we are involved, the more influence there is over cost, because most of it is set by the brief, the design and the contract."),
   ],
   "related": ["plot-due-diligence", "design-and-approvals", "consultant-and-contractor-selection"],
  },
@@ -81,7 +81,7 @@ SERVICES = [
   "name": "Villa renovation and extension project management",
   "title": "Villa Renovation Project Management Dubai | Eastbridge",
   "description": "Renovating or extending a villa on Palm Jumeirah, Emirates Hills or Dubai Hills? We manage approvals, budget, contractors and handover for you.",
-  "h1": "Renovations and extensions, without the surprises",
+  "h1": "Renovations and extensions, with the unknowns planned for",
   "lede": "Renovation is where budgets break. Old waterproofing, tired services and approvals that take longer than promised. We plan for all three before the first wall comes down.",
   "image": "trelowen-01",
   "stage": "Survey to handover",
@@ -103,7 +103,7 @@ SERVICES = [
    "A contingency that reflects the age and condition of the house",
    "Reports you can read from anywhere in the world",
   ],
-  "builder_view": "In 21 years of altering and extending houses, the expensive surprises were almost always the same three: water where it shouldn't be, services that couldn't be reused, and structure that wasn't what the old drawings showed. Opening up a few areas before the price is agreed costs very little and saves a great deal.",
+  "builder_view": "In 21 years of altering and extending houses, the expensive surprises were almost always the same three: water where it shouldn't be, services that couldn't be reused, and structure that wasn't what the old drawings showed. Opening up a few areas before the price is agreed costs little and can remove a large part of that risk.",
   "faqs": [
    ("Do I need approval to renovate a villa on Palm Jumeirah?", "Most work beyond like-for-like interior finishes needs a Nakheel NOC first, then a permit from the relevant authority depending on your plot. Extensions, façade changes, pools and structural alterations always do. See our <a href=\"/insights/palm-jumeirah-villa-renovation/\">Palm Jumeirah renovation guide</a> and our explainer on the <a href=\"/insights/nakheel-noc-villa-renovation/\">Nakheel NOC</a>."),
    ("How much does a villa renovation cost in Dubai?", "Smart Renovation's 2026 guide puts basic villa renovations at around AED 200,000 to 300,000 (its price breakdown says up to 350,000), mid-range at AED 400,000 to 800,000 and luxury from AED 1 million. Full strip-outs of large villas on prime plots go well beyond that. Our <a href=\"/insights/villa-renovation-cost-dubai/\">villa renovation cost guide</a> sets out a worked budget and the hidden costs in older villas."),
@@ -218,7 +218,7 @@ SERVICES = [
   "lede": "Every month you should know three numbers: what you've paid, what you've committed, and what it will cost to finish. Most owners only know the first.",
   "image": "polgreen-manor-01",
   "stage": "Design through final account",
-  "intro": """<p>Construction budgets rarely fail in one dramatic moment. They drift: a variation here, a provisional sum that came in high, a delay that becomes a claim. By the time the drift is visible, it is usually too late to recover.</p>
+  "intro": """<p>Construction budgets rarely fail in one dramatic moment. They drift: a variation here, a provisional sum that came in high, a delay that becomes a claim. By the time the drift is visible without proper reporting, much of it is hard to recover.</p>
 <p>We keep a live cost plan from the first budget to the final account, and a programme that shows the real critical path rather than the optimistic one. Every payment application and every variation is reviewed before you pay it, with a clear recommendation.</p>""",
   "does": [
    "Cost plan at each design stage, then a live cost-to-complete during construction",
@@ -231,7 +231,7 @@ SERVICES = [
   "gets": [
    "A monthly one-page cost and programme summary",
    "A payment recommendation before every payment",
-   "An agreed final account, not an argument",
+   "A final account agreed line by line, with the records behind it",
   ],
   "builder_view": "Contractors live on cash flow. Front-loaded valuations, over-measured work and early release of retention are normal pressures, not dishonesty. An owner who reviews every valuation properly is not being difficult. They are keeping the job balanced, which is better for everyone.",
   "faqs": [
@@ -248,10 +248,10 @@ SERVICES = [
   "title": "Villa Construction Progress Reporting Dubai | Eastbridge",
   "description": "Independent, client-side site visits and progress reports for villa builds in Dubai and Abu Dhabi, with photos, written for owners.",
   "h1": "Eyes on site that answer only to you",
-  "lede": "Your consultant has statutory duties on site. Your contractor reports on his own work. We report to you, independently and in plain English.",
+  "lede": "Your consultant has statutory duties on site. Your contractor reports on its own work. We report to you, independently and in plain English.",
   "image": "the-lookout-01",
   "stage": "Construction",
-  "intro": """<p>On a Dubai villa, the registered consultant carries the statutory supervision role, and the contractor manages the works. Both report, but neither reports only to you. For an owner who is busy, often abroad, or simply not a builder, it is hard to know whether the project is really where the reports say it is.</p>
+  "intro": """<p>On a Dubai villa, the registered consultant carries the statutory supervision role, and the contractor manages the works. Both report properly within their roles, but neither is appointed to report only to you. For an owner who is busy, often abroad, or simply not a builder, it is hard to know whether the project is really where the reports say it is.</p>
 <p>We visit site on your behalf, regularly and sometimes unannounced, and report what we see: progress against programme, quality of workmanship, safety and housekeeping, and anything that will cost money or time later. We raise issues with the consultant and contractor through the proper channels and track them until they are closed.</p>""",
   "does": [
    "Scheduled and unannounced site visits on your behalf",
@@ -284,21 +284,21 @@ SERVICES = [
   "image": "three-mile-beach-01",
   "stage": "Whenever the contract is tested",
   "intro": """<p>Variations and delay are where villa budgets are most often lost, and where owners are least equipped. A contractor's extension of time claim can look persuasive: a programme, a list of events, a delay analysis and a demand for time and money. Whether it is right depends on the contract, the records and the critical path, not on how persuasive it looks.</p>
-<p>We review variation requests and delay claims on your behalf, test them against the contract and the records, and help you reach a fair answer quickly. Most disputes are cheaper to resolve in the first month than the sixth. Where legal advice is needed, we work alongside your UAE-qualified lawyer and give them the construction analysis they need.</p>""",
+<p>We review variation requests and delay claims on your behalf, test them against the contract and the records, and help you reach a fair answer quickly. In our experience, disagreements are cheaper to resolve in the first month than the sixth. Where legal advice is needed, we work alongside your UAE-qualified lawyer and give them the construction analysis they need.</p>""",
   "does": [
    "Review of variation requests: entitlement, price and time effect",
    "Extension of time claims tested against the programme and records",
    "Delay and disruption analysis in plain English",
-   "Record-keeping set up from day one, so you are never on the back foot",
+   "Record-keeping set up from day one, so your position is documented if a claim arrives",
    "Negotiation support and settlement strategy",
    "Construction analysis to support your lawyer where a dispute escalates",
   ],
   "gets": [
    "A clear view of what you owe, and what you don't",
    "A response you can send, or one we send on your behalf",
-   "Fewer disputes, settled sooner",
+   "Disagreements dealt with early and on the record",
   ],
-  "builder_view": "A delay claim is only as strong as the contemporaneous records behind it. The side with better records almost always wins. We set up your records from the start, so that if a claim ever comes, the facts are already on your side.",
+  "builder_view": "A delay claim is only as strong as the contemporaneous records behind it. The side with better records is usually in the stronger position. We set up your records from the start, so that if a claim ever comes, the facts are already on your side.",
   "faqs": [
    ("What is an extension of time claim?", "It is a contractor's request for more time to complete, usually because of events they say were not their responsibility, such as late information or owner changes. If granted, it can remove your right to delay damages and may come with a claim for extra cost."),
    ("Are you lawyers?", "No. We give construction and commercial advice. For legal advice, and for any formal dispute process, you should appoint a UAE-qualified lawyer. We often work alongside one."),
@@ -313,7 +313,7 @@ SERVICES = [
   "title": "Stalled Villa Project Rescue Dubai | Eastbridge",
   "description": "Villa build stalled, over budget or in dispute? We establish where it really stands, set a recovery plan and see it through on your side.",
   "h1": "When the build has stalled",
-  "lede": "Contractors walk off. Consultants go quiet. Budgets run out halfway. It happens more often than anyone admits, and it is recoverable.",
+  "lede": "Contractors walk off. Consultants go quiet. Budgets run out halfway. It happens more often than anyone admits, and many stalled projects can be recovered.",
   "image": "esplanade-road-01",
   "stage": "Mid-project",
   "intro": """<p>A stalled villa is stressful because nobody seems to have the full picture. The contractor says the owner owes money. The consultant says the contractor is late. The owner has paid more than half the contract value for a building that looks less than half finished.</p>
@@ -345,7 +345,7 @@ SERVICES = [
   "title": "Villa Snagging & Handover Dubai | Eastbridge",
   "description": "Client-side snagging, commissioning checks and handover for new and renovated villas in Dubai and Abu Dhabi. Every defect closed out.",
   "h1": "Handover is not the end of the project. It is the last chance to get it right.",
-  "lede": "Once you have the keys and the contractor has his money, defects are harder to close. We make sure the house is finished before you accept it.",
+  "lede": "Once you have the keys and the contractor has his money, defects are harder to close. We help make sure the house is finished, tested and documented before you accept it.",
   "image": "ansells-01",
   "stage": "Practical completion and defects period",
   "intro": """<p>A good handover is quiet. The snag list is short because quality was managed throughout, the systems have been tested and demonstrated, and a full set of documents is waiting. A poor handover is a long list, a frustrated contractor who wants to leave, and months of chasing.</p>
@@ -358,7 +358,7 @@ SERVICES = [
    "Defects period managed and retention released only when earned",
   ],
   "gets": [
-   "A house that works on the day you move in",
+   "Systems tested and demonstrated before you accept the house",
    "A complete handover file: completion certificate, as-built drawings, warranties, O&M manuals",
    "Defects tracked to close-out",
   ],
@@ -377,7 +377,7 @@ SERVICES = [
   "title": "Build a Dubai Villa From the UK or Abroad | Eastbridge",
   "description": "Building or renovating a villa in Dubai while living in the UK or Europe? We represent you on the ground and report clearly every week.",
   "h1": "Building in Dubai while living somewhere else",
-  "lede": "Many villa owners are not in Dubai most of the time. The project still needs decisions every week. We make sure they are made well, and that nothing is decided without you.",
+  "lede": "Many villa owners are not in Dubai most of the time. The project still needs decisions every week. We bring them to you with the information and a recommendation, so that nothing is decided without you.",
   "image": "menwinnion-01",
   "stage": "The whole project",
   "intro": """<p>Absentee owners are the most exposed clients in construction. Decisions are made on site because the owner isn't there. Payments are approved from a photograph. Small problems are reported late because nobody wants to deliver bad news by phone. By the time the owner visits, the project has drifted.</p>

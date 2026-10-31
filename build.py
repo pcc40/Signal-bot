@@ -193,6 +193,12 @@ def wa_link(text="Hello, I'd like to talk about a villa project."):
     from urllib.parse import quote
     return f"https://wa.me/{C.WHATSAPP}?text={quote(text)}"
 
+# Primary call to action. The contact form only requests a reply (there is no booking system), so the
+# labels say "arrange", never "book". CTA_SHORT is for the header, where space is tight; CTA_TINY for the phone bar.
+CTA_LABEL = "Arrange a free 30-minute call"
+CTA_SHORT = "Arrange a call"
+CTA_TINY = "Free call"
+
 CTA_IMAGES = ["sea-glass-house-01", "owers-house-04", "the-lookout-01", "quay-house-03", "saqqara-01", "menwinnion-04"]
 
 def cta_band(title="Tell us about the house you want to build.", text=None, image=None):
@@ -200,7 +206,7 @@ def cta_band(title="Tell us about the house you want to build.", text=None, imag
     image = image or CTA_IMAGES[len(PAGES) % len(CTA_IMAGES)]
     return f'''<section class="cta-band" aria-labelledby="cta-h">{picture(image, "", "100vw")}
 <div class="wrap"><div><h2 id="cta-h">{esc(title)}</h2><p style="margin-top:1em;max-width:46ch">{esc(text)}</p></div>
-<div class="actions"><a class="btn" href="/contact/">Start a private brief</a><a class="btn btn--ghost" href="{wa_link()}" rel="noopener">WhatsApp us</a></div></div></section>'''
+<div class="actions"><a class="btn" href="/contact/">{esc(CTA_LABEL)}</a><a class="btn btn--ghost" href="{wa_link()}" rel="noopener">WhatsApp us</a></div></div></section>'''
 
 def banner(crumbs, h1, lede=None, image="quay-house-01", credit=None, extra=""):
     l = f'<p class="lede">{lede}</p>' if lede else ""
@@ -240,7 +246,7 @@ def how_it_starts():
             f'<div class="head-row"><div><span class="kicker">How it starts</span><h2 id="starts-h">Three steps from first call to appointment</h2></div>'
             f'<p class="muted">The call is free. After that, you decide at each step whether to go on. <a class="link" href="/fees/">How fees work</a></p></div>'
             f'{steps_html(start_steps())}'
-            f'<p class="starts-cta"><a class="btn" href="/contact/">Book the free call</a>'
+            f'<p class="starts-cta"><a class="btn" href="/contact/">{esc(CTA_LABEL)}</a>'
             f'<a class="btn btn--ghost" href="{wa_link()}" rel="noopener">Or message us on WhatsApp</a></p>'
             f'</div></section>')
 
@@ -256,7 +262,7 @@ def action_bar():
     return (f'<nav class="action-bar" aria-label="Contact Eastbridge">'
             f'<a class="ab-wa" href="{wa_link()}" rel="noopener">{WA_ICON}<span>WhatsApp</span></a>'
             f'<a class="ab-call" href="tel:{C.PHONE_E164}">{CALL_ICON}<span>Call</span></a>'
-            f'<a class="ab-brief" href="/contact/">{BRIEF_ICON}<span>Start a brief</span></a></nav>')
+            f'<a class="ab-brief" href="/contact/">{BRIEF_ICON}<span>{esc(CTA_TINY)}</span></a></nav>')
 
 LOGO_MARK = ('<svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">'
              '<rect x="0.75" y="0.75" width="38.5" height="38.5" fill="none" stroke="currentColor" stroke-width="1.5"/>'
@@ -291,7 +297,7 @@ def header(path):
 <nav class="nav" id="nav" aria-label="Main"><button class="menu-close" type="button" aria-label="Close menu">Close</button><ul>
 <li class="has-mega"><a href="/services/"{svc_cur}>Services</a>{mega}</li>
 {a("Why client-side", "/why-a-client-side-project-manager/")}{a("Case studies", "/case-studies/")}{a("Work", "/work/")}{a("Insights", "/insights/")}{a("About", "/about/")}
-</ul><a class="btn" href="/contact/">Start a brief</a></nav>
+</ul><a class="btn" href="/contact/">{esc(CTA_SHORT)}</a></nav>
 </div></header>'''
 
 def footer():
@@ -667,7 +673,7 @@ def write_llms(posts):
     idx = head + [
         f"- Full text of the key pages and every article, in one file: {url('/llms-full.txt')}",
         "", "## Start here",
-        f"- [Why a client-side project manager]({url('/why-a-client-side-project-manager/')}): what an owner's representative does, and why it pays for itself",
+        f"- [Why a client-side project manager]({url('/why-a-client-side-project-manager/')}): what an owner's representative does, and where it adds value",
         f"- [Island E: worked project example]({url('/case-studies/island-e-waterfront-villa/')}): a hypothetical example of how we would manage a villa on Dubai Islands: budget structure, cash flow, tender comparison and programme (not a completed project)",
         f"- [Owers House, UK project case study]({url('/work/owers-house/')}): a RIBA award-winning house built by P Chapman Construction as main contractor",
         f"- [Full text for AI assistants]({url('/llms-full.txt')}): services, about, fees, FAQ and all insights as plain text",

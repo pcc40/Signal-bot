@@ -266,7 +266,7 @@ def project_page(p):
 # ---------------------------------------------------------------- approach / independence / fees / about
 def approach():
     crumbs = [("Home", "/"), ("How we work", "/approach/")]
-    body = B.banner(crumbs, "How we work", "One programme, one budget, one decision log, and one firm on the project whose only job is your interest.", "polgreen-manor-07", credit_of("polgreen-manor-07")) + f'''
+    body = B.banner(crumbs, "How we work", "One programme, one budget, one decision log, and an independent firm on your side, working alongside your consultant and contractor.", "polgreen-manor-07", credit_of("polgreen-manor-07")) + f'''
 <section class="section dark"><div class="wrap">{stages_html()}</div></section>
 <section class="section"><div class="wrap split"><div><h2>The rhythm of a project</h2></div><div class="prose">
 <p>Every project runs to the same rhythm, because rhythm is what keeps a two-year build under control.</p>
@@ -286,7 +286,7 @@ def approach():
 </tbody></table>
 <p>Read more in <a href="/insights/owners-representative-vs-project-manager-vs-consultant/">owner's representative vs project manager vs consultant</a>.</p></div></div></section>
 <section class="section"><div class="wrap split"><div><h2>Why a builder's background matters</h2></div><div class="prose">
-<p>Most owner's representatives come from consultancy. Philip came from contracting. For 21 years our founder, Philip Chapman, ran P Chapman Construction, an award-winning premium building company, pricing tenders, running sites, preparing and defending extension of time and variation claims under JCT contracts, and handing over houses to demanding owners and architects.</p>
+<p>Many owner's representatives come from consultancy. Philip came from contracting. For 21 years our founder, Philip Chapman, ran P Chapman Construction, an award-winning premium building company, pricing tenders, running sites, preparing and defending extension of time and variation claims under JCT contracts, and handing over houses to demanding owners and architects.</p>
 <p>That background is unusual on the client side, and it is the point. We know where a contractor's price has room, where a programme has float, and which details get closed up before anyone looks. We use that knowledge fairly. Good contractors welcome an informed client, because informed clients make decisions on time and pay what is due.</p>
 <p>See <a href="/insights/what-the-contractor-knows/">what a builder knows that most villa owners don't</a>.</p></div></div></section>
 {B.cta_band()}'''
@@ -310,8 +310,8 @@ def independence():
 <section class="section"><div class="wrap"><ul class="pledge">{lis}</ul></div></section>
 <section class="section paper"><div class="wrap split"><div><h2>Why it matters</h2></div><div class="prose">
 <p>When the person checking the contractor's invoices also earns a referral fee from that contractor, the check is not independent. When a design-and-build company's in-house project manager reports to the same owner as the builders, the check is not independent. When a consultant reviews the cost of a design they produced, the check is not independent.</p>
-<p>None of these arrangements is necessarily dishonest. They are simply not independent. If you want an independent check, it has to come from someone whose only interest is yours.</p>
-<p>Read more: <a href="/fees/">how our fees work</a>, <a href="/approach/">how we work</a> and <a href="/why-a-client-side-project-manager/">why a client-side project manager pays for itself</a>.</p></div></div></section>
+<p>None of these arrangements is necessarily dishonest. They are simply not independent. If you want an independent check, it has to come from someone with no other stake in the project.</p>
+<p>Read more: <a href="/fees/">how our fees work</a>, <a href="/approach/">how we work</a> and <a href="/why-a-client-side-project-manager/">why appoint a client-side project manager</a>.</p></div></div></section>
 {B.cta_band()}'''
     B.page("/independence/", "Independence Pledge: No Contractor Commissions | Eastbridge",
            "Eastbridge is paid only by the client. No commissions, referral fees or rebates from contractors, consultants or suppliers. We don't build and we don't design.",
@@ -379,7 +379,7 @@ def about():
 FAQ_ALL = [
  ("What is an owner's representative?", "An owner's representative is a professional who acts only for the person paying for a building project. On a villa, we set the budget and programme, help appoint the consultant and contractor, control cost and time, report progress, handle variations and claims, and lead handover."),
  ("Do I need an owner's representative to build a villa in Dubai?", "It isn't required by law. It is most valuable on bespoke villas, major renovations, and projects where the owner is often abroad or has not built before. We will tell you honestly if you don't need us."),
- ("How is that different from the consultant I have to appoint?", "In Dubai, a registered consultant carries the statutory design, submission and supervision responsibilities. They work for the project's compliance and design. We work only for you, alongside them, on cost, time, decisions, contracts and quality."),
+ ("How is that different from the consultant I have to appoint?", "In Dubai, a registered consultant carries the statutory design, submission and supervision responsibilities. They owe you proper professional care in that role. We add independent coordination and commercial scrutiny alongside them, acting only for you on cost, time, decisions, contracts and quality."),
  ("Do you take commission from contractors?", "Never. We are paid only by you. See our <a href=\"/independence/\">independence pledge</a>."),
  ("What does it cost to build a villa in Dubai?", "Published 2025–26 guides put construction at roughly AED 300–500 per sq ft for a standard villa, AED 900–1,400 for luxury, and AED 1,200 and above for ultra-luxury, before land, design fees, approvals, interiors and landscaping. See our <a href=\"/insights/villa-construction-cost-dubai/\">full cost guide</a>."),
  ("How long does it take?", "Market guides put plot to keys at roughly 12 to 24 months, and 24 to 36 months for custom luxury villas. See <a href=\"/insights/how-to-build-a-villa-in-dubai/\">how to build a villa in Dubai</a>."),
@@ -452,7 +452,7 @@ def contact():
         ("A free 30-minute call", "At a time that suits you, including UK and European hours. If you have drawings, plot details or contractor quotes, have them to hand; they are not essential."),
         ("A written next step", "If we can help, a scope and fixed fee for the first stage. If we can't, we will say so and, where we can, point you to someone who can."),
     ]
-    reads = [("/why-a-client-side-project-manager/", "Why a client-side project manager", "What the role is, and where it pays for itself."),
+    reads = [("/why-a-client-side-project-manager/", "Why a client-side project manager", "What the role is, and where it adds value."),
              ("/case-studies/island-e-waterfront-villa/", "Island E: worked project example", "A hypothetical example of how we would manage an Island E villa, from plot to keys."),
              ("/insights/villa-construction-cost-dubai/", "What it costs to build a villa in Dubai", "Published 2026 build costs, tier by tier.")]
     read_html = "".join(f'<li><a href="{u}"><b>{esc(t)}</b><span>{esc(d)}</span></a></li>' for u, t, d in reads)
@@ -545,7 +545,7 @@ def insights(posts):
 {guide_cta()}
 <p class="small muted" style="margin-top:2em">This article is general information, not advice for your specific project. Figures are from the sources cited and change over time.</p>
 </div>
-<aside class="article-aside" aria-label="Talk to us"><div class="aside-card">{pic(svc_img_for(p), "", "(max-width:980px) 100vw, 30vw")}<div><h3>Planning a villa in Dubai?</h3><p>Talk it through with Philip. The first conversation is free and confidential.</p><a class="btn" href="/contact/">Start a private brief</a></div></div>
+<aside class="article-aside" aria-label="Talk to us"><div class="aside-card">{pic(svc_img_for(p), "", "(max-width:980px) 100vw, 30vw")}<div><h3>Planning a villa in Dubai?</h3><p>Talk it through with Philip. The first conversation is free and confidential.</p><a class="btn" href="/contact/">{esc(B.CTA_LABEL)}</a></div></div>
 <div class="aside-links"><b>Services</b>{"".join(f'<a href="/services/{x}/">{esc(SVC[x]["short"])}</a>' for x in ("owners-representative","villa-construction-project-management","villa-renovation-project-management","plot-due-diligence"))}</div></aside>
 </div></section></article>
 <section class="section paper"><div class="wrap"><h2>Read next</h2>{post_cards(rel)}</div></section>
