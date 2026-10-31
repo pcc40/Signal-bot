@@ -138,7 +138,7 @@ Under UAE law, the main contractor and the engineer carry a ten-year liability f
 
 ## Defects liability period and retention
 
-Most villa contracts include a defects liability period after handover, during which the contractor must come back and fix defects that appear. The length and the mechanics are set by your contract, so read it before handover, not after.
+Most villa contracts include a [defects liability period](/glossary/#defects-liability-period) after handover, during which the contractor must come back and fix defects that appear. The length and the mechanics are set by your contract, so read it before handover, not after.
 
 Retention is money held back from payments and released in stages, often part at handover and the rest at the end of the defects period. Together with the final payment, it is your main leverage. Our general rule of thumb: do not release more than the contract requires until the agreed snags are closed and the handover documents are delivered. Check your contract and take legal advice before withholding sums the contractor considers due.
 

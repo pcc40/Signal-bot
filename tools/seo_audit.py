@@ -27,8 +27,8 @@ for f in files:
     t = re.search(r"<title>(.*?)</title>", s); d = re.search(r'<meta (?=[^>]*name="description")[^>]*content="(.*?)"', s)
     if not t or not d: errors.append(f"missing title/description on {rel}"); continue
     t, d = html.unescape(t.group(1)), html.unescape(d.group(1))
-    titles.setdefault(t, []).append(rel); descs.setdefault(d, []).append(rel)
     lang = rel.split("/")[1] if rel.split("/")[1] in ("ar", "ru", "zh", "hi") else "en"
+    titles.setdefault(t, []).append((lang, rel)); descs.setdefault(d, []).append(rel)
     if lang != "en":
         if 'dir="rtl"' not in s and lang == "ar": errors.append(f"Arabic page not right-to-left {rel}")
         body = re.sub(r"<[^>]+>", " ", re.sub(r"<(script|style|svg)\b.*?</\1>", "", s.split("<body", 1)[-1], flags=re.S))
@@ -44,7 +44,11 @@ for f in files:
     for pat in FORBIDDEN:
         if re.search(pat, text, re.I): errors.append(f"compliance wording '{pat}' on {rel}")
 for k, v in titles.items():
-    if len(v) > 1: errors.append(f"duplicate title '{k}': {v}")
+    # Two pages in the same language sharing a title is an error. The same title on language versions of one
+    # page means the translation is still pending (English fallback): a warning, like "partly untranslated".
+    langs = [l for l, _ in v]
+    if len(langs) != len(set(langs)): errors.append(f"duplicate title '{k}': {[r for _, r in v]}")
+    elif len(v) > 1: warns.append(f"title not yet translated on {[r for l, r in v if l != 'en']}")
 for k, v in descs.items():
     if len(v) > 1: warns.append(f"duplicate description on {v}")
 print(f"Audited {len(files)} pages: {len(errors)} errors, {len(warns)} warnings")

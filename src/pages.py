@@ -437,7 +437,7 @@ def legal():
 def insights(posts):
     crumbs = [("Home", "/"), ("Insights", "/insights/")]
     items = "".join(f'<li><a href="/insights/{p["slug"]}/"><div><h3>{esc(p["title"])}</h3><p>{esc(p["description"])}</p></div><div class="meta">{esc(p.get("category",""))}<br>{datetime.date.fromisoformat(str(p["date"])).strftime("%-d %b %Y")}</div></a></li>' for p in posts)
-    body = B.banner(crumbs, "Insights", "Straight answers for villa owners in Dubai and Abu Dhabi: costs, approvals, contracts and choosing a team, written from the builder's side of the table.", "quay-house-04", credit_of("quay-house-04")) + f'''
+    body = B.banner(crumbs, "Insights", "Straight answers for villa owners in Dubai and Abu Dhabi: costs, approvals, contracts and choosing a team, written from the builder's side of the table. New to the jargon? Start with our <a href=\"/glossary/\">villa construction glossary</a>.", "quay-house-04", credit_of("quay-house-04")) + f'''
 <section class="section"><div class="wrap">{post_cards(posts)}</div></section>{B.cta_band()}'''
     B.page("/insights/", "Villa Building Insights for Dubai & Abu Dhabi Owners | Eastbridge",
            "Guides for villa owners in Dubai and Abu Dhabi: build costs, approvals, contractors, contracts, snagging and renovation, from the builder's side.",
@@ -513,10 +513,12 @@ def misc(posts):
             ["", "## Areas"] + [f"- [{a['name']}]({B.url('/areas/' + a['slug'] + '/')}): {a['tag']}; master developer {a['developer']}" for a in AREAS] + \
             ["", "## Guides"] + [f"- [{p['title']}]({B.url('/insights/' + p['slug'] + '/')}): {p['description']}" for p in posts] + \
             ["", "## About", f"- [About]({B.url('/about/')})", f"- [How we work]({B.url('/approach/')})", f"- [Independence pledge]({B.url('/independence/')})", f"- [Fees]({B.url('/fees/')})", f"- [FAQ]({B.url('/faq/')})"]
+    import pages_glossary
+    lines += pages_glossary.llms_lines()
     (B.DIST / "llms.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 def build_all(posts):
-    import pages_new
+    import pages_new, pages_glossary
     home(posts)
     pages_new.why_page()
     pages_new.case_hub()
@@ -529,4 +531,5 @@ def build_all(posts):
     for p in PROJECTS: project_page(p)
     approach(); independence(); fees(); about(); faq_page(); contact(); legal()
     insights(posts)
+    pages_glossary.glossary_page()
     misc(posts)
