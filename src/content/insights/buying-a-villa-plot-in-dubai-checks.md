@@ -2,7 +2,7 @@
 title: "Buying a villa plot in Dubai: checks to make before you pay"
 description: "The checks to make before buying a villa plot in Dubai: title, affection plan, design guidelines, build-by deadlines, ground, utilities and build budget."
 date: 2026-10-24
-updated: 2026-10-29
+updated: 2026-10-31
 category: "Plots"
 keypoints:
   - "Read the affection plan and the master developer's design guidelines before you agree a price; they decide what you can actually build."
@@ -143,6 +143,8 @@ Ask the hard question early: what would this finished villa sell for? Compare pl
 Several newer communities are now selling plots for private villas.
 
 **Hudayriyat, Abu Dhabi.** Modon launched its first residential plots community on Hudayriyat Island, with more than 1,700 plots for four to six bedroom villas ([Middle East Construction News](https://meconstructionnews.com/63729/modon-launches-its-first-residential-plots-community-on-hudayriyat-island)). Abu Dhabi's approvals run through a different system from Dubai's, under the Department of Municipalities and Transport. See our [Hudayriyat](/areas/hudayriyat/) page.
+
+If you are buying in Abu Dhabi, our guide to [villa permits in Abu Dhabi](/insights/abu-dhabi-villa-permit-tamm/) explains how approvals there differ from Dubai.
 
 **Dubai Islands and Palm Jebel Ali.** Both are Nakheel master communities where plots are being sold for private villas. As newer markets, they have fewer completed villas to benchmark against, so evidence on actual build costs, timelines and resale values is thinner. That can be an opportunity, but it raises the importance of checking infrastructure delivery dates, the precise design guidelines, any build-by obligations and the master developer's approval process. See our pages on [Dubai Islands](/areas/dubai-islands/) and [Palm Jebel Ali](/areas/palm-jebel-ali/).
 
