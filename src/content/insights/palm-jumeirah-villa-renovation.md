@@ -68,7 +68,7 @@ A clean sequence saves months. The one we work to looks like this.
 1. **Brief and budget.** Agree what you want, what you will spend, and what you would cut first if the numbers come in high.
 2. **Condition survey and opening-up.** Before any design is fixed, get the existing villa properly inspected: roofs, basement, wet areas, pool, MEP plant and distribution. Where it matters, open up small areas.
 3. **Concept design and early cost check.** Your consultant develops the design; get it priced at concept stage, not after the drawings are finished.
-4. **Nakheel NOC.** Submit through the Nakheel portal.
+4. **Nakheel NOC.** Submit through the Nakheel portal. Our guide to the [Nakheel NOC for villa renovations](/insights/nakheel-noc-villa-renovation/) explains what triggers one and how to sequence the contractor around it.
 5. **Detailed design and building permit.** Structural, MEP and architectural drawings, then the permit application through the unified window.
 6. **Contractor selection.** Compare bids like-for-like on the same drawings and specification. Our guide on [how to choose a villa contractor in Dubai](/insights/how-to-choose-a-villa-contractor-dubai/) covers the questions to ask.
 7. **Contract.** Agree scope, price basis, programme, payment terms and how changes are handled. See [villa construction contracts in the UAE](/insights/villa-construction-contracts-uae/).
