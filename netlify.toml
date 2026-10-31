@@ -40,6 +40,12 @@
   force = true
 
 [[redirects]]
+  from = "https://www.eastbridgestrategicpartners.com/*"
+  to = "https://eastbridgestrategicpartners.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://eastbridgepartners.ae/*"
   to = "https://eastbridgestrategicpartners.com/:splat"
   status = 301

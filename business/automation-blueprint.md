@@ -366,7 +366,7 @@ Not included: UAE tax agent, lawyer review of the engagement letter, professiona
 
 ## 14. Phil's one-time checklist, in order
 
-1. Choose the canonical repo; link Netlify; point the domain; confirm `enquiries@` receives mail. (Section 1)
+1. Choose the canonical repo; link Netlify; point the domain; confirm `philip@eastbridgestrategicpartners.com` receives mail. (Section 1)
 2. Netlify: enable form detection, add form notification email, redeploy, test the form. (Section 2)
 3. Resend: verify domain, create API key; add DMARC. Netlify: add `EMAIL_API_KEY`, `EMAIL_FROM`, `LEAD_ALERT_TO`; redeploy; test. (Section 3)
 4. Google Sheet and Apps Script; add `SHEET_WEBHOOK_URL` and `SHEET_WEBHOOK_TOKEN`; test. Update the privacy notice to name Google. (Sections 3–4)
