@@ -713,3 +713,74 @@ html[dir="rtl"],html[dir="rtl"] body{overflow-x:clip}
 .post-card figure,.svc-card figure,.work-card figure,.door,.mosaic a{background:var(--stone-2)}
 img{color:transparent}
 .form input,.form select,.form textarea,.form fieldset,[id]{scroll-margin-top:110px;scroll-margin-bottom:84px}
+
+/* ==========================================================================
+   Tools: villa build and renovation cost calculator (/tools/villa-build-cost-calculator/)
+   ========================================================================== */
+.calc{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,80px);align-items:start}
+@media (max-width:980px){.calc{grid-template-columns:1fr}}
+.calc-in{display:grid;gap:26px}
+.calc-in fieldset{border:0;padding:0;margin:0;min-width:0}
+.calc-in legend,.calc-in label[for]{display:block;font-size:var(--s--1);font-weight:600;margin-bottom:8px}
+.calc-in input[type=number],.calc-in select{width:100%;font:inherit;color:var(--ink);background:#fff;border:1px solid #A7ACAA;border-radius:0;padding:11px 14px;min-height:50px;font-variant-numeric:tabular-nums}
+.calc-in input:focus-visible,.calc-in select:focus-visible{outline:2px solid var(--brass);outline-offset:1px}
+.calc-in .hint{font-size:.8rem;color:var(--ink-soft);margin:6px 0 0}
+.calc-seg{display:flex;border:1px solid var(--ink);width:max-content;max-width:100%}
+.calc-seg label{position:relative;margin:0;cursor:pointer}
+.calc-seg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.calc-seg span{display:block;padding:11px 20px;font-size:.92rem;font-weight:500;min-height:46px;line-height:24px}
+.calc-seg--sm span{padding:8px 16px;min-height:40px}
+.calc-seg input:checked+span{background:var(--ink);color:#fff}
+.calc-seg input:focus-visible+span{outline:2px solid var(--brass);outline-offset:2px}
+.calc-tiers{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:480px){.calc-tiers{grid-template-columns:1fr}}
+.calc-opt{position:relative;display:block;margin:0;cursor:pointer}
+.calc-opt input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.calc-opt>span{display:block;height:100%;border:1px solid var(--line);background:#fff;padding:12px 14px;min-height:76px;transition:border-color .2s}
+.calc-opt b{display:block;font-weight:600;font-size:.95rem}
+.calc-opt small{display:block;color:var(--ink-soft);font-size:.78rem;line-height:1.4;margin-top:2px}
+.calc-opt input:checked+span{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.calc-opt input:focus-visible+span{outline:2px solid var(--brass);outline-offset:2px}
+.calc-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.calc-row>*{min-width:0}
+.calc-checks{display:grid;gap:8px}
+.calc-checks label{display:flex;gap:10px;align-items:center;font-size:.95rem;cursor:pointer}
+.calc-checks input{width:20px;height:20px;accent-color:var(--ink);margin:0}
+.calc-in .is-off{opacity:.42}
+.calc-in .hint.is-off{visibility:hidden}
+.calc-out{background:var(--stone);padding:clamp(22px,3vw,40px)}
+.page-head--tool{padding-block:clamp(36px,4.5vw,72px) 0}
+.page-head--tool h1{max-width:22ch;font-size:var(--s-4)}
+.page-head--tool .lede{max-width:62ch}
+.calc-label{font-size:var(--s--1);color:var(--ink-soft);margin:0 0 4px}
+.calc-total{margin:0 0 6px;font-variant-numeric:tabular-nums}
+.calc-total b{display:block;font-family:var(--serif);font-weight:400;font-size:var(--s-4);line-height:1.05;letter-spacing:-.01em}
+.calc-range{display:block;font-size:var(--s-0);color:var(--ink-soft);margin-top:6px}
+.calc-sub{font-size:var(--s--1);color:var(--ink-soft);margin:0 0 20px;font-variant-numeric:tabular-nums}
+.cb{display:flex;height:14px;background:#fff;overflow:hidden;margin:0 0 12px}
+.cb-seg{display:block;height:100%;transition:width .35s var(--ease)}
+.cb-build{background:var(--slate)}
+.cb-extras{background:#5E7479}
+.cb-design{background:var(--brass)}
+.cb-permits{background:var(--brass-light)}
+.cb-contingency{background:#A9B1AF}
+.cb-ffe{background:#D8CFBE}
+.cb-legend{list-style:none;padding:0;margin:0 0 20px;display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:4px 16px;font-size:.8rem;font-variant-numeric:tabular-nums}
+.cb-legend li{display:flex;align-items:center;gap:7px}
+.cb-legend i{width:10px;height:10px;flex:none}
+.cb-legend b{font-weight:600;margin-left:auto}
+.calc-table{margin:0 0 22px;background:#fff}
+.calc-table th[scope=row]{font-weight:400;background:transparent}
+.calc-table td{text-align:right;white-space:nowrap}
+.calc-table tfoot th,.calc-table tfoot td{font-weight:600;border-top:2px solid var(--ink)}
+.calc-h{font-family:var(--sans);font-size:var(--s-0);font-weight:600;margin:0 0 8px}
+.calc-time{list-style:none;padding:0;margin:0 0 10px;min-height:calc(4 * 2.4em)}
+.calc-time li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding:.45em 0;font-size:.9rem}
+.calc-time li[hidden]{display:none}
+.calc-time b{font-weight:600;white-space:nowrap}
+.calc-note{font-size:.84rem;color:var(--ink-soft);margin:0 0 10px}
+.calc-flag{font-size:.84rem;font-weight:600;margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line)}
+.calc-sources li{word-break:break-word}
+.calc-sources a{white-space:nowrap}
+sup a{text-decoration:none;color:var(--brass);font-size:.75em;margin-left:1px}
+@media (max-width:520px){.calc-table th,.calc-table td{padding:.6em .45em;font-size:.76rem}.calc-out{padding:18px 14px}}

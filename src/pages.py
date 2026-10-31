@@ -539,7 +539,7 @@ def misc(posts):
     # llms.txt and llms-full.txt are written by build.write_llms()
 
 def build_all(posts):
-    import pages_new
+    import pages_new, pages_tools
     home(posts)
     pages_new.why_page()
     pages_new.case_hub()
@@ -552,4 +552,5 @@ def build_all(posts):
     for p in PROJECTS: project_page(p)
     approach(); independence(); fees(); about(); faq_page(); contact(); legal()
     insights(posts)
+    pages_tools.build_tools()
     misc(posts)
