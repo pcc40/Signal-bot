@@ -201,7 +201,7 @@ def footer():
 <p>{esc(C.ADDRESS["street"])}<br>{esc(C.ADDRESS["locality"])}, {esc(C.ADDRESS["country_name"])}</p></div>
 <div><h3>Services</h3><ul>{svc}<li><a href="/services/">All services</a></li></ul></div>
 <div><h3>Where we work</h3><ul>{ar}<li><a href="/areas/">All areas</a></li></ul></div>
-<div><h3>Firm</h3><ul><li><a href="/why-a-client-side-project-manager/">Why client-side</a></li><li><a href="/case-studies/">Case study</a></li><li><a href="/work/">Work</a></li><li><a href="/about/">About</a></li><li><a href="/approach/">How we work</a></li><li><a href="/independence/">Independence pledge</a></li><li><a href="/fees/">How fees work</a></li><li><a href="/insights/">Insights</a></li><li><a href="/faq/">Questions</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+<div><h3>Firm</h3><ul><li><a href="/why-a-client-side-project-manager/">Why client-side</a></li><li><a href="/case-studies/">Case study</a></li><li><a href="/work/">Work</a></li><li><a href="/about/">About</a></li><li><a href="/approach/">How we work</a></li><li><a href="/independence/">Independence pledge</a></li><li><a href="/fees/">How fees work</a></li><li><a href="/insights/">Insights</a></li><li><a href="/guides/villa-owner-checklist/">Pre-construction checklist</a></li><li><a href="/faq/">Questions</a></li><li><a href="/contact/">Contact</a></li></ul></div>
 </div>
 <div class="legal"><span>© {year} {C.LEGAL}. {C.LICENCE}. Eastbridge acts as the client's project manager and representative. It is not a contractor and does not replace the registered consultant of record required by the authorities.</span>
 <span><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/sitemap.xml">Sitemap</a></span></div>
@@ -222,6 +222,7 @@ if(hv&&window.matchMedia('(min-width:900px)').matches&&!window.matchMedia('(pref
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})}else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')})}
 var fm=document.querySelector('form[data-enquiry]');if(fm){fm.addEventListener('submit',function(){if(window.gtag)gtag('event','generate_lead',{form:'brief'})})}
+var gf=document.querySelector('form[data-guide]');if(gf){gf.addEventListener('submit',function(){if(window.gtag)gtag('event','generate_lead',{form:'checklist'})})}
 document.querySelectorAll('a[href^="https://wa.me"]').forEach(function(a){a.addEventListener('click',function(){if(window.gtag)gtag('event','contact',{method:'whatsapp'})})});
 })();
 </script>"""

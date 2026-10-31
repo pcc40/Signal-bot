@@ -434,6 +434,10 @@ def legal():
     B.page("/terms/", "Website Terms | Eastbridge Strategic Partners", "Terms of use for the Eastbridge Strategic Partners website.", body, crumbs)
 
 # ---------------------------------------------------------------- insights
+def guide_cta():
+    import pages_guides
+    return pages_guides.cta_block()
+
 def insights(posts):
     crumbs = [("Home", "/"), ("Insights", "/insights/")]
     items = "".join(f'<li><a href="/insights/{p["slug"]}/"><div><h3>{esc(p["title"])}</h3><p>{esc(p["description"])}</p></div><div class="meta">{esc(p.get("category",""))}<br>{datetime.date.fromisoformat(str(p["date"])).strftime("%-d %b %Y")}</div></a></li>' for p in posts)
@@ -477,6 +481,7 @@ def insights(posts):
 <div class="author"><img class="mono" src="/assets/img/philip-chapman-thumb.webp" width="52" height="52" alt="" loading="lazy"><div><b>{esc(C.FOUNDER["name"])}, {esc(C.FOUNDER["role"])}</b><span class="small muted">Founded and ran P Chapman Construction, an award-winning £17m premium builder, for 21 years. Now represents villa owners in Dubai and Abu Dhabi. <a href="/about/#founder">About Philip</a></span></div></div>
 {('<h2 id="faq">Questions</h2>' + B.faq_html(faqs)) if faqs else ""}
 {('<h2 id="sources">Sources</h2><ol class="small">' + srcs + '</ol>') if srcs else ""}
+{guide_cta()}
 <p class="small muted" style="margin-top:2em">This article is general information, not advice for your specific project. Figures are from the sources cited and change over time.</p>
 </div>
 <aside class="article-aside" aria-label="Talk to us"><div class="aside-card">{pic(svc_img_for(p), "", "(max-width:980px) 100vw, 30vw")}<div><h3>Planning a villa in Dubai?</h3><p>Talk it through with Philip. The first conversation is free and confidential.</p><a class="btn" href="/contact/">Start a private brief</a></div></div>
@@ -512,11 +517,12 @@ def misc(posts):
              "## Services"] + [f"- [{s['name']}]({B.url('/services/' + s['slug'] + '/')}): {s['description']}" for s in SERVICES] + \
             ["", "## Areas"] + [f"- [{a['name']}]({B.url('/areas/' + a['slug'] + '/')}): {a['tag']}; master developer {a['developer']}" for a in AREAS] + \
             ["", "## Guides"] + [f"- [{p['title']}]({B.url('/insights/' + p['slug'] + '/')}): {p['description']}" for p in posts] + \
+            ["", "## Free guide", f"- [The Villa Owner's Pre-Construction Checklist (Dubai & Abu Dhabi)]({B.url('/guides/villa-owner-checklist/')}): free 10-page PDF of practical checks by stage: plot purchase, brief and budget, choosing a consultant and contractor, contract terms, monthly checks during construction, snagging and handover. Direct PDF: {B.url('/assets/guides/villa-owner-checklist.pdf')}"] + \
             ["", "## About", f"- [About]({B.url('/about/')})", f"- [How we work]({B.url('/approach/')})", f"- [Independence pledge]({B.url('/independence/')})", f"- [Fees]({B.url('/fees/')})", f"- [FAQ]({B.url('/faq/')})"]
     (B.DIST / "llms.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 def build_all(posts):
-    import pages_new
+    import pages_new, pages_guides
     home(posts)
     pages_new.why_page()
     pages_new.case_hub()
@@ -529,4 +535,5 @@ def build_all(posts):
     for p in PROJECTS: project_page(p)
     approach(); independence(); fees(); about(); faq_page(); contact(); legal()
     insights(posts)
+    pages_guides.build_all()
     misc(posts)
