@@ -56,7 +56,7 @@ The process is well defined. Dubai Municipality's "Building in Dubai" platform, 
 | Completion, snagging and handover | 1–2 months | Contractor, consultant, owner |
 | **Plot to keys** | **12–24 months** (24–36 for custom luxury) | |
 
-Durations without a label are from Real Estate Club Dubai. The others are our own planning allowances and depend heavily on the owner's speed of decision.
+Durations without a label are from Real Estate Club Dubai. The others are our own planning allowances and depend heavily on the owner's speed of decision. For a closer look at where those months go, see [how long it takes to build a villa in Dubai](/insights/how-long-to-build-a-villa-dubai/).
 
 ## Stage 1: Check the plot before you commit
 
