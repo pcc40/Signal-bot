@@ -110,7 +110,7 @@ The range is also wide because the low column pairs the cheapest assumptions tog
 
 ## Where do villa budgets leak?
 
-Our founder spent 21 years running an award-winning premium building company. From that seat, budgets almost never failed on the rate. They failed on the gaps around it.
+Our founder spent 21 years running a premium building company whose houses won RIBA and LABC recognition. From that seat, budgets almost never failed on the rate. They failed on the gaps around it.
 
 **Provisional sums.** When a design is incomplete, the contractor carries an allowance for the unknown item: a kitchen, a staircase, a lighting system. The allowance is often set low so the overall bid looks competitive. When the real item is chosen, the difference becomes an addition. On the contractor's side, a bid with a lot of provisional sums was always a bid with a lot of room in it, for us.
 

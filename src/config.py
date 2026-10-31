@@ -35,7 +35,8 @@ ADDRESS = {
     "country_name": "United Arab Emirates",
 }
 HOURS = "Monday to Friday, 9am–6pm Gulf Standard Time"
-RESPONSE_PROMISE = "A personal reply from Philip within one working day"
+# Softened to an aim until the owner confirms one working day as an operational commitment (review brief, section 4).
+RESPONSE_PROMISE = "Philip aims to reply personally within one working day"
 FOUNDED_TRACK_RECORD_YEARS = 21
 SOCIAL = [
     "https://www.instagram.com/eastbridgestrategicpartners/",

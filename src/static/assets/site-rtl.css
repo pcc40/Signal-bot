@@ -125,6 +125,7 @@ body.has-hero .site-head.stuck{position:fixed;top:0;background:rgba(255,255,255,
 .mega .mega-feature{background:var(--stone);display:block;text-decoration:none}
 .mega .mega-feature img{width:100%;aspect-ratio:4/3;object-fit:cover}
 .mega .mega-feature span{display:block;padding:12px 14px;font-size:.9rem;line-height:1.4}
+.mega .mega-feature .mega-credit{display:block;padding:8px 14px 0;font-size:.75rem;line-height:1.35;color:var(--ink-soft)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:48px;padding:.8em 1.5em;border:1px solid var(--ink);background:var(--ink);color:#fff;text-decoration:none;font-weight:500;font-size:.93rem;border-radius:0;cursor:pointer;font-family:var(--sans);transition:background .25s,border-color .25s,color .25s}
 .btn:hover{background:var(--brass);border-color:var(--brass);color:#fff}
 .btn:active{transform:translateY(1px)}
@@ -311,6 +312,8 @@ body.has-hero .site-head:not(.stuck) .btn{background:#fff;color:var(--ink);borde
 .legend i{display:inline-block;width:12px;height:12px}
 .chart-box{border:1px solid var(--line);padding:clamp(16px,2.4vw,28px);background:#fff}
 .chart-box figcaption{padding-top:12px}
+/* On phones the charts keep a legible size and scroll sideways inside their box; the page itself never scrolls sideways. */
+@media (max-width:700px){.chart-box{overflow-x:auto;-webkit-overflow-scrolling:touch}.chart-box .chart{min-width:560px}}
 
 /* ---------- Case study page ---------- */
 .notice{border:1px solid var(--brass);background:#FBF8F2;padding:20px 24px;font-size:.95rem;max-width:860px}

@@ -55,9 +55,9 @@ COMPARE = [
  ("A budget that is a hope, set before anyone has priced the risk", "A budget built from cost per square foot, the plot rules and a contingency you hold"),
  ("A design that grows until the tender comes back over budget", "A cost check at every design stage, before the drawings move on"),
  ("Bids compared on the headline number", "Bids put on a like-for-like basis: exclusions, provisional sums, preliminaries, programme"),
- ("Payments approved from a photograph", "Every payment measured against the work actually on site"),
+ ("Payment applications paid without an independent check from your side", "Every payment application reviewed against the work on site before you pay"),
  ("Variations agreed on site, priced later", "Every change priced and its time effect stated before you instruct it"),
- ("Delay claims answered with opinion", "Records kept from day one, so claims are answered with facts"),
+ ("Delay claims met without a full record", "Records kept from day one, so claims are answered with facts"),
  ("A snag list that drags on for months", "Handover planned from the start; retention released only when earned"),
 ]
 
@@ -93,6 +93,7 @@ def svc_cards(items, imgs):
 HERO_SLIDES = ["quay-house-01", "owers-house-01", "sea-glass-house-01", "the-lookout-02"]
 OWERS_URL = "https://www.johnpardeyarchitects.com/modern-architecture/one-off-houses-architecture/owers-house/"
 LABC_2020_URL = "https://www.labc.co.uk/news/labc-south-west-winners-amp-highly-commended-2020"
+LABC_2018_URL = "https://www.acornpropertygroup.org/old-station-masters-house-wins-labc-award/"
 
 def home(posts, post_cards, stages_html, svc_img):
     """Order (review brief 2026-10-31, section 5): proposition and contact; founder evidence; three routes;
@@ -125,7 +126,7 @@ def home(posts, post_cards, stages_html, svc_img):
 <section class="section" aria-labelledby="founder-h"><div class="wrap feature">
 <figure class="portrait">{pic("philip-chapman-01", "Philip Chapman, Founding Partner of Eastbridge Strategic Partners", "(max-width:900px) 100vw, 42vw", cls="reveal")}</figure>
 <div><span class="kicker">Who leads your project</span><h2 id="founder-h">Philip Chapman, Founding Partner</h2>
-<p>Philip founded P Chapman Construction and led it for 21 years, growing it into a premium UK contractor with an annual turnover of around £17 million. Houses the company built have won a <a href="{OWERS_URL}" rel="noopener">RIBA South West Award</a> (Owers House, 2016, designed by John Pardey Architects) and <a href="{LABC_2020_URL}" rel="noopener">LABC Building Excellence Awards</a> (a 2018 win and a 2020 Highly Commended), and one was featured on Channel 4's Grand Designs.</p>
+<p>Philip founded P Chapman Construction and led it for 21 years, growing it into a premium UK contractor with an annual turnover of around £17 million. Houses the company built have won a <a href="{OWERS_URL}" rel="noopener">RIBA South West Award</a> (Owers House, 2016, designed by John Pardey Architects) and LABC Building Excellence Awards (<a href="{LABC_2018_URL}" rel="noopener">a 2018 win</a> and <a href="{LABC_2020_URL}" rel="noopener">a 2020 Highly Commended</a>).</p>
 <p class="muted">He knows how a contractor prices a job, where variations come from and how delay claims are built. In Dubai and Abu Dhabi he puts that knowledge to work for the owner, fairly, and leads each Eastbridge appointment personally.</p>
 <p><a class="link" href="/about/">About Philip and Eastbridge</a></p></div>
 </div></section>
@@ -156,7 +157,7 @@ def home(posts, post_cards, stages_html, svc_img):
 <p class="muted" style="margin-top:1em"><a class="link" href="/faq/">More questions</a> &nbsp; <a class="link" href="/insights/">Insights</a> &nbsp; <a class="link" href="/guides/villa-owner-checklist/">Owner's checklist</a> &nbsp; <a class="link" href="/areas/">Where we work</a></p></div>{B.faq_html(faqs)}</div></section>
 {B.cta_band("Tell us about the house you want to build.", image="sea-glass-house-08")}'''
     B.page("/", "Villa Project Management Dubai | Client-Side Project Manager",
-           "Independent client-side project management for villa builds and renovations in Dubai and Abu Dhabi, led by Philip Chapman, founder of an award-winning UK builder.",
+           "Client-side project management for villa builds and renovations in Dubai and Abu Dhabi, led by Philip Chapman, founder of a UK builder of award-winning homes.",
            body, schema=[B.faq_schema(faqs)], preload="/assets/img/quay-house-01-1280.webp", hero=True)
 
 # ---------------------------------------------------------------- why client-side
@@ -176,7 +177,7 @@ def why_page():
     crumbs = [("Home", "/"), ("Why client-side", path)]
     moments = "".join(f"<li><b>{esc(t)}</b><span>{esc(d)}</span></li>" for t, d in MOMENTS)
     faqs = [
-     ("Isn't the architect supposed to protect my budget?", "A good architect will design to a budget if asked, but their job is the design, and design fees are often a percentage of construction cost. In August 2025 Dubai Municipality formally warned villa consultancies about over-designing villas and inflating build costs. An independent cost check at every design stage is a sensible safeguard alongside the architect's own work."),
+     ("Isn't the architect supposed to protect my budget?", "A good architect will design to a budget if asked, but their job is the design. In August 2025 Dubai Municipality formally warned villa consultancies about over-designing villas and inflating build costs. An independent cost check at every design stage is a sensible safeguard alongside the architect's own work."),
      ("Doesn't the registered consultant supervise the contractor?", "The consultant of record carries statutory supervision duties: that the building is built to the approved design and the code. That is an important duty, but it is not usually the same scope as reviewing every payment from your side, testing the price of every variation and every delay claim, or managing your overall programme and budget. We add that, alongside them."),
      ("Will good contractors resent an owner's project manager?", "In our experience the opposite. Good contractors prefer an informed client: decisions are made on time, information arrives when it should and payments are made promptly for work done. The contractors who dislike scrutiny are the ones you most need it with."),
      ("When is it too late to bring you in?", "It is never too late to help, but the earlier the better. Most of a project's cost is fixed by the brief, the design and the contract. We also take on projects that have stalled or are in dispute."),
@@ -186,7 +187,7 @@ def why_page():
                     "On a private villa, everyone at the table has their own role and duties. We add independent coordination and commercial scrutiny on your side.",
                     "quay-house-02", credit_of("quay-house-02")) + f'''
 <section class="section"><div class="wrap split" style="align-items:center">
-<div><h2>The gap in every villa project</h2>
+<div><h2>The gap on many villa projects</h2>
 <p>A private villa in Dubai brings together a master developer, a permitting authority, an architect, a registered consultant, a main contractor, specialist subcontractors and an interior designer. Each is competent. Each has their own commercial interest, and that is how it should be.</p>
 <p>The result is a project in which each party covers its own part, but nobody is appointed to look at the whole from the owner's side: budget, programme, decisions and quality together. Owners fill the gap themselves, between their own work and family, often from another country. That is how good projects drift: a loose brief, a design that grows, a bid that looked cheapest, a payment made ahead of the work, a claim answered with opinion.</p>
 <p>A client-side project manager closes the gap. We sit beside you, paid only by you, and work with everyone else to keep the project to what you agreed to pay for.</p></div>
@@ -234,6 +235,8 @@ def why_page():
 # ---------------------------------------------------------------- case studies
 MOD = '<span class="mod">Modelled</span>'
 CASE_URL = "/case-studies/island-e-waterfront-villa/"
+# Social and structured-data image: a labelled diagram card, not a photo of a finished house (tools/make_case_og.py)
+CASE_OG = "/assets/img/island-e-worked-example-og.png"
 CASE_DISCLOSURE = ("A hypothetical project that shows our method. It is not a completed Eastbridge appointment, "
                    "not a real client and not a promise of savings.")
 
@@ -251,8 +254,7 @@ def case_hub():
     crumbs = [("Home", "/"), ("Case studies", path)]
     body = B.banner(crumbs, "Case studies", "A real UK project from Philip Chapman's years as a main contractor, and a worked example of how we would manage a Dubai villa today.",
                     "owers-house-04", credit_of("owers-house-04")) + uk_case_card() + f'''
-<section class="section stone"><div class="wrap feature">
-<figure>{CS.svg_site()}</figure>
+<section class="section stone"><div class="wrap feature feature--rev">
 <div><span class="kicker">Worked project example · Hypothetical</span><h2>Island E: how we would manage a waterfront villa</h2>
 <div class="notice"><b>Not a completed project</b>{esc(CASE_DISCLOSURE)}</div>
 <p class="muted" style="margin-top:18px">Built on Nakheel's published Island E plot information, its draft development controls and published Dubai cost ranges. It shows what we would produce for an owner:</p>
@@ -261,7 +263,8 @@ def case_hub():
 <li><b>Cash-flow planning</b>Plot instalments and build costs year by year, so funding is arranged before commitment.</li>
 <li><b>Tender comparison</b>Bids put on a like-for-like basis: exclusions, provisional sums, preliminaries and programme.</li>
 <li><b>Programme review</b>35 months from plot review to keys, with the assumptions behind each stage stated.</li></ul>
-<p><a class="btn" href="{CASE_URL}">See the worked example</a></p></div></div></section>
+<p><a class="btn" href="{CASE_URL}">See the worked example</a></p></div>
+<figure>{CS.svg_site()}<figcaption>Hypothetical worked example. Indicative plan and section based on Nakheel's draft development controls.</figcaption></figure></div></section>
 <section class="section"><div class="wrap split"><div><h2>More of the houses behind it</h2></div><div><p class="muted">Private houses, estates, developments and hotel work built by P Chapman Construction in the UK.</p><p><a class="btn btn--ghost" href="/work/">See the work</a></p></div></div></section>
 {B.cta_band()}'''
     B.page(path, "Case Studies: UK Project and Island E Worked Example",
@@ -365,7 +368,7 @@ def case_page():
 <section class="chapter" aria-labelledby="c2"><header><b>02</b><span>Brief and budget</span></header><div>
 <h2 id="c2">A wish list that didn't fit the plot</h2>
 <p>In this example the family's first wish list comes to about 10,400 sq ft above ground: five bedroom suites, a guest suite, a gym, a cinema, staff quarters and a large kitchen and family room. The plot allows about {k.GFA:,}.</p>
-<p>Rather than cut rooms, we would reorganise. The gym, cinema, staff quarters and plant move to a {k.BASEMENT:,} sq ft basement, subject to how the final controls treat basement area. The guest suite becomes a flexible ground-floor room. Every room the family cares about stays, and the house fits the rules before an architect has drawn a line.</p>
+<p>Rather than cut rooms, we would reorganise. The gym, cinema, staff quarters and plant move to a {k.BASEMENT:,} sq ft basement, subject to how the final controls treat basement area. The guest suite becomes a flexible ground-floor room. Every room the family cares about would stay, and the house would fit the draft rules before an architect has drawn a line.</p>
 <p>Then the budget, built from the bottom up: construction above ground at about AED {k.HOUSE_RATE:,.0f} per sq ft, the basement separately at about AED {k.BASEMENT_RATE:,.0f} per sq ft with its dewatering and waterproofing, external works, design fees, approvals and connections, a 10% contingency held by the owners rather than the contractor, registration fees and VAT.</p>
 <h3>Quantified allowances</h3>
 {budget}
@@ -385,7 +388,7 @@ def case_page():
 <section class="chapter" aria-labelledby="c3"><header><b>03</b><span>The team</span></header><div>
 <h2 id="c3">Choosing the architect on more than the fee</h2>
 <p>We would help the owners shortlist three architects with villa experience and a registered consultant able to act as consultant of record. In this example their fee proposals look far apart until they are read side by side: one excludes interior coordination, another excludes the construction-stage duties of the consultant of record. Normalised, the gap closes to a few per cent.</p>
-<p>The owners appoint the practice whose villas they like best and whose scope is complete, and appoint their interior designer at the same time, so joinery, lighting and services are designed together from the start. While they live in London through the design stage, we would run a fortnightly design meeting by video and keep a decision log they can read on their phones.</p>
+<p>In this example the owners would appoint the practice whose villas they like best and whose scope is complete, and appoint their interior designer at the same time, so joinery, lighting and services are designed together from the start. While they live in London through the design stage, we would run a fortnightly design meeting by video and keep a decision log they can read on their phones.</p>
 </div></section>
 
 <section class="chapter" aria-labelledby="c4"><header><b>04</b><span>Design to cost</span></header><div>
@@ -432,7 +435,7 @@ def case_page():
 <p>Every figure in this chapter is modelled from the invented events above. It shows how a final account is reconciled, not a result Eastbridge has achieved.</p>
 <h3>Construction changes {MOD}</h3>
 <div class="table-wrap"><table class="table"><thead><tr><th>Construction, excluding VAT</th><th class="num">AED m</th></tr></thead><tbody>{out_html}</tbody><tfoot><tr><td>Modelled construction final account</td><td class="num">{k.CONSTRUCTION_OUT:.3f} {MOD}</td></tr></tfoot></table></div>
-<p>Against the pre-tender estimate of AED {k.CONSTRUCTION:.2f}m, the modelled construction account draws AED {r(k.CONT_USED):.2f}m from the AED {k.A["contingency"]:.2f}m contingency, AED {k.OWNER_UPGRADES:.2f}m of it on upgrades the owners chose. Handover is four weeks later than the original programme, the extension agreed.</p>
+<p>Against the pre-tender estimate of AED {k.CONSTRUCTION:.2f}m, the modelled construction account draws AED {r(k.CONT_USED):.2f}m from the AED {k.A["contingency"]:.2f}m contingency, AED {k.OWNER_UPGRADES:.2f}m of it on upgrades the owners chose. In the model, handover would be four weeks later than the original programme, within the agreed extension.</p>
 <h3>Stated allowances against the modelled outcome</h3>
 <div class="table-wrap"><table class="table"><thead><tr><th>AED m</th><th class="num">Stated allowances</th><th class="num">Modelled outcome</th></tr></thead><tbody>{recon_rows}</tbody><tfoot><tr><td>Subtotal (excludes Eastbridge's fee and the items awaiting quotation)</td><td class="num">{r(k.STATED_SUBTOTAL):.2f}</td><td class="num">{r(k.OUTTURN_ALL):.2f} {MOD}</td></tr></tfoot></table></div>
 <p>The difference between the two columns is the AED {r(k.CONT_LEFT):.2f}m of contingency the example never draws, plus the VAT on it. It is unspent contingency, not a separate saving.</p>
@@ -440,7 +443,7 @@ def case_page():
 <p>Each line compares one decision in the example with one hypothetical alternative. The alternatives use different baselines, so the lines are not added together, not added to the unspent contingency, and are not a demonstrated return on Eastbridge's fee.</p>
 <div class="table-wrap"><table class="table"><thead><tr><th>Hypothetical comparison</th><th class="num">AED m</th></tr></thead><tbody>{avoided}</tbody></table></div>
 <h3>The programme</h3>
-<figure class="chart-box"><ul class="legend"><li><i style="background:{k.C_PLOT}"></i>Pre-construction stages</li><li><i style="background:{k.C_BUILD}"></i>Construction</li></ul>{k.svg_programme()}<figcaption>Assumed programme, in months from a plot review in October 2026. Construction assumes site access from early 2028. That is our planning assumption, not a Nakheel commitment: on a new island, the programme moves with the developer's infrastructure dates.</figcaption></figure>
+<figure class="chart-box"><ul class="legend"><li><i style="background:{k.C_PLOT}"></i>Pre-construction stages</li><li><i style="background:{k.C_BUILD}"></i>Construction</li></ul>{k.svg_programme()}<figcaption>Assumed programme, in months from a plot review in October 2026. Construction assumes site access from early 2028. That is our planning assumption, not a Nakheel commitment: on a new island, the programme moves with the developer's infrastructure dates. The markers show the seven plot instalments; the last, in September 2029 (month 36), falls after the assumed handover in month 35.</figcaption></figure>
 </div></section>
 
 <section class="chapter" aria-labelledby="c9"><header><b>09</b><span>Method</span></header><div>
@@ -453,8 +456,8 @@ def case_page():
     art = {"@context": "https://schema.org", "@type": "Article", "headline": "How we would manage an Island E villa: a worked project example (hypothetical)",
            "description": "A hypothetical worked example, not a completed project: budget structure, cash-flow plan, tender comparison and programme for a waterfront villa on Island E, Dubai Islands.",
            "author": {"@id": B.PERSON_ID}, "publisher": {"@id": B.ORG_ID}, "mainEntityOfPage": B.url(path),
-           "image": B.url(B.og_image("saqqara-01")), "inLanguage": "en-GB", "about": "Villa construction project management, Dubai Islands",
+           "image": B.url(CASE_OG), "inLanguage": "en-GB", "about": "Villa construction project management, Dubai Islands",
            "genre": "Worked example"}
     B.page(path, "Island E Villa: Worked Project Example | Eastbridge",
            "A hypothetical worked example of how we would manage an Island E villa on Dubai Islands: budget structure, cash flow, tender comparison and programme review.",
-           body, crumbs, [art], og=B.og_image("saqqara-01"))
+           body, crumbs, [art], og=CASE_OG)

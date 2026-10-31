@@ -190,16 +190,16 @@ Note: some interior firms also act as fit-out contractors. That is fine for a re
 
 The first yes is easiest when the offer is small, fixed, fast and easy to explain to a spouse or a lawyer. Each product below has a fixed price, a defined scope, a delivery time and a written output. Each one credits in full against a full appointment signed within 60 days.
 
-Prices for the first two come from `src/config.py` FEES. The other two are proposals for Philip to confirm.
+**PROPOSED – owner to confirm before use.** Every fee in this section is a proposal. `src/config.py` FEES holds proposed figures only and `PUBLISH_FEES = False`, because Philip has not approved them. Do not quote any figure below to a prospect until Philip confirms it. Delivery times are aligned with the live site (plot review usually within five working days; rescue review: start within a week, full picture within two to three weeks); the other two are proposals.
 
 | Product | For | Scope | Output | Delivery | Proposed fee | Founding-client fee |
 |---|---|---|---|---|---|---|
-| **Plot and pre-design review** | Profile B before buying, or before appointing a consultant | Review plot documents, master developer guidelines and known constraints; realistic cost and programme range using cited market data; questions to ask consultants; recommended consultant appointment route (the owner appoints) | 8–12 page report and a 60-minute call | 7 working days | AED 9,500 (config) | AED 7,500 |
-| **Contract and bid review** | Profiles B, C, D: a design exists and contractor quotes are in | Like-for-like comparison of up to three bids; exclusions, provisional sums, preliminaries, payment terms, retention, programme, variation and delay clauses flagged from the builder's side; questions to send back to bidders. Legal points referred to a UAE-qualified lawyer | Comparison table, marked-up risk list, 60-minute call | 7–10 working days | AED 12,500 (proposed) | AED 9,500 |
-| **Second-opinion budget review** | Profile C, or any owner with a budget that feels wrong | Review the consultant's or contractor's estimate against cited market ranges and our experience; where the money is likely to leak; contingency advice | 6–8 page note and a 45-minute call | 5 working days | AED 7,500 (proposed) | AED 5,500 |
-| **Stalled project rescue review** | Profile A | Site visit, document review (contract, payments, variations, programme, correspondence); independent factual view of where the project stands; options and a recovery plan for the owner and their lawyer | Written report and a 90-minute meeting | 10 working days | AED 15,000 (config) | AED 12,000 |
+| **Plot and pre-design review** | Profile B before buying, or before appointing a consultant | Review plot documents, master developer guidelines and known constraints; realistic cost and programme range using cited market data; questions to ask consultants; recommended consultant appointment route (the owner appoints) | 8–12 page report and a 60-minute call | Usually within 5 working days (as on the site) | AED 9,500 (PROPOSED – owner to confirm) | AED 7,500 (PROPOSED) |
+| **Contract and bid review** | Profiles B, C, D: a design exists and contractor quotes are in | Like-for-like comparison of up to three bids; exclusions, provisional sums, preliminaries, payment terms, retention, programme, variation and delay clauses flagged from the builder's side; questions to send back to bidders. Legal points referred to a UAE-qualified lawyer | Comparison table, marked-up risk list, 60-minute call | 7–10 working days (proposed) | AED 12,500 (PROPOSED – owner to confirm) | AED 9,500 (PROPOSED) |
+| **Second-opinion budget review** | Profile C, or any owner with a budget that feels wrong | Review the consultant's or contractor's estimate against cited market ranges and our experience; where the money is likely to leak; contingency advice | 6–8 page note and a 45-minute call | 5 working days (proposed) | AED 7,500 (PROPOSED – owner to confirm) | AED 5,500 (PROPOSED) |
+| **Stalled project rescue review** | Profile A | Site visit, document review (contract, payments, variations, programme, correspondence); independent factual view of where the project stands; options and a recovery plan for the owner and their lawyer | Written report and a 90-minute meeting | Start within a week; full picture within 2–3 weeks (as on the site) | AED 15,000 (PROPOSED – owner to confirm) | AED 12,000 (PROPOSED) |
 
-**Full appointment after a review:** monthly from AED 28,000 or 1.75%–3% of construction cost, per config FEES.
+**Full appointment after a review (PROPOSED – owner to confirm before use):** monthly from AED 28,000 or 1.75%–3% of construction cost, as proposed in config FEES.
 
 ### The founding-client offer (honest version)
 
@@ -310,7 +310,7 @@ Then name the one product that fits, its fixed fee, what they will receive, and 
 "They should, and that's their legal role. They are responsible for the design and the technical supervision the authority requires. We do something different: we look after your money, your programme and your contract, and we report to you alone. On a good project we make the consultant's job easier, because decisions get made on time."
 
 **"Isn't this just another layer of fees?"**
-"It's a fair question. A review costs a fixed AED 7,500–15,000. In our experience, a single uncapped provisional sum or a vague exclusion in a contractor's bid can cost far more than that. If the review doesn't find anything worth acting on, you will have paid for peace of mind. And the fee credits in full against a full appointment."
+"It's a fair question. A review costs a fixed fee, agreed in writing before we start [FEE TO BE CONFIRMED – proposed AED 7,500–15,000]. In our experience, a single uncapped provisional sum or a vague exclusion in a contractor's bid can cost far more than that. If the review doesn't find anything worth acting on, you will have paid for peace of mind. And the fee credits in full against a full appointment."
 
 **"Can you recommend a contractor?"**
 "We don't take commission from anyone, so we have no reason to push a particular firm. We'll help you set out what you need, compare the bids you receive like for like, and ask the hard questions. The choice and the appointment are yours."

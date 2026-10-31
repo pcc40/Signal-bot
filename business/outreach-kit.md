@@ -331,8 +331,8 @@ Thank you for asking us to help. This letter sets out what we will do, what we w
 - Known constraints and the approvals route (Dubai Municipality, Trakhees or the Dubai Development Authority, or the relevant Abu Dhabi authority, depending on where the plot sits), as advised by the master developer and your consultant.
 - Questions to put to prospective consultants, and our view on a sensible appointment route. You appoint.
 - **Deliverables:** a written report of about 8–12 pages and a 60-minute call.
-- **Timing:** 7 working days from receipt of the fee and documents.
-- **Fee:** AED 9,500 [founding-client fee AED 7,500 if applicable], excluding VAT if applicable, payable in full on signing.
+- **Timing:** usually within five working days from receipt of the fee and documents.
+- **Fee:** AED [FEE TO BE CONFIRMED – proposed 9,500; founding-client fee proposed 7,500], excluding VAT if applicable, payable in full on signing.
 
 **Option B — Stalled project rescue review**
 
@@ -341,8 +341,8 @@ Thank you for asking us to help. This letter sets out what we will do, what we w
 - An independent factual view of where the project stands: work done against payments, outstanding items, the status of variations and delay claims as presented.
 - Options and a recovery plan for you to consider with your lawyer and consultant.
 - **Deliverables:** a written report and a 90-minute meeting.
-- **Timing:** 10 working days from the site visit and receipt of documents.
-- **Fee:** AED 15,000 [founding-client fee AED 12,000 if applicable], excluding VAT if applicable, 50% on signing and 50% on delivery of the report.
+- **Timing:** we can usually start within a week; the full report within two to three weeks of the site visit and receipt of documents.
+- **Fee:** AED [FEE TO BE CONFIRMED – proposed 15,000; founding-client fee proposed 12,000], excluding VAT if applicable, 50% on signing and 50% on delivery of the report.
 
 ### 2. What we do not do
 

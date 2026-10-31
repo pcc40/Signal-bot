@@ -5,7 +5,9 @@
 //   - every column total equals the sum of the cost lines shown, construction equals its lines, and the headline
 //     figures match the table;
 //   - switching sq ft <-> m² keeps the estimate unchanged and returns the same area;
-//   - basic and mid-range renovation bands ignore the area (input disabled) and show the assessment prompt;
+//   - every renovation band ignores the area (input disabled) and shows the assessment prompt; luxury and
+//     ultra-luxury renovation show only a starting (low) figure, with no likely or high figure;
+//   - a new build with no built-up area shows no estimate;
 //   - pool and garden choices are kept per project type when switching modes;
 //   - no unfilled {placeholder} is left in the output.
 // On /ar/ /ru/ /zh/ /hi/ it repeats the arithmetic checks and looks for English calculator messages in the visible
@@ -55,7 +57,8 @@ async function snapshot(p) {
       likely: n(document.querySelector('[data-out="likely"]').textContent),
       low: n(document.querySelector('[data-out="low"]').textContent),
       high: n(document.querySelector('[data-out="high"]').textContent),
-      area: area.value, areaDisabled: area.disabled,
+      area: area.value, areaDisabled: area.disabled, state: out.getAttribute('data-state'),
+      likelyText: clean(document.querySelector('[data-out="likely"]').textContent),
       assess: visible(document.querySelector('[data-reno-assess]')) && !!document.querySelector('[data-reno-assess] a[href$="/contact/"]'),
       pool: document.querySelector('[name="pool"]').checked, garden: document.querySelector('#c-garden').value,
       output: clean(out.innerText),
@@ -69,7 +72,12 @@ function checkSums(s, label) {
     const sum = c.lines.reduce((a, b) => a + (b || 0), 0);
     if (sum !== c.total) { good = false; fail(`${label}: column ${i} lines add to ${sum} but total shows ${c.total}`); }
   });
-  if (s.likely !== s.cols[1].total || s.low !== s.cols[0].total || s.high !== s.cols[2].total) {
+  if (s.state === 'low-only') {
+    // Only the starting column is shown; likely and high columns must be blank, the headline is the starting total.
+    if (s.cols[1].total || s.cols[2].total || s.high || s.likely !== s.cols[0].total || !s.cols[0].total) {
+      good = false; fail(`${label}: starting-figure band shows likely/high figures or a headline that does not match the low total`);
+    }
+  } else if (s.likely !== s.cols[1].total || s.low !== s.cols[0].total || s.high !== s.cols[2].total) {
     good = false; fail(`${label}: headline ${s.low}/${s.likely}/${s.high} does not match table totals ${s.cols.map(c => c.total).join('/')}`);
   }
   if (/\{\w+\}/.test(s.output)) { good = false; fail(`${label}: unfilled placeholder in output`); }
@@ -129,8 +137,8 @@ async function englishChecks(p) {
   if (d.likely === e.likely && Math.abs(Number(e.area) - 500 * 10.7639) < 1) ok(`units: 500 m² typed -> ${e.area} sq ft, estimate unchanged`);
   else fail(`units: typed m² area did not convert cleanly (${d.likely} vs ${e.likely}, area ${e.area})`);
 
-  // Fixed renovation bands ignore the area.
-  for (const tier of ['standard', 'premium']) {
+  // Renovation bands ignore the area.
+  for (const tier of ['standard', 'premium', 'luxury', 'ultra']) {
     await setInputs(p, { mode: 'reno', tier });
     const r1 = await snapshot(p);
     await p.evaluate(() => { const el = document.querySelector('#c-area'); el.disabled = false; el.value = 20000; el.dispatchEvent(new Event('input', { bubbles: true })); });
@@ -138,10 +146,19 @@ async function englishChecks(p) {
     if (r1.areaDisabled && r2.areaDisabled && r1.likely === r2.likely && r1.assess) ok(`renovation ${tier}: area disabled, not used, assessment prompt shown`);
     else fail(`renovation ${tier}: area handling wrong (disabled ${r1.areaDisabled}/${r2.areaDisabled}, ${r1.likely} vs ${r2.likely}, assess ${r1.assess})`);
   }
-  await setInputs(p, { mode: 'reno', tier: 'luxury', area: 9000 });
-  const lx = await snapshot(p);
-  if (!lx.areaDisabled && lx.assess) ok('renovation luxury: area enabled (sets the high figure only), assessment prompt shown');
-  else fail('renovation luxury: area should be enabled with the assessment prompt');
+  for (const tier of ['luxury', 'ultra']) {
+    await setInputs(p, { mode: 'reno', tier });
+    const lx = await snapshot(p);
+    if (lx.state === 'low-only' && lx.areaDisabled && lx.assess && !lx.high && lx.likely === lx.cols[0].total) ok(`renovation ${tier}: starting figure only (${lx.likelyText}), no likely or high figure`);
+    else fail(`renovation ${tier}: expected a starting figure only (state ${lx.state}, high ${lx.high})`);
+  }
+
+  // New build with no built-up area: no estimate.
+  await setInputs(p, { mode: 'new', tier: 'premium', unit: 'sqft', area: '', basement: 1500, garden: 2777, pool: true });
+  const na = await snapshot(p);
+  if (na.state === 'no-area' && na.likely === 0 && na.cols.every(c => !c.total)) ok('new build with no area: no estimate shown');
+  else fail(`new build with no area: still shows an estimate (${na.likelyText})`);
+  await setInputs(p, { area: 6000, basement: 0, garden: 3000 });
 
   // Extras kept per project type.
   await setInputs(p, { mode: 'reno', unit: 'sqft', tier: 'premium', pool: false, garden: 0 });

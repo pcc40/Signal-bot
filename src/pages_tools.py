@@ -48,13 +48,17 @@ RATES = {
         "luxury": {"label": "Luxury", "nb": [850, 1200]},
         "ultra": {"label": "Ultra-luxury", "nb": [1200, 1400], "open": True},
     },
-    # Renovation: published whole-villa bands by scope. null = no published ceiling.
+    # Renovation: published whole-villa bands by scope (Smart Renovation guide). null = no published ceiling: only the
+    # starting figure is shown and anything above it needs a project-specific assessment. No size formula is used.
+    # "months" are the guide's durations: interior upgrades two to three months, kitchens and bathrooms four to six,
+    # structural changes, extensions or complete redesign six months or longer.
     "reno": {
         # "soft": False = no design fees or approvals allowance (cosmetic work rarely needs drawings or a permit).
         "standard": {"label": "Basic refresh: painting, flooring, small upgrades", "cost": [200000, 300000], "months": [2, 3], "soft": False},
         "premium": {"label": "Mid-range: kitchens, bathrooms and interiors", "cost": [400000, 800000], "months": [4, 6]},
         "luxury": {"label": "Luxury: premium materials and structural changes", "cost": [1000000, None], "months": [6, None]},
-        "ultra": {"label": "Ultra-luxury: full strip-out and remodel", "cost": [1000000, None], "months": [6, None]},
+        # The guide publishes no separate ultra-luxury band, so it is treated exactly as luxury.
+        "ultra": {"label": "Ultra-luxury: no separate published band, treated as luxury", "cost": [1000000, None], "months": [6, None]},
     },
     "pool": [80000, 250000],
     "land": [100, 500],          # per sq ft of garden
@@ -86,12 +90,11 @@ def estimate(i):
     else:
         rv = R["reno"][i["tier"]]
         lo, hi = rv["cost"]
-        if hi is None:
-            hi = max(lo, i["area"] * t["nb"][0])
-        out["build"] = tri([lo, hi])
+        low_only = hi is None          # no published ceiling: only the starting column is meaningful
+        out["build"] = [lo, lo, lo] if low_only else tri([lo, hi])
         out["basement"] = z
         out["demo"] = z
-        open_hi = rv["cost"][1] is None
+        open_hi = low_only
     out["pool"] = tri(R["pool"]) if i["pool"] else z
     out["land"] = [i["garden"] * r for r in tri(R["land"])]
     out["smart"] = tri(R["smart"]) if i["smart"] else z
@@ -102,6 +105,7 @@ def estimate(i):
     out["contingency"] = [cons[n] * R["contingency"][n] for n in range(3)]
     out["ffe"] = [cons[n] * R["ffe"][n] for n in range(3)] if i["ffe"] else z
     out["open"] = open_hi
+    out["low_only"] = i["mode"] != "new" and open_hi
     return rounded(out)
 
 # Every cost line is rounded on its own; construction and the total are the sums of the rounded lines, so the
@@ -114,6 +118,7 @@ def rounded(e):
     r["construction"] = [sum(r[k][n] for k in CONS_KEYS) for n in range(3)]
     r["total"] = [sum(r[k][n] for k in LINE_KEYS) for n in range(3)]
     r["open"] = e["open"]
+    r["low_only"] = e.get("low_only", False)
     return r
 
 def rnd(x):
@@ -162,7 +167,7 @@ SUB = {
     "new-sqft": "Construction {cons} · {rate} per sq ft of built-up area (main build only, excluding extras)",
     "new-m2": "Construction {cons} · {rate} per m² of built-up area (main build only, excluding extras)",
     "reno-fixed": "Construction {cons} · a whole-villa scope example, so the floor area is not used",
-    "reno-open": "Construction {cons} · the high figure applies the lowest new-build rate for this specification to the built-up area",
+    "reno-open": "Construction from {cons} · luxury renovations are published only as above AED 1 million, so this is a starting figure; anything above it needs a project-specific assessment",
 }
 ROUTE_DUBAI = "Approvals in Dubai go through Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits."
 ROUTE_AD = "In Abu Dhabi the Department of Municipalities and Transport regulates villa building, and permits are issued by the municipality through TAMM."
@@ -211,7 +216,9 @@ def reno_band(rv):
 def calc_messages():
     m = [("money", "AED {n}"), ("moneyK", "AED {n}k"), ("moneyM", "AED {n}m"), ("notIncluded", "Not included"),
          ("unit-sqft", "sq ft"), ("unit-m2", "m²"), ("jsNote", "Figures update as you change the inputs."),
-         ("rowBuild-new", LINES[0][1]), ("rowBuild-reno", "Renovation works (whole-villa scope band)")]
+         ("rowBuild-new", LINES[0][1]), ("rowBuild-reno", "Renovation works (whole-villa scope band)"),
+         ("enterArea", "Enter the built-up area to see an estimate."),
+         ("srLikely", "Likely total:"), ("srFrom", "Starting total:")]
     m += [(f"sub-{k}", v) for k, v in SUB.items()]
     for k, t in RATES["tiers"].items():
         rv = RATES["reno"][k]
@@ -244,7 +251,7 @@ def results_html(e):
                                  rate=f'<span data-out="rate">{aed_rate(e["build"][1] / max(EXAMPLE["area"], 1))}</span>')
     return f'''<div class="calc-out" id="calc-out">
 <p class="calc-label">Indicative total, including soft costs</p>
-<p class="calc-total" aria-live="polite" aria-atomic="true"><span class="sr">Likely total: </span><b data-out="likely">{aed(e["total"][1])}</b>
+<p class="calc-total" aria-live="polite" aria-atomic="true"><span class="sr" data-sr>Likely total: </span><b data-out="likely">{aed(e["total"][1])}</b>
 <span class="calc-range">Range <span data-out="low">{aed(e["total"][0])}</span> to <span data-out="high">{aed(e["total"][2])}{hi_sfx}</span></span></p>
 <p class="calc-sub" data-out="sub">{sub}</p>
 <p class="calc-note calc-assess" data-reno-assess hidden>Renovation bands describe a typical villa. A large or older villa, or one that needs new services, waterproofing or structural work, needs a project-specific assessment rather than a band. <a href="/contact/">Ask us for a project-specific assessment</a>.</p>
@@ -284,10 +291,9 @@ def form_html():
 <label><input type="radio" name="unit" value="m2"><span>m²</span></label></div></fieldset>
 <div data-area-field><label for="c-area">Built-up area (<span data-unit>sq ft</span>)</label><input id="c-area" name="area" type="number" inputmode="numeric" min="0" step="50" value="{EXAMPLE["area"]}" aria-describedby="c-area-hint">
 <p class="hint" id="c-area-hint" data-area-typical>Typical 4-bedroom villas are about 4,000–5,000 sq ft; 5-bedroom 6,000–8,000 sq ft.{cite("recc")}</p>
-<p class="hint" id="c-area-fixed" data-area-fixed hidden>Basic and mid-range renovation figures are whole-villa scope examples from a published guide. They do not change with floor area, so the area is not used for them.</p>
-<p class="hint" id="c-area-open" data-area-open hidden>For luxury and ultra-luxury renovations, the area sets only the high figure, at the lowest new-build rate for the specification.</p></div>
+<p class="hint" id="c-area-fixed" data-area-fixed hidden>Renovation figures are whole-villa scope examples from a published guide. They do not change with floor area, so the area is not used for them.</p></div>
 <fieldset><legend>Specification</legend><div class="calc-tiers">{tiers}</div>
-<p class="hint is-off" data-reno-hint>For renovations, the specification selects a whole-villa scope example from a published guide, not a rate per square foot. Basic and mid-range examples do not change with floor area, so they can read low for a large or older villa. Pool and landscaping are added on top of the band, and a basic refresh carries no design fees or approvals allowance.</p></fieldset>
+<p class="hint is-off" data-reno-hint>For renovations, the specification selects a whole-villa scope example from a published guide, not a rate per square foot. The examples do not change with floor area, so they can read low for a large or older villa, and luxury shows only a starting figure. Pool and landscaping are added on top of the band, and a basic refresh carries no design fees or approvals allowance.</p></fieldset>
 <fieldset><legend>Extras</legend>
 <div class="calc-row"><div data-new-only><label for="c-base">Basement area (<span data-unit>sq ft</span>)</label><input id="c-base" name="basement" type="number" inputmode="numeric" min="0" step="50" value="0"></div>
 <div><label for="c-garden">Landscaped garden (<span data-unit>sq ft</span>)</label><input id="c-garden" name="garden" type="number" inputmode="numeric" min="0" step="50" value="{EXAMPLE["garden"]}"></div></div>
@@ -414,11 +420,11 @@ def calculator():
 <li>Luxury uses Real Estate Club Dubai's AED 850–1,200 per sq ft. Ultra-luxury has no published ceiling: the calculator uses AED 1,200 (Real Estate Club Dubai's floor) to 1,400 (the top of Engel &amp; Völkers' luxury range) per sq ft and marks the high figure with a plus sign.</li>
 <li>Approvals use the fixed AED 25,000–75,000 band rather than a percentage of the build; this is our own choice between two published figures.</li>
 <li>A basic renovation refresh (painting, flooring, small upgrades) carries no design fees or approvals allowance, because cosmetic work rarely needs drawings or an authority permit. Your master developer may still require an NOC.</li>
-<li>Luxury renovations are published as "above AED 1 million". As our own rule of thumb, a full strip-out back to structure approaches new-build cost, so the high figure is the area multiplied by the lowest new-build rate for that specification.</li>
+<li>Luxury renovations are published only as "above AED 1 million", so the calculator shows that starting figure with no likely or high figure; anything above it needs a project-specific assessment. The guide has no separate ultra-luxury band, so ultra-luxury renovation is treated as luxury.</li>
 <li>Basements are priced as extra built-up area at the chosen rate. No published Dubai figure separates them.</li>
 <li>Timelines: design 3–4 months, approvals 2–3 months, construction 8–14 months, snagging 1–2 months; 24–36 months plot to keys for custom luxury.{cite("reca")} Renovation works two to six months or longer, with approvals taking a few weeks.{cite("sr")}</li>
 <li>Each cost line is rounded to the nearest AED 1,000, or AED 10,000 above AED 1 million. Construction and the totals are the sums of the rounded lines, so the figures shown add up.</li>
-<li>Basic and mid-range renovation bands are whole-villa scope examples from a published guide. No published source gives a reliable way to scale them with floor area, so the calculator does not use the area for them; a large or older villa needs a project-specific assessment.</li>
+<li>Renovation bands are whole-villa scope examples from a published guide. No published source gives a reliable way to scale them with floor area, so the calculator does not use the area for them; a large or older villa needs a project-specific assessment.</li>
 </ul>
 <p class="small muted">Rates last checked October 2026. This page gives general information, not financial, legal or engineering advice.</p>
 </div></div></section>

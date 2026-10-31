@@ -15,9 +15,9 @@
   var CONS = LINES.slice(0, 6);
 
   /* ---------- messages and number formatting ---------- */
-  function nf(opts) {
-    try { return new Intl.NumberFormat(LANG + '-u-nu-latn', opts); } catch (e) { return new Intl.NumberFormat('en-GB', opts); }
-  }
+  // One number style in every language (Latin digits, comma grouping), matching the figures rendered on the server
+  // in the tier notes, renovation bands and worked example, so a panel never mixes two thousands separators.
+  function nf(opts) { return new Intl.NumberFormat('en-GB', opts); }
   var N0 = nf({ maximumFractionDigits: 0 }), N2 = nf({ maximumFractionDigits: 2 });
   var msgs = {};
   Array.prototype.forEach.call(M.querySelectorAll('[data-m]'), function (el) { msgs[el.getAttribute('data-m')] = el.textContent.replace(/\s+/g, ' ').trim(); });
@@ -51,21 +51,20 @@
   function on(n) { return f.elements[n].checked && !f.elements[n].disabled; }
   function tri(p) { return [p[0], (p[0] + p[1]) / 2, p[1]]; }
   function rnd(x) { var s = x >= 1e6 ? 1e4 : 1e3; return Math.round(x / s) * s; }
-  function fixedBand(tier) { return R.reno[tier].cost[1] != null; }
 
   /* ---------- estimate (mirror of estimate() and rounded() in src/pages_tools.py) ---------- */
   function estimate(i) {
-    var t = R.tiers[i.tier], nb = tri(t.nb), z = [0, 0, 0], o = {}, open;
+    var t = R.tiers[i.tier], nb = tri(t.nb), z = [0, 0, 0], o = {}, open, lowOnly = false;
     function mul(a, m) { return a.map(function (r) { return r * m; }); }
     if (i.mode === 'new') {
       o.build = mul(nb, i.area); o.basement = mul(nb, i.basement);
       o.demo = i.demo ? tri(R.demo) : z; open = !!t.open;
     } else {
-      // Basic and mid-range bands are fixed whole-villa examples: the area is not used. Luxury bands have no
-      // published ceiling; the high figure is the area at the lowest new-build rate (documented on the page).
+      // Renovation bands are whole-villa scope examples: the area is never used. Luxury has no published ceiling
+      // ("above AED 1 million"), so only the starting (low) column is shown and the rest needs an assessment.
       var rv = R.reno[i.tier], lo = rv.cost[0], hi = rv.cost[1];
-      if (hi == null) hi = Math.max(lo, i.area * t.nb[0]);
-      o.build = tri([lo, hi]); o.basement = z; o.demo = z; open = rv.cost[1] == null;
+      lowOnly = hi == null;
+      o.build = lowOnly ? [lo, lo, lo] : tri([lo, hi]); o.basement = z; o.demo = z; open = lowOnly;
     }
     o.pool = i.pool ? tri(R.pool) : z;
     o.land = mul(tri(R.land), i.garden);
@@ -77,7 +76,7 @@
     o.contingency = c.map(function (v, k) { return v * R.contingency[k]; });
     o.ffe = i.ffe ? c.map(function (v, k) { return v * R.ffe[k]; }) : z;
     // Round each line, then add up the rounded lines so the figures shown always reconcile.
-    var r = { open: open };
+    var r = { open: open, lowOnly: lowOnly };
     LINES.forEach(function (k) { r[k] = o[k].map(rnd); });
     function sum(keys) { return [0, 1, 2].map(function (n) { return keys.reduce(function (a, k) { return a + r[k][n]; }, 0); }); }
     r.construction = sum(CONS);
@@ -96,18 +95,18 @@
   function show(el, yes) { if (el) el.hidden = !yes; }
 
   function render() {
-    var mode = val('mode'), tier = val('tier'), reno = mode === 'reno', fixed = reno && fixedBand(tier);
+    var mode = val('mode'), tier = val('tier'), reno = mode === 'reno', fixed = reno;
     qa('[data-new-only]', f).forEach(function (el) {
       el.classList.toggle('is-off', reno);
       qa('input', el).forEach(function (inp) { inp.disabled = reno; });
     });
     var rh = f.querySelector('[data-reno-hint]'); if (rh) rh.classList.toggle('is-off', !reno);
-    // Area: not used by fixed renovation bands, so disable it and say why.
+    // Area: not used by any renovation band, so disable it and say why.
     var areaEl = f.elements.area, af = f.querySelector('[data-area-field]');
     areaEl.disabled = fixed;
     if (af) { var lbl = af.querySelector('label'); if (lbl) lbl.classList.toggle('is-off', fixed); }
     areaEl.classList.toggle('is-off', fixed);
-    var hints = { 'data-area-typical': !reno, 'data-area-fixed': fixed, 'data-area-open': reno && !fixed }, desc = [];
+    var hints = { 'data-area-typical': !reno, 'data-area-fixed': fixed }, desc = [];
     Object.keys(hints).forEach(function (a) { var h = f.querySelector('[' + a + ']'); show(h, hints[a]); if (h && hints[a] && h.id) desc.push(h.id); });
     areaEl.setAttribute('aria-describedby', desc.join(' '));
     show(q('[data-reno-assess]'), reno);
@@ -119,28 +118,42 @@
     var i = { mode: mode, tier: tier, area: num('area'), basement: num('basement'), garden: num('garden'),
               pool: on('pool'), smart: on('smart'), ffe: on('ffe'), demo: on('demo') };
     var e = estimate(i);
+    // No built-up area on a new build: show no estimate rather than a total that leaves out the house itself.
+    var noArea = !reno && i.area === 0, lowOnly = !!e.lowOnly;
     LINES.concat(['total']).forEach(function (k) {
       var zero = e[k][0] === 0 && e[k][2] === 0;
       for (var n = 0; n < 3; n++) {
         var c = q('[data-v="' + k + '-' + n + '"]');
-        if (c) c.textContent = zero ? (n === 1 ? msg('notIncluded') : '–') : aed(e[k][n], k === 'total' && n === 2 && e.open);
+        if (!c) continue;
+        if (noArea || (lowOnly && n > 0)) c.textContent = '–';
+        else if (zero) c.textContent = n === 1 ? msg('notIncluded') : '–';
+        else c.textContent = aed(e[k][n], (k === 'total' && n === 2 && e.open) || (lowOnly && (k === 'total' || k === 'build')));
       }
     });
     put('[data-row-label]', msg('rowBuild-' + mode));
-    put('[data-out="likely"]', aed(e.total[1]));
-    put('[data-out="low"]', aed(e.total[0]));
-    put('[data-out="high"]', aed(e.total[2], e.open));
+    show(q('.calc-range'), !noArea && !lowOnly);
+    put('[data-sr]', msg(lowOnly ? 'srFrom' : 'srLikely') + ' ');
+    if (noArea) { put('[data-out="likely"]', '–'); put('[data-out="low"]', '–'); put('[data-out="high"]', '–'); }
+    else if (lowOnly) { put('[data-out="likely"]', aed(e.total[0], true)); put('[data-out="low"]', aed(e.total[0], true)); put('[data-out="high"]', '–'); }
+    else {
+      put('[data-out="likely"]', aed(e.total[1]));
+      put('[data-out="low"]', aed(e.total[0]));
+      put('[data-out="high"]', aed(e.total[2], e.open));
+    }
+    out.setAttribute('data-state', noArea ? 'no-area' : (lowOnly ? 'low-only' : 'range'));
     var sub, cons = aed(e.construction[1]);
-    if (reno) sub = msg(fixed ? 'sub-reno-fixed' : 'sub-reno-open', { cons: cons });
+    if (noArea) sub = msg('enterArea');
+    else if (reno) sub = lowOnly ? msg('sub-reno-open', { cons: aed(e.construction[0], true) }) : msg('sub-reno-fixed', { cons: cons });
     else {
       var rate = i.area ? Math.round(e.build[1] / i.area * (unit === 'm2' ? K : 1) / 10) * 10 : 0;
       sub = msg('sub-new-' + unit, { cons: cons, rate: rate ? aed(rate) : '–' });
     }
     put('[data-out="sub"]', sub);
 
-    var parts = { build: e.build[1], extras: e.basement[1] + e.demo[1] + e.pool[1] + e.land[1] + e.smart[1], design: e.design[1],
-                  permits: e.permits[1], contingency: e.contingency[1], ffe: e.ffe[1] };
-    var tot = e.total[1] || 1;
+    var c0 = lowOnly ? 0 : 1, nil = noArea ? 0 : 1;   // the starting column when there is no likely figure
+    var parts = { build: e.build[c0] * nil, extras: (e.basement[c0] + e.demo[c0] + e.pool[c0] + e.land[c0] + e.smart[c0]) * nil, design: e.design[c0] * nil,
+                  permits: e.permits[c0] * nil, contingency: e.contingency[c0] * nil, ffe: e.ffe[c0] * nil };
+    var tot = (e.total[c0] * nil) || 1;
     Object.keys(parts).forEach(function (k) {
       var s = q('[data-seg="' + k + '"]'), l = q('[data-leg="' + k + '"]');
       if (s) s.style.width = (parts[k] / tot * 100).toFixed(2) + '%';

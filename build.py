@@ -202,7 +202,7 @@ CTA_TINY = "Free call"
 CTA_IMAGES = ["sea-glass-house-01", "owers-house-04", "the-lookout-01", "quay-house-03", "saqqara-01", "menwinnion-04"]
 
 def cta_band(title="Tell us about the house you want to build.", text=None, image=None):
-    text = text or (f"{C.RESPONSE_PROMISE}. The first conversation is free, and nothing you send us is shared.")
+    text = text or (f"{C.RESPONSE_PROMISE}. The first conversation is free. Nothing you send is published, and it is shared only with the service providers named in our privacy notice.")
     image = image or CTA_IMAGES[len(PAGES) % len(CTA_IMAGES)]
     return f'''<section class="cta-band" aria-labelledby="cta-h">{picture(image, "", "100vw")}
 <div class="wrap"><div><h2 id="cta-h">{esc(title)}</h2><p style="margin-top:1em;max-width:46ch">{esc(text)}</p></div>
@@ -237,7 +237,7 @@ def start_steps():
     fee = (f" A plot and pre-purchase review is {esc(C.FEES['plot_review'])}." if C.PUBLISH_FEES else "")
     return [
         ("A free 30-minute call", "Tell us about the plot, the villa or the project you are already in. We ask the questions a builder would ask, and tell you plainly whether you need us."),
-        ("A fixed-fee first review", "A plot review, a health check on a project under way, or the brief and budget: scoped and priced in writing before we start." + fee),
+        ("A fixed-fee first review", "A plot and pre-purchase review, or a health check on a project already under way: scoped and priced in writing before we start." + fee),
         ("Your appointment", "If you want us to carry on, a written appointment for the stages you need, from design to handover, with the fee agreed up front. Nothing is assumed."),
     ]
 
@@ -286,6 +286,7 @@ def header(path):
     mega = (f'<div class="mega"><div><h4>For your project</h4><ul>{l1}</ul></div>'
             f'<div><h4>At every stage</h4><ul>{l2}</ul></div>'
             f'<a class="mega-feature" href="/case-studies/island-e-waterfront-villa/">{picture("saqqara-01", "", "240px")}'
+            f'<small class="mega-credit">Photo: Saqqara, a UK house built by P Chapman Construction</small>'
             f'<span>Worked project example (hypothetical): how we would manage an Island E villa</span></a></div>')
     svc_cur = cur if path.startswith("/services/") else ""
     return f'''<a class="skip" href="#main">Skip to content</a>

@@ -120,7 +120,7 @@ EVENTS_UNSORTED = [
  ("Month 18", "Dewatering", "Suppose the contractor claims AED 640,000 for extra dewatering in the basement excavation.",
   "The ground investigation would have been issued with the tender and the contract would put ground risk with the contractor. Only the extra 1.2 m of basement depth the owners added in month 17, for a wine store, would be a genuine change.",
   "Modelled outcome: agreed at AED 85,000."),
- ("Month 20", "Owners' upgrades", "The owners want a larger kitchen and a better home automation system.",
+ ("Month 20", "Owners' upgrades", "Suppose the owners ask for a larger kitchen and a better home automation system.",
   "Both would be priced by the contractor and checked before anything is instructed, with the time effect stated. The owners decide with the number in front of them.",
   "Modelled outcome: AED 410,000 approved from contingency, no delay."),
  ("Month 24", "Valuation 9", "Suppose the monthly payment application claims AED 1.42m.",
@@ -129,7 +129,7 @@ EVENTS_UNSORTED = [
  ("Month 29", "Delay claim", "Suppose the contractor seeks an 11-week extension of time, citing late information and shamal winds.",
   "In this example the records show joinery information from the interior designer was five weeks late, causing four weeks of critical delay, and wind days were within the contract allowance.",
   "Modelled outcome: four weeks granted, with four weeks of time-related cost. The owners keep their right to delay damages beyond that."),
- ("Month 15", "Long-lead glazing", "The sliding glass for the water elevation has a 26-week lead time.",
+ ("Month 15", "Long-lead glazing", "Suppose the sliding glass for the water elevation has a 26-week lead time.",
   "We would recommend ordering it as an early package straight after contract award, with drawings checked before production.",
   "Modelled outcome: glazing arrives in time for the envelope, with no knock-on delay to fit-out."),
 ]
@@ -205,7 +205,8 @@ def svg_cash():
     g = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="Planning cash flow of the stated allowances: plot and registration, and design, approvals, construction and contingency including VAT, 2026 to 2029" class="chart">']
     for t in range(0, int(maxv) + 1, 2):
         g.append(f'<line x1="{L}" x2="{W-R}" y1="{y(t):.1f}" y2="{y(t):.1f}" class="grid"/><text x="{L-10}" y="{y(t)+4:.1f}" class="tick" text-anchor="end">{t}</text>')
-    g.append(f'<text x="{L-10}" y="{T-12}" class="tick" text-anchor="end">AED m</text>')
+    # anchored to the left edge so a longer translated unit label cannot run out of the viewBox
+    g.append(f'<text x="4" y="{T-12}" class="tick" text-anchor="start" direction="ltr">AED m</text>')
     for (yr, p, d, v), x in zip(CASH, xs):
         b = d + v
         y0 = y(0); yp = y(p); yb = y(p + b)
@@ -219,8 +220,9 @@ def svg_cash():
     return "".join(g)
 
 def svg_bids():
-    W, H, L, R, T = 720, 300, 120, 70, 16
+    W, L, R, T = 720, 120, 70, 16
     rowh = 66
+    H = T + rowh * 4 + 44          # tall enough for the tick numbers and the "modelled" axis label
     maxv = 14.5
     def x(v): return L + (W - L - R) * v / maxv
     g = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="Modelled contractor bids: headline price against normalised like-for-like cost" class="chart">']
@@ -238,11 +240,21 @@ def svg_bids():
     g.append("</svg>")
     return "".join(g)
 
+_MONTHS = {m: i for i, m in enumerate(("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"), 1)}
+
+def plot_month(label):
+    """Programme month of a plot instalment date such as 'Sep 2029' (month 1 = October 2026)."""
+    mon, yr = label.split()
+    return (int(yr) - 2026) * 12 + _MONTHS[mon] - 10 + 1
+
+assert [plot_month(d) for d, _ in PLOT_PLAN] == [1, 6, 12, 18, 24, 30, 36]
+
 def svg_programme():
-    W, L, R, T = 760, 190, 16, 34
+    W, L, R, T = 890, 320, 16, 34      # wide label gutter so translated stage names are not clipped
     rowh = 30
     H = T + rowh * len(STAGES) + 30
-    months = 35
+    pay_months = [plot_month(d) for d, _ in PLOT_PLAN]
+    months = max(STAGES[-1][2], max(pay_months))     # 36: the axis runs to the last plot instalment
     def x(mo): return L + (W - L - R) * (mo - 1) / months
     g = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="Assumed programme: 35 months from plot review to handover" class="chart">']
     for mo in range(1, months + 2, 3):
@@ -254,10 +266,9 @@ def svg_programme():
         g.append(f'<g><title>{name}: months {a} to {b}</title><text x="{L-12}" y="{yy+13}" text-anchor="end" class="lab">{name}</text>'
                  f'<rect x="{x(a):.1f}" y="{yy}" width="{max(6, x(b+1)-x(a)-2):.1f}" height="18" rx="2" fill="{col}"/></g>')
     # plot payment markers (Oct 2026 = month 1)
-    pay_months = [1, 6, 12, 18, 24, 30, 36]
     for pm in pay_months:
-        if pm <= months:
-            g.append(f'<circle cx="{x(pm):.1f}" cy="{H-18}" r="4" fill="{C_PLOT}"><title>Plot instalment, month {pm}</title></circle>')
+        after = " (after the assumed handover)" if pm > STAGES[-1][2] else ""
+        g.append(f'<circle cx="{x(pm):.1f}" cy="{H-18}" r="4" fill="{C_PLOT}"><title>Plot instalment, month {pm}{after}</title></circle>')
     g.append(f'<text x="{L-12}" y="{H-14}" class="tick" text-anchor="end">Plot instalments</text>')
     g.append("</svg>")
     return "".join(g)

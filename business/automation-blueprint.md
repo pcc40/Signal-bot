@@ -35,12 +35,12 @@ The competitor report (`business/seo-competitor-report.md`) found www.eastbridge
 
 **Phil, once:**
 
-1. **Decide the canonical repository.** `HANDOFF.md` names the private repo `pcc40/eastbridge-website`. This working copy currently lives in the `Signal-bot` repository on branch `claude/eastbridge-website-automation-veh823`. Push to one, and use only that one from now on.
+1. **Confirm the canonical repository.** `HANDOFF.md` names the GitHub repository `pcc40/Signal-bot`, working branch `claude/eastbridge-website-automation-veh823`. Use only that one from now on.
 2. **Link Netlify to the repo.** app.netlify.com → your project → Project configuration → Build & deploy → Continuous deployment → Link repository → GitHub → choose the repo → branch `main`. Build settings come from `netlify.toml`.
 3. **Domain.** Project configuration → Domain management → Add a domain → `www.eastbridgepartners.ae` (and `eastbridgepartners.ae` redirecting to www). Add the DNS records Netlify shows at your .ae registrar. Wait for the HTTPS certificate to issue.
 4. **Business email.** The site publishes `enquiries@eastbridgepartners.ae`. Confirm it actually receives mail (Google Workspace or Microsoft 365). If not: workspace.google.com → Get started → use the existing domain → verify with a TXT record → add Google's MX records.
 5. **Google Search Console.** search.google.com/search-console → Add property → Domain → `eastbridgepartners.ae` → add the TXT record at the registrar → Verify. Then Sitemaps → submit `https://www.eastbridgepartners.ae/sitemap.xml`. (Alternative: URL-prefix property, paste the meta code into `GSC_VERIFICATION` in `src/config.py`.)
-6. **Bing Webmaster Tools.** bing.com/webmasters → Add site → Import from Google Search Console (fastest). This also feeds Copilot and ChatGPT search.
+6. **Bing Webmaster Tools.** bing.com/webmasters → Add site → Import from Google Search Console (fastest). Bing's index is used by some AI search tools.
 7. **GA4.** analytics.google.com → Admin → Create → Property → "Eastbridge" → Web stream → `www.eastbridgepartners.ae` → copy the Measurement ID (`G-…`) into `GA4_ID` in `src/config.py`, rebuild, push. Then Admin → Events → mark `generate_lead` as a key event. Optional: Admin → Data display → Channel groups → add a channel "AI assistants" matching sources `chatgpt.com|perplexity.ai|gemini.google.com|copilot.microsoft.com|claude.ai`.
 8. **IndexNow, once live:** `python3 tools/indexnow.py --all` after a build.
 9. **Google Business Profile, Bing Places, LinkedIn page:** follow `business/offsite-authority-kit.md` (copy is ready). Add every new profile URL to `SOCIAL` in `src/config.py`.
@@ -51,7 +51,7 @@ The competitor report (`business/seo-competitor-report.md`) found www.eastbridge
 
 **Already built**
 
-- `brief` form on `/contact/` (and `/ar/contact/`, `/ru/contact/`, `/zh/contact/`, `/hi/contact/`): name, email, phone/WhatsApp, area, stage (multi-choice), budget band, where based, message. Honeypot field `company_site`. Redirects to `/contact/thanks/` (noindex).
+- `brief` form on `/contact/` (and `/ar/contact/`, `/ru/contact/`, `/zh/contact/`, `/hi/contact/`): name, email, phone/WhatsApp, area, stage (single choice), contact_method (Email / Phone call / WhatsApp; phone required for the last two), budget band, where based, message, optional `marketing_opt_in`. Honeypot field `company_site`. Redirects to `/contact/thanks/` (noindex).
 - `brief` and `checklist` forms each carry an optional, **unticked** checkbox `marketing_opt_in` (value `yes`) asking for Eastbridge notes. Both forms submit normally without it.
 - `checklist` form on `/guides/villa-owner-checklist/`: name, email, project stage (optional), optional notes box. Redirects to the download page `/guides/villa-owner-checklist/thanks/` (noindex).
 - `notes` newsletter form in the site footer: email only. Its only purpose is the notes, so subscribing is the request; the footer says so and gives the unsubscribe route.
@@ -72,7 +72,7 @@ The competitor report (`business/seo-competitor-report.md`) found www.eastbridge
 **Already built:** `netlify/functions/submission-created.js`. Netlify runs it automatically after each verified submission. It has no dependencies and holds no secrets. In order, it:
 
 1. **Logs the lead** to a Google Sheet (if `SHEET_WEBHOOK_URL` is set), first, so a lead is never lost even if email fails. It records the page and language (`en`, `ar`, `ru`, `zh`, `hi`, worked out from the page the form was sent from).
-2. **Emails the enquirer** a branded acknowledgement for `brief` ("Your brief has reached Eastbridge": personal reply from Philip within one working day, the three next steps from the contact page, booking button if `BOOKING_URL` is set, WhatsApp button, phone and hours, privacy line). For `notes` it sends a short subscription confirmation. For `checklist` it sends nothing (the download is on the thank-you page), unless the visitor ticked the notes box, in which case they get the same subscription confirmation. The `brief` acknowledgement contains no marketing content unless the enquirer ticked the notes box; if they did, it adds one line confirming the notes and how to stop them. To prevent abuse of a public form, the email uses only the enquirer's first name (letters only) and never repeats anything else they typed.
+2. **Emails the enquirer** a branded acknowledgement for `brief` ("Your brief has reached Eastbridge": Philip aims to reply personally within one working day; then the same sequence as the site: a free 30-minute call, and, if we can help, a fixed-fee first review scoped and priced in writing; booking button if `BOOKING_URL` is set, WhatsApp button, phone and hours, privacy line). For `notes` it sends a short subscription confirmation. For `checklist` it sends nothing (the download is on the thank-you page), unless the visitor ticked the notes box, in which case they get the same subscription confirmation. The `brief` acknowledgement contains no marketing content unless the enquirer ticked the notes box; if they did, it adds one line confirming the notes and how to stop them. To prevent abuse of a public form, the email uses only the enquirer's first name (letters only) and never repeats anything else they typed.
 3. **Emails an internal lead alert** for `brief` with every field, including `marketing_opt_in` (if `LEAD_ALERT_TO` is set), with Reply-To set to the enquirer, so Phil can reply straight from the alert.
 
 **Marketing consent, end to end**
@@ -116,6 +116,8 @@ app.netlify.com → project → Project configuration → **Environment variable
 | `AUTOREPLY_DISABLED` | `true` to pause customer emails | Optional |
 
 **Test:** submit the live form with your own address. Then Logs & metrics → Functions → `submission-created` shows a line like `{"sheet":{"logged":true},"ack":{"sent":true}}`. Check the email lands in the inbox, not spam, on Gmail and Outlook.
+
+**Retention (manual, monthly).** The privacy notice says enquiries and checklist requests that don't lead to an appointment are deleted within 24 months, after a monthly review. Nothing does this automatically. On the first working day of each month: delete Netlify Forms submissions older than 24 months that did not lead to an appointment (Forms → the form → select → Delete), delete the matching rows in the lead sheet, and delete the matching lead-alert and acknowledgement emails in the mailbox. Keep `notes` subscribers until they unsubscribe, and keep the suppression list. If you will not do this, change the period in `src/pages.py` (`legal`, "How long we keep it") before launch.
 
 **Privacy notice:** the notice on `/privacy/` (`src/pages.py`, function `legal`) names Netlify (stores submissions), "our email providers" (mailbox, confirmations and notes) and Google "when we use Google Sheets" for the log. It describes analytics only when `GA4_ID` is set in `src/config.py`. If you do not set up the sheet, delete the Google line; if you name a specific email provider, add it. The final wording needs your or a lawyer's review before launch.
 
@@ -177,7 +179,7 @@ function doPost(e) {
 
 ## 5. Booking link
 
-**Option A: Google Calendar appointment schedule (free with a Google account; Workspace adds reminders and payment features).** calendar.google.com → Create → **Appointment schedule** → title "First conversation with Eastbridge (30–45 min)" → duration 45 minutes → availability Monday–Friday, add early-morning and evening Gulf slots for UK and European clients → Booking form: ask name, email, phone, "Where is the project?" → Location: Google Meet → Booked appointment settings: buffer 15 minutes, maximum 3 per day, minimum notice 12 hours → Save → Open booking page → copy the link into `BOOKING_URL`.
+**Option A: Google Calendar appointment schedule (free with a Google account; Workspace adds reminders and payment features).** calendar.google.com → Create → **Appointment schedule** → title "Free 30-minute call with Eastbridge" → duration 30 minutes → availability Monday–Friday, add early-morning and evening Gulf slots for UK and European clients → Booking form: ask name, email, phone, "Where is the project?" → Location: Google Meet → Booked appointment settings: buffer 15 minutes, maximum 3 per day, minimum notice 12 hours → Save → Open booking page → copy the link into `BOOKING_URL`.
 
 **Option B: Calendly (better time-zone handling and reminders; free plan allows one event type).** calendly.com → Sign up with Google → connect the calendar → New event type → One-on-one → same details as above → Invitee questions as above → Notifications → email reminder 24 hours before → copy link into `BOOKING_URL`.
 
@@ -192,15 +194,15 @@ Use the link in: the auto-acknowledgement (automatic once `BOOKING_URL` is set),
 **Phil, once (WhatsApp Business app, free).** Install "WhatsApp Business" on the phone holding +971 56 744 0057 (it can migrate an existing WhatsApp chat history).
 
 1. Settings → Business tools → **Business profile**: name "Eastbridge Strategic Partners", category "Business service" or "Consulting", description (from the offsite kit: "Client-side project management for private villa builds and renovations in Dubai and Abu Dhabi. We represent the owner, alongside the owner's DM-registered consultant and the contractor."), address as in `src/config.py`, hours Monday–Friday 9:00–18:00, website, email.
-2. Business tools → **Greeting message** → on → "Thank you for contacting Eastbridge Strategic Partners. Philip will reply personally, usually within a few hours during the working day. If it helps, tell us where the project is and what stage it has reached." → Recipients: everyone not in address book.
+2. Business tools → **Greeting message** → on → "Thank you for contacting Eastbridge Strategic Partners. Philip aims to reply personally within one working day (change this only to a time you have confirmed you can keep). If it helps, tell us where the project is and what stage it has reached." → Recipients: everyone not in address book.
 3. Business tools → **Away message** → on → outside business hours → "Thank you for your message. Our hours are Monday to Friday, 9am to 6pm Gulf Standard Time. Philip will reply on the next working day. To book a call at a time that suits you: [BOOKING_URL]".
 4. Business tools → **Quick replies** (type `/` in a chat to use):
 
 | Shortcut | Message |
 |---|---|
-| `/book` | "Here is a link to choose a time for a free first conversation, usually 30 to 45 minutes: [BOOKING_URL]" |
+| `/book` | "Here is a link to choose a time for a free 30-minute call: [BOOKING_URL]" |
 | `/brief` | "If it is easier, you can send the details through our private brief form: https://www.eastbridgepartners.ae/contact/" |
-| `/role` | "We are a client-side project manager. We represent you, the owner, alongside your DM-registered consultant and the contractor. We do not build, design or certify, so our advice has no conflict." |
+| `/role` | "We are a client-side project manager. We represent you, the owner, alongside your DM-registered consultant and the contractor. We do not build or design, and we take no commission or referral fee from anyone on your project." |
 | `/fees` | "Our fee depends on the scope and length of the project. After a first conversation we send a written proposal with a clear scope and a fixed or monthly fee." |
 | `/next` | "Next steps: a free first conversation, then a written proposal if we can help. If we cannot, we will say so." |
 | `/plot` | "Before you buy or commit to a plot, our plot review looks at the developer's rules, likely build cost and programme: https://www.eastbridgepartners.ae/services/plot-due-diligence/" |
@@ -291,6 +293,7 @@ A Looker Studio dashboard (free) on GA4, Search Console and the pipeline Sheet. 
 | Demand | Briefs received, WhatsApp clicks, calls; by source and language | GA4 key events, Sheet |
 | Conversion | Enquiry to call booked; call to proposal; proposal to won (win rate) | Sheet |
 | Speed | Median time to personal reply (target under 1 working day) | Sheet |
+| Data | Monthly retention clean-up done (section 3): submissions, sheet rows and alert emails over 24 months without an appointment deleted | Checklist |
 | Pipeline | Open proposals: count and fee value, weighted by probability | Sheet |
 | Money | Fees invoiced, cash received, debtors over 30 days | Accounting tool |
 | Delivery | Weekly reports sent on time, open decisions older than 14 days | Client trackers |

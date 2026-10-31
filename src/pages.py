@@ -195,14 +195,14 @@ def work_hub():
     import pages_new
     rec = recognition_html(RECOGNITION[:4])
     arch = "".join(f"<li>{esc(a)}</li>" for a in ARCHITECTS)
-    body = B.banner(crumbs, "Homes we built", "Selected work of P Chapman Construction, the company Philip Chapman founded and led for 21 years: private houses, country estates, developments and hotel work.", "owers-house-02", credit_of("owers-house-02")) + f'''
+    body = B.banner(crumbs, "Homes built by P Chapman Construction", "Selected work of P Chapman Construction, the company Philip Chapman founded and led for 21 years: private houses, country estates, developments and hotel work.", "owers-house-02", credit_of("owers-house-02")) + f'''
 <section class="section--tight"><div class="wrap"><div class="kpis kpis--text">{rec}</div><p class="small muted" style="margin-top:14px">Awards were made to the houses and the teams that designed and built them. Architects and project teams are credited on each project page.</p></div></section>
 <section class="section--tight"><div class="wrap">{work_cards(PROJECTS)}</div></section>
-<section class="section band-dark"><div class="wrap"><div class="head-row"><h2>In our clients' words</h2><p class="muted">Owners and developers on P Chapman Construction.</p></div>{pages_new.quotes_html(TESTIMONIALS[3:6])}</div></section>
+<section class="section band-dark"><div class="wrap"><div class="head-row"><h2>What P Chapman Construction's clients said</h2><p class="muted">Owners and developers on P Chapman Construction's work.</p></div>{pages_new.quotes_html(TESTIMONIALS[3:6])}</div></section>
 <section class="section"><div class="wrap split"><div><h2>Range of work</h2></div><div><p class="muted" style="margin-top:24px">P Chapman Construction worked under traditional and design-and-build contracts, for private owners, developers, hoteliers, schools and housing associations, with particular expertise in contemporary coastal houses and eco-buildings.</p></div></div></section>
 {B.cta_band("Bring this standard to your villa.")}'''
-    B.page("/work/", "Our Work: Award-Winning Homes by P Chapman Construction",
-           "Award-winning private houses, estates, developments and hotel work built by P Chapman Construction, the company Eastbridge founder Philip Chapman led for 21 years.",
+    B.page("/work/", "Work: Homes Built by P Chapman Construction",
+           "Private houses, estates, developments and hotel work, some award-winning, built by P Chapman Construction, the company Philip Chapman led for 21 years.",
            body, crumbs, og=B.og_image("owers-house-02"))
 
 def project_case_html(p):
@@ -302,7 +302,7 @@ def approach():
 <p>We do not carry out statutory design, authority submissions or permit applications, statutory supervision or certification of the works. Those duties sit with the registered consultant you appoint. We do not give legal advice; where it is needed, take advice from a UAE-qualified lawyer, and we will work alongside them.</p>
 </div></div></section>
 <section class="section"><div class="wrap split"><div><h2>Why a builder's background matters</h2></div><div class="prose">
-<p>Many owner's representatives come from consultancy. Philip came from contracting. For 21 years our founder, Philip Chapman, ran P Chapman Construction, an award-winning premium building company, pricing tenders, running sites, preparing and defending extension of time and variation claims under JCT contracts, and handing over houses to demanding owners and architects.</p>
+<p>Many owner's representatives come from consultancy. Philip came from contracting. For 21 years our founder, Philip Chapman, ran P Chapman Construction, a premium building company whose houses have won RIBA and LABC recognition, pricing tenders, running sites, preparing and defending extension of time and variation claims under JCT contracts, and handing over houses to demanding owners and architects.</p>
 <p>That background is unusual on the client side, and it is the point. We know where a contractor's price has room, where a programme has float, and which details get closed up before anyone looks. We use that knowledge fairly. Good contractors welcome an informed client, because informed clients make decisions on time and pay what is due.</p>
 <p>See <a href="/insights/what-the-contractor-knows/">what a builder knows that most villa owners don't</a>.</p></div></div></section>
 {B.cta_band()}'''
@@ -322,7 +322,7 @@ def independence():
      ("Your information stays yours", "Your plans, budget and personal details are confidential. We never publish a client's name, address or project without written permission."),
     ]
     lis = "".join(f"<li><strong>{esc(t)}</strong>{esc(d)}</li>" for t, d in items)
-    body = B.banner(crumbs, "Our independence pledge", "In a market where many project managers also design, build or take referral fees, independence has to be written down. This is ours, and it is in every appointment we sign.", "the-lookout-09", credit_of("the-lookout-09")) + f'''
+    body = B.banner(crumbs, "Our independence pledge", "In a market where many project managers also design, build or take referral fees, independence has to be written down. This is ours, and it is written into every Eastbridge appointment.", "the-lookout-09", credit_of("the-lookout-09")) + f'''
 <section class="section"><div class="wrap"><ul class="pledge">{lis}</ul></div></section>
 <section class="section paper"><div class="wrap split"><div><h2>Why it matters</h2></div><div class="prose">
 <p>When the person checking the contractor's invoices also earns a referral fee from that contractor, the check is not independent. When a design-and-build company's in-house project manager reports to the same owner as the builders, the check is not independent. When a consultant reviews the cost of a design they produced, the check is not independent.</p>
@@ -477,8 +477,8 @@ def contact():
     def err(i, msg):
         return f'<p class="err" id="{i}-err" hidden>{msg}</p>'
     steps = B.start_steps()
-    next_steps = [("We reply within one working day", "A personal reply from Philip, by the method you choose in the form.")] + steps
-    body = B.banner(crumbs, "Arrange a free 30-minute call", "Tell us a little about your project and how you would like us to reply. Philip will reply personally within one working day to agree a time; the form does not book a slot automatically. Nothing you send is shared or published.", "the-lookout-02", credit_of("the-lookout-02")) + f'''
+    next_steps = [("We aim to reply within one working day", "A personal reply from Philip, by the method you choose in the form.")] + steps
+    body = B.banner(crumbs, "Arrange a free 30-minute call", "Tell us a little about your project and how you would like us to reply. Philip aims to reply personally within one working day to agree a time; the form does not book a slot automatically. Nothing you send is published, and it is shared only with the service providers named in our privacy notice.", "the-lookout-02", credit_of("the-lookout-02")) + f'''
 <section class="section--tight"><div class="wrap split contact-grid">
 <div class="contact-side">
 <h2 class="h-sm">Prefer to talk?</h2>
@@ -496,24 +496,24 @@ def contact():
 <div class="row"><div class="field"><label for="f-name">Your name {req}</label><input id="f-name" name="name" autocomplete="name" required aria-describedby="f-name-err">{err("f-name", "Please tell us your name.")}</div>
 <div class="field"><label for="f-email">Email {req}</label><input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="f-email-err">{err("f-email", "Please enter an email address we can reply to, such as name@example.com.")}</div></div>
 <fieldset class="field"><legend>How would you like us to reply? {opt}</legend><div class="checks">{methods}</div></fieldset>
-<div class="row"><div class="field"><label for="f-phone">Phone or WhatsApp number <span class="opt ph-opt">Optional</span><span class="opt ph-req" hidden>Needed for a call or WhatsApp</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" minlength="7" aria-describedby="f-phone-hint f-phone-err"><p class="hint" id="f-phone-hint">Include the country code, for example +971 or +44.</p>{err("f-phone", "Please enter a phone number with its country code, for example +971 50 123 4567.")}</div>
+<div class="row"><div class="field"><label for="f-phone">Phone or WhatsApp number <span class="opt ph-opt">Optional</span><span class="opt ph-req" hidden>Needed for a call or WhatsApp</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" minlength="7" pattern="\\+?[0-9][0-9 \\(\\)\\-]{{6,}}" aria-describedby="f-phone-hint f-phone-err"><p class="hint" id="f-phone-hint">Include the country code, for example +971 or +44.</p>{err("f-phone", "Please enter a phone number with its country code, for example +971 50 123 4567.")}</div>
 <div class="field"><label for="f-based">Where are you based? {opt}</label><select id="f-based" name="based"><option value="">Choose</option>{based}</select></div></div>
 <div class="row"><div class="field"><label for="f-stage">Project stage {opt}</label><select id="f-stage" name="stage"><option value="">Choose a stage</option>{stages}</select></div>
 <div class="field"><label for="f-area">Where is the project? {opt}</label><select id="f-area" name="area"><option value="">Choose a location</option>{areas}</select></div></div>
-<div class="field"><label for="f-budget">Approximate construction budget {opt}</label><select id="f-budget" name="budget" aria-describedby="f-budget-hint"><option value="">Choose a range</option>{budgets}</select><p class="hint" id="f-budget-hint">A rough band is enough. It helps us judge the scale, and is never shared.</p></div>
+<div class="field"><label for="f-budget">Approximate construction budget {opt}</label><select id="f-budget" name="budget" aria-describedby="f-budget-hint"><option value="">Choose a range</option>{budgets}</select><p class="hint" id="f-budget-hint">A rough band is enough. It helps us judge the scale, and is never published.</p></div>
 <div class="field"><label for="f-msg">Tell us about the project {req}</label><textarea id="f-msg" name="message" required minlength="10" aria-describedby="f-msg-hint f-msg-err"></textarea><p class="hint" id="f-msg-hint">The house you want, the plot or villa you have, and anything that is worrying you.</p>{err("f-msg", "Please add a few words about your project.")}</div>
 <div class="field"><label class="consent" for="f-mkt"><input id="f-mkt" name="marketing_opt_in" type="checkbox" value="yes"> <span>Optional: also send me Eastbridge notes for villa owners by email, no more than once a month. Leaving this unticked does not affect your enquiry. Unsubscribe at any time by replying to any note or writing to {C.EMAIL}.</span></label></div>
 <div class="reassure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="1"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg>
-<p><b>Confidential.</b> Read personally by Philip and used only to reply to you. We never share or publish client names, addresses or projects without written permission. See our <a href="/privacy/">privacy notice</a>.</p></div>
+<p><b>Confidential.</b> Read personally by Philip and used to reply to you (and, if you tick the box above, to send our notes). We never share or publish client names, addresses or projects without written permission. See our <a href="/privacy/">privacy notice</a>.</p></div>
 <p class="submit-row"><button class="btn" type="submit">Send your enquiry</button><span class="small muted">{esc(C.RESPONSE_PROMISE)}.</span></p>
 </form></div></section>'''
     schema = [{"@context": "https://schema.org", "@type": "ContactPage", "url": B.url("/contact/"), "about": {"@id": B.ORG_ID}}]
     B.page("/contact/", "Contact Eastbridge: Arrange a Free 30-Minute Call | Dubai",
-           "Arrange a free 30-minute call about your villa build or renovation in Dubai or Abu Dhabi. A personal reply within one working day, by email, phone or WhatsApp.",
+           "Arrange a free 30-minute call about your villa build or renovation in Dubai or Abu Dhabi. We aim to reply within one working day, by email, phone or WhatsApp.",
            body, crumbs, schema)
 
     thanks_steps = [
-        ("Philip reads your brief", f"{esc(C.RESPONSE_PROMISE)}, by the method you chose. Our hours are {esc(C.HOURS)}, so a brief sent at the weekend is answered on the next working day."),
+        ("Philip reads your brief", f"{esc(C.RESPONSE_PROMISE)}, by the method you chose. Our hours are {esc(C.HOURS)}, so a brief sent at the weekend is normally answered on the next working day."),
         ("A free 30-minute call", "At a time that suits you, including UK and European hours. If you have drawings, plot details or contractor quotes, have them to hand; they are not essential."),
         ("A written next step", "If we can help, a scope and fixed fee for the first stage. If we can't, we will say so and, where we can, point you to someone who can."),
     ]
@@ -580,7 +580,7 @@ def legal():
 </ul>
 <p>Some of these providers process data outside the UAE. If you contact us on WhatsApp, WhatsApp handles those messages under its own terms. Films on our project pages are hosted by Vimeo or YouTube and load only when you press play; the provider then receives technical data such as your IP address.{film}</p>
 <p>We share project information with third parties, such as a consultant or contractor, only with your agreement.</p>
-<h2>How long we keep it</h2><p>Enquiries and checklist requests that don't lead to an appointment are deleted after 24 months. Notes subscriptions are kept until you unsubscribe. Client records are kept for the period required by law.</p>
+<h2>How long we keep it</h2><p>We review our records each month and delete enquiries and checklist requests that don't lead to an appointment within 24 months. Notes subscriptions are kept until you unsubscribe. Client records are kept for the period required by law.</p>
 <h2>Your rights</h2><p>You can ask to see, correct or delete your data, object to how we use it, or withdraw your agreement to our notes at any time, by emailing <a href="mailto:{C.EMAIL}">{C.EMAIL}</a>.</p>
 <h2>Cookies</h2>{cookies}
 </div></section>'''
@@ -641,7 +641,7 @@ def insights(posts):
 {('<div class="keypoints"><h2>Key points</h2><ul>' + kp + '</ul></div>') if kp else ""}
 {toc}
 {body_html}
-<div class="author"><img class="mono" src="/assets/img/philip-chapman-thumb.webp" width="52" height="52" alt="" loading="lazy"><div><b>{esc(C.FOUNDER["name"])}, {esc(C.FOUNDER["role"])}</b><span class="small muted">Founded and ran P Chapman Construction, an award-winning £17m premium builder, for 21 years. Now represents villa owners in Dubai and Abu Dhabi. <a href="/about/#founder">About Philip</a></span></div></div>
+<div class="author"><img class="mono" src="/assets/img/philip-chapman-thumb.webp" width="52" height="52" alt="" loading="lazy"><div><b>{esc(C.FOUNDER["name"])}, {esc(C.FOUNDER["role"])}</b><span class="small muted">Founded and ran P Chapman Construction, a £17m UK builder of award-winning homes, for 21 years. Now represents villa owners in Dubai and Abu Dhabi. <a href="/about/#founder">About Philip</a></span></div></div>
 {('<h2 id="faq">Questions</h2>' + B.faq_html(faqs)) if faqs else ""}
 {('<h2 id="sources">Sources</h2><ol class="small">' + srcs + '</ol>') if srcs else ""}
 {guide_cta()}

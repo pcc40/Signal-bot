@@ -14,7 +14,7 @@ SERVICES = [
   "image": "quay-house-01",
   "stage": "From the first budget to the end of the defects period",
   "intro": """<p>A private villa in Dubai brings together a master developer, a permitting authority, a registered consultant, a main contractor, a dozen specialist subcontractors and an interior designer. Each of them has real duties and each has their own commercial position. What is often missing is someone appointed to coordinate the whole project and look at every price, payment and decision from the owner's side.</p>
-<p>That is the role we fill. We sit beside you, set the budget and programme with you, help you appoint the right consultant and contractor, then work alongside them to keep the project to what was agreed until handover. Philip spent 21 years running an award-winning building company, so we know how a tender is priced, where variations come from and how delay claims are assembled. That knowledge now works for you.</p>
+<p>That is the role we fill. We sit beside you, set the budget and programme with you, help you appoint the right consultant and contractor, then work alongside them to keep the project to what was agreed until handover. Philip spent 21 years running a building company whose houses have won RIBA and LABC recognition, so we know how a tender is priced, where variations come from and how delay claims are assembled. That knowledge now works for you.</p>
 <p>Philip leads every appointment personally. How often we attend site and what we report are agreed in writing in your appointment before work starts. Where the project needs a quantity surveyor, an engineer or another specialist, you appoint and pay them directly, and we help you compare proposals and choose. Our role is commercial and project management on your side; statutory design, authority submissions and supervision stay with your registered consultant. <a href="/approach/#uae-appointments">How an appointment works in the UAE</a>.</p>""",
   "does": [
    "Set a realistic budget, programme and brief before any design money is spent",
@@ -83,7 +83,7 @@ SERVICES = [
   "short": "Renovations and extensions",
   "name": "Villa renovation and extension project management",
   "title": "Villa Renovation Project Management Dubai | Eastbridge",
-  "description": "Renovating or extending a villa on Palm Jumeirah, Emirates Hills or Dubai Hills? We manage approvals, budget, contractors and handover for you.",
+  "description": "Renovating a villa on Palm Jumeirah, Emirates Hills or Dubai Hills? We manage budget, programme, contractor and handover, and coordinate approvals with your consultant.",
   "h1": "Renovations and extensions, with the unknowns planned for",
   "lede": "Renovation is where budgets break. Old waterproofing, tired services and approvals that take longer than promised. We plan for all three before the first wall comes down.",
   "image": "trelowen-01",
@@ -152,7 +152,7 @@ SERVICES = [
   "short": "Design and approvals management",
   "name": "Design brief, budget and approvals management",
   "title": "Villa Design & Approvals Management Dubai | Eastbridge",
-  "description": "We write the brief, keep the design inside your budget at every stage, and track master developer and authority approvals with your consultant.",
+  "description": "We write the brief, check the design against your budget at every stage, and track master developer and authority approvals with your consultant.",
   "h1": "A design that matches the brief and the budget",
   "lede": "Design is the cheapest place to change your mind and the most expensive place to lose control of cost. We keep both under watch.",
   "image": "owers-house-01",
@@ -346,7 +346,7 @@ SERVICES = [
   "short": "Snagging and handover",
   "name": "Villa snagging and handover management",
   "title": "Villa Snagging & Handover Dubai | Eastbridge",
-  "description": "Client-side snagging, commissioning checks and handover for new and renovated villas in Dubai and Abu Dhabi. Every defect closed out.",
+  "description": "Client-side snagging, commissioning checks and handover for new and renovated villas in Dubai and Abu Dhabi. Defects tracked to close-out.",
   "h1": "Handover is not the end of the project. It is the last chance to get it right.",
   "lede": "Once you have the keys and the contractor has his money, defects are harder to close. We help make sure the house is finished, tested and documented before you accept it.",
   "image": "ansells-01",

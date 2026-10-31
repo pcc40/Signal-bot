@@ -111,20 +111,20 @@ function briefEmail(firstName, optedIn) {
   const text = [
     hello,
     "",
-    "Thank you for sending us your brief. It has reached us safely and Philip Chapman, our founding partner, will reply personally within one working day.",
+    "Thank you for sending us your brief. It has reached us safely and Philip Chapman, our founding partner, aims to reply personally within one working day.",
     "",
     "What happens next:",
     "1. We read your brief carefully.",
-    "2. We arrange a free first conversation, usually 30 to 45 minutes, to understand the project.",
-    "3. If we can help, we send a written proposal with a clear scope and fee. If we cannot, we say so and, where we can, point you to someone who can.",
+    "2. We arrange a free 30-minute call at a time that suits you.",
+    "3. If we can help, we propose a fixed-fee first review, such as a plot review or a project health check, with the scope and fee in writing before we start. If we cannot, we say so and, where we can, point you to someone who can.",
     "",
-    booking ? `If you would like to choose a time for that first conversation now, you can book here: ${booking}` : "",
+    booking ? `If you would like to choose a time for that call now, you can book here: ${booking}` : "",
     `If it is urgent, message us on WhatsApp: ${wa}`,
     `Or call ${PHONE_DISPLAY} (${HOURS}).`,
     "",
     optedIn
-      ? "Nothing you send us is shared or published. We use your details to reply to you and, as you asked, to send our occasional notes for villa owners, no more than once a month."
-      : "Nothing you send us is shared or published. We use your details only to reply to you.",
+      ? "Nothing you send is published, and it is shared only with the service providers named in our privacy notice. We use your details to reply to you and, as you asked, to send our occasional notes for villa owners, no more than once a month."
+      : "Nothing you send is published, and it is shared only with the service providers named in our privacy notice. We use your details to reply to you.",
     optedIn ? `To stop the notes at any time, reply with "unsubscribe" or write to ${CONTACT_EMAIL}.` : "",
     "",
     "Eastbridge Strategic Partners",
@@ -143,18 +143,18 @@ function briefEmail(firstName, optedIn) {
 <tr><td style="padding:28px 32px;border-bottom:1px solid #e5e0d8;font-family:Arial,Helvetica,sans-serif;font-size:13px;letter-spacing:.14em;text-transform:uppercase">Eastbridge Strategic Partners</td></tr>
 <tr><td style="padding:32px;font-size:17px;line-height:1.6">
 <p style="margin:0 0 16px">${esc(hello)}</p>
-<p style="margin:0 0 16px">Thank you for sending us your brief. It has reached us safely and Philip Chapman, our founding partner, will reply personally within one working day.</p>
+<p style="margin:0 0 16px">Thank you for sending us your brief. It has reached us safely and Philip Chapman, our founding partner, aims to reply personally within one working day.</p>
 <p style="margin:24px 0 8px;font-family:Arial,Helvetica,sans-serif;font-size:13px;letter-spacing:.1em;text-transform:uppercase">What happens next</p>
 <ol style="margin:0 0 16px;padding-left:20px">
 <li style="margin-bottom:6px">We read your brief carefully.</li>
-<li style="margin-bottom:6px">We arrange a free first conversation, usually 30 to 45 minutes, to understand the project.</li>
-<li>If we can help, we send a written proposal with a clear scope and fee. If we cannot, we say so and, where we can, point you to someone who can.</li>
+<li style="margin-bottom:6px">We arrange a free 30-minute call at a time that suits you.</li>
+<li>If we can help, we propose a fixed-fee first review, such as a plot review or a project health check, with the scope and fee in writing before we start. If we cannot, we say so and, where we can, point you to someone who can.</li>
 </ol>
 <p style="margin:24px 0 8px">${booking ? btn(booking, "Choose a time to talk") : ""}${btn(wa, "Message us on WhatsApp")}</p>
 <p style="margin:16px 0 0;font-size:15px">Or call <a href="tel:${PHONE_E164}" style="color:#1f2a2e">${PHONE_DISPLAY}</a>, ${esc(HOURS)}.</p>
 <p style="margin:24px 0 0;font-size:14px;color:#5c6468">${optedIn
-    ? `Nothing you send us is shared or published. We use your details to reply to you and, as you asked, to send our occasional notes for villa owners, no more than once a month. To stop the notes at any time, reply with "unsubscribe" or write to ${esc(CONTACT_EMAIL)}.`
-    : "Nothing you send us is shared or published. We use your details only to reply to you."}</p>
+    ? `Nothing you send is published, and it is shared only with the service providers named in our privacy notice. We use your details to reply to you and, as you asked, to send our occasional notes for villa owners, no more than once a month. To stop the notes at any time, reply with "unsubscribe" or write to ${esc(CONTACT_EMAIL)}.`
+    : "Nothing you send is published, and it is shared only with the service providers named in our privacy notice. We use your details to reply to you."}</p>
 </td></tr>
 <tr><td style="padding:20px 32px;border-top:1px solid #e5e0d8;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.5;color:#5c6468">
 Client-side project management for private villas in Dubai and Abu Dhabi.<br>
