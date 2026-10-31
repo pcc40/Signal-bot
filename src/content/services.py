@@ -332,7 +332,7 @@ SERVICES = [
   ],
   "builder_view": "We have taken over jobs that another builder left, and we know what the incoming contractor needs: a clear record of what's there, what's defective and what's paid. Without that, the new price carries every unknown as risk. With it, the job can restart at a fair price.",
   "faqs": [
-   ("What should I do if my contractor stops work?", "Don't pay anything further until you understand the position, keep all records, photograph the site, and take legal advice on the contract before terminating anything. Then get an independent view of what it will take to finish."),
+   ("What should I do if my contractor stops work?", "Don't pay anything further until you understand the position, keep all records, photograph the site, and take legal advice on the contract before terminating anything. Then get an independent view of what it will take to finish. Our guide to <a href=\"/insights/stalled-villa-project-dubai/\">the first ten days of a stalled build</a> sets out the order."),
    ("Can a half-built villa be finished by a new contractor?", "Yes, often successfully. The key is an accurate record of the work in place and its quality, so the new contractor can price it fairly."),
    ("How quickly can you start?", "Usually within a week. The initial review is a fixed fee."),
   ],

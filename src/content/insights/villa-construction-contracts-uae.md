@@ -132,7 +132,7 @@ None of this is glamorous. All of it decides who wins an argument about time and
 
 ## How are villa construction disputes resolved?
 
-In general terms, most contracts provide for a sequence: negotiation between the parties, sometimes escalation to senior representatives or mediation, then a binding route such as arbitration or the courts, depending on what the contract says. The UK statutory adjudication regime that many British owners know does not apply in the same way in the UAE. The right route, the time limits and the costs depend on your contract and on UAE law, so take advice from a UAE-qualified lawyer early. The cheapest dispute is the one prevented by good records.
+In general terms, most contracts provide for a sequence: negotiation between the parties, sometimes escalation to senior representatives or mediation, then a binding route such as arbitration or the courts, depending on what the contract says. The UK statutory adjudication regime that many British owners know does not apply in the same way in the UAE. The right route, the time limits and the costs depend on your contract and on UAE law, so take advice from a UAE-qualified lawyer early. The cheapest dispute is the one prevented by good records. If work has already stopped, our guide to [what to do when a villa build stalls](/insights/stalled-villa-project-dubai/) sets out the first ten days.
 
 ## Before you sign: a short checklist
 
