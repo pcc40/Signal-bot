@@ -109,8 +109,7 @@ def home(posts, post_cards, stages_html, svc_img):
     k = CS
     body = f'''
 <section class="hero" aria-labelledby="hero-h"><div class="slides">{slides}</div>
-<div class="hero-video" data-src="https://player.vimeo.com/video/219974514?background=1&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;dnt=1"></div>
-<div class="wrap"><span class="kicker">Client-side project management · Dubai and Abu Dhabi</span>
+{B.hero_video_html()}<div class="wrap"><span class="kicker">Client-side project management · Dubai and Abu Dhabi</span>
 <h1 id="hero-h">Your villa, managed from your side of the table.</h1>
 <p class="lede">An independent project manager, paid only by you. We set the budget, help you choose the team, check every payment and claim, and get you the keys on time. Led personally by Philip Chapman, who built award-winning homes for 21 years.</p>
 <div class="actions"><a class="btn" href="/contact/">Start a private brief</a><a class="btn btn--ghost" href="/why-a-client-side-project-manager/">Why client-side matters</a></div></div>
@@ -188,6 +187,7 @@ def home(posts, post_cards, stages_html, svc_img):
 </div></section>
 
 <section class="section--tight" aria-labelledby="hfaq-h"><div class="wrap split"><h2 id="hfaq-h">Questions</h2>{B.faq_html(faqs)}</div></section>
+{B.how_it_starts()}
 {B.cta_band("Tell us about the house you want to build.", image="sea-glass-house-08")}'''
     B.page("/", "Villa Project Management Dubai | Client-Side Project Manager",
            "Client-side project management for villa builds and renovations in Dubai and Abu Dhabi, led by Philip Chapman, 21 years building award-winning homes. Paid only by you.",

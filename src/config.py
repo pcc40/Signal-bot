@@ -8,6 +8,12 @@ PHONE_E164 = "+971567440057"
 WHATSAPP = "971567440057"                         # digits only
 INDEXABLE = True     # False adds noindex everywhere (use for a staging deploy)
 PUBLISH_FEES = False # True shows the fee figures in FEES below on /fees/
+# Home hero film. Keep False until the Vimeo video's privacy setting allows embedding on SITE_URL's
+# domain (Vimeo > video > Settings > Privacy > "Where can this be embedded?" > Specific domains).
+# While False, the hero shows the photo slideshow only. When True, the film loads on desktop only,
+# never with reduced motion or Save-Data, and fades in only once Vimeo reports it is playing.
+HERO_VIDEO = False
+HERO_VIDEO_VIMEO_ID = "219974514"
 
 # Proposed fee figures — only shown when PUBLISH_FEES is True. Set them yourself.
 FEES = {
