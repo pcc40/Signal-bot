@@ -29,7 +29,7 @@ sources:
   - title: "Build in Dubai"
     url: "https://buildindubai.gov.ae/"
   - title: "Dubai Municipality: residential buildings, building permit procedures"
-    url: "https://stgportalnew.dm.gov.ae/wp-content/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf"
+    url: "https://dmpmedia.dm.gov.ae/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf"
   - title: "Dubai Municipality: new and improved building permits app launched"
     url: "https://www.dm.gov.ae/new-improved-building-permits-app-launched-for-streamlined-services/"
   - title: "Dubai Building Code, 2021 edition (UAE Government portal)"
@@ -40,12 +40,18 @@ sources:
     url: "https://www.dubizzle.com/blog/property/construction-site-preparation-permit-dubai/"
   - title: "Dubizzle: initial approval for design concept in Dubai"
     url: "https://www.dubizzle.com/blog/property/initial-design-concept-approval-dubai/"
+  - title: "Dubai Media Office: Dubai Municipality AI system for villa building permits (August 2026)"
+    url: "https://www.mediaoffice.ae/en/news/2026/august/09-08/dubai-redefines-the-future-of-building-permits-with-an-ai-system-that-issues-licences-automatically"
   - title: "Khaleej Times: Dubai to issue villa construction permits in minutes using new AI system (August 2026)"
     url: "https://www.khaleejtimes.com/uae/dubai-ai-system-villa-construction-permits"
   - title: "Dubai Municipality: accredited consultancies for self-build villa permits (October 2025)"
     url: "https://www.dm.gov.ae/?p=369254"
   - title: "Gulf News: Dubai Municipality warns villa engineering firms for inflating construction costs"
     url: "https://gulfnews.com/uae/dubai-municipality-warns-consultancies-inflating-villa-designs-raising-costs-1.500245704"
+  - title: "Dubai Municipality: Law No. (14) of 2025 regulating engineering consultancy practice (official text, Arabic)"
+    url: "https://www.dm.gov.ae/documents/law-no-14-of-2025-regulating-engineering-consultancy-practice-in-the-emirate-of-dubai-municipality/"
+  - title: "Dubai Media Office: Mohammed bin Rashid issues law regulating engineering consultancy activities (October 2025)"
+    url: "https://www.mediaoffice.ae/en/news/2025/october/05-10/mohammed-bin-rashid"
   - title: "Al Tamimi: Dubai issues new law regulating engineering consultancy activities"
     url: "https://www.tamimi.com/news/dubai-issues-new-law-regulating-engineering-consultancy-activities-key-takeaway-points/"
   - title: "Real Estate Club Dubai: Dubai villa architects"
@@ -86,7 +92,7 @@ Steps 5 to 10 follow Dubai Municipality's residential procedure. The document li
 
 For a new villa, the submission covers architecture, structure, electromechanical systems, insulation and drainage, road layouts and civil defence, together with building card details and fees, through the Dubai Building Permits System (Dubizzle). Your consultant may also choose to seek an initial design concept approval before the final design; Dubizzle describes this as optional, a preliminary check of the architecture against codes and planning standards that does not allow work to start.
 
-Under Dubai Law No. 14 of 2025, engineering consultancy in Dubai, including in free zones, may only be practised by registered firms (Al Tamimi). That is why the submission sits with your consultant. It is also why the quality of the consultant you appoint has more effect on your permit timeline than anything the authority does.
+Under Dubai Law No. 14 of 2025, engineering consultancy in Dubai, including in free zones, may only be practised by registered firms ([Law No. 14 of 2025](https://www.dm.gov.ae/documents/law-no-14-of-2025-regulating-engineering-consultancy-practice-in-the-emirate-of-dubai-municipality/)). That is why the submission sits with your consultant. It is also why the quality of the consultant you appoint has more effect on your permit timeline than anything the authority does.
 
 ### What does the owner sign?
 
@@ -107,7 +113,7 @@ There are two honest answers. Dubizzle's guide says it typically takes around th
 
 The gap between those figures is the real story. Three working days describes a single clean decision. Two to three months describes what usually happens around it: master-developer review, service-authority NOCs, comments to answer, drawings to revise and resubmit, and owner decisions that arrive late. For how the permit fits into the whole build, see [how long it takes to build a villa in Dubai](/insights/how-long-to-build-a-villa-dubai/).
 
-Two recent changes point to faster decisions. In August 2026 Dubai Municipality announced an AI system to assess permit applications for private and investment villas against the Dubai Building Code, with a 26-week rollout in three stages: development and testing, a pilot with selected consultancy firms, then rollout to eligible villa applications through Build in Dubai (Khaleej Times). Separately, since October 2025, Dubai Municipality has accredited engineering consultancies to issue self-build permits for Emirati citizens' villas without prior review by municipal engineers. Neither removes the need for a complete, coordinated design. An automated check is quicker to say no, too.
+Two recent changes point to faster decisions. In August 2026 Dubai Municipality announced an AI system to assess permit applications for private and investment villas against the Dubai Building Code, with a 26-week rollout in three stages: development and testing, a pilot with selected consultancy firms, then rollout to villa applications through Build in Dubai ([Dubai Media Office](https://www.mediaoffice.ae/en/news/2026/august/09-08/dubai-redefines-the-future-of-building-permits-with-an-ai-system-that-issues-licences-automatically)). It was announced as a project to be implemented, not a service already live. Separately, since October 2025, Dubai Municipality has accredited engineering consultancies to issue self-build permits for Emirati citizens' villas without prior review by municipal engineers. Neither removes the need for a complete, coordinated design. An automated check is quicker to say no, too.
 
 ## How long is a building permit valid?
 

@@ -23,11 +23,13 @@ sources:
   - title: "Real Estate Club Dubai: Dubai villa architects"
     url: "https://realestateclubdubai.com/dubai-villa-architects"
   - title: "Dubai Municipality: residential building permit procedures"
-    url: "https://stgportalnew.dm.gov.ae/wp-content/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf"
+    url: "https://dmpmedia.dm.gov.ae/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf"
   - title: "Dubai Municipality: single window for building permits"
     url: "https://www.dm.gov.ae/dubai-launches-single-window-for-building-permits/"
   - title: "Build in Dubai"
     url: "https://buildindubai.gov.ae/"
+  - title: "Dubai Media Office: Dubai Municipality AI system for villa building permits (August 2026)"
+    url: "https://www.mediaoffice.ae/en/news/2026/august/09-08/dubai-redefines-the-future-of-building-permits-with-an-ai-system-that-issues-licences-automatically"
   - title: "Khaleej Times: Dubai AI system for villa construction permits (August 2026)"
     url: "https://www.khaleejtimes.com/uae/dubai-ai-system-villa-construction-permits"
   - title: "Khaleej Times: UAE midday break starts 15 June 2026"
@@ -76,7 +78,7 @@ From the contractor's side, we could usually tell within the first two months wh
 
 ## How long does a villa building permit take in Dubai?
 
-Once the drawings are right, the permit itself is not usually the slow part. Khaleej Times reported in August 2026 that Dubai Municipality is developing an AI system intended to cut villa permit approvals from days to minutes, rolled out in phases through Build in Dubai. The months go on preparing a compliant submission, master-developer review and rounds of comments; our [guide to the Dubai villa building permit](/insights/dubai-municipality-villa-building-permit/) sets out each step and where programmes slip. Abu Dhabi has moved the same way with its Binaa platform; see our [Abu Dhabi villa permit guide](/insights/abu-dhabi-villa-permit-tamm/).
+Once the drawings are right, the permit itself is not usually the slow part. In August 2026 Dubai Municipality announced that it is developing an AI system to issue villa permits automatically, to be piloted and then rolled out in phases through Build in Dubai ([Dubai Media Office](https://www.mediaoffice.ae/en/news/2026/august/09-08/dubai-redefines-the-future-of-building-permits-with-an-ai-system-that-issues-licences-automatically)); it is not yet the standard route. The months go on preparing a compliant submission, master-developer review and rounds of comments; our [guide to the Dubai villa building permit](/insights/dubai-municipality-villa-building-permit/) sets out each step and where programmes slip. Abu Dhabi has moved the same way with its Binaa platform; see our [Abu Dhabi villa permit guide](/insights/abu-dhabi-villa-permit-tamm/).
 
 ## How long does villa construction take, stage by stage?
 

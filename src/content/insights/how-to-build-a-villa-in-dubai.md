@@ -2,7 +2,7 @@
 title: "How to build a villa in Dubai: plot to keys, step by step"
 description: "The stages of building a villa in Dubai, from plot checks to handover: who does what, how long each step takes, and which late decisions cost owners the most."
 date: 2026-10-29
-updated: 2026-10-29
+updated: 2026-10-31
 category: "Process"
 keypoints:
   - "A custom villa in Dubai typically takes 12–24 months from plot to keys, and 24–36 months for custom luxury, according to Real Estate Club Dubai."
@@ -29,13 +29,19 @@ sources:
   - title: "Build in Dubai"
     url: "https://buildindubai.gov.ae/"
   - title: "Dubai Municipality: residential building permit procedures"
-    url: "https://stgportalnew.dm.gov.ae/wp-content/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf"
+    url: "https://dmpmedia.dm.gov.ae/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf"
   - title: "Dubai Municipality: new building permits app"
     url: "https://www.dm.gov.ae/new-improved-building-permits-app-launched-for-streamlined-services/"
+  - title: "Dubai Media Office: Dubai Municipality AI system for villa building permits (August 2026)"
+    url: "https://www.mediaoffice.ae/en/news/2026/august/09-08/dubai-redefines-the-future-of-building-permits-with-an-ai-system-that-issues-licences-automatically"
   - title: "Khaleej Times: Dubai AI system for villa construction permits"
     url: "https://www.khaleejtimes.com/uae/dubai-ai-system-villa-construction-permits"
   - title: "Dubai Municipality: contract forms for private villas"
     url: "https://www.dm.gov.ae/municipality-business/guidance-contracts-forms-for-engineering-consulting-services-and-construction-contracting-for-private-villas/"
+  - title: "Dubai Municipality: Law No. (14) of 2025 regulating engineering consultancy practice (official text, Arabic)"
+    url: "https://www.dm.gov.ae/documents/law-no-14-of-2025-regulating-engineering-consultancy-practice-in-the-emirate-of-dubai-municipality/"
+  - title: "Dubai Media Office: Mohammed bin Rashid issues law regulating engineering consultancy activities (October 2025)"
+    url: "https://www.mediaoffice.ae/en/news/2025/october/05-10/mohammed-bin-rashid"
   - title: "Al Tamimi: Dubai law regulating engineering consultancy activities"
     url: "https://www.tamimi.com/news/dubai-issues-new-law-regulating-engineering-consultancy-activities-key-takeaway-points/"
 ---
@@ -70,7 +76,7 @@ The brief is the most valuable document in the project and the cheapest to chang
 
 ## Stage 3: Appoint your consultant and design the villa
 
-Under Dubai Law No. 14 of 2025, engineering consultancy in Dubai, including in free zones, may only be practised by registered firms (Al Tamimi). Your consultant designs the villa across architecture, structure and MEP, prepares the drawings for approval, and normally carries the statutory site role during construction. Dubai Municipality publishes standard contract forms for consultancy and construction on private villas, in Arabic, which are a useful baseline.
+Under Dubai Law No. 14 of 2025, engineering consultancy in Dubai, including in free zones, may only be practised by registered firms ([Law No. 14 of 2025](https://www.dm.gov.ae/documents/law-no-14-of-2025-regulating-engineering-consultancy-practice-in-the-emirate-of-dubai-municipality/)). Your consultant designs the villa across architecture, structure and MEP, prepares the drawings for approval, and normally carries the statutory site role during construction. Dubai Municipality publishes standard contract forms for consultancy and construction on private villas, in Arabic, which are a useful baseline.
 
 The BPS app, relaunched in August 2024, includes a registry and ratings for consultants and contractors, and is worth checking before you appoint. Design normally runs from concept through to detailed design. Every hour spent resolving detail at this stage is cheaper than any hour spent resolving it on site.
 
@@ -78,7 +84,7 @@ The BPS app, relaunched in August 2024, includes a registry and ratings for cons
 
 In a master-planned community, the master developer reviews the design against its guidelines and issues its [NOC](/glossary/#noc) (no objection certificate). In Nakheel communities, for example, renovation and extension approvals begin with a Nakheel NOC application through its portal before the authority permit.
 
-The authority permit then runs through Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits. Under Dubai Municipality's residential procedure, the consultant or contractor submits drawings and fees online, the service-authority NOCs are issued through the unified window, and the permit is issued with stamped drawings. In August 2026, Dubai Municipality announced an AI system that checks villa drawings against the Dubai Building Code, being rolled out in phases through Build in Dubai (Khaleej Times). In practice, cleaner drawings should mean fewer rounds of comments. Our guide to [Dubai villa building permits](/insights/dubai-municipality-villa-building-permit/) sets out each step, what the owner signs and where the permit stage slips.
+The authority permit then runs through Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits. Under Dubai Municipality's published villa procedure, the consultant submits the drawings and fees online, the service-authority NOCs are issued through the unified window, and the permit is issued with stamped drawings ([Dubai Municipality](https://dmpmedia.dm.gov.ae/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf)). In August 2026, Dubai Municipality announced that it is developing an AI system to check villa applications against the Dubai Building Code, to be piloted with selected consultancies and then rolled out in phases through Build in Dubai over 26 weeks ([Dubai Media Office](https://www.mediaoffice.ae/en/news/2026/august/09-08/dubai-redefines-the-future-of-building-permits-with-an-ai-system-that-issues-licences-automatically)). Until that rollout is complete, plan on the current review process. In practice, cleaner drawings should mean fewer rounds of comments. Our guide to [Dubai villa building permits](/insights/dubai-municipality-villa-building-permit/) sets out each step, what the owner signs and where the permit stage slips.
 
 Who does what: the consultant prepares and submits; the master developer and authority review and approve; the owner pays fees and answers design questions quickly.
 
