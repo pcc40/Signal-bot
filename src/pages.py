@@ -374,41 +374,75 @@ def faq_page():
 
 def contact():
     crumbs = [("Home", "/"), ("Contact", "/contact/")]
-    opts = "".join(f'<label><input type="checkbox" name="stage" value="{v}"> {v}</label>' for v in
-                   ["Considering a plot", "Plot bought", "In design", "Choosing a contractor", "Under construction", "Renovation", "Stalled or in dispute", "Near handover"])
+    stages = "".join(f"<option>{esc(v)}</option>" for v in
+                     ["Considering a plot", "Plot bought", "In design", "Choosing a contractor", "Under construction",
+                      "Planning a renovation", "Stalled or in dispute", "Near handover", "Something else"])
     areas = "".join(f'<option>{esc(a["name"])}</option>' for a in AREAS) + "<option>Elsewhere in Dubai</option><option>Elsewhere in Abu Dhabi</option>"
+    budgets = "".join(f"<option>{esc(v)}</option>" for v in
+                      ["Under AED 3m", "AED 3m–8m", "AED 8m–20m", "AED 20m–50m", "Over AED 50m", "Not sure yet"])
+    based = "".join(f"<option>{esc(v)}</option>" for v in ["UAE", "United Kingdom", "Europe", "GCC", "Elsewhere"])
+    methods = "".join(f'<label class="choice"><input type="radio" name="contact_method" value="{v}"{" checked" if v == "Email" else ""}> {v}</label>'
+                      for v in ["Email", "Phone call", "WhatsApp"])
+    opt = '<span class="opt">Optional</span>'
+    def err(i, msg):
+        return f'<p class="err" id="{i}-err" hidden>{msg}</p>'
+    steps = B.start_steps()
+    next_steps = [("We reply within one working day", "A personal reply from Philip, by the method you choose in the form.")] + steps
     body = B.banner(crumbs, "Start a private brief", "Tell us a little about your project. Philip will reply personally within one working day. Nothing you send is shared or published.", "the-lookout-02", credit_of("the-lookout-02")) + f'''
-<section class="section--tight"><div class="wrap split">
-<div><h2 style="font-size:var(--step-2)">Prefer to talk?</h2>
-<p><a class="btn" href="{B.wa_link()}" rel="noopener">Message us on WhatsApp</a></p>
-<p>Call <a href="tel:{C.PHONE_E164}">{C.PHONE_DISPLAY}</a><br>Email <a href="mailto:{C.EMAIL}">{C.EMAIL}</a></p>
+<section class="section--tight"><div class="wrap split contact-grid">
+<div class="contact-side">
+<h2 class="h-sm">Prefer to talk?</h2>
+<p class="contact-actions"><a class="btn" href="{B.wa_link()}" rel="noopener">Message us on WhatsApp</a><a class="btn btn--ghost" href="tel:{C.PHONE_E164}">Call {C.PHONE_DISPLAY}</a></p>
+<p>Email <a href="mailto:{C.EMAIL}">{C.EMAIL}</a></p>
 <p class="muted small">{esc(C.HOURS)}. UK and European clients are welcome to book calls in their own time zone.</p>
-<h2 style="font-size:var(--step-2);margin-top:2em">What happens next</h2>
-<ol class="small"><li>We read your brief and reply within one working day.</li><li>A free first conversation, usually 30–45 minutes, to understand the project.</li><li>If we can help, a written proposal with a clear scope and fee. If we can't, we'll say so and, where we can, point you to someone who can.</li></ol>
+<h2 class="h-sm">What happens next</h2>
+{B.steps_html(next_steps, "steps steps--compact")}
+<p class="small"><a class="link" href="/fees/">How fees work</a></p>
 </div>
-<form class="form" name="brief" method="POST" action="/contact/thanks/" data-netlify="true" netlify-honeypot="company_site" data-enquiry>
+<form class="form" id="brief" name="brief" method="POST" action="/contact/thanks/" data-netlify="true" netlify-honeypot="company_site" data-enquiry>
 <input type="hidden" name="form-name" value="brief">
-<p class="hp"><label>Leave this empty <input name="company_site"></label></p>
-<div class="row"><div><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
-<div><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div></div>
-<div class="row"><div><label for="f-phone">Phone or WhatsApp</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
-<div><label for="f-area">Where is the project?</label><select id="f-area" name="area"><option value="">Choose a location</option>{areas}</select></div></div>
-<fieldset><legend>Where are you now?</legend><div class="checks">{opts}</div></fieldset>
-<div class="row"><div><label for="f-budget">Approximate construction budget</label><select id="f-budget" name="budget"><option value="">Choose a range</option><option>Under AED 3m</option><option>AED 3m–8m</option><option>AED 8m–20m</option><option>AED 20m–50m</option><option>Over AED 50m</option><option>Not sure yet</option></select></div>
-<div><label for="f-based">Where are you based?</label><select id="f-based" name="based"><option value="">Choose</option><option>UAE</option><option>United Kingdom</option><option>Europe</option><option>GCC</option><option>Elsewhere</option></select></div></div>
-<div><label for="f-msg">Tell us about the project</label><textarea id="f-msg" name="message" required></textarea><p class="hint">The house you want, the plot or villa you have, and anything that's worrying you.</p></div>
-<p class="small muted">By sending this you agree to our <a href="/privacy/">privacy notice</a>. We use your details only to reply to you.</p>
-<p><button class="btn" type="submit">Send your brief</button></p>
+<p class="hp"><label>Leave this empty <input name="company_site" tabindex="-1" autocomplete="off"></label></p>
+<p class="form-note small muted">Three things are required: your name, your email and a few words about the project. Everything else helps us reply usefully.</p>
+<div class="row"><div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required aria-describedby="f-name-err">{err("f-name", "Please tell us your name.")}</div>
+<div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="f-email-err">{err("f-email", "Please enter an email address we can reply to, such as name@example.com.")}</div></div>
+<fieldset class="field"><legend>How would you like us to reply?</legend><div class="checks">{methods}</div></fieldset>
+<div class="row"><div class="field"><label for="f-phone">Phone or WhatsApp number <span class="opt ph-opt">Optional</span><span class="opt ph-req" hidden>Needed for a call or WhatsApp</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" minlength="7" aria-describedby="f-phone-hint f-phone-err"><p class="hint" id="f-phone-hint">Include the country code, for example +971 or +44.</p>{err("f-phone", "Please enter a phone number with its country code, for example +971 50 123 4567.")}</div>
+<div class="field"><label for="f-based">Where are you based? {opt}</label><select id="f-based" name="based"><option value="">Choose</option>{based}</select></div></div>
+<div class="row"><div class="field"><label for="f-stage">Project stage {opt}</label><select id="f-stage" name="stage"><option value="">Choose a stage</option>{stages}</select></div>
+<div class="field"><label for="f-area">Where is the project? {opt}</label><select id="f-area" name="area"><option value="">Choose a location</option>{areas}</select></div></div>
+<div class="field"><label for="f-budget">Approximate construction budget {opt}</label><select id="f-budget" name="budget" aria-describedby="f-budget-hint"><option value="">Choose a range</option>{budgets}</select><p class="hint" id="f-budget-hint">A rough band is enough. It helps us judge the scale, and is never shared.</p></div>
+<div class="field"><label for="f-msg">Tell us about the project</label><textarea id="f-msg" name="message" required minlength="10" aria-describedby="f-msg-hint f-msg-err"></textarea><p class="hint" id="f-msg-hint">The house you want, the plot or villa you have, and anything that is worrying you.</p>{err("f-msg", "Please add a few words about your project.")}</div>
+<div class="reassure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="1"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg>
+<p><b>Confidential.</b> Read personally by Philip and used only to reply to you. We never share or publish client names, addresses or projects without written permission. See our <a href="/privacy/">privacy notice</a>.</p></div>
+<p class="submit-row"><button class="btn" type="submit">Send your brief</button><span class="small muted">{esc(C.RESPONSE_PROMISE)}.</span></p>
 </form></div></section>'''
     schema = [{"@context": "https://schema.org", "@type": "ContactPage", "url": B.url("/contact/"), "about": {"@id": B.ORG_ID}}]
     B.page("/contact/", "Contact Eastbridge: Start a Private Villa Project Brief | Dubai",
            "Start a confidential brief for your villa build or renovation in Dubai or Abu Dhabi. A senior reply within one working day, by email, phone or WhatsApp.",
            body, crumbs, schema)
+
+    thanks_steps = [
+        ("Philip reads your brief", f"{esc(C.RESPONSE_PROMISE)}, by the method you chose. Our hours are {esc(C.HOURS)}, so a brief sent at the weekend is answered on the next working day."),
+        ("A free 30-minute call", "At a time that suits you, including UK and European hours. If you have drawings, plot details or contractor quotes, have them to hand; they are not essential."),
+        ("A written next step", "If we can help, a scope and fixed fee for the first stage. If we can't, we will say so and, where we can, point you to someone who can."),
+    ]
+    reads = [("/why-a-client-side-project-manager/", "Why a client-side project manager", "What the role is, and where it pays for itself."),
+             ("/case-studies/island-e-waterfront-villa/", "Illustrative case study", "How we would run an Island E waterfront villa, from plot to keys."),
+             ("/insights/villa-construction-cost-dubai/", "What it costs to build a villa in Dubai", "Published 2026 build costs, tier by tier.")]
+    read_html = "".join(f'<li><a href="{u}"><b>{esc(t)}</b><span>{esc(d)}</span></a></li>' for u, t, d in reads)
+    tcrumbs = [("Home", "/"), ("Contact", "/contact/"), ("Thank you", "/contact/thanks/")]
+    # One page serves both forms: the newsletter posts to /contact/thanks/#notes and the script
+    # swaps the blocks marked data-thanks. Without JavaScript the brief version shows.
     B.page("/contact/thanks/", "Thank you | Eastbridge", "Your brief has been received.",
-           B.page_head([("Home", "/"), ("Contact", "/contact/"), ("Thank you", "/contact/thanks/")], "Thank you. Your brief is with us.",
-                       "Philip will reply personally within one working day. If it's urgent, message us on WhatsApp.") +
-           f'<section class="section--tight"><div class="wrap"><p><a class="btn" href="{B.wa_link()}">Message us on WhatsApp</a> <a class="btn btn--ghost" href="/insights/">Read our insights</a></p></div></section>',
-           noindex=True)
+           f'''<section class="page-head"><div class="wrap">{B.crumbs_html(tcrumbs)}<h1>Thank you.</h1>
+<p class="lede" data-thanks="brief">Your brief is with us. {esc(C.RESPONSE_PROMISE)}. Here is what happens next.</p>
+<p class="lede" data-thanks="notes" hidden>You are on the list. Our notes for villa owners arrive no more than once a month: build costs, approvals and what is moving in the market.</p></div></section>
+<section class="section--tight thanks"><div class="wrap">
+<div data-thanks="brief">{B.steps_html(thanks_steps)}</div>
+<div class="split thanks-more"><div><h2 class="h-sm" data-thanks="brief">If it is urgent</h2><h2 class="h-sm" data-thanks="notes" hidden>Planning a villa now?</h2><p class="contact-actions"><a class="btn" href="{B.wa_link()}" rel="noopener">Message us on WhatsApp</a><a class="btn btn--ghost" href="tel:{C.PHONE_E164}">Call {C.PHONE_DISPLAY}</a></p></div>
+<div><h2 class="h-sm">While you wait</h2><ul class="read-list">{read_html}</ul></div></div>
+</div></section>''',
+           tcrumbs, noindex=True)
 
 def legal():
     crumbs = [("Home", "/"), ("Privacy", "/privacy/")]
