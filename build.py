@@ -309,7 +309,8 @@ def footer():
     return f'''<footer class="site-foot"><div class="wrap">
 <div class="foot-top"><h2>Planning a villa in Dubai or Abu Dhabi?</h2>
 <div><p>Our occasional notes for villa owners: build costs, approvals and what is moving in the market. No more than once a month.</p>
-<form class="newsletter" name="notes" method="POST" action="/contact/thanks/#notes" data-netlify="true" netlify-honeypot="company_site"><input type="hidden" name="form-name" value="notes"><p class="hp"><label>Leave empty <input name="company_site"></label></p><label class="sr" for="nl-email">Email address</label><input id="nl-email" name="email" type="email" placeholder="Your email address" required autocomplete="email"><button class="btn" type="submit">Subscribe</button></form></div></div>
+<form class="newsletter" name="notes" method="POST" action="/contact/thanks/#notes" data-netlify="true" netlify-honeypot="company_site"><input type="hidden" name="form-name" value="notes"><p class="hp"><label>Leave empty <input name="company_site"></label></p><label class="sr" for="nl-email">Email address</label><input id="nl-email" name="email" type="email" placeholder="Your email address" required autocomplete="email"><button class="btn" type="submit">Subscribe</button></form>
+<p class="small nl-note">Subscribing is how you ask us to email these notes. Unsubscribe at any time by replying to any note or writing to {C.EMAIL}. See our <a href="/privacy/">privacy notice</a>.</p></div></div>
 <div class="foot-grid">
 <div>{logo()}<p style="max-width:38ch">Client-side project management and owner's representation for private villas in Dubai and Abu Dhabi. Paid only by the owner we represent.</p>
 <p><a href="tel:{C.PHONE_E164}">{C.PHONE_DISPLAY}</a><br><a href="mailto:{C.EMAIL}">{C.EMAIL}</a><br><a href="{wa_link()}" rel="noopener">WhatsApp</a></p>

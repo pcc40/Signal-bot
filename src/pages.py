@@ -496,6 +496,7 @@ def contact():
 <div class="field"><label for="f-area">Where is the project? {opt}</label><select id="f-area" name="area"><option value="">Choose a location</option>{areas}</select></div></div>
 <div class="field"><label for="f-budget">Approximate construction budget {opt}</label><select id="f-budget" name="budget" aria-describedby="f-budget-hint"><option value="">Choose a range</option>{budgets}</select><p class="hint" id="f-budget-hint">A rough band is enough. It helps us judge the scale, and is never shared.</p></div>
 <div class="field"><label for="f-msg">Tell us about the project {req}</label><textarea id="f-msg" name="message" required minlength="10" aria-describedby="f-msg-hint f-msg-err"></textarea><p class="hint" id="f-msg-hint">The house you want, the plot or villa you have, and anything that is worrying you.</p>{err("f-msg", "Please add a few words about your project.")}</div>
+<div class="field"><label class="consent" for="f-mkt"><input id="f-mkt" name="marketing_opt_in" type="checkbox" value="yes"> <span>Optional: also send me Eastbridge notes for villa owners by email, no more than once a month. Leaving this unticked does not affect your enquiry. Unsubscribe at any time by replying to any note or writing to {C.EMAIL}.</span></label></div>
 <div class="reassure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="1"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg>
 <p><b>Confidential.</b> Read personally by Philip and used only to reply to you. We never share or publish client names, addresses or projects without written permission. See our <a href="/privacy/">privacy notice</a>.</p></div>
 <p class="submit-row"><button class="btn" type="submit">Send your enquiry</button><span class="small muted">{esc(C.RESPONSE_PROMISE)}.</span></p>
@@ -520,7 +521,7 @@ def contact():
     B.page("/contact/thanks/", "Thank you | Eastbridge", "Your brief has been received.",
            f'''<section class="page-head"><div class="wrap">{B.crumbs_html(tcrumbs)}<h1>Thank you.</h1>
 <p class="lede" data-thanks="brief">Your brief is with us. {esc(C.RESPONSE_PROMISE)}. Here is what happens next.</p>
-<p class="lede" data-thanks="notes" hidden>You are on the list. Our notes for villa owners arrive no more than once a month: build costs, approvals and what is moving in the market.</p></div></section>
+<p class="lede" data-thanks="notes" hidden>You are on the list. Our notes for villa owners arrive no more than once a month: build costs, approvals and what is moving in the market. To unsubscribe at any time, reply to any note or write to <a href="mailto:{C.EMAIL}">{C.EMAIL}</a>.</p></div></section>
 <section class="section--tight thanks"><div class="wrap">
 <div data-thanks="brief">{B.steps_html(thanks_steps)}</div>
 <div class="split thanks-more"><div><h2 class="h-sm" data-thanks="brief">If it is urgent</h2><h2 class="h-sm" data-thanks="notes" hidden>Planning a villa now?</h2><p class="contact-actions"><a class="btn" href="{B.wa_link()}" rel="noopener">Message us on WhatsApp</a><a class="btn btn--ghost" href="tel:{C.PHONE_E164}">Call {C.PHONE_DISPLAY}</a></p></div>
@@ -530,15 +531,52 @@ def contact():
 
 def legal():
     crumbs = [("Home", "/"), ("Privacy", "/privacy/")]
+    # Wording follows the systems actually in place: Netlify Forms stores submissions; the optional
+    # submission-created function sends acknowledgements and can log to a Google Sheet; analytics and
+    # the background film appear only when switched on in config.py. Final wording: owner/legal review.
+    if C.GA4_ID:
+        analytics = ("<p>We use Google Analytics, with IP anonymisation, to see how the site is used: pages visited, device type "
+                     "and approximate location. It sets cookies for this purpose.</p>")
+        cookies = ("<p>This site uses no advertising cookies. Google Analytics sets cookies to measure use of the site. "
+                   "A video provider may set its own cookies once you choose to play a film.</p>")
+    else:
+        analytics = "<p>This site does not currently use analytics, advertising or tracking tools. If that changes, we will update this notice first.</p>"
+        cookies = "<p>This site sets no analytics or advertising cookies. A video provider may set its own cookies once you choose to play a film.</p>"
+    film = (" On larger screens the home page may also load a muted background film from Vimeo automatically."
+            if C.HERO_VIDEO else "")
     body = B.page_head(crumbs, "Privacy notice", None) + f'''<section class="section--tight"><div class="wrap prose">
 <p>Last updated {datetime.date.today().strftime("%-d %B %Y")}.</p>
 <p>{esc(C.LEGAL)} ("Eastbridge", "we") is licensed in the Meydan Free Zone, Dubai ({esc(C.LICENCE)}). This notice explains how we handle personal data collected through this website, consistent with the UAE Personal Data Protection Law (Federal Decree-Law No. 45 of 2021) and, for visitors in the UK and EU, the UK and EU GDPR.</p>
-<h2>What we collect</h2><p>Details you send us through the enquiry form, email, phone or WhatsApp: your name, contact details, information about your project and anything else you choose to share. If analytics are enabled, we also collect anonymised usage data (pages visited, device type, approximate location) through Google Analytics with IP anonymisation.</p>
-<h2>How we use it</h2><p>Only to reply to your enquiry, to prepare a proposal if you ask for one, and to deliver our services if you appoint us. We do not sell your data or use it for unrelated marketing.</p>
-<h2>Who we share it with</h2><p>Our website host (Netlify) and email provider, which process data on our behalf. We share project information with third parties, such as a consultant or contractor, only with your agreement.</p>
-<h2>How long we keep it</h2><p>Enquiries that don't lead to an appointment are deleted after 24 months. Client records are kept for the period required by law and our professional indemnity insurers.</p>
-<h2>Your rights</h2><p>You can ask to see, correct or delete your data, or object to how we use it, by emailing <a href="mailto:{C.EMAIL}">{C.EMAIL}</a>.</p>
-<h2>Cookies</h2><p>This site uses no advertising cookies. If analytics are enabled, Google Analytics sets cookies to measure use of the site.</p>
+<h2>What we collect</h2>
+<ul>
+<li><b>Project enquiries.</b> What you enter in the enquiry form: your name, email, how you would like us to reply and, if you give them, your phone number, where you are based, your project stage, location and budget band, and your message. The same applies to anything you send us by email, phone or WhatsApp.</li>
+<li><b>Checklist requests.</b> Your name, your email and, if you choose one, your project stage.</li>
+<li><b>Our notes.</b> Your email address, if you subscribe or tick the optional box on the enquiry or checklist form, and a record of that choice.</li>
+<li><b>Technical data.</b> Our website host processes technical data, such as your IP address, to deliver the site and to filter spam from form submissions.</li>
+</ul>
+{analytics}
+<h2>How we use it</h2>
+<ul>
+<li><b>Enquiries:</b> to reply to you by the method you choose, to prepare a proposal if you ask for one, and to deliver our services if you appoint us.</li>
+<li><b>Checklist requests:</b> to give you the download and keep a record of the request. Asking for the checklist does not add you to our notes.</li>
+<li><b>Confirmation emails:</b> when you send a form, we may send an automatic email confirming that it reached us. It contains no marketing unless you have asked for our notes.</li>
+<li><b>Our notes (marketing):</b> occasional emails for villa owners, no more than once a month. We send them only to people who subscribe or who tick the optional box on a form. Leaving the box unticked never affects an enquiry or a checklist request.</li>
+</ul>
+<p>We do not sell your data, publish it or use it for unrelated marketing.</p>
+<h2>Unsubscribing from our notes</h2>
+<p>You can stop our notes at any time: reply to any note with "unsubscribe", or write to <a href="mailto:{C.EMAIL}">{C.EMAIL}</a>. We handle these requests by hand, and keep a short record of the request so that we do not email you again.</p>
+<h2>Who we share it with</h2>
+<p>Service providers that process data on our behalf:</p>
+<ul>
+<li>Netlify, our website host, which receives and stores form submissions;</li>
+<li>our email providers, for our business mailbox and for sending confirmation emails and our notes;</li>
+<li>Google, when we use Google Sheets to keep our log of enquiries and requests.</li>
+</ul>
+<p>Some of these providers process data outside the UAE. If you contact us on WhatsApp, WhatsApp handles those messages under its own terms. Films on our project pages are hosted by Vimeo or YouTube and load only when you press play; the provider then receives technical data such as your IP address.{film}</p>
+<p>We share project information with third parties, such as a consultant or contractor, only with your agreement.</p>
+<h2>How long we keep it</h2><p>Enquiries and checklist requests that don't lead to an appointment are deleted after 24 months. Notes subscriptions are kept until you unsubscribe. Client records are kept for the period required by law.</p>
+<h2>Your rights</h2><p>You can ask to see, correct or delete your data, object to how we use it, or withdraw your agreement to our notes at any time, by emailing <a href="mailto:{C.EMAIL}">{C.EMAIL}</a>.</p>
+<h2>Cookies</h2>{cookies}
 </div></section>'''
     B.page("/privacy/", "Privacy Notice | Eastbridge Strategic Partners", "How Eastbridge Strategic Partners handles personal data collected through this website.", body, crumbs)
     crumbs = [("Home", "/"), ("Terms", "/terms/")]

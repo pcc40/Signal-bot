@@ -2,11 +2,24 @@
 // (non-spam) Netlify Forms submission. No dependencies; uses Node 18+ fetch.
 //
 // What it does
-//   1. "brief" form  -> sends the enquirer a branded acknowledgement email.
-//      "notes" form  -> sends a short subscription confirmation.
-//   2. Optionally emails an internal lead alert (LEAD_ALERT_TO).
-//   3. Optionally logs the lead to a Google Sheet (SHEET_WEBHOOK_URL, a Google
-//      Apps Script web app; see business/automation-blueprint.md, section 3).
+//   1. "brief" form     -> sends the enquirer a branded acknowledgement email.
+//      "notes" form     -> sends a short subscription confirmation.
+//      "checklist" form -> no email (the download is shown on the thank-you page),
+//                          unless the visitor ticked the optional notes box, in which
+//                          case they get the same subscription confirmation as "notes".
+//   2. Optionally emails an internal lead alert for "brief" (LEAD_ALERT_TO).
+//   3. Optionally logs every submission to a Google Sheet (SHEET_WEBHOOK_URL, a Google
+//      Apps Script web app; see business/automation-blueprint.md, section 4).
+//
+// Marketing consent
+//   The "brief" and "checklist" forms carry an optional, unticked checkbox
+//   name="marketing_opt_in" value="yes". Only a ticked box counts as consent.
+//   Subscribing through the "notes" form is itself the request for notes.
+//   The result is written as marketing_opt_in "yes"/"no" (plus marketing_source)
+//   to the sheet row, the log line and the lead alert. Acknowledgement emails to
+//   people who did not opt in contain no marketing content. This function never
+//   adds anyone to a mailing list: there is no list integration. Unsubscribes are
+//   handled by hand (reply to any note, or write to enquiries@eastbridgepartners.ae).
 //
 // Configuration (Netlify -> Project configuration -> Environment variables).
 // No secrets live in this file.
@@ -30,7 +43,9 @@ const SITE = process.env.SITE_PUBLIC_URL || "https://www.eastbridgepartners.ae";
 const PHONE_DISPLAY = "+971 56 744 0057";
 const PHONE_E164 = "+971567440057";
 const WHATSAPP = "971567440057";
-const HOURS = "Sunday to Thursday, 9am to 6pm Gulf Standard Time";
+// Keep in step with HOURS in src/config.py (the hours published on the site).
+const HOURS = "Monday to Friday, 9am to 6pm Gulf Standard Time";
+const CONTACT_EMAIL = "enquiries@eastbridgepartners.ae";
 
 // ---------- helpers ----------------------------------------------------------
 
@@ -50,6 +65,19 @@ function safeFirstName(name) {
   const first = String(name || "").trim().split(/\s+/)[0] || "";
   const clean = first.replace(/[^\p{L}'\-]/gu, "").slice(0, 30);
   return clean.length >= 2 ? clean : "";
+}
+
+// Only an explicit tick counts. Browsers send value="yes" for a ticked box and
+// nothing at all for an unticked one; anything else is treated as "no".
+function isOptedIn(formName, data) {
+  if (formName === "notes") return true; // subscribing is the request for notes
+  const v = Array.isArray(data && data.marketing_opt_in) ? data.marketing_opt_in[0] : data && data.marketing_opt_in;
+  return ["yes", "on", "true"].includes(String(v == null ? "" : v).trim().toLowerCase());
+}
+
+function marketingSource(formName, optedIn) {
+  if (!optedIn) return "";
+  return formName === "notes" ? "notes form" : `ticked box on ${formName} form`;
 }
 
 const asText = (v) => (Array.isArray(v) ? v.join(", ") : v == null ? "" : String(v)).slice(0, 5000);
@@ -74,7 +102,7 @@ function waLink(text) {
 
 // ---------- email copy (British English, calm, no exclamation marks) ---------
 
-function briefEmail(firstName) {
+function briefEmail(firstName, optedIn) {
   const hello = firstName ? `Dear ${firstName},` : "Hello,";
   const booking = process.env.BOOKING_URL || "";
   const wa = waLink("Hello Eastbridge, I have just sent a brief through your website.");
@@ -94,7 +122,10 @@ function briefEmail(firstName) {
     `If it is urgent, message us on WhatsApp: ${wa}`,
     `Or call ${PHONE_DISPLAY} (${HOURS}).`,
     "",
-    "Nothing you send us is shared or published. We use your details only to reply to you.",
+    optedIn
+      ? "Nothing you send us is shared or published. We use your details to reply to you and, as you asked, to send our occasional notes for villa owners, no more than once a month."
+      : "Nothing you send us is shared or published. We use your details only to reply to you.",
+    optedIn ? `To stop the notes at any time, reply with "unsubscribe" or write to ${CONTACT_EMAIL}.` : "",
     "",
     "Eastbridge Strategic Partners",
     "Client-side project management for private villas in Dubai and Abu Dhabi",
@@ -121,7 +152,9 @@ function briefEmail(firstName) {
 </ol>
 <p style="margin:24px 0 8px">${booking ? btn(booking, "Choose a time to talk") : ""}${btn(wa, "Message us on WhatsApp")}</p>
 <p style="margin:16px 0 0;font-size:15px">Or call <a href="tel:${PHONE_E164}" style="color:#1f2a2e">${PHONE_DISPLAY}</a>, ${esc(HOURS)}.</p>
-<p style="margin:24px 0 0;font-size:14px;color:#5c6468">Nothing you send us is shared or published. We use your details only to reply to you.</p>
+<p style="margin:24px 0 0;font-size:14px;color:#5c6468">${optedIn
+    ? `Nothing you send us is shared or published. We use your details to reply to you and, as you asked, to send our occasional notes for villa owners, no more than once a month. To stop the notes at any time, reply with "unsubscribe" or write to ${esc(CONTACT_EMAIL)}.`
+    : "Nothing you send us is shared or published. We use your details only to reply to you."}</p>
 </td></tr>
 <tr><td style="padding:20px 32px;border-top:1px solid #e5e0d8;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.5;color:#5c6468">
 Client-side project management for private villas in Dubai and Abu Dhabi.<br>
@@ -138,7 +171,7 @@ function notesEmail() {
     "",
     "Thank you for subscribing. We will send occasional notes on building and renovating a villa in Dubai and Abu Dhabi: costs, contracts, approvals and the questions worth asking. No more than one a month.",
     "",
-    "If you did not ask for this, reply with \"unsubscribe\" and we will remove your address.",
+    `To unsubscribe at any time, or if you did not ask for this, reply with "unsubscribe" or write to ${CONTACT_EMAIL} and we will remove your address.`,
     "",
     "Eastbridge Strategic Partners",
     SITE,
@@ -146,7 +179,7 @@ function notesEmail() {
   const html = `<!doctype html><html lang="en"><body style="font-family:Georgia,'Times New Roman',serif;color:#1f2a2e;font-size:16px;line-height:1.6;max-width:560px;margin:24px auto;padding:0 16px">
 <p>Hello,</p>
 <p>Thank you for subscribing. We will send occasional notes on building and renovating a villa in Dubai and Abu Dhabi: costs, contracts, approvals and the questions worth asking. No more than one a month.</p>
-<p style="color:#5c6468;font-size:14px">If you did not ask for this, reply with "unsubscribe" and we will remove your address.</p>
+<p style="color:#5c6468;font-size:14px">To unsubscribe at any time, or if you did not ask for this, reply with "unsubscribe" or write to ${esc(CONTACT_EMAIL)} and we will remove your address.</p>
 <p>Eastbridge Strategic Partners<br><a href="${esc(SITE)}" style="color:#1f2a2e">${esc(SITE.replace(/^https?:\/\//, ""))}</a></p>
 </body></html>`;
   return { subject, text, html };
@@ -227,6 +260,7 @@ exports.handler = async (event) => {
   const d = payload.data || {};
   const email = String(d.email || payload.email || "").trim();
   const referrer = asText(d.referrer);
+  const optedIn = isOptedIn(formName, d);
 
   const lead = {
     received: payload.created_at || new Date().toISOString(),
@@ -239,6 +273,9 @@ exports.handler = async (event) => {
     budget: asText(d.budget),
     based: asText(d.based),
     message: asText(d.message),
+    contact_method: asText(d.contact_method),
+    marketing_opt_in: optedIn ? "yes" : "no",
+    marketing_source: marketingSource(formName, optedIn),
     page: referrer,
     language: langFromReferrer(referrer),
     submission_id: payload.id || "",
@@ -248,7 +285,8 @@ exports.handler = async (event) => {
 
   // 1. Log first, so a lead is never lost even if email fails.
   try {
-    results.sheet = await logToSheet({ ...lead, status: formName === "brief" ? "New enquiry" : "Subscriber" });
+    const status = formName === "brief" ? "New enquiry" : formName === "checklist" ? "Checklist download" : "Subscriber";
+    results.sheet = await logToSheet({ ...lead, status });
   } catch (e) {
     console.error("Sheet log failed:", e.message);
     results.sheet = { error: e.message };
@@ -256,9 +294,11 @@ exports.handler = async (event) => {
 
   // 2. Customer acknowledgement.
   const autoreplyOff = String(process.env.AUTOREPLY_DISABLED || "").toLowerCase() === "true";
-  if (!autoreplyOff && isEmail(email) && (formName === "brief" || formName === "notes")) {
+  // "checklist" gets an email only when the visitor opted in to notes.
+  const wantsAck = formName === "brief" || formName === "notes" || (formName === "checklist" && optedIn);
+  if (!autoreplyOff && isEmail(email) && wantsAck) {
     try {
-      const msg = formName === "brief" ? briefEmail(safeFirstName(d.name)) : notesEmail();
+      const msg = formName === "brief" ? briefEmail(safeFirstName(d.name), optedIn) : notesEmail();
       results.ack = await sendEmail({ to: email, ...msg });
     } catch (e) {
       console.error("Acknowledgement failed:", e.message);
@@ -280,7 +320,10 @@ exports.handler = async (event) => {
     }
   }
 
-  console.log("submission-created", formName, payload.id || "", JSON.stringify(results));
+  console.log("submission-created", formName, payload.id || "", "marketing_opt_in=" + lead.marketing_opt_in, JSON.stringify(results));
   // Always 200: the submission itself is already stored by Netlify Forms.
   return { statusCode: 200, body: JSON.stringify(results) };
 };
+
+// Exposed for tools/test_submission_function.js only.
+exports._test = { isOptedIn, briefEmail, notesEmail, alertEmail };

@@ -15,7 +15,7 @@ Prices and menu names are as of October 2026 and change often. Check before you 
 | # | Area | Already built (in this repo) | One-time setup by Phil | Then runs by itself |
 |---|---|---|---|---|
 | 1 | Website live and indexed | Full multilingual site, schema, sitemap, robots, llms.txt, IndexNow key file, `tools/indexnow.py` | Point domain at Netlify, link repo, Search Console, Bing, GA4 | Netlify redeploys on every push |
-| 2 | Lead capture | Netlify form `brief` on /contact/ (all 5 languages), `notes` newsletter form in the footer, honeypot spam field, WhatsApp click-to-chat links, GA4 events `generate_lead` and `contact` (inactive until GA4 ID set) | Enable form detection, add notification email | Every submission stored by Netlify |
+| 2 | Lead capture | Netlify form `brief` on /contact/ (all 5 languages), `checklist` form on /guides/villa-owner-checklist/, `notes` newsletter form in the footer, optional unticked `marketing_opt_in` box on `brief` and `checklist`, honeypot spam field, WhatsApp click-to-chat links, GA4 events `generate_lead` and `contact` (inactive until GA4 ID set) | Enable form detection, add notification email | Every submission stored by Netlify |
 | 3 | Instant acknowledgement | **New:** `netlify/functions/submission-created.js` (branded reply via Resend or Postmark, optional internal alert, optional Google Sheet log); `[functions]` added to `netlify.toml` | Email provider account, verify domain, add 4–8 environment variables | Enquirer gets a branded email within seconds |
 | 4 | CRM pipeline | Lead log fields defined by the function | Create Google Sheet + Apps Script (code below), or HubSpot free | Every lead lands as a row with status "New enquiry" |
 | 5 | Booking link | Function and email support `BOOKING_URL` | Create a Google Calendar appointment schedule or Calendly event | Prospects book the first call themselves |
@@ -52,14 +52,15 @@ The competitor report (`business/seo-competitor-report.md`) found www.eastbridge
 **Already built**
 
 - `brief` form on `/contact/` (and `/ar/contact/`, `/ru/contact/`, `/zh/contact/`, `/hi/contact/`): name, email, phone/WhatsApp, area, stage (multi-choice), budget band, where based, message. Honeypot field `company_site`. Redirects to `/contact/thanks/` (noindex).
-- `notes` newsletter form in the site footer: email only.
+- `brief` and `checklist` forms each carry an optional, **unticked** checkbox `marketing_opt_in` (value `yes`) asking for Eastbridge notes. Both forms submit normally without it.
+- `checklist` form on `/guides/villa-owner-checklist/`: name, email, project stage (optional), optional notes box. Redirects to the download page `/guides/villa-owner-checklist/thanks/` (noindex).
+- `notes` newsletter form in the site footer: email only. Its only purpose is the notes, so subscribing is the request; the footer says so and gives the unsubscribe route.
 - WhatsApp click-to-chat links with pre-filled text (`build.py: wa_link`), phone and email links.
 - GA4 events: `generate_lead` on brief submit, `contact` (method whatsapp) on WhatsApp clicks. They start recording once `GA4_ID` is set.
-- There is no separate "checklist" download form at present. If one is added later, the function below will log it to the sheet automatically; add a template for it in `submission-created.js` if it should get its own reply.
 
 **Phil, once (Netlify)**
 
-1. **Turn on form detection** (new Netlify projects have it off): app.netlify.com → project → **Forms** → **Enable form detection**. Then trigger a redeploy (Deploys → Trigger deploy → Deploy project). Both `brief` and `notes` should appear under Forms.
+1. **Turn on form detection** (new Netlify projects have it off): app.netlify.com → project → **Forms** → **Enable form detection**. Then trigger a redeploy (Deploys → Trigger deploy → Deploy project). `brief`, `checklist` and `notes` should all appear under Forms.
 2. **Internal notification** (a safety net even if everything else fails): Project configuration → Notifications → Emails and webhooks → Form submission notifications → Add notification → Email notification → event "New form submission" → form `brief` → your email. Repeat for `notes` if wanted.
 3. **Spam:** Forms → Settings and usage → keep spam filtering on. Netlify's `submission-created` event fires only for submissions that pass spam filtering.
 4. **Plan check:** Project configuration → Usage/Billing. Forms and functions draw on the plan's allowance (Netlify moved new accounts to credit-based plans in 2025). One enquiry a day is well within the free allowance; check once traffic grows.
@@ -71,8 +72,16 @@ The competitor report (`business/seo-competitor-report.md`) found www.eastbridge
 **Already built:** `netlify/functions/submission-created.js`. Netlify runs it automatically after each verified submission. It has no dependencies and holds no secrets. In order, it:
 
 1. **Logs the lead** to a Google Sheet (if `SHEET_WEBHOOK_URL` is set), first, so a lead is never lost even if email fails. It records the page and language (`en`, `ar`, `ru`, `zh`, `hi`, worked out from the page the form was sent from).
-2. **Emails the enquirer** a branded acknowledgement for `brief` ("Your brief has reached Eastbridge": personal reply from Philip within one working day, the three next steps from the contact page, booking button if `BOOKING_URL` is set, WhatsApp button, phone and hours, privacy line). For `notes` it sends a short subscription confirmation. To prevent abuse of a public form, the email uses only the enquirer's first name (letters only) and never repeats anything else they typed.
-3. **Emails an internal lead alert** with every field (if `LEAD_ALERT_TO` is set), with Reply-To set to the enquirer, so Phil can reply straight from the alert.
+2. **Emails the enquirer** a branded acknowledgement for `brief` ("Your brief has reached Eastbridge": personal reply from Philip within one working day, the three next steps from the contact page, booking button if `BOOKING_URL` is set, WhatsApp button, phone and hours, privacy line). For `notes` it sends a short subscription confirmation. For `checklist` it sends nothing (the download is on the thank-you page), unless the visitor ticked the notes box, in which case they get the same subscription confirmation. The `brief` acknowledgement contains no marketing content unless the enquirer ticked the notes box; if they did, it adds one line confirming the notes and how to stop them. To prevent abuse of a public form, the email uses only the enquirer's first name (letters only) and never repeats anything else they typed.
+3. **Emails an internal lead alert** for `brief` with every field, including `marketing_opt_in` (if `LEAD_ALERT_TO` is set), with Reply-To set to the enquirer, so Phil can reply straight from the alert.
+
+**Marketing consent, end to end**
+
+- Only a ticked box counts: the function records `marketing_opt_in` as `yes` only when the form sent `yes`; an unticked box sends nothing and is recorded as `no`. A `notes` subscription is recorded as `yes` with `marketing_source` = `notes form`.
+- `marketing_opt_in` and `marketing_source` are written to the sheet row, the function log line and the lead alert.
+- **There is no mailing-list integration.** The function never adds anyone to Resend Audiences, Buttondown or any other list. Building the notes list is a manual step (section 12) and must use only `notes` submissions and rows where `marketing_opt_in` is `yes`.
+- **Unsubscribes are manual.** The site and emails say: reply to any note with "unsubscribe" or write to enquiries@eastbridgepartners.ae. Phil removes the address from the sending list, sets `marketing_opt_in` to `no` on that person's rows, and keeps a short suppression list (email and date) so the address is not re-imported from an old Netlify export. If a sending tool with an unsubscribe link is adopted, its unsubscribe list must be checked before every send as well.
+- Offline test: `node tools/test_submission_function.js` (or `npm test`) mocks `fetch` and checks the opt-in yes/no paths for all three forms.
 
 If keys are missing it skips email and carries on. It always returns success, so the form never breaks for the visitor. The auto-reply is in English for every language version. A translated reply would need wording checked by a native speaker under `src/i18n/TRANSLATION_BRIEF.md`. The `language` column tells Phil which language to reply in.
 
@@ -108,7 +117,7 @@ app.netlify.com → project → Project configuration → **Environment variable
 
 **Test:** submit the live form with your own address. Then Logs & metrics → Functions → `submission-created` shows a line like `{"sheet":{"logged":true},"ack":{"sent":true}}`. Check the email lands in the inbox, not spam, on Gmail and Outlook.
 
-**Privacy notice:** the notice on `/privacy/` names Netlify and "our email provider". If the Google Sheet is used, add Google Workspace as a processor in the "Who we share it with" paragraph (`src/pages.py`, function `legal`).
+**Privacy notice:** the notice on `/privacy/` (`src/pages.py`, function `legal`) names Netlify (stores submissions), "our email providers" (mailbox, confirmations and notes) and Google "when we use Google Sheets" for the log. It describes analytics only when `GA4_ID` is set in `src/config.py`. If you do not set up the sheet, delete the Google line; if you name a specific email provider, add it. The final wording needs your or a lawyer's review before launch.
 
 ---
 
@@ -125,7 +134,8 @@ Start with the Google Sheet. It costs nothing, the function already writes to it
 ```javascript
 const TOKEN = 'paste-the-same-long-random-string';
 const COLS = ['received','form','status','name','email','phone','area','stage','budget','based',
-  'message','page','language','submission_id','owner','next_action','next_action_date',
+  'message','contact_method','marketing_opt_in','marketing_source','page','language','submission_id',
+  'owner','next_action','next_action_date',
   'source','fee_estimate_aed','probability','proposal_sent','decision_date','lost_reason','notes'];
 function doPost(e) {
   const body = JSON.parse(e.postData.contents || '{}');
@@ -158,6 +168,7 @@ function doPost(e) {
 | Active | Work under way | Weekly report (section 9) | – |
 | Closed – complete | Handover done, final invoice paid | Ask for a Google review from the client (genuine Eastbridge client only) | – |
 | Lost / Not a fit / Referred on | Record `lost_reason` | – | – |
+| Checklist download | `checklist` form | Logged; subscription confirmation only if `marketing_opt_in` is `yes` | – |
 | Subscriber | `notes` form | Confirmation email | – |
 
 **Fields** are the columns in the script. Add `source` by hand (Google, AI assistant, LinkedIn, referral from architect, agent, word of mouth) and ask "How did you hear about us?" in the first call. That one column tells you where to spend time.
@@ -314,7 +325,7 @@ Quality over volume, as `AUTOMATION.md` requires. Each article feeds a week of h
 | Mon | Company page post: three key points from the article, link | LinkedIn page | Page to create (offsite kit 2.3) |
 | Wed | Instagram carousel: 5–7 slides of the article's key points over UK project photos, credited | Instagram (exists) | Canva template to make once; schedule in Meta Business Suite (business.facebook.com → Planner → Create post → Schedule) |
 | Thu | WhatsApp Status or Channel: one line and a link | WhatsApp Business | Free |
-| Monthly | "Eastbridge notes" email: the month's two to four articles, one paragraph each | Email to `notes` subscribers | Export subscribers from Netlify (Forms → notes → Download CSV) into Resend Audiences or Buttondown; include an unsubscribe link |
+| Monthly | "Eastbridge notes" email: the month's two to four articles, one paragraph each | Email to people who asked for notes only | Build the list by hand: `notes` submissions, plus `brief` and `checklist` submissions where `marketing_opt_in` is `yes` (Netlify Forms → Download CSV, or filter the sheet). Never import anyone else. Remove everyone on the suppression list (section 3) before each send. Import into Resend Audiences or Buttondown; include an unsubscribe link and the reply-to-unsubscribe line |
 | Monthly | One off-site action from the SEO engine's list (directory, guest article, trade-press comment) | Various | Phil approves |
 
 Claude can draft the posts, carousel text and newsletter each week from the published article. Phil approves and posts. Nothing is posted automatically under his name.

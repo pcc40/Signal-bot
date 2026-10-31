@@ -61,7 +61,8 @@ def landing():
 <div><label for="g-name">Your name</label><input id="g-name" name="name" autocomplete="name" required></div>
 <div><label for="g-email">Email</label><input id="g-email" name="email" type="email" autocomplete="email" required></div>
 <div><label for="g-stage">Where is your project now?</label><select id="g-stage" name="stage">{opts}</select></div>
-<p class="small muted">We use your details to send occasional notes for villa owners, no more than once a month, and never share them. Unsubscribe at any time. See our <a href="/privacy/">privacy notice</a>.</p>
+<p class="small muted">We use your name and email to show you the download and to keep a record of the request. We never sell or publish your details. See our <a href="/privacy/">privacy notice</a>.</p>
+<div><label class="consent" for="g-mkt"><input id="g-mkt" name="marketing_opt_in" type="checkbox" value="yes"> <span>Optional: also send me Eastbridge notes for villa owners by email, no more than once a month. I can unsubscribe at any time by replying to any note or writing to {C.EMAIL}.</span></label></div>
 <p><button class="btn" type="submit">Get the checklist</button></p>
 </form>
 </div></div></section>
@@ -106,6 +107,7 @@ def landing():
 <p>If an item on the list worries you, or you cannot tick it yet, talk it through with {esc(C.FOUNDER["name"].split()[0])}. The first conversation is free and confidential.</p>
 <p><a class="btn btn--ghost" href="/contact/">Start a private brief</a> <a class="btn btn--ghost" href="{B.wa_link("Hello, I downloaded the pre-construction checklist and would like to talk about my villa project.")}" rel="noopener">WhatsApp us</a></p>
 <p class="small muted"><a href="/insights/">Read our insights</a> for more on costs, approvals, contracts and handover.</p>
+<p class="small muted">We only send our notes to people who ticked the optional box on the form. If you did, you can unsubscribe at any time by replying to any note or writing to <a href="mailto:{C.EMAIL}">{C.EMAIL}</a>.</p>
 </div></div></section>'''
     B.page(THANKS, "Download your checklist | Eastbridge", "Download The Villa Owner’s Pre-Construction Checklist.",
            tbody, tcrumbs, noindex=True)
