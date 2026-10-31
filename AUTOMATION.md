@@ -1,5 +1,7 @@
 # Eastbridge SEO engine — the playbook the scheduled task follows
 
+Repository: `pcc40/eastbridge-website`, branch `main`. Live site: https://eastbridgestrategicpartners.com (Netlify deploys on every push to `main`). The .ae and www hosts must 301 to it — include one of them in the daily live check.
+
 ## Principles (non-negotiable)
 1. Quality over volume. Google's spam policy treats "many pages generated without adding value" as scaled content abuse, and that now includes attempts to manipulate AI answers. We publish at most TWO new articles a week, each 1,400–2,200 words, each with a first-hand builder's-side insight, sourced figures and no invented statistics.
 2. Every article follows src/content/WRITING_BRIEF.md (voice, compliance wording, format, facts, internal links).

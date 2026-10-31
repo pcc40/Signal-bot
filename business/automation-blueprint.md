@@ -35,10 +35,10 @@ The competitor report (`business/seo-competitor-report.md`) found eastbridgestra
 
 **Phil, once:**
 
-1. **Confirm the canonical repository.** `HANDOFF.md` names the GitHub repository `pcc40/Signal-bot`, working branch `claude/eastbridge-website-automation-veh823`. Use only that one from now on.
+1. **Canonical repository:** `pcc40/eastbridge-website`, branch `main` (see `HANDOFF.md`). Use only that one.
 2. **Link Netlify to the repo.** app.netlify.com → your project → Project configuration → Build & deploy → Continuous deployment → Link repository → GitHub → choose the repo → branch `main`. Build settings come from `netlify.toml`.
 3. **Domain.** Project configuration → Domain management → Add a domain → `eastbridgestrategicpartners.com` (and `eastbridgestrategicpartners.com` redirecting to www). Add the DNS records Netlify shows at your .ae registrar. Wait for the HTTPS certificate to issue.
-4. **Business email.** The site publishes `philip@eastbridgestrategicpartners.com`. Confirm it actually receives mail (Google Workspace or Microsoft 365). If not: workspace.google.com → Get started → use the existing domain → verify with a TXT record → add Google's MX records.
+4. **Business email: done (31 Oct 2026).** `philip@eastbridgestrategicpartners.com` runs on Microsoft 365 Business Basic (tenant eastbridgesp.onmicrosoft.com); `enquiries@` is an alias into the same mailbox. MX, SPF and autodiscover records are at AEserver. Add a DMARC record when the sending provider (section 3) is set up.
 5. **Google Search Console.** search.google.com/search-console → Add property → Domain → `eastbridgestrategicpartners.com` → add the TXT record at the registrar → Verify. Then Sitemaps → submit `https://eastbridgestrategicpartners.com/sitemap.xml`. (Alternative: URL-prefix property, paste the meta code into `GSC_VERIFICATION` in `src/config.py`.)
 6. **Bing Webmaster Tools.** bing.com/webmasters → Add site → Import from Google Search Console (fastest). Bing's index is used by some AI search tools.
 7. **GA4.** analytics.google.com → Admin → Create → Property → "Eastbridge" → Web stream → `eastbridgestrategicpartners.com` → copy the Measurement ID (`G-…`) into `GA4_ID` in `src/config.py`, rebuild, push. Then Admin → Events → mark `generate_lead` as a key event. Optional: Admin → Data display → Channel groups → add a channel "AI assistants" matching sources `chatgpt.com|perplexity.ai|gemini.google.com|copilot.microsoft.com|claude.ai`.
@@ -238,7 +238,7 @@ Automations to switch on in whichever tool: invoice templates per fee type; recu
 - **Airwallex** business account: local GBP and EUR receiving details so UK and European clients pay as a domestic transfer, converted to AED at low cost. Confirm onboarding is available for a Meydan Free Zone licence.
 - **Stripe** (available to UAE businesses): card payment links on invoices for smaller fees such as a plot review. Card fees make it unsuitable for large retainers.
 
-**VAT and tax: Eastbridge's VAT registration status must be confirmed before the first invoice.** UAE VAT is 5%. Registration is mandatory once taxable supplies pass AED 375,000 in the previous 12 months or are expected to in the next 30 days, and voluntary from AED 187,500 (Federal Tax Authority, https://tax.gov.ae/en/taxes/vat/vat.topics/registration.for.vat.aspx). Services connected with property in the UAE are generally not zero-rated even when the client lives abroad, but confirm this with a UAE tax agent. A tax invoice must show the TRN once registered. Also confirm corporate tax registration and free zone status with the same adviser, and ask about the UAE e-invoicing timetable for a business of Eastbridge's size. Until registered, invoices must not show VAT.
+**VAT and tax: Eastbridge is VAT-registered (TRN 105232569100003, effective 1 August 2026) and Corporate Tax-registered, so tax invoices must show the TRN and 5% VAT.** UAE VAT is 5%. Registration is mandatory once taxable supplies pass AED 375,000 in the previous 12 months or are expected to in the next 30 days, and voluntary from AED 187,500 (Federal Tax Authority, https://tax.gov.ae/en/taxes/vat/vat.topics/registration.for.vat.aspx). Services connected with property in the UAE are generally not zero-rated even when the client lives abroad, but confirm this with a UAE tax agent. A tax invoice must show the TRN once registered. Also confirm corporate tax registration and free zone status with the same adviser, and ask about the UAE e-invoicing timetable for a business of Eastbridge's size. Until registered, invoices must not show VAT.
 
 ---
 
@@ -305,7 +305,7 @@ A Looker Studio dashboard (free) on GA4, Search Console and the pipeline Sheet. 
 
 **Already built:** `AUTOMATION.md` is the full playbook. Daily: build, audit (`tools/seo_audit.py`, must report 0 errors), live checks, visibility check into `reports/visibility.csv`, competitor watch, freshness updates. Tuesday and Friday: one researched article each from `src/content/TOPICS.md`, internal links, translation into Arabic, Russian, Chinese and Hindi through `tools/i18n.py`, commit and push, then `tools/indexnow.py`. Monthly: trend review and three off-site actions. A report to Phil of eight lines or fewer, every run.
 
-**Currently blocked.** The scheduled Claude task cannot clone, commit or push until the Claude GitHub app can reach the canonical repository.
+**Status (31 Oct 2026):** the Claude GitHub app can reach `pcc40/eastbridge-website` and the daily scheduled task "Eastbridge SEO engine" (06:38 Dubai) runs in full mode against it. Pushes only go live once Netlify is linked to the repository (section 1, step 2).
 
 **Phil, once:**
 
@@ -343,7 +343,7 @@ Indicative list prices, October 2026. AED at 3.6725 per USD. Many tools are chea
 |---|---|---|---|---|---|
 | Netlify | Hosting, forms, functions | Free (paid from about USD 9–20 if limits reached) | 0 | 0 | Yes |
 | Domain `.ae` | Website and email | Registrar renewal (about USD 30–60 a year) | ~4 | ~15 | Yes |
-| Google Workspace Business Starter | Email, Calendar, Drive, Sheets, Meet | 1 user | ~7–8.40 | ~26–31 | Yes |
+| Microsoft 365 Business Basic (in place) | Email, Calendar, OneDrive, Teams | 1 user, US$84/year | ~7 | ~26 | Yes |
 | Resend | Auto-acknowledgement, alerts | Free to 3,000 emails/month (Pro USD 20) | 0 | 0 | Yes |
 | Postmark (alternative to Resend) | Same | Basic | ~15 | ~55 | – |
 | Google Sheet + Apps Script | Pipeline CRM | Included | 0 | 0 | Yes |
