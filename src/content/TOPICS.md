@@ -27,7 +27,7 @@
 - [ ] fixed-price-vs-remeasure-villa | Fixed price or remeasure: which villa contract suits you? | lump sum vs remeasure | risk allocation in plain English
 - [ ] contractor-payment-applications | Reading a contractor's monthly payment application | construction payment application | over-measure, front-loading, materials on site
 - [ ] variations-control-villa | Controlling variations on a villa build | construction variations | the change request form that saves money
-- [ ] stalled-villa-project-dubai | What to do when your villa build stalls | stalled construction project dubai | first ten days checklist
+- [x] stalled-villa-project-dubai | What to do when your villa build stalls | stalled construction project dubai | first ten days checklist
 - [ ] changing-contractor-mid-project | Replacing a contractor mid-build | change contractor mid project | records, bonds, handover of site
 - [ ] emirates-hills-plot-build-cost | Building in Emirates Hills: what the budget must cover | emirates hills villa build cost | scale effects on cost
 - [ ] palm-jumeirah-rebuild-guide | Rebuilding a Palm Jumeirah villa: process and programme | palm jumeirah villa rebuild | demolition to handover

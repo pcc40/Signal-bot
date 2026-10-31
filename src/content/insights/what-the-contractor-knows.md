@@ -115,7 +115,7 @@ Read a valuation line by line:
 - **Do percentages match what you see?** If the electrical installation is valued at 60%, is 60% of it actually done?
 - **Are variations valued only once agreed?** Unagreed variations should be shown separately, not slipped into the total.
 - **Is retention being held correctly?**
-- **Does the cumulative value track the programme?** A valuation running ahead of physical progress is a warning sign, especially if the contractor's position is weakening.
+- **Does the cumulative value track the programme?** A valuation running ahead of physical progress is a warning sign, especially if the contractor's position is weakening. If the site then slows or stops, see [what to do when your villa build stalls](/insights/stalled-villa-project-dubai/).
 
 Our [cost and programme control](/services/cost-and-programme-control/) service reviews valuations for owners independently.
 
