@@ -21,11 +21,14 @@ def credit_of(base):
 def creds_band():
     items = [("21 years", "building premium homes as P Chapman Construction"),
              ("£17m", "annual turnover at the company's peak, about AED 80m"),
-             ("RIBA South West Award", "Owers House, 2016"),
-             ("LABC Building Excellence", "award winner 2018, highly commended 2020"),
+             ("RIBA South West Award 2016", "Owers House by John Pardey Architects, built by P Chapman Construction"),
+             ("LABC South West awards", "2018 winner and 2020 Highly Commended, for houses the company built"),
              ("Grand Designs", "a P Chapman Construction home featured on Channel 4")]
+    # Awards belong to the houses and their project teams; evidence for each is linked at /about/#recognition.
+    linked = {"RIBA South West Award 2016", "LABC South West awards"}
     return '<section class="creds" aria-label="Track record"><div class="wrap">' + "".join(
-        f"<div><b>{esc(a)}</b><span>{esc(b)}</span></div>" for a, b in items) + "</div></section>"
+        f"<div><b>{esc(a)}</b><span>{esc(b)}" + (' <a href="/about/#recognition">Evidence</a>' if a in linked else "")
+        + "</span></div>" for a, b in items) + "</div></section>"
 
 def triad_svg():
     nodes = [  # x, y, title, line2

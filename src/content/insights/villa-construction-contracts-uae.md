@@ -2,7 +2,7 @@
 title: "UAE villa construction contracts: variations and delays"
 description: "How UAE villa construction contracts handle variations, delays, payment, retention and bonds, and how owners protect themselves with good contract administration."
 date: 2026-10-27
-updated: 2026-10-29
+updated: 2026-10-31
 category: "Contracts"
 keypoints:
   - "Dubai Municipality publishes guidance contract forms for private villa consultancy and construction, in Arabic; they are not mandatory and can be amended by agreement."
@@ -24,10 +24,14 @@ faqs:
 sources:
   - title: "Guidance contract forms for engineering consulting services and construction contracting for private villas (Dubai Municipality)"
     url: "https://www.dm.gov.ae/municipality-business/guidance-contracts-forms-for-engineering-consulting-services-and-construction-contracting-for-private-villas/"
+  - title: "Dubai Municipality: Law No. (14) of 2025 regulating engineering consultancy practice (official text, Arabic)"
+    url: "https://www.dm.gov.ae/documents/law-no-14-of-2025-regulating-engineering-consultancy-practice-in-the-emirate-of-dubai-municipality/"
+  - title: "Dubai Media Office: Mohammed bin Rashid issues law regulating engineering consultancy activities (October 2025)"
+    url: "https://www.mediaoffice.ae/en/news/2025/october/05-10/mohammed-bin-rashid"
   - title: "Dubai issues new law regulating engineering consultancy activities (Al Tamimi)"
     url: "https://www.tamimi.com/news/dubai-issues-new-law-regulating-engineering-consultancy-activities-key-takeaway-points/"
   - title: "Residential buildings: building permits procedures (Dubai Municipality)"
-    url: "https://stgportalnew.dm.gov.ae/wp-content/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf"
+    url: "https://dmpmedia.dm.gov.ae/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf"
 ---
 A villa construction contract in the UAE protects you on variations and delays only if it says clearly how changes are instructed and priced, how delays are notified and assessed, and what happens if the villa is late, and if both sides then follow those rules every week of the build. Most disputes we have seen did not start with a bad contract. They started with a reasonable contract that nobody administered.
 

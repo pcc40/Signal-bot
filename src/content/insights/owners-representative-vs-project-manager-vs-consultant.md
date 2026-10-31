@@ -2,7 +2,7 @@
 title: "Owner's rep vs project manager vs consultant in Dubai"
 description: "Owner's representative, project manager and registered consultant compared for Dubai villa builds: who does what, conflicts, and when you need each."
 date: 2026-10-29
-updated: 2026-10-29
+updated: 2026-10-31
 category: "Choosing a team"
 keypoints:
   - "Your registered consultant designs the villa and carries the statutory technical role; only registered firms may do this under Dubai Law No. 14 of 2025."
@@ -20,6 +20,10 @@ faqs:
   - q: "Do I need an owner's representative if I use a design-and-build company?"
     a: "It is worth considering. With design and build, one firm designs, prices and builds, so nobody independent is checking the design against your budget or the price against the market unless you arrange it."
 sources:
+  - title: "Dubai Municipality: Law No. (14) of 2025 regulating engineering consultancy practice (official text, Arabic)"
+    url: "https://www.dm.gov.ae/documents/law-no-14-of-2025-regulating-engineering-consultancy-practice-in-the-emirate-of-dubai-municipality/"
+  - title: "Dubai Media Office: Mohammed bin Rashid issues law regulating engineering consultancy activities (October 2025)"
+    url: "https://www.mediaoffice.ae/en/news/2025/october/05-10/mohammed-bin-rashid"
   - title: "Al Tamimi: Dubai law regulating engineering consultancy activities"
     url: "https://www.tamimi.com/news/dubai-issues-new-law-regulating-engineering-consultancy-activities-key-takeaway-points/"
   - title: "PRASOON: Owner's representative vs project manager in the UAE"
@@ -50,7 +54,7 @@ The confusion is understandable. In the UAE, "project manager", "owner's rep", "
 | Independent site visits and reporting | Reports on statutory matters | Varies | Yes, client-side |
 | Stake in design or construction | Design fee | Depends on employer | None |
 
-The consultant role is defined by law. Under Dubai Law No. 14 of 2025, only registered consultancies may practise engineering consultancy or present themselves as engineering consultants, and the law applies across Dubai including free zones (Al Tamimi). The other two roles are defined by contract.
+The consultant role is defined by law. Under Dubai Law No. 14 of 2025, only registered consultancies may practise engineering consultancy or present themselves as engineering consultants, and the law applies across Dubai including special development zones and free zones ([Law No. 14 of 2025](https://www.dm.gov.ae/documents/law-no-14-of-2025-regulating-engineering-consultancy-practice-in-the-emirate-of-dubai-municipality/), [Dubai Media Office](https://www.mediaoffice.ae/en/news/2025/october/05-10/mohammed-bin-rashid)). The other two roles are defined by contract.
 
 ### The registered consultant
 

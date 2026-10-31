@@ -36,6 +36,8 @@ sources:
     url: "https://www.dmt.gov.ae/en/Media-Centre/News/Department-of-Municipalities-and-Transport-Announces-Amendments-to-Private-Villas-Regulations"
   - title: "DMT: streamlined permit process for minor works (August 2025)"
     url: "https://www.dmt.gov.ae/en/Media-Centre/News/DMT-Unveils-Streamlined-Permit-Process-for-Minor-Works"
+  - title: "WAM (Emirates News Agency): UPPC issues circular to streamline construction procedures (Circular No. 9 of 2026)"
+    url: "https://www.wam.ae/en/article/c2qm3pn-uppc-issues-circular-streamline-construction"
   - title: "Khaleej Times: Abu Dhabi replaces certain paper permits with digital reports (Circular No. 9 of 2026)"
     url: "https://www.khaleejtimes.com/uae/abu-dhabi-replaces-paper-permits-for-buildings-with-digital-reports-new-directive"
   - title: "DMT: The Pearl Rating System for Estidama"
@@ -46,6 +48,10 @@ sources:
     url: "https://u.ae/en/information-and-services/moving-to-the-uae/expatriates-buying-a-property-in-the-uae"
   - title: "Dubai Municipality: single window for building permits"
     url: "https://www.dm.gov.ae/dubai-launches-single-window-for-building-permits/"
+  - title: "Dubai Municipality: Law No. (14) of 2025 regulating engineering consultancy practice (official text, Arabic)"
+    url: "https://www.dm.gov.ae/documents/law-no-14-of-2025-regulating-engineering-consultancy-practice-in-the-emirate-of-dubai-municipality/"
+  - title: "Dubai Media Office: Mohammed bin Rashid issues law regulating engineering consultancy activities (October 2025)"
+    url: "https://www.mediaoffice.ae/en/news/2025/october/05-10/mohammed-bin-rashid"
   - title: "Al Tamimi: Dubai law regulating engineering consultancy activities"
     url: "https://www.tamimi.com/news/dubai-issues-new-law-regulating-engineering-consultancy-activities-key-takeaway-points/"
 ---
@@ -65,7 +71,7 @@ On top of that, if your plot sits in a master-planned community, the master deve
 
 ## What is Binaa, and what does it change for villa owners?
 
-DMT launched Binaa in June 2025 as a digital permits platform using AI review tools, Building Information Modelling, and virtual and augmented reality ([DMT](https://www.dmt.gov.ae/en/Media-Centre/News/Binaa-Construction-Permits-Platform-Launched)). A few points are directly relevant to a private client:
+DMT launched Binaa in June 2025 as a digital permits platform using AI review tools, Building Information Modelling, and virtual and augmented reality ([DMT](https://www.dmt.gov.ae/en/Media-Centre/News/Binaa-Construction-Permits-Platform-Launched)). At launch, DMT said AI review of 2D plans would be introduced gradually, with those plans reviewed manually in the meantime. A few points are directly relevant to a private client:
 
 - **Villas went first.** Phase one of the rollout covered new private villas, which DMT said account for around 20,000 applications a year.
 - **It looks for over-design.** DMT says the platform is intended to flag designs that use unnecessarily complex methods or heavy materials for small villas. That is a cost question as much as a compliance one.
@@ -89,7 +95,7 @@ The sequence below is how we would plan it from the owner's side. Your registere
 
 ### What changed in October 2026?
 
-Circular No. 9 of 2026, issued by DMT's Urban Planning and Permits Centre, replaces traditional phase-closure permits with certified technical reports for designated categories of project. The registered consultant responsible for supervising the works and the contractor prepare a dated, signed report with photographs covering the works, inspections and corrective actions, and the two share legal liability for non-compliance. The centre continues unannounced site visits ([Khaleej Times](https://www.khaleejtimes.com/uae/abu-dhabi-replaces-paper-permits-for-buildings-with-digital-reports-new-directive)).
+Circular No. 9 of 2026, issued by DMT's Urban Planning and Permits Centre, replaces traditional phase-closure permits with certified technical reports for designated categories of project. The registered consultant responsible for supervising the works and the contractor prepare a dated, signed report with photographs covering the works, inspections and corrective actions, and the two share legal liability for non-compliance. The centre continues unannounced site visits. The circular does not waive mandatory field inspections where physical verification is required, or clearances from other bodies such as Abu Dhabi Civil Defence ([WAM](https://www.wam.ae/en/article/c2qm3pn-uppc-issues-circular-streamline-construction), [Khaleej Times](https://www.khaleejtimes.com/uae/abu-dhabi-replaces-paper-permits-for-buildings-with-digital-reports-new-directive)).
 
 For an owner, this is a meaningful shift. More of the assurance that work matches the approved drawings now rests on reports written by the people doing and supervising the work. That makes it more important, not less, that the owner has an independent view of what is actually happening on site.
 
@@ -106,7 +112,7 @@ For an owner, this is a meaningful shift. More of the assurance that work matche
 | Small works | Contractors can obtain minor works permits directly (since August 2025) | Depends on the authority and the master developer |
 | Construction stages | Certified joint reports replace phase-closure permits for designated categories (Circular No. 9 of 2026) | Staged inspections by the authority |
 
-Sources: [DMT](https://www.dmt.gov.ae/en/Media-Centre/News/Binaa-Construction-Permits-Platform-Launched), [Dubai Municipality](https://www.dm.gov.ae/dubai-launches-single-window-for-building-permits/), [Al Tamimi](https://www.tamimi.com/news/dubai-issues-new-law-regulating-engineering-consultancy-activities-key-takeaway-points/), and the other sources listed below.
+Sources: [DMT](https://www.dmt.gov.ae/en/Media-Centre/News/Binaa-Construction-Permits-Platform-Launched), [Dubai Municipality](https://www.dm.gov.ae/dubai-launches-single-window-for-building-permits/), [Law No. 14 of 2025](https://www.dm.gov.ae/documents/law-no-14-of-2025-regulating-engineering-consultancy-practice-in-the-emirate-of-dubai-municipality/), and the other sources listed below.
 
 For the Dubai side in detail, see our [guide to the Dubai villa building permit](/insights/dubai-municipality-villa-building-permit/), and for the whole timeline, [how long it takes to build a villa in Dubai](/insights/how-long-to-build-a-villa-dubai/). Two differences catch owners out most often. First, a consultant who knows Dubai's process well is not automatically the right choice in Abu Dhabi; ask specifically about recent Abu Dhabi villa submissions and Estidama. Second, the villa regulations themselves differ, so a design brief written with a Dubai villa in mind may need rethinking before a single line is drawn.
 

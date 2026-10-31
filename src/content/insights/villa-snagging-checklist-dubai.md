@@ -23,7 +23,7 @@ sources:
   - title: "Real Estate Club Dubai: villa architects and build timelines"
     url: "https://realestateclubdubai.com/dubai-villa-architects"
   - title: "Dubai Municipality: residential building permit procedures"
-    url: "https://stgportalnew.dm.gov.ae/wp-content/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf"
+    url: "https://dmpmedia.dm.gov.ae/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf"
   - title: "Charles Russell Speechlys: decennial liability under the new UAE Civil Code"
     url: "https://www.charlesrussellspeechlys.com/en/insights/expert-insights/construction-engineering-and-projects/2026/decennial-liability-and-subcontractors-under-the-new-uae-civil-code-articles-821-to-824/"
 ---
@@ -34,7 +34,7 @@ Below is the checklist we use, followed by the documents to collect and the cont
 
 ## When should you snag a new villa?
 
-Snagging comes at the end of construction, after the authority's completion inspection and before you formally accept the villa. In Dubai, the residential permit process ends with a joint completion inspection involving Building Control and other bodies, followed by a completion certificate and service connection ([Dubai Municipality](https://stgportalnew.dm.gov.ae/wp-content/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf)). A completion certificate tells you the building meets the authority's requirements. It does not tell you the grout is clean, the shower drains or the AC holds temperature in August.
+Snagging comes at the end of construction, after the authority's completion inspection and before you formally accept the villa. In Dubai, the residential permit process ends with a joint completion inspection involving Building Control and other bodies, followed by a completion certificate and service connection ([Dubai Municipality](https://dmpmedia.dm.gov.ae/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf)). A completion certificate tells you the building meets the authority's requirements. It does not tell you the grout is clean, the shower drains or the AC holds temperature in August.
 
 Published guidance allows around one to two months for snagging ([Real Estate Club Dubai](https://realestateclubdubai.com/dubai-villa-architects)). In our experience, the realistic sequence is:
 

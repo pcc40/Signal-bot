@@ -33,7 +33,7 @@ sources:
   - title: "Build in Dubai platform"
     url: "https://buildindubai.gov.ae/"
   - title: "Dubai Municipality: residential building permit procedures"
-    url: "https://stgportalnew.dm.gov.ae/wp-content/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf"
+    url: "https://dmpmedia.dm.gov.ae/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf"
   - title: "Dubizzle: property renovation process in Dubai"
     url: "https://www.dubizzle.com/blog/property/property-renovation-process-dubai/"
 ---
@@ -91,7 +91,7 @@ Think of two gates in series.
 1. **Nakheel NOC.** The master developer reviews the proposal against its community rules.
 2. **Building permit.** With the NOC in hand, your DM-registered consultant applies for the permit from Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits. The master developer NOC is one of the documents uploaded with the permit application ([Dubizzle](https://www.dubizzle.com/blog/property/property-renovation-process-dubai/)).
 
-Service-authority NOCs are gathered through Dubai's unified permit window ([Dubai Municipality](https://www.dm.gov.ae/dubai-launches-single-window-for-building-permits/)); our [guide to the Dubai villa building permit](/insights/dubai-municipality-villa-building-permit/) explains that stage in full. The Build in Dubai platform covers alterations as well as new builds ([Build in Dubai](https://buildindubai.gov.ae/)). After the permit is issued, the work is inspected in stages and closed out with a completion inspection and certificate ([Dubai Municipality](https://stgportalnew.dm.gov.ae/wp-content/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf)).
+Service-authority NOCs are gathered through Dubai's unified permit window ([Dubai Municipality](https://www.dm.gov.ae/dubai-launches-single-window-for-building-permits/)); our [guide to the Dubai villa building permit](/insights/dubai-municipality-villa-building-permit/) explains that stage in full. The Build in Dubai platform covers alterations as well as new builds ([Build in Dubai](https://buildindubai.gov.ae/)). After the permit is issued, the work is inspected in stages and closed out with a completion inspection and certificate ([Dubai Municipality](https://dmpmedia.dm.gov.ae/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf)).
 
 Two consequences follow. First, if the design changes after the NOC, you may need to go back to Nakheel before the permit can follow. Second, the permit authority will not fix a weak NOC submission; time lost at the first gate carries straight through the second.
 

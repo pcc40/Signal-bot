@@ -191,12 +191,12 @@ def area_page(a):
 # ---------------------------------------------------------------- work
 def work_hub():
     crumbs = [("Home", "/"), ("Work", "/work/")]
-    from content.projects import RECOGNITION, ARCHITECTS, TESTIMONIALS
+    from content.projects import RECOGNITION, ARCHITECTS, TESTIMONIALS, recognition_html
     import pages_new
-    rec = "".join(f"<div><b>{esc(a)}</b><span>{esc(b)}</span></div>" for a, b in RECOGNITION[:4])
+    rec = recognition_html(RECOGNITION[:4])
     arch = "".join(f"<li>{esc(a)}</li>" for a in ARCHITECTS)
     body = B.banner(crumbs, "Homes we built", "Selected work of P Chapman Construction, the company Philip Chapman founded and led for 21 years: private houses, country estates, developments and hotel work.", "owers-house-02", credit_of("owers-house-02")) + f'''
-<section class="section--tight"><div class="wrap"><div class="kpis kpis--text">{rec}</div></div></section>
+<section class="section--tight"><div class="wrap"><div class="kpis kpis--text">{rec}</div><p class="small muted" style="margin-top:14px">Awards were made to the houses and the teams that designed and built them. Architects and project teams are credited on each project page.</p></div></section>
 <section class="section--tight"><div class="wrap">{work_cards(PROJECTS)}</div></section>
 <section class="section band-dark"><div class="wrap"><div class="head-row"><h2>In our clients' words</h2><p class="muted">Owners and developers on P Chapman Construction.</p></div>{pages_new.quotes_html(TESTIMONIALS[3:6])}</div></section>
 <section class="section"><div class="wrap split"><div><h2>Range of work</h2></div><div><p class="muted" style="margin-top:24px">P Chapman Construction worked under traditional and design-and-build contracts, for private owners, developers, hoteliers, schools and housing associations, with particular expertise in contemporary coastal houses and eco-buildings.</p></div></div></section>
@@ -219,11 +219,15 @@ def project_page(p):
     video = ""
     if p["video"]:
         video = f'<section class="section--tight"><div class="wrap"><h2 class="sr">Film</h2>{B.video_html(p["video"][0], p["video"][1], imgs[min(1,len(imgs)-1)]["base"], p["name"] + " film")}</div></section>'
+    rec_dd = ""
+    if p["recognition"]:
+        rec_dd = '<div><dt>Recognition</dt><dd>' + "<br>".join(
+            f'{esc(r)} <a href="{esc(u)}" rel="noopener" class="small">Source</a>' for r, u in p["recognition"]) + "</dd></div>"
     idx = [x["slug"] for x in PROJECTS].index(p["slug"])
     nxt = PROJECTS[(idx + 1) % len(PROJECTS)]
     body = B.banner(crumbs, esc(p["name"]), esc(p["summary"]), imgs[0]["base"], credit) + f'''
 <section class="section"><div class="wrap split">
-<div><dl class="facts"><div><dt>Location</dt><dd>{esc(p["place"])}</dd></div><div><dt>Project</dt><dd>{esc(p["type"])}</dd></div><div><dt>Built by</dt><dd>P Chapman Construction</dd></div>{('<div><dt>Architect</dt><dd>' + esc(p["architect"]) + '</dd></div>') if p["architect"] else ""}{('<div><dt>Recognition</dt><dd>' + esc(p["recognition"]) + '</dd></div>') if p["recognition"] else ""}</dl>{('<p class="small muted" style="margin-top:14px">Design team: ' + esc(p["team"]) + '</p>') if p["team"] else ""}</div>
+<div><dl class="facts"><div><dt>Location</dt><dd>{esc(p["place"])}</dd></div><div><dt>Project</dt><dd>{esc(p["type"])}</dd></div><div><dt>Built by</dt><dd>P Chapman Construction</dd></div>{('<div><dt>Architect</dt><dd>' + esc(p["architect"]) + '</dd></div>') if p["architect"] else ""}{('<div><dt>Project team</dt><dd>' + esc(p["team"]) + '</dd></div>') if p["team"] else ""}{('<div><dt>Photography</dt><dd>' + esc(p["photo"]) + '</dd></div>') if p["photo"] else ""}{rec_dd}</dl><p class="small muted" style="margin-top:14px">Project details: <a href="{esc(p["source"])}" rel="noopener">P Chapman Construction project page</a></p></div>
 <div class="prose">{p["text"]}<h2>Why it matters for a Dubai villa</h2><p>{esc(p["dubai"])}</p></div></div></section>
 {video}
 <section class="section--tight"><div class="wrap"><div class="gallery">{"".join(figs)}</div><p class="small muted" style="margin-top:12px">{esc(credit)}</p></div></section>
@@ -232,7 +236,14 @@ def project_page(p):
 {B.cta_band()}'''
     schema = [{"@context": "https://schema.org", "@type": "CreativeWork", "name": f"{p['name']}, {p['place']}",
                "about": p["type"], "description": p["summary"], "image": [B.url(f"/assets/img/{m['base']}-1280.webp") for m in imgs[:4]],
-               "creator": {"@id": B.ORG_ID}, "locationCreated": {"@type": "Place", "name": p["place"]}}]
+               "creator": {"@type": "Organization", "name": C.FOUNDER["company_uk"], "url": C.FOUNDER["company_uk_url"], "description": "Main contractor"},
+               "locationCreated": {"@type": "Place", "name": p["place"]},
+               "subjectOf": [{"@type": "WebPage", "url": p["source"]}] + [{"@type": "WebPage", "url": u} for _, u in p["recognition"]]}]
+    if p["architect"]:
+        schema[0]["contributor"] = {"@type": "Organization", "name": p["architect"].replace(" (original design)", ""), "description": "Architect"}
+    awards = [r for r, _ in p["recognition"] if not r.startswith("Reported") and "longlist" not in r]
+    if awards:
+        schema[0]["award"] = awards  # awarded to the house and its project team
     B.page(path, f"{p['name']}, {p['place'].replace(', Cornwall', '')} | Eastbridge Work",
            (f"{p['name']}, {p['place']}: {p['summary']} Built by P Chapman Construction." if len(p['summary']) < 105 else f"{p['name']}, {p['place']}: {p['summary']}"),
            body, crumbs, schema, og=B.og_image(imgs[0]["base"]), preload=f"/assets/img/{imgs[0]['base']}-1280.webp")
@@ -319,21 +330,21 @@ def fees():
 
 def about():
     crumbs = [("Home", "/"), ("About", "/about/")]
-    from content.projects import RECOGNITION, ARCHITECTS, TESTIMONIALS
+    from content.projects import RECOGNITION, ARCHITECTS, TESTIMONIALS, recognition_html
     import pages_new
-    rec = "".join(f"<div><b>{esc(a)}</b><span>{esc(b)}</span></div>" for a, b in RECOGNITION[:4])
+    rec = recognition_html(RECOGNITION[:4])
     arch = "".join(f"<li>{esc(a)}</li>" for a in ARCHITECTS)
-    body = B.banner(crumbs, "About Eastbridge", "A client-side practice built on 21 years running an award-winning, £17m-turnover premium building company.", "owers-house-04", credit_of("owers-house-04")) + f'''
+    body = B.banner(crumbs, "About Eastbridge", "A client-side practice built on 21 years running a £17m-turnover premium building company whose houses won RIBA and LABC recognition.", "owers-house-04", credit_of("owers-house-04")) + f'''
 <section class="section" id="founder"><div class="wrap feature">
 <figure class="portrait">{pic("philip-chapman-01", "Philip Chapman, Founding Partner of Eastbridge Strategic Partners", "(max-width:900px) 100vw, 42vw")}</figure>
 <div><span class="kicker">Founding Partner</span><h2>Philip Chapman</h2><p class="muted">British. Based in Dubai.</p><div class="prose">
 <p>Philip Chapman founded <a href="{C.FOUNDER["company_uk_url"]}" rel="noopener">P Chapman Construction</a> and led it for 21 years, growing it into a premium contractor with an annual turnover of around £17 million and a reputation for exceptionally demanding private houses built for leading architects.</p>
-<p>The company's homes have won a RIBA South West Award (Owers House, 2016), an LABC Building Excellence Award (2018 winner) and a Highly Commended in 2020, been reported in The Times and featured on Channel 4's Grand Designs. Alongside one-off houses it delivered country-house restorations, multi-unit developments, hotel and spa work, and schools, under both traditional and design-and-build contracts.</p>
+<p>Houses the company built have been recognised in their own right. Owers House, designed by John Pardey Architects and built by P Chapman Construction, won a RIBA South West Award in 2016 (<a href="https://www.johnpardeyarchitects.com/modern-architecture/one-off-houses-architecture/owers-house/" rel="noopener">source</a>) and was reported in <a href="https://www.thetimes.co.uk/article/wings-of-desire-9cgnbh3fg" rel="noopener">The Times</a>. The Old Station Master's House in Fowey won Best Small New Housing Development in the LABC Building Excellence Awards South West 2018 (<a href="https://www.acornpropertygroup.org/old-station-masters-house-wins-labc-award/" rel="noopener">source</a>), and Polgreen Manor, designed by CSA Architects, was Highly Commended in the 2020 South West awards (<a href="https://www.labc.co.uk/news/labc-south-west-winners-amp-highly-commended-2020" rel="noopener">source</a>). A home built by the company was featured on Channel 4's Grand Designs. These awards belong to the houses and the teams that designed and built them. Alongside one-off houses it delivered country-house restorations, multi-unit developments, hotel and spa work, and schools, under both traditional and design-and-build contracts.</p>
 <p>Two decades as the builder meant pricing tenders, programming complex sites, managing subcontractors, administering JCT contracts, preparing and defending extension of time and variation claims, and handing finished homes to owners and architects who expected them to be perfect. It also meant seeing, from the inside, exactly where owners lose money and time.</p>
 <p>In Dubai and Abu Dhabi, Philip works on the other side of the table: for the owner, never the builder. He leads every Eastbridge appointment personally and is the person you speak to from the first conversation to handover.</p>
 <p>Away from work he is a high-altitude mountaineer, which may explain a fondness for planning, contingency and getting everyone home safely.</p>
 </div></div></div></section>
-<section class="section--tight"><div class="wrap"><div class="kpis kpis--text">{rec}</div></div></section>
+<section class="section--tight" id="recognition"><div class="wrap"><div class="kpis kpis--text">{rec}</div></div></section>
 <section class="section band-dark"><div class="wrap"><div class="head-row"><h2>What clients said about the work</h2><p class="muted">Clients of P Chapman Construction.</p></div>{pages_new.quotes_html(TESTIMONIALS[:3])}</div></section>
 <section class="section stone"><div class="wrap split"><div><h2>Why the client's side</h2></div><div class="prose">
 <p>Dubai and Abu Dhabi are building some of the most ambitious private homes in the world. The owners commissioning them are often busy, frequently abroad and rarely builders themselves. The market around them is full of capable firms, but few that act only for the owner and take nothing from anyone else.</p>
@@ -346,7 +357,7 @@ def about():
 </ul></div></div></section>
 {B.cta_band()}'''
     B.page("/about/", "About Eastbridge and Founder Philip Chapman | Dubai",
-           "Eastbridge is led by Philip Chapman, who built P Chapman Construction into an award-winning £17m premium contractor over 21 years. Now he works only for villa owners.",
+           "Eastbridge is led by Philip Chapman, who ran P Chapman Construction, a £17m UK builder of award-winning homes, for 21 years. Now he acts only for villa owners.",
            body, crumbs, [B.person_schema()], og=B.og_image("owers-house-02"))
 
 # ---------------------------------------------------------------- faq / contact / legal
