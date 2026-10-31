@@ -553,6 +553,8 @@ body.has-hero .site-head:not(.stuck) .btn{background:#fff;color:var(--ink);borde
 .site-foot a:hover{color:var(--brass-light);text-decoration:underline}
 .foot-top{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,6vw,96px);padding-bottom:clamp(40px,5vw,64px);border-bottom:1px solid var(--line-dark);margin-bottom:clamp(40px,5vw,64px)}
 .foot-top h2{color:#fff;font-size:var(--s-3);margin:0;max-width:16ch}
+.nl-note{max-width:420px;margin:10px 0 0;font-size:.8rem;line-height:1.5}
+.site-foot .nl-note a{text-decoration:underline}
 .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
 .foot-grid h3{font-family:var(--sans);font-size:var(--s--2);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin:0 0 16px}
 .foot-grid ul{list-style:none;padding:0;margin:0}
@@ -687,6 +689,9 @@ html[dir="rtl"],html[dir="rtl"] body{overflow-x:clip}
 .form .err[hidden]{display:none}
 .form .field.invalid input,.form .field.invalid select,.form .field.invalid textarea{border-color:#A3321F;box-shadow:inset -3px 0 0 #A3321F}
 .form .choice{min-width:118px}
+.form .consent{display:flex;gap:10px;align-items:flex-start;font-weight:400;margin:0;cursor:pointer;line-height:1.5}
+.form .consent input{flex:0 0 20px;width:20px;height:20px;min-height:0;margin:2px 0 0;padding:0;accent-color:var(--ink)}
+.form .consent input:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
 .reassure{display:flex;gap:14px;align-items:flex-start;background:var(--stone);padding:16px 18px;font-size:var(--s--1);line-height:1.55}
 .reassure svg{flex:0 0 22px;width:22px;height:22px;color:var(--brass);margin-top:2px}
 .reassure p{margin:0}
