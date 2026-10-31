@@ -33,7 +33,7 @@
 - [ ] palm-jumeirah-rebuild-guide | Rebuilding a Palm Jumeirah villa: process and programme | palm jumeirah villa rebuild | demolition to handover
 - [ ] dubai-islands-plot-guide | Building on a Dubai Islands plot | dubai islands plots | infrastructure timing and guidelines
 - [ ] hudayriyat-plot-build-guide | Building on Hudayriyat: from plot to villa | hudayriyat plots | busy-market procurement
-- [ ] abu-dhabi-villa-permit-tamm | Villa permits in Abu Dhabi: TAMM and the municipality | abu dhabi building permit villa | how it differs from Dubai
+- [x] abu-dhabi-villa-permit-tamm | Villa permits in Abu Dhabi: TAMM and the municipality | abu dhabi building permit villa | how it differs from Dubai
 - [ ] jct-vs-uae-villa-contracts | JCT vs UAE villa contracts: a guide for British owners | jct vs fidic | what changes, what doesn't
 - [ ] remote-villa-reporting-template | The weekly report every remote villa owner should get | construction progress report template | include a free template
 - [ ] villa-build-insurance-uae | Insurance on a villa build: CAR, liability and who holds it | contractor all risks uae | general guide; take broker advice

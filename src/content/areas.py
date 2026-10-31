@@ -237,6 +237,7 @@ AREAS = [
   "image": "sea-glass-house-03",
   "body": """<h2>Abu Dhabi is not Dubai</h2>
 <p>Owners who have built or renovated in Dubai sometimes assume the process is the same in Abu Dhabi. It isn't. Abu Dhabi permits are issued by the municipality through the TAMM platform under the Department of Municipalities and Transport, with their own private villa regulations, which were amended in 2025. Plot communities such as those on Saadiyat also have Aldar's design guidelines to satisfy first.</p>
+<p>Our guide to <a href="/insights/abu-dhabi-villa-permit-tamm/">villa permits in Abu Dhabi</a> sets out the TAMM and municipality route step by step, and how it differs from Dubai.</p>
 <h2>What to plan for</h2>
 <ul>
 <li><strong>Two layers of approval.</strong> Aldar's design review, then the municipal permit through your consultant.</li>
@@ -271,6 +272,7 @@ AREAS = [
 <li><strong>Price for a busy market.</strong> Demand affects prices and lead times. Budgets need a realistic allowance.</li>
 <li><strong>Think about neighbours.</strong> Construction next door, before and after yours, affects access, programme and finish protection.</li>
 </ul>
+<p>For the approvals sequence after Modon's design review, see our guide to <a href="/insights/abu-dhabi-villa-permit-tamm/">villa permits in Abu Dhabi through TAMM and the municipality</a>.</p>
 <h2>How we help</h2>
 <p>We help Hudayriyat owners turn a plot into a realistic project: total budget, brief, team selection and a programme that reflects the market. Then we represent you through construction and handover, alongside your Abu Dhabi-registered consultant.</p>""",
   "faqs": [
