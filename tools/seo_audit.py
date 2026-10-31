@@ -44,7 +44,10 @@ for f in files:
     for pat in FORBIDDEN:
         if re.search(pat, text, re.I): errors.append(f"compliance wording '{pat}' on {rel}")
 for k, v in titles.items():
-    if len(v) > 1: errors.append(f"duplicate title '{k}': {v}")
+    if len(v) > 1:
+        # Same page in several languages, awaiting translation: warn (the untranslated check also flags it).
+        same_page = len({re.sub(r"^/(ar|ru|zh|hi)/", "/", r) for r in v}) == 1
+        (warns if same_page else errors).append(f"duplicate title '{k}': {v}")
 for k, v in descs.items():
     if len(v) > 1: warns.append(f"duplicate description on {v}")
 print(f"Audited {len(files)} pages: {len(errors)} errors, {len(warns)} warnings")
