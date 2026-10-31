@@ -1,6 +1,6 @@
 # Insight backlog — the SEO engine publishes from the top down
 # Format: - [ ] slug | working title | target query | angle from the builder's side
-- [ ] dubai-municipality-villa-building-permit | Dubai villa building permits: what happens, step by step | dubai municipality building permit villa | what the consultant submits, what the owner signs, where programmes slip
+- [x] dubai-municipality-villa-building-permit | Dubai villa building permits: what happens, step by step | dubai municipality building permit villa | what the consultant submits, what the owner signs, where programmes slip
 - [ ] nakheel-noc-villa-renovation | Nakheel NOC for villa renovations explained | nakheel noc renovation | what triggers an NOC, sequencing with contractor mobilisation
 - [ ] villa-renovation-cost-dubai | What a villa renovation really costs in Dubai | villa renovation cost dubai | the three hidden costs in older villas
 - [ ] renovate-or-rebuild-villa-dubai | Renovate or knock down and rebuild? | renovate vs rebuild villa dubai | cost per sq ft of finished space, time, approvals

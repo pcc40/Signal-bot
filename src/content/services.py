@@ -171,7 +171,7 @@ SERVICES = [
   "builder_view": "The most costly changes we ever dealt with were interior decisions made after first fix: a moved kitchen, a new lighting scheme, a different bath. Bringing the interior designer in at the same time as the architect is the single cheapest decision an owner can make.",
   "faqs": [
    ("Do you design villas?", "No. Design and the statutory submissions are the role of your registered consultant. We write the brief, review the design against your budget and represent you through the process."),
-   ("Who submits the building permit application?", "Your appointed consultant, through the relevant authority's system. We track the process with them and keep you informed."),
+   ("Who submits the building permit application?", "Your appointed consultant, through the relevant authority's system. We track the process with them and keep you informed. Our <a href=\"/insights/dubai-municipality-villa-building-permit/\">villa building permit guide</a> explains each step."),
    ("Can you help choose an architect?", "Yes. We help you shortlist, compare fee proposals like-for-like and agree a clear appointment. You make the appointment directly."),
   ],
   "related": ["consultant-and-contractor-selection", "cost-and-programme-control", "villa-construction-project-management"],
