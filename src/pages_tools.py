@@ -5,6 +5,7 @@ RATES object is embedded in the page as JSON and read by src/static/assets/calc.
 server-rendered worked example and the live calculator always use identical figures.
 """
 import json
+import math
 import html as H
 import build as B
 from content.areas import AREAS
@@ -95,22 +96,33 @@ def estimate(i):
     out["land"] = [i["garden"] * r for r in tri(R["land"])]
     out["smart"] = tri(R["smart"]) if i["smart"] else z
     cons = [sum(out[k][n] for k in ("build", "basement", "demo", "pool", "land", "smart")) for n in range(3)]
-    out["construction"] = cons
     soft = i["mode"] == "new" or R["reno"][i["tier"]].get("soft", True)
     out["design"] = [cons[n] * R["design"][n] for n in range(3)] if soft else z
     out["permits"] = list(R["permitsFixed"]) if soft else z
     out["contingency"] = [cons[n] * R["contingency"][n] for n in range(3)]
     out["ffe"] = [cons[n] * R["ffe"][n] for n in range(3)] if i["ffe"] else z
-    out["total"] = [cons[n] + out["design"][n] + out["permits"][n] + out["contingency"][n] + out["ffe"][n] for n in range(3)]
     out["open"] = open_hi
-    return out
+    return rounded(out)
+
+# Every cost line is rounded on its own; construction and the total are the sums of the rounded lines, so the
+# figures shown always add up. calc.js does exactly the same.
+LINE_KEYS = ("build", "basement", "demo", "pool", "land", "smart", "design", "permits", "contingency", "ffe")
+CONS_KEYS = LINE_KEYS[:6]
+
+def rounded(e):
+    r = {k: [rnd(v) for v in e[k]] for k in LINE_KEYS}
+    r["construction"] = [sum(r[k][n] for k in CONS_KEYS) for n in range(3)]
+    r["total"] = [sum(r[k][n] for k in LINE_KEYS) for n in range(3)]
+    r["open"] = e["open"]
+    return r
 
 def rnd(x):
+    """Nearest AED 1,000, or AED 10,000 from AED 1 million (half up, as Math.round in calc.js)."""
     step = 10000 if x >= 1e6 else 1000
-    return int(round(x / step) * step)
+    return int(math.floor(x / step + 0.5) * step)
 
 def aed(x):
-    return f"AED {rnd(x):,}"
+    return f"AED {int(x):,}"
 
 def compact(x):
     x = rnd(x)
@@ -142,20 +154,100 @@ def bar_parts(e):
     tot = sum(vals.values()) or 1
     return vals, tot
 
+# ---------------------------------------------------------------- live text
+# Everything calc.js writes on the page comes from the hidden #calc-msgs list below (one <li> per message),
+# so the i18n pipeline translates it with the rest of the page and calc.js holds no English text.
+# Placeholders in braces ({n}, {cons}, {rate}, {dev}) are filled in by the script and must be kept in translations.
+SUB = {
+    "new-sqft": "Construction {cons} · {rate} per sq ft of built-up area (main build only, excluding extras)",
+    "new-m2": "Construction {cons} · {rate} per m² of built-up area (main build only, excluding extras)",
+    "reno-fixed": "Construction {cons} · a whole-villa scope example, so the floor area is not used",
+    "reno-open": "Construction {cons} · the high figure applies the lowest new-build rate for this specification to the built-up area",
+}
+ROUTE_DUBAI = "Approvals in Dubai go through Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits."
+ROUTE_AD = "In Abu Dhabi the Department of Municipalities and Transport regulates villa building, and permits are issued by the municipality through TAMM."
+ROUTE_DEV = "The master developer, {dev}, has its own approval requirements; check them before design starts."
+ROUTE_NAKHEEL_RENO = "In Nakheel communities, renovation and extension approvals start with a Nakheel NOC application through its portal."
+ROUTES = {
+    "ad": ROUTE_AD, "ad-dev": f"{ROUTE_AD} {ROUTE_DEV}",
+    "dubai": ROUTE_DUBAI, "dubai-dev": f"{ROUTE_DUBAI} {ROUTE_DEV}",
+    "dubai-nakheel-reno": f"{ROUTE_DUBAI} {ROUTE_NAKHEEL_RENO}",
+}
+RENO_NOTE = "Smaller interior upgrades take around two to three months; structural changes and extensions six months or longer."
+PHASES = [("design", "Design"), ("approvals", "Approvals and NOCs"), ("build", "Construction"), ("snag", "Snagging and handover")]
+
+def months(p):
+    return f"{p[0]}–{p[1]} months" if p[1] is not None else f"{p[0]} months or longer"
+
+def time_note(lux, basement):
+    t = RATES["time"]
+    if lux:
+        s = f"Custom luxury villas commonly take {t['luxTotal'][0]}–{t['luxTotal'][1]} months from plot to keys. Phases can overlap."
+    else:
+        a, b = sum(t[k][0] for k, _ in PHASES), sum(t[k][1] for k, _ in PHASES)
+        s = f"About {a}–{b} months on these phases end to end. Real Estate Club Dubai quotes 12–24 months from plot to keys, as phases can overlap."
+    return s + (" A basement adds time to the ground works stage." if basement else "")
+
+def route_key(city, dev, mode):
+    """Mirror of route() in calc.js."""
+    if city == "Abu Dhabi":
+        return "ad-dev" if dev else "ad"
+    if dev == "Nakheel" and mode == "reno":
+        return "dubai-nakheel-reno"
+    return "dubai-dev" if dev else "dubai"
+
+def tier_new_note(t, unit):
+    plus = "+" if t.get("open") else ""
+    lo, hi = t["nb"]
+    if unit == "m2":
+        return f"AED {per_m2(lo):,}–{per_m2(hi):,}{plus} per m²"
+    return f"AED {lo:,}–{hi:,}{plus} per sq ft"
+
+def reno_band(rv):
+    lo, hi = rv["cost"]
+    band = f"AED {lo:,}–{hi:,}" if hi is not None else f"from AED {lo / 1e6:g} million"
+    return f"{rv['label']}, {band}"
+
+def calc_messages():
+    m = [("money", "AED {n}"), ("moneyK", "AED {n}k"), ("moneyM", "AED {n}m"), ("notIncluded", "Not included"),
+         ("unit-sqft", "sq ft"), ("unit-m2", "m²"), ("jsNote", "Figures update as you change the inputs."),
+         ("rowBuild-new", LINES[0][1]), ("rowBuild-reno", "Renovation works (whole-villa scope band)")]
+    m += [(f"sub-{k}", v) for k, v in SUB.items()]
+    for k, t in RATES["tiers"].items():
+        rv = RATES["reno"][k]
+        m += [(f"tierNew-{k}-sqft", tier_new_note(t, "sqft")), (f"tierNew-{k}-m2", tier_new_note(t, "m2")),
+              (f"tierReno-{k}", reno_band(rv)), (f"timeV-works-{k}", months(rv["months"]))]
+    for k, lbl in PHASES:
+        m += [(f"time-{k}", lbl), (f"timeV-{k}", months(RATES["time"][k]))]
+    m += [("time-noc", "Developer NOC and permit"), ("timeV-noc", "A few weeks"), ("time-works", "Works")]
+    m += [("note-new", time_note(False, False)), ("note-new-base", time_note(False, True)),
+          ("note-lux", time_note(True, False)), ("note-lux-base", time_note(True, True)), ("note-reno", RENO_NOTE)]
+    m += [(f"route-{k}", v) for k, v in ROUTES.items()]
+    items = "".join(f'<li data-m="{k}">{v}</li>' for k, v in m)
+    devs = sorted({a["developer"] for a in AREAS if a.get("developer")})
+    items += "".join(f'<li data-dev="{esc(d)}">{esc(d)}</li>' for d in devs)
+    return f'<div class="calc-msgs" id="calc-msgs" hidden><ul>{items}</ul></div>'
+
 def results_html(e):
     """Server-rendered result panel. calc.js updates the same nodes in place (no layout shift)."""
     hi_sfx = "+" if e["open"] else ""
     vals, tot = bar_parts(e)
     segs = "".join(f'<span class="cb-seg cb-{k}" data-seg="{k}" style="width:{vals[k] / tot * 100:.2f}%"></span>' for k, _ in BAR)
     legend = "".join(f'<li><i class="cb-{k}" aria-hidden="true"></i>{lbl} <b data-leg="{k}">{compact(vals[k])}</b></li>' for k, lbl in BAR)
-    rows = "".join(f'<tr data-row="{k}"><th scope="row">{lbl}</th><td data-v="{k}-0">{aed(e[k][0])}</td>'
+    rows = "".join(f'<tr data-row="{k}"><th scope="row"{" data-row-label" if k == "build" else ""}>{lbl}</th><td data-v="{k}-0">{aed(e[k][0])}</td>'
                    f'<td data-v="{k}-1">{aed(e[k][1])}</td><td data-v="{k}-2">{aed(e[k][2])}</td></tr>' for k, lbl in LINES)
     t = RATES["time"]
+    times = "".join(f'<li><span>{lbl}</span><b>{months(t[k])}</b></li>' for k, lbl in PHASES)
+    loc = next(a for a in AREAS if a["slug"] == EXAMPLE["loc"])
+    route = ROUTES[route_key(loc["city"], loc["developer"], EXAMPLE["mode"])].format(dev=esc(loc["developer"]))
+    sub = SUB["new-sqft"].format(cons=f'<span data-out="cons">{aed(e["construction"][1])}</span>',
+                                 rate=f'<span data-out="rate">{aed_rate(e["build"][1] / max(EXAMPLE["area"], 1))}</span>')
     return f'''<div class="calc-out" id="calc-out">
 <p class="calc-label">Indicative total, including soft costs</p>
 <p class="calc-total" aria-live="polite" aria-atomic="true"><span class="sr">Likely total: </span><b data-out="likely">{aed(e["total"][1])}</b>
 <span class="calc-range">Range <span data-out="low">{aed(e["total"][0])}</span> to <span data-out="high">{aed(e["total"][2])}{hi_sfx}</span></span></p>
-<p class="calc-sub">Construction <span data-out="cons">{aed(e["construction"][1])}</span> · <span data-out="rate">{aed_rate(e["build"][1] / max(EXAMPLE["area"], 1))}</span> per sq ft of built-up area (main build only, excluding extras)</p>
+<p class="calc-sub" data-out="sub">{sub}</p>
+<p class="calc-note calc-assess" data-reno-assess hidden>Renovation bands describe a typical villa. A large or older villa, or one that needs new services, waterproofing or structural work, needs a project-specific assessment rather than a band. <a href="/contact/">Ask us for a project-specific assessment</a>.</p>
 <div class="cb" role="img" aria-label="Breakdown of the likely total" data-bar>{segs}</div>
 <ul class="cb-legend">{legend}</ul>
 <div class="table-wrap"><table class="table calc-table"><caption class="sr">Cost lines: low, likely and high</caption>
@@ -164,21 +256,18 @@ def results_html(e):
 <tfoot><tr><th scope="row">Total</th><td data-v="total-0">{aed(e["total"][0])}</td><td data-v="total-1">{aed(e["total"][1])}</td><td data-v="total-2">{aed(e["total"][2])}{hi_sfx}</td></tr></tfoot></table></div>
 <h3 class="calc-h">Indicative timeline</h3>
 <ol class="calc-time" data-time>
-<li><span>Design</span><b>{t["design"][0]}–{t["design"][1]} months</b></li>
-<li><span>Approvals and NOCs</span><b>{t["approvals"][0]}–{t["approvals"][1]} months</b></li>
-<li><span>Construction</span><b>{t["build"][0]}–{t["build"][1]} months</b></li>
-<li><span>Snagging and handover</span><b>{t["snag"][0]}–{t["snag"][1]} months</b></li>
+{times}
 </ol>
-<p class="calc-note" data-time-note>About {sum(v[0] for k, v in t.items() if k != "luxTotal")}–{sum(v[1] for k, v in t.items() if k != "luxTotal")} months on these phases end to end. Real Estate Club Dubai quotes 12–24 months from plot to keys, as phases can overlap.</p>
-<p class="calc-note" data-route>Approvals in Dubai go through Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits. The master developer, Emaar with Meraas, has its own approval requirements; check them before design starts.</p>
+<p class="calc-note" data-time-note>{time_note(False, False)}</p>
+<p class="calc-note" data-route>{route}</p>
 <p class="calc-note calc-js" data-js-note>Showing the worked example below. Switch on JavaScript to change the inputs.</p>
-<p class="calc-flag">An indicative estimate from published market ranges, not a quote. Excludes plot and finance; allow for 5% VAT if your quotes exclude it.</p>
+<p class="calc-flag">An indicative estimate from published market ranges, not a quotation. Each line is rounded and the totals are the sum of the lines. Excludes the plot, finance, insurance, cost inflation and advisers' fees, including ours; allow for 5% VAT if your quotes exclude it. <a href="#sources">Sources and assumptions</a></p>
 </div>'''
 
 def form_html():
     tiers = "".join(
         f'<label class="calc-opt"><input type="radio" name="tier" value="{k}"{" checked" if k == EXAMPLE["tier"] else ""}>'
-        f'<span><b>{esc(v["label"])}</b><small data-tier-note="{k}">AED {v["nb"][0]:,}–{v["nb"][1]:,}{"+" if v.get("open") else ""} per sq ft</small></span></label>'
+        f'<span><b>{esc(v["label"])}</b><small data-tier-note="{k}">{tier_new_note(v, "sqft")}</small></span></label>'
         for k, v in RATES["tiers"].items())
     dubai = "".join(f'<option value="{a["slug"]}" data-city="Dubai" data-dev="{esc(a["developer"])}"{" selected" if a["slug"] == EXAMPLE["loc"] else ""}>{esc(a["name"])}</option>' for a in AREAS if a["city"] == "Dubai")
     ad = "".join(f'<option value="{a["slug"]}" data-city="Abu Dhabi" data-dev="{esc(a["developer"])}">{esc(a["name"])}</option>' for a in AREAS if a["city"] == "Abu Dhabi")
@@ -193,10 +282,12 @@ def form_html():
 <fieldset><legend>Units</legend><div class="calc-seg calc-seg--sm">
 <label><input type="radio" name="unit" value="sqft" checked><span>sq ft</span></label>
 <label><input type="radio" name="unit" value="m2"><span>m²</span></label></div></fieldset>
-<div><label for="c-area">Built-up area (<span data-unit>sq ft</span>)</label><input id="c-area" name="area" type="number" inputmode="numeric" min="0" step="50" value="{EXAMPLE["area"]}">
-<p class="hint">Typical 4-bedroom villas are about 4,000–5,000 sq ft; 5-bedroom 6,000–8,000 sq ft.{cite("recc")}</p></div>
+<div data-area-field><label for="c-area">Built-up area (<span data-unit>sq ft</span>)</label><input id="c-area" name="area" type="number" inputmode="numeric" min="0" step="50" value="{EXAMPLE["area"]}" aria-describedby="c-area-hint">
+<p class="hint" id="c-area-hint" data-area-typical>Typical 4-bedroom villas are about 4,000–5,000 sq ft; 5-bedroom 6,000–8,000 sq ft.{cite("recc")}</p>
+<p class="hint" id="c-area-fixed" data-area-fixed hidden>Basic and mid-range renovation figures are whole-villa scope examples from a published guide. They do not change with floor area, so the area is not used for them.</p>
+<p class="hint" id="c-area-open" data-area-open hidden>For luxury and ultra-luxury renovations, the area sets only the high figure, at the lowest new-build rate for the specification.</p></div>
 <fieldset><legend>Specification</legend><div class="calc-tiers">{tiers}</div>
-<p class="hint is-off" data-reno-hint>For renovations, the specification selects the scope band. Basic and mid-range bands are whole-villa figures and do not scale with area, so they will read low for a large or older villa. Pool and landscaping are added on top of the band, and a basic refresh carries no design fees or approvals allowance.</p></fieldset>
+<p class="hint is-off" data-reno-hint>For renovations, the specification selects a whole-villa scope example from a published guide, not a rate per square foot. Basic and mid-range examples do not change with floor area, so they can read low for a large or older villa. Pool and landscaping are added on top of the band, and a basic refresh carries no design fees or approvals allowance.</p></fieldset>
 <fieldset><legend>Extras</legend>
 <div class="calc-row"><div data-new-only><label for="c-base">Basement area (<span data-unit>sq ft</span>)</label><input id="c-base" name="basement" type="number" inputmode="numeric" min="0" step="50" value="0"></div>
 <div><label for="c-garden">Landscaped garden (<span data-unit>sq ft</span>)</label><input id="c-garden" name="garden" type="number" inputmode="numeric" min="0" step="50" value="{EXAMPLE["garden"]}"></div></div>
@@ -204,7 +295,9 @@ def form_html():
 <label><input type="checkbox" name="pool" checked> Swimming pool</label>
 <label><input type="checkbox" name="smart"> Smart home and AV</label>
 <label><input type="checkbox" name="ffe"> Furniture, fixtures and equipment</label>
-<label data-new-only><input type="checkbox" name="demo"> Demolish an existing villa first</label></div></fieldset>
+<label data-new-only><input type="checkbox" name="demo"> Demolish an existing villa first</label></div>
+<p class="hint">Basement and demolition apply to new builds only. New build and renovation each keep their own pool and garden choices when you switch between them.</p></fieldset>
+{calc_messages()}
 </form>'''
 
 # ---------------------------------------------------------------- copy
@@ -256,7 +349,10 @@ def calculator():
     crumbs = [("Home", "/"), ("Tools", "/tools/"), ("Villa build cost calculator", CALC_PATH)]
     wt, e = worked_table()
     srcs = "".join(f'<li id="src-{k}">{esc(t)}. <a href="{u}" rel="noopener">{esc(u.split("//", 1)[1].split("/", 1)[0])}</a></li>' for k, t, u in SOURCES)
-    data = json.dumps(RATES, separators=(",", ":"))
+    # The script needs only the numbers; every word it shows comes from #calc-msgs.
+    js_rates = {**RATES, "tiers": {k: {kk: vv for kk, vv in v.items() if kk != "label"} for k, v in RATES["tiers"].items()},
+                "reno": {k: {kk: vv for kk, vv in v.items() if kk != "label"} for k, v in RATES["reno"].items()}}
+    data = json.dumps(js_rates, separators=(",", ":"))
     body = B.page_head(crumbs, "Villa build and renovation cost calculator",
                        "An indicative cost for building or renovating a private villa in Dubai or Abu Dhabi, from published 2025–26 market ranges. "
                        "Every rate is sourced on this page. It is an estimate, not a quote.").replace('class="page-head"', 'class="page-head page-head--tool"', 1) + f'''
@@ -321,7 +417,8 @@ def calculator():
 <li>Luxury renovations are published as "above AED 1 million". As our own rule of thumb, a full strip-out back to structure approaches new-build cost, so the high figure is the area multiplied by the lowest new-build rate for that specification.</li>
 <li>Basements are priced as extra built-up area at the chosen rate. No published Dubai figure separates them.</li>
 <li>Timelines: design 3–4 months, approvals 2–3 months, construction 8–14 months, snagging 1–2 months; 24–36 months plot to keys for custom luxury.{cite("reca")} Renovation works two to six months or longer, with approvals taking a few weeks.{cite("sr")}</li>
-<li>Figures are rounded to the nearest AED 1,000, or AED 10,000 above AED 1 million.</li>
+<li>Each cost line is rounded to the nearest AED 1,000, or AED 10,000 above AED 1 million. Construction and the totals are the sums of the rounded lines, so the figures shown add up.</li>
+<li>Basic and mid-range renovation bands are whole-villa scope examples from a published guide. No published source gives a reliable way to scale them with floor area, so the calculator does not use the area for them; a large or older villa needs a project-specific assessment.</li>
 </ul>
 <p class="small muted">Rates last checked October 2026. This page gives general information, not financial, legal or engineering advice.</p>
 </div></div></section>
