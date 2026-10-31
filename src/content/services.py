@@ -106,7 +106,7 @@ SERVICES = [
   "builder_view": "In 21 years of altering and extending houses, the expensive surprises were almost always the same three: water where it shouldn't be, services that couldn't be reused, and structure that wasn't what the old drawings showed. Opening up a few areas before the price is agreed costs very little and saves a great deal.",
   "faqs": [
    ("Do I need approval to renovate a villa on Palm Jumeirah?", "Most work beyond like-for-like interior finishes needs a Nakheel NOC first, then a permit from the relevant authority depending on your plot. Extensions, façade changes, pools and structural alterations always do. See our <a href=\"/insights/palm-jumeirah-villa-renovation/\">Palm Jumeirah renovation guide</a> and our explainer on the <a href=\"/insights/nakheel-noc-villa-renovation/\">Nakheel NOC</a>."),
-   ("How much does a villa renovation cost in Dubai?", "Published guides put basic villa renovations at around AED 200,000 to 300,000, mid-range at AED 400,000 to 800,000 and luxury from AED 1 million. Full strip-outs of large villas on prime plots go well beyond that. Our <a href=\"/insights/villa-renovation-cost-dubai/\">villa renovation cost guide</a> sets out a worked budget and the hidden costs in older villas."),
+   ("How much does a villa renovation cost in Dubai?", "Smart Renovation's 2026 guide puts basic villa renovations at around AED 200,000 to 300,000 (its price breakdown says up to 350,000), mid-range at AED 400,000 to 800,000 and luxury from AED 1 million. Full strip-outs of large villas on prime plots go well beyond that. Our <a href=\"/insights/villa-renovation-cost-dubai/\">villa renovation cost guide</a> sets out a worked budget and the hidden costs in older villas."),
    ("Should I renovate or knock down and rebuild?", "It depends on the structure, the plot's current guidelines and how much of the existing house survives your brief. When more than about half the house is changing, the comparison is worth doing properly. We do it with real numbers."),
   ],
   "related": ["owners-representative", "stalled-project-rescue", "snagging-and-handover"],
@@ -330,9 +330,9 @@ SERVICES = [
    "Clear options with costs and risks",
    "A recovery plan, and someone to run it",
   ],
-  "builder_view": "We have taken over jobs that another builder left, and we know what the incoming contractor needs: a clear record of what's there, what's defective and what's paid. Without that, the new price carries every unknown as risk. With it, the job can restart at a fair price.",
+  "builder_view": "From the builder's side, we know what an incoming contractor needs: a clear record of what's there, what's defective and what's paid. Without that, the new price carries every unknown as risk. With it, the job can restart at a fair price.",
   "faqs": [
-   ("What should I do if my contractor stops work?", "Don't pay anything further until you understand the position, keep all records, photograph the site, and take legal advice on the contract before terminating anything. Then get an independent view of what it will take to finish. Our guide to <a href=\"/insights/stalled-villa-project-dubai/\">the first ten days of a stalled build</a> sets out the order."),
+   ("What should I do if my contractor stops work?", "Pause any payment not yet properly valued until you understand the position, keep all records, photograph the site, and take advice from a UAE-qualified lawyer before withholding sums the contract says are due or terminating anything. Then get an independent view of what it will take to finish. Our guide to <a href=\"/insights/stalled-villa-project-dubai/\">the first ten days of a stalled build</a> sets out the order."),
    ("Can a half-built villa be finished by a new contractor?", "Yes, often successfully. The key is an accurate record of the work in place and its quality, so the new contractor can price it fairly."),
    ("How quickly can you start?", "Usually within a week. The initial review is a fixed fee."),
   ],

@@ -1,6 +1,6 @@
 ---
 title: "Dubai villa building permits: what happens, step by step"
-description: "How a Dubai villa building permit works: what your consultant submits, what you sign, the master-developer NOC, inspections, completion and where programmes slip."
+description: "How a Dubai villa building permit works: what your consultant submits, what you sign, the master-developer NOC, inspections and where programmes slip."
 date: 2026-10-31
 updated: 2026-10-31
 category: "Approvals"
@@ -105,7 +105,7 @@ Your consultant will confirm the exact list for your authority and community. As
 
 There are two honest answers. Dubizzle's guide says it typically takes around three working days to get a building permit once a complete application is in the system. Real Estate Club Dubai puts the whole approvals stage at 2–3 months.
 
-The gap between those figures is the real story. Three working days describes a single clean decision. Two to three months describes what usually happens around it: master-developer review, service-authority NOCs, comments to answer, drawings to revise and resubmit, and owner decisions that arrive late. In our experience the authority is rarely the slowest party in the chain.
+The gap between those figures is the real story. Three working days describes a single clean decision. Two to three months describes what usually happens around it: master-developer review, service-authority NOCs, comments to answer, drawings to revise and resubmit, and owner decisions that arrive late. For how the permit fits into the whole build, see [how long it takes to build a villa in Dubai](/insights/how-long-to-build-a-villa-dubai/).
 
 Two recent changes point to faster decisions. In August 2026 Dubai Municipality announced an AI system to assess permit applications for private and investment villas against the Dubai Building Code, with a 26-week rollout in three stages: development and testing, a pilot with selected consultancy firms, then rollout to eligible villa applications through Build in Dubai (Khaleej Times). Separately, since October 2025, Dubai Municipality has accredited engineering consultancies to issue self-build permits for Emirati citizens' villas without prior review by municipal engineers. Neither removes the need for a complete, coordinated design. An automated check is quicker to say no, too.
 

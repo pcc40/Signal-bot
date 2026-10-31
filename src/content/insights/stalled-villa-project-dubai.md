@@ -5,16 +5,16 @@ date: 2026-10-31
 updated: 2026-10-31
 category: "Process"
 keypoints:
-  - "When a villa build stalls, secure the site and the records first, pause further payments until you know what has been built and what is owed, and take legal advice before you terminate anything."
+  - "When a villa build stalls, secure the site and the records first, pause any payment not yet properly valued until you know what has been built and what is owed, and take advice from a UAE-qualified lawyer before withholding sums the contract says are due, and before terminating anything."
   - "Most stalls are a symptom of cash, design or a dispute about variations and time; find out which before deciding what to do."
-  - "Dubai Municipality's Administrative Resolution No. 10 of 2019 sets out how a contractor is replaced, with or without the outgoing contractor's agreement, and the application is made by the owner's engineering consultant."
-  - "A replacement contractor may not start work until a new building permit has been issued in its name."
+  - "Where Dubai Municipality issued the permit, its Administrative Resolution No. 10 of 2019 sets out how a contractor is replaced, with or without the outgoing contractor's agreement, and the application is made by the owner's engineering consultant."
+  - "Under that procedure, a replacement contractor may not start work until a new building permit has been issued in its name; if your permit came from Trakhees or the Dubai Development Authority, ask your consultant to confirm the procedure."
   - "An accurate record of what is built, to what standard and at what cost is the single document that lets a new contractor price the remaining work fairly."
 faqs:
   - q: "What should I do if my villa contractor stops work in Dubai?"
-    a: "Photograph and record the site, write to the contractor asking for the reason and a date to return, pause further payments until the position is checked, and ask your registered consultant for an assessment of progress and quality. Take advice from a UAE-qualified lawyer before terminating the contract."
+    a: "Photograph and record the site, write to the contractor asking for the reason and a date to return, pause any payment not yet properly valued until the position is checked, and ask your registered consultant for an assessment of progress and quality. Take advice from a UAE-qualified lawyer before withholding sums the contract says are due or terminating the contract."
   - q: "Can I change contractor halfway through a villa build in Dubai?"
-    a: "Yes. Dubai Municipality's Administrative Resolution No. 10 of 2019 sets out procedures for replacing a contractor both with and without the outgoing contractor's consent. The engineering consultant submits the application with an owner's declaration and, where a permit has been issued, a technical report on the stage and conformity of the works."
+    a: "Yes. Where Dubai Municipality issued the permit, its Administrative Resolution No. 10 of 2019 sets out procedures for replacing a contractor both with and without the outgoing contractor's consent. The engineering consultant submits the application with an owner's declaration and, where a permit has been issued, a technical report on the stage and conformity of the works. If your permit came from Trakhees or the Dubai Development Authority, ask your consultant to confirm the procedure."
   - q: "What if the outgoing contractor refuses to agree to the change?"
     a: "Under the resolution, Dubai Municipality notifies the outgoing contractor, who has five working days to respond with its reasons and a technical report. If it does not respond, the municipality proceeds. If the dispute is financial or contractual, the municipality proceeds with the replacement; if it is technical, it verifies the issues first."
   - q: "How long does it take to restart a stalled villa?"
@@ -35,9 +35,9 @@ sources:
   - title: "Department of Municipalities and Transport: amendments to private villas regulations"
     url: "https://www.dmt.gov.ae/en/Media-Centre/News/Department-of-Municipalities-and-Transport-Announces-Amendments-to-Private-Villas-Regulations"
 ---
-When your villa build stalls in Dubai, spend the first ten days establishing facts before taking positions: secure the site, preserve every record, pause further payments until you know what has been built and what is genuinely owed, and read the contract with a UAE-qualified lawyer before you terminate anything. Only then choose between getting the current contractor back on track, renegotiating, or a managed change of contractor, which Dubai Municipality allows under a published procedure.
+When your villa build stalls in Dubai, spend the first ten days establishing facts before taking positions: secure the site, preserve every record, pause any payment not yet properly valued until you know what has been built and what is genuinely owed, and read the contract with a UAE-qualified lawyer before you withhold sums the contract says are due or terminate anything. Only then choose between getting the current contractor back on track, renegotiating, or a managed change of contractor, which Dubai Municipality allows under a published procedure.
 
-A stalled site is stressful because everyone has a different story. The contractor says it has not been paid. The consultant says the contractor is late. The owner has often paid well over half the contract sum for a building that looks less than half finished. We spent 21 years as the builder in UK premium residential construction, and we have been on both sides of a stalled job: the one walking onto a site another builder left, and the one under pressure. This is what we would want any owner to do, in order.
+A stalled site is stressful because everyone has a different story. The contractor says it has not been paid. The consultant says the contractor is late. The owner has often paid well over half the contract sum for a building that looks less than half finished. We spent 21 years as the builder in UK premium residential construction. From the builder's side, we know how a stalled job looks from the contractor's chair, and what an incoming builder needs before it will price the rest. This is what we would want any owner to do, in order.
 
 ## Why do villa builds stall?
 
@@ -56,7 +56,7 @@ On the builder's side, a slowing site was almost always a cash signal before it 
 
 ## What should I do in the first ten days?
 
-The checklist below is the order we work in. It is deliberately conservative: nothing in it closes off an option, and everything in it improves your position whichever route you choose.
+The checklist below is the order we recommend. It is deliberately conservative: nothing in it closes off an option, and everything in it improves your position whichever route you choose.
 
 | Days | Action | Why it matters |
 |---|---|---|
@@ -77,15 +77,15 @@ Go to site, or send someone you trust. Photograph and video every room, elevatio
 
 ### Days 2–3: pause the money, not the conversation
 
-Keep talking to the contractor, politely and in writing. Ask why work has stopped and when it will resume. But pause any further payment until you know where you stand. Pay only what has been properly valued and approved under the contract for work actually done, and take legal advice before withholding anything the contract says is due, because an unjustified non-payment can hand the contractor a right to suspend.
+Keep talking to the contractor, politely and in writing. Ask why work has stopped and when it will resume. But pause any payment not yet properly valued until you know where you stand. Pay only what has been properly valued and approved under the contract for work actually done, and take legal advice before withholding anything the contract says is due, because an unjustified non-payment can hand the contractor a right to suspend.
 
 On the contractor's side, the request we dreaded most from a client was not an angry phone call. It was a calm letter asking for an updated programme, a list of outstanding information and a reconciliation of the account. Those three documents show quickly who is really behind.
 
 ### Days 3–5: read the contract before acting on it
 
-Find the clauses on suspension, termination, notices, extensions of time, liquidated damages, retention, bonds and disputes. Notice periods matter: many contracts require a notice of default and a period to remedy it before termination is possible. This is general information, not legal advice; your contract and UAE law decide what you can do, so take advice from a UAE-qualified lawyer at this point, not after you have sent a termination letter. Our guide to [villa construction contracts in the UAE](/insights/villa-construction-contracts-uae/) explains the main mechanisms.
+Find the clauses on suspension, termination, notices, extensions of time, liquidated damages, retention, bonds and disputes. Notice periods matter: many contracts require a notice of default and a period to remedy it before termination is possible. This is general information, not legal advice; your contract and UAE law decide what you can do, so take advice from a UAE-qualified lawyer at this point, not after you have sent a termination letter. Our guide to [villa construction contracts in the UAE](/insights/villa-construction-contracts-uae/) explains the main mechanisms, and if the dispute is about variations or time, see how we help with [variations, delays and claims](/services/variations-delays-and-claims/).
 
-Check three time-sensitive items at the same time: whether the building permit and its conditions remain in order (ask your consultant), whether the contractor's all-risks and liability insurance is still in force, and when any performance bond or advance payment guarantee expires. A bond that lapses during a dispute protects no one.
+Check three time-sensitive items at the same time: whether the building permit and its conditions remain in order (ask your consultant), whether the contractor's all-risks and liability insurance is still in force, and when any [performance bond](/glossary/#performance-bond) or advance payment guarantee expires. A bond that lapses during a dispute protects no one.
 
 ### Days 5–8: establish what has actually been built
 
@@ -113,11 +113,11 @@ Dubai Municipality publishes a request form for changing a consultant or contrac
 
 ## What about a stalled villa in Abu Dhabi?
 
-The principles are the same: secure the site, preserve the record, pause payments, take legal advice and establish what has been built. The procedure is not. In Abu Dhabi the Department of Municipalities and Transport regulates private villas and permits are handled by the municipalities through TAMM. Ask your consultant to confirm the current requirements for changing a contractor on your permit before you commit to a changeover.
+The principles are the same: secure the site, preserve the record, pause unvalued payments, take legal advice and establish what has been built. The procedure is not. In Abu Dhabi the Department of Municipalities and Transport regulates private villas and permits are handled by the municipalities through TAMM. Ask your consultant to confirm the current requirements for changing a contractor on your permit before you commit to a changeover.
 
 ## What does an incoming contractor need to price the rest fairly?
 
-We have walked onto sites another builder left. The first thing we priced was the unknown: work we could not see, quality we could not verify, materials we could not account for and paperwork we did not have. Every unknown went into the price as risk.
+An incoming contractor prices the unknown first: work it cannot see, quality it cannot verify, materials it cannot account for and paperwork it does not have. Every unknown goes into the price as risk.
 
 An incoming contractor prices more keenly when it receives:
 

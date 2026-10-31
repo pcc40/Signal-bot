@@ -108,7 +108,7 @@ For an owner, this is a meaningful shift. More of the assurance that work matche
 
 Sources: [DMT](https://www.dmt.gov.ae/en/Media-Centre/News/Binaa-Construction-Permits-Platform-Launched), [Dubai Municipality](https://www.dm.gov.ae/dubai-launches-single-window-for-building-permits/), [Al Tamimi](https://www.tamimi.com/news/dubai-issues-new-law-regulating-engineering-consultancy-activities-key-takeaway-points/), and the other sources listed below.
 
-Two differences catch owners out most often. First, a consultant who knows Dubai's process well is not automatically the right choice in Abu Dhabi; ask specifically about recent Abu Dhabi villa submissions and Estidama. Second, the villa regulations themselves differ, so a design brief written with a Dubai villa in mind may need rethinking before a single line is drawn.
+For the Dubai side in detail, see our [guide to the Dubai villa building permit](/insights/dubai-municipality-villa-building-permit/), and for the whole timeline, [how long it takes to build a villa in Dubai](/insights/how-long-to-build-a-villa-dubai/). Two differences catch owners out most often. First, a consultant who knows Dubai's process well is not automatically the right choice in Abu Dhabi; ask specifically about recent Abu Dhabi villa submissions and Estidama. Second, the villa regulations themselves differ, so a design brief written with a Dubai villa in mind may need rethinking before a single line is drawn.
 
 ## What do Abu Dhabi's private villa regulations allow?
 
@@ -139,7 +139,7 @@ Foreign nationals can own property in designated investment zones in Abu Dhabi (
 
 ## A view from the builder's side
 
-For 21 years we were the contractor waiting on approvals, and one pattern held throughout: the permit is rarely what delays a house. The delay comes from what happens around it. Drawings submitted before the owner had really decided the brief, then revised after comments. A contractor appointed on permit drawings that were never detailed enough to price properly. A start date that slipped because nobody had booked the team while the application was in.
+For 21 years we were the contractor waiting on approvals, and we learned to read the start date from the state of the drawings, not the date of the application. The trouble usually began earlier: Drawings submitted before the owner had really decided the brief, then revised after comments. A contractor appointed on permit drawings that were never detailed enough to price properly. A start date that slipped because nobody had booked the team while the application was in.
 
 On our side of the table, a fast permit was only good news if the drawings behind it were complete. When they were not, we priced the gaps as risk, and later as variations. Abu Dhabi's faster digital review is genuinely helpful. It does not remove the need for the owner to settle the brief, check the design against the budget, and have the contractor selection running in parallel, so that a permit with a limited life turns into a start on site.
 

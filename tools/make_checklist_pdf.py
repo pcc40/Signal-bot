@@ -471,7 +471,7 @@ def build():
           Paragraph("Eastbridge Strategic Partners is an independent, client-side project manager for private villa builds "
                     "and renovations in Dubai and Abu Dhabi. We represent the owner, alongside the owner's registered "
                     "consultant and the contractor: cost and programme control, independent site visits and reporting, "
-                    "and commercial and contractual advice. We are paid only by our clients and take no commissions from "
+                    "and commercial and contractual advice. We are paid only by the owner we represent and take no commissions from "
                     "contractors or suppliers.", w_),
           Paragraph("If you are planning a villa, the first conversation is free and confidential. "
                     f"{C.RESPONSE_PROMISE}.", w_), Spacer(1, 14)]

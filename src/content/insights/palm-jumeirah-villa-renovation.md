@@ -41,7 +41,7 @@ Palm Jumeirah is a Nakheel master community. That means two layers of approval s
 
 **The master developer.** Renovation and extension approvals in Nakheel communities start with an NOC application through Nakheel's portal. Nakheel is checking that your proposal respects the community's design guidelines, plot limits and frontage rules, and that the works will be carried out in a way that does not disrupt neighbours or damage shared infrastructure. Expect to submit drawings, contractor details and, for larger work, a deposit or undertaking.
 
-**The permitting authority.** With the NOC in hand, your registered consultant applies for the building permit from Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits. Since 2022 Dubai has run a single unified e-window for building permits across these authorities, with Civil Defence, RTA, DEWA and the telecoms providers linked in, so the NOCs from service authorities are gathered through one system rather than door to door. The Build in Dubai platform now covers alterations as well as new builds. Our [step-by-step guide to Dubai villa building permits](/insights/dubai-municipality-villa-building-permit/) explains what the consultant submits and what the owner signs.
+**The permitting authority.** With the NOC in hand, your registered consultant applies for the building permit from Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits. Service-authority NOCs now come through one online window rather than door to door. The Build in Dubai platform now covers alterations as well as new builds. Our [step-by-step guide to Dubai villa building permits](/insights/dubai-municipality-villa-building-permit/) explains what the consultant submits and what the owner signs.
 
 The owner appoints the consultant and the contractor. The consultant prepares and submits the drawings; the contractor carries out the work under the permit. Our role at Eastbridge is to represent you alongside both, not to replace either.
 
@@ -117,7 +117,7 @@ A full refurbishment of a Palm villa, with new services, waterproofing, kitchen,
 - **Preliminaries.** Turner & Townsend put contractor preliminaries in Dubai at 12–14% (cited by PRASOON). On a renovation in an occupied community, site set-up, protection, access restrictions and waste removal are real costs, and they should be visible in the bid.
 - **Inflation.** Currie & Brown forecast UAE construction cost inflation of around 3% for 2026 (cited by PRASOON). On a long design and approvals period, that matters.
 
-For a full renovation budget with a worked example, see [what a villa renovation really costs in Dubai](/insights/villa-renovation-cost-dubai/). For a fuller breakdown of new-build costs, see [how much it costs to build a villa in Dubai](/insights/villa-construction-cost-dubai/).
+For a full renovation budget with a worked example, see [villa renovation costs in Dubai](/insights/villa-renovation-cost-dubai/). For a fuller breakdown of new-build costs, see [how much it costs to build a villa in Dubai](/insights/villa-construction-cost-dubai/).
 
 ## What are the budget traps on a Palm renovation?
 

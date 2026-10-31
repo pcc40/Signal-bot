@@ -37,7 +37,7 @@ Source: `src/config.py`. Copy and paste these strings. Do not retype them. If an
 | WhatsApp | `https://wa.me/971567440057` |
 | Email | `enquiries@eastbridgepartners.ae` |
 | Website | `https://www.eastbridgepartners.ae` (always with `https://www.`, no trailing path, unless a field asks for a specific page) |
-| Hours | `Sunday to Thursday, 9am–6pm Gulf Standard Time` (Friday and Saturday closed) |
+| Hours | `Monday to Friday, 9am–6pm Gulf Standard Time` (Saturday and Sunday closed) |
 | Founder | `Philip Chapman, Founding Partner` |
 | Founder's UK company | `P Chapman Construction` – `https://www.pchapmanconstruction.com/` |
 | Instagram | `https://www.instagram.com/eastbridgestrategicpartners/` |
@@ -154,9 +154,9 @@ Do not add prices while `PUBLISH_FEES = False` in `config.py`.
 8. **Q: How do you charge?**
    A: Fixed fees for reviews, and a monthly or percentage fee during construction, agreed in writing before we start. Our only income on your project is the fee you pay us.
 9. **Q: What is your background?**
-   A: Our founder, Philip Chapman, ran P Chapman Construction, a UK premium residential builder, for 21 years. Its homes won a RIBA South West Award and LABC Building Excellence Awards, were reported in The Times and featured on Channel 4's Grand Designs.
+   A: Our founder, Philip Chapman, ran P Chapman Construction, a UK premium residential builder, for 21 years. Its homes won a RIBA South West Award (Owers House, 2016), an LABC Building Excellence Award (2018 winner) and a Highly Commended in 2020, were reported in The Times and featured on Channel 4's Grand Designs.
 10. **Q: How quickly will you reply?**
-    A: A personal reply from Philip within one working day. Office hours are Sunday to Thursday, 9am–6pm Gulf Standard Time.
+    A: A personal reply from Philip within one working day. Office hours are Monday to Friday, 9am–6pm Gulf Standard Time.
 
 ### 1.6 First eight GBP posts
 
@@ -199,7 +199,7 @@ Google posts allow up to 1,500 characters. Keep them to 100–250 words with one
 | Logo | `src/static/assets/logo.png` (square crop, at least 250×250 px) | |
 | Cover | A neutral brand image: Dubai skyline or plot context photographed by Philip, or a brand graphic | Not a UK house. A cover photo reads as "this is the business". |
 | Team | Philip Chapman portrait; Philip on a Dubai site visit once there is real, consented UAE work to show | Never stage a "site visit" photo on a project Eastbridge is not involved in. |
-| At work | Photos of real Eastbridge deliverables: a redacted monthly report page, a cost-tracker screenshot, a snag-list extract (no client data) | These show the service without implying projects. |
+| At work | Photos of Eastbridge sample templates (monthly report, cost tracker, snag list), each labelled 'Sample template – illustrative data'. Never describe them as redacted client documents. | These show the service without implying projects. |
 | UK portfolio | **Only inside Posts** (as in posts 4, 6 and 7), where the text says "Built by P Chapman Construction, Cornwall, UK" | Use the 1280 px WebP versions in `src/static/assets/img/` converted to JPG (GBP accepts JPG/PNG, 10 KB–5 MB, at least 720×720 px recommended). |
 
 **Rights:** many UK photos have a named photographer (Hugh Hastings, James Morris, Andrew Meredith, Panoptic, Bad Wolf Horizon; see the `photo` field in `src/content/projects.py`). Before posting them on third-party platforms (GBP, Houzz, LinkedIn, Facebook, press), confirm the licence covers that use. Credit the photographer in the post text where possible.
@@ -271,7 +271,7 @@ Eastbridge Strategic Partners is an independent, client-side project manager and
 
 We represent the owner, alongside the owner's DM-registered consultant and the contractor. Our work covers plot and pre-purchase review, design brief and budget, help comparing bids like-for-like, monthly cost and programme control, independent site visits with plain-English reporting, commercial advice on variations and delay claims, stalled-project recovery, and snagging and handover.
 
-Our founder, Philip Chapman, built and ran P Chapman Construction, a premium residential builder in the UK, for 21 years. The company built bespoke contemporary homes on the Cornish coast; its homes won a RIBA South West Award and LABC Building Excellence Awards, were reported in The Times and featured on Channel 4's Grand Designs.
+Our founder, Philip Chapman, built and ran P Chapman Construction, a premium residential builder in the UK, for 21 years. The company built bespoke contemporary homes on the Cornish coast; its homes won a RIBA South West Award (Owers House, 2016), an LABC Building Excellence Award (2018 winner) and a Highly Commended in 2020, were reported in The Times and featured on Channel 4's Grand Designs.
 
 We spent two decades as the builder. Now we sit on the client's side of the table. That means we know where budgets leak, how variations and delay claims are built, and what contractors hope clients will not check.
 

@@ -34,7 +34,7 @@ ADDRESS = {
     "country": "AE",
     "country_name": "United Arab Emirates",
 }
-HOURS = "Sunday to Thursday, 9am–6pm Gulf Standard Time"
+HOURS = "Monday to Friday, 9am–6pm Gulf Standard Time"
 RESPONSE_PROMISE = "A personal reply from Philip within one working day"
 FOUNDED_TRACK_RECORD_YEARS = 21
 SOCIAL = [

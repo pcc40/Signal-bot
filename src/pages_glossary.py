@@ -88,7 +88,7 @@ def glossary_page():
 <p class="small muted">Definitions reflect common usage and the official sources listed. Rules and procedures change, and your contract governs your project. Last reviewed {datetime.date.fromisoformat(B.TODAY).strftime("%B %Y")}.</p></div>
 </div></section>
 {FILTER_JS}
-{B.cta_band("A term in your contract you are not sure about?", "Send it to us. We will explain what it means for your project, in plain English. The first conversation is free and confidential.")}'''
+{B.cta_band("A term in your contract you are not sure about?", "Send it to us. We will explain how it usually works in practice and what to ask about it. For its legal effect on your contract, take advice from a UAE-qualified lawyer.")}'''
     B.page(PATH, "Villa Construction Glossary: Dubai & Abu Dhabi | Eastbridge",
            f"Plain-English definitions of {len(terms)} villa construction terms for Dubai and Abu Dhabi owners: NOCs, BOQs, retention, extensions of time and more.",
            body, crumbs, [schema()], og=B.og_image(image))

@@ -89,7 +89,7 @@ def landing():
         "image": B.url(COVER), "author": {"@id": B.PERSON_ID}, "publisher": {"@id": B.ORG_ID},
         "about": ["Villa construction", "Villa renovation", "Owner's representation", "Dubai", "Abu Dhabi"],
     }]
-    B.page(PATH, "Villa Owner’s Pre-Construction Checklist (Free PDF) | Dubai",
+    B.page(PATH, "Villa Pre-Construction Checklist (Free PDF) | Eastbridge",
            "A free 10-page checklist for villa owners in Dubai and Abu Dhabi: plot checks, budget, choosing a team, "
            "contract terms, monthly site checks and handover.",
            body, crumbs, schema, og=COVER)

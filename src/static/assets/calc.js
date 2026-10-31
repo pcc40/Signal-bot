@@ -34,8 +34,9 @@
     o.smart = i.smart ? tri(R.smart) : z;
     var c = [0, 1, 2].map(function (k) { return o.build[k] + o.basement[k] + o.demo[k] + o.pool[k] + o.land[k] + o.smart[k]; });
     o.construction = c;
-    o.design = c.map(function (v, k) { return v * R.design[k]; });
-    o.permits = i.mode === 'new' ? c.map(function (v, k) { return Math.max(R.permitsFixed[k], v * R.permitsPct[k]); }) : R.permitsFixed.slice();
+    var soft = i.mode === 'new' || R.reno[i.tier].soft !== false;
+    o.design = soft ? c.map(function (v, k) { return v * R.design[k]; }) : z;
+    o.permits = soft ? R.permitsFixed.slice() : z;
     o.contingency = c.map(function (v, k) { return v * R.contingency[k]; });
     o.ffe = i.ffe ? c.map(function (v, k) { return v * R.ffe[k]; }) : z;
     o.total = c.map(function (v, k) { return v + o.design[k] + o.permits[k] + o.contingency[k] + o.ffe[k]; });
@@ -85,8 +86,8 @@
     put('[data-out="high"]', aed(e.total[2]) + plus);
     put('[data-out="cons"]', aed(e.construction[1]));
     var area = parseFloat(f.elements.area.value) || 0;
-    put('[data-out="rate"]', area ? 'AED ' + (Math.round(e.construction[1] / area / 10) * 10).toLocaleString('en-GB') : '–');
-    var sub = q('.calc-sub'); if (sub && unit && sub.lastChild && sub.lastChild.nodeType === 3) sub.lastChild.textContent = ' per ' + (unit === 'm2' ? 'm²' : 'sq ft') + ' of built-up area (construction only)';
+    put('[data-out="rate"]', area ? 'AED ' + (Math.round(e.build[1] / area / 10) * 10).toLocaleString('en-GB') : '–');
+    var sub = q('.calc-sub'); if (sub && unit && sub.lastChild && sub.lastChild.nodeType === 3) sub.lastChild.textContent = ' per ' + (unit === 'm2' ? 'm²' : 'sq ft') + ' of built-up area (main build only, excluding extras)';
     var parts = { build: e.build[1], extras: e.basement[1] + e.demo[1] + e.pool[1] + e.land[1] + e.smart[1], design: e.design[1],
                   permits: e.permits[1], contingency: e.contingency[1], ffe: e.ffe[1] };
     var tot = 0; Object.keys(parts).forEach(function (k) { tot += parts[k]; }); tot = tot || 1;
@@ -102,7 +103,7 @@
       var a = T.design[0] + T.approvals[0] + T.build[0] + T.snag[0], b = T.design[1] + T.approvals[1] + T.build[1] + T.snag[1];
       note = (tier === 'luxury' || tier === 'ultra')
         ? 'Custom luxury villas commonly take ' + T.luxTotal[0] + '–' + T.luxTotal[1] + ' months from plot to keys. Phases can overlap.'
-        : 'Typically ' + a + '–' + b + ' months from appointing a designer to receiving the keys. Phases can overlap.';
+        : 'About ' + a + '–' + b + ' months on these phases end to end. Real Estate Club Dubai quotes 12–24 months from plot to keys, as phases can overlap.';
       if (i.basement > 0) note += ' A basement adds time to the ground works stage.';
     } else {
       var m = R.reno[tier].months;
@@ -131,7 +132,27 @@
 
   function remember(el) { var v = parseFloat(el.value); if (el.type === 'number') el.setAttribute('data-sqft', isFinite(v) ? (unit === 'm2' ? v * K : v) : ''); }
   f.addEventListener('input', function (ev) { if (ev.target.name === 'unit') setUnit(ev.target.value); else remember(ev.target); render(); });
-  f.addEventListener('change', function (ev) { if (ev.target.name === 'unit') setUnit(ev.target.value); render(); });
+  // New-build extras (pool, 3,000 sq ft garden) would swamp a renovation band, so clear them when switching to
+  // renovation and restore them when switching back.
+  var saved = null;
+  function switchMode(m) {
+    var pool = f.elements.pool, g = f.elements.garden;
+    if (m === 'reno') {
+      var sq = parseFloat(g.getAttribute('data-sqft')), v = parseFloat(g.value);
+      if (!isFinite(sq)) sq = isFinite(v) ? (unit === 'm2' ? v * K : v) : 0;
+      saved = { pool: pool.checked, sq: sq };
+      pool.checked = false; g.value = 0; g.setAttribute('data-sqft', 0);
+    } else if (saved) {
+      pool.checked = saved.pool;
+      g.value = Math.round(unit === 'm2' ? saved.sq / K : saved.sq); g.setAttribute('data-sqft', saved.sq);
+      saved = null;
+    }
+  }
+  f.addEventListener('change', function (ev) {
+    if (ev.target.name === 'unit') setUnit(ev.target.value);
+    else if (ev.target.name === 'mode') switchMode(ev.target.value);
+    render();
+  });
   var js = q('[data-js-note]'); if (js) js.textContent = 'Figures update as you change the inputs.';
   var checked = qa('input[name="unit"]:checked', f)[0];
   if (checked && checked.value === 'm2') { unit = 'm2'; qa('[data-unit]', f).forEach(function (s) { s.textContent = 'm²'; }); }

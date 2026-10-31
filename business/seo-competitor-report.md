@@ -108,7 +108,7 @@ Overview (from fetches of their sites on 31 Oct 2026):
 
 **DMDC**
 - A five-company design-build group with in-house joinery, a renovate-to-resell partnership (Residual.ae) and an investment arm (DMDC Estates). It has a lot of earned press and lists industry awards.
-- It is not a client-side competitor. It is the kind of contractor our clients would appoint or compare. Its "approvals and sequence" and "renovation budget" guides overlap our backlog.
+- It is not a client-side competitor. It is the kind of contractor an owner we represent might appoint or compare. Its "approvals and sequence" and "renovation budget" guides overlap our backlog.
 - Weakness for owners: the group audits itself ("DMDC Project Management audits the other four companies"). That is the strongest real-world example of why owners want an independent representative. Make the point in general terms only. Never name them in copy.
 
 **Luxedesign**

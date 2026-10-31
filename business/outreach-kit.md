@@ -104,7 +104,7 @@ For many of your clients a villa build or renovation is one of the largest singl
 
 Eastbridge is an independent client-side project manager in Dubai and Abu Dhabi. We represent the owner alongside their DM-registered consultant and contractor: controlling cost and programme, checking payment applications and reporting progress in plain English. Our founder ran a premium UK residential builder for 21 years, so we know where budgets leak.
 
-We are paid only by the owner, take no commission and pay no referral fees. If any of your clients would benefit from that kind of oversight, I would welcome a short conversation.
+We are paid only by the owner, take no commission and pay no referral fees. If any of your clients would benefit from an independent person on their side, I would welcome a short conversation.
 
 Kind regards,
 [Sign-off]
@@ -214,7 +214,7 @@ How variations and delays work under UAE villa contracts: https://www.eastbridge
 
 **8. Plot to keys**
 
-"How long will it take?" is the question we hear most. The honest answer is that design and approvals often take longer than owners expect, and construction is only part of the timeline.
+"How long will it take?" is usually the first question an owner asks. The honest answer is that design and approvals often take longer than owners expect, and construction is only part of the timeline.
 
 We have written a step-by-step guide to building a villa in Dubai, from plot to keys: https://www.eastbridgepartners.ae/insights/how-to-build-a-villa-in-dubai/
 

@@ -13,8 +13,6 @@ keypoints:
 faqs:
   - q: "How long does it take to build a villa in Dubai from start to finish?"
     a: "Real Estate Club Dubai puts the typical journey at 12–24 months from plot to keys: design 3–4 months, approvals 2–3 months, construction 8–14 months and snagging 1–2 months. A custom luxury villa typically takes 24–36 months."
-  - q: "How long does a villa building permit take in Dubai?"
-    a: "Dubai Municipality describes current villa permit approvals as taking days, and in August 2026 announced an AI system intended to cut that to minutes, rolled out in phases through Build in Dubai. In practice, the time goes on preparing compliant drawings, master-developer review and answering comments, rather than on the permit itself."
   - q: "Does the summer slow down villa construction in Dubai?"
     a: "It changes how sites work. The UAE midday break bans outdoor work under direct sunlight from 12:30pm to 3pm between 15 June and 15 September, with exemptions such as concrete pours that cannot be interrupted. Contractors adjust shift patterns, but a realistic programme allows for fewer productive outdoor hours in summer."
   - q: "How long does construction take once the contractor starts on site?"
@@ -32,10 +30,6 @@ sources:
     url: "https://buildindubai.gov.ae/"
   - title: "Khaleej Times: Dubai AI system for villa construction permits (August 2026)"
     url: "https://www.khaleejtimes.com/uae/dubai-ai-system-villa-construction-permits"
-  - title: "Dubai Municipality: accredited consultancies for self-build villa permits (October 2025)"
-    url: "https://www.dm.gov.ae/dubai-municipality-facilitates-instant-self-build-villa-permits-though-consultancy-offices/"
-  - title: "Abu Dhabi Media Office: DMT approves nearly 75 million sqm of development in 2025"
-    url: "https://www.mediaoffice.abudhabi/en/infrastructure/department-of-municipalities-and-transport-dmt-approves-nearly-75-million-sqm-of-development-across-abu-dhabi-in-2025/"
   - title: "Khaleej Times: UAE midday break starts 15 June 2026"
     url: "https://www.khaleejtimes.com/uae/uae-midday-break-starts-june-15-work-under-direct-sunlight-banned-during-peak-afternoon-hours?amp=1"
   - title: "PRASOON: Owner's representative vs project manager in the UAE"
@@ -57,9 +51,10 @@ Here is the full journey, with published durations where they exist and our own 
 | Bidding and contractor appointment | 1–2 months | Our planning allowance |
 | Construction | 8–14 months | Real Estate Club Dubai |
 | Completion, snagging and handover | 1–2 months | Real Estate Club Dubai |
-| **Plot to keys** | **12–24 months** (24–36 for custom luxury) | Real Estate Club Dubai |
+| Sum of phases above, end to end | 16–28 months | Our arithmetic |
+| **Plot to keys, published headline (phases overlap)** | **12–24 months** (24–36 for custom luxury) | Real Estate Club Dubai |
 
-Two things stand out. First, roughly a third to a half of the elapsed time passes before anyone breaks ground. Second, the phases are not fixed blocks. A well-run project overlaps some of them, for example by preparing the bid package while approvals are in progress. A poorly run one stretches each of them, usually because a decision is waiting on someone.
+The published 12–24 months is shorter than the phases added end to end because it assumes some of them overlap. Two things stand out. First, roughly a third to a half of the elapsed time passes before anyone breaks ground. Second, the phases are not fixed blocks. A well-run project overlaps some of them, for example by preparing the bid package while approvals are in progress. A poorly run one stretches each of them, usually because a decision is waiting on someone.
 
 For the step-by-step sequence and who does what at each stage, see our guide on [how to build a villa in Dubai](/insights/how-to-build-a-villa-in-dubai/).
 
@@ -69,7 +64,7 @@ On paper, a villa programme looks like a construction programme with some design
 
 **Design.** Three to four months is realistic for a resolved design across architecture, structure and MEP. It is not realistic if the brief is still moving. Every change to room sizes, a basement or the façade sends the design back a step, and each step means redrawing, recoordinating and, later, repricing.
 
-**Approvals.** Since 2022, Dubai building permits have run through a single unified e-window across Dubai Municipality, the Dubai Development Authority, Trakhees and DIEZ, with Civil Defence, RTA, DEWA, Etisalat and du linked in. Your route depends on where your plot sits. In a master-planned community, the master developer's own design review and NOC usually comes first, and that review can take longer than the permit.
+**Approvals.** The permit comes from Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits, and the service-authority NOCs are now gathered through one online window. In a master-planned community, the master developer's own design review and NOC usually comes first, and that review can take longer than the permit.
 
 **Bidding.** Inviting bids, answering bidder questions, comparing returns like-for-like and negotiating the contract takes weeks, not days. Rushing it is a false economy, because the months you save here are often lost in variations and disputes later.
 
@@ -81,18 +76,7 @@ From the contractor's side, we could usually tell within the first two months wh
 
 ## How long does a villa building permit take in Dubai?
 
-Shorter than most owners assume, once the drawings are right. In August 2026, Dubai Municipality announced an AI system that checks villa drawings against the Dubai Building Code, intended to cut permit issuance from days to minutes, rolled out in three phases over 26 weeks through the Build in Dubai platform (Khaleej Times). In October 2025, Dubai Municipality also accredited a number of engineering consultancy offices to issue self-build permits for Emirati villas without prior review by municipal engineers.
-
-Abu Dhabi is moving the same way. The Department of Municipalities and Transport reports that its BINAA platform, launched in June 2025, has shortened the average time to issue a residential villa building permit by 57% and reduced resubmissions by 53% (Abu Dhabi Media Office, March 2026).
-
-The practical lesson is that the permit is rarely the long pole. The time goes on:
-
-- preparing a complete, code-compliant submission, which your DM-registered consultant prepares and submits
-- master-developer review against community guidelines, and any revisions it asks for
-- rounds of comments, each of which needs drawings revised and resubmitted
-- the owner's own sign-off at each step
-
-Faster digital checking helps most where submissions are clean first time. It does not shorten a design that is still changing.
+Once the drawings are right, the permit itself is not usually the slow part. Khaleej Times reported in August 2026 that Dubai Municipality is developing an AI system intended to cut villa permit approvals from days to minutes, rolled out in phases through Build in Dubai. The months go on preparing a compliant submission, master-developer review and rounds of comments; our [guide to the Dubai villa building permit](/insights/dubai-municipality-villa-building-permit/) sets out each step and where programmes slip. Abu Dhabi has moved the same way with its Binaa platform; see our [Abu Dhabi villa permit guide](/insights/abu-dhabi-villa-permit-tamm/).
 
 ## How long does villa construction take, stage by stage?
 

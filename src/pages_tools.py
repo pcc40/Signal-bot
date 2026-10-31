@@ -44,12 +44,13 @@ RATES = {
     "tiers": {
         "standard": {"label": "Standard", "nb": [300, 500]},
         "premium": {"label": "Premium", "nb": [500, 850]},
-        "luxury": {"label": "Luxury", "nb": [850, 1400]},
+        "luxury": {"label": "Luxury", "nb": [850, 1200]},
         "ultra": {"label": "Ultra-luxury", "nb": [1200, 1400], "open": True},
     },
     # Renovation: published whole-villa bands by scope. null = no published ceiling.
     "reno": {
-        "standard": {"label": "Basic refresh: painting, flooring, small upgrades", "cost": [200000, 300000], "months": [2, 3]},
+        # "soft": False = no design fees or approvals allowance (cosmetic work rarely needs drawings or a permit).
+        "standard": {"label": "Basic refresh: painting, flooring, small upgrades", "cost": [200000, 300000], "months": [2, 3], "soft": False},
         "premium": {"label": "Mid-range: kitchens, bathrooms and interiors", "cost": [400000, 800000], "months": [4, 6]},
         "luxury": {"label": "Luxury: premium materials and structural changes", "cost": [1000000, None], "months": [6, None]},
         "ultra": {"label": "Ultra-luxury: full strip-out and remodel", "cost": [1000000, None], "months": [6, None]},
@@ -62,7 +63,6 @@ RATES = {
     "contingency": [0.10, 0.12, 0.15],
     "ffe": [0.30, 0.35, 0.40],
     "permitsFixed": [25000, 50000, 75000],
-    "permitsPct": [0.02, 0.035, 0.05],
     "time": {"design": [3, 4], "approvals": [2, 3], "build": [8, 14], "snag": [1, 2], "luxTotal": [24, 36]},
 }
 
@@ -96,11 +96,9 @@ def estimate(i):
     out["smart"] = tri(R["smart"]) if i["smart"] else z
     cons = [sum(out[k][n] for k in ("build", "basement", "demo", "pool", "land", "smart")) for n in range(3)]
     out["construction"] = cons
-    out["design"] = [cons[n] * R["design"][n] for n in range(3)]
-    if i["mode"] == "new":
-        out["permits"] = [max(R["permitsFixed"][n], cons[n] * R["permitsPct"][n]) for n in range(3)]
-    else:
-        out["permits"] = list(R["permitsFixed"])
+    soft = i["mode"] == "new" or R["reno"][i["tier"]].get("soft", True)
+    out["design"] = [cons[n] * R["design"][n] for n in range(3)] if soft else z
+    out["permits"] = list(R["permitsFixed"]) if soft else z
     out["contingency"] = [cons[n] * R["contingency"][n] for n in range(3)]
     out["ffe"] = [cons[n] * R["ffe"][n] for n in range(3)] if i["ffe"] else z
     out["total"] = [cons[n] + out["design"][n] + out["permits"][n] + out["contingency"][n] + out["ffe"][n] for n in range(3)]
@@ -157,7 +155,7 @@ def results_html(e):
 <p class="calc-label">Indicative total, including soft costs</p>
 <p class="calc-total" aria-live="polite" aria-atomic="true"><span class="sr">Likely total: </span><b data-out="likely">{aed(e["total"][1])}</b>
 <span class="calc-range">Range <span data-out="low">{aed(e["total"][0])}</span> to <span data-out="high">{aed(e["total"][2])}{hi_sfx}</span></span></p>
-<p class="calc-sub">Construction <span data-out="cons">{aed(e["construction"][1])}</span> · <span data-out="rate">{aed_rate(e["construction"][1] / max(EXAMPLE["area"], 1))}</span> per sq ft of built-up area (construction only)</p>
+<p class="calc-sub">Construction <span data-out="cons">{aed(e["construction"][1])}</span> · <span data-out="rate">{aed_rate(e["build"][1] / max(EXAMPLE["area"], 1))}</span> per sq ft of built-up area (main build only, excluding extras)</p>
 <div class="cb" role="img" aria-label="Breakdown of the likely total" data-bar>{segs}</div>
 <ul class="cb-legend">{legend}</ul>
 <div class="table-wrap"><table class="table calc-table"><caption class="sr">Cost lines: low, likely and high</caption>
@@ -171,10 +169,10 @@ def results_html(e):
 <li><span>Construction</span><b>{t["build"][0]}–{t["build"][1]} months</b></li>
 <li><span>Snagging and handover</span><b>{t["snag"][0]}–{t["snag"][1]} months</b></li>
 </ol>
-<p class="calc-note" data-time-note>Typically {sum(v[0] for k, v in t.items() if k != "luxTotal")}–{sum(v[1] for k, v in t.items() if k != "luxTotal")} months from appointing a designer to receiving the keys. Phases can overlap.</p>
+<p class="calc-note" data-time-note>About {sum(v[0] for k, v in t.items() if k != "luxTotal")}–{sum(v[1] for k, v in t.items() if k != "luxTotal")} months on these phases end to end. Real Estate Club Dubai quotes 12–24 months from plot to keys, as phases can overlap.</p>
 <p class="calc-note" data-route>Approvals in Dubai go through Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits. The master developer, Emaar with Meraas, has its own approval requirements; check them before design starts.</p>
 <p class="calc-note calc-js" data-js-note>Showing the worked example below. Switch on JavaScript to change the inputs.</p>
-<p class="calc-flag">An indicative estimate from published market ranges, not a quote. Excludes plot, VAT and finance.</p>
+<p class="calc-flag">An indicative estimate from published market ranges, not a quote. Excludes plot and finance; allow for 5% VAT if your quotes exclude it.</p>
 </div>'''
 
 def form_html():
@@ -198,7 +196,7 @@ def form_html():
 <div><label for="c-area">Built-up area (<span data-unit>sq ft</span>)</label><input id="c-area" name="area" type="number" inputmode="numeric" min="0" step="50" value="{EXAMPLE["area"]}">
 <p class="hint">Typical 4-bedroom villas are about 4,000–5,000 sq ft; 5-bedroom 6,000–8,000 sq ft.{cite("recc")}</p></div>
 <fieldset><legend>Specification</legend><div class="calc-tiers">{tiers}</div>
-<p class="hint is-off" data-reno-hint>For renovations, the specification selects the scope band. Basic and mid-range bands are whole-villa figures and do not scale with area.</p></fieldset>
+<p class="hint is-off" data-reno-hint>For renovations, the specification selects the scope band. Basic and mid-range bands are whole-villa figures and do not scale with area, so they will read low for a large or older villa. Pool and landscaping are added on top of the band, and a basic refresh carries no design fees or approvals allowance.</p></fieldset>
 <fieldset><legend>Extras</legend>
 <div class="calc-row"><div data-new-only><label for="c-base">Basement area (<span data-unit>sq ft</span>)</label><input id="c-base" name="basement" type="number" inputmode="numeric" min="0" step="50" value="0"></div>
 <div><label for="c-garden">Landscaped garden (<span data-unit>sq ft</span>)</label><input id="c-garden" name="garden" type="number" inputmode="numeric" min="0" step="50" value="{EXAMPLE["garden"]}"></div></div>
@@ -213,19 +211,19 @@ def form_html():
 FAQS = [
     ("How much does it cost to build a villa in Dubai per square foot?",
      "Published 2025–26 ranges for construction only are about AED 300–500 per sq ft for a standard specification, "
-     "AED 500–850 for premium, AED 850–1,400 for luxury and AED 1,200 and upwards for ultra-luxury (Engel &amp; Völkers, "
+     "AED 500–850 for premium, AED 850–1,200 for luxury (Engel &amp; Völkers goes up to 1,400) and AED 1,200 and upwards for ultra-luxury (Engel &amp; Völkers, "
      "Real Estate Club Dubai, Knight Frank via Gulf Construction). Design fees, approvals, contingency and furniture come on top."),
     ("What does the per square foot rate leave out?",
      "The rate covers the build itself. On top you should budget design and engineering fees (typically 6–12% of construction), "
-     "approvals, NOCs and utility connections (AED 25,000–75,000, or 2–5% of the build on larger projects), a contingency of 10–15%, "
+     "approvals, NOCs and utility connections (AED 25,000–75,000, or 2–5% of the build, depending on the source), a contingency of 10–15%, "
      "and any pool, landscaping, smart home or furniture. Plot cost, VAT and finance are also outside the rate."),
     ("How much does a villa renovation cost in Dubai?",
      "A 2026 guide from Smart Renovation puts a basic renovation (painting, flooring, small upgrades) from around AED 200,000–300,000, "
      "a mid-range renovation of kitchens, bathrooms and interiors at AED 400,000–800,000, and a luxury renovation with structural "
      "changes above AED 1 million. Works typically take two to six months, longer for structural changes or extensions."),
     ("How long does it take to build a villa in Dubai?",
-     "Typical phases are design 3–4 months, approvals 2–3 months, construction 8–14 months and snagging 1–2 months, so roughly "
-     "12–24 months from plot to keys. Custom luxury villas commonly take 24–36 months (Real Estate Club Dubai)."),
+     "Typical phases are design 3–4 months, approvals 2–3 months, construction 8–14 months and snagging 1–2 months: about 14–23 months "
+     "end to end, while Real Estate Club Dubai quotes 12–24 months from plot to keys because phases can overlap. Custom luxury villas commonly take 24–36 months (Real Estate Club Dubai)."),
     ("How accurate is this calculator?",
      "It is an indicative estimate built from published market ranges, not a quote. The real figure depends on the design, the ground, "
      "the contract and the market when you tender. Treat the range as a starting point for a conversation with your consultant, and test it "
@@ -275,11 +273,11 @@ def calculator():
 <li><strong>Construction.</strong> Built-up area multiplied by the published rate for your specification.{cite("ev", "kf", "reca", "opt")} The likely figure is the midpoint of the range. A basement is priced as extra built-up area at the same rate.</li>
 <li><strong>Extras.</strong> Pool AED 80,000–250,000; landscaping AED 100–500 per sq ft of garden; smart home and AV AED 50,000–300,000; demolition of an existing villa AED 50,000–200,000.{cite("recc", "reca")}</li>
 <li><strong>Design and engineering fees.</strong> 6–12% of construction, about 9% typical for a multi-discipline practice.{cite("reca", "opt")}</li>
-<li><strong>Approvals, NOCs and connections.</strong> AED 25,000–75,000, or 2–5% of the build, whichever is greater on a new build.{cite("reca")} Renovations use the fixed band.</li>
+<li><strong>Approvals, NOCs and connections.</strong> Real Estate Club Dubai gives AED 25,000–75,000 for approvals, NOCs and DEWA{cite("recc")} and, elsewhere, 2–5% of the build for approvals and permits.{cite("reca")} As our own assumption, the calculator uses the fixed AED 25,000–75,000 band; on a large or complex villa the percentage figure would be higher. For comparison, Engel &amp; Völkers puts design, engineering and permits together at AED 50,000–150,000.{cite("ev")} A basic renovation refresh carries no approvals allowance.</li>
 <li><strong>Contingency.</strong> 10–15% of construction, 12% as the likely figure.{cite("reca", "recc")}</li>
 <li><strong>Furniture, fixtures and equipment.</strong> 30–40% of construction at the top end of the market.{cite("reca", "recc")} On standard and premium specifications treat this as a ceiling.</li>
 </ol>
-<p>Renovations work differently. Published figures are whole-villa bands by scope rather than rates per square foot: basic AED 200,000–300,000, mid-range AED 400,000–800,000, and luxury above AED 1 million.{cite("sr")}</p>
+<p>Renovations work differently. The calculator uses Smart Renovation's whole-villa bands by scope rather than rates per square foot: basic AED 200,000–300,000, mid-range AED 400,000–800,000, and luxury above AED 1 million.{cite("sr")} Those bands suit a typical villa; on a large or older villa needing new services and waterproofing, a per square foot budget will be higher, as our <a href="/insights/villa-renovation-cost-dubai/">renovation cost guide</a> explains. Pool and landscaping are added on top of the band.</p>
 </div></div></section>
 
 <section class="section--tight"><div class="wrap split"><div><h2>Build rates by specification</h2><p class="muted">Construction only, 2025–26. The right-hand columns apply each rate to a 6,000 sq ft villa with no extras.</p></div><div class="prose">
@@ -305,7 +303,7 @@ def calculator():
 <section class="section--tight paper"><div class="wrap split"><div><h2>What is not included</h2></div><div class="prose">
 <ul>
 <li>The plot, transfer fees and any service charges.</li>
-<li>VAT at 5% on contractor invoices, usually included in a contractor's quote.{cite("recc")}</li>
+<li>VAT. Published rates do not consistently state whether 5% VAT is included; allow for 5% VAT on contractor invoices if your quotes exclude it.{cite("recc")}</li>
 <li>Finance costs, insurance and your own advisers' fees, including ours.</li>
 <li>Cost inflation. Currie &amp; Brown forecast about 3% for UAE construction in 2026; the calculator does not apply it.{cite("pra")}</li>
 <li>A location premium. We have found no published source that supports one, so the area you choose changes the approvals route shown, not the rate.</li>
@@ -317,7 +315,9 @@ def calculator():
 <h3>Assumptions</h3>
 <ul>
 <li>The likely figure for each rate is the midpoint of the published range, except design fees (9%), contingency (12%) and furniture (35%), where the sources give a typical figure.</li>
-<li>Ultra-luxury has no published ceiling. The calculator uses AED 1,200–1,400 per sq ft and marks the high figure with a plus sign.</li>
+<li>Luxury uses Real Estate Club Dubai's AED 850–1,200 per sq ft. Ultra-luxury has no published ceiling: the calculator uses AED 1,200 (Real Estate Club Dubai's floor) to 1,400 (the top of Engel &amp; Völkers' luxury range) per sq ft and marks the high figure with a plus sign.</li>
+<li>Approvals use the fixed AED 25,000–75,000 band rather than a percentage of the build; this is our own choice between two published figures.</li>
+<li>A basic renovation refresh (painting, flooring, small upgrades) carries no design fees or approvals allowance, because cosmetic work rarely needs drawings or an authority permit. Your master developer may still require an NOC.</li>
 <li>Luxury renovations are published as "above AED 1 million". As our own rule of thumb, a full strip-out back to structure approaches new-build cost, so the high figure is the area multiplied by the lowest new-build rate for that specification.</li>
 <li>Basements are priced as extra built-up area at the chosen rate. No published Dubai figure separates them.</li>
 <li>Timelines: design 3–4 months, approvals 2–3 months, construction 8–14 months, snagging 1–2 months; 24–36 months plot to keys for custom luxury.{cite("reca")} Renovation works two to six months or longer, with approvals taking a few weeks.{cite("sr")}</li>

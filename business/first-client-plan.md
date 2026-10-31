@@ -46,7 +46,7 @@ Plot launches in the last 18 months have created a large group of owners who now
 | Saadiyat (Aldar) | Saadiyat Reserve launched 2019 with 306 plots of 600–1,400 sq m; open to foreign buyers. Older owners may only now be starting to build | 2019 | [Middle East Construction News](https://meconstructionnews.com/36693/aldar-launches-196-5mn-first-residential-community-on-saadiyat-island), [Gulf Business](https://gulfbusiness.com/?p=148166) |
 | Dubai prime market overall | 206 high-end villa sales worth Dh11.7bn, January–August 2026 (DLD data analysed by Khaleej Times) | 2026 | [Khaleej Times](https://www.khaleejtimes.com/dubia-records-335-homes-deals-of-10-million-in-8-months-palm-jumeirah-leads) |
 
-- **Who to target first:** Wadeem plot owners. More than 1,700 plots changed hands in one week in July 2025. Many of those owners are now 12–18 months into choosing a consultant and getting a design approved, which is exactly when contract and bid review is needed. Second: Palm Jebel Ali plot owners, a smaller, wealthier, more international group.
+- **Who to target first:** Wadeem plot owners. More than 1,700 plots sold out within 72 hours of launch in July 2025 (Modon). Many of those owners are now 12–18 months into choosing a consultant and getting a design approved, which is exactly when contract and bid review is needed. Second: Palm Jebel Ali plot owners, a smaller, wealthier, more international group.
 - **Entry products:** plot / pre-design review for owners who have not appointed a consultant yet. Contract and bid review for owners who have a design and are about to choose a contractor.
 - **How to reach them:** the architects and consultants they are appointing, the brokers who sold the plots, and their private bankers and wealth advisers.
 
@@ -216,7 +216,7 @@ Prices for the first two come from `src/config.py` FEES. The other two are propo
 
 ## 4. The sprint: 14 days, then 30/60/90
 
-Start: Monday 2 November 2026. The company's published hours are Sunday–Thursday, but most UAE private-sector firms and all UK partners now work Monday–Friday, so outreach days below run Monday–Friday. Saturdays are for content; Sundays for admin and the weekly review.
+Start: Monday 2 November 2026. The company's published hours are Monday–Friday, in line with most UAE private-sector firms and all UK partners, so outreach days below run Monday–Friday. Saturdays are for content; Sundays for admin and the weekly review.
 
 ### Daily minimums (every working day)
 
@@ -304,7 +304,7 @@ Then name the one product that fits, its fixed fee, what they will receive, and 
 ### Objection handling
 
 **"You haven't done a project in the UAE."**
-"That's right, and we won't pretend otherwise. Eastbridge is new in the UAE. What we bring is 21 years as the builder: we ran a premium residential construction company in the UK, with a RIBA South West Award, LABC Building Excellence Awards, a home featured on Grand Designs and a house reported in The Times. The things that go wrong for owners, like loose contracts, provisional sums, variations and delay claims, work the same way here. On the local side, the regulations and approvals are handled by your DM-registered consultant. We work alongside them, and we're paid only by you. That's also why we've made the first engagement a small fixed-fee review: you can judge the quality of our work before committing to anything larger."
+"That's right, and we won't pretend otherwise. Eastbridge is new in the UAE. What we bring is 21 years as the builder: we ran a premium residential construction company in the UK, with a RIBA South West Award (Owers House, 2016), an LABC Building Excellence Award (2018 winner) and a Highly Commended in 2020, a home featured on Grand Designs and a house reported in The Times. The things that go wrong for owners, like loose contracts, provisional sums, variations and delay claims, work the same way here. On the local side, the regulations and approvals are handled by your DM-registered consultant. We work alongside them, and we're paid only by you. That's also why we've made the first engagement a small fixed-fee review: you can judge the quality of our work before committing to anything larger."
 
 **"My consultant already supervises the contractor."**
 "They should, and that's their legal role. They are responsible for the design and the technical supervision the authority requires. We do something different: we look after your money, your programme and your contract, and we report to you alone. On a good project we make the consultant's job easier, because decisions get made on time."
@@ -316,7 +316,7 @@ Then name the one product that fits, its fixed fee, what they will receive, and 
 "We don't take commission from anyone, so we have no reason to push a particular firm. We'll help you set out what you need, compare the bids you receive like for like, and ask the hard questions. The choice and the appointment are yours."
 
 **"Can you get my permit / sign off the drawings?"**
-"No. That is the job of a DM-registered consultant, depending on where your plot sits: Dubai Municipality, Trakhees or the Dubai Development Authority, or the municipality in Abu Dhabi. We make sure that process is moving and that it doesn't cost you more than it should."
+"No. Your registered consultant prepares and submits the permit application, and the permit is issued by Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits, or in Abu Dhabi by the municipality through TAMM. We represent you alongside the consultant and keep the process moving."
 
 **"My contractor and I are in dispute. Can you be our expert?"**
 "We can give you and your lawyer an independent, factual review of where the project stands: programme, payments, variations. For legal advice or formal expert evidence, you need a UAE-qualified lawyer and, if required, an appointed expert. We're happy to work alongside them."

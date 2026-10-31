@@ -166,7 +166,7 @@ function doPost(e) {
 
 ## 5. Booking link
 
-**Option A: Google Calendar appointment schedule (free with a Google account; Workspace adds reminders and payment features).** calendar.google.com → Create → **Appointment schedule** → title "First conversation with Eastbridge (30–45 min)" → duration 45 minutes → availability Sunday–Thursday, add early-morning and evening Gulf slots for UK and European clients → Booking form: ask name, email, phone, "Where is the project?" → Location: Google Meet → Booked appointment settings: buffer 15 minutes, maximum 3 per day, minimum notice 12 hours → Save → Open booking page → copy the link into `BOOKING_URL`.
+**Option A: Google Calendar appointment schedule (free with a Google account; Workspace adds reminders and payment features).** calendar.google.com → Create → **Appointment schedule** → title "First conversation with Eastbridge (30–45 min)" → duration 45 minutes → availability Monday–Friday, add early-morning and evening Gulf slots for UK and European clients → Booking form: ask name, email, phone, "Where is the project?" → Location: Google Meet → Booked appointment settings: buffer 15 minutes, maximum 3 per day, minimum notice 12 hours → Save → Open booking page → copy the link into `BOOKING_URL`.
 
 **Option B: Calendly (better time-zone handling and reminders; free plan allows one event type).** calendly.com → Sign up with Google → connect the calendar → New event type → One-on-one → same details as above → Invitee questions as above → Notifications → email reminder 24 hours before → copy link into `BOOKING_URL`.
 
@@ -180,9 +180,9 @@ Use the link in: the auto-acknowledgement (automatic once `BOOKING_URL` is set),
 
 **Phil, once (WhatsApp Business app, free).** Install "WhatsApp Business" on the phone holding +971 56 744 0057 (it can migrate an existing WhatsApp chat history).
 
-1. Settings → Business tools → **Business profile**: name "Eastbridge Strategic Partners", category "Business service" or "Consulting", description (from the offsite kit: "Client-side project management for private villa builds and renovations in Dubai and Abu Dhabi. We represent the owner, alongside the owner's DM-registered consultant and the contractor."), address as in `src/config.py`, hours Sunday–Thursday 9:00–18:00, website, email.
+1. Settings → Business tools → **Business profile**: name "Eastbridge Strategic Partners", category "Business service" or "Consulting", description (from the offsite kit: "Client-side project management for private villa builds and renovations in Dubai and Abu Dhabi. We represent the owner, alongside the owner's DM-registered consultant and the contractor."), address as in `src/config.py`, hours Monday–Friday 9:00–18:00, website, email.
 2. Business tools → **Greeting message** → on → "Thank you for contacting Eastbridge Strategic Partners. Philip will reply personally, usually within a few hours during the working day. If it helps, tell us where the project is and what stage it has reached." → Recipients: everyone not in address book.
-3. Business tools → **Away message** → on → outside business hours → "Thank you for your message. Our hours are Sunday to Thursday, 9am to 6pm Gulf Standard Time. Philip will reply on the next working day. To book a call at a time that suits you: [BOOKING_URL]".
+3. Business tools → **Away message** → on → outside business hours → "Thank you for your message. Our hours are Monday to Friday, 9am to 6pm Gulf Standard Time. Philip will reply on the next working day. To book a call at a time that suits you: [BOOKING_URL]".
 4. Business tools → **Quick replies** (type `/` in a chat to use):
 
 | Shortcut | Message |

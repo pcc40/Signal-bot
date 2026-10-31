@@ -102,7 +102,7 @@ def org_schema():
                        "Villa renovation", "Construction cost management", "Contractor tendering",
                        "Extension of time claims", "Construction contract administration", "Snagging and handover",
                        "Dubai Municipality building permits", "Master developer NOC approvals"],
-        "openingHours": "Su-Th 09:00-18:00",
+        "openingHours": "Mo-Fr 09:00-18:00",
         "openingHoursSpecification": [HOURS_SPEC],
         "geo": GEO,
         "hasMap": f"https://www.google.com/maps/search/?api=1&query={GEO['latitude']},{GEO['longitude']}",
@@ -117,7 +117,7 @@ def org_schema():
         "founder": {"@id": PERSON_ID},
     }
 
-HOURS_SPEC = {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+HOURS_SPEC = {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
               "opens": "09:00", "closes": "18:00"}
 
 def offer_catalog():
@@ -305,7 +305,7 @@ def footer():
 <div><p>Our occasional notes for villa owners: build costs, approvals and what is moving in the market. No more than once a month.</p>
 <form class="newsletter" name="notes" method="POST" action="/contact/thanks/#notes" data-netlify="true" netlify-honeypot="company_site"><input type="hidden" name="form-name" value="notes"><p class="hp"><label>Leave empty <input name="company_site"></label></p><label class="sr" for="nl-email">Email address</label><input id="nl-email" name="email" type="email" placeholder="Your email address" required autocomplete="email"><button class="btn" type="submit">Subscribe</button></form></div></div>
 <div class="foot-grid">
-<div>{logo()}<p style="max-width:38ch">Client-side project management and owner's representation for private villas in Dubai and Abu Dhabi. Paid only by our clients.</p>
+<div>{logo()}<p style="max-width:38ch">Client-side project management and owner's representation for private villas in Dubai and Abu Dhabi. Paid only by the owner we represent.</p>
 <p><a href="tel:{C.PHONE_E164}">{C.PHONE_DISPLAY}</a><br><a href="mailto:{C.EMAIL}">{C.EMAIL}</a><br><a href="{wa_link()}" rel="noopener">WhatsApp</a></p>
 <p>{esc(C.ADDRESS["street"])}<br>{esc(C.ADDRESS["locality"])}, {esc(C.ADDRESS["country_name"])}</p></div>
 <div><h3>Services</h3><ul>{svc}<li><a href="/services/">All services</a></li></ul></div>
@@ -574,7 +574,7 @@ def llms_facts():
             "- Serves: Dubai and Abu Dhabi, UAE; many villa owners live in the UK and Europe",
             "- Working language: English",
             f"- Founder: {C.FOUNDER['name']}, who founded and led P Chapman Construction (UK premium residential contractor) for 21 years: {url('/about/#founder')}",
-            "- Portfolio: homes built by P Chapman Construction (UK), the contractor founded and led by Philip Chapman; awards include a RIBA South West Award (2016) and LABC Building Excellence Awards (2018, 2020); a home featured on Channel 4's Grand Designs",
+            "- Portfolio: homes built by P Chapman Construction (UK), the contractor founded and led by Philip Chapman; recognition includes a RIBA South West Award (Owers House, 2016), an LABC Building Excellence Award (2018 winner) and a Highly Commended in 2020; a home featured on Channel 4's Grand Designs",
             f"- Case study: {url('/case-studies/island-e-waterfront-villa/')} (illustrative, modelled scenario, not a completed Eastbridge project)"]
 
 LLMS_FULL_PAGES = ["/about/", "/why-a-client-side-project-manager/", "/services/"]  # + every service page

@@ -328,7 +328,7 @@ def about():
 <figure class="portrait">{pic("philip-chapman-01", "Philip Chapman, Founding Partner of Eastbridge Strategic Partners", "(max-width:900px) 100vw, 42vw")}</figure>
 <div><span class="kicker">Founding Partner</span><h2>Philip Chapman</h2><p class="muted">British. Based in Dubai.</p><div class="prose">
 <p>Philip Chapman founded <a href="{C.FOUNDER["company_uk_url"]}" rel="noopener">P Chapman Construction</a> and led it for 21 years, growing it into a premium contractor with an annual turnover of around £17 million and a reputation for exceptionally demanding private houses built for leading architects.</p>
-<p>The company's homes have won a RIBA South West Award and LABC Building Excellence Awards, been reported in The Times and featured on Channel 4's Grand Designs. Alongside one-off houses it delivered country-house restorations, multi-unit developments, hotel and spa work, and schools, under both traditional and design-and-build contracts.</p>
+<p>The company's homes have won a RIBA South West Award (Owers House, 2016), an LABC Building Excellence Award (2018 winner) and a Highly Commended in 2020, been reported in The Times and featured on Channel 4's Grand Designs. Alongside one-off houses it delivered country-house restorations, multi-unit developments, hotel and spa work, and schools, under both traditional and design-and-build contracts.</p>
 <p>Two decades as the builder meant pricing tenders, programming complex sites, managing subcontractors, administering JCT contracts, preparing and defending extension of time and variation claims, and handing finished homes to owners and architects who expected them to be perfect. It also meant seeing, from the inside, exactly where owners lose money and time.</p>
 <p>In Dubai and Abu Dhabi, Philip works on the other side of the table: for the owner, never the builder. He leads every Eastbridge appointment personally and is the person you speak to from the first conversation to handover.</p>
 <p>Away from work he is a high-altitude mountaineer, which may explain a fondness for planning, contingency and getting everyone home safely.</p>
@@ -342,7 +342,7 @@ def about():
 <ul>
 <li>We are {esc(C.LEGAL)}, licensed in the Meydan Free Zone, Dubai ({esc(C.LICENCE.split("licence ")[-1])}).</li>
 <li>We are a client-side project manager and owner's representative. We are not a contractor, an engineering consultancy, a law firm or an estate agency.</li>
-<li>We are paid only by our clients. See our <a href="/independence/">independence pledge</a>.</li>
+<li>We are paid only by the owner we represent. See our <a href="/independence/">independence pledge</a>.</li>
 </ul></div></div></section>
 {B.cta_band()}'''
     B.page("/about/", "About Eastbridge and Founder Philip Chapman | Dubai",
@@ -531,7 +531,7 @@ def insights(posts):
                "image": B.url(B.og_image(hero_img)), "wordCount": p["words"],
                "about": p.get("category", ""), "citation": [s["url"] for s in p.get("sources", [])]}
         sch = [art] + ([B.faq_schema(faqs)] if faqs else [])
-        B.page(path, p["title"] + (" | Eastbridge" if len(p["title"]) <= 52 else ""), p["description"], body, c, sch, og_type="article",
+        B.page(path, p["title"] + (" | Eastbridge" if len(p["title"]) <= 47 else ""), p["description"], body, c, sch, og_type="article",
                og=B.og_image(hero_img))
     # insights/feed.xml is written by build.write_feed()
 
