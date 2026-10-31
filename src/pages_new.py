@@ -4,7 +4,7 @@ import build as B
 import config as C
 from content.services import SERVICES, BY_SLUG as SVC
 from content.areas import AREAS
-from content.projects import PROJECTS, BY_SLUG as PROJ, RECOGNITION, ARCHITECTS, TESTIMONIALS
+from content.projects import PROJECTS, BY_SLUG as PROJ, RECOGNITION, TESTIMONIALS
 import content.case_island_e as CS
 
 esc = H.escape
@@ -21,11 +21,11 @@ def credit_of(base):
 def creds_band():
     items = [("21 years", "building premium homes as P Chapman Construction"),
              ("£17m", "annual turnover at the company's peak, about AED 80m"),
-             ("RIBA South West Award 2016", "Owers House by John Pardey Architects, built by P Chapman Construction"),
+             ("RIBA South West Award 2016", "Owers House, built by P Chapman Construction"),
              ("LABC South West awards", "2018 winner and 2020 Highly Commended, for houses the company built"),
-             ("Grand Designs", "a P Chapman Construction home featured on Channel 4")]
-    # Awards belong to the houses and their project teams; evidence for each is linked at /about/#recognition.
-    linked = {"RIBA South West Award 2016", "LABC South West awards"}
+             ("Grand Designs", "Owers House, built by P Chapman Construction, featured on Channel 4")]
+    # Awards belong to the houses and their project teams; linkable evidence is at /about/#recognition.
+    linked = {"LABC South West awards"}
     return '<section class="creds" aria-label="Track record"><div class="wrap">' + "".join(
         f"<div><b>{esc(a)}</b><span>{esc(b)}" + (' <a href="/about/#recognition">Evidence</a>' if a in linked else "")
         + "</span></div>" for a, b in items) + "</div></section>"
@@ -91,7 +91,6 @@ def svc_cards(items, imgs):
 
 # ---------------------------------------------------------------- home
 HERO_SLIDES = ["quay-house-01", "owers-house-01", "sea-glass-house-01", "the-lookout-02"]
-OWERS_URL = "https://www.johnpardeyarchitects.com/modern-architecture/one-off-houses-architecture/owers-house/"
 LABC_2020_URL = "https://www.labc.co.uk/news/labc-south-west-winners-amp-highly-commended-2020"
 LABC_2018_URL = "https://www.acornpropertygroup.org/old-station-masters-house-wins-labc-award/"
 
@@ -126,7 +125,7 @@ def home(posts, post_cards, stages_html, svc_img):
 <section class="section" aria-labelledby="founder-h"><div class="wrap feature">
 <figure class="portrait">{pic("philip-chapman-01", "Philip Chapman, Founding Partner of Eastbridge Strategic Partners", "(max-width:900px) 100vw, 42vw", cls="reveal")}</figure>
 <div><span class="kicker">Who leads your project</span><h2 id="founder-h">Philip Chapman, Founding Partner</h2>
-<p>Philip founded P Chapman Construction and led it for 21 years, growing it into a premium UK contractor with an annual turnover of around £17 million. Houses the company built have won a <a href="{OWERS_URL}" rel="noopener">RIBA South West Award</a> (Owers House, 2016, designed by John Pardey Architects) and LABC Building Excellence Awards (<a href="{LABC_2018_URL}" rel="noopener">a 2018 win</a> and <a href="{LABC_2020_URL}" rel="noopener">a 2020 Highly Commended</a>).</p>
+<p>Philip founded P Chapman Construction and led it for 21 years, growing it into a premium UK contractor with an annual turnover of around £17 million. Houses the company built have won a RIBA South West Award (Owers House, 2016, also featured on Channel 4's Grand Designs) and LABC Building Excellence Awards (<a href="{LABC_2018_URL}" rel="noopener">a 2018 win</a> and <a href="{LABC_2020_URL}" rel="noopener">a 2020 Highly Commended</a>).</p>
 <p class="muted">He knows how a contractor prices a job, where variations come from and how delay claims are built. In Dubai and Abu Dhabi he puts that knowledge to work for the owner, fairly, and leads each Eastbridge appointment personally.</p>
 <p><a class="link" href="/about/">About Philip and Eastbridge</a></p></div>
 </div></section>
@@ -139,9 +138,9 @@ def home(posts, post_cards, stages_html, svc_img):
 </div></section>
 
 <section class="section" aria-labelledby="work-h"><div class="wrap feature">
-<figure>{pic("owers-house-02", "Owers House, Feock: dark timber living wing cantilevered over the falling site above the Fal estuary", "(max-width:900px) 100vw, 58vw", cls="reveal")}<figcaption>{esc(credit_of("owers-house-02"))}. Architect: {esc(owers["architect"])}.</figcaption></figure>
+<figure>{pic("owers-house-02", "Owers House, Feock: dark timber living wing cantilevered over the falling site above the Fal estuary", "(max-width:900px) 100vw, 58vw", cls="reveal")}<figcaption>{esc(credit_of("owers-house-02"))}.</figcaption></figure>
 <div><span class="kicker">UK project · Main contractor</span><h2 id="work-h">Owers House, above the Fal estuary</h2>
-<p class="muted">A steep site, a Grade II listed neighbour below and a living wing cantilevered over the falling ground. P Chapman Construction built it as main contractor to the design of {esc(owers["architect"])}, and the house won a RIBA South West Award in 2016. This was UK contracting work, not an Eastbridge appointment.</p>
+<p class="muted">A steep site, a Grade II listed neighbour below and a living wing cantilevered over the falling ground. P Chapman Construction built it as main contractor. Completed in 2014, the house was featured on Channel 4's Grand Designs and won a RIBA South West Award in 2016. This was UK contracting work, not an Eastbridge appointment.</p>
 <p><a class="btn" href="/work/owers-house/#case-study">Read the case study</a> &nbsp; <a class="link" href="/work/">See more of the work</a></p></div>
 </div></section>
 
@@ -244,9 +243,9 @@ def uk_case_card():
     """Lead the track record with a real UK project (P Chapman Construction as main contractor)."""
     p = PROJ["owers-house"]
     return f'''<section class="section"><div class="wrap feature">
-<figure>{pic("owers-house-02", "Owers House, Feock: dark timber living wing cantilevered over the falling site above the Fal estuary", "(max-width:900px) 100vw, 58vw")}<figcaption>{esc(credit_of("owers-house-02"))}. Architect: {esc(p["architect"])}.</figcaption></figure>
+<figure>{pic("owers-house-02", "Owers House, Feock: dark timber living wing cantilevered over the falling site above the Fal estuary", "(max-width:900px) 100vw, 58vw")}<figcaption>{esc(credit_of("owers-house-02"))}.</figcaption></figure>
 <div><span class="kicker">UK project case study · Main contractor</span><h2>Owers House, Feock</h2>
-<p class="muted">A contemporary house above the Fal estuary, designed by {esc(p["architect"])} and built by P Chapman Construction, the UK company Philip Chapman founded and led. The house won a RIBA South West Award in 2016. This was UK contracting work, not an Eastbridge appointment.</p>
+<p class="muted">A contemporary house above the Fal estuary, built by P Chapman Construction, the UK company Philip Chapman founded and led, and completed in 2014. The house was featured on Channel 4's Grand Designs and won a RIBA South West Award in 2016. This was UK contracting work, not an Eastbridge appointment.</p>
 <p><a class="btn" href="/work/owers-house/#case-study">Read the project case study</a></p></div></div></section>'''
 
 def case_hub():

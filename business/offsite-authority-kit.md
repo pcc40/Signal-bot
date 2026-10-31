@@ -131,7 +131,7 @@ Each description stays within the brief's wording. Paste one per service.
 12. **Representation for overseas owners**: For owners living in the UK or elsewhere: a named person in the UAE, regular honest reporting, and no decision made without you.
 13. **Development advisory**: For small developers and investors: plot-to-sale villa projects, small residential schemes and build-to-rent, with a developer-builder's discipline on numbers and delivery.
 
-Do not add prices while `PUBLISH_FEES = False` in `config.py`.
+Fees are published on /fees/ (`PUBLISH_FEES = True`, approved 31 October 2026): plot review AED 9,500; project health check AED 15,000; representation from AED 28,000 a month or 1.75%–3% of construction cost; the final quotation is confirmed in writing after the free call. Follow each platform's own rules on prices in descriptions. Never name any architect P Chapman Construction built for in public copy.
 
 ### 1.5 Questions and answers (10 pairs)
 
@@ -154,7 +154,7 @@ Do not add prices while `PUBLISH_FEES = False` in `config.py`.
 8. **Q: How do you charge?**
    A: Fixed fees for reviews, and a monthly or percentage fee during construction, agreed in writing before we start. Our only income on your project is the fee you pay us.
 9. **Q: What is your background?**
-   A: Our founder, Philip Chapman, ran P Chapman Construction, a UK premium residential builder, for 21 years. Its homes won a RIBA South West Award (Owers House, 2016), an LABC Building Excellence Award (2018 winner) and a Highly Commended in 2020, were reported in The Times and featured on Channel 4's Grand Designs.
+   A: Our founder, Philip Chapman, ran P Chapman Construction, a UK premium residential builder, for 21 years. Its homes won a RIBA South West Award (Owers House, 2016), an LABC Building Excellence Award (2018 winner) and a Highly Commended in 2020, and Owers House (completed in 2014) was reported in The Times and featured on Channel 4's Grand Designs.
 10. **Q: How quickly will you reply?**
     A: A personal reply from Philip within one working day. Office hours are Monday to Friday, 9am–6pm Gulf Standard Time.
 
@@ -271,7 +271,7 @@ Eastbridge Strategic Partners is an independent, client-side project manager and
 
 We represent the owner, alongside the owner's DM-registered consultant and the contractor. Our work covers plot and pre-purchase review, design brief and budget, help comparing bids like-for-like, monthly cost and programme control, independent site visits with plain-English reporting, commercial advice on variations and delay claims, stalled-project recovery, and snagging and handover.
 
-Our founder, Philip Chapman, built and ran P Chapman Construction, a premium residential builder in the UK, for 21 years. The company built bespoke contemporary homes on the Cornish coast; its homes won a RIBA South West Award (Owers House, 2016), an LABC Building Excellence Award (2018 winner) and a Highly Commended in 2020, were reported in The Times and featured on Channel 4's Grand Designs.
+Our founder, Philip Chapman, built and ran P Chapman Construction, a premium residential builder in the UK, for 21 years. The company built bespoke contemporary homes on the Cornish coast; its homes won a RIBA South West Award (Owers House, 2016), an LABC Building Excellence Award (2018 winner) and a Highly Commended in 2020, and Owers House (completed in 2014) was reported in The Times and featured on Channel 4's Grand Designs.
 
 We spent two decades as the builder. Now we sit on the client's side of the table. That means we know where budgets leak, how variations and delay claims are built, and what contractors hope clients will not check.
 
@@ -404,7 +404,7 @@ Independent client-side project manager for villa builds and renovations in Duba
 | Property Finder blog | No public contributor route found. Approach the Property Finder PR/communications team (via LinkedIn) offering expert commentary for buyer guides. | Low. |
 | Bayut / MyBayut | No public editorial route found. Use Bayut's contact page and LinkedIn to reach the MyBayut content team. | Low. |
 | The Times, Bricks & Mortar (UK) | Carol Lewis is described as property editor of The Times and The Sunday Times (undated speaker bio, https://www.bristolideas.co.uk/speakers/carol-lewis/). Use ResponseSource or Qwoted for live Times property requests. | Low–medium. Verify the current editor first. Owers House was previously reported in The Times: mention it. |
-| Grand Designs magazine (UK) | granddesignsmagazine.com. Reported as now web-only (media databases). Old contact addresses found are likely outdated. | Low. The hook is strong: a P Chapman Construction home featured on Channel 4's Grand Designs. Find the current digital editor via LinkedIn. |
+| Grand Designs magazine (UK) | granddesignsmagazine.com. Reported as now web-only (media databases). Old contact addresses found are likely outdated. | Low. The hook is strong: Owers House, built by P Chapman Construction, featured on Channel 4's Grand Designs. Find the current digital editor via LinkedIn. |
 
 ### 4.3 Ten story angles, each matched to outlets
 
@@ -418,7 +418,7 @@ Each angle is commentary Philip can give from 21 years on the builder's side, ti
 6. **"1,700 plots on Hudayriyat: the five questions to ask before you buy a plot to build on."** Hook: Modon's Hudayriyat residential plots (1,700+ plots for 4–6 bed villas) (https://meconstructionnews.com/63729/modon-launches-its-first-residential-plots-community-on-hudayriyat-island). Angle: build-by deadlines, design rules and realistic build cost per square foot (Engel & Völkers ranges, https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai). **Outlets:** Property Finder blog, MyBayut, Arabian Business.
 7. **"What does it really cost to build a villa in Dubai? Why quotes differ by AED 500 a square foot."** Hook: published 2025–26 ranges (E&V: standard AED 300–500/sq ft, luxury 900–1,400; Knight Frank Q2 2025 via Gulf Construction, https://gulfconstructiononline.com/ArticleTA/436847). Angle: what sits inside and outside a contractor's rate (preliminaries, contingency, FF&E, pools, landscaping) from someone who priced homes for 21 years. **Outlets:** Gulf News Property, MyBayut, Property Finder blog.
 8. **"Building in Dubai from London: a UK builder's guide for British owners."** Hook: British owners buying villa plots and renovation projects in Dubai. Angle: how UK JCT habits differ from UAE practice (DM's standard private-villa contract forms, https://www.dm.gov.ae/municipality-business/guidance-contracts-forms-for-engineering-consulting-services-and-construction-contracting-for-private-villas/), the approval sequence, and how to manage a build from abroad. **Outlets:** The Times Bricks & Mortar, Grand Designs magazine (digital).
-9. **"From Grand Designs to Dubai: what a Cornish builder learnt that applies to Gulf villas."** Hook: a P Chapman Construction home featured on Channel 4's Grand Designs, and Owers House won a RIBA South West Award 2016. Angle: coastal exposure, glazing, waterproofing and roof terraces, and why the same failure points appear on Dubai island plots. Must be framed as UK experience, with no UAE project claims. **Outlets:** Grand Designs magazine, The Times.
+9. **"From Grand Designs to Dubai: what a Cornish builder learnt that applies to Gulf villas."** Hook: Owers House, built by P Chapman Construction, featured on Channel 4's Grand Designs and won a RIBA South West Award 2016. Angle: coastal exposure, glazing, waterproofing and roof terraces, and why the same failure points appear on Dubai island plots. Must be framed as UK experience, with no UAE project claims. **Outlets:** Grand Designs magazine, The Times.
 10. **"The contractor's view: what builders hope villa owners won't check."** Hook: evergreen, tied to the stalled-project problem owners talk about. Angle: preliminaries, provisional sums, variation pricing and delay claims, from 21 years on the builder's side. Recommend legal advice for disputes. **Outlets:** Construction Week ME (as an opinion column), MEED (market-commentary version: owner-side capability in the private villa market), Arabian Business.
 
 ### 4.4 Guest article outlines for the top three pitches
@@ -498,7 +498,7 @@ Each angle is commentary Philip can give from 21 years on the builder's side, ti
 - Close: /services/villa-renovation-project-management/ and the Palm Jumeirah renovation guide.
 
 **Podcast pitch blurb (paste):**
-> Philip Chapman ran P Chapman Construction, a UK premium residential builder, for 21 years: bespoke homes on the Cornish coast, a RIBA South West Award and a home featured on Channel 4's Grand Designs. He now runs Eastbridge Strategic Partners in Dubai, an independent client-side project manager for private villa builds and renovations. He can talk candidly about how builders price, how variations and delay claims are built, and what owners, especially those living abroad, should check before they sign.
+> Philip Chapman ran P Chapman Construction, a UK premium residential builder, for 21 years: bespoke homes on the Cornish coast, a RIBA South West Award, and Owers House featured on Channel 4's Grand Designs. He now runs Eastbridge Strategic Partners in Dubai, an independent client-side project manager for private villa builds and renovations. He can talk candidly about how builders price, how variations and delay claims are built, and what owners, especially those living abroad, should check before they sign.
 
 ---
 

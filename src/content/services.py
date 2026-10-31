@@ -1,6 +1,11 @@
 """Service pages. Wording follows the compliance rules: Eastbridge represents the owner and works alongside the
 owner's registered consultant and contractor. It does not supervise as consultant of record, submit permits,
 prepare tender documents, prequalify contractors or certify anything."""
+from config import FEES as _FEES, PUBLISH_FEES as _SHOW
+
+def _fee(key, text, fallback=""):
+    """A published fee sentence when PUBLISH_FEES is on; otherwise the fallback (no figure)."""
+    return text.format(fee=_FEES[key]) if _SHOW else fallback
 
 SERVICES = [
  {
@@ -15,7 +20,7 @@ SERVICES = [
   "stage": "From the first budget to the end of the defects period",
   "intro": """<p>A private villa in Dubai brings together a master developer, a permitting authority, a registered consultant, a main contractor, a dozen specialist subcontractors and an interior designer. Each of them has real duties and each has their own commercial position. What is often missing is someone appointed to coordinate the whole project and look at every price, payment and decision from the owner's side.</p>
 <p>That is the role we fill. We sit beside you, set the budget and programme with you, help you appoint the right consultant and contractor, then work alongside them to keep the project to what was agreed until handover. Philip spent 21 years running a building company whose houses have won RIBA and LABC recognition, so we know how a tender is priced, where variations come from and how delay claims are assembled. That knowledge now works for you.</p>
-<p>Philip leads every appointment personally. How often we attend site and what we report are agreed in writing in your appointment before work starts. Where the project needs a quantity surveyor, an engineer or another specialist, you appoint and pay them directly, and we help you compare proposals and choose. Our role is commercial and project management on your side; statutory design, authority submissions and supervision stay with your registered consultant. <a href="/approach/#uae-appointments">How an appointment works in the UAE</a>.</p>""",
+<p>Philip leads every appointment personally, supported by a team of three project managers who attend site and provide cover when he is unavailable. How often we attend site and what we report are agreed in writing in your appointment before work starts, and capacity is confirmed before an appointment is accepted. Where the project needs a quantity surveyor, an engineer or another specialist, you appoint and pay them directly, and we help you compare proposals and choose. Our role is commercial and project management on your side; statutory design, authority submissions and supervision stay with your registered consultant. <a href="/approach/#uae-appointments">How an appointment works in the UAE</a>.</p>""",
   "does": [
    "Set a realistic budget, programme and brief before any design money is spent",
    "Help you choose and appoint a registered consultant and a main contractor, and agree fair terms with each",
@@ -35,7 +40,7 @@ SERVICES = [
   "faqs": [
    ("What does an owner's representative do on a villa build?", "We act as your single point of control. We set the budget and programme with you, help you appoint the consultant and contractor, track cost and time, review payments and variations, report progress and lead handover. We do not replace the registered consultant, who remains responsible for the statutory design, permit submissions and supervision duties."),
    ("Is an owner's representative worth it on a villa?", "On a straightforward build with an experienced owner who lives in Dubai, perhaps not. On a bespoke villa, a major renovation, or any project where you are often abroad, it gives you regular cost reporting, programme monitoring, review of every payment and variation, and early warning of risks, from someone who works only for you. We will tell you honestly if you don't need us."),
-   ("Who will I deal with, and how often will you be on site?", "Philip Chapman, our founder, leads every appointment personally and is your point of contact throughout. Site attendance and reporting are agreed in writing in the scope of your appointment: typically weekly during active construction, and more often at key stages such as waterproofing, first fix and pre-handover."),
+   ("Who will I deal with, and how often will you be on site?", "Philip Chapman, our founder, leads every appointment personally and is your point of contact throughout. He is supported by a team of three project managers who attend site and provide cover when he is unavailable. Site attendance and reporting are agreed in writing in the scope of your appointment: typically weekly during active construction, and more often at key stages such as waterproofing, first fix and pre-handover."),
    ("Who appoints the quantity surveyor and engineers?", "You do, and you pay them directly. We help you work out which specialists the project needs, compare their proposals like-for-like and choose. We take no commission or referral fee from any of them."),
    ("Do you take commission from contractors or suppliers?", "No. We take no commission, referral fee or discount from any consultant, contractor or supplier. Our only income on your project is the fee you pay us. That is written into our appointment."),
    ("Do you replace the architect or the consultant?", "No. Your registered consultant designs, submits for permits and carries the statutory responsibilities. We represent you alongside them and check the design against your budget and brief at each stage."),
@@ -143,7 +148,8 @@ SERVICES = [
   "faqs": [
    ("What should I check before buying a villa plot in Dubai?", "Title and plot details, the master developer's design guidelines, any build-by deadline, service charges, access and ground conditions, and a realistic total build budget. Our <a href=\"/insights/buying-a-villa-plot-in-dubai-checks/\">plot checklist</a> covers each one."),
    ("Is this legal or valuation advice?", "No. We give a practical, construction-led view. For title and contract terms, take advice from a UAE-qualified lawyer. For value, use a RICS or RERA-registered valuer. We are happy to work alongside both."),
-   ("How quickly can you turn a review around?", "Usually within five working days of receiving the plot documents, sooner when a release window demands it."),
+   ("How quickly can you turn a review around?", "Within five working days of receiving the plot documents, sooner when a release window demands it."),
+   ("What does a plot review cost?", _fee("plot_review", "A fixed fee of {fee}. The final quotation is confirmed in writing after the free call, before we start. See <a href=\"/fees/\">how fees work</a>.", "A fixed fee, quoted in writing before we start. See <a href=\"/fees/\">how fees work</a>.")),
   ],
   "related": ["villa-construction-project-management", "development-advisory", "cost-and-programme-control"],
  },
@@ -337,7 +343,7 @@ SERVICES = [
   "faqs": [
    ("What should I do if my contractor stops work?", "Pause any payment not yet properly valued until you understand the position, keep all records, photograph the site, and take advice from a UAE-qualified lawyer before withholding sums the contract says are due or terminating anything. Then get an independent view of what it will take to finish. Our guide to <a href=\"/insights/stalled-villa-project-dubai/\">the first ten days of a stalled build</a> sets out the order."),
    ("Can a half-built villa be finished by a new contractor?", "Yes, often successfully. The key is an accurate record of the work in place and its quality, so the new contractor can price it fairly."),
-   ("How quickly can you start?", "Usually within a week. The initial review is a fixed fee."),
+   ("How quickly can you start?", "Within a week, with the full picture within two to three weeks. The initial review is a fixed fee" + _fee("rescue_review", " of {fee}, confirmed in writing after the free call") + "."),
   ],
   "related": ["variations-delays-and-claims", "site-visits-and-reporting", "owners-representative"],
  },

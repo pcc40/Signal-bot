@@ -111,7 +111,7 @@ function briefEmail(firstName, optedIn) {
   const text = [
     hello,
     "",
-    "Thank you for sending us your brief. It has reached us safely and Philip Chapman, our founding partner, aims to reply personally within one working day.",
+    "Thank you for sending us your brief. It has reached us safely and Philip Chapman, our founding partner, replies personally within one working day.",
     "",
     "What happens next:",
     "1. We read your brief carefully.",
@@ -143,7 +143,7 @@ function briefEmail(firstName, optedIn) {
 <tr><td style="padding:28px 32px;border-bottom:1px solid #e5e0d8;font-family:Arial,Helvetica,sans-serif;font-size:13px;letter-spacing:.14em;text-transform:uppercase">Eastbridge Strategic Partners</td></tr>
 <tr><td style="padding:32px;font-size:17px;line-height:1.6">
 <p style="margin:0 0 16px">${esc(hello)}</p>
-<p style="margin:0 0 16px">Thank you for sending us your brief. It has reached us safely and Philip Chapman, our founding partner, aims to reply personally within one working day.</p>
+<p style="margin:0 0 16px">Thank you for sending us your brief. It has reached us safely and Philip Chapman, our founding partner, replies personally within one working day.</p>
 <p style="margin:24px 0 8px;font-family:Arial,Helvetica,sans-serif;font-size:13px;letter-spacing:.1em;text-transform:uppercase">What happens next</p>
 <ol style="margin:0 0 16px;padding-left:20px">
 <li style="margin-bottom:6px">We read your brief carefully.</li>

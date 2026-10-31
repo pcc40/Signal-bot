@@ -92,26 +92,34 @@ Limitations. These items are not established by the checks above:
 
 Answers to these are needed before the related wording can be called final. Until then the site keeps the existing accurate wording, or says nothing.
 
+**Owner answers received 31 October 2026 (Philip Chapman).** Items 1, 3, 5, 7, 8 (in part), 9 (in part), 14, 16, 17 (in part), 20, 23 (in part) and 30 are answered below and applied in source (commit "Apply owner answers: fees, commitments, team, Owers House, no architect names"). Decisions: fees published; the four turnaround and reply commitments are firm; Eastbridge has three project managers (published without names); Owers House is the Grand Designs house and was completed in 2014; the owner holds permission for credits but does not want any architect named on the site; a lawyer will review the privacy notice and opt-in wording before launch. All other items remain open.
+
 **Fees, first review and operations**
 1. Fee publication: do you approve publishing the figures in `src/config.py` FEES (plot review AED 9,500; project health check AED 15,000; representation from AED 28,000 a month or 1.75%–3% of construction cost)? If yes, set `PUBLISH_FEES = True`. If not, are there other figures or "from" prices you want shown?
+   - **Answered 31 Oct 2026:** Approved. `PUBLISH_FEES = True`. The figures (plot review AED 9,500; project health check AED 15,000; representation from AED 28,000 a month or 1.75%–3% of construction cost) now show on /fees/, the how-it-starts steps (home, contact), the FAQ, the plot review and stalled-project service FAQs, llms.txt / llms-full.txt and the Organization `priceRange`. Each states that the final quotation is confirmed in writing after the free call.
 2. Quotation basis: the plot review is priced by number of plots, documents available and timetable. The health check is priced by size and stage of the villa, volume of contract and payment records, and site visits needed. Is that right, and is anything else a factor (for example a site visit, or travel to Abu Dhabi)?
 3. Turnaround: can you confirm these as operational commitments?
    - "Usually within five working days of receiving the plot documents" for the plot review
    - "Usually start within a week" for a health check or stalled-project review
    - "The full picture within two to three weeks"
+   - **Answered 31 Oct 2026:** Confirmed as firm. "Usually" removed: plot review within five working days of receiving the plot documents; health check or stalled-project review starts within a week; the full picture within two to three weeks (/fees/, service pages, outreach kit).
 4. Deliverables: are the plot review and the health check always delivered as written reports? Do you want page counts or formats stated?
 5. Reply time: the site currently says "Philip aims to reply personally within one working day" (`RESPONSE_PROMISE`, shown in every contact band). Is that a commitment you can keep, including when travelling, and should it become a firm promise?
+   - **Answered 31 Oct 2026:** Confirmed as firm. `RESPONSE_PROMISE` is now "Philip replies personally within one working day" (every contact band, form, thank-you page, checklist PDF); the contact banner, "What happens next" step and contact meta description, and the acknowledgement email in `netlify/functions/submission-created.js`, were changed to match. Working day and hours are unchanged.
 6. Free call:
    - Is it always 30 minutes?
    - Is it by phone, video, WhatsApp call, or the owner's choice?
    - Who takes it if Philip is unavailable?
    - Do you plan a real booking link (`BOOKING_URL`)? Until then the site says Philip replies to agree a time.
 7. Cover: who covers when Philip is unavailable (illness, travel, holiday)? Is there a named alternate or associate whose name and role we may publish? The site says nothing about cover until then.
+   - **Answered 31 Oct 2026:** Eastbridge has three project managers. Published without names: "Philip Chapman leads every appointment personally, supported by a team of three project managers who attend site and provide cover when he is unavailable" (/about/, /approach/, owner's-representative service page, /faq/, llms.txt). No names, qualifications or nationalities. Organization schema has no `numberOfEmployees` and none was added.
 8. Capacity: how do you manage capacity across several projects? May we say "we take on a limited number of appointments at a time" (with a number?), and that capacity is confirmed before an appointment is accepted?
+   - **Answered 31 Oct 2026:** In part. No capacity number is stated. "Capacity is confirmed before an appointment is accepted" is now on /approach/, /about/ and the owner's-representative page.
 9. Site attendance:
    - Is "scheduled and unannounced site visits, typically weekly during active construction and more often at key stages" your standard offer?
    - Should a minimum attendance be stated?
    - Who attends site when Philip is not in Dubai?
+   - **Answered 31 Oct 2026:** In part. Who attends site when Philip is not in Dubai: the team of three project managers (see item 7). Standard offer and minimum attendance remain open.
 10. Insurance:
     - Does Eastbridge hold professional indemnity insurance?
     - If so, do you want it mentioned (insurer and cover level), with evidence?
@@ -124,24 +132,29 @@ Answers to these are needed before the related wording can be called final. Unti
 14. Grand Designs:
     - Which P Chapman Construction house was featured, and in which series and episode (or broadcast date)?
     - Please send a link or the Channel 4 listing. Until then no property is named and there is no evidence link.
+   - **Answered 31 Oct 2026:** The featured house is Owers House (owner confirmed). No series, episode or broadcast date is given and no evidence link is shown. Every Grand Designs mention now names Owers House.
 15. The Times: please confirm that "Wings of desire" (thetimes.co.uk/article/wings-of-desire-9cgnbh3fg) is the Owers House article, and give its publication date. It could not be read behind the paywall.
 16. Owers House completion: John Pardey Architects lists "Completed (2013)", but your project page says "late 2014". Which is right (practical completion or handover)? The date has been removed until you confirm.
+   - **Answered 31 Oct 2026:** Completed in 2014. Shown as "completed in 2014" on the Owers House page and case study, the home page, /case-studies/, /about/ and llms.txt.
 17. The Old Station Master's House, Fowey:
     - Who was the architect?
     - May we name the developer (Acorn Property Group) and Atelier 3, and what was Atelier 3's role?
     - Do you have LABC's official 2018 South West results page or the certificate? The current evidence is the developer's own announcement.
+   - **Answered 31 Oct 2026:** In part. The owner does not want any architect named, so Atelier 3 has been removed (its role was unconfirmed). Acorn Property Group stays as developer (owner holds permission). The LABC evidence question remains open.
 18. Polgreen Manor: the LABC listing names "Paul Baker" in the team. What was his role, and should he be credited?
 19. Photographers:
     - May Trelowen be credited to Hugh Hastings? The image filenames suggest it, but no credit is given.
     - Is Ansells correctly credited to Global Vision 3D?
     - Who took the photographs for Saqqara, St Michael's Hotel, Menwinnion, Morvoren, Three Mile Beach and Trelowen?
 20. Architects not yet credited: who designed Saqqara, The Lookout, the St Michael's Hotel works, Menwinnion and Morvoren?
+   - **Answered 31 Oct 2026:** No longer needed: the owner does not want any architect named on the site.
 21. Three Mile Beach: did P Chapman Construction build the beach huts, landscaping and shared spaces? This was removed because your project page does not say so.
 22. Morvoren: was the house delivered within the owner's budget, and what records support it? The claim has been removed; only the client's quote remains.
 23. Permissions:
     - Do you hold permission from each architect and photographer to be named on the Eastbridge site?
     - Do you hold permission from each client to use their testimonial and attribution? The P Chapman Construction quotes now appear only on /about/ and /work/.
     - Should one return to the homepage?
+   - **Answered 31 Oct 2026:** In part. The owner holds permission for architect, project-team and photographer credits, but does not want any architect named. All architect names (John Pardey Architects, CSA Architects, Lilly Lewarne Architects, SPS Architectural, Atelier 3), the "Architect" fields, the ARCHITECTS list, the architect `contributor` in project JSON-LD and every johnpardeyarchitects.com link have been removed from site source. Engineers, QS, landscape, lighting, interior and photographer credits remain. RIBA South West 2016, the RIBA House of the Year 2016 longlist and the Cornish Building Awards 2015 commendation are now stated without a link: RIBA's own 2016 winners page (architecture.com) now redirects to a 404 on riba.org, and the RIBA Journal page refuses automated access, so no independent RIBA source could be linked. Award wording: "Owers House, built by P Chapman Construction, won a RIBA South West Award in 2016", as an award to the house and its project team. Client testimonial permissions and the homepage question remain open.
 
 **Calculator**
 24. Renovation sizing: do you have project records or a validated method that relates basic or mid-range renovation cost to floor area or villa age? If not, these stay as fixed whole-villa scope examples.
@@ -158,6 +171,7 @@ Answers to these are needed before the related wording can be called final. Unti
     - state lawful bases (consent for notes, pre-contract steps for enquiries)?
     - name a data-controller contact?
     - describe international transfers in more detail?
+   - **Answered 31 Oct 2026:** A lawyer will review the privacy notice and the opt-in wording before launch. No site change made; the sub-questions stay open pending that review.
 31. Retention:
     - Enquiries that do not lead to an appointment are deleted after 24 months, and the same period is applied to checklist requests. Is that right?
     - Notes subscriptions are kept until the person unsubscribes. Is that right?

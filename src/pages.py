@@ -191,12 +191,11 @@ def area_page(a):
 # ---------------------------------------------------------------- work
 def work_hub():
     crumbs = [("Home", "/"), ("Work", "/work/")]
-    from content.projects import RECOGNITION, ARCHITECTS, TESTIMONIALS, recognition_html
+    from content.projects import RECOGNITION, TESTIMONIALS, recognition_html
     import pages_new
     rec = recognition_html(RECOGNITION[:4])
-    arch = "".join(f"<li>{esc(a)}</li>" for a in ARCHITECTS)
     body = B.banner(crumbs, "Homes built by P Chapman Construction", "Selected work of P Chapman Construction, the company Philip Chapman founded and led for 21 years: private houses, country estates, developments and hotel work.", "owers-house-02", credit_of("owers-house-02")) + f'''
-<section class="section--tight"><div class="wrap"><div class="kpis kpis--text">{rec}</div><p class="small muted" style="margin-top:14px">Awards were made to the houses and the teams that designed and built them. Architects and project teams are credited on each project page.</p></div></section>
+<section class="section--tight"><div class="wrap"><div class="kpis kpis--text">{rec}</div><p class="small muted" style="margin-top:14px">Awards were made to the houses and the teams that designed and built them. Project teams are credited on each project page.</p></div></section>
 <section class="section--tight"><div class="wrap">{work_cards(PROJECTS)}</div></section>
 <section class="section band-dark"><div class="wrap"><div class="head-row"><h2>What P Chapman Construction's clients said</h2><p class="muted">Owners and developers on P Chapman Construction's work.</p></div>{pages_new.quotes_html(TESTIMONIALS[3:6])}</div></section>
 <section class="section"><div class="wrap split"><div><h2>Range of work</h2></div><div><p class="muted" style="margin-top:24px">P Chapman Construction worked under traditional and design-and-build contracts, for private owners, developers, hoteliers, schools and housing associations, with particular expertise in contemporary coastal houses and eco-buildings.</p></div></div></section>
@@ -222,7 +221,7 @@ def project_case_html(p):
 <div class="prose">
 <h3>The work delivered</h3><ul>{li(c["delivered"])}</ul>
 <h3>Documented outcome</h3><ul>{li(c["outcome"])}</ul>
-<p class="small muted">These awards recognise the house and its project team, led by the architect. They are not personal awards to Philip Chapman or awards to Eastbridge. Architect: {esc(p["architect"])}. Photography: {esc(p["photo"])}. Source: <a href="{src_u}" rel="noopener">{esc(src_t)}</a>.</p>
+<p class="small muted">These awards recognise the house and its project team. They are not personal awards to Philip Chapman or awards to Eastbridge. Photography: {esc(p["photo"])}. Source: <a href="{src_u}" rel="noopener">{esc(src_t)}</a>.</p>
 </div></div></div></section>'''
 
 def project_page(p):
@@ -242,12 +241,12 @@ def project_page(p):
     rec_dd = ""
     if p["recognition"]:
         rec_dd = '<div><dt>Recognition</dt><dd>' + "<br>".join(
-            f'{esc(r)} <a href="{esc(u)}" rel="noopener" class="small">Source</a>' for r, u in p["recognition"]) + "</dd></div>"
+            esc(r) + (f' <a href="{esc(u)}" rel="noopener" class="small">Source</a>' if u else "") for r, u in p["recognition"]) + "</dd></div>"
     idx = [x["slug"] for x in PROJECTS].index(p["slug"])
     nxt = PROJECTS[(idx + 1) % len(PROJECTS)]
     body = B.banner(crumbs, esc(p["name"]), esc(p["summary"]), imgs[0]["base"], credit) + f'''
 <section class="section"><div class="wrap split">
-<div><dl class="facts"><div><dt>Location</dt><dd>{esc(p["place"])}</dd></div><div><dt>Project</dt><dd>{esc(p["type"])}</dd></div><div><dt>Built by</dt><dd>P Chapman Construction</dd></div>{('<div><dt>Architect</dt><dd>' + esc(p["architect"]) + '</dd></div>') if p["architect"] else ""}{('<div><dt>Project team</dt><dd>' + esc(p["team"]) + '</dd></div>') if p["team"] else ""}{('<div><dt>Photography</dt><dd>' + esc(p["photo"]) + '</dd></div>') if p["photo"] else ""}{rec_dd}</dl><p class="small muted" style="margin-top:14px">Project details: <a href="{esc(p["source"])}" rel="noopener">P Chapman Construction project page</a></p></div>
+<div><dl class="facts"><div><dt>Location</dt><dd>{esc(p["place"])}</dd></div><div><dt>Project</dt><dd>{esc(p["type"])}</dd></div><div><dt>Built by</dt><dd>P Chapman Construction</dd></div>{('<div><dt>Project team</dt><dd>' + esc(p["team"]) + '</dd></div>') if p["team"] else ""}{('<div><dt>Photography</dt><dd>' + esc(p["photo"]) + '</dd></div>') if p["photo"] else ""}{rec_dd}</dl><p class="small muted" style="margin-top:14px">Project details: <a href="{esc(p["source"])}" rel="noopener">P Chapman Construction project page</a></p></div>
 <div class="prose">{p["text"]}<h2>Why it matters for a Dubai villa</h2><p>{esc(p["dubai"])}</p></div></div></section>
 {project_case_html(p)}
 {video}
@@ -259,10 +258,8 @@ def project_page(p):
                "about": p["type"], "description": p["summary"], "image": [B.url(f"/assets/img/{m['base']}-1280.webp") for m in imgs[:4]],
                "creator": {"@type": "Organization", "name": C.FOUNDER["company_uk"], "url": C.FOUNDER["company_uk_url"], "description": "Main contractor"},
                "locationCreated": {"@type": "Place", "name": p["place"]},
-               "subjectOf": [{"@type": "WebPage", "url": p["source"]}] + [{"@type": "WebPage", "url": u} for _, u in p["recognition"]]}]
-    if p["architect"]:
-        schema[0]["contributor"] = {"@type": "Organization", "name": p["architect"].replace(" (original design)", ""), "description": "Architect"}
-    awards = [r for r, _ in p["recognition"] if not r.startswith("Reported") and "longlist" not in r]
+               "subjectOf": [{"@type": "WebPage", "url": p["source"]}] + [{"@type": "WebPage", "url": u} for _, u in p["recognition"] if u]}]
+    awards = [r for r, _ in p["recognition"] if not r.startswith(("Reported", "Featured")) and "longlist" not in r]
     if awards:
         schema[0]["award"] = awards  # awarded to the house and its project team
     B.page(path, f"{p['name']}, {p['place'].replace(', Cornwall', '')} | Eastbridge Work",
@@ -294,7 +291,7 @@ def approach():
 </tbody></table>
 <p>Read more in <a href="/insights/owners-representative-vs-project-manager-vs-consultant/">owner's representative vs project manager vs consultant</a>.</p></div></div></section>
 <section class="section" id="uae-appointments"><div class="wrap split"><div><h2>How an appointment works in the UAE</h2><p class="muted">What you can expect from us on a villa in Dubai or Abu Dhabi, and where our role stops.</p></div><div class="prose">
-<h3>Who leads your project</h3><p>Our founder, Philip Chapman, leads every Eastbridge appointment personally. He is the person you speak to from the first conversation to handover.</p>
+<h3>Who leads your project</h3><p>Our founder, Philip Chapman, leads every Eastbridge appointment personally, supported by a team of three project managers who attend site and provide cover when he is unavailable. Philip is the person you speak to from the first conversation to handover. Capacity is confirmed before an appointment is accepted.</p>
 <h3>Site attendance and reporting</h3><p>How often we attend site, which meetings we attend on your behalf and the reports you receive are agreed in writing in the scope of each appointment, before work starts. Attendance follows the stage of the project: typically weekly during active construction, and more often at key stages such as waterproofing, first fix and pre-handover. Agreeing this up front means the time committed to your project is clear from the start.</p>
 <h3>Consultants, quantity surveyors, engineers and specialists</h3><p>Where the project needs a registered consultant, a quantity surveyor, an engineer or another specialist, you appoint them and pay them directly. We help you define what is needed, compare proposals like-for-like and choose. We take no commission or referral fee from any of them, and money never passes through us.</p>
 <h3>What we do, and what we don't</h3>
@@ -339,7 +336,13 @@ def fees():
     show = C.PUBLISH_FEES
     def fixed(k):
         # A figure appears only when the owner has approved publishing (config.PUBLISH_FEES).
-        return f'Fixed fee: <strong>{esc(f[k])}</strong>, confirmed in writing before we start.' if show else "Fixed fee, quoted in writing before we start."
+        return (f'Fixed fee: <strong>{esc(f[k])}</strong>. The final quotation is confirmed in writing after the free call, before we start.'
+                if show else "Fixed fee, quoted in writing before we start.")
+    def basis(factors):
+        if show:
+            return (f"<p>The figure above is for a typical review. If yours differs, for example in {factors}, we say so on the free call. "
+                    "We confirm the fee and the scope in writing before we start.</p>")
+        return f"<p>By {factors}. We confirm the fee and the scope in writing before we start.</p>"
     rep_fee = (f'Monthly fee from <strong>{esc(f["monthly_from"])}</strong>, or <strong>{esc(f["percent_band"])}</strong> of construction cost. '
                if show else "Monthly fee, or a percentage of construction cost. ")
     steps = [
@@ -362,20 +365,20 @@ def fees():
 <section class="section starts" aria-labelledby="fees-starts-h"><div class="wrap"><div class="head-row"><div><span class="kicker">How it starts</span><h2 id="fees-starts-h">From a free call to an appointment</h2></div><p class="muted">The call is free. After that, you decide at each step whether to go on.</p></div>
 {B.steps_html(steps)}</div></section>
 <section class="section paper" id="first-review"><div class="wrap split"><div><span class="kicker">First paid step</span><h2>Plot and pre-purchase review</h2>
-<dl class="facts"><div><dt>Who it's for</dt><dd>Buyers considering a villa plot, before they commit</dd></div><div><dt>How it's charged</dt><dd>{fixed("plot_review")}</dd></div><div><dt>Timing</dt><dd>Usually within five working days of receiving the plot documents</dd></div></dl>
+<dl class="facts"><div><dt>Who it's for</dt><dd>Buyers considering a villa plot, before they commit</dd></div><div><dt>How it's charged</dt><dd>{fixed("plot_review")}</dd></div><div><dt>Timing</dt><dd>Within five working days of receiving the plot documents</dd></div></dl>
 <p class="small"><a class="link" href="/services/plot-due-diligence/">About the plot review</a></p></div><div class="prose">
 <h3>Scope</h3><ul><li>The master developer's design guidelines: coverage, heights, setbacks and materials</li><li>Build-by deadlines and any penalties in the sale terms</li><li>Access, levels, neighbouring plots and practical buildability</li><li>A realistic build budget range for the house you want, and the total cost of ownership</li></ul>
 <h3>You receive</h3><ul><li>A short written report you can read in fifteen minutes</li><li>A total project budget range, not just a plot price</li><li>The risks that matter, and a list of questions to put to the seller or developer</li></ul>
 <h3>Not included</h3><ul><li>Legal advice on title or the sale contract: take advice from a UAE-qualified lawyer</li><li>Valuation: use a RICS or RERA-registered valuer</li><li>Design, surveys, ground investigation or authority submissions</li></ul>
-<h3>How the quotation is set</h3><p>By the number of plots you want reviewed, the documents available and the timetable you are working to. We confirm the fee and the scope in writing before we start.</p>
+<h3>How the quotation is set</h3>{basis("the number of plots you want reviewed, the documents available and the timetable you are working to")}
 </div></div></section>
 <section class="section"><div class="wrap split"><div><span class="kicker">First paid step</span><h2>Project health check</h2>
-<dl class="facts"><div><dt>Who it's for</dt><dd>Owners whose project is under way and stalled, late, over budget or in dispute</dd></div><div><dt>How it's charged</dt><dd>{fixed("rescue_review")}</dd></div><div><dt>Timing</dt><dd>We can usually start within a week; the full picture within two to three weeks</dd></div></dl>
+<dl class="facts"><div><dt>Who it's for</dt><dd>Owners whose project is under way and stalled, late, over budget or in dispute</dd></div><div><dt>How it's charged</dt><dd>{fixed("rescue_review")}</dd></div><div><dt>Timing</dt><dd>We start within a week; the full picture within two to three weeks</dd></div></dl>
 <p class="small"><a class="link" href="/services/stalled-project-rescue/">About stalled project rescue</a></p></div><div class="prose">
 <h3>Scope</h3><ul><li>An independent review of progress, quality, payments and the contract position</li><li>A realistic cost and time to complete</li><li>The options: continue, renegotiate or replace the contractor</li></ul>
 <h3>You receive</h3><ul><li>The full picture: where the project stands on progress, quality, payments and the contract</li><li>Clear options, each with its costs and risks</li><li>A recovery plan for the option you choose</li></ul>
 <h3>Not included</h3><ul><li>Legal advice on withholding payment, termination or disputes: take advice from a UAE-qualified lawyer</li><li>Statutory supervision, certification of work or engineering investigation, which remain with the registered consultant and any engineer you appoint</li><li>Running the recovery through to completion, which would be a separate appointment if you want one</li></ul>
-<h3>How the quotation is set</h3><p>By the size and stage of the villa, the volume of contract and payment records to review, and the site visits the review needs. We confirm the fee and the scope in writing before we start.</p>
+<h3>How the quotation is set</h3>{basis("the size and stage of the villa, the volume of contract and payment records to review, and the site visits the review needs")}
 </div></div></section>
 <section class="section paper"><div class="wrap prose table-wrap"><h2>After the first review</h2>
 <p>Later stages are quoted once we understand the project. Each quotation sets out the scope and the fee in writing before any work starts.</p>
@@ -394,18 +397,17 @@ def fees():
 
 def about():
     crumbs = [("Home", "/"), ("About", "/about/")]
-    from content.projects import RECOGNITION, ARCHITECTS, TESTIMONIALS, recognition_html
+    from content.projects import RECOGNITION, TESTIMONIALS, recognition_html
     import pages_new
-    rec = recognition_html(RECOGNITION[:4])
-    arch = "".join(f"<li>{esc(a)}</li>" for a in ARCHITECTS)
+    rec = recognition_html(RECOGNITION)
     body = B.banner(crumbs, "About Eastbridge", "A client-side practice built on 21 years running a £17m-turnover premium building company whose houses won RIBA and LABC recognition.", "owers-house-04", credit_of("owers-house-04")) + f'''
 <section class="section" id="founder"><div class="wrap feature">
 <figure class="portrait">{pic("philip-chapman-01", "Philip Chapman, Founding Partner of Eastbridge Strategic Partners", "(max-width:900px) 100vw, 42vw")}</figure>
 <div><span class="kicker">Founding Partner</span><h2>Philip Chapman</h2><p class="muted">British. Based in Dubai.</p><div class="prose">
-<p>Philip Chapman founded <a href="{C.FOUNDER["company_uk_url"]}" rel="noopener">P Chapman Construction</a> and led it for 21 years, growing it into a premium contractor with an annual turnover of around £17 million and a reputation for exceptionally demanding private houses built for leading architects.</p>
-<p>Houses the company built have been recognised in their own right. Owers House, designed by John Pardey Architects and built by P Chapman Construction, won a RIBA South West Award in 2016 (<a href="https://www.johnpardeyarchitects.com/modern-architecture/one-off-houses-architecture/owers-house/" rel="noopener">source</a>) and was reported in <a href="https://www.thetimes.co.uk/article/wings-of-desire-9cgnbh3fg" rel="noopener">The Times</a>. The Old Station Master's House in Fowey won Best Small New Housing Development in the LABC Building Excellence Awards South West 2018 (<a href="https://www.acornpropertygroup.org/old-station-masters-house-wins-labc-award/" rel="noopener">source</a>), and Polgreen Manor, designed by CSA Architects, was Highly Commended in the 2020 South West awards (<a href="https://www.labc.co.uk/news/labc-south-west-winners-amp-highly-commended-2020" rel="noopener">source</a>). A home built by the company was featured on Channel 4's Grand Designs. These awards belong to the houses and the teams that designed and built them. Alongside one-off houses it delivered country-house restorations, multi-unit developments, hotel and spa work, and schools, under both traditional and design-and-build contracts.</p>
-<p>Two decades as the builder meant pricing tenders, programming complex sites, managing subcontractors, administering JCT contracts, preparing and defending extension of time and variation claims, and handing finished homes to owners and architects who expected them to be perfect. It also meant seeing, from the inside, exactly where owners lose money and time.</p>
-<p>In Dubai and Abu Dhabi, Philip works on the other side of the table: for the owner, never the builder. He leads every Eastbridge appointment personally and is the person you speak to from the first conversation to handover.</p>
+<p>Philip Chapman founded <a href="{C.FOUNDER["company_uk_url"]}" rel="noopener">P Chapman Construction</a> and led it for 21 years, growing it into a premium contractor with an annual turnover of around £17 million and a reputation for exceptionally demanding private houses.</p>
+<p>Houses the company built have been recognised in their own right. Owers House, built by P Chapman Construction and completed in 2014, was featured on Channel 4's Grand Designs, won a RIBA South West Award in 2016 and was reported in <a href="https://www.thetimes.co.uk/article/wings-of-desire-9cgnbh3fg" rel="noopener">The Times</a>. The Old Station Master's House in Fowey won Best Small New Housing Development in the LABC Building Excellence Awards South West 2018 (<a href="https://www.acornpropertygroup.org/old-station-masters-house-wins-labc-award/" rel="noopener">source</a>), and Polgreen Manor was Highly Commended in the 2020 South West awards (<a href="https://www.labc.co.uk/news/labc-south-west-winners-amp-highly-commended-2020" rel="noopener">source</a>). These awards belong to the houses and the teams that designed and built them. Alongside one-off houses it delivered country-house restorations, multi-unit developments, hotel and spa work, and schools, under both traditional and design-and-build contracts.</p>
+<p>Two decades as the builder meant pricing tenders, programming complex sites, managing subcontractors, administering JCT contracts, preparing and defending extension of time and variation claims, and handing finished homes to owners and design teams who expected them to be perfect. It also meant seeing, from the inside, exactly where owners lose money and time.</p>
+<p>In Dubai and Abu Dhabi, Philip works on the other side of the table: for the owner, never the builder. He leads every Eastbridge appointment personally, supported by a team of three project managers who attend site and provide cover when he is unavailable, and he is the person you speak to from the first conversation to handover.</p>
 <p>Away from work he is a high-altitude mountaineer, which may explain a fondness for planning, contingency and getting everyone home safely.</p>
 </div></div></div></section>
 <section class="section--tight" id="recognition"><div class="wrap"><div class="kpis kpis--text">{rec}</div></div></section>
@@ -421,7 +423,7 @@ def about():
 </ul></div></div></section>
 <section class="section paper"><div class="wrap split"><div><h2>Working with us in the UAE</h2></div><div class="prose">
 <ul>
-<li>Philip leads every appointment personally.</li>
+<li>Philip leads every appointment personally, supported by a team of three project managers who attend site and provide cover when he is unavailable. Capacity is confirmed before an appointment is accepted.</li>
 <li>Site attendance and reporting are agreed in writing in the scope of each appointment, before work starts.</li>
 <li>Registered consultants, quantity surveyors, engineers and other specialists are appointed and paid by you directly when the project needs them. We help you compare proposals and choose.</li>
 <li>Our role is commercial and project management on your side. Statutory design, authority submissions and supervision stay with your registered consultant, and legal advice with your UAE-qualified lawyer.</li>
@@ -437,12 +439,13 @@ FAQ_ALL = [
  ("What is an owner's representative?", "An owner's representative is a professional who acts only for the person paying for a building project. On a villa, we set the budget and programme, help appoint the consultant and contractor, control cost and time, report progress, handle variations and claims, and lead handover."),
  ("Do I need an owner's representative to build a villa in Dubai?", "It isn't required by law. It is most valuable on bespoke villas, major renovations, and projects where the owner is often abroad or has not built before. We will tell you honestly if you don't need us."),
  ("How is that different from the consultant I have to appoint?", "In Dubai, a registered consultant carries the statutory design, submission and supervision responsibilities. They owe you proper professional care in that role. We add independent coordination and commercial scrutiny alongside them, acting only for you on cost, time, decisions, contracts and quality."),
- ("Who will lead my project?", "Our founder, Philip Chapman, leads every Eastbridge appointment personally and is the person you speak to from the first conversation to handover."),
+ ("Who will lead my project?", "Our founder, Philip Chapman, leads every Eastbridge appointment personally and is the person you speak to from the first conversation to handover. He is supported by a team of three project managers who attend site and provide cover when he is unavailable."),
+ ("Who attends site, and who covers when Philip is away?", "Philip leads every appointment and attends site himself. He is supported by a team of three project managers who attend site and provide cover when he is unavailable, for example when he is travelling. How often we attend site is agreed in writing in your appointment."),
  ("How often will you be on site?", "It is agreed in writing in the scope of your appointment, before work starts. Attendance follows the stage of the project: typically weekly during active construction and more often at key stages. See <a href=\"/approach/#uae-appointments\">how an appointment works in the UAE</a>."),
  ("Who appoints the quantity surveyor, engineers and other specialists?", "You do, and you pay them directly. We help you work out what is needed, compare proposals like-for-like and choose. We take no commission or referral fee from anyone we help you appoint."),
  ("Do you handle permits, supervision or legal advice?", "No. Statutory design, authority submissions and supervision are the duties of the registered consultant you appoint, and legal advice should come from a UAE-qualified lawyer. Our role is commercial and project management on your side, alongside them."),
  ("Do you take commission from contractors?", "Never. We are paid only by you. See our <a href=\"/independence/\">independence pledge</a>."),
- ("How do your fees work?", "The first call is free and takes about 30 minutes. If we can help, the first paid step is usually a fixed-fee review, either a plot and pre-purchase review or a health check on a project under way, scoped and quoted in writing before we start. Any later appointment is proposed separately, with its fee agreed up front. See <a href=\"/fees/\">how fees work</a>."),
+ ("How do your fees work?", "The first call is free and takes about 30 minutes. If we can help, the first paid step is usually a fixed-fee review, either a plot and pre-purchase review or a health check on a project under way, scoped and quoted in writing before we start." + (f" The plot review is {C.FEES['plot_review']} and the health check {C.FEES['rescue_review']}; representation during design and construction is from {C.FEES['monthly_from']} a month, or {C.FEES['percent_band']} of construction cost. The final quotation is confirmed in writing after the free call." if C.PUBLISH_FEES else "") + " Any later appointment is proposed separately, with its fee agreed up front. See <a href=\"/fees/\">how fees work</a>."),
  ("How do I arrange the free call?", "Send the short form on our <a href=\"/contact/\">contact page</a>, message us on WhatsApp or call. Philip replies personally to agree a time that suits you; there is no automatic booking."),
  ("What does it cost to build a villa in Dubai?", "Published 2025–26 guides put construction at roughly AED 300–500 per sq ft for a standard villa, AED 900–1,400 for luxury, and AED 1,200 and above for ultra-luxury, before land, design fees, approvals, interiors and landscaping. See our <a href=\"/insights/villa-construction-cost-dubai/\">full cost guide</a>."),
  ("How long does it take?", "Market guides put plot to keys at roughly 12 to 24 months, and 24 to 36 months for custom luxury villas. See <a href=\"/insights/how-to-build-a-villa-in-dubai/\">how to build a villa in Dubai</a>."),
@@ -477,8 +480,8 @@ def contact():
     def err(i, msg):
         return f'<p class="err" id="{i}-err" hidden>{msg}</p>'
     steps = B.start_steps()
-    next_steps = [("We aim to reply within one working day", "A personal reply from Philip, by the method you choose in the form.")] + steps
-    body = B.banner(crumbs, "Arrange a free 30-minute call", "Tell us a little about your project and how you would like us to reply. Philip aims to reply personally within one working day to agree a time; the form does not book a slot automatically. Nothing you send is published, and it is shared only with the service providers named in our privacy notice.", "the-lookout-02", credit_of("the-lookout-02")) + f'''
+    next_steps = [("We reply within one working day", "A personal reply from Philip, by the method you choose in the form.")] + steps
+    body = B.banner(crumbs, "Arrange a free 30-minute call", "Tell us a little about your project and how you would like us to reply. Philip replies personally within one working day to agree a time; the form does not book a slot automatically. Nothing you send is published, and it is shared only with the service providers named in our privacy notice.", "the-lookout-02", credit_of("the-lookout-02")) + f'''
 <section class="section--tight"><div class="wrap split contact-grid">
 <div class="contact-side">
 <h2 class="h-sm">Prefer to talk?</h2>
@@ -509,7 +512,7 @@ def contact():
 </form></div></section>'''
     schema = [{"@context": "https://schema.org", "@type": "ContactPage", "url": B.url("/contact/"), "about": {"@id": B.ORG_ID}}]
     B.page("/contact/", "Contact Eastbridge: Arrange a Free 30-Minute Call | Dubai",
-           "Arrange a free 30-minute call about your villa build or renovation in Dubai or Abu Dhabi. We aim to reply within one working day, by email, phone or WhatsApp.",
+           "Arrange a free 30-minute call about your villa build or renovation in Dubai or Abu Dhabi. Philip replies personally within one working day, by email, phone or WhatsApp.",
            body, crumbs, schema)
 
     thanks_steps = [

@@ -11,7 +11,7 @@ WHATSAPP = "971567440057"                         # digits only
 # EB_INDEXABLE=0 python3 build.py  -> noindex on every page and "Disallow: /" in robots.txt.
 # Canonicals, hreflang and SITE_URL are unchanged either way.
 INDEXABLE = os.environ.get("EB_INDEXABLE", "1").strip().lower() not in ("0", "false", "no", "off")
-PUBLISH_FEES = False # True shows the fee figures in FEES below on /fees/
+PUBLISH_FEES = True  # Approved by the owner on 31 October 2026. True shows the FEES figures on /fees/ and elsewhere
 # Home hero film. Keep False until the Vimeo video's privacy setting allows embedding on SITE_URL's
 # domain (Vimeo > video > Settings > Privacy > "Where can this be embedded?" > Specific domains).
 # While False, the hero shows the photo slideshow only. When True, the film loads on desktop only,
@@ -19,7 +19,7 @@ PUBLISH_FEES = False # True shows the fee figures in FEES below on /fees/
 HERO_VIDEO = False
 HERO_VIDEO_VIMEO_ID = "219974514"
 
-# Proposed fee figures — only shown when PUBLISH_FEES is True. Set them yourself.
+# Fee figures approved for publication by the owner (31 October 2026). Shown only when PUBLISH_FEES is True.
 FEES = {
     "plot_review": "AED 9,500",
     "rescue_review": "AED 15,000",
@@ -39,8 +39,8 @@ ADDRESS = {
     "country_name": "United Arab Emirates",
 }
 HOURS = "Monday to Friday, 9am–6pm Gulf Standard Time"
-# Softened to an aim until the owner confirms one working day as an operational commitment (review brief, section 4).
-RESPONSE_PROMISE = "Philip aims to reply personally within one working day"
+# Confirmed by the owner as a firm commitment (31 October 2026). "Working day" follows HOURS.
+RESPONSE_PROMISE = "Philip replies personally within one working day"
 FOUNDED_TRACK_RECORD_YEARS = 21
 SOCIAL = [
     "https://www.instagram.com/eastbridgestrategicpartners/",
