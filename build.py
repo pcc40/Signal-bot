@@ -310,7 +310,7 @@ def footer():
 <p>{esc(C.ADDRESS["street"])}<br>{esc(C.ADDRESS["locality"])}, {esc(C.ADDRESS["country_name"])}</p></div>
 <div><h3>Services</h3><ul>{svc}<li><a href="/services/">All services</a></li></ul></div>
 <div><h3>Where we work</h3><ul>{ar}<li><a href="/areas/">All areas</a></li></ul></div>
-<div><h3>Firm</h3><ul><li><a href="/why-a-client-side-project-manager/">Why client-side</a></li><li><a href="/case-studies/">Case study</a></li><li><a href="/work/">Work</a></li><li><a href="/about/">About</a></li><li><a href="/approach/">How we work</a></li><li><a href="/independence/">Independence pledge</a></li><li><a href="/fees/">How fees work</a></li><li><a href="/tools/villa-build-cost-calculator/">Cost calculator</a></li><li><a href="/insights/">Insights</a></li><li><a href="/faq/">Questions</a></li><li><a href="/glossary/">Glossary</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+<div><h3>Firm</h3><ul><li><a href="/why-a-client-side-project-manager/">Why client-side</a></li><li><a href="/case-studies/">Case study</a></li><li><a href="/work/">Work</a></li><li><a href="/about/">About</a></li><li><a href="/approach/">How we work</a></li><li><a href="/independence/">Independence pledge</a></li><li><a href="/fees/">How fees work</a></li><li><a href="/tools/villa-build-cost-calculator/">Cost calculator</a></li><li><a href="/insights/">Insights</a></li><li><a href="/guides/villa-owner-checklist/">Pre-construction checklist</a></li><li><a href="/faq/">Questions</a></li><li><a href="/glossary/">Glossary</a></li><li><a href="/contact/">Contact</a></li></ul></div>
 </div>
 <div class="legal"><span>© {year} {C.LEGAL}. {C.LICENCE}. Eastbridge acts as the client's project manager and representative. It is not a contractor and does not replace the registered consultant of record required by the authorities.</span>
 <span><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/sitemap.xml">Sitemap</a></span></div>
@@ -355,6 +355,7 @@ if(fm){fm.setAttribute('novalidate','');
   if(bad){e.preventDefault();bad.focus();return}
   var sb=fm.querySelector('button[type=submit]');if(sb){sb.setAttribute('aria-disabled','true');sb.classList.add('is-sending')}
   if(window.gtag)gtag('event','generate_lead',{form:'brief'})})}
+var gf=document.querySelector('form[data-guide]');if(gf){gf.addEventListener('submit',function(){if(window.gtag)gtag('event','generate_lead',{form:'checklist'})})}
 document.querySelectorAll('a[href^="https://wa.me"]').forEach(function(a){a.addEventListener('click',function(){if(window.gtag)gtag('event','contact',{method:'whatsapp'})})});
 })();
 </script>"""

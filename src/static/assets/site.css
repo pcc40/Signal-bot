@@ -491,7 +491,7 @@ body.has-hero .site-head:not(.stuck) .btn{background:#fff;color:var(--ink);borde
 .aside-card .btn{background:#fff;color:var(--ink);border-color:#fff}
 .aside-links{margin-top:24px;font-size:var(--s--1)}
 .aside-links a{display:block;padding:10px 0;border-top:1px solid var(--line);text-decoration:none}
-@media (max-width:980px){.article-grid{grid-template-columns:1fr}.article-aside{position:static}}
+@media (max-width:980px){.article-grid{grid-template-columns:minmax(0,1fr)}.article-aside{position:static}}
 .side-sticky{position:sticky;top:110px}
 .side-sticky figure{margin:28px 0 0}
 .side-sticky img{width:100%;aspect-ratio:4/5;object-fit:cover}
@@ -714,7 +714,7 @@ html[dir="rtl"],html[dir="rtl"] body{overflow-x:clip}
 img{color:transparent}
 .form input,.form select,.form textarea,.form fieldset,[id]{scroll-margin-top:110px;scroll-margin-bottom:84px}
 
-/* ===================================================================
+/* ============================================================
    Tools: villa build and renovation cost calculator (/tools/villa-build-cost-calculator/)
    ========================================================================== */
 .calc{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,80px);align-items:start}
@@ -815,3 +815,26 @@ body.has-hero .g-az{top:83px}
 .g-foot{padding-top:clamp(32px,4vw,56px)}
 @media (max-width:900px){.g-intro{grid-template-columns:1fr}.g-letter{grid-template-columns:1fr}.g-letter > h2{font-size:var(--s-4)}}
 @media (max-width:640px){.g-az ul{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;-webkit-overflow-scrolling:touch}}
+=======
+/* Lead magnet: pre-construction checklist */
+.guide-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:start}
+.guide-cover img{width:100%;max-width:440px;height:auto;box-shadow:0 30px 60px -20px rgba(10,14,16,.45),0 2px 6px rgba(10,14,16,.12);border:1px solid var(--line)}
+.guide-cover--small img{max-width:300px}
+.guide-h{font-size:var(--s-2);margin:0 0 .3em}
+.guide-form{margin-top:1.4em;max-width:520px}
+.guide-chapters{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 clamp(24px,3vw,48px);counter-reset:gc}
+.guide-chapters li{counter-increment:gc;border-top:1px solid var(--line);padding:22px 0 26px}
+.guide-chapters li::before{content:counter(gc,decimal-leading-zero);display:block;color:var(--brass);font-size:var(--s--1);font-weight:600;letter-spacing:.12em;margin-bottom:10px}
+.guide-chapters h3{font-size:var(--s-1);margin:0 0 .4em}
+.guide-chapters p{margin:0;color:var(--ink-soft);font-size:var(--s--1)}
+.guide-cta{display:grid;grid-template-columns:120px minmax(0,1fr);gap:clamp(20px,3vw,36px);align-items:center;background:var(--stone);border-left:2px solid var(--brass-light);padding:clamp(20px,3vw,32px);margin:2.6em 0 1.4em}
+.guide-cta__cover img{width:100%;height:auto;display:block;box-shadow:0 14px 28px -12px rgba(10,14,16,.5)}
+.guide-cta__kicker{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:0 0 .5em}
+.guide-cta .guide-cta__title{font-size:var(--s-2)!important;margin:0 0 .4em!important;line-height:1.15}
+.guide-cta p{margin:0 0 1em;max-width:58ch}
+.guide-cta--compact{margin:clamp(32px,4vw,56px) 0 0;background:var(--white);border:1px solid var(--line);border-left:2px solid var(--brass-light)}
+@media (max-width:900px){.guide-grid{grid-template-columns:1fr}.guide-cover img{max-width:300px}.guide-chapters{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.guide-chapters{grid-template-columns:1fr}.guide-cta{grid-template-columns:84px minmax(0,1fr);align-items:start}}
+/* Off-canvas mobile nav must never widen the page (pages without a hero banner) */
+html,body{overflow-x:clip}
+@media (max-width:640px){.prose table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}}

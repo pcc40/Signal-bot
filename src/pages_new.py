@@ -184,6 +184,7 @@ def home(posts, post_cards, stages_html, svc_img):
 <section class="section" aria-labelledby="ins-h"><div class="wrap">
 <div class="head-row"><h2 id="ins-h">Insights</h2><p class="muted">Straight answers for villa owners, written from the builder's side. <a class="link" href="/insights/">All insights</a></p></div>
 {post_cards(posts[:3])}
+{__import__("pages_guides").cta_block(compact=True)}
 </div></section>
 
 <section class="section--tight" aria-labelledby="hfaq-h"><div class="wrap split"><h2 id="hfaq-h">Questions</h2>{B.faq_html(faqs)}</div></section>
