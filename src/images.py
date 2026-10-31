@@ -1,0 +1,18 @@
+SEL = {
+ "sea-glass-house": ("113-sea-glass-house-st-mawes", [13,10,6,8,9,0,4,12,7,1]),
+ "quay-house": ("56-quay-house-st-mawes", [27,16,14,11,0,6,20,24,15,3,18,10,17,19,1]),
+ "saqqara": ("111-saqqara-feock", [10,5,2,1,6,11,14,3,9,4,13,12]),
+ "owers-house": ("54-new-project-page", [19,1,12,5,2,9,17,10,3,0,11,15,16,20]),
+ "the-lookout": ("51-the-lookout-mylor", [0,8,2,4,10,5,7,9,1,3,11]),
+ "polgreen-manor": ("99-polgreen-manor-newquay", [6,1,2,3,7,0,4,5,10]),
+ "trelowen": ("60-trelowen-st-agnes", [5,8,15,2,13,0,4,7,1,3]),
+ "gooden-heane": ("73-gooden-heane", [0,2,15,9,4,12,3,8,16,11,13]),
+ "ansells": ("96-ansells-portscatho", [14,4,11,2,9,15,8,6,10,12,0]),
+ "three-mile-beach": ("127-three-mile-beach-gwithian", [0,6,19,3,15,7,2,9,21,22]),
+ "menwinnion": ("125-menwinnion-mylor", [17,5,12,22,23,10,3,7,9,16,2,20]),
+ "esplanade-road": ("148-esplanade-road-newquay", [1,4,5,7,0,2,3,6,9,10]),
+ "blue-seas": ("35-blue-seas-at-constantine", [7,2,0,15,1,3,9,10,12,14,8,11]),
+ "morvoren": ("118-new-morvoren-feock", [11, 6, 7, 10, 0, 12, 9, 8, 5]),
+ "st-michaels": ("78-st-michaels-hotel", [5, 0, 4, 3, 14, 7, 10, 13, 11, 18, 17]),
+ "old-station-masters-house": ("71-old-stationmasters-house-fowey", [17, 16, 4, 13, 12, 7, 14, 11]),
+}

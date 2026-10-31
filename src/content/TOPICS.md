@@ -1,0 +1,40 @@
+# Insight backlog — the SEO engine publishes from the top down
+# Format: - [ ] slug | working title | target query | angle from the builder's side
+- [ ] dubai-municipality-villa-building-permit | Dubai villa building permits: what happens, step by step | dubai municipality building permit villa | what the consultant submits, what the owner signs, where programmes slip
+- [ ] nakheel-noc-villa-renovation | Nakheel NOC for villa renovations explained | nakheel noc renovation | what triggers an NOC, sequencing with contractor mobilisation
+- [ ] villa-renovation-cost-dubai | What a villa renovation really costs in Dubai | villa renovation cost dubai | the three hidden costs in older villas
+- [ ] renovate-or-rebuild-villa-dubai | Renovate or knock down and rebuild? | renovate vs rebuild villa dubai | cost per sq ft of finished space, time, approvals
+- [ ] how-long-to-build-a-villa-dubai | How long does it take to build a villa in Dubai? | how long to build a villa in dubai | where the months actually go
+- [ ] villa-provisional-sums-explained | Provisional sums: the line in your villa contract that moves | provisional sums construction | how contractors price them
+- [ ] retention-and-performance-bonds-uae | Retention and performance bonds on a UAE villa build | retention construction uae | what to hold, when to release
+- [ ] extension-of-time-claims-villa | Extension of time claims on villa projects: an owner's guide | extension of time claim uae | how claims are built and tested
+- [ ] liquidated-damages-villa-contract | Delay damages in villa contracts: do they protect you? | liquidated damages uae construction | why the number matters less than the records
+- [ ] villa-pool-construction-dubai | Building a pool at your Dubai villa: cost, approvals, pitfalls | villa pool construction dubai | waterproofing and plant room lessons
+- [ ] villa-waterproofing-dubai | Waterproofing a Dubai villa: where leaks start | villa waterproofing dubai | roofs, terraces, wet rooms, basements
+- [ ] villa-mep-air-conditioning-design | Air conditioning in a new villa: getting it right first time | villa ac design dubai | capacity, noise, plant space, glazing
+- [ ] glazing-large-openings-villa | Large glass on a Dubai villa: heat, cost and lead times | villa glazing dubai | sliding systems, solar gain, tolerances
+- [ ] villa-interior-fit-out-integration | Bringing the interior designer in early | villa fit out dubai | the cheapest decision an owner can make
+- [ ] villa-basement-construction-dubai | Basements in Dubai villas: dewatering, waterproofing and cost | villa basement dubai | ground conditions and risk
+- [ ] smart-home-villa-dubai | Home automation in a new villa: specify it before first fix | smart villa dubai | containment, coordination, commissioning
+- [ ] villa-landscaping-cost-dubai | Landscaping a Dubai villa: budget and sequence | villa landscaping cost dubai | why landscape is never a provisional sum
+- [ ] snagging-developer-villa-handover | Snagging a developer villa before you accept it | villa snagging dubai | the 20 items we check first
+- [ ] defects-liability-period-uae | The defects period: what to do in the first year | defects liability period uae | keeping leverage after handover
+- [ ] ten-year-liability-uae-structures | Decennial liability in the UAE: what it covers | decennial liability uae | general explanation; take legal advice
+- [ ] choosing-an-architect-dubai-villa | Choosing an architect for a Dubai villa | villa architect dubai | fee proposals compared like-for-like
+- [ ] design-fees-villa-dubai | Villa design fees in Dubai: what's normal | villa design fees dubai | scope gaps between design packages
+- [ ] cost-plan-villa-design-stages | Cost plans at each design stage | construction cost plan | catching the over-design early
+- [ ] value-engineering-without-losing-quality | Value engineering that doesn't cheapen the house | value engineering villa | what to cut and what never to cut
+- [ ] fixed-price-vs-remeasure-villa | Fixed price or remeasure: which villa contract suits you? | lump sum vs remeasure | risk allocation in plain English
+- [ ] contractor-payment-applications | Reading a contractor's monthly payment application | construction payment application | over-measure, front-loading, materials on site
+- [ ] variations-control-villa | Controlling variations on a villa build | construction variations | the change request form that saves money
+- [ ] stalled-villa-project-dubai | What to do when your villa build stalls | stalled construction project dubai | first ten days checklist
+- [ ] changing-contractor-mid-project | Replacing a contractor mid-build | change contractor mid project | records, bonds, handover of site
+- [ ] emirates-hills-plot-build-cost | Building in Emirates Hills: what the budget must cover | emirates hills villa build cost | scale effects on cost
+- [ ] palm-jumeirah-rebuild-guide | Rebuilding a Palm Jumeirah villa: process and programme | palm jumeirah villa rebuild | demolition to handover
+- [ ] dubai-islands-plot-guide | Building on a Dubai Islands plot | dubai islands plots | infrastructure timing and guidelines
+- [ ] hudayriyat-plot-build-guide | Building on Hudayriyat: from plot to villa | hudayriyat plots | busy-market procurement
+- [ ] abu-dhabi-villa-permit-tamm | Villa permits in Abu Dhabi: TAMM and the municipality | abu dhabi building permit villa | how it differs from Dubai
+- [ ] jct-vs-uae-villa-contracts | JCT vs UAE villa contracts: a guide for British owners | jct vs fidic | what changes, what doesn't
+- [ ] remote-villa-reporting-template | The weekly report every remote villa owner should get | construction progress report template | include a free template
+- [ ] villa-build-insurance-uae | Insurance on a villa build: CAR, liability and who holds it | contractor all risks uae | general guide; take broker advice
+- [ ] off-plan-villa-customisation | Customising an off-plan villa before handover | customise off plan villa dubai | what developers allow and when
