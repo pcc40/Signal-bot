@@ -34,7 +34,7 @@ Known gap: the calculator's live-updating lines (the per-square-foot rate line, 
 - `reports/visibility.csv` — search and AI-assistant visibility log; `src/content/TOPICS.md` — article backlog
 
 ## Go-live checklist (Phil)
-1. **Domain and config** (`src/config.py`): confirm `SITE_URL` is the live domain; keep `INDEXABLE = True` for production (set `False` only on a staging deploy).
+1. **Domain and config** (`src/config.py`): confirm `SITE_URL` is the live domain; `INDEXABLE` defaults to True, so a normal build is indexable. For a preview, build with `EB_INDEXABLE=0` instead of editing the file (see "Noindex preview build" below).
 2. **Fees**: `PUBLISH_FEES = False` hides all fee figures. To publish, set your own figures in `FEES` and set `PUBLISH_FEES = True`.
 3. **Hero film**: `HERO_VIDEO = False` by default (see the section below). Enable only after the Vimeo embed domain is allowed.
 4. **Analytics and verification**: set `GA4_ID` (e.g. `G-XXXXXXX`), `GSC_VERIFICATION` (Google Search Console HTML-tag code) and optionally `BING_VERIFICATION`. Rebuild and deploy, then verify the property in Search Console and Bing Webmaster Tools and submit `https://www.eastbridgepartners.ae/sitemap.xml` in both.
@@ -57,6 +57,15 @@ python3 build.py && python3 tools/i18n.py apply
 python3 tools/seo_audit.py        # must report 0 errors
 python3 -m http.server 8765 --directory dist
 ```
+
+### Noindex preview build
+To publish a preview that search engines must not index (for example a Netlify drag-and-drop preview for review):
+```
+EB_INDEXABLE=0 python3 build.py && python3 tools/i18n.py apply
+grep -c noindex dist/index.html     # 1 = every page carries noindex,nofollow
+cat dist/robots.txt                 # User-agent: * / Disallow: /
+```
+`EB_INDEXABLE` accepts `0`, `false`, `no` or `off`; anything else, or leaving it unset, gives the normal indexable production build. Canonicals, hreflang, the sitemap and `SITE_URL` are not changed by this switch. Rebuild without the variable before the production deploy. On Netlify you can set `EB_INDEXABLE=0` as an environment variable scoped to deploy previews or branch deploys only, never to production.
 
 ## Where things are
 - `build.py`, `src/pages.py`, `src/pages_new.py` — page templates; `src/content/` — copy, projects, case study model, articles (`insights/*.md`)

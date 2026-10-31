@@ -191,17 +191,20 @@ async function langChecks(p, lang, en) {
     ph: (li.textContent.match(/\{\w+\}/g) || []).sort().join(',') })));
   const byKey = Object.fromEntries(tr.map(t => [t.key, t]));
   const untranslated = [];
+  // Terms TRANSLATION_BRIEF.md says stay in Latin script in every language ("AED", "sq ft", "m²").
+  // A message made only of these, numbers and placeholders is correct when left unchanged.
+  const latinOnly = x => !/[A-Za-z]{2,}/.test(x.replace(/\{\w+\}/g, '').replace(/\bAED\b|\bsq ft\b/g, ''));
   en.forEach(m => {
     const t = byKey[m.key];
     if (!t) { fail(`${lang}: message ${m.key} missing from the page`); return; }
     if (t.ph !== m.ph) fail(`${lang}: message ${m.key} has placeholders "${t.ph}" instead of "${m.ph}"`);
-    if (/[A-Za-z]{2,}/.test(m.text) && t.text === m.text && !m.key.startsWith('dev:')) untranslated.push(m.key);
+    if (/[A-Za-z]{2,}/.test(m.text) && !latinOnly(m.text) && t.text === m.text && !m.key.startsWith('dev:')) untranslated.push(m.key);
   });
   // English fragments: the literal parts of each message with at least two words.
   const frags = [];
   en.filter(m => !m.key.startsWith('dev:')).forEach(m => m.text.split(/\{\w+\}/).forEach(x => {
     x = x.trim().replace(/^[·,;:.\s]+|[·,;:.\s]+$/g, '');
-    if (x.split(/\s+/).length >= 2 && /[A-Za-z]{2,}/.test(x)) frags.push(x);
+    if (x.split(/\s+/).length >= 2 && /[A-Za-z]{2,}/.test(x) && !latinOnly(x)) frags.push(x);
   }));
   const leaks = new Set();
   let sumsOk = true;

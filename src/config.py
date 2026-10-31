@@ -1,4 +1,5 @@
 """Site-wide settings. Change values here, rebuild, redeploy."""
+import os
 
 # --- Change before launch -------------------------------------------------
 SITE_URL = "https://www.eastbridgepartners.ae"   # final domain, no trailing slash
@@ -6,7 +7,10 @@ EMAIL = "enquiries@eastbridgepartners.ae"
 PHONE_DISPLAY = "+971 56 744 0057"
 PHONE_E164 = "+971567440057"
 WHATSAPP = "971567440057"                         # digits only
-INDEXABLE = True     # False adds noindex everywhere (use for a staging deploy)
+# True for production. A preview build can switch it off without editing this file:
+# EB_INDEXABLE=0 python3 build.py  -> noindex on every page and "Disallow: /" in robots.txt.
+# Canonicals, hreflang and SITE_URL are unchanged either way.
+INDEXABLE = os.environ.get("EB_INDEXABLE", "1").strip().lower() not in ("0", "false", "no", "off")
 PUBLISH_FEES = False # True shows the fee figures in FEES below on /fees/
 # Home hero film. Keep False until the Vimeo video's privacy setting allows embedding on SITE_URL's
 # domain (Vimeo > video > Settings > Privacy > "Where can this be embedded?" > Specific domains).
