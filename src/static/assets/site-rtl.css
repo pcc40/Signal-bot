@@ -838,6 +838,19 @@ body.has-hero .g-az{top:83px}
 /* Off-canvas mobile nav must never widen the page (pages without a hero banner) */
 html,body{overflow-x:clip}
 @media (max-width:640px){.prose table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}}
+/* Worked example: "modelled" labels, disclosure on dark bands, output list, evidence context */
+.mod{display:inline-block;margin-inline-start:.45em;padding:0 5px;border:1px solid var(--brass);border-radius:2px;font-family:var(--sans);font-size:.66rem;font-weight:600;line-height:1.5;letter-spacing:.06em;text-transform:uppercase;color:var(--brass);vertical-align:middle;white-space:nowrap}
+.band-dark .mod,.dark .mod{color:var(--muted-dark);border-color:var(--line-dark)}
+.band-dark .notice,.dark .notice{color:var(--ink)}
+.outputs{display:grid;grid-template-columns:1fr 1fr;gap:0 28px;border-top:1px solid var(--line);margin:26px 0 34px}
+.outputs div{padding:16px 0;border-bottom:1px solid var(--line)}
+.outputs b{display:block;font-family:var(--serif);font-weight:400;font-size:var(--s-1);line-height:1.2}
+.outputs span{display:block;margin-top:6px;font-size:var(--s--1);color:var(--ink-soft)}
+.band-dark .outputs,.band-dark .outputs div{border-color:var(--line-dark)}
+.band-dark .outputs span{color:var(--muted-dark)}
+@media (max-width:600px){.outputs{grid-template-columns:1fr}}
+.evidence-list{list-style:none;padding:0;margin:0;max-width:860px}
+.evidence-list li{padding:14px 0;border-top:1px solid var(--line)}
 /* RTL extras */
 .hero::after{background:linear-gradient(270deg,rgba(10,14,16,.74) 0%,rgba(10,14,16,.42) 42%,rgba(10,14,16,.05) 78%),linear-gradient(180deg,rgba(10,14,16,.45) 0%,rgba(10,14,16,0) 22%,rgba(10,14,16,0) 58%,rgba(10,14,16,.62) 100%)}
 [dir="rtl"] .chart,[dir="rtl"] .triad,[dir="rtl"] .chart *{direction:ltr}

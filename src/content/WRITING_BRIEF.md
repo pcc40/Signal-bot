@@ -69,4 +69,4 @@ General market estimates (frame as estimates, not facts): owner's rep/PM fees ro
 
 
 ## Positioning
-Use 'client-side project manager' as the primary description (owner's representative as a synonym). The illustrative Island E case study is at /case-studies/island-e-waterfront-villa/ and the value explainer at /why-a-client-side-project-manager/ — link to them where relevant.
+Use 'client-side project manager' as the primary description (owner's representative as a synonym). The Island E worked project example (hypothetical: never describe it as a case study, a completed project or a result, and never quote its modelled savings) is at /case-studies/island-e-waterfront-villa/; the real UK project case study is Owers House at /work/owers-house/#case-study and the value explainer at /why-a-client-side-project-manager/ — link to them where relevant.

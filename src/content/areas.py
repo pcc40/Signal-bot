@@ -137,7 +137,7 @@ AREAS = [
 <li><strong>Outdoor works.</strong> Pools, pergolas and landscaping are often under-specified. Published guides put pools at AED 80,000 to 250,000 and landscaping at AED 100 to 500 per sq ft of garden.</li>
 </ul>
 <h2>How we help</h2>
-<p>For plot builds, we represent you from brief to handover. For renovations, we help you scope properly, compare contractor quotes like-for-like and keep the works on budget, with snagging at the end.</p>""",
+<p>For plot builds, we represent you from brief to handover. For renovations, we help you scope properly, compare contractor quotes like-for-like and keep cost and programme under control, with snagging at the end.</p>""",
   "faqs": [
    ("Can I build my own villa in Dubai Hills Estate?", "Yes, on plots released for private villas, subject to the master developer's guidelines and the authority permit."),
    ("Do I need approval to extend my Dubai Hills villa?", "Yes. Extensions and external changes need a master developer NOC and an authority permit. Interior-only changes may need less, but check before starting."),
