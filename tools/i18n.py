@@ -190,10 +190,15 @@ def page_path(f):
 def lang_url(path, lang):
     return path if lang == "en" else f"/{lang}{path}"
 
+# Python 3.11's html.parser drops a bare '&' near the end of a fragment ("FF&E" -> "FFE"); escape it first.
+BARE_AMP = re.compile(r"&(?!#\d+;|#[xX][0-9a-fA-F]+;|[A-Za-z][A-Za-z0-9]*;)")
+
+CUR_ATTR = ' aria-current="true"'
+
 def switcher(path, cur):
     items = "".join(
         f'<li><a href="{lang_url(path, l)}" hreflang="{(LANGS[l][1] if l != "en" else "en")}" lang="{(LANGS[l][1] if l != "en" else "en")}" data-lang="{l}"'
-        f'{" aria-current=\"true\"" if l == cur else ""}>{NATIVE[l]}</a></li>' for l in ALL)
+        f'{CUR_ATTR if l == cur else ""}>{NATIVE[l]}</a></li>' for l in ALL)
     return f'<nav class="langs" aria-label="Language" translate="no"><ul>{items}</ul></nav>'
 
 def add_alternates(soup, path):
@@ -252,7 +257,7 @@ def translate_page(f, lang, tr, missing):
             if v is not None:
                 src_imgs = [dict(i.attrs) for i in node.find_all(["img", "source"])]
                 node.clear()
-                frag = BeautifulSoup(v, "html.parser")
+                frag = BeautifulSoup(BARE_AMP.sub("&amp;", v), "html.parser")
                 # take image files and sizes from the current English page, keep the translated alt text
                 for i, img_attrs in zip(frag.find_all(["img", "source"]), src_imgs):
                     alt = i.get("alt")
