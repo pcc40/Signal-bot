@@ -284,7 +284,8 @@ def independence():
 <section class="section"><div class="wrap"><ul class="pledge">{lis}</ul></div></section>
 <section class="section paper"><div class="wrap split"><div><h2>Why it matters</h2></div><div class="prose">
 <p>When the person checking the contractor's invoices also earns a referral fee from that contractor, the check is not independent. When a design-and-build company's in-house project manager reports to the same owner as the builders, the check is not independent. When a consultant reviews the cost of a design they produced, the check is not independent.</p>
-<p>None of these arrangements is necessarily dishonest. They are simply not independent. If you want an independent check, it has to come from someone whose only interest is yours.</p></div></div></section>
+<p>None of these arrangements is necessarily dishonest. They are simply not independent. If you want an independent check, it has to come from someone whose only interest is yours.</p>
+<p>Read more: <a href="/fees/">how our fees work</a>, <a href="/approach/">how we work</a> and <a href="/why-a-client-side-project-manager/">why a client-side project manager pays for itself</a>.</p></div></div></section>
 {B.cta_band()}'''
     B.page("/independence/", "Independence Pledge: No Contractor Commissions | Eastbridge",
            "Eastbridge is paid only by the client. No commissions, referral fees or rebates from contractors, consultants or suppliers. We don't build and we don't design.",
@@ -484,7 +485,8 @@ def insights(posts):
 </div></section></article>
 <section class="section paper"><div class="wrap"><h2>Read next</h2>{post_cards(rel)}</div></section>
 {B.cta_band()}'''
-        art = {"@context": "https://schema.org", "@type": "Article", "headline": p["title"], "description": p["description"],
+        art = {"@context": "https://schema.org", "@type": "BlogPosting", "@id": B.url(path) + "#article",
+               "headline": p["title"], "description": p["description"], "url": B.url(path),
                "datePublished": d.isoformat(), "dateModified": u.isoformat(), "author": {"@id": B.PERSON_ID},
                "publisher": {"@id": B.ORG_ID}, "mainEntityOfPage": B.url(path), "inLanguage": "en-GB",
                "image": B.url(B.og_image(hero_img)), "wordCount": p["words"],
@@ -492,28 +494,15 @@ def insights(posts):
         sch = [art] + ([B.faq_schema(faqs)] if faqs else [])
         B.page(path, p["title"] + (" | Eastbridge" if len(p["title"]) <= 52 else ""), p["description"], body, c, sch, og_type="article",
                og=B.og_image(hero_img))
-    # RSS
-    items = "".join(f"<item><title>{esc(p['title'])}</title><link>{B.url('/insights/' + p['slug'] + '/')}</link><guid>{B.url('/insights/' + p['slug'] + '/')}</guid><pubDate>{format_datetime(datetime.datetime.combine(datetime.date.fromisoformat(str(p['date'])), datetime.time(6, 0), tzinfo=datetime.timezone.utc))}</pubDate><description>{esc(p['description'])}</description></item>" for p in posts)
-    (B.DIST / "insights").mkdir(parents=True, exist_ok=True)
-    (B.DIST / "insights/feed.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Eastbridge Insights</title><link>{B.url("/insights/")}</link><description>Guides for villa owners in Dubai and Abu Dhabi.</description><language>en-gb</language>{items}</channel></rss>', encoding="utf-8")
+    # insights/feed.xml is written by build.write_feed()
 
-# ---------------------------------------------------------------- 404, llms.txt, misc
+# ---------------------------------------------------------------- 404, misc
 def misc(posts):
     B.page("/404.html", "Page not found | Eastbridge", "This page could not be found.",
            B.page_head([("Home", "/")], "We can't find that page.", "It may have moved. Try the services, our insights, or get in touch.") +
            '<section class="section--tight"><div class="wrap"><p><a class="btn" href="/">Home</a> <a class="btn btn--ghost" href="/services/">Services</a> <a class="btn btn--ghost" href="/contact/">Contact</a></p></div></section>',
            noindex=True)
-    lines = [f"# {C.NAME}", "",
-             "> Independent, client-side owner's representative and villa project management for private clients building or renovating villas in Dubai and Abu Dhabi. Founded by a builder who ran a premium UK residential construction company for 21 years. Paid only by the client; no contractor commissions. Not a contractor or engineering consultancy: works alongside the client's registered consultant.", "",
-             f"- Contact: {C.EMAIL}, {C.PHONE_DISPLAY} (WhatsApp available)",
-             f"- Legal entity: {C.LEGAL}, {C.LICENCE}", "- Serves: Dubai and Abu Dhabi, UAE; many villa owners live in the UK and Europe",
-             f"- Founder: {C.FOUNDER['name']}, who founded and led P Chapman Construction (UK premium residential contractor) for 21 years: {B.url('/about/#founder')}",
-             "- Portfolio: homes built by P Chapman Construction (UK), the contractor founded and led by Philip Chapman; awards include a RIBA South West Award (2016) and LABC Building Excellence Awards (2018, 2020); a home featured on Channel 4's Grand Designs", f"- Case study: {B.url('/case-studies/island-e-waterfront-villa/')} (illustrative, modelled scenario)", "",
-             "## Services"] + [f"- [{s['name']}]({B.url('/services/' + s['slug'] + '/')}): {s['description']}" for s in SERVICES] + \
-            ["", "## Areas"] + [f"- [{a['name']}]({B.url('/areas/' + a['slug'] + '/')}): {a['tag']}; master developer {a['developer']}" for a in AREAS] + \
-            ["", "## Guides"] + [f"- [{p['title']}]({B.url('/insights/' + p['slug'] + '/')}): {p['description']}" for p in posts] + \
-            ["", "## About", f"- [About]({B.url('/about/')})", f"- [How we work]({B.url('/approach/')})", f"- [Independence pledge]({B.url('/independence/')})", f"- [Fees]({B.url('/fees/')})", f"- [FAQ]({B.url('/faq/')})"]
-    (B.DIST / "llms.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    # llms.txt and llms-full.txt are written by build.write_llms()
 
 def build_all(posts):
     import pages_new

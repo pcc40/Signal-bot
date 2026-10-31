@@ -9,7 +9,7 @@
 
 ## Daily (every run)
 1. Build and audit: `pip install --break-system-packages markdown pyyaml beautifulsoup4 && python3 build.py && python3 tools/i18n.py apply && python3 tools/seo_audit.py`. Fix any error.
-2. Live check (once the domain is live): fetch the home page, sitemap.xml, robots.txt, llms.txt and three random pages; report anything not returning 200.
+2. Live check (once the domain is live): fetch the home page, sitemap.xml, robots.txt, llms.txt, llms-full.txt, insights/feed.xml and three random pages; report anything not returning 200.
 3. Visibility check: web-search 6 of the target queries below (rotate daily) and record whether the site appears in the top 10 and which competitor holds position 1. Append one line per query to reports/visibility.csv (date, query, our position or "-", top result domain).
 4. Competitor watch: check the insights/blog pages of Tanmu PMS, DNA Project Management, Project Wizards, Bauhaus Project Management, DMDC, Luxedesign, Dar Al Naseeb, PRASOON. If any published a new article on a topic we don't cover, add it to the TOPICS backlog (not a copy — our own angle).
 5. Freshness: if a cited figure in an existing article has a newer official source, update the article and its `updated:` date. Never change `date:`.

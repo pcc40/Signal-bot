@@ -47,6 +47,133 @@ for k, v in titles.items():
     if len(v) > 1: errors.append(f"duplicate title '{k}': {v}")
 for k, v in descs.items():
     if len(v) > 1: warns.append(f"duplicate description on {v}")
+
+# ---------------------------------------------------------------- structure, schema, media, machine files
+sys.path.insert(0, os.path.join(ROOT, "src"))
+import config as C
+import xml.etree.ElementTree as ET
+LANG_DIRS = ("ar", "ru", "zh", "hi")
+
+def rel_of(f):
+    return f.replace(D, "")
+
+def path_of(rel):
+    return rel[:-len("index.html")] if rel.endswith("index.html") else rel
+
+def is_en(rel):
+    return rel.split("/")[1] not in LANG_DIRS
+
+ids_defined, ids_types, ids_refs = {}, {}, {}
+inbound = {}
+en_pages = {}
+for f in files:
+    s = open(f, encoding="utf-8").read()
+    rel = rel_of(f)
+    # og:image must be a real file
+    m = re.search(r'<meta (?=[^>]*property="og:image")[^>]*content="([^"]+)"', s)
+    if not m:
+        errors.append(f"no og:image on {rel}")
+    else:
+        u = m.group(1)
+        if not u.startswith(C.SITE_URL + "/"):
+            errors.append(f"og:image not on site domain on {rel}: {u}")
+        elif not os.path.exists(D + u[len(C.SITE_URL):].split("?")[0]):
+            errors.append(f"og:image file missing on {rel}: {u}")
+    # every <img> carries width and height (prevents layout shift)
+    for tag in re.findall(r"<img\b[^>]*>", s):
+        if not re.search(r'\swidth="\d+"', tag) or not re.search(r'\sheight="\d+"', tag):
+            errors.append(f"img without width/height on {rel}: {tag[:90]}")
+    if not is_en(rel) or "404" in rel:
+        continue
+    path = path_of(rel)
+    noindex = 'content="noindex' in s
+    en_pages[path] = noindex
+    # JSON-LD @id bookkeeping (English pages; translations mirror them)
+    def visit(o, top):
+        if isinstance(o, list):
+            for x in o: visit(x, False)
+        elif isinstance(o, dict):
+            i = o.get("@id")
+            if i:
+                if not i.startswith(C.SITE_URL + "/"):
+                    errors.append(f"JSON-LD @id not an absolute site URL on {rel}: {i}")
+                t = o.get("@type")
+                t = set(t if isinstance(t, list) else [t]) if t else set()
+                if t:
+                    ids_types.setdefault(i, []).append((t, rel))
+                if top:
+                    ids_defined.setdefault(i, set()).add(rel)
+                else:
+                    ids_refs.setdefault(i, set()).add(rel)
+            for k, v in o.items():
+                if k != "@id": visit(v, False)
+    for j in re.findall(r'<script type="application/ld\+json">(.*?)</script>', s, re.S):
+        try: visit(json.loads(j), True)
+        except Exception: pass
+    # internal links: within <main> for the 'thin linking' check, anywhere for the orphan check
+    main = s.split("<main", 1)[-1].split("</main>", 1)[0]
+    main_links = {h.split("#")[0] for h in re.findall(r'href="(/[^"?]*)', main)} - {path, ""}
+    if not noindex and len(main_links) < 3 and path not in ("/privacy/", "/terms/", "/contact/"):  # utility pages
+        warns.append(f"only {len(main_links)} internal links in the main content of {rel}")
+    for h in {h.split("#")[0] for h in re.findall(r'href="(/[^"?]*)', s)}:
+        if h != path:
+            inbound.setdefault(h, set()).add(path)
+
+for i, refs in ids_refs.items():
+    if i not in ids_defined:
+        errors.append(f"JSON-LD @id {i} is referenced (on {sorted(refs)[0]}) but never defined as a full node")
+for i, ts in ids_types.items():
+    for t, rel in ts:
+        if not t & ts[0][0]:
+            errors.append(f"JSON-LD @id {i} has inconsistent @type: {sorted(ts[0][0])} on {ts[0][1]} vs {sorted(t)} on {rel}")
+            break
+for path, noindex in en_pages.items():
+    if path != "/" and not noindex and not inbound.get(path):
+        errors.append(f"orphan page (no internal links point to it): {path}")
+
+# sitemap, feed and llms files
+sm_urls = []
+try:
+    sm = ET.parse(os.path.join(D, "sitemap.xml")).getroot()
+    ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+    for u in sm.findall("s:url", ns):
+        loc = u.find("s:loc", ns).text
+        lm = u.find("s:lastmod", ns)
+        if lm is None or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", lm.text or ""):
+            errors.append(f"sitemap entry without a valid lastmod: {loc}")
+        sm_urls.append(loc)
+        p = loc[len(C.SITE_URL):]
+        if not os.path.exists(D + p + ("index.html" if p.endswith("/") else "")):
+            errors.append(f"sitemap URL has no page: {loc}")
+    en_sm = {u[len(C.SITE_URL):] for u in sm_urls if is_en(u[len(C.SITE_URL):] + "x")}
+    for path, noindex in en_pages.items():
+        if not noindex and path not in en_sm:
+            errors.append(f"indexable page missing from sitemap: {path}")
+except Exception as e:
+    errors.append(f"sitemap.xml invalid: {e}")
+try:
+    feed = ET.parse(os.path.join(D, "insights/feed.xml")).getroot()
+    if len(feed.findall("channel/item")) == 0:
+        errors.append("insights/feed.xml has no items")
+    for it in feed.findall("channel/item"):
+        p = it.find("link").text[len(C.SITE_URL):]
+        if not os.path.exists(D + p + "index.html"):
+            errors.append(f"feed item links to a missing page: {p}")
+except Exception as e:
+    errors.append(f"insights/feed.xml invalid: {e}")
+for name in ("llms.txt", "llms-full.txt", "robots.txt", ".well-known/security.txt"):
+    if not os.path.exists(os.path.join(D, name)):
+        errors.append(f"missing /{name}")
+if os.path.exists(os.path.join(D, "llms.txt")):
+    for u in re.findall(r"\((https?://[^)\s]+)\)", open(os.path.join(D, "llms.txt"), encoding="utf-8").read()):
+        if u.startswith(C.SITE_URL):
+            p = u[len(C.SITE_URL):].split("#")[0]
+            if not os.path.exists(D + p + ("index.html" if p.endswith("/") else "")):
+                errors.append(f"llms.txt links to a missing page: {u}")
+for a in ("/assets/logo.png", "/favicon.svg", "/apple-touch-icon.png", "/site.webmanifest"):
+    if not os.path.exists(D + a):
+        errors.append(f"missing {a}")
+
 print(f"Audited {len(files)} pages: {len(errors)} errors, {len(warns)} warnings")
 for e in errors: print("ERROR", e)
 for w in warns[:40]: print("warn ", w)

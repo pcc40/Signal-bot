@@ -15,6 +15,27 @@ import markdown, yaml
 
 DIST = ROOT / "dist"
 TODAY = datetime.date.today().isoformat()
+
+def _site_date():
+    """Deterministic 'last changed' date for pages without a date of their own: SITE_LASTMOD (YYYY-MM-DD) if set,
+    else the date of the latest git commit, else today. Rebuilding the same commit gives the same output."""
+    env = os.environ.get("SITE_LASTMOD", "").strip()
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", env):
+        return env
+    try:
+        import subprocess
+        out = subprocess.run(["git", "-C", str(ROOT), "log", "-1", "--format=%cs"],
+                             capture_output=True, text=True, timeout=10).stdout.strip()
+        if re.fullmatch(r"\d{4}-\d{2}-\d{2}", out):
+            return out
+    except Exception:
+        pass
+    return TODAY
+
+SITE_DATE = _site_date()
+# Meydan Grandstand (Meydan Racecourse), Nad Al Sheba, Dubai: 25°09'22"N 55°18'24"E
+# Source: https://en.wikipedia.org/wiki/Meydan_Racecourse
+GEO = {"@type": "GeoCoordinates", "latitude": 25.1561, "longitude": 55.3065}
 MANIFEST = json.loads((ROOT / "src/img_manifest.json").read_text())
 CSS_HASH = hashlib.md5((ROOT / "src/static/assets/site.css").read_bytes()).hexdigest()[:8]
 
@@ -67,7 +88,7 @@ def org_schema():
         "alternateName": C.SHORT,
         "legalName": C.LEGAL,
         "url": C.SITE_URL + "/",
-        "logo": url("/assets/logo.png"),
+        "logo": {"@type": "ImageObject", "url": url("/assets/logo.png"), "width": 512, "height": 512},
         "image": url(og_image("quay-house-01")),
         "description": ("Independent, client-side owner's representative and villa project management for private "
                         "clients building or renovating homes in Dubai and Abu Dhabi. No contractor commissions."),
@@ -82,10 +103,54 @@ def org_schema():
                        "Extension of time claims", "Construction contract administration", "Snagging and handover",
                        "Dubai Municipality building permits", "Master developer NOC approvals"],
         "openingHours": "Su-Th 09:00-18:00",
+        "openingHoursSpecification": [HOURS_SPEC],
+        "geo": GEO,
+        "hasMap": f"https://www.google.com/maps/search/?api=1&query={GEO['latitude']},{GEO['longitude']}",
+        "priceRange": (f"From {C.FEES['monthly_from']} a month" if C.PUBLISH_FEES else "Fees quoted per project"),
+        "currenciesAccepted": "AED",
+        "contactPoint": [{"@type": "ContactPoint", "contactType": "customer service", "email": C.EMAIL,
+                          "telephone": C.PHONE_E164, "availableLanguage": ["English"], "areaServed": "AE",
+                          "hoursAvailable": HOURS_SPEC}],
+        "hasOfferCatalog": offer_catalog(),
         "sameAs": C.SOCIAL,
         "slogan": "Your villa, managed from your side of the table.",
         "founder": {"@id": PERSON_ID},
     }
+
+HOURS_SPEC = {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+              "opens": "09:00", "closes": "18:00"}
+
+def offer_catalog():
+    from content.services import SERVICES
+    return {"@type": "OfferCatalog", "name": "Services",
+            "itemListElement": [{"@type": "Offer", "itemOffered": {
+                "@type": "Service", "@id": url(f"/services/{s['slug']}/#service"), "name": s["name"],
+                "url": url(f"/services/{s['slug']}/")}} for s in SERVICES]}
+
+def org_ref():
+    """Inline publisher/provider node. Google reads each page on its own, so a bare @id is not enough."""
+    return {"@type": "Organization", "@id": ORG_ID, "name": C.NAME, "url": C.SITE_URL + "/",
+            "logo": {"@type": "ImageObject", "url": url("/assets/logo.png"), "width": 512, "height": 512}}
+
+def person_ref():
+    return {"@type": "Person", "@id": PERSON_ID, "name": C.FOUNDER["name"], "url": url("/about/#founder"),
+            "jobTitle": C.FOUNDER["role"]}
+
+def enrich_schema(o, body="", top=True):
+    """Expand bare {"@id": org/founder} references into named nodes, and mark article key points as speakable."""
+    if isinstance(o, list):
+        return [enrich_schema(x, body, False) for x in o]
+    if not isinstance(o, dict):
+        return o
+    if not top and set(o) == {"@id"}:
+        if o["@id"] == ORG_ID:
+            return org_ref()
+        if o["@id"] == PERSON_ID:
+            return person_ref()
+    out = {k: enrich_schema(v, body, False) for k, v in o.items()}
+    if top and out.get("@type") in ("Article", "BlogPosting") and 'class="keypoints"' in body and "speakable" not in out:
+        out["speakable"] = {"@type": "SpeakableSpecification", "cssSelector": ["h1", ".keypoints"]}
+    return out
 
 def website_schema():
     return {"@context": "https://schema.org", "@type": "WebSite", "@id": C.SITE_URL + "/#website",
@@ -216,6 +281,8 @@ if(b&&n){b.addEventListener('click',function(){setNav(!n.classList.contains('ope
 document.querySelectorAll('.has-mega > a').forEach(function(a){a.addEventListener('click',function(e){if(window.innerWidth<=1100){e.preventDefault();a.parentNode.classList.toggle('open')}})});
 var h=document.querySelector('.site-head');if(document.body.classList.contains('has-hero')&&h){var f=function(){h.classList.toggle('stuck',window.scrollY>140)};f();window.addEventListener('scroll',f,{passive:true})}
 document.querySelectorAll('.video button').forEach(function(btn){btn.addEventListener('click',function(){var v=btn.parentNode,fr=document.createElement('iframe');fr.src=v.dataset.src;fr.title=v.dataset.title;fr.allow='autoplay; fullscreen; picture-in-picture';fr.allowFullscreen=true;v.innerHTML='';v.appendChild(fr)})});
+var sl=document.querySelectorAll('.slides img[data-src]');
+if(sl.length&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){window.addEventListener('load',function(){setTimeout(function(){sl.forEach(function(i){if(i.dataset.srcset)i.srcset=i.dataset.srcset;i.src=i.dataset.src})},2000)})}
 var hv=document.querySelector('.hero-video');
 if(hv&&window.matchMedia('(min-width:900px)').matches&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&!(navigator.connection&&navigator.connection.saveData)){
  window.addEventListener('load',function(){setTimeout(function(){var fr=document.createElement('iframe');fr.src=hv.dataset.src;fr.title='Drone film of Quay House';fr.allow='autoplay; fullscreen';fr.setAttribute('tabindex','-1');fr.setAttribute('aria-hidden','true');fr.addEventListener('load',function(){setTimeout(function(){hv.classList.add('on')},1800)});hv.appendChild(fr)},1200)})}
@@ -232,6 +299,32 @@ def analytics():
     return (f'<script async src="https://www.googletagmanager.com/gtag/js?id={C.GA4_ID}"></script>'
             f"<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','{C.GA4_ID}',{{anonymize_ip:true}});</script>")
 
+def lcp_preload(body, preload=None):
+    """Preload the likely LCP image (the first fetchpriority=high <img>) with the same srcset/sizes the
+    browser will choose from, so the preload and the <img> never fetch two different files."""
+    m = re.search(r'<img\b[^>]*fetchpriority="high"[^>]*>', body)
+    if m:
+        tag = m.group(0)
+        srcset = re.search(r'srcset="([^"]+)"', tag)
+        sizes = re.search(r'sizes="([^"]+)"', tag)
+        src = re.search(r'src="([^"]+)"', tag)
+        if srcset and src:
+            return (f'<link rel="preload" as="image" href="{src.group(1)}" imagesrcset="{srcset.group(1)}" '
+                    f'imagesizes="{sizes.group(1) if sizes else "100vw"}" fetchpriority="high">')
+    return f'<link rel="preload" as="image" href="{preload}" fetchpriority="high">' if preload else ""
+
+def deprioritise_slides(body):
+    """Hero slides after the first stay hidden for 9 seconds or more, yet sit in the viewport, so the browser
+    would fetch them straight away and compete with the first slide and the fonts. Hold their URLs in
+    data-src/data-srcset; SCRIPT swaps them in after the page has loaded."""
+    def img(t):
+        t = re.sub(r'\s(src|srcset)="', r' data-\1="', t)
+        blank = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+        return t.replace("<img ", f'<img fetchpriority="low" src="{blank}" ', 1)
+    def fix(m):
+        return re.sub(r'<img\b(?![^>]*fetchpriority)[^>]*loading="lazy"[^>]*>', lambda x: img(x.group(0)), m.group(0))
+    return re.sub(r'<div class="slides">.*?</div>', fix, body, count=1, flags=re.S)
+
 def page(path, title, description, body, crumbs=None, schema=None, og=None, og_type="website",
          preload=None, noindex=False, hero=False):
     crumbs = crumbs or [("Home", "/")]
@@ -240,7 +333,9 @@ def page(path, title, description, body, crumbs=None, schema=None, og=None, og_t
         schema = [org_schema(), website_schema()] + schema
     else:
         schema = [crumbs_schema(crumbs)] + schema
-    ld = "".join(f'<script type="application/ld+json">{json.dumps(s, ensure_ascii=False)}</script>' for s in schema)
+    schema = [enrich_schema(s, body) for s in schema]
+    body = deprioritise_slides(body)
+    ld ="".join(f'<script type="application/ld+json">{json.dumps(s, ensure_ascii=False)}</script>' for s in schema)
     og_img = url(og or og_image("quay-house-01"))
     robots = "noindex,nofollow" if (noindex or not C.INDEXABLE) else "index,follow,max-image-preview:large,max-snippet:-1"
     verif = ""
@@ -250,7 +345,7 @@ def page(path, title, description, body, crumbs=None, schema=None, og=None, og_t
         verif += f'<meta name="msvalidate.01" content="{C.BING_VERIFICATION}">'
     hero = hero or body.lstrip().startswith(('<section class="banner"', '<section class="hero"', '<article><section class="banner"'))
     body_cls = ' class="has-hero"' if hero else ""
-    pre = f'<link rel="preload" as="image" href="{preload}" fetchpriority="high">' if preload else ""
+    pre = lcp_preload(body, preload)
     doc = f'''<!doctype html>
 <html lang="en-GB" dir="ltr">
 <head>
@@ -278,6 +373,7 @@ def page(path, title, description, body, crumbs=None, schema=None, og=None, og_t
 <link rel="alternate" type="application/rss+xml" title="Eastbridge Insights" href="/insights/feed.xml">
 <link rel="preload" href="/assets/fonts/iserif-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/instrument-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-500.woff2" as="font" type="font/woff2" crossorigin>
 {pre}
 <link rel="stylesheet" href="/assets/site.css?v={CSS_HASH}">
 {ld}
@@ -328,11 +424,29 @@ def load_insights():
     posts.sort(key=lambda p: str(p["date"]), reverse=True)
     return posts
 
-def write_sitemap():
+def post_dates(p):
+    d = datetime.date.fromisoformat(str(p["date"]))
+    return d, datetime.date.fromisoformat(str(p.get("updated") or p["date"]))
+
+def page_lastmod(path, posts):
+    """Articles use their own `updated:` date; the insights index uses the newest article; everything else
+    uses SITE_DATE (SITE_LASTMOD env var or the last commit date), so the same commit always gives the same file."""
+    if path.startswith("/insights/") and path != "/insights/":
+        for p in posts:
+            if path == f"/insights/{p['slug']}/":
+                return post_dates(p)[1].isoformat()
+    if path == "/insights/" and posts:
+        return max(post_dates(p)[1] for p in posts).isoformat()
+    return SITE_DATE
+
+def write_sitemap(posts=()):
+    # Keep this exact <url><loc/><lastmod/><priority/></url> shape: tools/i18n.py apply parses it to add
+    # the hreflang alternates and the translated URLs.
     items = []
     for p in sorted(set(PAGES)):
-        pri = "1.0" if p == "/" else ("0.9" if p.count("/") == 3 and p.startswith("/services/") else "0.7")
-        items.append(f"<url><loc>{url(p)}</loc><lastmod>{TODAY}</lastmod><priority>{pri}</priority></url>")
+        pri = "1.0" if p == "/" else ("0.9" if p.count("/") == 3 and p.startswith("/services/") else
+                                      "0.8" if p.startswith("/insights/") else "0.7")
+        items.append(f"<url><loc>{esc(url(p))}</loc><lastmod>{page_lastmod(p, posts)}</lastmod><priority>{pri}</priority></url>")
     (DIST / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
         + "".join(items) + "</urlset>\n", encoding="utf-8")
@@ -349,6 +463,187 @@ def write_robots():
                f"Sitemap: {url('/sitemap.xml')}\n")
     (DIST / "robots.txt").write_text(txt)
 
+def absolutise(h):
+    return re.sub(r'(href|src)="/(?!/)', lambda m: f'{m.group(1)}="{C.SITE_URL}/', h)
+
+def write_feed(posts):
+    """RSS 2.0 with full article text, so feed readers and AI crawlers get the whole piece."""
+    def rfc822(d):
+        return format_datetime(datetime.datetime.combine(d, datetime.time(6, 0), tzinfo=datetime.timezone.utc))
+    items = []
+    for p in posts:
+        d, u = post_dates(p)
+        link = url(f"/insights/{p['slug']}/")
+        content = absolutise(p["html"]).replace("]]>", "]]&gt;")
+        cat = f"<category>{esc(p['category'])}</category>" if p.get("category") else ""
+        items.append(f"<item><title>{esc(p['title'])}</title><link>{link}</link><guid isPermaLink=\"true\">{link}</guid>"
+                     f"<pubDate>{rfc822(d)}</pubDate><dc:creator>{esc(C.FOUNDER['name'])}</dc:creator>{cat}"
+                     f"<description>{esc(p['description'])}</description>"
+                     f"<content:encoded><![CDATA[{content}]]></content:encoded></item>")
+    last = max((post_dates(p)[1] for p in posts), default=datetime.date.fromisoformat(SITE_DATE))
+    feed = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" '
+            'xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel>'
+            f'<title>Eastbridge Insights</title><link>{url("/insights/")}</link>'
+            f'<atom:link href="{url("/insights/feed.xml")}" rel="self" type="application/rss+xml"/>'
+            '<description>Guides for villa owners in Dubai and Abu Dhabi: build costs, approvals, contracts and choosing a team.</description>'
+            f'<language>en-gb</language><lastBuildDate>{rfc822(last)}</lastBuildDate>'
+            f'<copyright>{esc(C.LEGAL)}</copyright>'
+            f'<image><url>{url("/assets/logo.png")}</url><title>Eastbridge Insights</title><link>{url("/insights/")}</link></image>'
+            + "".join(items) + "</channel></rss>\n")
+    (DIST / "insights").mkdir(parents=True, exist_ok=True)
+    (DIST / "insights/feed.xml").write_text(feed, encoding="utf-8")
+
+# ---------------------------------------------------------------- llms.txt / llms-full.txt
+LLMS_SUMMARY = ("Independent, client-side owner's representative and villa project management for private clients "
+                "building or renovating villas in Dubai and Abu Dhabi. Founded by a builder who ran a premium UK "
+                "residential construction company for 21 years. Paid only by the client; no contractor commissions. "
+                "Not a contractor or engineering consultancy: works alongside the client's registered consultant.")
+
+def llms_facts():
+    return [f"- Contact: {C.EMAIL}, {C.PHONE_DISPLAY} (WhatsApp available); {C.HOURS}",
+            f"- Office: {C.ADDRESS['street']}, {C.ADDRESS['locality']}, {C.ADDRESS['country_name']}",
+            f"- Legal entity: {C.LEGAL}, {C.LICENCE}",
+            "- Serves: Dubai and Abu Dhabi, UAE; many villa owners live in the UK and Europe",
+            "- Working language: English",
+            f"- Founder: {C.FOUNDER['name']}, who founded and led P Chapman Construction (UK premium residential contractor) for 21 years: {url('/about/#founder')}",
+            "- Portfolio: homes built by P Chapman Construction (UK), the contractor founded and led by Philip Chapman; awards include a RIBA South West Award (2016) and LABC Building Excellence Awards (2018, 2020); a home featured on Channel 4's Grand Designs",
+            f"- Case study: {url('/case-studies/island-e-waterfront-villa/')} (illustrative, modelled scenario, not a completed Eastbridge project)"]
+
+LLMS_FULL_PAGES = ["/about/", "/why-a-client-side-project-manager/", "/services/"]  # + every service page
+LLMS_FULL_TAIL = ["/approach/", "/independence/", "/fees/", "/faq/", "/case-studies/island-e-waterfront-villa/"]
+LLMS_DROP = ("script", "style", "svg", "noscript", "form", "button", "img", "picture", "iframe")
+LLMS_DROP_CLASS = {"crumbs", "cta-band", "credit", "toc", "article-aside", "post-cards", "strip", "work-grid",
+                   "video", "hero-video", "scroll-cue", "aside-links", "mega", "actions"}
+
+def html_to_text(main):
+    """Turn a page's <main> into clean Markdown-like text: headings, paragraphs, lists, tables, Q&As."""
+    from bs4 import NavigableString, Tag
+    out = []
+    def txt(el):
+        for br in el.find_all("br"):
+            br.replace_with(" ")
+        for a in el.find_all("a", href=True):
+            h = a["href"]
+            if h.startswith("http") and not h.startswith(C.SITE_URL) and "wa.me" not in h:
+                a.append(f" ({h})")
+        return " ".join(el.get_text("").split())
+    def walk(el):
+        for c in el.children:
+            if isinstance(c, NavigableString):
+                t = " ".join(str(c).split())
+                if t and type(c) is NavigableString:
+                    out.append(t)
+                continue
+            if not isinstance(c, Tag) or c.name in LLMS_DROP or LLMS_DROP_CLASS & set(c.get("class") or []):
+                continue
+            if c.name == "figure" and not c.find("blockquote"):
+                continue  # photo + caption: no text worth keeping; quotes are kept
+            n = c.name
+            if n in ("h1", "h2", "h3", "h4", "h5", "h6"):
+                out.append("#" * min(6, int(n[1]) + 1) + " " + txt(c))
+            elif n == "table":
+                rows = [[txt(td) for td in tr.find_all(["th", "td"])] for tr in c.find_all("tr")]
+                if rows:
+                    out.append("\n".join(["| " + " | ".join(rows[0]) + " |", "|" + "---|" * len(rows[0])] +
+                                         ["| " + " | ".join(r) + " |" for r in rows[1:]]))
+            elif n == "details":
+                s = c.find("summary")
+                if s:
+                    out.append("#### " + txt(s)); s.decompose()
+                walk(c)
+            elif n == "dl":
+                for dt in c.find_all("dt"):
+                    dd = dt.find_next_sibling("dd")
+                    out.append(f"- {txt(dt)}: {txt(dd) if dd else ''}")
+            elif n == "li":
+                if c.find(["ul", "ol", "p", "h2", "h3", "div"]):
+                    walk(c)
+                else:
+                    out.append("- " + txt(c))
+            elif n in ("p", "blockquote", "figcaption", "summary") and not c.find(["p", "ul", "ol", "div", "table"]):
+                t = txt(c)
+                if t:
+                    out.append(("> " if n == "blockquote" else "") + t)
+            else:
+                walk(c)
+    walk(main)
+    lines, prev = [], None
+    for l in out:
+        if l and l != prev:
+            lines.append(l)
+        prev = l
+    # list items sit on consecutive lines; everything else is separated by a blank line
+    res = []
+    for l in lines:
+        if res and not (l.startswith("- ") and res[-1].startswith("- ")):
+            res.append("")
+        res.append(l)
+    return "\n".join(res)
+
+def page_text(path):
+    from bs4 import BeautifulSoup
+    f = DIST / path.lstrip("/") / "index.html"
+    if not f.exists():
+        return None
+    soup = BeautifulSoup(f.read_text(encoding="utf-8"), "html.parser")
+    main = soup.find("main")
+    title = soup.find("h1")
+    return (" ".join(title.get_text(" ").split()) if title else path), html_to_text(main) if main else ""
+
+def write_llms(posts):
+    from content.services import SERVICES
+    from content.areas import AREAS
+    head = [f"# {C.NAME}", "", f"> {LLMS_SUMMARY}", ""] + llms_facts()
+    idx = head + [
+        f"- Full text of the key pages and every article, in one file: {url('/llms-full.txt')}",
+        "", "## Start here",
+        f"- [Why a client-side project manager]({url('/why-a-client-side-project-manager/')}): what an owner's representative does, and why it pays for itself",
+        f"- [Illustrative case study: Island E waterfront villa]({url('/case-studies/island-e-waterfront-villa/')}): a modelled plot-to-keys scenario on Dubai Islands",
+        f"- [Full text for AI assistants]({url('/llms-full.txt')}): services, about, fees, FAQ and all insights as plain text",
+        "", "## Services"] + [f"- [{s['name']}]({url('/services/' + s['slug'] + '/')}): {s['description']}" for s in SERVICES] + \
+        ["", "## Areas"] + [f"- [{a['name']}]({url('/areas/' + a['slug'] + '/')}): {a['tag']}; master developer {a['developer']}" for a in AREAS] + \
+        ["", "## Guides"] + [f"- [{p['title']}]({url('/insights/' + p['slug'] + '/')}): {p['description']} (updated {post_dates(p)[1].isoformat()})" for p in posts] + \
+        ["", "## About",
+         f"- [About Eastbridge and Philip Chapman]({url('/about/')})", f"- [How we work]({url('/approach/')})",
+         f"- [Independence pledge]({url('/independence/')})", f"- [How fees work]({url('/fees/')})",
+         f"- [Questions]({url('/faq/')})", f"- [Work: homes built by P Chapman Construction]({url('/work/')})",
+         f"- [Contact]({url('/contact/')})",
+         "", "## Optional",
+         f"- [Insights RSS feed]({url('/insights/feed.xml')})", f"- [Sitemap]({url('/sitemap.xml')})"]
+    (DIST / "llms.txt").write_text("\n".join(idx) + "\n", encoding="utf-8")
+
+    full = head + ["", f"This file holds the full text of the main pages and every insight article on {C.SITE_URL}, "
+                   f"generated from the published pages. Last updated {SITE_DATE}. Each section starts with its URL.", ""]
+    paths = LLMS_FULL_PAGES + [f"/services/{s['slug']}/" for s in SERVICES] + LLMS_FULL_TAIL
+    def section(path, extra=""):
+        r = page_text(path)
+        if not r:
+            return
+        title, text = r
+        # the page's own h1 is the section title; drop it from the body
+        text = re.sub(r"^## .*\n?\n?", "", text, count=1)
+        full.extend(["", "---", "", f"## {title}", "", f"URL: {url(path)}" + extra, "", text])
+    for p in paths:
+        section(p)
+    for p in posts:
+        d, u = post_dates(p)
+        section(f"/insights/{p['slug']}/", f"\nBy {C.FOUNDER['name']}, {C.FOUNDER['role']}. Published {d.isoformat()}, updated {u.isoformat()}.")
+    (DIST / "llms-full.txt").write_text("\n".join(full).rstrip() + "\n", encoding="utf-8")
+
+def write_wellknown():
+    exp = datetime.date.fromisoformat(SITE_DATE) + datetime.timedelta(days=365)
+    wk = DIST / ".well-known"
+    wk.mkdir(exist_ok=True)
+    (wk / "security.txt").write_text(
+        f"Contact: mailto:{C.EMAIL}\nExpires: {exp.isoformat()}T00:00:00Z\nPreferred-Languages: en\n"
+        f"Canonical: {url('/.well-known/security.txt')}\n", encoding="utf-8")
+    (DIST / "humans.txt").write_text(
+        f"/* TEAM */\nFounding Partner: {C.FOUNDER['name']}\nContact: {C.EMAIL}\nFrom: Dubai, United Arab Emirates\n\n"
+        f"/* SITE */\nLast update: {SITE_DATE}\nLanguage: English, Arabic, Russian, Chinese, Hindi\n"
+        "Standards: HTML5, CSS3, schema.org\nSoftware: Python static site build, hosted on Netlify\n"
+        "Photography: homes built by P Chapman Construction, credited on each page\n", encoding="utf-8")
+
 def main():
     if DIST.exists():
         shutil.rmtree(DIST)
@@ -357,8 +652,11 @@ def main():
     import pages
     posts = load_insights()
     pages.build_all(posts)
-    write_sitemap()
+    write_sitemap(posts)
     write_robots()
+    write_feed(posts)
+    write_llms(posts)
+    write_wellknown()
     print(f"Built {len(set(PAGES))} pages, {len(posts)} insights -> {DIST}")
 
 if __name__ == "__main__":
