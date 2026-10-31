@@ -77,7 +77,7 @@ def landing():
 <div class="prose">
 <p>Our founder, {esc(C.FOUNDER["name"])}, ran {esc(C.FOUNDER["company_uk"])}, a premium residential builder in the UK, for {C.FOUNDED_TRACK_RECORD_YEARS} years. From the contractor’s side we saw where budgets leak, how variations and delay claims are built, and which questions owners rarely ask. This checklist puts those questions in order.</p>
 <p>It is written for private owners, including those living overseas, who want to stay in control of a villa project without becoming construction experts. It is general information, not legal or engineering advice: your registered consultant carries out the design, authority submissions and statutory supervision, and a UAE-qualified lawyer should review your contracts.</p>
-<p>If you would rather talk it through, <a href="/contact/">start a private brief</a> or read how a <a href="/why-a-client-side-project-manager/">client-side project manager</a> works alongside your consultant and contractor.</p>
+<p>If you would rather talk it through, <a href="/contact/">arrange a free 30-minute call</a> or read how a <a href="/why-a-client-side-project-manager/">client-side project manager</a> works alongside your consultant and contractor.</p>
 </div></div></section>
 {B.cta_band("Would a second pair of eyes help?")}'''
     schema = [{
@@ -105,7 +105,7 @@ def landing():
 <p class="muted">If the download does not start, <a href="{PDF}">open the PDF in your browser</a>.</p>
 <h2 class="guide-h" style="margin-top:1.6em">Want a second pair of eyes?</h2>
 <p>If an item on the list worries you, or you cannot tick it yet, talk it through with {esc(C.FOUNDER["name"].split()[0])}. The first conversation is free and confidential.</p>
-<p><a class="btn btn--ghost" href="/contact/">Start a private brief</a> <a class="btn btn--ghost" href="{B.wa_link("Hello, I downloaded the pre-construction checklist and would like to talk about my villa project.")}" rel="noopener">WhatsApp us</a></p>
+<p><a class="btn btn--ghost" href="/contact/">{esc(B.CTA_LABEL)}</a> <a class="btn btn--ghost" href="{B.wa_link("Hello, I downloaded the pre-construction checklist and would like to talk about my villa project.")}" rel="noopener">WhatsApp us</a></p>
 <p class="small muted"><a href="/insights/">Read our insights</a> for more on costs, approvals, contracts and handover.</p>
 <p class="small muted">We only send our notes to people who ticked the optional box on the form. If you did, you can unsubscribe at any time by replying to any note or writing to <a href="mailto:{C.EMAIL}">{C.EMAIL}</a>.</p>
 </div></div></section>'''
