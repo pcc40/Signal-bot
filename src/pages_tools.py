@@ -1,0 +1,372 @@
+"""Interactive tools: the /tools/ hub and the villa build and renovation cost calculator.
+
+Every rate used by the calculator lives in RATES below and is cited in SOURCES. The same
+RATES object is embedded in the page as JSON and read by src/static/assets/calc.js, so the
+server-rendered worked example and the live calculator always use identical figures.
+"""
+import json
+import html as H
+import build as B
+from content.areas import AREAS
+
+esc = H.escape
+CALC_PATH = "/tools/villa-build-cost-calculator/"
+SQFT_PER_M2 = 10.7639
+
+# ---------------------------------------------------------------- sources
+SOURCES = [
+    ("ev", "Engel & Völkers, Construction cost in Dubai (December 2025)",
+     "https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai"),
+    ("kf", "Knight Frank Q2 2025 construction costs, reported by Gulf Construction",
+     "https://gulfconstructiononline.com/ArticleTA/436847"),
+    ("reca", "Real Estate Club Dubai, Villa architects in Dubai: fees, contingency and timelines",
+     "https://realestateclubdubai.com/dubai-villa-architects"),
+    ("recc", "Real Estate Club Dubai, Villa build cost calculator methodology",
+     "https://realestateclubdubai.com/tools/villa-build-cost-calculator"),
+    ("opt", "Optimal Engineering, Cost to build a villa in Dubai",
+     "https://www.optimal.ae/blog/cost-to-build-a-villa-in-dubai"),
+    ("sr", "Smart Renovation, Villa renovation in Dubai: 2026 guide to costs, timeline and permits",
+     "https://smartrenovation.ae/villa-renovation-in-dubai-complete-2026-guide-to-costs-timeline-permits/"),
+    ("pra", "PRASOON, Owner's representative vs project manager in the UAE (citing Currie & Brown)",
+     "https://prasoon.design/insights/owners-representative-vs-project-manager-uae"),
+    ("gn", "Gulf News, Dubai Municipality warns consultancies over inflated villa designs (August 2025)",
+     "https://gulfnews.com/uae/dubai-municipality-warns-consultancies-inflating-villa-designs-raising-costs-1.500245704"),
+]
+SRC_NUM = {k: i + 1 for i, (k, _, _) in enumerate(SOURCES)}
+
+def cite(*keys):
+    return "".join(f'<sup><a href="#src-{k}" aria-label="Source {SRC_NUM[k]}">[{SRC_NUM[k]}]</a></sup>' for k in keys)
+
+# ---------------------------------------------------------------- rates (AED)
+# Construction-only rates in AED per sq ft, [low, high]. "Likely" is the midpoint.
+RATES = {
+    "sqftPerM2": SQFT_PER_M2,
+    "tiers": {
+        "standard": {"label": "Standard", "nb": [300, 500]},
+        "premium": {"label": "Premium", "nb": [500, 850]},
+        "luxury": {"label": "Luxury", "nb": [850, 1400]},
+        "ultra": {"label": "Ultra-luxury", "nb": [1200, 1400], "open": True},
+    },
+    # Renovation: published whole-villa bands by scope. null = no published ceiling.
+    "reno": {
+        "standard": {"label": "Basic refresh: painting, flooring, small upgrades", "cost": [200000, 300000], "months": [2, 3]},
+        "premium": {"label": "Mid-range: kitchens, bathrooms and interiors", "cost": [400000, 800000], "months": [4, 6]},
+        "luxury": {"label": "Luxury: premium materials and structural changes", "cost": [1000000, None], "months": [6, None]},
+        "ultra": {"label": "Ultra-luxury: full strip-out and remodel", "cost": [1000000, None], "months": [6, None]},
+    },
+    "pool": [80000, 250000],
+    "land": [100, 500],          # per sq ft of garden
+    "smart": [50000, 300000],
+    "demo": [50000, 200000],
+    "design": [0.06, 0.09, 0.12],
+    "contingency": [0.10, 0.12, 0.15],
+    "ffe": [0.30, 0.35, 0.40],
+    "permitsFixed": [25000, 50000, 75000],
+    "permitsPct": [0.02, 0.035, 0.05],
+    "time": {"design": [3, 4], "approvals": [2, 3], "build": [8, 14], "snag": [1, 2], "luxTotal": [24, 36]},
+}
+
+def tri(pair):
+    lo, hi = pair
+    return [lo, (lo + hi) / 2, hi]
+
+def estimate(i):
+    """Mirror of calc.js estimate(). i: mode, area (sq ft), tier, basement, pool, garden, smart, ffe, demo."""
+    R = RATES
+    t = R["tiers"][i["tier"]]
+    nb = tri(t["nb"])
+    z = [0, 0, 0]
+    out = {}
+    if i["mode"] == "new":
+        out["build"] = [i["area"] * r for r in nb]
+        out["basement"] = [i["basement"] * r for r in nb]
+        out["demo"] = tri(R["demo"]) if i["demo"] else z
+        open_hi = bool(t.get("open"))
+    else:
+        rv = R["reno"][i["tier"]]
+        lo, hi = rv["cost"]
+        if hi is None:
+            hi = max(lo, i["area"] * t["nb"][0])
+        out["build"] = tri([lo, hi])
+        out["basement"] = z
+        out["demo"] = z
+        open_hi = rv["cost"][1] is None
+    out["pool"] = tri(R["pool"]) if i["pool"] else z
+    out["land"] = [i["garden"] * r for r in tri(R["land"])]
+    out["smart"] = tri(R["smart"]) if i["smart"] else z
+    cons = [sum(out[k][n] for k in ("build", "basement", "demo", "pool", "land", "smart")) for n in range(3)]
+    out["construction"] = cons
+    out["design"] = [cons[n] * R["design"][n] for n in range(3)]
+    if i["mode"] == "new":
+        out["permits"] = [max(R["permitsFixed"][n], cons[n] * R["permitsPct"][n]) for n in range(3)]
+    else:
+        out["permits"] = list(R["permitsFixed"])
+    out["contingency"] = [cons[n] * R["contingency"][n] for n in range(3)]
+    out["ffe"] = [cons[n] * R["ffe"][n] for n in range(3)] if i["ffe"] else z
+    out["total"] = [cons[n] + out["design"][n] + out["permits"][n] + out["contingency"][n] + out["ffe"][n] for n in range(3)]
+    out["open"] = open_hi
+    return out
+
+def rnd(x):
+    step = 10000 if x >= 1e6 else 1000
+    return int(round(x / step) * step)
+
+def aed(x):
+    return f"AED {rnd(x):,}"
+
+def compact(x):
+    x = rnd(x)
+    if x >= 1e6:
+        return f"AED {x / 1e6:.2f}m".replace(".00m", "m")
+    return f"AED {round(x / 1000):,}k"
+
+def aed_rate(x):
+    return f"AED {int(round(x / 10) * 10):,}"
+
+def per_m2(v):
+    return int(round(v * SQFT_PER_M2 / 10) * 10)
+
+# ---------------------------------------------------------------- worked example
+EXAMPLE = {"mode": "new", "area": 6000, "tier": "premium", "basement": 0, "pool": True,
+           "garden": 3000, "smart": False, "ffe": False, "demo": False, "loc": "dubai-hills-estate"}
+
+LINES = [("build", "Main build (shell, MEP and finishes)"), ("basement", "Basement"), ("demo", "Demolition of an existing villa"),
+         ("pool", "Swimming pool"), ("land", "Landscaping"), ("smart", "Smart home and AV"),
+         ("design", "Design and engineering fees"), ("permits", "Approvals, NOCs and connections"),
+         ("contingency", "Contingency"), ("ffe", "Furniture, fixtures and equipment (FF&amp;E)")]
+BAR = [("build", "Build"), ("extras", "Extras"), ("design", "Design fees"), ("permits", "Approvals"),
+       ("contingency", "Contingency"), ("ffe", "FF&amp;E")]
+
+def bar_parts(e):
+    extras = [e["basement"][n] + e["demo"][n] + e["pool"][n] + e["land"][n] + e["smart"][n] for n in range(3)]
+    vals = {"build": e["build"][1], "extras": extras[1], "design": e["design"][1], "permits": e["permits"][1],
+            "contingency": e["contingency"][1], "ffe": e["ffe"][1]}
+    tot = sum(vals.values()) or 1
+    return vals, tot
+
+def results_html(e):
+    """Server-rendered result panel. calc.js updates the same nodes in place (no layout shift)."""
+    hi_sfx = "+" if e["open"] else ""
+    vals, tot = bar_parts(e)
+    segs = "".join(f'<span class="cb-seg cb-{k}" data-seg="{k}" style="width:{vals[k] / tot * 100:.2f}%"></span>' for k, _ in BAR)
+    legend = "".join(f'<li><i class="cb-{k}" aria-hidden="true"></i>{lbl} <b data-leg="{k}">{compact(vals[k])}</b></li>' for k, lbl in BAR)
+    rows = "".join(f'<tr data-row="{k}"><th scope="row">{lbl}</th><td data-v="{k}-0">{aed(e[k][0])}</td>'
+                   f'<td data-v="{k}-1">{aed(e[k][1])}</td><td data-v="{k}-2">{aed(e[k][2])}</td></tr>' for k, lbl in LINES)
+    t = RATES["time"]
+    return f'''<div class="calc-out" id="calc-out">
+<p class="calc-label">Indicative total, including soft costs</p>
+<p class="calc-total" aria-live="polite" aria-atomic="true"><span class="sr">Likely total: </span><b data-out="likely">{aed(e["total"][1])}</b>
+<span class="calc-range">Range <span data-out="low">{aed(e["total"][0])}</span> to <span data-out="high">{aed(e["total"][2])}{hi_sfx}</span></span></p>
+<p class="calc-sub">Construction <span data-out="cons">{aed(e["construction"][1])}</span> · <span data-out="rate">{aed_rate(e["construction"][1] / max(EXAMPLE["area"], 1))}</span> per sq ft of built-up area (construction only)</p>
+<div class="cb" role="img" aria-label="Breakdown of the likely total" data-bar>{segs}</div>
+<ul class="cb-legend">{legend}</ul>
+<div class="table-wrap"><table class="table calc-table"><caption class="sr">Cost lines: low, likely and high</caption>
+<thead><tr><th scope="col">Cost line</th><th scope="col" class="num">Low</th><th scope="col" class="num">Likely</th><th scope="col" class="num">High</th></tr></thead>
+<tbody>{rows}</tbody>
+<tfoot><tr><th scope="row">Total</th><td data-v="total-0">{aed(e["total"][0])}</td><td data-v="total-1">{aed(e["total"][1])}</td><td data-v="total-2">{aed(e["total"][2])}{hi_sfx}</td></tr></tfoot></table></div>
+<h3 class="calc-h">Indicative timeline</h3>
+<ol class="calc-time" data-time>
+<li><span>Design</span><b>{t["design"][0]}–{t["design"][1]} months</b></li>
+<li><span>Approvals and NOCs</span><b>{t["approvals"][0]}–{t["approvals"][1]} months</b></li>
+<li><span>Construction</span><b>{t["build"][0]}–{t["build"][1]} months</b></li>
+<li><span>Snagging and handover</span><b>{t["snag"][0]}–{t["snag"][1]} months</b></li>
+</ol>
+<p class="calc-note" data-time-note>Typically {sum(v[0] for k, v in t.items() if k != "luxTotal")}–{sum(v[1] for k, v in t.items() if k != "luxTotal")} months from appointing a designer to receiving the keys. Phases can overlap.</p>
+<p class="calc-note" data-route>Approvals in Dubai go through Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits. The master developer, Emaar with Meraas, has its own approval requirements; check them before design starts.</p>
+<p class="calc-note calc-js" data-js-note>Showing the worked example below. Switch on JavaScript to change the inputs.</p>
+<p class="calc-flag">An indicative estimate from published market ranges, not a quote. Excludes plot, VAT and finance.</p>
+</div>'''
+
+def form_html():
+    tiers = "".join(
+        f'<label class="calc-opt"><input type="radio" name="tier" value="{k}"{" checked" if k == EXAMPLE["tier"] else ""}>'
+        f'<span><b>{esc(v["label"])}</b><small data-tier-note="{k}">AED {v["nb"][0]:,}–{v["nb"][1]:,}{"+" if v.get("open") else ""} per sq ft</small></span></label>'
+        for k, v in RATES["tiers"].items())
+    dubai = "".join(f'<option value="{a["slug"]}" data-city="Dubai" data-dev="{esc(a["developer"])}"{" selected" if a["slug"] == EXAMPLE["loc"] else ""}>{esc(a["name"])}</option>' for a in AREAS if a["city"] == "Dubai")
+    ad = "".join(f'<option value="{a["slug"]}" data-city="Abu Dhabi" data-dev="{esc(a["developer"])}">{esc(a["name"])}</option>' for a in AREAS if a["city"] == "Abu Dhabi")
+    return f'''<form class="calc-in" id="calc" novalidate onsubmit="return false">
+<fieldset><legend>Project type</legend><div class="calc-seg">
+<label><input type="radio" name="mode" value="new" checked><span>New build</span></label>
+<label><input type="radio" name="mode" value="reno"><span>Renovation</span></label></div></fieldset>
+<div><label for="c-loc">Where is the villa?</label><select id="c-loc" name="loc">
+<optgroup label="Dubai">{dubai}<option value="dubai" data-city="Dubai" data-dev="">Elsewhere in Dubai</option></optgroup>
+<optgroup label="Abu Dhabi">{ad}<option value="abu-dhabi" data-city="Abu Dhabi" data-dev="">Elsewhere in Abu Dhabi</option></optgroup></select>
+<p class="hint">Location changes the approvals route shown, not the rate. No published source supports a reliable location premium.</p></div>
+<fieldset><legend>Units</legend><div class="calc-seg calc-seg--sm">
+<label><input type="radio" name="unit" value="sqft" checked><span>sq ft</span></label>
+<label><input type="radio" name="unit" value="m2"><span>m²</span></label></div></fieldset>
+<div><label for="c-area">Built-up area (<span data-unit>sq ft</span>)</label><input id="c-area" name="area" type="number" inputmode="numeric" min="0" step="50" value="{EXAMPLE["area"]}">
+<p class="hint">Typical 4-bedroom villas are about 4,000–5,000 sq ft; 5-bedroom 6,000–8,000 sq ft.{cite("recc")}</p></div>
+<fieldset><legend>Specification</legend><div class="calc-tiers">{tiers}</div>
+<p class="hint is-off" data-reno-hint>For renovations, the specification selects the scope band. Basic and mid-range bands are whole-villa figures and do not scale with area.</p></fieldset>
+<fieldset><legend>Extras</legend>
+<div class="calc-row"><div data-new-only><label for="c-base">Basement area (<span data-unit>sq ft</span>)</label><input id="c-base" name="basement" type="number" inputmode="numeric" min="0" step="50" value="0"></div>
+<div><label for="c-garden">Landscaped garden (<span data-unit>sq ft</span>)</label><input id="c-garden" name="garden" type="number" inputmode="numeric" min="0" step="50" value="{EXAMPLE["garden"]}"></div></div>
+<div class="calc-checks">
+<label><input type="checkbox" name="pool" checked> Swimming pool</label>
+<label><input type="checkbox" name="smart"> Smart home and AV</label>
+<label><input type="checkbox" name="ffe"> Furniture, fixtures and equipment</label>
+<label data-new-only><input type="checkbox" name="demo"> Demolish an existing villa first</label></div></fieldset>
+</form>'''
+
+# ---------------------------------------------------------------- copy
+FAQS = [
+    ("How much does it cost to build a villa in Dubai per square foot?",
+     "Published 2025–26 ranges for construction only are about AED 300–500 per sq ft for a standard specification, "
+     "AED 500–850 for premium, AED 850–1,400 for luxury and AED 1,200 and upwards for ultra-luxury (Engel &amp; Völkers, "
+     "Real Estate Club Dubai, Knight Frank via Gulf Construction). Design fees, approvals, contingency and furniture come on top."),
+    ("What does the per square foot rate leave out?",
+     "The rate covers the build itself. On top you should budget design and engineering fees (typically 6–12% of construction), "
+     "approvals, NOCs and utility connections (AED 25,000–75,000, or 2–5% of the build on larger projects), a contingency of 10–15%, "
+     "and any pool, landscaping, smart home or furniture. Plot cost, VAT and finance are also outside the rate."),
+    ("How much does a villa renovation cost in Dubai?",
+     "A 2026 guide from Smart Renovation puts a basic renovation (painting, flooring, small upgrades) from around AED 200,000–300,000, "
+     "a mid-range renovation of kitchens, bathrooms and interiors at AED 400,000–800,000, and a luxury renovation with structural "
+     "changes above AED 1 million. Works typically take two to six months, longer for structural changes or extensions."),
+    ("How long does it take to build a villa in Dubai?",
+     "Typical phases are design 3–4 months, approvals 2–3 months, construction 8–14 months and snagging 1–2 months, so roughly "
+     "12–24 months from plot to keys. Custom luxury villas commonly take 24–36 months (Real Estate Club Dubai)."),
+    ("How accurate is this calculator?",
+     "It is an indicative estimate built from published market ranges, not a quote. The real figure depends on the design, the ground, "
+     "the contract and the market when you tender. Treat the range as a starting point for a conversation with your consultant, and test it "
+     "against a proper cost plan before you commit to a plot or a design. We are happy to check it against your plot."),
+]
+
+def worked_table():
+    e = estimate(EXAMPLE)
+    rows = "".join(f'<tr><th scope="row">{lbl}</th><td class="num">{aed(e[k][0])}</td><td class="num">{aed(e[k][1])}</td><td class="num">{aed(e[k][2])}</td></tr>'
+                   for k, lbl in LINES if any(e[k]))
+    return f'''<div class="table-wrap"><table class="table"><caption class="sr">Worked example: 6,000 sq ft premium new-build villa</caption>
+<thead><tr><th scope="col">Cost line</th><th scope="col" class="num">Low</th><th scope="col" class="num">Likely</th><th scope="col" class="num">High</th></tr></thead>
+<tbody>{rows}</tbody>
+<tfoot><tr><td>Total</td><td class="num">{aed(e["total"][0])}</td><td class="num">{aed(e["total"][1])}</td><td class="num">{aed(e["total"][2])}</td></tr></tfoot></table></div>''', e
+
+def tier_table():
+    rows = ""
+    for k, t in RATES["tiers"].items():
+        e = estimate({**EXAMPLE, "tier": k, "pool": False, "garden": 0})
+        plus = "+" if t.get("open") else ""
+        rows += (f'<tr><th scope="row">{esc(t["label"])}</th><td class="num">{t["nb"][0]:,}–{t["nb"][1]:,}{plus}</td>'
+                 f'<td class="num">{per_m2(t["nb"][0]):,}–{per_m2(t["nb"][1]):,}{plus}</td>'
+                 f'<td class="num">{compact(e["construction"][0])}–{compact(e["construction"][2])}{plus}</td>'
+                 f'<td class="num">{compact(e["total"][0])}–{compact(e["total"][2])}{plus}</td></tr>')
+    return f'''<div class="table-wrap"><table class="table"><caption class="sr">Construction rates by specification, and a 6,000 sq ft villa at each</caption>
+<thead><tr><th scope="col">Specification</th><th scope="col" class="num">AED per sq ft</th><th scope="col" class="num">AED per m²</th><th scope="col" class="num">6,000 sq ft build</th><th scope="col" class="num">With soft costs</th></tr></thead>
+<tbody>{rows}</tbody></table></div>'''
+
+def calculator():
+    crumbs = [("Home", "/"), ("Tools", "/tools/"), ("Villa build cost calculator", CALC_PATH)]
+    wt, e = worked_table()
+    srcs = "".join(f'<li id="src-{k}">{esc(t)}. <a href="{u}" rel="noopener">{esc(u.split("//", 1)[1].split("/", 1)[0])}</a></li>' for k, t, u in SOURCES)
+    data = json.dumps(RATES, separators=(",", ":"))
+    body = B.page_head(crumbs, "Villa build and renovation cost calculator",
+                       "An indicative cost for building or renovating a private villa in Dubai or Abu Dhabi, from published 2025–26 market ranges. "
+                       "Every rate is sourced on this page. It is an estimate, not a quote.").replace('class="page-head"', 'class="page-head page-head--tool"', 1) + f'''
+<section class="section--tight calc-sec"><div class="wrap calc">
+{form_html()}
+{results_html(e)}
+</div></section>
+<script type="application/json" id="calc-data">{data}</script>
+<script src="/assets/calc.js" defer></script>
+
+<section class="section--tight paper"><div class="wrap split"><div><h2>How the estimate works</h2></div><div class="prose">
+<p>The short answer: a new villa in Dubai costs roughly AED 300–500 per sq ft to build at a standard specification and AED 850–1,400 at a luxury one, before fees, approvals, contingency and furniture. The calculator adds those layers so the total is closer to what an owner actually spends.</p>
+<ol>
+<li><strong>Construction.</strong> Built-up area multiplied by the published rate for your specification.{cite("ev", "kf", "reca", "opt")} The likely figure is the midpoint of the range. A basement is priced as extra built-up area at the same rate.</li>
+<li><strong>Extras.</strong> Pool AED 80,000–250,000; landscaping AED 100–500 per sq ft of garden; smart home and AV AED 50,000–300,000; demolition of an existing villa AED 50,000–200,000.{cite("recc", "reca")}</li>
+<li><strong>Design and engineering fees.</strong> 6–12% of construction, about 9% typical for a multi-discipline practice.{cite("reca", "opt")}</li>
+<li><strong>Approvals, NOCs and connections.</strong> AED 25,000–75,000, or 2–5% of the build, whichever is greater on a new build.{cite("reca")} Renovations use the fixed band.</li>
+<li><strong>Contingency.</strong> 10–15% of construction, 12% as the likely figure.{cite("reca", "recc")}</li>
+<li><strong>Furniture, fixtures and equipment.</strong> 30–40% of construction at the top end of the market.{cite("reca", "recc")} On standard and premium specifications treat this as a ceiling.</li>
+</ol>
+<p>Renovations work differently. Published figures are whole-villa bands by scope rather than rates per square foot: basic AED 200,000–300,000, mid-range AED 400,000–800,000, and luxury above AED 1 million.{cite("sr")}</p>
+</div></div></section>
+
+<section class="section--tight"><div class="wrap split"><div><h2>Build rates by specification</h2><p class="muted">Construction only, 2025–26. The right-hand columns apply each rate to a 6,000 sq ft villa with no extras.</p></div><div class="prose">
+{tier_table()}
+<p class="small muted">Sources: Engel &amp; Völkers, Real Estate Club Dubai, Knight Frank via Gulf Construction, Optimal Engineering. Knight Frank's Q2 2025 figures were about AED 4,200 per m² (around AED 390 per sq ft) for standard and AED 11,000 per m² (around AED 1,020 per sq ft) for high-end construction.{cite("kf")}</p>
+</div></div></section>
+
+<section class="section--tight paper"><div class="wrap split"><div><h2>Worked example</h2><p class="muted">A 6,000 sq ft premium new-build villa in Dubai Hills Estate, with a pool and 3,000 sq ft of landscaped garden. This is what the calculator shows when it first loads.</p></div><div class="prose">
+{wt}
+<p>The likely total of {aed(e["total"][1])} works out at about {aed_rate(e["total"][1] / EXAMPLE["area"])} per sq ft of built-up area once fees, approvals and contingency are added, against a construction-only rate of {aed_rate(e["build"][1] / EXAMPLE["area"])}. That gap is why a headline per-square-foot rate on its own understates the budget.</p>
+</div></div></section>
+
+<section class="section--tight"><div class="wrap split"><div><h2>What moves the number most</h2></div><div class="prose">
+<p>From the contractor's side of the table, where our founder spent 21 years, specification moves a villa budget far more than size. Two houses of the same area can differ by a factor of three once glazing, stone, joinery and services are chosen. When we priced a job as the builder, the first things we looked at were the frame, the ground and the window package, because that is where the money and the risk sit.</p>
+<ul>
+<li><strong>Ground and basements.</strong> Shoring, dewatering and waterproofing depend on the plot. We price basements at the build rate, but on a waterfront plot the real figure can be higher.</li>
+<li><strong>Glazing and façade.</strong> Large-format and structural glazing is one of the quickest ways to move from premium into luxury rates.</li>
+<li><strong>Services.</strong> Cooling, automation and pool plant grow with specification and are easy to under-describe in a tender.</li>
+<li><strong>The design itself.</strong> In August 2025 Dubai Municipality warned villa engineering consultancies about over-designing structures and inflating build costs.{cite("gn")} A design review before tender is usually cheaper than a variation after it.</li>
+</ul>
+</div></div></section>
+
+<section class="section--tight paper"><div class="wrap split"><div><h2>What is not included</h2></div><div class="prose">
+<ul>
+<li>The plot, transfer fees and any service charges.</li>
+<li>VAT at 5% on contractor invoices, usually included in a contractor's quote.{cite("recc")}</li>
+<li>Finance costs, insurance and your own advisers' fees, including ours.</li>
+<li>Cost inflation. Currie &amp; Brown forecast about 3% for UAE construction in 2026; the calculator does not apply it.{cite("pra")}</li>
+<li>A location premium. We have found no published source that supports one, so the area you choose changes the approvals route shown, not the rate.</li>
+</ul>
+</div></div></section>
+
+<section class="section--tight" id="sources"><div class="wrap split"><div><h2>Sources and assumptions</h2></div><div class="prose">
+<ol class="calc-sources">{srcs}</ol>
+<h3>Assumptions</h3>
+<ul>
+<li>The likely figure for each rate is the midpoint of the published range, except design fees (9%), contingency (12%) and furniture (35%), where the sources give a typical figure.</li>
+<li>Ultra-luxury has no published ceiling. The calculator uses AED 1,200–1,400 per sq ft and marks the high figure with a plus sign.</li>
+<li>Luxury renovations are published as "above AED 1 million". As our own rule of thumb, a full strip-out back to structure approaches new-build cost, so the high figure is the area multiplied by the lowest new-build rate for that specification.</li>
+<li>Basements are priced as extra built-up area at the chosen rate. No published Dubai figure separates them.</li>
+<li>Timelines: design 3–4 months, approvals 2–3 months, construction 8–14 months, snagging 1–2 months; 24–36 months plot to keys for custom luxury.{cite("reca")} Renovation works two to six months or longer, with approvals taking a few weeks.{cite("sr")}</li>
+<li>Figures are rounded to the nearest AED 1,000, or AED 10,000 above AED 1 million.</li>
+</ul>
+<p class="small muted">Rates last checked October 2026. This page gives general information, not financial, legal or engineering advice.</p>
+</div></div></section>
+
+<section class="section--tight paper"><div class="wrap split"><div><h2>Questions</h2></div><div>{B.faq_html(FAQS)}</div></div></section>
+
+<section class="section dark calc-cta"><div class="wrap split"><div><h2>Get this checked against your plot</h2></div><div>
+<p class="lede">A calculator cannot see your plot's ground conditions, setbacks or master developer rules. We can. We review the plot, the brief and the budget together before you commit, and tell you plainly whether the numbers hold.</p>
+<p><a class="btn" href="/contact/">Get this checked against your plot</a> <a class="btn btn--ghost" href="/services/plot-due-diligence/">About plot due diligence</a></p>
+</div></div></section>'''
+    schema = [
+        {"@context": "https://schema.org", "@type": "WebApplication", "@id": B.url(CALC_PATH) + "#app",
+         "name": "Villa build and renovation cost calculator (Dubai and Abu Dhabi)", "url": B.url(CALC_PATH),
+         "description": "Indicative low, likely and high costs for building or renovating a villa in Dubai or Abu Dhabi, including design fees, approvals, contingency and a timeline, from published 2025–26 market ranges.",
+         "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript",
+         "inLanguage": "en-GB", "isAccessibleForFree": True,
+         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AED"},
+         "publisher": {"@id": B.ORG_ID}, "provider": {"@id": B.ORG_ID},
+         "citation": [u for _, _, u in SOURCES]},
+        B.faq_schema(FAQS),
+    ]
+    B.page(CALC_PATH, "Villa Build Cost Calculator: Dubai & Abu Dhabi | Eastbridge",
+           "Estimate the cost to build or renovate a villa in Dubai or Abu Dhabi: low, likely and high totals with fees, approvals, contingency and timeline, all sourced.",
+           body, crumbs, schema)
+
+def tools_hub():
+    crumbs = [("Home", "/"), ("Tools", "/tools/")]
+    body = B.page_head(crumbs, "Tools for villa owners",
+                       "Free planning tools for owners building or renovating a villa in Dubai or Abu Dhabi. Each one shows its sources.") + f'''
+<section class="section--tight"><div class="wrap split"><div><h2>Available tools</h2></div><div class="prose">
+<h3><a href="{CALC_PATH}">Villa build and renovation cost calculator</a></h3>
+<p>Low, likely and high costs for a new build or renovation, with design fees, approvals, contingency, furniture and an indicative timeline. Built from published 2025–26 market ranges, each one cited.</p>
+<p><a class="btn" href="{CALC_PATH}">Open the calculator</a></p>
+<h3>Further reading</h3>
+<ul><li><a href="/insights/villa-construction-cost-dubai/">What it costs to build a villa in Dubai</a></li>
+<li><a href="/insights/buying-a-villa-plot-in-dubai-checks/">Checks before buying a villa plot</a></li>
+<li><a href="/fees/">How our fees work</a></li></ul>
+</div></div></section>
+{B.cta_band("Have a plot or a villa in mind?")}'''
+    schema = [{"@context": "https://schema.org", "@type": "CollectionPage", "url": B.url("/tools/"), "name": "Tools for villa owners",
+               "hasPart": [{"@id": B.url(CALC_PATH) + "#app"}]}]
+    B.page("/tools/", "Villa Planning Tools: Dubai & Abu Dhabi | Eastbridge",
+           "Free, sourced planning tools for villa owners in Dubai and Abu Dhabi, starting with a build and renovation cost calculator covering fees, approvals and timeline.",
+           body, crumbs, schema)
+
+def build_tools():
+    tools_hub()
+    calculator()

@@ -264,6 +264,7 @@ def translate_page(f, lang, tr, missing):
     if soup.title:
         v = T(soup.title.get_text())
         if v: soup.title.string = v
+        else: soup.title.string = soup.title.get_text() + " · " + NATIVE[lang]  # keep titles unique until translated
     for el, a, orig in attrs:
         v = T(orig)
         if v: el[a] = re.sub(r"<[^>]+>", "", v)

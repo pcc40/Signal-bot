@@ -106,7 +106,7 @@ def strip_html(bases):
 HERO_SLIDES = ["sea-glass-house-01", "owers-house-01", "saqqara-01", "quay-house-01", "the-lookout-02"]
 
 def home(posts):
-    import pages_new
+    import pages_new, pages_tools
     pages_new.home(posts, post_cards, stages_html, SVC_IMG)
 
 # ---------------------------------------------------------------- services
@@ -192,7 +192,7 @@ def area_page(a):
 def work_hub():
     crumbs = [("Home", "/"), ("Work", "/work/")]
     from content.projects import RECOGNITION, ARCHITECTS, TESTIMONIALS
-    import pages_new
+    import pages_new, pages_tools
     rec = "".join(f"<div><b>{esc(a)}</b><span>{esc(b)}</span></div>" for a, b in RECOGNITION[:4])
     arch = "".join(f"<li>{esc(a)}</li>" for a in ARCHITECTS)
     body = B.banner(crumbs, "Homes we built", "Selected work of P Chapman Construction, the company Philip Chapman founded and led for 21 years: private houses, country estates, developments and hotel work.", "owers-house-02", credit_of("owers-house-02")) + f'''
@@ -319,7 +319,7 @@ def fees():
 def about():
     crumbs = [("Home", "/"), ("About", "/about/")]
     from content.projects import RECOGNITION, ARCHITECTS, TESTIMONIALS
-    import pages_new
+    import pages_new, pages_tools
     rec = "".join(f"<div><b>{esc(a)}</b><span>{esc(b)}</span></div>" for a, b in RECOGNITION[:4])
     arch = "".join(f"<li>{esc(a)}</li>" for a in ARCHITECTS)
     body = B.banner(crumbs, "About Eastbridge", "A client-side practice built on 21 years running an award-winning, £17m-turnover premium building company.", "owers-house-04", credit_of("owers-house-04")) + f'''
@@ -512,11 +512,12 @@ def misc(posts):
              "## Services"] + [f"- [{s['name']}]({B.url('/services/' + s['slug'] + '/')}): {s['description']}" for s in SERVICES] + \
             ["", "## Areas"] + [f"- [{a['name']}]({B.url('/areas/' + a['slug'] + '/')}): {a['tag']}; master developer {a['developer']}" for a in AREAS] + \
             ["", "## Guides"] + [f"- [{p['title']}]({B.url('/insights/' + p['slug'] + '/')}): {p['description']}" for p in posts] + \
+            ["", "## Tools", f"- [Villa build and renovation cost calculator]({B.url('/tools/villa-build-cost-calculator/')}): indicative low, likely and high costs for building or renovating a villa in Dubai or Abu Dhabi, with design fees, approvals, contingency and timeline; every rate cited to published 2025-26 sources"] + \
             ["", "## About", f"- [About]({B.url('/about/')})", f"- [How we work]({B.url('/approach/')})", f"- [Independence pledge]({B.url('/independence/')})", f"- [Fees]({B.url('/fees/')})", f"- [FAQ]({B.url('/faq/')})"]
     (B.DIST / "llms.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 def build_all(posts):
-    import pages_new
+    import pages_new, pages_tools
     home(posts)
     pages_new.why_page()
     pages_new.case_hub()
@@ -529,4 +530,5 @@ def build_all(posts):
     for p in PROJECTS: project_page(p)
     approach(); independence(); fees(); about(); faq_page(); contact(); legal()
     insights(posts)
+    pages_tools.build_tools()
     misc(posts)
