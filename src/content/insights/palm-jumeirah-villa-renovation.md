@@ -117,7 +117,7 @@ A full refurbishment of a Palm villa, with new services, waterproofing, kitchen,
 - **Preliminaries.** Turner & Townsend put contractor preliminaries in Dubai at 12–14% (cited by PRASOON). On a renovation in an occupied community, site set-up, protection, access restrictions and waste removal are real costs, and they should be visible in the bid.
 - **Inflation.** Currie & Brown forecast UAE construction cost inflation of around 3% for 2026 (cited by PRASOON). On a long design and approvals period, that matters.
 
-For a fuller breakdown of new-build costs, see [how much it costs to build a villa in Dubai](/insights/villa-construction-cost-dubai/).
+For a full renovation budget with a worked example, see [what a villa renovation really costs in Dubai](/insights/villa-renovation-cost-dubai/). For a fuller breakdown of new-build costs, see [how much it costs to build a villa in Dubai](/insights/villa-construction-cost-dubai/).
 
 ## What are the budget traps on a Palm renovation?
 

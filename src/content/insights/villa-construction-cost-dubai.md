@@ -132,7 +132,7 @@ Our founder spent 21 years running an award-winning premium building company. Fr
 - **Track cost monthly against the programme.** Payments should follow work actually done, not dates on a calendar.
 - **Read the contract before signing it.** Our guide to [villa construction contracts in the UAE](/insights/villa-construction-contracts-uae/) covers the clauses that matter, and you should take advice from a UAE-qualified lawyer.
 
-For the full sequence from plot to keys, see [how to build a villa in Dubai](/insights/how-to-build-a-villa-in-dubai/).
+For the full sequence from plot to keys, see [how to build a villa in Dubai](/insights/how-to-build-a-villa-in-dubai/). If you are refurbishing an existing villa rather than building new, see [what a villa renovation really costs in Dubai](/insights/villa-renovation-cost-dubai/).
 
 ## How Eastbridge can help
 
