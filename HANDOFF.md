@@ -37,11 +37,11 @@ Known gap: the calculator's live-updating lines (the per-square-foot rate line, 
 1. **Domain and config** (`src/config.py`): confirm `SITE_URL` is the live domain; `INDEXABLE` defaults to True, so a normal build is indexable. For a preview, build with `EB_INDEXABLE=0` instead of editing the file (see "Noindex preview build" below).
 2. **Fees**: `PUBLISH_FEES = False` hides all fee figures. To publish, set your own figures in `FEES` and set `PUBLISH_FEES = True`.
 3. **Hero film**: `HERO_VIDEO = False` by default (see the section below). Enable only after the Vimeo embed domain is allowed.
-4. **Analytics and verification**: set `GA4_ID` (e.g. `G-XXXXXXX`), `GSC_VERIFICATION` (Google Search Console HTML-tag code) and optionally `BING_VERIFICATION`. Rebuild and deploy, then verify the property in Search Console and Bing Webmaster Tools and submit `https://www.eastbridgepartners.ae/sitemap.xml` in both.
+4. **Analytics and verification**: set `GA4_ID` (e.g. `G-XXXXXXX`), `GSC_VERIFICATION` (Google Search Console HTML-tag code) and optionally `BING_VERIFICATION`. Rebuild and deploy, then verify the property in Search Console and Bing Webmaster Tools and submit `https://eastbridgestrategicpartners.com/sitemap.xml` in both.
 5. **Netlify**: link the site to the GitHub repository (build settings come from `netlify.toml`). In Netlify Forms, turn on form detection and set email notifications for the `brief` and `notes` forms.
 6. **Netlify environment variables** for `submission-created` (Project configuration → Environment variables). Without the first two, forms still work but no emails are sent:
    - `EMAIL_API_KEY` — Resend API key (or Postmark server token) — required for email
-   - `EMAIL_FROM` — e.g. `Eastbridge Strategic Partners <enquiries@eastbridgepartners.ae>`; the domain must be verified with the email provider (DNS records) — required for email
+   - `EMAIL_FROM` — e.g. `Eastbridge Strategic Partners <philip@eastbridgestrategicpartners.com>`; the domain must be verified with the email provider (DNS records) — required for email
    - `EMAIL_PROVIDER` — `resend` (default) or `postmark`
    - `EMAIL_REPLY_TO`, `LEAD_ALERT_TO`, `BOOKING_URL`, `SHEET_WEBHOOK_URL`, `SHEET_WEBHOOK_TOKEN`, `AUTOREPLY_DISABLED`, `SITE_PUBLIC_URL` — optional; see the header of the function file and `business/automation-blueprint.md` section 3
    - After setting them, send a test enquiry from `/contact/` and from `/guides/villa-owner-checklist/`.
@@ -87,7 +87,7 @@ cat dist/robots.txt                 # User-agent: * / Disallow: /
 
 ## Home hero film (`HERO_VIDEO` in `src/config.py`)
 - Default `False`: the hero shows the photo slideshow only. The Vimeo film (`HERO_VIDEO_VIMEO_ID`, 219974514) currently returns 401 because its privacy setting does not allow embedding on our domain, which used to leave a loading spinner over the hero.
-- To enable: in Vimeo, open the video, Settings > Privacy > "Where can this be embedded?" > Specific domains, add `eastbridgepartners.ae` (and the Netlify preview domain if wanted). Then set `HERO_VIDEO = True`, rebuild and deploy.
+- To enable: in Vimeo, open the video, Settings > Privacy > "Where can this be embedded?" > Specific domains, add `eastbridgestrategicpartners.com` (and the Netlify preview domain if wanted). Then set `HERO_VIDEO = True`, rebuild and deploy.
 - Even when enabled, the film loads only on screens 900px and wider, never with reduced-motion or Save-Data, and stays invisible until Vimeo reports that it is playing. If it has not started within 9 seconds, or Vimeo reports an error, it is removed and the poster stays.
 
 ## Conversion components

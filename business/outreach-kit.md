@@ -14,7 +14,7 @@ Standard sign-off for email:
 
 > Philip Chapman
 > Founding Partner, Eastbridge Strategic Partners
-> +971 56 744 0057 · enquiries@eastbridgepartners.ae · www.eastbridgepartners.ae
+> +971 56 744 0057 · philip@eastbridgestrategicpartners.com · eastbridgestrategicpartners.com
 
 ---
 
@@ -134,10 +134,10 @@ Dear [Name],
 
 I will not keep writing, but I thought this might be useful in any case: [pick one]
 
-- Architects and designers: [What a builder knows that most villa owners don't](https://www.eastbridgepartners.ae/insights/what-the-contractor-knows/)
-- Brokers: [Buying a villa plot in Dubai: checks to make before you pay](https://www.eastbridgepartners.ae/insights/buying-a-villa-plot-in-dubai-checks/)
-- Lawyers: [UAE villa construction contracts: variations and delays](https://www.eastbridgepartners.ae/insights/villa-construction-contracts-uae/)
-- Wealth managers: [Building a villa in Dubai while living in the UK](https://www.eastbridgepartners.ae/insights/building-a-villa-in-dubai-from-the-uk/)
+- Architects and designers: [What a builder knows that most villa owners don't](https://eastbridgestrategicpartners.com/insights/what-the-contractor-knows/)
+- Brokers: [Buying a villa plot in Dubai: checks to make before you pay](https://eastbridgestrategicpartners.com/insights/buying-a-villa-plot-in-dubai-checks/)
+- Lawyers: [UAE villa construction contracts: variations and delays](https://eastbridgestrategicpartners.com/insights/villa-construction-contracts-uae/)
+- Wealth managers: [Building a villa in Dubai while living in the UK](https://eastbridgestrategicpartners.com/insights/building-a-villa-in-dubai-from-the-uk/)
 
 If a conversation would ever be helpful, I am easy to reach on +971 56 744 0057.
 
@@ -158,7 +158,7 @@ Now we sit on the owner's side of the table, as a client-side project manager fo
 
 The reason is simple. Most of the money an owner loses on a private build is lost in the paperwork, not on site: the exclusions, the provisional sums, the vague programme. Those are things a builder reads differently.
 
-We have written up what we mean here: https://www.eastbridgepartners.ae/insights/what-the-contractor-knows/
+We have written up what we mean here: https://eastbridgestrategicpartners.com/insights/what-the-contractor-knows/
 
 **2. The first thing a contractor prices**
 
@@ -168,7 +168,7 @@ Every gap is either a risk the builder prices in, or a variation they expect to 
 
 Before you compare three bids on price, compare what each one excludes. It is rarely the same.
 
-More on choosing a contractor: https://www.eastbridgepartners.ae/insights/how-to-choose-a-villa-contractor-dubai/
+More on choosing a contractor: https://eastbridgestrategicpartners.com/insights/how-to-choose-a-villa-contractor-dubai/
 
 **3. Provisional sums**
 
@@ -178,7 +178,7 @@ In our experience the questions worth asking are: how was this figure arrived at
 
 If a bid has a long list of them, the headline price is not the real price.
 
-What villa construction costs in Dubai, with cited market ranges: https://www.eastbridgepartners.ae/insights/villa-construction-cost-dubai/
+What villa construction costs in Dubai, with cited market ranges: https://eastbridgestrategicpartners.com/insights/villa-construction-cost-dubai/
 
 **4. Building from abroad**
 
@@ -186,7 +186,7 @@ Many owners building in Dubai do it from London, Geneva or further afield. The h
 
 An independent pair of eyes on site, reporting in plain English, changes that.
 
-Our guide for owners based in the UK: https://www.eastbridgepartners.ae/insights/building-a-villa-in-dubai-from-the-uk/
+Our guide for owners based in the UK: https://eastbridgestrategicpartners.com/insights/building-a-villa-in-dubai-from-the-uk/
 
 **5. Who does what**
 
@@ -194,7 +194,7 @@ Owner's rep, project manager, consultant. The terms get used loosely, and the di
 
 In Dubai, engineering consultancy and supervision are regulated activities carried out by DM-registered consultants. A client-side project manager does something different: represents the owner, controls cost and programme, and works alongside the consultant and contractor.
 
-We have set out the distinction here: https://www.eastbridgepartners.ae/insights/owners-representative-vs-project-manager-vs-consultant/
+We have set out the distinction here: https://eastbridgestrategicpartners.com/insights/owners-representative-vs-project-manager-vs-consultant/
 
 **6. Before you buy the plot**
 
@@ -202,7 +202,7 @@ Plot buyers often know the price per square foot of the land. Fewer know what th
 
 Those answers change the real cost of the plot. It is worth having them before you pay, not after.
 
-Our checklist: https://www.eastbridgepartners.ae/insights/buying-a-villa-plot-in-dubai-checks/
+Our checklist: https://eastbridgestrategicpartners.com/insights/buying-a-villa-plot-in-dubai-checks/
 
 **7. Variations are built, not found**
 
@@ -210,13 +210,13 @@ A delay or variation claim does not appear at the end of a job. It is built week
 
 As builders, we knew this. Owners should know it too, because the best defence is the same: a clear record, kept from day one.
 
-How variations and delays work under UAE villa contracts: https://www.eastbridgepartners.ae/insights/villa-construction-contracts-uae/
+How variations and delays work under UAE villa contracts: https://eastbridgestrategicpartners.com/insights/villa-construction-contracts-uae/
 
 **8. Plot to keys**
 
 "How long will it take?" is usually the first question an owner asks. The honest answer is that design and approvals often take longer than owners expect, and construction is only part of the timeline.
 
-We have written a step-by-step guide to building a villa in Dubai, from plot to keys: https://www.eastbridgepartners.ae/insights/how-to-build-a-villa-in-dubai/
+We have written a step-by-step guide to building a villa in Dubai, from plot to keys: https://eastbridgestrategicpartners.com/insights/how-to-build-a-villa-in-dubai/
 
 **9. Renovating on the Palm**
 
@@ -224,7 +224,7 @@ Renovating a Palm Jumeirah villa starts before any builder is appointed: with th
 
 Owners who start with the builder and work backwards usually lose time. Owners who start with the approvals, and a clear scope, usually save it.
 
-Approvals and budget traps on the Palm: https://www.eastbridgepartners.ae/insights/palm-jumeirah-villa-renovation/
+Approvals and budget traps on the Palm: https://eastbridgestrategicpartners.com/insights/palm-jumeirah-villa-renovation/
 
 **10. Snagging**
 
@@ -232,13 +232,13 @@ On the builder's side, the snagging list we dreaded most was not the long one. I
 
 A good snagging inspection is calm, thorough and written down. It is also the owner's last real piece of leverage before handover.
 
-Our snagging checklist: https://www.eastbridgepartners.ae/insights/villa-snagging-checklist-dubai/
+Our snagging checklist: https://eastbridgestrategicpartners.com/insights/villa-snagging-checklist-dubai/
 
 **11. An illustrative case**
 
 We have published an illustrative case study: a waterfront villa on a Dubai island plot, walked through from plot review to handover, showing where a client-side project manager adds value at each stage.
 
-It is illustrative, not a past project, and we say so clearly. It shows how we think: https://www.eastbridgepartners.ae/case-studies/island-e-waterfront-villa/
+It is illustrative, not a past project, and we say so clearly. It shows how we think: https://eastbridgestrategicpartners.com/case-studies/island-e-waterfront-villa/
 
 **12. Why we take no commission**
 
@@ -246,7 +246,7 @@ We are paid only by the owner. We take no commission from contractors, suppliers
 
 It is a simple rule, and it is the whole point. A client-side project manager who earns from the other side of the table is not on the client's side.
 
-Our independence pledge: https://www.eastbridgepartners.ae/independence/
+Our independence pledge: https://eastbridgestrategicpartners.com/independence/
 
 ---
 
@@ -296,10 +296,10 @@ Only message people who have shared their number with Philip directly (a card, a
 > We do not design, act as engineering or supervision consultant, certify, or obtain permits. Those remain with the owner's DM-registered consultant and contractor. Approvals sit with Dubai Municipality, Trakhees or the Dubai Development Authority (or the relevant Abu Dhabi authority), depending on where the plot sits.
 >
 > ### Fixed-fee starting points
-> Plot and pre-design review · Contract and bid review · Second-opinion budget review · Stalled project rescue review. Fees on request (see www.eastbridgepartners.ae/fees/).
+> Plot and pre-design review · Contract and bid review · Second-opinion budget review · Stalled project rescue review. Fees on request (see eastbridgestrategicpartners.com/fees/).
 >
 > ### Contact
-> Philip Chapman, Founding Partner · +971 56 744 0057 · enquiries@eastbridgepartners.ae · www.eastbridgepartners.ae
+> Philip Chapman, Founding Partner · +971 56 744 0057 · philip@eastbridgestrategicpartners.com · eastbridgestrategicpartners.com
 > Eastbridge Strategic Partners L.L.C-FZ · Meydan Free Zone licence 2540153.01 · Business Centre, Meydan Grandstand, 6th Floor, Meydan Road, Nad Al Sheba, Dubai
 
 ---

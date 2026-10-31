@@ -19,13 +19,13 @@
 //   to the sheet row, the log line and the lead alert. Acknowledgement emails to
 //   people who did not opt in contain no marketing content. This function never
 //   adds anyone to a mailing list: there is no list integration. Unsubscribes are
-//   handled by hand (reply to any note, or write to enquiries@eastbridgepartners.ae).
+//   handled by hand (reply to any note, or write to philip@eastbridgestrategicpartners.com).
 //
 // Configuration (Netlify -> Project configuration -> Environment variables).
 // No secrets live in this file.
 //   EMAIL_PROVIDER      "resend" (default) or "postmark"
 //   EMAIL_API_KEY       Resend API key, or Postmark server token
-//   EMAIL_FROM          e.g. "Eastbridge Strategic Partners <enquiries@eastbridgepartners.ae>"
+//   EMAIL_FROM          e.g. "Eastbridge Strategic Partners <philip@eastbridgestrategicpartners.com>"
 //                       (the domain must be verified with the email provider)
 //   EMAIL_REPLY_TO      optional, defaults to the address inside EMAIL_FROM
 //   LEAD_ALERT_TO       optional, internal address(es) for a lead alert, comma separated
@@ -39,13 +39,13 @@
 
 "use strict";
 
-const SITE = process.env.SITE_PUBLIC_URL || "https://www.eastbridgepartners.ae";
+const SITE = process.env.SITE_PUBLIC_URL || "https://eastbridgestrategicpartners.com";
 const PHONE_DISPLAY = "+971 56 744 0057";
 const PHONE_E164 = "+971567440057";
 const WHATSAPP = "971567440057";
 // Keep in step with HOURS in src/config.py (the hours published on the site).
 const HOURS = "Monday to Friday, 9am to 6pm Gulf Standard Time";
-const CONTACT_EMAIL = "enquiries@eastbridgepartners.ae";
+const CONTACT_EMAIL = "philip@eastbridgestrategicpartners.com";
 
 // ---------- helpers ----------------------------------------------------------
 

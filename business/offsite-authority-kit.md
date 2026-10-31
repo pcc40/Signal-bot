@@ -12,7 +12,7 @@ Prepared 31 October 2026 for Philip Chapman. Ready-to-paste copy for profiles, d
 - Never claim or imply UAE projects or existing Eastbridge clients. The Island E case study is illustrative and must always be labelled that way. No client names.
 - UK photographs show work built by P Chapman Construction in Cornwall, UK. Always caption them that way.
 - No invented statistics, reviews, testimonials, rankings, "as seen in" or "#1/best" claims. British English, calm voice, no emojis, no exclamation marks.
-- **Timing:** the competitor report (business/seo-competitor-report.md) found www.eastbridgepartners.ae not yet responding on 31 Oct 2026. Create listings only once the site is live, so every listing links to a working page.
+- **Timing:** the competitor report (business/seo-competitor-report.md) found eastbridgestrategicpartners.com not yet responding on 31 Oct 2026. Create listings only once the site is live, so every listing links to a working page.
 
 ---
 
@@ -35,8 +35,8 @@ Source: `src/config.py`. Copy and paste these strings. Do not retype them. If an
 | Phone (display) | `+971 56 744 0057` |
 | Phone (E.164, for forms that strip spaces) | `+971567440057` |
 | WhatsApp | `https://wa.me/971567440057` |
-| Email | `enquiries@eastbridgepartners.ae` |
-| Website | `https://www.eastbridgepartners.ae` (always with `https://www.`, no trailing path, unless a field asks for a specific page) |
+| Email | `philip@eastbridgestrategicpartners.com` |
+| Website | `https://eastbridgestrategicpartners.com` (always with `https://www.`, no trailing path, unless a field asks for a specific page) |
 | Hours | `Monday to Friday, 9am–6pm Gulf Standard Time` (Saturday and Sunday closed) |
 | Founder | `Philip Chapman, Founding Partner` |
 | Founder's UK company | `P Chapman Construction` – `https://www.pchapmanconstruction.com/` |
@@ -279,7 +279,7 @@ We are paid only by the owner. We accept no commission, referral fee or rebate f
 
 Many of the owners we work for live overseas, often in the UK or Europe. A named person in the UAE and a regular, honest report means nothing is decided without you.
 
-Licensed in the Meydan Free Zone, Dubai. Enquiries: enquiries@eastbridgepartners.ae
+Licensed in the Meydan Free Zone, Dubai. Enquiries: philip@eastbridgestrategicpartners.com
 ```
 
 **Specialties (LinkedIn allows up to 20):**
@@ -299,7 +299,7 @@ Client-side project management; Owner's representation; Villa construction; Vill
 ```
 Client-side project manager for villa builds and renovations in Dubai and Abu Dhabi. We represent the owner. 21 years as a UK builder first.
 ```
-- **Link:** `https://www.eastbridgepartners.ae`. **Contact buttons:** the email and phone from the NAP sheet.
+- **Link:** `https://eastbridgestrategicpartners.com`. **Contact buttons:** the email and phone from the NAP sheet.
 - **Highlights:** "Approach", "UK work" (every story says "Built by P Chapman Construction, Cornwall, UK"), "Insights", "Contact".
 - **Grid rule:** every UK project post starts its caption with `UK project, built by P Chapman Construction, Cornwall.` and credits the photographer. Never geotag UK photos to Dubai.
 

@@ -24,6 +24,33 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Domain moves: every .ae host (new and old names) sends visitors to the same page on the .com,
+# so search engines see one site, not duplicates. Each host must be added to this Netlify site as a
+# domain alias for these rules to run. force = true applies them even when the file exists.
+[[redirects]]
+  from = "https://eastbridgestrategicpartners.ae/*"
+  to = "https://eastbridgestrategicpartners.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.eastbridgestrategicpartners.ae/*"
+  to = "https://eastbridgestrategicpartners.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://eastbridgepartners.ae/*"
+  to = "https://eastbridgestrategicpartners.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.eastbridgepartners.ae/*"
+  to = "https://eastbridgestrategicpartners.com/:splat"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/services/owners-rep/*"
   to = "/services/owners-representative/"

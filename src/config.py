@@ -2,8 +2,8 @@
 import os
 
 # --- Change before launch -------------------------------------------------
-SITE_URL = "https://www.eastbridgepartners.ae"   # final domain, no trailing slash
-EMAIL = "enquiries@eastbridgepartners.ae"
+SITE_URL = "https://eastbridgestrategicpartners.com"   # final domain, no trailing slash
+EMAIL = "philip@eastbridgestrategicpartners.com"
 PHONE_DISPLAY = "+971 56 744 0057"
 PHONE_E164 = "+971567440057"
 WHATSAPP = "971567440057"                         # digits only

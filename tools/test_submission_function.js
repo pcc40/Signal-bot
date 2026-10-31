@@ -13,7 +13,7 @@ const path = require("path");
 Object.assign(process.env, {
   EMAIL_PROVIDER: "resend",
   EMAIL_API_KEY: "test-key",
-  EMAIL_FROM: "Eastbridge Strategic Partners <enquiries@eastbridgepartners.ae>",
+  EMAIL_FROM: "Eastbridge Strategic Partners <philip@eastbridgestrategicpartners.com>",
   LEAD_ALERT_TO: "alerts@example.com",
   SHEET_WEBHOOK_URL: "https://sheet.example.com/exec",
   SHEET_WEBHOOK_TOKEN: "t",
@@ -64,7 +64,7 @@ const test = async (name, f) => { await f(); passed++; console.log("ok  " + name
     const r = await submit("brief", { ...base, marketing_opt_in: "yes" });
     assert.strictEqual(r.sheet[0].body.row.marketing_opt_in, "yes");
     assert.strictEqual(r.sheet[0].body.row.marketing_source, "ticked box on brief form");
-    assert.match(r.toCustomer[0].body.text, /reply with "unsubscribe" or write to enquiries@eastbridgepartners\.ae/);
+    assert.match(r.toCustomer[0].body.text, /reply with "unsubscribe" or write to philip@eastbridgestrategicpartners\.com/);
     assert.match(r.alerts[0].body.text, /marketing_opt_in: yes/);
   });
 
@@ -88,7 +88,7 @@ const test = async (name, f) => { await f(); passed++; console.log("ok  " + name
     assert.strictEqual(r.sheet[0].body.row.marketing_source, "ticked box on checklist form");
     assert.strictEqual(r.toCustomer.length, 1);
     assert.match(r.toCustomer[0].body.subject, /subscribed/);
-    assert.match(r.toCustomer[0].body.text, /enquiries@eastbridgepartners\.ae/);
+    assert.match(r.toCustomer[0].body.text, /philip@eastbridgestrategicpartners\.com/);
   });
 
   await test("notes form: subscribing is the opt-in, confirmation includes manual unsubscribe route", async () => {
@@ -96,7 +96,7 @@ const test = async (name, f) => { await f(); passed++; console.log("ok  " + name
     assert.strictEqual(r.sheet[0].body.row.marketing_opt_in, "yes");
     assert.strictEqual(r.sheet[0].body.row.marketing_source, "notes form");
     assert.strictEqual(r.sheet[0].body.row.status, "Subscriber");
-    assert.match(r.toCustomer[0].body.text, /reply with "unsubscribe" or write to enquiries@eastbridgepartners\.ae/);
+    assert.match(r.toCustomer[0].body.text, /reply with "unsubscribe" or write to philip@eastbridgestrategicpartners\.com/);
   });
 
   console.log(`\n${passed} tests passed`);

@@ -20,7 +20,7 @@ Status: the changes the existing facts support are in place and checked. Items t
 
 **8. Sources and attribution strengthened.** Evidence links now sit beside each award and press claim: RIBA South West 2016 (Owers House, via John Pardey Architects), LABC South West 2018 (Old Station Master's House), LABC South West 2020 Highly Commended (Polgreen Manor, CSA Architects). Awards are worded as belonging to the house and its team. Architects and photographers are credited from P Chapman Construction's project pages. Unsupported dates and claims have been removed: the Owers House completion date, Morvoren "delivered to budget" and the Three Mile Beach scope. The Grand Designs line no longer names a property. The KPMG 2015 figures are off the homepage and labelled with year and scope where they remain. Regulatory statements have been rechecked against Dubai Municipality, Dubai Media Office, DMT and WAM sources. *Purpose: every claim can be checked.*
 
-**9. Technical foundation preserved, plus preview indexing.** Routes, the 301 for the old owner's-rep URL, canonicals to https://www.eastbridgepartners.ae/, hreflang, sitemap, responsive images, accessible labels and reduced-motion handling are unchanged. New in this round: `INDEXABLE` in `src/config.py` reads the `EB_INDEXABLE` environment variable and defaults to True. `EB_INDEXABLE=0 python3 build.py` gives a preview build with noindex on every page and `Disallow: /` in robots.txt, without touching canonicals or the domain. A normal build stays indexable.
+**9. Technical foundation preserved, plus preview indexing.** Routes, the 301 for the old owner's-rep URL, canonicals to https://eastbridgestrategicpartners.com/, hreflang, sitemap, responsive images, accessible labels and reduced-motion handling are unchanged. New in this round: `INDEXABLE` in `src/config.py` reads the `EB_INDEXABLE` environment variable and defaults to True. `EB_INDEXABLE=0 python3 build.py` gives a preview build with noindex on every page and `Disallow: /` in robots.txt, without touching canonicals or the domain. A normal build stays indexable.
 
 **Translations (this round).** 644 new or changed English segments were translated into Arabic, Russian, Chinese and Hindi. Each of the 48 chunks passed `tools/i18n_check.py` with 0 problems. They were merged into `src/i18n/<lang>.json`, and the parts and todo files were deleted. 0 segments are untranslated in any language. In Chinese, the calculator's compact money formats now read "AED {n}百万" and "AED {n}千" instead of the English "m"/"k".
 
@@ -81,9 +81,9 @@ Packages (gitignored, not committed):
 
 Limitations. These items are not established by the checks above:
 - **Email delivery is unverified.** No live enquiry was sent and no real address was subscribed. Confirmation emails, lead alerts and the Google Sheets log depend on Netlify environment variables (`EMAIL_API_KEY`, `EMAIL_FROM`, `SHEET_WEBHOOK_URL`) and a verified sending domain. None of these were tested end to end, and the drag-and-drop package does not deploy the function at all.
-- **Domain and mailbox are not verified.** The site and its canonicals assume www.eastbridgepartners.ae and enquiries@eastbridgepartners.ae. DNS, hosting on that domain and the mailbox itself were not checked.
+- **Domain and mailbox are not verified.** The site and its canonicals assume eastbridgestrategicpartners.com and philip@eastbridgestrategicpartners.com. DNS, hosting on that domain and the mailbox itself were not checked.
 - **Real-device mobile is unverified.** The responsive checks used Playwright Chromium emulation at 360, 390 and 768 px. No physical iOS or Android device was tested, and Safari/WebKit and Firefox were not run.
-- **Video playback is unverified.** HANDOFF.md records that Vimeo video 219974514 (also the Quay House film) refused embedding on the site's domain. The Quay House film may not play on eastbridgepartners.ae until the Vimeo embed setting allows it.
+- **Video playback is unverified.** HANDOFF.md records that Vimeo video 219974514 (also the Quay House film) refused embedding on the site's domain. The Quay House film may not play on eastbridgestrategicpartners.com until the Vimeo embed setting allows it.
 - **Rankings, search or AI-assistant visibility, page-speed performance and WCAG conformance have not been measured or established.** The contrast script and accessible-label checks are partial indicators only.
 - **Translation quality** has been checked mechanically (structure, links, placeholders, numbers, nothing left in English). It has not been reviewed by a native speaker.
 - **Legal wording** has not been reviewed. The privacy notice, consent text and footer notes still need owner or legal review (section 4).
@@ -162,7 +162,7 @@ Answers to these are needed before the related wording can be called final. Unti
     - Enquiries that do not lead to an appointment are deleted after 24 months, and the same period is applied to checklist requests. Is that right?
     - Notes subscriptions are kept until the person unsubscribes. Is that right?
 32. Google Sheets: will you set up the lead log (`SHEET_WEBHOOK_URL`)? The notice names Google only "when we use Google Sheets". If you will not use it, the line should be removed.
-33. Email providers: which sending provider will you use (Resend or Postmark), and which business mailbox (Google Workspace or Microsoft 365)? Should the notice name them? Is the domain verified with the provider and is enquiries@eastbridgepartners.ae live?
+33. Email providers: which sending provider will you use (Resend or Postmark), and which business mailbox (Google Workspace or Microsoft 365)? Should the notice name them? Is the domain verified with the provider and is philip@eastbridgestrategicpartners.com live?
 34. Notes:
     - Which tool will send the monthly notes (Resend Audiences, Buttondown or plain email)?
     - Who handles unsubscribe replies by hand, and within what time will an address be removed? No timescale is published at present.
@@ -170,5 +170,5 @@ Answers to these are needed before the related wording can be called final. Unti
 36. Checklist email: should people who request the checklist without opting in still get a plain email with the download link (no marketing)? At present they get no email; the download is shown on the thank-you page.
 
 **Launch**
-37. Vimeo: please set "Where can this be embedded?" to allow eastbridgepartners.ae (and the Netlify preview domain if wanted) on the P Chapman Construction Vimeo films, starting with 219974514 (Quay House and the home hero). Can you confirm you control that Vimeo account?
+37. Vimeo: please set "Where can this be embedded?" to allow eastbridgestrategicpartners.com (and the Netlify preview domain if wanted) on the P Chapman Construction Vimeo films, starting with 219974514 (Quay House and the home hero). Can you confirm you control that Vimeo account?
 38. Translation review: the Arabic, Russian, Chinese and Hindi text has passed the automated checks but has not had a native-speaker review. Do you want one before launch, and is there a reviewer you trust for each language?

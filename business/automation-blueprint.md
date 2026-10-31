@@ -31,17 +31,17 @@ Prices and menu names are as of October 2026 and change often. Check before you 
 
 ## 1. Go live first (highest impact)
 
-The competitor report (`business/seo-competitor-report.md`) found www.eastbridgepartners.ae not responding on 31 October 2026. No form, email or SEO engine helps until the domain serves the site.
+The competitor report (`business/seo-competitor-report.md`) found eastbridgestrategicpartners.com not responding on 31 October 2026. No form, email or SEO engine helps until the domain serves the site.
 
 **Phil, once:**
 
 1. **Confirm the canonical repository.** `HANDOFF.md` names the GitHub repository `pcc40/Signal-bot`, working branch `claude/eastbridge-website-automation-veh823`. Use only that one from now on.
 2. **Link Netlify to the repo.** app.netlify.com → your project → Project configuration → Build & deploy → Continuous deployment → Link repository → GitHub → choose the repo → branch `main`. Build settings come from `netlify.toml`.
-3. **Domain.** Project configuration → Domain management → Add a domain → `www.eastbridgepartners.ae` (and `eastbridgepartners.ae` redirecting to www). Add the DNS records Netlify shows at your .ae registrar. Wait for the HTTPS certificate to issue.
-4. **Business email.** The site publishes `enquiries@eastbridgepartners.ae`. Confirm it actually receives mail (Google Workspace or Microsoft 365). If not: workspace.google.com → Get started → use the existing domain → verify with a TXT record → add Google's MX records.
-5. **Google Search Console.** search.google.com/search-console → Add property → Domain → `eastbridgepartners.ae` → add the TXT record at the registrar → Verify. Then Sitemaps → submit `https://www.eastbridgepartners.ae/sitemap.xml`. (Alternative: URL-prefix property, paste the meta code into `GSC_VERIFICATION` in `src/config.py`.)
+3. **Domain.** Project configuration → Domain management → Add a domain → `eastbridgestrategicpartners.com` (and `eastbridgestrategicpartners.com` redirecting to www). Add the DNS records Netlify shows at your .ae registrar. Wait for the HTTPS certificate to issue.
+4. **Business email.** The site publishes `philip@eastbridgestrategicpartners.com`. Confirm it actually receives mail (Google Workspace or Microsoft 365). If not: workspace.google.com → Get started → use the existing domain → verify with a TXT record → add Google's MX records.
+5. **Google Search Console.** search.google.com/search-console → Add property → Domain → `eastbridgestrategicpartners.com` → add the TXT record at the registrar → Verify. Then Sitemaps → submit `https://eastbridgestrategicpartners.com/sitemap.xml`. (Alternative: URL-prefix property, paste the meta code into `GSC_VERIFICATION` in `src/config.py`.)
 6. **Bing Webmaster Tools.** bing.com/webmasters → Add site → Import from Google Search Console (fastest). Bing's index is used by some AI search tools.
-7. **GA4.** analytics.google.com → Admin → Create → Property → "Eastbridge" → Web stream → `www.eastbridgepartners.ae` → copy the Measurement ID (`G-…`) into `GA4_ID` in `src/config.py`, rebuild, push. Then Admin → Events → mark `generate_lead` as a key event. Optional: Admin → Data display → Channel groups → add a channel "AI assistants" matching sources `chatgpt.com|perplexity.ai|gemini.google.com|copilot.microsoft.com|claude.ai`.
+7. **GA4.** analytics.google.com → Admin → Create → Property → "Eastbridge" → Web stream → `eastbridgestrategicpartners.com` → copy the Measurement ID (`G-…`) into `GA4_ID` in `src/config.py`, rebuild, push. Then Admin → Events → mark `generate_lead` as a key event. Optional: Admin → Data display → Channel groups → add a channel "AI assistants" matching sources `chatgpt.com|perplexity.ai|gemini.google.com|copilot.microsoft.com|claude.ai`.
 8. **IndexNow, once live:** `python3 tools/indexnow.py --all` after a build.
 9. **Google Business Profile, Bing Places, LinkedIn page:** follow `business/offsite-authority-kit.md` (copy is ready). Add every new profile URL to `SOCIAL` in `src/config.py`.
 
@@ -80,7 +80,7 @@ The competitor report (`business/seo-competitor-report.md`) found www.eastbridge
 - Only a ticked box counts: the function records `marketing_opt_in` as `yes` only when the form sent `yes`; an unticked box sends nothing and is recorded as `no`. A `notes` subscription is recorded as `yes` with `marketing_source` = `notes form`.
 - `marketing_opt_in` and `marketing_source` are written to the sheet row, the function log line and the lead alert.
 - **There is no mailing-list integration.** The function never adds anyone to Resend Audiences, Buttondown or any other list. Building the notes list is a manual step (section 12) and must use only `notes` submissions and rows where `marketing_opt_in` is `yes`.
-- **Unsubscribes are manual.** The site and emails say: reply to any note with "unsubscribe" or write to enquiries@eastbridgepartners.ae. Phil removes the address from the sending list, sets `marketing_opt_in` to `no` on that person's rows, and keeps a short suppression list (email and date) so the address is not re-imported from an old Netlify export. If a sending tool with an unsubscribe link is adopted, its unsubscribe list must be checked before every send as well.
+- **Unsubscribes are manual.** The site and emails say: reply to any note with "unsubscribe" or write to philip@eastbridgestrategicpartners.com. Phil removes the address from the sending list, sets `marketing_opt_in` to `no` on that person's rows, and keeps a short suppression list (email and date) so the address is not re-imported from an old Netlify export. If a sending tool with an unsubscribe link is adopted, its unsubscribe list must be checked before every send as well.
 - Offline test: `node tools/test_submission_function.js` (or `npm test`) mocks `fetch` and checks the opt-in yes/no paths for all three forms.
 
 If keys are missing it skips email and carries on. It always returns success, so the form never breaks for the visitor. The auto-reply is in English for every language version. A translated reply would need wording checked by a native speaker under `src/i18n/TRANSLATION_BRIEF.md`. The `language` column tells Phil which language to reply in.
@@ -89,10 +89,10 @@ If keys are missing it skips email and carries on. It always returns success, so
 
 *Resend (recommended, simplest, free up to 3,000 emails a month)*
 
-1. resend.com → Sign up → **Domains** → Add domain → `eastbridgepartners.ae` → region closest (EU, Ireland, is fine).
+1. resend.com → Sign up → **Domains** → Add domain → `eastbridgestrategicpartners.com` → region closest (EU, Ireland, is fine).
 2. Add the DNS records Resend shows (DKIM TXT, SPF TXT/MX on the `send` subdomain) at the registrar → Verify. Keep any existing Google/Microsoft MX records untouched.
-3. Add or tighten DMARC at the registrar if absent: TXT `_dmarc` → `v=DMARC1; p=none; rua=mailto:enquiries@eastbridgepartners.ae` (move to `p=quarantine` after a month of clean reports).
-4. **API Keys** → Create API key → permission "Sending access" → domain `eastbridgepartners.ae` → copy it once.
+3. Add or tighten DMARC at the registrar if absent: TXT `_dmarc` → `v=DMARC1; p=none; rua=mailto:philip@eastbridgestrategicpartners.com` (move to `p=quarantine` after a month of clean reports).
+4. **API Keys** → Create API key → permission "Sending access" → domain `eastbridgestrategicpartners.com` → copy it once.
 
 *Postmark (alternative, strong deliverability, paid from about USD 15 a month)*
 
@@ -107,8 +107,8 @@ app.netlify.com → project → Project configuration → **Environment variable
 |---|---|---|
 | `EMAIL_PROVIDER` | `resend` or `postmark` | Optional (default `resend`) |
 | `EMAIL_API_KEY` | the key from step above (mark as secret) | Yes, for email |
-| `EMAIL_FROM` | `Eastbridge Strategic Partners <enquiries@eastbridgepartners.ae>` | Yes, for email |
-| `EMAIL_REPLY_TO` | `enquiries@eastbridgepartners.ae` | Optional |
+| `EMAIL_FROM` | `Eastbridge Strategic Partners <philip@eastbridgestrategicpartners.com>` | Yes, for email |
+| `EMAIL_REPLY_TO` | `philip@eastbridgestrategicpartners.com` | Optional |
 | `LEAD_ALERT_TO` | Phil's address (comma-separate for more) | Optional |
 | `BOOKING_URL` | the booking page from section 5 | Optional |
 | `SHEET_WEBHOOK_URL` | the Apps Script web app URL from section 4 | Optional |
@@ -201,12 +201,12 @@ Use the link in: the auto-acknowledgement (automatic once `BOOKING_URL` is set),
 | Shortcut | Message |
 |---|---|
 | `/book` | "Here is a link to choose a time for a free 30-minute call: [BOOKING_URL]" |
-| `/brief` | "If it is easier, you can send the details through our private brief form: https://www.eastbridgepartners.ae/contact/" |
+| `/brief` | "If it is easier, you can send the details through our private brief form: https://eastbridgestrategicpartners.com/contact/" |
 | `/role` | "We are a client-side project manager. We represent you, the owner, alongside your DM-registered consultant and the contractor. We do not build or design, and we take no commission or referral fee from anyone on your project." |
 | `/fees` | "Our fee depends on the scope and length of the project. After a first conversation we send a written proposal with a clear scope and a fixed or monthly fee." |
 | `/next` | "Next steps: a free first conversation, then a written proposal if we can help. If we cannot, we will say so." |
-| `/plot` | "Before you buy or commit to a plot, our plot review looks at the developer's rules, likely build cost and programme: https://www.eastbridgepartners.ae/services/plot-due-diligence/" |
-| `/overseas` | "Many owners build from abroad. Here is how we keep you informed with independent site visits, photos and weekly reports: https://www.eastbridgepartners.ae/services/overseas-owners/" |
+| `/plot` | "Before you buy or commit to a plot, our plot review looks at the developer's rules, likely build cost and programme: https://eastbridgestrategicpartners.com/services/plot-due-diligence/" |
+| `/overseas` | "Many owners build from abroad. Here is how we keep you informed with independent site visits, photos and weekly reports: https://eastbridgestrategicpartners.com/services/overseas-owners/" |
 
 5. Business tools → **Catalogue** → Add new item, one per core service, with no price (choose "price on request" or leave blank), the service page link and one UK project photo captioned "Built by P Chapman Construction, UK": Owner's representation; Villa construction project management; Villa renovation project management; Plot due diligence; Stalled project rescue; Variations, delays and claims; Snagging and handover.
 6. **Labels**: New enquiry, Call booked, Proposal sent, Client, Not a fit. These mirror the sheet.

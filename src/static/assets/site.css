@@ -609,7 +609,7 @@ body.has-hero .site-head:not(.stuck) .btn{background:#fff;color:var(--ink);borde
   .prose table,.prose figure,.keypoints,blockquote,.faq details{break-inside:avoid}
   .keypoints{border:1px solid #999;background:#fff!important}
   .prose a[href^="http"]::after{content:" (" attr(href) ")";font-size:9pt;color:#444;word-break:break-all}
-  .prose a[href^="/"]::after{content:" (eastbridgepartners.ae" attr(href) ")";font-size:9pt;color:#444}
+  .prose a[href^="/"]::after{content:" (eastbridgestrategicpartners.com" attr(href) ")";font-size:9pt;color:#444}
   .faq details > *:not(summary){display:block!important}
   .faq summary::after{display:none}
   .js .reveal{opacity:1!important;transform:none!important;clip-path:none!important}
