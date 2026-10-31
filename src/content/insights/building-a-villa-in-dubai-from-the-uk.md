@@ -47,7 +47,7 @@ From the UK you can realistically:
 - Release stage payments against agreed milestones.
 - Follow progress through photographs, video walkrounds and written reports.
 
-The design and approvals phase is the easiest part to run remotely. Published guidance puts design at around three to four months and approvals at two to three months, with construction typically eight to fourteen months on top ([Real Estate Club Dubai](https://realestateclubdubai.com/dubai-villa-architects)). During those first six months or so, most of the work is on paper.
+The design and approvals phase is the easiest part to run remotely. Published guidance puts design at around three to four months and approvals at two to three months, with construction typically eight to fourteen months on top ([Real Estate Club Dubai](https://realestateclubdubai.com/dubai-villa-architects)). During those first six months or so, most of the work is on paper. We break the timeline down in [how long it takes to build a villa in Dubai](/insights/how-long-to-build-a-villa-dubai/).
 
 ## Which decisions need you there in person?
 

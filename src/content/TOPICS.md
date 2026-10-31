@@ -4,7 +4,7 @@
 - [ ] nakheel-noc-villa-renovation | Nakheel NOC for villa renovations explained | nakheel noc renovation | what triggers an NOC, sequencing with contractor mobilisation
 - [x] villa-renovation-cost-dubai | What a villa renovation really costs in Dubai | villa renovation cost dubai | the three hidden costs in older villas
 - [ ] renovate-or-rebuild-villa-dubai | Renovate or knock down and rebuild? | renovate vs rebuild villa dubai | cost per sq ft of finished space, time, approvals
-- [ ] how-long-to-build-a-villa-dubai | How long does it take to build a villa in Dubai? | how long to build a villa in dubai | where the months actually go
+- [x] how-long-to-build-a-villa-dubai | How long does it take to build a villa in Dubai? | how long to build a villa in dubai | where the months actually go
 - [ ] villa-provisional-sums-explained | Provisional sums: the line in your villa contract that moves | provisional sums construction | how contractors price them
 - [ ] retention-and-performance-bonds-uae | Retention and performance bonds on a UAE villa build | retention construction uae | what to hold, when to release
 - [ ] extension-of-time-claims-villa | Extension of time claims on villa projects: an owner's guide | extension of time claim uae | how claims are built and tested

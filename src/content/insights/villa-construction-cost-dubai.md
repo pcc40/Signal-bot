@@ -120,7 +120,7 @@ Our founder spent 21 years running an award-winning premium building company. Fr
 
 **Over-design.** In August 2025, Dubai Municipality warned villa consultancies about over-designing structures and inflating build costs (Gulf News). An over-specified frame or foundation is cost you pay for without seeing it.
 
-**Delay.** Every extra month on site means another month of the contractor's preliminaries. With preliminaries at 12–14% of the contract (Turner & Townsend, via PRASOON), a long overrun is expensive before a single extra brick is laid. We cover this in more detail in [what a builder knows that most villa owners don't](/insights/what-the-contractor-knows/).
+**Delay.** Every extra month on site means another month of the contractor's preliminaries. With preliminaries at 12–14% of the contract (Turner & Townsend, via PRASOON), a long overrun is expensive before a single extra brick is laid. Our guide to [how long it takes to build a villa in Dubai](/insights/how-long-to-build-a-villa-dubai/) explains where programmes usually slip. We cover this in more detail in [what a builder knows that most villa owners don't](/insights/what-the-contractor-knows/).
 
 ## How do you protect a villa construction budget?
 
