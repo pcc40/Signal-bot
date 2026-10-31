@@ -56,7 +56,7 @@ Two cautions. First, these are averages across very different projects. A rectan
 
 ## What is included in the build cost, and what is not?
 
-The contractor's rate normally covers the building itself: substructure, frame, envelope, internal fit-out to the specified standard, and the mechanical, electrical and plumbing installations. It also includes the contractor's preliminaries, the cost of running the site. Turner & Townsend put contractor preliminaries in Dubai at 12–14% (as cited by PRASOON), so a meaningful slice of every square foot is site management, welfare, temporary works, insurance and plant rather than the building you will live in.
+The contractor's rate normally covers the building itself: substructure, frame, envelope, internal fit-out to the specified standard, and the mechanical, electrical and plumbing installations. It also includes the contractor's [preliminaries](/glossary/#preliminaries), the cost of running the site. Turner & Townsend put contractor preliminaries in Dubai at 12–14% (as cited by PRASOON), so a meaningful slice of every square foot is site management, welfare, temporary works, insurance and plant rather than the building you will live in.
 
 What is usually outside the rate:
 

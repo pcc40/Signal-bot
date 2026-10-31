@@ -76,7 +76,7 @@ The BPS app, relaunched in August 2024, includes a registry and ratings for cons
 
 ## Stage 4: Master-developer NOC and building permit
 
-In a master-planned community, the master developer reviews the design against its guidelines and issues its NOC. In Nakheel communities, for example, renovation and extension approvals begin with a Nakheel NOC application through its portal before the authority permit.
+In a master-planned community, the master developer reviews the design against its guidelines and issues its [NOC](/glossary/#noc) (no objection certificate). In Nakheel communities, for example, renovation and extension approvals begin with a Nakheel NOC application through its portal before the authority permit.
 
 The authority permit then runs through Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits. Under Dubai Municipality's residential procedure, the consultant or contractor submits drawings and fees online, the service-authority NOCs are issued through the unified window, and the permit is issued with stamped drawings. In August 2026, Dubai Municipality announced an AI system that checks villa drawings against the Dubai Building Code, being rolled out in phases through Build in Dubai (Khaleej Times). In practice, cleaner drawings should mean fewer rounds of comments.
 

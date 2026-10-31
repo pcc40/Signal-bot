@@ -472,7 +472,7 @@ def legal():
 def insights(posts):
     crumbs = [("Home", "/"), ("Insights", "/insights/")]
     items = "".join(f'<li><a href="/insights/{p["slug"]}/"><div><h3>{esc(p["title"])}</h3><p>{esc(p["description"])}</p></div><div class="meta">{esc(p.get("category",""))}<br>{datetime.date.fromisoformat(str(p["date"])).strftime("%-d %b %Y")}</div></a></li>' for p in posts)
-    body = B.banner(crumbs, "Insights", "Straight answers for villa owners in Dubai and Abu Dhabi: costs, approvals, contracts and choosing a team, written from the builder's side of the table.", "quay-house-04", credit_of("quay-house-04")) + f'''
+    body = B.banner(crumbs, "Insights", "Straight answers for villa owners in Dubai and Abu Dhabi: costs, approvals, contracts and choosing a team, written from the builder's side of the table. New to the jargon? Start with our <a href=\"/glossary/\">villa construction glossary</a>.", "quay-house-04", credit_of("quay-house-04")) + f'''
 <section class="section"><div class="wrap">{post_cards(posts)}</div></section>{B.cta_band()}'''
     B.page("/insights/", "Villa Building Insights for Dubai & Abu Dhabi Owners | Eastbridge",
            "Guides for villa owners in Dubai and Abu Dhabi: build costs, approvals, contractors, contracts, snagging and renovation, from the builder's side.",
@@ -539,7 +539,7 @@ def misc(posts):
     # llms.txt and llms-full.txt are written by build.write_llms()
 
 def build_all(posts):
-    import pages_new, pages_tools
+    import pages_new, pages_tools, pages_glossary
     home(posts)
     pages_new.why_page()
     pages_new.case_hub()
@@ -553,4 +553,5 @@ def build_all(posts):
     approach(); independence(); fees(); about(); faq_page(); contact(); legal()
     insights(posts)
     pages_tools.build_tools()
+    pages_glossary.glossary_page()
     misc(posts)
