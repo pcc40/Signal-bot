@@ -578,7 +578,8 @@ def llms_facts():
             f"- Case study: {url('/case-studies/island-e-waterfront-villa/')} (illustrative, modelled scenario, not a completed Eastbridge project)"]
 
 LLMS_FULL_PAGES = ["/about/", "/why-a-client-side-project-manager/", "/services/"]  # + every service page
-LLMS_FULL_TAIL = ["/approach/", "/independence/", "/fees/", "/faq/", "/case-studies/island-e-waterfront-villa/"]
+LLMS_FULL_TAIL = ["/approach/", "/independence/", "/fees/", "/faq/", "/case-studies/island-e-waterfront-villa/",
+                  "/tools/villa-build-cost-calculator/", "/glossary/", "/guides/villa-owner-checklist/"]
 LLMS_DROP = ("script", "style", "svg", "noscript", "form", "button", "img", "picture", "iframe")
 LLMS_DROP_CLASS = {"crumbs", "cta-band", "credit", "toc", "article-aside", "post-cards", "strip", "work-grid",
                    "video", "hero-video", "scroll-cue", "aside-links", "mega", "actions"}
@@ -671,6 +672,8 @@ def write_llms(posts):
         "", "## Services"] + [f"- [{s['name']}]({url('/services/' + s['slug'] + '/')}): {s['description']}" for s in SERVICES] + \
         ["", "## Areas"] + [f"- [{a['name']}]({url('/areas/' + a['slug'] + '/')}): {a['tag']}; master developer {a['developer']}" for a in AREAS] + \
         ["", "## Guides"] + [f"- [{p['title']}]({url('/insights/' + p['slug'] + '/')}): {p['description']} (updated {post_dates(p)[1].isoformat()})" for p in posts] + \
+        ["", "## Tools", f"- [Villa build and renovation cost calculator]({url('/tools/villa-build-cost-calculator/')}): indicative low, likely and high costs for building or renovating a villa in Dubai or Abu Dhabi, with design fees, approvals, contingency and timeline; every rate cited to published 2025-26 sources"] + \
+        ["", "## Free guide", f"- [The Villa Owner's Pre-Construction Checklist (Dubai & Abu Dhabi)]({url('/guides/villa-owner-checklist/')}): free 10-page PDF of practical checks by stage: plot purchase, brief and budget, choosing a consultant and contractor, contract terms, monthly checks during construction, snagging and handover. Direct PDF: {url('/assets/guides/villa-owner-checklist.pdf')}"] + \
         ["", "## About",
          f"- [About Eastbridge and Philip Chapman]({url('/about/')})", f"- [How we work]({url('/approach/')})",
          f"- [Independence pledge]({url('/independence/')})", f"- [How fees work]({url('/fees/')})",
@@ -678,6 +681,8 @@ def write_llms(posts):
          f"- [Contact]({url('/contact/')})",
          "", "## Optional",
          f"- [Insights RSS feed]({url('/insights/feed.xml')})", f"- [Sitemap]({url('/sitemap.xml')})"]
+    import pages_glossary
+    idx += pages_glossary.llms_lines()
     (DIST / "llms.txt").write_text("\n".join(idx) + "\n", encoding="utf-8")
 
     full = head + ["", f"This file holds the full text of the main pages and every insight article on {C.SITE_URL}, "

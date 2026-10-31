@@ -124,7 +124,7 @@ def svg_cash():
         g.append(f'<g><title>{yr}: plot {m(p)}, build and fees {m(b)}, total {m(p+b)}</title>'
                  f'<rect x="{x-bw/2:.1f}" y="{yp:.1f}" width="{bw}" height="{y0-yp:.1f}" fill="{C_PLOT}"/>')
         if b > 0:
-            g.append(f'<rect x="{x-bw/2:.1f}" y="{yb:.1f}" width="{bw}" height="{yp-yb-2:.1f}" fill="{C_BUILD}"/>')
+            g.append(f'<rect x="{x-bw/2:.1f}" y="{yb:.1f}" width="{bw}" height="{max(0.0, yp-yb-2):.1f}" fill="{C_BUILD}"/>')
         g.append(f'<text x="{x:.1f}" y="{yb-8:.1f}" text-anchor="middle" class="val">{p+b:.1f}</text>')
         g.append(f'<text x="{x:.1f}" y="{H-B+20}" text-anchor="middle" class="tick">{yr}</text></g>')
     g.append("</svg>")

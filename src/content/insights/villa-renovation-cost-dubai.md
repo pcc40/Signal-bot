@@ -139,6 +139,8 @@ Living in the villa during the works rarely saves money once services, waterproo
 
 If the scope keeps growing towards new structure, a new envelope and full services replacement, stop and price a rebuild properly alongside it. Our [Palm Jumeirah renovation guide](/insights/palm-jumeirah-villa-renovation/) covers that decision and the approvals sequence, and our guide to [what it costs to build a villa in Dubai](/insights/villa-construction-cost-dubai/) gives the new-build comparison.
 
+For an indicative figure on your own villa, our [villa build and renovation cost calculator](/tools/villa-build-cost-calculator/) applies the published renovation rates by specification and lists its sources.
+
 ## How Eastbridge can help
 
 We represent the owner on villa renovations, alongside your DM-registered consultant and your contractor. We help you set a budget that reflects the age of the house, arrange the right surveys before the design is fixed, compare bids like-for-like and choose, then keep cost and programme under control as the works open up. Having spent two decades on the builder's side, we know where renovation budgets leak. See our [villa renovation project management](/services/villa-renovation-project-management/) service, or [get in touch](/contact/) to talk through your villa.

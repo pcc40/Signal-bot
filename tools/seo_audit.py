@@ -105,7 +105,8 @@ for f in files:
                 t = set(t if isinstance(t, list) else [t]) if t else set()
                 if t:
                     ids_types.setdefault(i, []).append((t, rel))
-                if top:
+                # a node with properties beyond @id (nested or top-level) defines it; a bare {"@id": ...} refers to it
+                if top or (t and len(set(o) - {"@id", "@type"}) > 0):
                     ids_defined.setdefault(i, set()).add(rel)
                 else:
                     ids_refs.setdefault(i, set()).add(rel)
