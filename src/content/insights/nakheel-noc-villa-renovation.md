@@ -37,7 +37,7 @@ sources:
   - title: "Dubizzle: property renovation process in Dubai"
     url: "https://www.dubizzle.com/blog/property/property-renovation-process-dubai/"
 ---
-A Nakheel NOC is the master developer's written no-objection to the works you want to carry out on your villa, and in Nakheel communities it is the first approval on the critical path. Nakheel's own guidance is that you must obtain an NOC from its Urban Planning team before making any alterations, requested through Nakheel Online Services or the My Nakheel app ([Nakheel](https://www.nakheel.com/en/contact-us)). Once you have it, your consultant applies for the building permit from Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits, and only then should the contractor mobilise.
+A Nakheel NOC is the master developer's written no-objection to the works you want to carry out on your villa, and in Nakheel communities it is the first approval on the critical path. Nakheel's own guidance is that you must obtain an NOC from its Urban Planning team before making any alterations, requested through Nakheel Online Services or the My Nakheel app ([Nakheel](https://www.nakheel.com/en/contact-us)). Once you have it, your consultant applies for the building permit from Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits (see [which Dubai authority covers my villa](/insights/which-dubai-authority-covers-my-villa/)), and only then should the contractor mobilise.
 
 This guide covers what triggers an NOC, what Nakheel wants to see, how it fits with the authority permit, and the part most guides leave out: how to sequence your contractor around it so the approvals do not cost you money.
 

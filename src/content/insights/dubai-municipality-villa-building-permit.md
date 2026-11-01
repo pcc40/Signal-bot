@@ -63,7 +63,7 @@ A villa building permit in Dubai is applied for online by your registered engine
 
 ## Who issues villa building permits in Dubai?
 
-Three authorities issue building permits for private villas in Dubai: Dubai Municipality, Trakhees and the Dubai Development Authority. Which one applies depends on where your plot sits, and your consultant will confirm it at the start.
+Three authorities issue building permits for private villas in Dubai: Dubai Municipality, Trakhees and the Dubai Development Authority. Which one applies depends on where your plot sits, and your consultant will confirm it at the start; our guide to [which Dubai authority covers your villa](/insights/which-dubai-authority-covers-my-villa/) explains why it follows the plot, not the community.
 
 Since 2022, building permits across Dubai Municipality, the Dubai Development Authority, Trakhees and DIEZ have run through a single unified e-window, with Civil Defence, RTA, DEWA, Etisalat and du linked in (Dubai Municipality). In October 2023 Dubai Municipality launched the Build in Dubai platform, which covers the whole life of a project: land, design, permits, construction, completion, connection and later alterations (Dubai Media Office). The Dubai Building Permits app was relaunched in August 2024 with a registry and ratings for consultants and contractors.
 
