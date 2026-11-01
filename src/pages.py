@@ -3,7 +3,7 @@ import json, datetime, re, html as H
 from email.utils import format_datetime
 import build as B
 import config as C
-from content.services import SERVICES, BY_SLUG as SVC
+from content.services import SERVICES, BY_SLUG as SVC, DELIVERABLES, SPECIMENS, MONTH_ON_PROJECT, WA_TOPIC
 from content.areas import AREAS, BY_SLUG as AREA
 from content.projects import PROJECTS, BY_SLUG as PROJ
 
@@ -124,6 +124,47 @@ def services_hub():
            "Owner's representation, villa builds, renovations, plot reviews, cost control, site reports, claims, snagging and handover in Dubai and Abu Dhabi.",
            body, crumbs, schema)
 
+def contact_href(param, slug):
+    """Deep link to the contact form with the service or community pre-selected (the script reads it)."""
+    return f"/contact/?{param}={slug}#brief"
+
+def deliverables_html(slug):
+    """'You receive': the documents a service produces (competitor brief 2.2)."""
+    items = DELIVERABLES.get(slug)
+    if not items:
+        return ""
+    lis = "".join(f"<li><b>{esc(n)}</b><span>{esc(d)}</span></li>" for n, d in items)
+    lede = ("The full set of cost-control documents we keep for you, from the first cost plan to the final account."
+            if slug == "cost-and-programme-control" else "The documents this service produces, written for you in plain English.")
+    spec = ""
+    if slug in SPECIMENS:
+        title, rows = SPECIMENS[slug]
+        dl = "".join(f"<div><dt>{esc(a)}</dt><dd>{esc(b)}</dd></div>" for a, b in rows)
+        spec = (f'<figure class="specimen"><div class="specimen__head"><span class="specimen__tag">Illustrative</span>'
+                f'<b>{esc(title)}</b></div><dl>{dl}</dl><figcaption>Illustrative layout only. The figures come from your own cost plan and contract.</figcaption></figure>')
+    return (f'<section class="section paper deliverables" id="you-receive" aria-labelledby="receive-h"><div class="wrap split">'
+            f'<div><span class="kicker">The paperwork</span><h2 id="receive-h">You receive</h2>'
+            f'<p class="muted">{lede} What you receive, and how often, is set out in your written scope of works before work starts.</p>{spec}</div>'
+            f'<div><ul class="doc-list">{lis}</ul></div></div></section>')
+
+def month_html(slug):
+    """'A month on your project': an illustrative month, owners-representative page only."""
+    if slug != "owners-representative":
+        return ""
+    return (f'<section class="section month" id="a-month" aria-labelledby="month-h"><div class="wrap">'
+            f'<div class="head-row"><div><span class="kicker">Illustrative</span><h2 id="month-h">A month on your project</h2></div>'
+            f'<p class="muted">What a typical month during construction looks like from your side. Your written appointment sets how often we visit and what we report.</p></div>'
+            f'{B.steps_html(MONTH_ON_PROJECT)}</div></section>')
+
+def service_enquiry_html(s):
+    """Enquiry block on every service page (competitor brief 2.4): contact form with the service pre-selected, and WhatsApp."""
+    return (f'<section class="section--tight enquire" aria-labelledby="enq-h"><div class="wrap"><div class="enquire-box">'
+            f'<div><h2 id="enq-h" class="h-sm">Ask about this service</h2>'
+            f'<p>Tell us whether it is a plot or a villa, the community, the stage you are at and when you want to start. {esc(C.RESPONSE_PROMISE)}.</p></div>'
+            f'<p class="contact-actions"><a class="btn" href="{contact_href("service", s["slug"])}">Send an enquiry about this service</a>'
+            f'<a class="btn btn--ghost" href="{B.wa_page_link(B.WA_TPL_SERVICE, WA_TOPIC[s["slug"]])}" rel="noopener">Ask on WhatsApp</a></p>'
+            f'</div></div></section>')
+
 def service_page(s):
     path = f"/services/{s['slug']}/"
     crumbs = [("Home", "/"), ("Services", "/services/"), (s["short"], path)]
@@ -141,15 +182,17 @@ def service_page(s):
 <figure>{pic(strip[0], proj_of(strip[0])["name"], "(max-width:900px) 100vw, 40vw")}<figcaption>{esc(credit_of(strip[0]))}</figcaption></figure></div>
 <div class="prose">{s["intro"]}
 <h2>What we do</h2><ul>{does}</ul>
-<h2>What you receive</h2><ul>{gets}</ul></div>
+<h2>What it gives you</h2><ul>{gets}</ul></div>
 </div></section>
+{deliverables_html(s["slug"])}{month_html(s["slug"])}
 <section class="section--tight"><div class="wrap">{strip_html([ban] + strip[1:])}</div></section>
 <section class="section dark"><div class="wrap feature">
 <figure>{pic(pj["slug"] + "-01", pj["name"] + ", " + pj["place"], "(max-width:900px) 100vw, 58vw")}<figcaption>{esc(pj["name"])}, {esc(pj["place"])}. Built by P Chapman Construction.</figcaption></figure>
 <div><span class="kicker">From the builder's side</span><p class="statement" style="font-size:var(--s-2)">{esc(s["builder_view"])}</p><p><a class="btn btn--ghost" href="/work/{pj["slug"]}/">See {esc(pj["name"])}</a></p></div></div></section>
 <section class="section"><div class="wrap split"><div><h2>Questions</h2></div><div>{B.faq_html(s["faqs"])}</div></div></section>
+{service_enquiry_html(s)}
 <section class="section paper"><div class="wrap"><h2>Related services</h2>{related}</div></section>
-{B.cta_band()}'''
+{B.cta_band(contact=contact_href("service", s["slug"]))}{B.wa_page_msgs(B.WA_TPL_SERVICE, WA_TOPIC[s["slug"]])}'''
     B.page(path, s["title"], s["description"], body, crumbs,
            [B.service_schema(s, path), B.faq_schema(s["faqs"])], og=B.og_image(ban))
 
@@ -181,7 +224,7 @@ def area_page(a):
 <section class="section--tight"><div class="wrap">{strip_html(others)}</div></section>
 <section class="section paper"><div class="wrap split"><div><h2>Questions about {esc(a["name"])}</h2></div><div>{B.faq_html(a["faqs"])}</div></div></section>
 <section class="section"><div class="wrap"><h2>Services most relevant here</h2>{svc}</div></section>
-{B.cta_band(f"Building or renovating in {a['name']}?")}'''
+{B.cta_band(f"Building or renovating in {a['name']}?", contact=contact_href("area", a["slug"]))}{B.wa_page_msgs(B.WA_TPL_AREA, a["name"])}'''
     schema = [B.faq_schema(a["faqs"]), {"@context": "https://schema.org", "@type": "Service",
               "name": f"Villa project management and owner's representation in {a['name']}",
               "provider": {"@id": B.ORG_ID}, "areaServed": {"@type": "Place", "name": f"{a['name']}, {a['city']}"},
@@ -355,8 +398,6 @@ def fees():
          "Fixed fee per stage, based on the size and complexity of the villa and the number of appointments you need to make."),
         ('<a href="/services/owners-representative/">Owner\'s representation</a> during design and construction', "Cost and programme control, payment and variation review, client-side site visits, reporting, the decision log and handover.",
          rep_fee + "Set by the scope, the site attendance and reporting agreed in your appointment, and the expected duration."),
-        ('<a href="/services/snagging-and-handover/">Snagging and handover</a> only', "Snagging inspections on your behalf, tracking of defects to close-out, and the handover documents.",
-         "Fixed fee, based on the size of the villa and the number of inspections needed."),
         ('<a href="/services/variations-delays-and-claims/">Variations and claims advice</a>', "A review of a variation, delay or claim position, and support in negotiation.",
          "Fixed fee per review, or hourly for negotiations. Quoted per matter once we have seen the papers."),
     ]
@@ -469,7 +510,17 @@ def contact():
     stages = "".join(f"<option>{esc(v)}</option>" for v in
                      ["Considering a plot", "Plot bought", "In design", "Choosing a contractor", "Under construction",
                       "Planning a renovation", "Stalled or in dispute", "Near handover", "Something else"])
-    areas = "".join(f'<option>{esc(a["name"])}</option>' for a in AREAS) + "<option>Elsewhere in Dubai</option><option>Elsewhere in Abu Dhabi</option>"
+    # Community dropdown: the area pages, plus Jumeirah Islands and Arabian Ranches (their area pages are being
+    # added; listed here until they exist, without duplicates once they do), then "Other". Values stay in English
+    # so Netlify and the sheet get the same text from every language; data-slug lets ?area=<slug> pre-select one.
+    community = [(a["slug"], a["name"]) for a in AREAS]
+    community += [x for x in [("jumeirah-islands", "Jumeirah Islands"), ("arabian-ranches", "Arabian Ranches")]
+                  if x[0] not in {s for s, _ in community}]
+    areas = "".join(f'<option value="{esc(n)}" data-slug="{sl}">{esc(n)}</option>' for sl, n in community) + '<option value="Other">Other</option>'
+    services = "".join(f'<option value="{esc(s["short"])}" data-slug="{s["slug"]}">{esc(s["short"])}</option>' for s in SERVICES)
+    tell = "".join(f"<li>{esc(t)}</li>" for t in ["Plot or villa, and the community", "The stage you are at",
+                                                     "When you want to start", "The property type and size",
+                                                     "Drawings, quotes or a contract, if you have them (not essential)"])
     budgets = "".join(f"<option>{esc(v)}</option>" for v in
                       ["Under AED 3m", "AED 3m–8m", "AED 8m–20m", "AED 20m–50m", "Over AED 50m", "Not sure yet"])
     based = "".join(f"<option>{esc(v)}</option>" for v in ["UAE", "United Kingdom", "Europe", "GCC", "Elsewhere"])
@@ -488,6 +539,8 @@ def contact():
 <p class="contact-actions"><a class="btn" href="{B.wa_link()}" rel="noopener">Message us on WhatsApp</a><a class="btn btn--ghost" href="tel:{C.PHONE_E164}">Call {C.PHONE_DISPLAY}</a></p>
 <p>Email <a href="mailto:{C.EMAIL}">{C.EMAIL}</a></p>
 <p class="muted small">{esc(C.HOURS)}. UK and European clients are welcome to arrange calls in their own time zone.</p>
+<h2 class="h-sm">What to tell us</h2>
+<ul class="tell-list">{tell}</ul>
 <h2 class="h-sm">What happens next</h2>
 {B.steps_html(next_steps, "steps steps--compact")}
 <p class="small"><a class="link" href="/fees/">How fees work</a></p>
@@ -501,10 +554,12 @@ def contact():
 <fieldset class="field"><legend>How would you like us to reply? {opt}</legend><div class="checks">{methods}</div></fieldset>
 <div class="row"><div class="field"><label for="f-phone">Phone or WhatsApp number <span class="opt ph-opt">Optional</span><span class="opt ph-req" hidden>Needed for a call or WhatsApp</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" minlength="7" pattern="\\+?[0-9][0-9 \\(\\)\\-]{{6,}}" aria-describedby="f-phone-hint f-phone-err"><p class="hint" id="f-phone-hint">Include the country code, for example +971 or +44.</p>{err("f-phone", "Please enter a phone number with its country code, for example +971 50 123 4567.")}</div>
 <div class="field"><label for="f-based">Where are you based? {opt}</label><select id="f-based" name="based"><option value="">Choose</option>{based}</select></div></div>
+<div class="field"><label for="f-service">Which service are you asking about? {opt}</label><select id="f-service" name="service"><option value="">Not sure yet</option>{services}</select></div>
 <div class="row"><div class="field"><label for="f-stage">Project stage {opt}</label><select id="f-stage" name="stage"><option value="">Choose a stage</option>{stages}</select></div>
-<div class="field"><label for="f-area">Where is the project? {opt}</label><select id="f-area" name="area"><option value="">Choose a location</option>{areas}</select></div></div>
+<div class="field"><label for="f-area">Community {opt}</label><select id="f-area" name="area" aria-describedby="f-area-hint"><option value="">Choose a community</option>{areas}</select><p class="hint" id="f-area-hint">We cover every community in Dubai and Abu Dhabi. Not listed? Choose Other.</p></div></div>
+<div class="field"><label for="f-property">Property type and size {opt}</label><input id="f-property" name="property" maxlength="200" aria-describedby="f-property-hint"><p class="hint" id="f-property-hint">For example: a plot, or a villa with its number of bedrooms and approximate size in sq ft or m².</p></div>
 <div class="field"><label for="f-budget">Approximate construction budget {opt}</label><select id="f-budget" name="budget" aria-describedby="f-budget-hint"><option value="">Choose a range</option>{budgets}</select><p class="hint" id="f-budget-hint">A rough band is enough. It helps us judge the scale, and is never published.</p></div>
-<div class="field"><label for="f-msg">Tell us about the project {req}</label><textarea id="f-msg" name="message" required minlength="10" aria-describedby="f-msg-hint f-msg-err"></textarea><p class="hint" id="f-msg-hint">The house you want, the plot or villa you have, and anything that is worrying you.</p>{err("f-msg", "Please add a few words about your project.")}</div>
+<div class="field"><label for="f-msg">Tell us about the project {req}</label><textarea id="f-msg" name="message" required minlength="10" aria-describedby="f-msg-hint f-msg-err"></textarea><p class="hint" id="f-msg-hint">Plot or villa, community, stage, when you want to start, and anything that is worrying you.</p>{err("f-msg", "Please add a few words about your project.")}</div>
 <div class="field"><label class="consent" for="f-mkt"><input id="f-mkt" name="marketing_opt_in" type="checkbox" value="yes"> <span>Optional: also send me Eastbridge notes for villa owners by email, no more than once a month. Leaving this unticked does not affect your enquiry. Unsubscribe at any time by replying to any note or writing to {C.EMAIL}.</span></label></div>
 <div class="reassure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="1"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg>
 <p><b>Confidential.</b> Read personally by Philip and used to reply to you (and, if you tick the box above, to send our notes). We never share or publish client names, addresses or projects without written permission. See our <a href="/privacy/">privacy notice</a>.</p></div>

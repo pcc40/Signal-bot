@@ -206,20 +206,20 @@ AREAS = [
   "developer": "Nakheel",
   "tag": "New waterfront villas and plot builds",
   "title": "Palm Jebel Ali & Jebel Ali Village Villas | Eastbridge",
-  "description": "Building on a Jebel Ali Village plot or customising a Palm Jebel Ali villa? Independent client-side project management, plot review and handover snagging.",
+  "description": "Building on a Jebel Ali Village plot or customising a Palm Jebel Ali villa? Independent client-side project management, plot review and handover.",
   "h1": "Palm Jebel Ali and Jebel Ali Village",
   "lede": "Two Nakheel communities at very different stages: a new island of waterfront villas, and an established village of private plots.",
   "image": "the-lookout-02",
   "body": """<h2>Palm Jebel Ali</h2>
-<p>Palm Jebel Ali has returned as one of Dubai's largest waterfront villa launches. Most buyers are purchasing developer villas off-plan. Where we help is in the things that happen around that: independent snagging at handover, customisation and upgrade projects once owners take possession, and advice on any plot-based opportunities.</p>
+<p>Palm Jebel Ali has returned as one of Dubai's largest waterfront villa launches. Most buyers are purchasing developer villas off-plan. Where we help is in the things that happen around that: customisation and upgrade projects once owners take possession, with their handover, and advice on any plot-based opportunities.</p>
 <h2>Jebel Ali Village</h2>
 <p>Jebel Ali Village offers plots for private villas in an established, family-oriented community. Here the work is classic plot-to-keys: brief, budget, design within the community guidelines, approvals through your consultant and a build managed carefully from your side.</p>
 <h2>Approvals</h2>
 <p>Both are Nakheel communities. Work is reviewed against Nakheel's guidelines first, then permitted by the relevant authority depending on your plot. Your consultant or licensed contractor prepares the submissions; we track them and keep the programme realistic.</p>
 <h2>How we help</h2>
-<p>For new villas, our <a href="/services/snagging-and-handover/">snagging and handover service</a> makes sure you receive what you paid for. For plot builds, we represent you from the first budget to the end of the defects period.</p>""",
+<p>For customisation and upgrade projects, we represent you from scope and budget through to <a href="/services/snagging-and-handover/">snagging and handover</a>, which are one stage of that service rather than a separate product. For plot builds, we represent you from the first budget to the end of the defects period.</p>""",
   "faqs": [
-   ("Can you snag my new Palm Jebel Ali villa at handover?", "Yes. We provide independent snagging and handover inspections for developer villas, including commissioning checks and document review."),
+   ("Do you offer snagging on its own for a new Palm Jebel Ali villa?", "No. Snagging and handover are one stage of our full service, not a separate product, so there is no snagging-only fee. If you plan customisation or upgrade work after you take possession, we can represent you through it, handover included. For a first pass on a developer villa, our free <a href=\"/guides/villa-snagging-checklist/\">snagging checklist</a> will help."),
    ("Can I build my own villa in Jebel Ali Village?", "Yes, on available plots, subject to Nakheel's guidelines and the authority permit."),
   ],
   "services": ["snagging-and-handover", "plot-due-diligence", "villa-construction-project-management"],

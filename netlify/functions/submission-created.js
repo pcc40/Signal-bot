@@ -2,7 +2,9 @@
 // (non-spam) Netlify Forms submission. No dependencies; uses Node 18+ fetch.
 //
 // What it does
-//   1. "brief" form     -> sends the enquirer a branded acknowledgement email.
+//   1. "brief" form     -> sends the enquirer a branded acknowledgement email. Its optional
+//                          "service", "area" (community) and "property" fields go to the
+//                          sheet row and the lead alert, never into the customer email.
 //      "notes" form     -> sends a short subscription confirmation.
 //      "checklist" form -> no email (the download is shown on the thank-you page),
 //                          unless the visitor ticked the optional notes box, in which
@@ -97,6 +99,12 @@ function guideOf(data) {
 }
 
 const asText = (v) => (Array.isArray(v) ? v.join(", ") : v == null ? "" : String(v)).slice(0, 5000);
+
+// The "service" select on the contact form sends a service's short English name. A forged value
+// is reduced to plain words so the log and the alert never carry markup.
+function serviceOf(data) {
+  return asText(data && data.service).replace(/[^\p{L}'’ ,\-]/gu, "").replace(/\s+/g, " ").trim().slice(0, 80);
+}
 
 function langFromReferrer(ref) {
   try {
@@ -319,6 +327,10 @@ exports.handler = async (event) => {
     based: asText(d.based),
     message: asText(d.message),
     contact_method: asText(d.contact_method),
+    // "brief" form, optional (Nov 2026): the service chosen (pre-selected from a service page's
+    // enquiry link) and the property type and size. Both may be absent.
+    service: serviceOf(d),
+    property: asText(d.property).slice(0, 200),
     plot: asText(d.plot).slice(0, 300),
     estimate_inputs: asText(d.estimate_inputs).slice(0, 1000),
     estimate_result: asText(d.estimate_result).slice(0, 2000),
@@ -381,4 +393,4 @@ exports.handler = async (event) => {
 };
 
 // Exposed for tools/test_submission_function.js only.
-exports._test = { isOptedIn, briefEmail, estimateEmail, notesEmail, alertEmail, guideOf };
+exports._test = { isOptedIn, briefEmail, estimateEmail, notesEmail, alertEmail, guideOf, serviceOf };

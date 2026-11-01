@@ -352,13 +352,16 @@ SERVICES = [
   "short": "Snagging and handover",
   "name": "Villa snagging and handover management",
   "title": "Villa Snagging & Handover Dubai | Eastbridge",
-  "description": "Client-side snagging, commissioning checks and handover for new and renovated villas in Dubai and Abu Dhabi. Defects tracked to close-out.",
+  "description": "Snagging, commissioning checks and handover as one stage of our full client-side service for villas in Dubai and Abu Dhabi, tracked to close-out.",
   "h1": "Handover is not the end of the project. It is the last chance to get it right.",
   "lede": "Once you have the keys and the contractor has his money, defects are harder to close. We help make sure the house is finished, tested and documented before you accept it.",
   "image": "ansells-01",
   "stage": "Practical completion and defects period",
   "intro": """<p>A good handover is quiet. The snag list is short because quality was managed throughout, the systems have been tested and demonstrated, and a full set of documents is waiting. A poor handover is a long list, a frustrated contractor who wants to leave, and months of chasing.</p>
 <p>We plan handover from the start of construction, not the end. We inspect room by room and system by system, witness commissioning, compile the snag list with the consultant and contractor, and make sure the documents you'll need for the life of the house are collected before retention is released.</p>
+<p>Snagging and handover are one stage of our full client-side service, on a villa we have represented you on from the start. They are not sold on their own, and there is no separate snagging fee.</p>
+<h2>How this differs from a one-visit snag report</h2>
+<p>A snagging inspection firm usually visits once, near the end, and reports what it can see on the day. That is a useful service, and a different one. Because we have followed the villa through construction, we know what sits behind the finishes, which areas gave trouble on the way, and what the contract says about completion, retention and defects. So our work does not stop at a report: it runs through close-out of every item, the handover documents, the release of retention and the defects liability period.</p>
 <p>Doing a first pass yourself? Download our free <a href="/guides/villa-snagging-checklist/">villa snagging checklist</a>: systems and rooms with tick boxes and a severity column, the handover documents to collect, and the defects liability periods with their legal sources.</p>""",
   "does": [
    "Pre-handover inspection, room by room and system by system",
@@ -375,8 +378,12 @@ SERVICES = [
   "builder_view": "Snag lists stall when they are vague, very long or issued late. Clear photographs, specific locations, and a list issued in sections as areas finish are the fastest way to get every item closed. Retention is your leverage. Spend it wisely.",
   "faqs": [
    ("What should I check before accepting a new villa?", "Waterproofing, drainage and roof areas, air conditioning performance, plumbing and hot water, electrical and lighting controls, glazing and doors, finishes, pool and external works. Our <a href=\"/insights/villa-snagging-checklist-dubai/\">snagging guide</a> goes room by room, and the <a href=\"/guides/villa-snagging-checklist/\">printable checklist</a> adds a severity column and a snag log."),
-   ("Can you snag a villa we bought from a developer?", "Yes. We provide independent snagging for completed developer villas as well as private builds."),
+   ("Can I appoint you just for snagging?", "No. Snagging and handover are one stage of our full service on a villa we represent, so there is no snagging-only fee. If all you need is a single inspection of a finished villa, a snagging inspection firm offers that, and our free <a href=\"/guides/villa-snagging-checklist/\">snagging checklist</a> will help you do a first pass yourself."),
    ("What documents should I receive at handover?", "At least the completion certificate, as-built drawings, warranties and guarantees, operation and maintenance manuals, test certificates and keys and codes schedules."),
+   ("Can I inspect before final payment?", "Usually, yes, and you should. Building contracts commonly tie the payment due at completion, and the first release of retention, to an inspection and an agreed snag list, but the order is set by your contract, so read it before the handover appointment. For a villa bought from a developer, the sale and purchase agreement sets the order of payment, inspection and handover. A UAE-qualified lawyer can confirm your rights. On our appointments, the pre-handover inspection is planned into the programme so that it happens before the payment, not after it."),
+   ("What if the villa fails inspection?", "A handover inspection rarely ends in a simple pass or fail. It produces a list. Minor items are normally recorded on a snag list for the contractor to close within an agreed period. Serious defects, such as water coming in, unsafe electrics or systems that do not work, are a reason to delay accepting the villa until they are put right and inspected again. The authority's completion inspection is separate; your registered consultant will confirm where it stands. What you can do next depends on your contract: we set out the options and recommend one, and a UAE-qualified lawyer advises on your rights."),
+   ("Should I sign handover documents before snags are closed?", "Read exactly what you are being asked to sign first. A handover or completion certificate can start the defects liability period, trigger the release of part of the retention and affect delay damages, so signing one is a significant step. Accepting handover with a list of minor snags attached is common, provided the list forms part of the document and the contractor's obligation to close each item, and by when, is clear. Do not sign anything stating the villa was accepted free of defects while items are still open. If in doubt, take advice from a UAE-qualified lawyer before you sign."),
+   ("Do I need to be present?", "Not at every inspection. On our appointments we carry out the pre-handover inspections and report each item with photographs, so you can follow it from abroad. If you can, attend the final walk-through and the demonstration of the systems: it is your home, and that is when you are shown how to run it. If you cannot travel, we can take you through it on a video call. Whatever is signed at handover is your decision."),
   ],
   "related": ["site-visits-and-reporting", "villa-renovation-project-management", "owners-representative"],
  },
@@ -448,3 +455,167 @@ SERVICES = [
 ]
 
 BY_SLUG = {s["slug"]: s for s in SERVICES}
+
+# ---------------------------------------------------------------- "You receive" (competitor brief 2.2)
+# The documents each service produces, as a scannable list: (document, one line on what is in it).
+# Kept apart from SERVICES so the page copy above can change without touching these lists.
+# Wording rules: we observe and record, review and recommend; nothing here certifies, approves
+# design or promises a visit frequency (that is set in each written appointment).
+DELIVERABLES = {
+ "owners-representative": [
+  ("Brief, budget and programme", "Agreed with you before design money is spent, with contingency held by you."),
+  ("Site note after every visit", "Photographs, progress against programme, workmanship observations and issues raised."),
+  ("Monthly cost and programme report", "Paid, committed and forecast cost to complete; programme against the contract date; risks; decisions needed."),
+  ("Normalised tender comparison", "Consultant and contractor bids set out like-for-like: exclusions, provisional sums, preliminaries and programme."),
+  ("Payment-application review notes", "Each application checked against the work in place and the contract, with a recommended amount."),
+  ("Variation register", "Every change request with its reason, price, time effect, status and your decision."),
+  ("Decision log", "Every choice you make, with its date, cost and time effect, so nothing is relitigated later."),
+  ("Risk and issues log", "Open risks and issues, who owns each one and when it is due to close."),
+  ("Close-out document list", "The handover file checked item by item: completion certificate, as-built drawings, warranties and manuals."),
+ ],
+ "villa-construction-project-management": [
+  ("Brief, budget and programme pack", "Set from the brief and the plot before design starts."),
+  ("Design-stage cost check notes", "The design reviewed against the budget at concept, detailed design and before pricing."),
+  ("Normalised tender comparison", "Contractor bids set out like-for-like, with the assumptions tested."),
+  ("Site note after every visit", "Photographs, progress against programme and anything that will cost money or time later."),
+  ("Monthly cost and programme report", "Paid, committed and forecast cost to complete, with the programme and the decisions needed."),
+  ("Payment-application review notes", "A recommendation before every payment."),
+  ("Variation register", "Every change logged with its price, time effect and your decision."),
+  ("Decision log", "What you decided, when, and what it changed."),
+  ("Snag list and close-out document list", "Defects tracked to close-out and the handover file checked item by item."),
+ ],
+ "villa-renovation-project-management": [
+  ("Condition summary", "What the specialists you appoint found, in plain English, and what it means for scope and budget."),
+  ("Renovate-or-rebuild comparison", "Prepared where the numbers are close, on the same basis for both options."),
+  ("Scope and budget split", "What must be done separated from what you would like done, with a contingency set for the age of the house."),
+  ("Approvals tracker", "Master developer NOC and authority permit status, followed with your consultant or contractor."),
+  ("Normalised tender comparison", "Renovation bids set out like-for-like."),
+  ("Site note after every visit", "Photographs, progress and anything found once walls and ceilings are opened."),
+  ("Monthly cost and programme report", "Cost to complete, programme, risks and decisions needed."),
+  ("Payment-application review notes and variation register", "A recommendation before every payment, and every change logged."),
+  ("Snag list and close-out document list", "Defects tracked to close-out and the handover documents collected."),
+ ],
+ "plot-due-diligence": [
+  ("Written plot review report", "A plain answer on whether the numbers work, and why."),
+  ("Design guideline summary", "Coverage, heights, setbacks and materials from the master developer's rules."),
+  ("Sale terms notes", "Build-by deadlines and any penalties in the sale terms, flagged for your lawyer."),
+  ("Build budget range", "A realistic range for the house you want, and the total cost of ownership around it."),
+  ("Questions for the seller or developer", "A short list to put to them before you commit."),
+ ],
+ "design-and-approvals": [
+  ("Written brief", "Rooms, sizes, finishes, priorities and what you will not compromise on."),
+  ("Design-stage cost check notes", "The design reviewed against the budget at concept, detailed design and before pricing."),
+  ("Value review notes", "Where structural or services cost looks high, the questions to put to your consultant."),
+  ("Approvals tracker", "What your consultant has submitted, what is waiting, and on whom."),
+  ("Decision log", "Design decisions recorded with their cost and time effect."),
+ ],
+ "consultant-and-contractor-selection": [
+  ("Shortlist with reasons", "Consultants and contractors suited to your type of villa."),
+  ("Licence and registration check record", "What was checked, where and when, through the official registries."),
+  ("Normalised tender comparison", "Bids set out like-for-like: exclusions, provisional sums, preliminaries and programme."),
+  ("Reference call notes", "What past clients said, not only the showcase projects."),
+  ("Contract terms notes", "Payment, retention, bonds, delay and variation terms, with points to raise before you sign."),
+  ("Written recommendation", "Which bid we would choose and why. You make the appointment."),
+ ],
+ "cost-and-programme-control": [
+  ("Cost plan at each design stage", "The budget broken down and updated as the design develops."),
+  ("Monthly cost and programme report", "One page: paid, committed, forecast cost to complete, contingency, programme and decisions needed, with the detail behind it."),
+  ("Cost-to-complete forecast", "Paid, plus committed, plus a realistic estimate of everything still to come, including risks."),
+  ("Payment-application review notes", "Each application checked against the work actually done, with a recommended amount before you pay."),
+  ("Payment and cash-flow forecast", "What falls due and when, so the money is ready before it is needed."),
+  ("Variation register", "Every change request: is it a genuine change, is the price fair, what does it do to time, and your decision."),
+  ("Provisional sum tracker", "Each provisional sum against its final cost, as the work is priced and built."),
+  ("Contingency register", "Contingency held and released by you, with a clear audit trail."),
+  ("Advance payment and retention tracker", "What has been paid in advance, recovered, held back and released, against the contract terms."),
+  ("Programme review notes", "The contractor's programme tested, and the critical path watched month by month."),
+  ("Risk register", "Each risk with its likely cost and time exposure, and who owns it."),
+  ("Final account statement", "Agreed line by line, with the records behind every figure."),
+ ],
+ "site-visits-and-reporting": [
+  ("Site note after every visit", "Photographs, progress against programme, workmanship observations and housekeeping."),
+  ("Photo record before work is covered up", "What we observed and recorded in ceiling voids, wall chases and waterproofing before they were closed."),
+  ("Monthly written report", "Progress, quality and the decisions you need to make."),
+  ("Issues log", "Each issue raised through your consultant, with an owner and a date, tracked to close-out."),
+  ("Progress meeting notes", "What was said and agreed, written from your side."),
+ ],
+ "variations-delays-and-claims": [
+  ("Variation register", "Every variation with its entitlement, price, time effect and status."),
+  ("Variation review notes", "Is it a genuine change, is the price fair, and what does it do to time?"),
+  ("Extension of time assessment", "The contractor's claim tested against the contract, the programme and the records."),
+  ("Record-keeping set-up", "What to record, and how, from day one, so your position is documented."),
+  ("Draft responses", "A reply you can send to the contractor, set out on the facts."),
+  ("Construction analysis for your lawyer", "Where a dispute escalates, the technical and commercial picture your lawyer needs."),
+ ],
+ "stalled-project-rescue": [
+  ("Position report", "Progress, quality, payments and the contract position, within two to three weeks."),
+  ("Record of work in place", "A photographed record of what is built, its condition and what is defective."),
+  ("Payments reconciliation", "What has been paid against the value of the work in place."),
+  ("Cost and time to complete", "A realistic forecast of what it will take to finish."),
+  ("Options appraisal", "Continue, renegotiate or replace, with the cost and risk of each."),
+  ("Recovery programme and monthly report", "The plan you choose, and progress against it through to completion."),
+ ],
+ "snagging-and-handover": [
+  ("Pre-handover inspection notes", "Room by room and system by system, with photographs."),
+  ("Commissioning record", "Which systems we saw tested and demonstrated, when, and what was outstanding."),
+  ("Snag list", "Numbered, located, photographed and graded, issued in sections as areas finish, and tracked to close-out."),
+  ("Close-out document list", "Completion certificate, as-built drawings, warranties, O&M manuals, test certificates and keys and codes, checked item by item."),
+  ("Defects register", "Defects reported during the defects liability period, and when each was closed."),
+  ("Retention release recommendation", "Whether the retention has been earned, and what is still open."),
+ ],
+ "overseas-owners": [
+  ("Site note after every visit", "Photo-led and readable on a phone in a few minutes."),
+  ("Monthly written report", "Cost, programme, risks and the decisions that need you."),
+  ("Decision log", "Nothing agreed without your sign-off, and every decision recorded with its date."),
+  ("Payment-application review notes", "A recommendation before any money leaves your account."),
+  ("Video walk-throughs at key stages", "So you can see the work for yourself between visits."),
+  ("Visit planner", "The decisions that need you in person, and when to be in Dubai for them."),
+ ],
+ "development-advisory": [
+  ("Feasibility appraisal", "Build cost, programme and risk for the scheme you are considering."),
+  ("Plot-to-sale or plot-to-let appraisal", "With the construction assumptions set out, so partners can test them."),
+  ("Contract strategy note", "How to procure and appoint for the scheme."),
+  ("Phasing and cash-flow plan", "Prepared with your finance partners."),
+  ("Monthly report for partners and lenders", "Cost, programme, quality and risks in one place."),
+ ],
+}
+
+# An illustrative layout shown beside the document list. No figures: the owner's own cost plan supplies them.
+SPECIMENS = {
+ "cost-and-programme-control": ("The one-page monthly summary", [
+  ("Paid to date", "Every payment, against the contract sum"),
+  ("Committed", "Contract sum plus agreed variations"),
+  ("Forecast cost to complete", "Committed, plus pending changes and priced risks"),
+  ("Contingency remaining", "Held by you; each release recorded"),
+  ("Variations awaiting your decision", "Price and time effect of each"),
+  ("Programme", "Forecast completion against the contract date"),
+  ("Decisions needed this month", "With the date each one is needed by"),
+  ("Top risks", "Likely cost and time exposure, and who owns each"),
+ ]),
+}
+
+# "A month on your project" (owners-representative only): an illustrative month during construction.
+MONTH_ON_PROJECT = [
+ ("Site visits", "We walk the site, observe and record progress and workmanship, photograph work before it is covered up, and send you a site note after each visit."),
+ ("Progress meeting", "We attend as your representative, raise issues with the consultant and contractor, and log each one with an owner and a date."),
+ ("Payment application", "We check the contractor's application against the work in place and the contract, and send you review notes with a recommended amount. You decide, and you pay the contractor directly."),
+ ("Change requests", "Each one goes into the variation register with its price and time effect, and comes to you with a recommendation. Nothing changes without your decision."),
+ ("Decisions", "The decision log shows what you need to decide, by when, and what each option costs."),
+ ("Month end", "Your monthly cost and programme report: paid, committed, forecast cost to complete, programme, risks and decisions needed. Then a call to go through it."),
+]
+
+# WhatsApp: the topic slotted into the page's message template ("Hello, I have a question about {topic}.").
+WA_TOPIC = {
+ "owners-representative": "owner's representation for my villa",
+ "villa-construction-project-management": "building a new villa",
+ "villa-renovation-project-management": "renovating my villa",
+ "plot-due-diligence": "a plot review",
+ "design-and-approvals": "the design and approvals for my villa",
+ "consultant-and-contractor-selection": "choosing a consultant and contractor",
+ "cost-and-programme-control": "cost and programme control on my villa",
+ "site-visits-and-reporting": "site visits and reporting on my villa",
+ "variations-delays-and-claims": "a variation, delay or claim on my villa",
+ "stalled-project-rescue": "a stalled villa project",
+ "snagging-and-handover": "the handover of my villa",
+ "overseas-owners": "building in Dubai while living abroad",
+ "development-advisory": "a development project",
+}

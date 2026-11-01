@@ -5,7 +5,8 @@
 // global.fetch is replaced with a recorder, so no email is sent and no sheet is written.
 // It checks the marketing consent paths (brief, checklist, notes, estimate): opt-in captured, logged to the sheet, shown in the
 // lead alert, and no marketing content in emails to people who did not opt in; and for "estimate" that the
-// inputs, result and link reach the sheet and the alert but never the customer email.
+// inputs, result and link reach the sheet and the alert but never the customer email; and for "brief" that the
+// optional service, community and property fields reach the sheet and the alert, with forged values cleaned.
 
 "use strict";
 const assert = require("assert");
@@ -67,6 +68,36 @@ const test = async (name, f) => { await f(); passed++; console.log("ok  " + name
     assert.strictEqual(r.sheet[0].body.row.marketing_source, "ticked box on brief form");
     assert.match(r.toCustomer[0].body.text, /reply with "unsubscribe" or write to philip@eastbridgestrategicpartners\.com/);
     assert.match(r.alerts[0].body.text, /marketing_opt_in: yes/);
+  });
+
+  await test("brief with service, community and property: on the sheet row and in the alert, not in the customer email", async () => {
+    const r = await submit("brief", { ...base, service: "Snagging and handover", area: "Jumeirah Islands", property: "Villa, 5 bedrooms, about 7,000 sq ft" });
+    const row = r.sheet[0].body.row;
+    assert.strictEqual(row.service, "Snagging and handover");
+    assert.strictEqual(row.area, "Jumeirah Islands");
+    assert.strictEqual(row.property, "Villa, 5 bedrooms, about 7,000 sq ft");
+    assert.match(r.alerts[0].body.text, /service: Snagging and handover/);
+    assert.match(r.alerts[0].body.text, /area: Jumeirah Islands/);
+    assert.match(r.alerts[0].body.text, /property: Villa, 5 bedrooms/);
+    assert.match(r.alerts[0].body.subject, /\(Jumeirah Islands\)/);
+    const ack = r.toCustomer[0].body;
+    assert.ok(!ack.text.includes("7,000 sq ft") && !ack.html.includes("Jumeirah Islands") && !ack.text.includes("Snagging and handover"));
+  });
+
+  await test("brief without the new optional fields: still logged, empty values", async () => {
+    const r = await submit("brief", base);
+    const row = r.sheet[0].body.row;
+    assert.strictEqual(row.service, "");
+    assert.strictEqual(row.property, "");
+    assert.ok(!/service:|property:/.test(r.alerts[0].body.text));
+  });
+
+  await test("brief with a forged service value: markup stripped, length capped", async () => {
+    const r = await submit("brief", { ...base, service: "<script>alert(1)</script>" + "x".repeat(200), property: "y".repeat(500) });
+    const row = r.sheet[0].body.row;
+    assert.ok(!/[<>()]/.test(row.service));
+    assert.ok(row.service.length <= 80);
+    assert.strictEqual(row.property.length, 200);
   });
 
   await test("brief with a forged value: treated as no", async () => {

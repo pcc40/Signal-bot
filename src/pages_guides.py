@@ -187,7 +187,7 @@ def snag_landing():
 <div class="prose">
 <p>Our founder, {esc(C.FOUNDER["name"])}, ran {esc(C.FOUNDER["company_uk"])}, a premium residential builder in the UK, for {C.FOUNDED_TRACK_RECORD_YEARS} years, so we have been on the contractor’s side of a great many handovers. The snag lists that were closed quickly were specific, located, photographed and numbered, and arrived while money was still to be paid. This checklist is built to produce that kind of list.</p>
 <p>It is general information, not legal or engineering advice. Your registered consultant carries out the statutory inspections, and a UAE-qualified lawyer should advise before you rely on a defects period or withhold a payment. For the reasoning behind each check, read our <a href="/insights/villa-snagging-checklist-dubai/">guide to snagging a new villa in Dubai</a>.</p>
-<p>If you would rather have someone walk the house with you, see our <a href="/services/snagging-and-handover/">snagging and handover</a> service or <a href="/contact/">arrange a free 30-minute call</a>.</p>
+<p>On the villas we represent, snagging and handover are one stage of our full service rather than a separate product: see <a href="/services/snagging-and-handover/">how we run handover</a>, or <a href="/contact/">arrange a free 30-minute call</a>.</p>
 </div></div></section>
 {B.cta_band("Is your villa nearing handover?")}'''
     schema = [{
