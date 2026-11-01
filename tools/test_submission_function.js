@@ -6,7 +6,8 @@
 // It checks the marketing consent paths (brief, checklist, notes, estimate): opt-in captured, logged to the sheet, shown in the
 // lead alert, and no marketing content in emails to people who did not opt in; and for "estimate" that the
 // inputs, result and link reach the sheet and the alert but never the customer email; and for "brief" that the
-// optional service, community and property fields reach the sheet and the alert, with forged values cleaned.
+// optional service, community and property fields reach the sheet and the alert, with forged values cleaned;
+// and that the campaign attribution fields (utm_*, gclid) reach the sheet and the alert, cleaned, never the customer email.
 
 "use strict";
 const assert = require("assert");
@@ -201,6 +202,44 @@ const test = async (name, f) => { await f(); passed++; console.log("ok  " + name
     const ack = r.toCustomer[0].body;
     assert.ok(!/<img|onerror|alert\(/.test(ack.html) && !/<img|onerror/.test(ack.text));
     assert.match(ack.text, /^(Hello|Dear [\p{L}'-]+),\n/u);
+  });
+
+  const utm = { utm_source: "google", utm_medium: "cpc", utm_campaign: "villa-pm-dubai", utm_term: "client side project manager", utm_content: "ad-1", gclid: "Cj0KCQiA_test-123" };
+
+  await test("brief with campaign details: on the sheet row and in the alert, never in the customer email", async () => {
+    const r = await submit("brief", { ...base, ...utm });
+    const row = r.sheet[0].body.row;
+    for (const [k, v] of Object.entries(utm)) assert.strictEqual(row[k], v, k);
+    assert.match(r.alerts[0].body.text, /utm_source: google/);
+    assert.match(r.alerts[0].body.text, /utm_campaign: villa-pm-dubai/);
+    assert.match(r.alerts[0].body.text, /gclid: Cj0KCQiA_test-123/);
+    const ack = r.toCustomer[0].body;
+    assert.ok(!/utm_|gclid|villa-pm-dubai|Cj0KCQiA/.test(ack.text + ack.html), "no attribution in the customer email");
+  });
+
+  await test("estimate and checklist with campaign details: logged on the sheet row", async () => {
+    let r = await submit("estimate", { ...est, ...utm });
+    assert.strictEqual(r.sheet[0].body.row.utm_medium, "cpc");
+    assert.strictEqual(r.sheet[0].body.row.gclid, utm.gclid);
+    assert.match(r.alerts[0].body.text, /utm_medium: cpc/);
+    r = await submit("checklist", { name: "Sarah Example", email: "sarah@example.com", guide: "villa-snagging-checklist", ...utm });
+    assert.strictEqual(r.sheet[0].body.row.utm_source, "google");
+    assert.strictEqual(r.sheet[0].body.row.utm_term, "client side project manager");
+  });
+
+  await test("no campaign details: empty values, nothing extra in the alert", async () => {
+    const r = await submit("brief", base);
+    const row = r.sheet[0].body.row;
+    for (const k of Object.keys(utm)) assert.strictEqual(row[k], "", k);
+    assert.ok(!/utm_|gclid/.test(r.alerts[0].body.text));
+  });
+
+  await test("forged campaign values: markup stripped, length capped", async () => {
+    const r = await submit("brief", { ...base, utm_source: "<script>alert(1)</script>", gclid: "a".repeat(400), utm_campaign: "spring\n\nsale\"><img src=x>" });
+    const row = r.sheet[0].body.row;
+    assert.ok(!/[<>()"]/.test(row.utm_source + row.utm_campaign));
+    assert.strictEqual(row.gclid.length, 150);
+    assert.ok(!/\n/.test(row.utm_campaign));
   });
 
   console.log(`\n${passed} tests passed`);

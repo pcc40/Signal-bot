@@ -436,7 +436,8 @@
     });
   }
   window.addEventListener('beforeprint', printInputs);
-  if (sendF) sendF.addEventListener('submit', function () { fillSend(); if (window.gtag) gtag('event', 'generate_lead', { form: 'estimate' }); });
+  // No conversion event here: estimate_request_success fires on the thank-you page, after Netlify accepted the form (build.py SCRIPT).
+  if (sendF) sendF.addEventListener('submit', fillSend);
 
   /* ---------- "Add this calculator to your website" (full page): embed code in the page's language, Copy code ---------- */
   var ec = document.querySelector('[data-embed-code]'), ecb = document.querySelector('[data-embed-copy]'),

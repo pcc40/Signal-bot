@@ -385,8 +385,46 @@ def footer():
 <section class="on-record" aria-labelledby="on-record-h"><h3 id="on-record-h">On the record</h3><dl>{"".join(f"<div><dt>{t}</dt><dd>{d}</dd></div>" for t, d in on_record_items())}</dl></section>
 <div class="legal"><span>© {year} {C.LEGAL}. {C.LICENCE}. Eastbridge acts as the client's project manager and representative. It is not a contractor and does not replace the registered consultant of record required by the authorities.</span>
 <span><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/sitemap.xml">Sitemap</a></span></div>
+{cookie_settings_link()}
 </div></footer>
 {action_bar()}'''
+
+# Campaign attribution (live audit, 1 Nov 2026). Hidden inputs with these names sit on the brief, estimate and
+# checklist forms (form[data-attr]) so Netlify registers them; SCRIPT fills them from sessionStorage, and only
+# once the visitor has accepted analytics. netlify/functions/submission-created.js copies them to the sheet
+# row and the lead alert. Keep the three lists (here, SCRIPT's AK and the function's ATTRIBUTION) in step.
+ATTRIBUTION_FIELDS = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid"]
+
+def attribution_inputs():
+    return "".join(f'<input type="hidden" name="{n}" value="">' for n in ATTRIBUTION_FIELDS)
+
+def conversion_marker(event, pending, guide=""):
+    """Invisible marker on a thank-you page. Netlify shows that page only after it has accepted the POST, and
+    SCRIPT sends `event` from here once per submission: the form's submit handler leaves a flag in
+    sessionStorage (eb_pending_<pending>) and this page removes it, so a reload, a revisit or a direct visit
+    never counts. /contact/thanks/#notes reports newsletter_signup instead (see SCRIPT)."""
+    g = f' data-guide="{guide}"' if guide else ""
+    return f'<div hidden data-conv="{event}" data-pending="{pending}"{g}></div>'
+
+def consent_banner():
+    """Cookie choice for Google Analytics (Consent Mode v2, see analytics()). Static HTML so tools/i18n.py
+    translates it; hidden until SCRIPT finds no stored choice. Bottom of the screen, non-blocking (not a
+    dialog): the page stays usable and nothing is measured until "Accept analytics"."""
+    if not C.GA4_ID:
+        return ""
+    return ('<section class="cookie-banner" id="cookie-banner" aria-labelledby="cookie-banner-h" hidden><div class="cookie-banner__in">'
+            '<h2 class="cookie-banner__h" id="cookie-banner-h">Analytics cookies</h2>'
+            '<p class="cookie-banner__p">With your agreement, we use Google Analytics cookies to see which pages are useful. '
+            'Nothing is measured unless you accept, and we use no advertising cookies. You can change your choice at any time '
+            'with Cookie settings at the foot of each page. See our <a href="/privacy/">privacy notice</a>.</p>'
+            '<div class="cookie-banner__acts"><button class="btn" type="button" data-consent="granted">Accept analytics</button>'
+            '<button class="btn btn--ghost" type="button" data-consent="denied">Decline</button></div></div></section>')
+
+def cookie_settings_link():
+    """Footer control that reopens the cookie choice. Hidden until SCRIPT runs (it does nothing without it)."""
+    if not C.GA4_ID:
+        return ""
+    return '<p class="cookie-settings"><button class="link-btn" type="button" data-cookie-settings hidden>Cookie settings</button></p>'
 
 SCRIPT = """<script>
 (function(){document.documentElement.classList.add('js');
@@ -427,18 +465,61 @@ if(fm){fm.setAttribute('novalidate','');
  fm.querySelectorAll('input[name="contact_method"]').forEach(function(r){r.addEventListener('change',need)});need();
  fm.addEventListener('submit',function(e){var bad=null;fields.forEach(function(el){if(!check(el)&&!bad)bad=el});
   if(bad){e.preventDefault();bad.focus();return}
-  var sb=fm.querySelector('button[type=submit]');if(sb){sb.setAttribute('aria-disabled','true');sb.classList.add('is-sending')}
-  if(window.gtag)gtag('event','generate_lead',{form:'brief'})})}
-var gf=document.querySelector('form[data-guide]');if(gf){gf.addEventListener('submit',function(){if(window.gtag)gtag('event','generate_lead',{form:'checklist',guide:gf.elements.guide?gf.elements.guide.value:''})})}
-document.querySelectorAll('a[href^="https://wa.me"]').forEach(function(a){a.addEventListener('click',function(){if(window.gtag)gtag('event','contact',{method:'whatsapp'})})});
+  var sb=fm.querySelector('button[type=submit]');if(sb){sb.setAttribute('aria-disabled','true');sb.classList.add('is-sending')}})}
+/* Measurement (live audit, 1 Nov 2026). Nothing here runs until the visitor accepts analytics: window.ebConsent
+   comes from analytics() in the head, and window.gtag exists only after "Accept analytics". Success events fire
+   on the thank-you pages (after Netlify accepted the POST), never in a submit handler. */
+var CS=window.ebConsent,ok=function(){return !!(CS&&CS.granted())},ev=function(n,p){if(ok()&&window.gtag)gtag('event',n,p||{})};
+var SS=(function(){var u=false;try{sessionStorage.setItem('eb_t','1');sessionStorage.removeItem('eb_t');u=true}catch(e){}
+ return {ok:u,get:function(k){try{return sessionStorage.getItem(k)}catch(e){return null}},set:function(k,v){try{sessionStorage.setItem(k,v)}catch(e){}},del:function(k){try{sessionStorage.removeItem(k)}catch(e){}}}})();
+var AK=['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid'];
+function grab(){if(!ok())return;try{var q=new URLSearchParams(location.search),o={},any=false;AK.forEach(function(k){var v=(q.get(k)||'').replace(/[^A-Za-z0-9_.~%+:\\/ -]/g,'').slice(0,150);if(v){o[k]=v;any=true}});if(any)SS.set('eb_attr',JSON.stringify(o))}catch(e){}}
+function fill(){var o={};if(ok()){try{o=JSON.parse(SS.get('eb_attr')||'{}')||{}}catch(e){}}document.querySelectorAll('form[data-attr]').forEach(function(f){AK.forEach(function(k){var el=f.querySelector('input[name="'+k+'"]');if(el)el.value=o[k]||''})})}
+document.querySelectorAll('form').forEach(function(f){var n=f.querySelector('input[name="form-name"]');if(n)f.addEventListener('submit',function(e){if(e.defaultPrevented||!ok())return;fill();SS.set('eb_pending_'+n.value,'1')})});
+var cv=document.querySelector('[data-conv]');
+function conv(){if(!cv||cv.getAttribute('data-done')||!ok())return;var n=cv.getAttribute('data-conv'),pf=cv.getAttribute('data-pending'),p={form:pf},g=cv.getAttribute('data-guide');
+ if(pf==='brief'&&location.hash==='#notes'){n='newsletter_signup';pf='notes';p.form='notes'}
+ if(SS.ok){if(SS.get('eb_pending_'+pf)===null)return;SS.del('eb_pending_'+pf)}
+ if(g)p.guide=g;cv.setAttribute('data-done','1');ev(n,p)}
+document.querySelectorAll('a[href^="https://wa.me"]').forEach(function(a){a.addEventListener('click',function(){ev('contact',{method:'whatsapp'})})});
+document.querySelectorAll('a[href^="tel:"]').forEach(function(a){a.addEventListener('click',function(){ev('contact',{method:'phone'})})});
+var cb=document.getElementById('cookie-banner'),opener=null;
+if(cb&&CS){var show=function(focus){cb.hidden=false;requestAnimationFrame(function(){cb.classList.add('is-in')});if(focus){var f=cb.querySelector('[data-consent]');if(f)f.focus()}},
+  hide=function(){cb.classList.remove('is-in');cb.hidden=true;if(opener){opener.focus();opener=null}};
+ if(!CS.get())show(false);
+ cb.querySelectorAll('[data-consent]').forEach(function(b){b.addEventListener('click',function(){var v=b.getAttribute('data-consent');CS.set(v);
+  if(v==='granted'){grab();conv()}else{['eb_attr','eb_pending_brief','eb_pending_notes','eb_pending_estimate','eb_pending_checklist'].forEach(SS.del)}fill();hide()})});
+ cb.addEventListener('keydown',function(e){if(e.key==='Escape'&&CS.get())hide()});
+ document.querySelectorAll('[data-cookie-settings]').forEach(function(s){s.hidden=false;s.addEventListener('click',function(){opener=s;show(true)})})}
+grab();fill();conv();
 })();
 </script>"""
 
 def analytics():
+    """Google Analytics behind a consent choice (Google Consent Mode v2, basic implementation).
+    Consent defaults are pushed first, all denied. Nothing loads from Google and no event is queued until the
+    visitor accepts: only then does load() update analytics_storage to granted, push gtag config and inject
+    gtag.js. Ad storage, ad user data and ad personalisation stay denied (the site has no advertising tags).
+    The choice lives in localStorage "eb_consent" ("granted" or "denied"); SCRIPT shows the banner while it
+    is empty and "Cookie settings" in the footer reopens it. Declining after accepting switches consent back
+    to denied, stops events and removes the _ga cookies. window.ebConsent: get(), set(v), granted()."""
     if not C.GA4_ID:
         return ""
-    return (f'<script async src="https://www.googletagmanager.com/gtag/js?id={C.GA4_ID}"></script>'
-            f"<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','{C.GA4_ID}',{{anonymize_ip:true}});</script>")
+    gid = C.GA4_ID
+    return ("<script>window.dataLayer=window.dataLayer||[];(function(){function g(){dataLayer.push(arguments)}"
+            "g('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});"
+            "var K='eb_consent',on=false;"
+            "function load(){if(on)return;on=true;window.gtag=g;g('consent','update',{analytics_storage:'granted'});"
+            f"g('js',new Date());g('config','{gid}',{{anonymize_ip:true}});"
+            f"var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id={gid}';document.head.appendChild(s)}}"
+            "function off(){if(on){g('consent','update',{analytics_storage:'denied'})}on=false;try{delete window.gtag}catch(e){window.gtag=undefined}"
+            "var h=location.hostname.replace(/^www[.]/,'');"
+            "document.cookie.split(';').forEach(function(c){var n=c.split('=')[0].trim();if(/^_ga/.test(n)){"
+            "['',';domain='+h,';domain=.'+h].forEach(function(d){document.cookie=n+'=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/'+d})}})}"
+            "window.ebConsent={get:function(){try{return localStorage.getItem(K)}catch(e){return null}},"
+            "set:function(v){try{localStorage.setItem(K,v)}catch(e){}if(v==='granted')load();else off()},"
+            "granted:function(){return on}};"
+            "if(window.ebConsent.get()==='granted')load()})();</script>")
 
 def lcp_preload(body, preload=None):
     """Preload the likely LCP image (the first fetchpriority=high <img>) with the same srcset/sizes the
@@ -530,6 +611,7 @@ def page(path, title, description, body, crumbs=None, schema=None, og=None, og_t
 </head>
 <body{body_cls}>
 {"" if bare else header(path)}
+{"" if bare else consent_banner()}
 <main id="main">
 {body}
 </main>

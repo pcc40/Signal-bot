@@ -1065,3 +1065,29 @@ html,body{overflow-x:clip}
 @media (max-width:900px){.enquire-box{grid-template-columns:1fr}}
 .tell-list{margin:0 0 1.6em;padding-left:1.1em;font-size:var(--s--1);color:var(--ink-soft)}
 .tell-list li{margin:.25em 0}
+
+/* ---------- Cookie choice (build.py consent_banner) and footer "Cookie settings" ---------- */
+.cookie-banner{position:fixed;z-index:95;inset-inline:max(16px,env(safe-area-inset-left,0px));inset-inline-end:auto;bottom:max(18px,env(safe-area-inset-bottom,0px));max-width:min(520px,calc(100% - 32px));background:var(--ink);color:#DCE1DE;border:1px solid var(--line-dark);box-shadow:0 14px 36px rgba(10,14,16,.32);opacity:0;transform:translateY(12px);transition:opacity .3s var(--ease),transform .3s var(--ease)}
+.cookie-banner.is-in{opacity:1;transform:none}
+.cookie-banner[hidden]{display:none}
+.cookie-banner__in{padding:18px 20px 20px}
+.cookie-banner__h{font-family:var(--serif);font-weight:400;font-size:var(--s-1);color:#fff;margin:0 0 .35em;line-height:1.2}
+.cookie-banner__p{font-size:var(--s--1);line-height:1.55;margin:0 0 14px}
+.cookie-banner a{color:#fff;text-decoration:underline;text-decoration-color:var(--brass-light);text-underline-offset:3px}
+.cookie-banner__acts{display:flex;flex-wrap:wrap;gap:10px}
+.cookie-banner .btn{background:#fff;color:var(--ink);border-color:#fff;min-height:44px;padding:.65em 1.2em}
+.cookie-banner .btn:hover{background:var(--brass-light);border-color:var(--brass-light);color:var(--ink)}
+.cookie-banner .btn--ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+.cookie-banner .btn--ghost:hover{background:#fff;border-color:#fff;color:var(--ink)}
+.cookie-banner :focus-visible{outline-color:var(--brass-light)}
+.cookie-settings{margin:14px 0 0}
+.link-btn{background:none;border:0;padding:0;font:inherit;color:#97A09C;font-size:.76rem;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.link-btn:hover{color:#fff}
+@media (max-width:760px){
+  .cookie-banner{inset-inline:12px;max-width:none;bottom:calc(60px + 12px + env(safe-area-inset-bottom,0px))}
+  .cookie-banner__in{padding:16px 16px 18px}
+  .cookie-banner__acts .btn{flex:1 1 auto}
+  body.nav-open .cookie-banner{display:none}
+}
+@media (prefers-reduced-motion:reduce){.cookie-banner{transform:none;transition:none}}
+@media print{.cookie-banner,.cookie-settings{display:none!important}}

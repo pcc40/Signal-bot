@@ -687,8 +687,8 @@ def contact():
 {B.steps_html(next_steps, "steps steps--compact")}
 <p class="small"><a class="link" href="/fees/">How fees work</a></p>
 </div>
-<form class="form" id="brief" name="brief" method="POST" action="/contact/thanks/" data-netlify="true" netlify-honeypot="company_site" data-enquiry>
-<input type="hidden" name="form-name" value="brief">
+<form class="form" id="brief" name="brief" method="POST" action="/contact/thanks/" data-netlify="true" netlify-honeypot="company_site" data-enquiry data-attr>
+<input type="hidden" name="form-name" value="brief">{B.attribution_inputs()}
 <p class="hp"><label>Leave this empty <input name="company_site" tabindex="-1" autocomplete="off"></label></p>
 <p class="form-prefill small" data-prefill="service" hidden>You are asking about: <b></b>. <a href="#f-service">Change</a></p>
 <p class="form-prefill small" data-prefill="area" hidden>Community: <b></b>. <a href="#f-area">Change</a></p>
@@ -727,7 +727,7 @@ def contact():
     # One page serves both forms: the newsletter posts to /contact/thanks/#notes and the script
     # swaps the blocks marked data-thanks. Without JavaScript the brief version shows.
     B.page("/contact/thanks/", "Thank you | Eastbridge", "Your brief has been received.",
-           f'''<section class="page-head"><div class="wrap">{B.crumbs_html(tcrumbs)}<h1>Thank you.</h1>
+           f'''{B.conversion_marker("enquiry_success", "brief")}<section class="page-head"><div class="wrap">{B.crumbs_html(tcrumbs)}<h1>Thank you.</h1>
 <p class="lede" data-thanks="brief">Your brief is with us. {esc(C.RESPONSE_PROMISE)}. Here is what happens next.</p>
 <p class="lede" data-thanks="notes" hidden>You are on the list. Our notes for villa owners arrive no more than once a month: build costs, approvals and what is moving in the market. To unsubscribe at any time, reply to any note or write to <a href="mailto:{C.EMAIL}">{C.EMAIL}</a>.</p></div></section>
 <section class="section--tight thanks"><div class="wrap">
@@ -743,10 +743,19 @@ def legal():
     # submission-created function sends acknowledgements and can log to a Google Sheet; analytics and
     # the background film appear only when switched on in config.py. Final wording: owner/legal review.
     if C.GA4_ID:
-        analytics = ("<p>We use Google Analytics, with IP anonymisation, to see how the site is used: pages visited, device type "
-                     "and approximate location. It sets cookies for this purpose.</p>")
-        cookies = ("<p>This site uses no advertising cookies. Google Analytics sets cookies to measure use of the site. "
-                   "A video provider may set its own cookies once you choose to play a film.</p>")
+        # Matches build.py analytics() and consent_banner(): Google Consent Mode v2 with everything denied by
+        # default; gtag.js loads only after "Accept analytics"; ad storage stays denied.
+        analytics = ("<p>With your agreement, we use Google Analytics, with IP anonymisation, to see how the site is used: pages visited, "
+                     "device type, approximate location and whether a form was sent successfully. If you arrive from a link that "
+                     "carries campaign details (such as utm_source or a Google Ads click identifier), we keep those details for your "
+                     "visit and send them with any form you complete, so that we know which campaign led to your enquiry. "
+                     "Google Analytics and these campaign details are used only after you choose Accept analytics.</p>")
+        cookies = ("<p>When you first visit, a banner at the bottom of the page asks whether you accept analytics cookies. "
+                   "Until you choose Accept analytics, Google Analytics does not run and sets no cookies; if you choose Decline, it "
+                   "stays off. We store your choice in your browser so that we do not ask again on every page. You can change "
+                   "your choice at any time with Cookie settings at the foot of each page; declining after accepting stops "
+                   "Google Analytics and removes its cookies from this site.</p>"
+                   "<p>This site uses no advertising cookies. A video provider may set its own cookies once you choose to play a film.</p>")
     else:
         analytics = "<p>This site does not currently use analytics, advertising or tracking tools. If that changes, we will update this notice first.</p>"
         cookies = "<p>This site sets no analytics or advertising cookies. A video provider may set its own cookies once you choose to play a film.</p>"

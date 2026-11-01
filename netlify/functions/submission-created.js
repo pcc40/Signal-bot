@@ -16,6 +16,11 @@
 //                          Philip (from /tools/villa-build-cost-calculator/). The email never
 //                          repeats the submitted figures: the hidden fields can be edited by
 //                          anyone, so only the lead alert and the sheet carry them.
+//      Campaign attribution: "brief", "estimate" and "checklist" carry hidden fields
+//                          utm_source, utm_medium, utm_campaign, utm_term, utm_content and gclid,
+//                          filled by the site script only after the visitor accepted analytics
+//                          (build.py ATTRIBUTION_FIELDS). They go to the sheet row and the lead
+//                          alert, cleaned to plain tokens, never into a customer email.
 //   2. Optionally emails an internal lead alert for "brief" and "estimate" (LEAD_ALERT_TO).
 //   3. Optionally logs every submission to a Google Sheet (SHEET_WEBHOOK_URL, a Google
 //      Apps Script web app; see business/automation-blueprint.md, section 4).
@@ -104,6 +109,17 @@ const asText = (v) => (Array.isArray(v) ? v.join(", ") : v == null ? "" : String
 // is reduced to plain words so the log and the alert never carry markup.
 function serviceOf(data) {
   return asText(data && data.service).replace(/[^\p{L}'’ ,\-]/gu, "").replace(/\s+/g, " ").trim().slice(0, 80);
+}
+
+// Campaign attribution fields (keep in step with ATTRIBUTION_FIELDS in build.py). Anyone can post any value,
+// so each is reduced to the characters a UTM value or a click ID uses and capped in length.
+const ATTRIBUTION = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid"];
+function attributionOf(data) {
+  const out = {};
+  for (const k of ATTRIBUTION) {
+    out[k] = asText(data && data[k]).replace(/[^A-Za-z0-9_.~%+:\/ \-]/g, "").replace(/\s+/g, " ").trim().slice(0, 150);
+  }
+  return out;
 }
 
 function langFromReferrer(ref) {
@@ -344,6 +360,8 @@ exports.handler = async (event) => {
     // Which lead magnet a "checklist" submission came from. Only known slugs are kept, so the
     // log never carries free text typed into a forged field.
     guide: formName === "checklist" ? guideOf(d) : "",
+    // Campaign details captured on landing (empty without analytics consent or a tagged link).
+    ...attributionOf(d),
   };
 
   const results = {};
@@ -393,4 +411,4 @@ exports.handler = async (event) => {
 };
 
 // Exposed for tools/test_submission_function.js only.
-exports._test = { isOptedIn, briefEmail, estimateEmail, notesEmail, alertEmail, guideOf, serviceOf };
+exports._test = { isOptedIn, briefEmail, estimateEmail, notesEmail, alertEmail, guideOf, serviceOf, attributionOf };
