@@ -2,7 +2,7 @@
 title: "Building a villa in Dubai while living in the UK"
 description: "What a UK-based owner can run remotely on a Dubai villa build, what needs you on site, the reporting to insist on, and where absentee projects go wrong."
 date: 2026-10-26
-updated: 2026-10-29
+updated: 2026-11-01
 category: "Overseas owners"
 keypoints:
   - "Most of a Dubai villa build can be run from the UK, but a handful of decisions (plot, design freeze, finishes, handover) are far better made in person."
@@ -22,12 +22,22 @@ faqs:
 sources:
   - title: "Dubai Municipality: contract forms for engineering consulting and construction contracting for private villas"
     url: "https://www.dm.gov.ae/municipality-business/guidance-contracts-forms-for-engineering-consulting-services-and-construction-contracting-for-private-villas/"
-  - title: "Real Estate Club Dubai: villa architects and build timelines"
-    url: "https://realestateclubdubai.com/dubai-villa-architects"
+  - title: "Optimal Engineering Consultants: cost to build a villa in Dubai (March 2026)"
+    url: "https://www.optimal.ae/blog/cost-to-build-a-villa-in-dubai"
+  - title: "Engel & Völkers: construction cost in Dubai (December 2025)"
+    url: "https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai"
   - title: "Dubai Municipality: single window for building permits"
     url: "https://www.dm.gov.ae/dubai-launches-single-window-for-building-permits/"
   - title: "Charles Russell Speechlys: decennial liability under the new UAE Civil Code"
     url: "https://www.charlesrussellspeechlys.com/en/insights/expert-insights/construction-engineering-and-projects/2026/decennial-liability-and-subcontractors-under-the-new-uae-civil-code-articles-821-to-824/"
+  - title: "Kayrouz & Associates: decennial liability for UAE contractors and engineers (2026)"
+    url: "https://www.kayrouzandassociates.com/insights/decennial-liability-uae-contractors-engineers-2026"
+  - title: "Dubai Media Office: Mohammed bin Rashid issues law regulating engineering consultancy activities (October 2025)"
+    url: "https://www.mediaoffice.ae/en/news/2025/october/05-10/mohammed-bin-rashid"
+  - title: "GOV.UK: Get your document legalised"
+    url: "https://www.gov.uk/get-document-legalised"
+  - title: "Gulf News: creation, history and evolution of the UAE dirham (peg of AED 3.6725 to the US dollar)"
+    url: "https://gulfnews.com/uae/year-of-the-50th/creation-history-and-evolution-of-the-uae-dirham-1.1621767243152"
 ---
 
 Yes, you can build a villa in Dubai while living in the UK, and many owners do. Design development, approvals, payments and most progress monitoring can be handled remotely if the reporting is disciplined. What cannot be delegated without risk are a small number of decisions about the plot, the design freeze, finishes and handover, and the habit of checking every payment against something you can verify.
@@ -47,7 +57,7 @@ From the UK you can realistically:
 - Release stage payments against agreed milestones.
 - Follow progress through photographs, video walkrounds and written reports.
 
-The design and approvals phase is the easiest part to run remotely. Published guidance puts design at around three to four months and approvals at two to three months, with construction typically eight to fourteen months on top ([Real Estate Club Dubai](https://realestateclubdubai.com/dubai-villa-architects)). During those first six months or so, most of the work is on paper. We break the timeline down in [how long it takes to build a villa in Dubai](/insights/how-long-to-build-a-villa-dubai/).
+The design and approvals phase is the easiest part to run remotely. One Dubai engineering consultancy puts the permit stage at four to eight weeks for a straightforward project once the drawings are complete, and construction at typically 12 to 18 months ([Optimal Engineering](https://www.optimal.ae/blog/cost-to-build-a-villa-in-dubai)); Engel & Völkers says most villas take 12 to 24 months from approval to completion ([Engel & Völkers](https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai)). Until construction starts, most of the work is on paper. We break the timeline down in [how long it takes to build a villa in Dubai](/insights/how-long-to-build-a-villa-dubai/).
 
 ## Which decisions need you there in person?
 
@@ -90,7 +100,7 @@ Keep this simple and auditable. Practical points, in general terms:
 
 - **Pay against milestones, not requests.** Stage payments should follow a schedule in the contract and a valuation of work done from the consultant. Treat any request for money "to secure materials" or "to keep the crew on site" outside that schedule as a conversation, not a payment.
 - **Use a UAE account where sensible.** Many owners open a local account to make payments to contractors and authorities more straightforward. Banks' requirements for non-residents vary, so ask them directly.
-- **Watch currency exposure.** The dirham is pegged to the US dollar, so a build funded from sterling carries sterling-to-dollar exchange risk over a programme that may run well over a year. Some owners convert in tranches against the payment schedule. Speak to your bank or a currency specialist.
+- **Watch currency exposure.** The dirham has been pegged to the US dollar at AED 3.6725 since 1997 ([Gulf News](https://gulfnews.com/uae/year-of-the-50th/creation-history-and-evolution-of-the-uae-dirham-1.1621767243152)), so a build funded from sterling carries sterling-to-dollar exchange risk over a programme that may run well over a year. Some owners convert in tranches against the payment schedule. Speak to your bank or a currency specialist.
 - **Keep a payment register.** Every payment, its reference to a milestone or approved variation, and the supporting valuation. Reconcile it against the cost report monthly.
 - **Know what you are holding back.** Retention and advance payment arrangements should be clear in the contract and tracked, because they are your main leverage at the end of the job.
 
@@ -110,7 +120,7 @@ What helps:
 
 Sometimes. A power of attorney can make life easier for authority submissions, utility connections, handover formalities and signing documents when you cannot travel. It can also be dangerous if it is drawn too widely. A general power of attorney over your property affairs is a very different instrument from one limited to specific tasks on a specific project.
 
-A power of attorney signed in the UK typically needs to go through notarisation and attestation steps before it can be used in the UAE. The detail changes and depends on the purpose, so take advice from a UAE-qualified lawyer on scope, form and process before you sign anything.
+A power of attorney signed in the UK typically needs to go through notarisation and attestation steps before it can be used in the UAE. On the UK side, the Legalisation Office can attach an apostille to a document such as a power of attorney, provided it has first been certified by a UK public official such as a notary or solicitor ([GOV.UK](https://www.gov.uk/get-document-legalised)); UAE attestation follows. The detail changes and depends on the purpose, so take advice from a UAE-qualified lawyer on scope, form and process before you sign anything.
 
 ## How does UAE construction practice differ from the UK?
 
@@ -122,11 +132,11 @@ In the UK, most private residential work uses JCT forms, with an architect or co
 
 ### Roles on site
 
-In Dubai, the registered consultant typically designs the villa, makes the authority submissions and carries the formal site role through construction, including assessing the contractor's payment applications. That is a regulated role. The owner appoints the consultant and the contractor separately, and the consultant's position sits between the two. An owner's representative such as Eastbridge is a different role: we act only for the owner, alongside the consultant and the contractor, and do not replace either. Our article on [owner's representative vs project manager vs consultant](/insights/owners-representative-vs-project-manager-vs-consultant/) explains the difference.
+In Dubai, the registered consultant typically designs the villa, makes the authority submissions and carries the formal site role through construction, including assessing the contractor's payment applications. That is a regulated role: under Dubai Law No. 14 of 2025, no one may carry out engineering consultancy in Dubai without authorisation, and an office needs a valid trade licence and registration with Dubai Municipality to present itself as an engineering consultancy ([Dubai Media Office](https://www.mediaoffice.ae/en/news/2025/october/05-10/mohammed-bin-rashid)). The owner appoints the consultant and the contractor separately, and the consultant's position sits between the two. An owner's representative such as Eastbridge is a different role: we act only for the owner, alongside the consultant and the contractor, and do not replace either. Our article on [owner's representative vs project manager vs consultant](/insights/owners-representative-vs-project-manager-vs-consultant/) explains the difference.
 
 ### Liability for structural defects
 
-UAE law imposes a ten-year liability on the main contractor and the engineer for serious structural defects, now set out in Articles 821 to 824 of the new Civil Code in force from 1 June 2026; it cannot be contracted out of ([Charles Russell Speechlys](https://www.charlesrussellspeechlys.com/en/insights/expert-insights/construction-engineering-and-projects/2026/decennial-liability-and-subcontractors-under-the-new-uae-civil-code-articles-821-to-824/)). There is no direct UK equivalent for a one-off private house, though the protection is narrower than many owners assume. Take legal advice on how it applies to you.
+UAE law imposes a ten-year liability on the main contractor and the engineer for serious structural defects, now set out in Articles 821 to 824 of the new Civil Code in force from 1 June 2026; it cannot be contracted out of ([Charles Russell Speechlys](https://www.charlesrussellspeechlys.com/en/insights/expert-insights/construction-engineering-and-projects/2026/decennial-liability-and-subcontractors-under-the-new-uae-civil-code-articles-821-to-824/)). The ten years run from handover, and the liability covers total or partial collapse and defects that threaten the building's stability or safety, not finishes or ordinary services faults ([Kayrouz & Associates](https://www.kayrouzandassociates.com/insights/decennial-liability-uae-contractors-engineers-2026)). There is no direct UK equivalent for a one-off private house, though the protection is narrower than many owners assume. Take legal advice on how it applies to you.
 
 ### Culture
 

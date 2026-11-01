@@ -2,7 +2,7 @@
 title: "Buying a villa plot in Dubai: checks to make before you pay"
 description: "The checks to make before buying a villa plot in Dubai: title, affection plan, design guidelines, build-by deadlines, ground, utilities and build budget."
 date: 2026-10-24
-updated: 2026-10-31
+updated: 2026-11-01
 category: "Plots"
 keypoints:
   - "Read the affection plan and the master developer's design guidelines before you agree a price; they decide what you can actually build."
@@ -22,8 +22,18 @@ faqs:
 sources:
   - title: "Engel & Völkers: construction cost in Dubai"
     url: "https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai"
-  - title: "Real Estate Club Dubai: villa build cost calculator"
-    url: "https://realestateclubdubai.com/tools/villa-build-cost-calculator"
+  - title: "Optimal Engineering Consultants: cost to build a villa in Dubai (March 2026)"
+    url: "https://www.optimal.ae/blog/cost-to-build-a-villa-in-dubai"
+  - title: "UAE Government portal: expatriates buying a property in the UAE (freehold areas)"
+    url: "https://u.ae/en/information-and-services/moving-to-the-uae/expatriates-buying-a-property-in-the-uae"
+  - title: "Dubai Land Department: request to register the initial sale of off-plan units and land plots"
+    url: "https://dubailand.gov.ae/en/eservices/request-to-register-the-initial-sale/"
+  - title: "Dubai Development Authority: site plan issuance"
+    url: "https://dda.gov.ae/en/planning-development/master-planning/site-plan-issuance"
+  - title: "Nakheel: Development Control and Planning Approval, preliminary design NOC (example issued June 2026)"
+    url: "https://www.cgidubai.gov.in/content/Nakheel-PD-approval-PD_IC1-CTYL-16_013_09-Jun-2026.pdf"
+  - title: "Dubai Media Office: Mohammed bin Rashid issues law regulating engineering consultancy activities (October 2025)"
+    url: "https://www.mediaoffice.ae/en/news/2025/october/05-10/mohammed-bin-rashid"
   - title: "Middle East Construction News: Modon launches residential plots on Hudayriyat Island"
     url: "https://meconstructionnews.com/63729/modon-launches-its-first-residential-plots-community-on-hudayriyat-island"
   - title: "Dubai Municipality: single window for building permits"
@@ -46,14 +56,18 @@ In Dubai the same logic applies, with the added layer of master developer rules.
 
 Start with the basics:
 
+- **Freehold status.** In Dubai, foreign ownership is permitted in areas designated as freehold under Regulation No. 3 of 2006 ([UAE Government portal](https://u.ae/en/information-and-services/moving-to-the-uae/expatriates-buying-a-property-in-the-uae)). If you are buying as a foreign national, confirm the plot sits in one.
 - **Ownership and title.** Confirm the seller owns the plot and is entitled to sell it, and whether there is a mortgage or other restriction registered. Your lawyer will handle this through the proper channels.
 - **Affection plan.** The official plot plan sets out the plot number, area, boundaries, permitted use and other key details. Check the area matches what you are paying for, and that the permitted use is residential villa.
-- **Payment status.** If the plot was bought off a master developer on a payment plan, confirm what has been paid, what remains, and what the developer requires to transfer.
+- **Site plan.** Where the plot falls under the Dubai Development Authority, the site plan is a legal document issued in the plot owner's or lessee's name and used to obtain construction approvals ([DDA](https://dda.gov.ae/en/planning-development/master-planning/site-plan-issuance)). Whichever authority applies, ask for the current plan, not the one from the original sale.
+- **Payment status.** If the plot was bought off a master developer on a payment plan, confirm what has been paid, what remains, and what the developer requires to transfer. Plots not yet fully paid sit on the Dubai Land Department's provisional register; registering an initial sale there costs 2% of the sale value each for seller and purchaser, plus small fixed fees ([Dubai Land Department](https://dubailand.gov.ae/en/eservices/request-to-register-the-initial-sale/)). Your lawyer will confirm which fees apply to your transaction.
 - **Master developer consent.** Transfers in master communities usually need a no-objection letter from the master developer, which may depend on service charges being up to date.
 
 ## Master developer design guidelines
 
 Every master community has rules on what you can build. They sit on top of the authority's building regulations, and they are where a plot's real capacity is decided. Ask for the current design guidelines for the specific plot, not a brochure summary.
+
+To see what a master developer's control looks like in practice, take a Nakheel design approval issued in June 2026 for a plot in one of its communities. It checks the design against that plot's development control regulations, allows any non-standard item only by name, is valid for six months, and is personal to the purchaser: it does not pass automatically to a new buyer if the approved design has not been built ([Nakheel](https://www.cgidubai.gov.in/content/Nakheel-PD-approval-PD_IC1-CTYL-16_013_09-Jun-2026.pdf)). If the seller tells you a plot "comes with approved drawings", ask whether that approval is still valid and whether it can be transferred to you.
 
 | Rule | What to check |
 |---|---|
@@ -70,6 +84,9 @@ Build-by deadlines deserve special attention. If you are buying a plot to hold r
 Remember too that authority rules can change. In Abu Dhabi, for example, the Department of Municipalities and Transport amended private villa regulations in September 2025, including changes to rooftop majlis, a 1.5 m front setback and annex basements ([DMT](https://www.dmt.gov.ae/en/Media-Centre/News/Department-of-Municipalities-and-Transport-Announces-Amendments-to-Private-Villas-Regulations)). Your registered consultant should confirm the current rules for your plot, in Dubai or Abu Dhabi.
 
 ## Which authority will approve your villa?
+
+Start with who will design it. Under Dubai Law No. 14 of 2025, no one may carry out engineering consultancy in Dubai without authorisation, and an office needs a valid trade licence and Dubai Municipality registration to present itself as an engineering consultancy ([Dubai Media Office](https://www.mediaoffice.ae/en/news/2025/october/05-10/mohammed-bin-rashid)). Appoint a registered consultant early enough to read the guidelines with you before you buy.
+
 
 In Dubai, permits come through a single unified window that links Dubai Municipality, the Dubai Development Authority, Trakhees and the utility and service providers ([Dubai Municipality](https://www.dm.gov.ae/dubai-launches-single-window-for-building-permits/)). Which authority applies depends on where your plot sits. Your consultant will confirm this; in master communities you will typically also need the master developer's approval or no-objection before the authority permit. Our [design and approvals](/services/design-and-approvals/) page explains how we support that process.
 
@@ -100,7 +117,7 @@ In our experience, foundations and below-ground work are where early budgets mov
 - Is the road access complete and adopted?
 - For newer communities, what is the delivery schedule for infrastructure, and what happens if it slips?
 
-Published guidance puts permits, NOCs and utility connections at roughly AED 25,000 to 75,000, or 2 to 5% of build cost ([Real Estate Club Dubai](https://realestateclubdubai.com/tools/villa-build-cost-calculator)). Treat that as a guide, not a quote.
+One Dubai engineering consultancy estimates that authority approvals add AED 80,000 to 250,000 to a villa budget ([Optimal Engineering](https://www.optimal.ae/blog/cost-to-build-a-villa-in-dubai)). Treat that as a guide, not a quote. The same Nakheel approval requires the owner's side to obtain NOCs from the utility and service providers and caps the plot's power load at the level the master developer allocated ([Nakheel](https://www.cgidubai.gov.in/content/Nakheel-PD-approval-PD_IC1-CTYL-16_013_09-Jun-2026.pdf)), so ask what load is allocated to the plot before you design a villa that needs more.
 
 ## Neighbouring plots
 
@@ -123,7 +140,7 @@ Published construction-only ranges for Dubai villas, 2025 to 2026, from [Engel &
 | Mid-range | 500–600 | Engel & Völkers |
 | Luxury | 900–1,400 | Engel & Völkers |
 
-On top of construction, add design and engineering (Engel & Völkers quotes AED 50,000 to 150,000 for design, engineering and permits), a contingency (10 to 15% is commonly quoted), pool, landscaping and furniture. At the top end, furniture, fittings and equipment alone are quoted at 30 to 40% on top ([Real Estate Club Dubai](https://realestateclubdubai.com/tools/villa-build-cost-calculator)).
+On top of construction, add design and engineering (Engel & Völkers quotes AED 50,000 to 150,000 for design, engineering and permits; Optimal Engineering puts multi-discipline consultants' fees at 6 to 12% of the construction contract value), a contingency (Engel & Völkers says 10 to 15% of total project cost is widely recommended), pool, landscaping and furniture. Interiors alone run from about AED 200,000 for a basic villa to AED 800,000 to over AED 1 million for a high-end one, according to Engel & Völkers.
 
 To build a sensible budget:
 

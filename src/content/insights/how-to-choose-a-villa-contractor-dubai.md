@@ -2,7 +2,7 @@
 title: "How to choose a villa contractor in Dubai: 12 questions"
 description: "Twelve questions to ask before appointing a villa contractor in Dubai: licence checks, comparing bids like-for-like, key staff, references and red flags."
 date: 2026-10-27
-updated: 2026-10-29
+updated: 2026-11-01
 category: "Choosing a team"
 keypoints:
   - "Check every bidder's registration yourself on the Dubai BPS app or Build in Dubai before you compare prices."
@@ -24,8 +24,18 @@ sources:
     url: "https://www.dm.gov.ae/new-improved-building-permits-app-launched-for-streamlined-services/"
   - title: "Build in Dubai platform"
     url: "https://buildindubai.gov.ae/"
-  - title: "Turner & Townsend preliminaries and Currie & Brown inflation, cited by PRASOON"
-    url: "https://prasoon.design/insights/owners-representative-vs-project-manager-uae"
+  - title: "Turner & Townsend: UAE market intelligence 2025, construction cost performance (preliminaries)"
+    url: "https://marketintelligence.turnerandtownsend.com/uaemi-2025/construction-cost-performance/"
+  - title: "Khaleej Times: Dubai trade licence types, application process and verification (March 2025)"
+    url: "https://www.khaleejtimes.com/life-and-living/dubai-trade-licence"
+  - title: "Dubai Media Office: Mohammed bin Rashid issues law regulating engineering consultancy activities (October 2025)"
+    url: "https://www.mediaoffice.ae/en/news/2025/october/05-10/mohammed-bin-rashid"
+  - title: "RICS: Tendering strategies, 1st edition, guidance note (2014)"
+    url: "https://www.rics.org/content/dam/ricsglobal/documents/standards/tendering_strategies_1st_edition_rics.pdf"
+  - title: "RICS: Appropriate contract selection, 2nd edition, practice information (April 2024)"
+    url: "https://www.rics.org/content/dam/ricsglobal/documents/standards/Appropriate-contract-selection-2nd-edition.pdf"
+  - title: "Kayrouz & Associates: decennial liability for UAE contractors and engineers (2026)"
+    url: "https://www.kayrouzandassociates.com/insights/decennial-liability-uae-contractors-engineers-2026"
   - title: "Dubai Municipality standard contract forms for private villas"
     url: "https://www.dm.gov.ae/municipality-business/guidance-contracts-forms-for-engineering-consulting-services-and-construction-contracting-for-private-villas/"
 ---
@@ -37,13 +47,13 @@ We spent twenty-one years as the builder before moving to the client's side, so 
 
 Contractor selection goes wrong most often before the first bid arrives. If bidders are pricing from incomplete drawings, a vague specification or different assumptions, you will receive numbers that cannot be compared.
 
-Your registered consultant should provide a complete, consistent set of drawings and a specification. Every bidder prices exactly the same thing, on the same form, by the same date. The owner then appoints. Our role at Eastbridge is to help you compare the bids like-for-like and choose, alongside your consultant.
+Your registered consultant should provide a complete, consistent set of drawings and a specification. Under Dubai Law No. 14 of 2025, only offices with a valid trade licence and registration with Dubai Municipality may present themselves as engineering consultancy offices (Dubai Media Office), so check the consultant's registration as carefully as the contractor's. Every bidder prices exactly the same thing, on the same form, by the same date. The owner then appoints. Our role at Eastbridge is to help you compare the bids like-for-like and choose, alongside your consultant.
 
 ## The 12 questions to ask a villa contractor
 
 ### 1. Are you registered for this type of work, with this authority?
 
-Do not take a logo on a website as proof. Dubai Municipality's relaunched BPS app includes a search for consultants and contractors registered in Dubai, and lets owners look at information such as a firm's current status and the type and number of projects it is handling. The Build in Dubai platform is the wider gateway for the permit process. Check the trade licence, its expiry date and its licensed activities, and confirm the firm can work under the authority your plot falls within: Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits.
+Do not take a logo on a website as proof. Dubai Municipality's relaunched BPS app includes a search for consultants and contractors registered in Dubai, and lets owners look at information such as a firm's current status and the type and number of projects it is handling. The Build in Dubai platform is the wider gateway for the permit process. Check the trade licence, its expiry date and its licensed activities: Dubai Economy and Tourism's online licence information service shows a mainland firm's licence status, expiry date, legal type and activities when you search by name or licence number (Khaleej Times). Then confirm the firm can work under the authority your plot falls within: Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits.
 
 ### 2. How many villas like ours are you building right now?
 
@@ -61,7 +71,7 @@ Ask every bidder to confirm in writing that they have priced the documents as is
 
 ### 5. What is in your preliminaries?
 
-Preliminaries are the cost of running the site rather than building the villa: site staff, welfare, hoarding, temporary power and water, insurance, scaffolding, plant, cleaning and waste. Turner & Townsend put contractor preliminaries in Dubai at 12–14% in 2025 (cited by PRASOON). A bid with preliminaries far below that range is either very efficient or has moved costs elsewhere, or has left them out to be claimed later. Ask for a breakdown, and ask how the monthly figure changes if the programme extends.
+Preliminaries are the cost of running the site rather than building the villa: site staff, welfare, hoarding, temporary power and water, insurance, scaffolding, plant, cleaning and waste. Turner & Townsend's 2025 UAE market intelligence puts preliminaries in Dubai at 12% of construction cost on a 2,500 m² project and 14% on a 50,000 m² project. A villa sits at the small end of that scale, so treat 12% as the reference point. A bid with preliminaries far below it is either very efficient or has moved costs elsewhere, or has left them out to be claimed later. Ask for a breakdown, and ask how the monthly figure changes if the programme extends.
 
 ### 6. What provisional sums have you included, and why?
 
@@ -73,7 +83,7 @@ Read exclusions as carefully as the price. Pools, landscaping, external works, k
 
 ### 8. What is your programme, and what does it depend on?
 
-Ask for a programme showing the main stages, the critical path and what the contractor needs from you and when: design information, selections, approvals, payments. A programme that looks fast but depends on you making every decision instantly is not a real programme. See [how long it takes to build a villa in Dubai](/insights/how-to-build-a-villa-in-dubai/) for typical durations.
+Ask for a programme showing the main stages, the critical path and what the contractor needs from you and when: design information, selections, approvals, payments. A programme that looks fast but depends on you making every decision instantly is not a real programme. See [how long it takes to build a villa in Dubai](/insights/how-long-to-build-a-villa-dubai/) for typical durations.
 
 ### 9. Can we speak to your last three villa clients?
 
@@ -85,7 +95,7 @@ Avoid schedules that pay large sums upfront or against calendar dates. Payments 
 
 ### 11. What security will you provide: bonds, retention, insurance?
 
-Ask whether the contractor will provide an advance payment guarantee against any mobilisation payment, a performance bond, and accept retention held back until completion and the end of the defects period. Ask for evidence of contractors' all-risks and third-party insurance. A contractor that resists all of these is telling you something about its balance sheet.
+Ask whether the contractor will provide an advance payment guarantee against any mobilisation payment, a performance bond, and accept retention held back until completion and the end of the defects period. Ask for evidence of contractors' all-risks and third-party insurance. A contractor that resists all of these is telling you something about its balance sheet. Solvency matters beyond handover too: UAE law makes the contractor and the engineer jointly liable for ten years from handover for collapse or defects that threaten structural stability or safety, and that liability cannot be excluded by contract (Kayrouz & Associates). It is only as valuable as the firm standing behind it.
 
 ### 12. How do you handle changes and delays?
 
@@ -107,7 +117,9 @@ Once the bids are in, put them on one page before anyone looks at the bottom lin
 | Bonds, retention, insurance | | | |
 | **Adjusted comparable total** | | | |
 
-Then hold a short clarification meeting with each serious bidder. Ask the same questions of each, record the answers, and have any changes confirmed in writing before you decide.
+Then hold a short clarification meeting with each serious bidder. Ask the same questions of each, record the answers, and have any changes confirmed in writing before you decide. This follows RICS guidance on tendering: queries raised by one bidder are answered to all of them, qualifications and assumptions are reviewed in detail, insurances are checked like-for-like, and a qualification that is resolved is confirmed by the bidder in writing.
+
+Before you compare, also be clear what kind of contract you are pricing. RICS practice information on contract selection describes the main choices for the contract sum as a fixed-price lump sum, remeasurement or a target cost, and the choice changes how much of the bid is really fixed. Our guide to [villa construction contracts in the UAE](/insights/villa-construction-contracts-uae/) explains the difference.
 
 ## Red flags when choosing a contractor
 
