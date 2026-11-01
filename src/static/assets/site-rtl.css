@@ -999,7 +999,7 @@ html,body{overflow-x:clip}
   .tool-page .calc-in,.tool-page .calc-actions,.tool-page .calc-js,.tool-page .calc-flag a{display:none!important}
   .tool-page .print-only{display:block}
   .tool-page .calc-out{background:#fff!important;padding:0;color:#111}
-  .tool-page .calc-h{font-size:8.5pt;letter-spacing:.12em;text-transform:uppercase;margin:6pt 0 2pt;break-after:avoid}
+  .tool-page .calc-h{font-size:8.5pt;letter-spacing:.12em;text-transform:uppercase;margin:4pt 0 2pt;break-after:avoid}
   .tool-page .calc-print-inputs{grid-template-columns:auto 1fr auto 1fr;column-gap:10pt}
   .tool-page .calc-print-foot{margin-top:4pt;padding-top:4pt}
   .tool-page .tool-h-side{display:none}
@@ -1011,8 +1011,8 @@ html,body{overflow-x:clip}
   .tool-page .calc-range{font-size:9pt;color:#333;margin-top:1pt}
   .tool-page .calc-sub{font-size:8.5pt;margin:0 0 3pt;color:#333}
   .tool-page .calc-reviewed{font-size:8pt;margin:0 0 6pt;color:#4A5357}
-  .tool-page .tool-verdict{font-size:9pt;padding:4pt 8pt;margin:2pt 0 6pt;border-right:1.5pt solid #999}
-  .tool-page .tool-compare{gap:0 18pt;margin:0 0 4pt}
+  .tool-page .tool-verdict{font-size:9pt;padding:4pt 8pt;margin:2pt 0 3pt;border-right:1.5pt solid #999}
+  .tool-page .tool-compare{gap:0 18pt;margin:0 0 2pt}
   .tool-page .table-wrap{overflow:visible}
   .tool-page .calc-table{margin:0 0 4pt;font-size:8.6pt;line-height:1.25;width:100%;break-inside:avoid}
   .tool-page .calc-table th,.tool-page .calc-table td{padding:1.3pt 4pt;border-bottom:.5pt solid #ccc;background:#fff!important}
@@ -1029,6 +1029,7 @@ html,body{overflow-x:clip}
   .tool-page .tool-chart svg{height:120pt}
   .tool-page .tool-approvals li{font-size:8pt;padding:1.5pt 0}
   .tool-page .calc-note{font-size:8pt;line-height:1.35;margin:0 0 2pt;color:#333}
+  .tool-page .tool-reno-pointer{display:none}
   .tool-page .calc-flag{font-size:8pt;line-height:1.35;margin:4pt 0 0;padding-top:4pt;border-top:.5pt solid #999}
   .tool-page .calc-print-foot{break-inside:avoid}
   /* Stage payment plan: the default 12-month plan fits one A4 page; longer plans break between table rows. */

@@ -104,6 +104,7 @@ def landing():
 <div>
 <p><a class="btn" href="{PDF}" download>Download the checklist (PDF, 10 pages)</a></p>
 <p class="muted">If the download does not start, <a href="{PDF}">open the PDF in your browser</a>.</p>
+<p class="muted">The checklist PDF is in English.</p>
 <h2 class="guide-h" style="margin-top:1.6em">Want a second pair of eyes?</h2>
 <p>If an item on the list worries you, or you cannot tick it yet, talk it through with {esc(C.FOUNDER["name"].split()[0])}. The first conversation is free and confidential.</p>
 <p><a class="btn btn--ghost" href="/contact/">{esc(B.CTA_LABEL)}</a> <a class="btn btn--ghost" href="{B.wa_link("Hello, I downloaded the pre-construction checklist and would like to talk about my villa project.")}" rel="noopener">WhatsApp us</a></p>
@@ -213,6 +214,7 @@ def snag_landing():
 <div>
 <p><a class="btn" href="{SNAG_PDF}" download>Download the snagging checklist (PDF, {SNAG_PAGES} pages)</a></p>
 <p class="muted">If the download does not start, <a href="{SNAG_PDF}">open the PDF in your browser</a>.</p>
+<p class="muted">The checklist PDF is in English.</p>
 <h2 class="guide-h" style="margin-top:1.6em">Want a second pair of eyes at handover?</h2>
 <p>If the list is growing, or you are unsure what to accept, talk it through with {esc(C.FOUNDER["name"].split()[0])}. The first conversation is free and confidential.</p>
 <p><a class="btn btn--ghost" href="/contact/">{esc(B.CTA_LABEL)}</a> <a class="btn btn--ghost" href="{B.wa_link("Hello, I downloaded the villa snagging checklist and would like to talk about my handover.")}" rel="noopener">WhatsApp us</a></p>
