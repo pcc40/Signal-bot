@@ -251,11 +251,20 @@ def area_page(a):
     if a.get("sources"):
         items = "".join(f'<li><a href="{esc(u)}" rel="noopener">{esc(t)}</a></li>' for t, u in a["sources"])
         srcs = f'<h2>Sources</h2><ul class="small">{items}</ul>'
+    owner = ""
+    if a.get("owner_service"):
+        o = a["owner_service"]
+        # Owner-service section with one primary CTA (live audit 2026-11-01): the contact form opens with the
+        # service and community pre-selected.
+        owner = (f'<section class="section paper" id="{o["id"]}" aria-labelledby="{o["id"]}-h"><div class="wrap split">'
+                 f'<div><span class="kicker">{esc(o["kicker"])}</span><h2 id="{o["id"]}-h">{esc(o["h2"])}</h2>'
+                 f'<p><a class="btn" href="{esc(o["cta_href"])}">{esc(o["cta"])}</a></p></div>'
+                 f'<div class="prose">{o["body"]}</div></div></section>\n')
     body = B.banner(crumbs, esc(a["h1"]), esc(a["lede"]), img, credit_of(img)) + f'''
 <section class="section"><div class="wrap split">
 <div><dl class="facts"><div><dt>City</dt><dd>{esc(a["city"])}</dd></div><div><dt>Master developer</dt><dd>{esc(a["developer"])}</dd></div><div><dt>Typical work</dt><dd>{esc(a["tag"])}</dd></div></dl></div>
 <div class="prose"><p class="muted">We cover every community in Dubai and Abu Dhabi. This page is one example of how we approach a community, not a limit on where we work.</p>{a["body"]}{srcs}</div></div></section>
-<section class="section--tight"><div class="wrap">{strip_html(others)}</div></section>
+{owner}<section class="section--tight"><div class="wrap">{strip_html(others)}</div></section>
 <section class="section paper"><div class="wrap split"><div><h2>Questions about {esc(a["name"])}</h2></div><div>{B.faq_html(a["faqs"])}</div></div></section>
 <section class="section"><div class="wrap"><h2>Services most relevant here</h2>{svc}</div></section>
 {B.cta_band(f"Building or renovating in {a['name']}?", contact=contact_href("area", a["slug"]))}{B.wa_page_msgs(B.WA_TPL_AREA, a["name"])}'''
@@ -692,18 +701,20 @@ def contact():
 <p class="hp"><label>Leave this empty <input name="company_site" tabindex="-1" autocomplete="off"></label></p>
 <p class="form-prefill small" data-prefill="service" hidden>You are asking about: <b></b>. <a href="#f-service">Change</a></p>
 <p class="form-prefill small" data-prefill="area" hidden>Community: <b></b>. <a href="#f-area">Change</a></p>
-<p class="form-note small muted">Three fields are required: your name, your email and a few words about the project. Fields marked Optional help us reply usefully, but you can leave them blank.</p>
+<p class="form-note small muted">Three fields are required: your name, your email and a few words about the project. Everything under Optional details helps us reply usefully, but you can leave it blank.</p>
 <div class="row"><div class="field"><label for="f-name">Your name {req}</label><input id="f-name" name="name" autocomplete="name" required aria-describedby="f-name-err">{err("f-name", "Please tell us your name.")}</div>
 <div class="field"><label for="f-email">Email {req}</label><input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="f-email-err">{err("f-email", "Please enter an email address we can reply to, such as name@example.com.")}</div></div>
 <fieldset class="field"><legend>How would you like us to reply? {opt}</legend><div class="checks">{methods}</div></fieldset>
-<div class="row"><div class="field"><label for="f-phone">Phone or WhatsApp number <span class="opt ph-opt">Optional</span><span class="opt ph-req" hidden>Needed for a call or WhatsApp</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" minlength="7" pattern="\\+?[0-9][0-9 \\(\\)\\-]{{6,}}" aria-describedby="f-phone-hint f-phone-err"><p class="hint" id="f-phone-hint">Include the country code, for example +971 or +44.</p>{err("f-phone", "Please enter a phone number with its country code, for example +971 50 123 4567.")}</div>
-<div class="field"><label for="f-based">Where are you based? {opt}</label><select id="f-based" name="based"><option value="">Choose</option>{based}</select></div></div>
+<div class="field"><label for="f-phone">Phone or WhatsApp number <span class="opt ph-opt">Optional</span><span class="opt ph-req" hidden>Needed for a call or WhatsApp</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" minlength="7" pattern="\\+?[0-9][0-9 \\(\\)\\-]{{6,}}" aria-describedby="f-phone-hint f-phone-err"><p class="hint" id="f-phone-hint">Include the country code, for example +971 or +44.</p>{err("f-phone", "Please enter a phone number with its country code, for example +971 50 123 4567.")}</div>
+<div class="field"><label for="f-msg">Tell us about the project {req}</label><textarea id="f-msg" name="message" required minlength="10" aria-describedby="f-msg-hint f-msg-err"></textarea><p class="hint" id="f-msg-hint">Plot or villa, community, stage, when you want to start, and anything that is worrying you.</p>{err("f-msg", "Please add a few words about your project.")}</div>
+<details class="form-more" id="f-more" data-form-more><summary><span class="form-more__t">Optional details</span> <span class="form-more__d">Service, community, project stage, property type and size, budget and where you are based</span></summary><div class="form-more__body">
 <div class="field"><label for="f-service">Which service are you asking about? {opt}</label><select id="f-service" name="service"><option value="">Not sure yet</option>{services}</select></div>
 <div class="row"><div class="field"><label for="f-stage">Project stage {opt}</label><select id="f-stage" name="stage"><option value="">Choose a stage</option>{stages}</select></div>
 <div class="field"><label for="f-area">Community {opt}</label><select id="f-area" name="area" aria-describedby="f-area-hint"><option value="">Choose a community</option>{areas}</select><p class="hint" id="f-area-hint">We cover every community in Dubai and Abu Dhabi. Not listed? Choose Other.</p></div></div>
 <div class="field"><label for="f-property">Property type and size {opt}</label><input id="f-property" name="property" maxlength="200" aria-describedby="f-property-hint"><p class="hint" id="f-property-hint">For example: a plot, or a villa with its number of bedrooms and approximate size in sq ft or m².</p></div>
 <div class="field"><label for="f-budget">Approximate construction budget {opt}</label><select id="f-budget" name="budget" aria-describedby="f-budget-hint"><option value="">Choose a range</option>{budgets}</select><p class="hint" id="f-budget-hint">A rough band is enough. It helps us judge the scale, and is never published.</p></div>
-<div class="field"><label for="f-msg">Tell us about the project {req}</label><textarea id="f-msg" name="message" required minlength="10" aria-describedby="f-msg-hint f-msg-err"></textarea><p class="hint" id="f-msg-hint">Plot or villa, community, stage, when you want to start, and anything that is worrying you.</p>{err("f-msg", "Please add a few words about your project.")}</div>
+<div class="field"><label for="f-based">Where are you based? {opt}</label><select id="f-based" name="based"><option value="">Choose</option>{based}</select></div>
+</div></details>
 <div class="field"><label class="consent" for="f-mkt"><input id="f-mkt" name="marketing_opt_in" type="checkbox" value="yes"> <span>Optional: also send me Eastbridge notes for villa owners by email, no more than once a month. Leaving this unticked does not affect your enquiry. Unsubscribe at any time by replying to any note or writing to {C.EMAIL}.</span></label></div>
 <div class="reassure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="1"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg>
 <p><b>Confidential.</b> Read personally by Philip and used to reply to you (and, if you tick the box above, to send our notes). We never share or publish client names, addresses or projects without written permission. See our <a href="/privacy/">privacy notice</a>.</p></div>

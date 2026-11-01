@@ -709,6 +709,16 @@ html[dir="rtl"],html[dir="rtl"] body{overflow-x:clip}
 .form .err[hidden]{display:none}
 .form .field.invalid input,.form .field.invalid select,.form .field.invalid textarea{border-color:#A3321F;box-shadow:inset -3px 0 0 #A3321F}
 .form .choice{min-width:118px}
+.form-more{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.form-more summary{cursor:pointer;list-style:none;display:block;position:relative;padding:16px 0 16px 40px}
+.form-more summary::-webkit-details-marker{display:none}
+.form-more summary::after{content:"+";position:absolute;inset-inline-end:6px;top:12px;font-size:1.4rem;color:var(--brass)}
+.form-more[open] summary::after{content:"\2212"}
+.form-more summary:hover .form-more__t{color:var(--brass)}
+.form-more summary:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+.form-more__t{display:block;font-weight:600;font-size:var(--s--1)}
+.form-more__d{display:block;font-size:.84rem;color:var(--ink-soft);margin-top:2px}
+.form-more__body{display:grid;gap:18px;padding:4px 0 22px}
 .form .consent{display:flex;gap:10px;align-items:flex-start;font-weight:400;margin:0;cursor:pointer;line-height:1.5}
 .form .consent input{flex:0 0 20px;width:20px;height:20px;min-height:0;margin:2px 0 0;padding:0;accent-color:var(--ink)}
 .form .consent input:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
