@@ -366,6 +366,101 @@ AREAS = [
   ],
   "services": ["plot-due-diligence", "consultant-and-contractor-selection", "villa-construction-project-management"],
  },
+ {
+  "slug": "jumeirah-islands",
+  "name": "Jumeirah Islands",
+  "city": "Dubai",
+  "developer": "Nakheel",
+  "tag": "Lakeside villa renovations and extensions",
+  "title": "Jumeirah Islands Villa Renovation | Eastbridge",
+  "description": "Renovating or extending a Jumeirah Islands villa? The Nakheel NOC route, typical scope, sourced cost and time ranges, and client-side project management.",
+  "h1": "Jumeirah Islands villas: renovations and extensions",
+  "lede": "Lakeside villas built in clusters on 46 man-made islands, now about twenty years old. Most serious work here is the renewal of an existing house, and it starts with Nakheel.",
+  "image": "menwinnion-11",
+  "body": """<p>This page sets out what is particular to Jumeirah Islands. It is one example of where we work, not a limit: we cover every community in Dubai and Abu Dhabi.</p>
+<h2>What makes Jumeirah Islands different</h2>
+<p>Jumeirah Islands is a Nakheel community, which Nakheel describes as a collection of 46 islands set around scenic lakes, with homes that have large private gardens, verandas and roof terraces (<a href="https://www.nakheel.com/en/developments/nakheel-projects/jumeirah-islands" rel="noopener">Nakheel</a>). When Nakheel announced in 2004 that the community had sold out, it described 736 four- and five-bedroom villas across 46 clusters, sixteen individually styled villas to a cluster, each with a private pool and garden, in four architectural themes: Oasis, Islamic, European and Mediterranean (<a href="https://www.asiatraveltips.com/travelnews04/189-Nakheel.shtml" rel="noopener">Nakheel announcement, September 2004</a>). Nakheel now also lists townhouses in the community, so check the original type of your own house before you plan anything.</p>
+<p>Three things follow from that history. The villas are of the same generation, so their roofs, waterproofing and services are reaching the end of their first life at roughly the same time. The cluster themes mean the outside of each house is part of a set, which is why the master developer takes a close interest in façades, roofs and extensions. And the plots sit around lakes and landscaped edges, so access for materials, skips and plant is tighter than the size of the houses suggests.</p>
+<h2>What owners here are usually doing</h2>
+<ul>
+<li><strong>A full interior renewal.</strong> New kitchens, bathrooms, floors, joinery and lighting, often with walls moved to open up the ground floor to the garden and the water.</li>
+<li><strong>Services replacement.</strong> Air conditioning, plumbing, electrics and controls installed when the villas were built. When the ceilings come down for a new layout, it rarely makes sense to reconnect old systems.</li>
+<li><strong>Roofs, terraces and wet areas.</strong> Ageing waterproofing on flat roofs, roof terraces, balconies and showers. This is where the expensive surprises usually sit.</li>
+<li><strong>Extensions and outdoor works.</strong> Added rooms, enclosed terraces, pergolas, pool and garden remodels. These need Nakheel's agreement first and, depending on the scope, an authority permit.</li>
+</ul>
+<h2>The approval route: Nakheel first</h2>
+<p>Nakheel's own guidance is that owners may make changes as long as they do not affect the external façade and structure of the property, and that an NOC must be obtained from its Urban Planning team before any alterations, requested through Nakheel Online Services or the My Nakheel app (<a href="https://www.nakheel.com/en/contact-us" rel="noopener">Nakheel customer FAQs</a>). Anything touching the façade, structure or footprint needs Nakheel to confirm it is permitted at all before design work goes far. After the NOC, building work beyond the minor needs a permit from Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits. Your registered consultant or licensed contractor prepares and makes those applications. We review the submissions with you, track them and keep the programme honest about how long they take.</p>
+<p>Nakheel also sets conditions before a contractor can start: a security deposit, a Site Access Permit, a PVC site fence, and workforce access permits, which it charges at AED 52.50 per person for construction, modification and extension work (<a href="https://www.nakheel.com/en/contact-us" rel="noopener">Nakheel</a>). None of this is large, but each item takes time, and a contractor who has not allowed for it will be standing at the gate.</p>
+<p>Building first and asking later is expensive here. In 2018 Gulf News reported Jumeirah Islands owners being charged for added floor area, about AED 300 per square foot by their account, and an owner penalised when unapproved work came to light on sale; Nakheel said applications are assessed case by case and that various costs apply (<a href="https://gulfnews.com/news/gulf/uae/jumeirah-islands-owners-prevented-from-modifying-villas-without-approval-1.1172089" rel="noopener">Gulf News, 2018</a>). Treat those as reported figures from 2018 and get current charges from Nakheel in writing before you fix the design. Our <a href="/insights/nakheel-noc-villa-renovation/">guide to the Nakheel NOC</a> sets out the process in more detail.</p>
+<h2>How much does it cost, and how long does it take?</h2>
+<p>Property Finder's September 2025 guide to villa renovation in Dubai gives AED 900,000 to 1,400,000 and 120 to 150 days of works for a full upgrade of a five-bedroom older villa, naming Jumeirah Islands as one of its examples. For a luxury villa with structural work and premium materials it gives AED 1.5 million to 3.5 million or more, and 150 to 210 days (<a href="https://www.propertyfinder.ae/blog/villa-renovation-dubai/" rel="noopener">Property Finder, 2025</a>). Those are contractor prices and works durations. Design, the Nakheel NOC, any authority permit, contingency and the cost of living elsewhere sit on top, before and alongside the works.</p>
+<p>For your own figure, our <a href="/tools/villa-build-cost-calculator/">villa build and renovation cost calculator</a> gives indicative low, likely and high ranges with every source listed, and our <a href="/insights/villa-renovation-cost-dubai/">villa renovation cost guide</a> explains why an older villa's real cost depends on what is behind its walls. We do not publish a separate rate per square foot for Jumeirah Islands, because no published source supports a premium or discount by community.</p>
+<h2>Where Jumeirah Islands renovations go wrong</h2>
+<ul>
+<li><strong>Pricing before opening up.</strong> On the contractor's side, the first thing we priced on any refurbishment was the risk we could not see. A few targeted openings in roofs, wet rooms and ceiling voids before the price is agreed turn a contractor's guess into a number.</li>
+<li><strong>Designing before Nakheel has agreed the principle.</strong> An extension or façade change drawn in full and then refused is wasted fees and months.</li>
+<li><strong>Starting the clock too early.</strong> A contract that starts on signature, rather than on approvals and access permits in hand, pays for a crew waiting at the gate.</li>
+<li><strong>Logistics on a lake plot.</strong> Narrow frontages, neighbours close by and community rules on hours and deliveries. They belong in the price and the programme, not in a variation later.</li>
+</ul>
+<h2>How we help in Jumeirah Islands</h2>
+<p>We sit on your side of the table from the first idea to the end of the defects period. That means an early condition review with the right specialists, a clear scope and budget with a contingency matched to the age of the villa, a like-for-like comparison of contractor quotes, the Nakheel and authority programme tracked alongside the works, regular site visits to observe and record progress, and a properly run handover. You appoint the consultant and contractor and pay them directly; we review and recommend.</p>""",
+  "faqs": [
+   ("Do I need a Nakheel NOC to renovate my Jumeirah Islands villa?", "Nakheel says an NOC from its Urban Planning team must be obtained before any alterations, and that changes must not affect the external façade and structure unless Nakheel agrees. Confirm any scope with Nakheel in writing before work starts, and allow for an authority permit as well on anything beyond minor works."),
+   ("Can I extend a villa in Jumeirah Islands?", "Possibly, but only if Nakheel agrees the principle first. An extension changes the façade and footprint of a house that is part of a themed cluster. In 2018 Gulf News reported owners being charged for added floor area, so get Nakheel's current position and charges in writing before you commission full designs."),
+   ("How much does a Jumeirah Islands villa renovation cost?", "Property Finder's September 2025 guide puts a full upgrade of a five-bedroom older villa, with Jumeirah Islands as an example, at AED 900,000 to 1,400,000, and luxury work with structural change at AED 1.5 million or more. Design, approvals and contingency are extra. Our <a href=\"/tools/villa-build-cost-calculator/\">cost calculator</a> gives an indicative range for your own villa."),
+   ("How long does a Jumeirah Islands villa renovation take?", "The same Property Finder guide gives 120 to 150 days of works for a full upgrade of a five-bedroom older villa, and 150 to 210 days for luxury work with structural change. The Nakheel NOC, any authority permit and contractor access permits come first, so plan the overall programme from the first design meeting, not from the contractor's start."),
+   ("What does Nakheel require before my contractor starts?", "Nakheel's customer guidance lists a security deposit, a Site Access Permit and a PVC site fence before construction begins, and workforce access permits charged at AED 52.50 per person for construction, modification and extension work."),
+   ("Do you only work in Jumeirah Islands and the other communities listed?", "No. We cover every community in Dubai and Abu Dhabi. The area pages are examples of what is particular to each place."),
+  ],
+  "services": ["villa-renovation-project-management", "cost-and-programme-control", "consultant-and-contractor-selection"],
+ },
+ {
+  "slug": "arabian-ranches",
+  "name": "Arabian Ranches",
+  "city": "Dubai",
+  "developer": "Emaar",
+  "tag": "Family villa renovations and upgrades",
+  "title": "Arabian Ranches Villa Renovation | Eastbridge",
+  "description": "Renovating an Arabian Ranches villa? The Emaar home modification NOC, typical scope, sourced cost and time ranges, and client-side project management.",
+  "h1": "Arabian Ranches villas: renovations and upgrades",
+  "lede": "A large Emaar golf and family villa community from the mid-2000s, now in its renovation years. The house can change a great deal inside; the outside largely cannot.",
+  "image": "polgreen-manor-07",
+  "body": """<p>This page sets out what is particular to Arabian Ranches. It is one example of where we work, not a limit: we cover every community in Dubai and Abu Dhabi.</p>
+<h2>What makes Arabian Ranches different</h2>
+<p>Arabian Ranches is an Emaar community, managed by Emaar Community Management and laid out as a series of sub-communities around a golf course, among them Alvorada, Mirador, Palmera, Saheel and Savannah (<a href="https://www.ecm.ae/en/communities/arabian-ranches/discover/communities-arabian-ranches" rel="noopener">Emaar Community Management</a>). Its villas and townhouses were released in phases from the mid-2000s. Gulf News reported in 2006, for example, that Emaar first released the Alvorada villas in May 2005, in six types from 3,566 to 4,844 sq ft with three to five bedrooms (<a href="https://gulfnews.com/business/property/emaar-to-release-new-cluster-of-villas-at-arabian-ranches-1.230071" rel="noopener">Gulf News, 2006</a>).</p>
+<p>Two features shape any project here. The houses were built to a set of standard types, so most owners are working within a known plan and a known structure, which makes early scoping easier than on a one-off house. And the community's look is protected: Emaar's rules are written to keep the street scene consistent, so the scope of work is defined as much by what the guidelines allow as by what the owner wants.</p>
+<h2>What owners here are usually doing</h2>
+<ul>
+<li><strong>Kitchens, bathrooms and the ground floor.</strong> Opening up the original layout, new kitchens and wet rooms, new floors and joinery. This is the most common project, and the one most prone to creeping scope.</li>
+<li><strong>Services and comfort.</strong> Replacing original air conditioning, upgrading electrics and lighting controls, and improving the glazing and roofs.</li>
+<li><strong>Gardens and outdoor living.</strong> Pools, pergolas, outdoor kitchens and landscaping. These are external works and need Emaar's approval before they start.</li>
+<li><strong>Full refurbishment before a sale or a long stay.</strong> Everything at once, which is when a properly sequenced programme and a fixed scope pay for themselves.</li>
+</ul>
+<h2>The approval route: Emaar's home modification NOC</h2>
+<p>Emaar Community Management's guidance for Arabian Ranches is that any alteration to the villa has to be approved by Emaar, applied for as a home modification NOC through the community portal. External modifications that change the look of the villas are not permitted, while interior painting and regular maintenance do not need an NOC, although the contractor still needs an entry permit to the community (<a href="https://www.ecm.ae/en/communities/arabian-ranches/lifestyle/faqs/home-modifications-arabian-ranches/" rel="noopener">Emaar Community Management, Arabian Ranches FAQs</a>). Read the current Home Modification Guidelines for your sub-community before design starts: they decide whether a pergola, a pool or a change to a terrace is possible, and on what terms.</p>
+<p>After Emaar's NOC, structural work and other significant changes need a building permit from Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits. Your registered consultant or licensed contractor prepares and makes those applications. We review them with you, track them, and make sure the contractor's start date waits for approvals in hand.</p>
+<h2>How much does it cost, and how long does it take?</h2>
+<p>Property Finder's September 2025 guide to villa renovation in Dubai gives AED 600,000 to 850,000 and 90 to 120 days of works for the interior and landscaping of a four-bedroom independent villa, naming the Ranches as one of its examples. For a three-bedroom townhouse with interior, kitchen and bathroom work it gives AED 250,000 to 400,000 and 60 to 90 days (<a href="https://www.propertyfinder.ae/blog/villa-renovation-dubai/" rel="noopener">Property Finder, 2025</a>). Those are contractor prices and works durations. Design, the Emaar NOC, any authority permit, contingency and the cost of living elsewhere come on top.</p>
+<p>For your own figure, our <a href="/tools/villa-build-cost-calculator/">villa build and renovation cost calculator</a> gives indicative low, likely and high ranges with every source listed, and our <a href="/insights/villa-renovation-cost-dubai/">villa renovation cost guide</a> explains how to budget for an older villa. We do not publish a separate rate per square foot for Arabian Ranches, because no published source supports a premium or discount by community.</p>
+<h2>Where Arabian Ranches renovations go wrong</h2>
+<ul>
+<li><strong>Scope creep.</strong> A kitchen becomes the ground floor, which becomes the whole house. Decide the scope and the budget together, before quotes, and record every later change with its cost and time.</li>
+<li><strong>Quotes that are not comparable.</strong> One contractor includes the air conditioning, another assumes it can be reused, a third leaves it as a provisional sum. In our years as the builder, a low price built on assumptions was usually recovered later in variations. Our guide to <a href="/insights/how-to-choose-a-villa-contractor-dubai/">choosing a villa contractor</a> explains how to compare them like-for-like.</li>
+<li><strong>Outdoor works treated as an afterthought.</strong> Pools and pergolas need their own approval, their own drawings and their own place in the programme.</li>
+<li><strong>Living in during the works.</strong> Staying in the house saves rent but costs time, and contractors price the disruption. Weigh both before you decide.</li>
+</ul>
+<h2>How we help in Arabian Ranches</h2>
+<p>We represent you from the first scope to the end of the defects period: a written scope and budget, a like-for-like comparison of contractor quotes, the Emaar and authority approvals tracked against the programme, regular site visits to observe and record progress, review of every payment application and variation before you pay, and a careful handover with the <a href="/insights/villa-snagging-checklist-dubai/">snag list</a> closed before retention is released. You appoint the consultant and contractor and pay them directly; we review and recommend.</p>""",
+  "faqs": [
+   ("Do I need Emaar's approval to renovate my Arabian Ranches villa?", "For alterations, yes. Emaar Community Management says any alteration to the villa has to be approved by Emaar through a home modification NOC applied for on the community portal. Interior painting and regular maintenance do not need an NOC, but the contractor still needs an entry permit."),
+   ("Can I change the outside of my Arabian Ranches villa?", "Emaar's guidance is that external modifications that change the look of the villas are not permitted. Some outdoor works, such as pergolas or terrace changes, may be possible within the Home Modification Guidelines, so check the guidelines for your sub-community and get the NOC before work starts."),
+   ("How much does an Arabian Ranches villa renovation cost?", "Property Finder's September 2025 guide puts the interior and landscaping of a four-bedroom independent villa, with the Ranches as an example, at AED 600,000 to 850,000, and a three-bedroom townhouse interior with kitchen and bathrooms at AED 250,000 to 400,000. Design, approvals and contingency are extra. Our <a href=\"/tools/villa-build-cost-calculator/\">cost calculator</a> gives an indicative range for your own villa."),
+   ("How long does an Arabian Ranches villa renovation take?", "The same guide gives 90 to 120 days of works for a four-bedroom independent villa and 60 to 90 days for a three-bedroom townhouse. The Emaar NOC and any authority permit come before the works, so the overall programme is longer than the contractor's time on site."),
+   ("Who prepares the drawings and applications?", "Your registered consultant or licensed contractor prepares the drawings and makes the applications to Emaar and, where needed, the authority. We review them with you, track them and keep the programme realistic."),
+   ("Do you only work in Arabian Ranches and the other communities listed?", "No. We cover every community in Dubai and Abu Dhabi. The area pages are examples of what is particular to each place."),
+  ],
+  "services": ["villa-renovation-project-management", "consultant-and-contractor-selection", "snagging-and-handover"],
+ },
 ]
 
 BY_SLUG = {a["slug"]: a for a in AREAS}
