@@ -132,7 +132,8 @@ def org_schema():
         "openingHoursSpecification": [HOURS_SPEC],
         "geo": GEO,
         "hasMap": f"https://www.google.com/maps/search/?api=1&query={GEO['latitude']},{GEO['longitude']}",
-        "priceRange": (f"From {C.FEES['monthly_from']} a month" if C.PUBLISH_FEES else "Fees quoted per project"),
+        "priceRange": (f"{C.fee_text('review')}; part service {C.fee_text('part')}; full service {C.fee_text('full')}"
+                       if C.PUBLISH_FEES else "Fees quoted per project"),
         "currenciesAccepted": "AED",
         "contactPoint": [{"@type": "ContactPoint", "contactType": "customer service", "email": C.EMAIL,
                           "telephone": C.PHONE_E164, "availableLanguage": ["English"], "areaServed": "AE",
@@ -260,11 +261,11 @@ def steps_html(items, cls="steps"):
 
 def start_steps():
     """The three steps from first contact to appointment. Fee figures appear only when PUBLISH_FEES is on."""
-    fee = (f" A plot and pre-purchase review is {esc(C.FEES['plot_review'])}." if C.PUBLISH_FEES else "")
+    fee = (f" Reviews are priced within our published range, {esc(C.fee_text('review'))}." if C.PUBLISH_FEES else "")
     return [
         ("A free 30-minute call", "Tell us about the plot, the villa or the project you are already in. We ask the questions a builder would ask, and tell you plainly whether you need us."),
-        ("A fixed-fee first review", "A plot and pre-purchase review, or a health check on a project already under way: scoped and priced in writing before we start." + fee),
-        ("Your appointment", "If you want us to carry on, a written appointment for the stages you need, from design to handover, with the fee agreed up front. Nothing is assumed."),
+        ("A written first review", "A plot, design or contractor-quote review, or a health check on a project already under way: scoped and priced in writing before we start." + fee),
+        ("Your appointment", "If you want us to carry on, a written scope of works for the stages you need, from design to handover, with the fee agreed up front. Work outside that scope is quoted before it starts."),
     ]
 
 def how_it_starts():
@@ -654,7 +655,7 @@ def llms_facts():
             f"- Response: {C.RESPONSE_PROMISE} ({C.HOURS})",
             "- Portfolio: UK homes built by P Chapman Construction, the main contractor founded and led by Philip Chapman. Awards were made to the houses and their project teams, not to Philip personally or to Eastbridge: Owers House, built by P Chapman Construction and completed in 2014, was featured on Channel 4's Grand Designs and won a RIBA South West Award in 2016; The Old Station Master's House, Fowey, won Best Small New Housing Development in the LABC Building Excellence Awards South West 2018 (https://www.acornpropertygroup.org/old-station-masters-house-wins-labc-award/); Polgreen Manor was Highly Commended, Best Extension or Alteration to an Existing Dwelling, LABC South West 2020 (https://www.labc.co.uk/news/labc-south-west-winners-amp-highly-commended-2020)",
             f"- UK project case study: {url('/work/owers-house/')} (Owers House, built by P Chapman Construction as main contractor, completed in 2014; featured on Channel 4's Grand Designs; RIBA South West Award 2016)",
-            *([f"- Fees: free 30-minute first call; plot and pre-purchase review {C.FEES['plot_review']}; project health check / stalled-project review {C.FEES['rescue_review']}; owner's representation from {C.FEES['monthly_from']} a month or {C.FEES['percent_band']} of construction cost. The final quotation is confirmed in writing after the free call: {url('/fees/')}"] if C.PUBLISH_FEES else []),
+            *([f"- Fees: published as ranges by level of input, never as a day rate, hourly rate or fixed price. Every one-off villa is different, so the fee is agreed in a written scope of works after the free 30-minute first call, and any work outside that scope is quoted before it starts. Review (plot, design, contractor-quote or stalled-project review, with a written report): {C.fee_text('review')}. Part service (cost, contract and payment reviews and monthly reporting, without weekly site presence): {C.fee_text('part')}. Full service (every review, regular site visits and sourcing trips with the owner, travel at cost): {C.fee_text('full')}, depending on the input required. Paid only by the owner, who pays consultants, contractors and suppliers directly; Eastbridge never instructs the contractor or approves a payment without the owner's written approval: {url('/fees/')}"] if C.PUBLISH_FEES else []),
             f"- Worked project example: {url('/case-studies/island-e-waterfront-villa/')} (hypothetical, showing method only; not a completed Eastbridge project, a real client or a promise of savings; all outcomes are modelled)"]
 
 # Short, quotable positions. Each must stay true of the published site (competitor brief 6.3).

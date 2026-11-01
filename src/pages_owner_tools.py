@@ -167,6 +167,11 @@ def schema_app(path, name, desc, cites):
             "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AED"},
             "publisher": {"@id": B.ORG_ID}, "provider": {"@id": B.ORG_ID}, "citation": cites.urls()}
 
+# Call-to-action text under every owner tool. Fee figures appear only when PUBLISH_FEES is on.
+OWNER_TOOLS_CTA = (f"{C.RESPONSE_PROMISE}. The first conversation is free. If a written review of your quote, payment schedule or "
+                   "programme would help, we agree its scope and fee in writing before we start"
+                   + (f": reviews are priced within our published range of {C.fee_text('review')}." if C.PUBLISH_FEES else "."))
+
 def tool_page(path, kind, crumb, h1, lede, form, out, data, body_after, title, desc, schema_name, schema_desc, faqs, cites):
     crumbs = [("Home", "/"), ("Tools", "/tools/"), (crumb, path)]
     head = B.page_head(crumbs, h1, lede).replace('class="page-head"', 'class="page-head page-head--tool"', 1)
@@ -184,7 +189,7 @@ def tool_page(path, kind, crumb, h1, lede, form, out, data, body_after, title, d
 <p class="small muted">Rates last reviewed {PT.month_year(PT.RATES_REVIEWED)} by {esc(C.FOUNDER["name"])}. This page gives general information, not financial, legal or engineering advice.</p>
 </div></div></section>
 {other_tools(path)}
-{B.cta_band("Want a second pair of eyes on the numbers?")}'''
+{B.cta_band("Want a second pair of eyes on the numbers?", OWNER_TOOLS_CTA)}'''
     schema = [schema_app(path, schema_name, schema_desc, cites), B.faq_schema(faqs)]
     B.page(path, title, desc, body, crumbs, schema)
 
