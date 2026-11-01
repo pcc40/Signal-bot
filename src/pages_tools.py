@@ -720,7 +720,7 @@ def estimate_thanks():
     steps = [
         (f"{first} reads your estimate", f"He looks at your inputs, the line-by-line result and any notes on the plot. {esc(C.RESPONSE_PROMISE)}, by email or by phone if you gave a number. Our hours are {esc(C.HOURS)}."),
         ("A plain view of the numbers", "Whether the figures look realistic for the plot and specification, which lines carry the most risk, and what would firm them up."),
-        ("A free 30-minute call, if it helps", "At a time that suits you, including UK and European hours. If a closer look is worthwhile, such as a plot review, we set out the scope and a fixed fee in writing before we start."),
+        ("A free 30-minute call, if it helps", "At a time that suits you, including UK and European hours. If a closer look is worthwhile, such as a plot review, we set out the scope and the fee in writing before we start" + (f": reviews are priced within our published range of {C.fee_text('review')}" if C.PUBLISH_FEES else "") + "."),
     ]
     body = f'''<section class="page-head"><div class="wrap">{B.crumbs_html(crumbs)}<h1>Thank you. Your estimate is with {first}.</h1>
 <p class="lede">{esc(C.RESPONSE_PROMISE)}. We never pass your details to contractors or suppliers.</p></div></section>

@@ -19,13 +19,20 @@ PUBLISH_FEES = True  # Approved by the owner on 31 October 2026. True shows the 
 HERO_VIDEO = False
 HERO_VIDEO_VIMEO_ID = "219974514"
 
-# Fee figures approved for publication by the owner (31 October 2026). Shown only when PUBLISH_FEES is True.
+# Published fee ranges by level of input, confirmed by the owner on 1 November 2026 (competitor brief, D1).
+# Shown only when PUBLISH_FEES is True. Ranges only: never publish a day rate, an hourly rate or a fixed price.
+# Every one-off villa is priced against a written scope of works agreed after the free call; work outside
+# that scope is quoted before it starts. "range" + " " + "basis" reads as one phrase, e.g. "AED 9,500–15,000 per review".
 FEES = {
-    "plot_review": "AED 9,500",
-    "rescue_review": "AED 15,000",
-    "monthly_from": "AED 28,000",
-    "percent_band": "1.75%–3%",
+    "review": {"name": "Review", "range": "AED 9,500–15,000", "basis": "per review"},
+    "part": {"name": "Part service", "range": "from AED 28,000", "basis": "a month"},
+    "full": {"name": "Full service", "range": "typically 1.75–3%", "basis": "of build cost", "pct": (1.75, 3.0)},
 }
+
+def fee_text(level):
+    """The published range for one level as a phrase, e.g. "AED 9,500–15,000 per review"."""
+    f = FEES[level]
+    return f"{f['range']} {f['basis']}"
 
 # --- Business facts --------------------------------------------------------
 NAME = "Eastbridge Strategic Partners"

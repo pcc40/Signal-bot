@@ -1,11 +1,12 @@
 """Service pages. Wording follows the compliance rules: Eastbridge represents the owner and works alongside the
 owner's registered consultant and contractor. It does not supervise as consultant of record, submit permits,
 prepare tender documents, prequalify contractors or certify anything."""
-from config import FEES as _FEES, PUBLISH_FEES as _SHOW
+from config import fee_text as _fee_text, PUBLISH_FEES as _SHOW
 
-def _fee(key, text, fallback=""):
-    """A published fee sentence when PUBLISH_FEES is on; otherwise the fallback (no figure)."""
-    return text.format(fee=_FEES[key]) if _SHOW else fallback
+def _fee(level, text, fallback=""):
+    """A published fee sentence when PUBLISH_FEES is on; otherwise the fallback (no figure).
+    {fee} becomes the published range for the level, e.g. "AED 9,500–15,000 per review"."""
+    return text.format(fee=_fee_text(level)) if _SHOW else fallback
 
 SERVICES = [
  {
@@ -39,7 +40,7 @@ SERVICES = [
   "builder_view": "On the contractor's side, the jobs that ran best were the ones where the owner had someone experienced checking the valuations. Payments were fair and on time, and the whole job ran tighter. An owner's representative does not slow a good contractor down. It removes the ambiguity that bad projects live on.",
   "faqs": [
    ("What does an owner's representative do on a villa build?", "We act as your single point of control. We set the budget and programme with you, help you appoint the consultant and contractor, track cost and time, review payments and variations, report progress and lead handover. We do not replace the registered consultant, who remains responsible for the statutory design, permit submissions and supervision duties."),
-   ("Is an owner's representative worth it on a villa?", "On a straightforward build with an experienced owner who lives in Dubai, perhaps not. On a bespoke villa, a major renovation, or any project where you are often abroad, it gives you regular cost reporting, programme monitoring, review of every payment and variation, and early warning of risks, from someone who works only for you. We will tell you honestly if you don't need us."),
+   ("Is an owner's representative worth it on a villa?", "On a straightforward build with an experienced owner who lives in Dubai, perhaps not. On a bespoke villa, a major renovation, or any project where you are often abroad, it gives you regular cost reporting, programme monitoring, review of every payment and variation, and early warning of risks, from someone who works only for you. We will tell you honestly if you don't need us. See <a href=\"/fees/#worth-it\">is it worth it?</a>"),
    ("Who will I deal with, and how often will you be on site?", "Philip Chapman, our founder, leads every appointment personally and is your point of contact throughout. He is supported by a team of three project managers who attend site and provide cover when he is unavailable. Site attendance and reporting are agreed in writing in the scope of your appointment: typically weekly during active construction, and more often at key stages such as waterproofing, first fix and pre-handover."),
    ("Who appoints the quantity surveyor and engineers?", "You do, and you pay them directly. We help you work out which specialists the project needs, compare their proposals like-for-like and choose. We take no commission or referral fee from any of them."),
    ("Do you take commission from contractors or suppliers?", "No. We take no commission, referral fee or discount from any consultant, contractor or supplier. Our only income on your project is the fee you pay us. That is written into our appointment."),
@@ -124,7 +125,7 @@ SERVICES = [
   "short": "Plot and pre-purchase review",
   "name": "Villa plot and pre-purchase review",
   "title": "Villa Plot Due Diligence, Dubai & Abu Dhabi | Eastbridge",
-  "description": "Buying a villa plot in Dubai or Abu Dhabi? A fixed-fee review of design rules, build-by deadlines and realistic build cost before you commit.",
+  "description": "Buying a villa plot in Dubai or Abu Dhabi? A written review of design rules, build-by deadlines and realistic build cost before you commit.",
   "h1": "Know what you can build, and what it will cost, before you buy the plot",
   "lede": "The plot price is the number everyone talks about. The build cost, the design rules and the build-by deadline decide whether it is a good purchase.",
   "image": "saqqara-01",
@@ -149,7 +150,7 @@ SERVICES = [
    ("What should I check before buying a villa plot in Dubai?", "Title and plot details, the master developer's design guidelines, any build-by deadline, service charges, access and ground conditions, and a realistic total build budget. Our <a href=\"/insights/buying-a-villa-plot-in-dubai-checks/\">plot checklist</a> covers each one."),
    ("Is this legal or valuation advice?", "No. We give a practical, construction-led view. For title and contract terms, take advice from a UAE-qualified lawyer. For value, use a RICS or RERA-registered valuer. We are happy to work alongside both."),
    ("How quickly can you turn a review around?", "Within five working days of receiving the plot documents, sooner when a release window demands it."),
-   ("What does a plot review cost?", _fee("plot_review", "A fixed fee of {fee}. The final quotation is confirmed in writing after the free call, before we start. See <a href=\"/fees/\">how fees work</a>.", "A fixed fee, quoted in writing before we start. See <a href=\"/fees/\">how fees work</a>.")),
+   ("What does a plot review cost?", _fee("review", "It is priced within our Review range, {fee}, depending on the number of plots, the documents available and your timetable. The scope and fee are confirmed in writing after the free call, before we start. See <a href=\"/fees/\">how fees work</a>.", "It is quoted in writing after the free call, before we start. See <a href=\"/fees/\">how fees work</a>.")),
   ],
   "related": ["villa-construction-project-management", "development-advisory", "cost-and-programme-control"],
  },
@@ -209,8 +210,21 @@ SERVICES = [
    "A recommendation with reasons",
    "Contract terms that protect you without scaring good contractors away",
   ],
+  # Contractor quote review (competitor brief 2.1; paid, within the Review range per decision D2).
+  "extra": """<h2 id="quote-review">Contractor quote review</h2>
+<p>Already holding a contractor's quote? Send it to us with the draft contract before you sign. We spent 21 years pricing quotes like these as the builder, so we read one the way the contractor wrote it: where the price leaves room, what it leaves out, and which lines are likely to come back as variations.</p>
+<h3>What we look at</h3>
+<ul><li>Scope gaps: what the drawings and specification show that the quote does not price</li>
+<li>Provisional sums and allowances: how much of the price is still an estimate</li>
+<li>The payment schedule, and whether payments run ahead of the work</li>
+<li>The variation clause: how changes are priced, agreed and instructed</li>
+<li>Exclusions and the assumptions behind the price</li></ul>
+<h3>You receive</h3>
+<ul><li>A written report, with the questions to put to the contractor before you sign</li></ul>
+<p>""" + _fee("review", "Priced within our Review range, {fee}, and agreed in writing before we start. ", "Quoted in writing before we start. ") + """The report is a commercial review, not legal advice: for the contract's legal effect, take advice from a UAE-qualified lawyer. <a href="/fees/#quote-review">How the review is charged</a>.</p>""",
   "builder_view": "When we tendered, we could tell within ten minutes whether a client's team would run the job well: clear drawings, a fair contract, sensible payment terms. Good contractors choose their clients too. A well-prepared owner gets better prices from better builders.",
   "faqs": [
+   ("Can you review a contractor's quote before I sign?", "Yes. Send us the quote and the draft contract, and we review the scope gaps, provisional sums, payment schedule, variation clause and exclusions, with a written report and the questions to put to the contractor. " + _fee("review", "It is priced within our Review range, {fee}. ", "It is quoted in writing before we start. ") + "See <a href=\"/fees/#quote-review\">how the review is charged</a>."),
    ("How do I check a contractor's licence in Dubai?", "Ask for the trade licence and authority registration, then verify them through the official channels. Dubai's building permits app includes a consultant and contractor registry. Our <a href=\"/insights/how-to-choose-a-villa-contractor-dubai/\">contractor guide</a> lists the twelve questions to ask."),
    ("Do you get paid by the contractor you recommend?", "Never. We take no commission or referral fee from anyone. See our <a href=\"/independence/\">independence pledge</a>."),
    ("Can you work with a contractor I already know?", "Yes. We will still check the price and contract terms, so you can proceed with confidence."),
@@ -343,7 +357,7 @@ SERVICES = [
   "faqs": [
    ("What should I do if my contractor stops work?", "Pause any payment not yet properly valued until you understand the position, keep all records, photograph the site, and take advice from a UAE-qualified lawyer before withholding sums the contract says are due or terminating anything. Then get an independent view of what it will take to finish. Our guide to <a href=\"/insights/stalled-villa-project-dubai/\">the first ten days of a stalled build</a> sets out the order."),
    ("Can a half-built villa be finished by a new contractor?", "Yes, often successfully. The key is an accurate record of the work in place and its quality, so the new contractor can price it fairly."),
-   ("How quickly can you start?", "Within a week, with the full picture within two to three weeks. The initial review is a fixed fee" + _fee("rescue_review", " of {fee}, confirmed in writing after the free call") + "."),
+   ("How quickly can you start?", "Within a week, with the full picture within two to three weeks. The initial review is " + _fee("review", "priced within our Review range, {fee}, and confirmed in writing after the free call", "quoted in writing after the free call") + "."),
   ],
   "related": ["variations-delays-and-claims", "site-visits-and-reporting", "owners-representative"],
  },

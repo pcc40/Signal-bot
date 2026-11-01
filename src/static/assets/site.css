@@ -247,6 +247,12 @@ body.has-hero .site-head:not(.stuck) .btn{background:#fff;color:var(--ink);borde
 .compare .without li::before{content:"";display:inline-block;width:8px;height:8px;border:1.5px solid var(--ink-soft);border-radius:50%;margin-right:10px;vertical-align:1px}
 .compare .with li::before{content:"";display:inline-block;width:8px;height:8px;background:var(--brass);border-radius:50%;margin-right:10px;vertical-align:1px}
 @media (max-width:760px){.compare{grid-template-columns:1fr}.compare > div + div{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
+/* Fees page: three levels of input */
+.compare--3{grid-template-columns:repeat(3,1fr)}
+.fee-levels h3{font-family:var(--serif);font-weight:400;font-size:var(--s-2);margin-bottom:6px}
+.fee-levels .fee-range{margin:0 0 10px;font-size:var(--s-1)}
+.fee-levels .fee-range strong{font-weight:600}
+@media (max-width:1000px){.compare--3{grid-template-columns:1fr}.compare--3 > div + div{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
 .stat-big{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
 .stat-big div{padding:28px 24px 0 0}
 .stat-big div + div{padding-left:24px;border-left:1px solid var(--line)}
