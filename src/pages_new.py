@@ -109,7 +109,7 @@ def home(posts, post_cards, stages_html, svc_img):
      ("What does a client-side project manager do?", "We manage your villa build or renovation from your side. We set the budget and programme with you, help you compare and choose the consultant and contractor you appoint, check the design against the budget, monitor cost, programme and quality, review payments and variations before you pay, and lead handover."),
      ("Why not leave it to the architect or the contractor?", "A properly appointed consultant has real duties for the design, approvals and statutory supervision, and the contractor is responsible for building to the contract. Each also has its own commercial position, and neither is usually appointed to coordinate the whole project and test every price, payment and claim from your side. That independent coordination and commercial scrutiny is what we add. <a href=\"/why-a-client-side-project-manager/\">Why client-side matters</a>."),
      ("Do you replace the registered consultant?", "No. Your villa needs a registered consultant for the statutory design, permit submissions and supervision duties. We help you choose them and work alongside them and the contractor, so that what is delivered matches what you agreed to pay for."),
-     ("Can you guarantee the budget or the completion date?", "No one can honestly guarantee either on a construction project. What we provide are controls that bring problems to light early: a cost plan and a monthly cost-to-complete, programme monitoring, payment review against work done, variations priced before you instruct them, a decision log and records kept from the first day."),
+     ("Can you guarantee the budget or the completion date?", "No one can honestly guarantee either on a construction project. What we provide are controls that bring problems to light early: a cost plan and a monthly forecast final cost, programme monitoring, payment review against work done, variations priced before you instruct them, a decision log and records kept from the first day."),
      ("How are you paid?", "By you alone. We take no commission, referral fee or discount from any contractor, consultant or supplier. See <a href=\"/fees/\">how fees work</a>."),
      ("What happens after I get in touch?", "Send a short note through the contact form or on WhatsApp and we will reply to arrange the free 30-minute call at a time that suits you. There is no obligation to go further."),
     ]
@@ -117,7 +117,7 @@ def home(posts, post_cards, stages_html, svc_img):
 <section class="hero" aria-labelledby="hero-h"><div class="slides">{slides}</div>
 {B.hero_video_html()}<div class="wrap"><span class="kicker">Client-side project management · Dubai and Abu Dhabi</span>
 <h1 id="hero-h">Your villa, managed from your side of the table.</h1>
-<p class="lede">For a one-off villa, one person on your side reviews every drawing, quote, payment and variation, is on site regularly through construction, at the frequency agreed in your scope, and travels with you to source stone, joinery, lighting and fittings. Led personally by Philip Chapman.</p>
+<p class="lede">For a one-off villa, one person represents you alongside your consultant and contractor, and keeps your budget under control by reviewing every quote, payment and variation before you commit. Led personally by Philip Chapman.</p>
 <div class="actions"><a class="btn" href="/contact/">{esc(B.CTA_LABEL)}</a><a class="btn btn--ghost" href="/why-a-client-side-project-manager/">Why client-side matters</a></div></div>
 <p class="hero-meta">Homes built by P Chapman Construction, founded by Philip Chapman.</p><span class="scroll-cue" aria-hidden="true"></span></section>
 
@@ -133,7 +133,8 @@ def home(posts, post_cards, stages_html, svc_img):
 <div class="head-row"><h2 id="what-h">Three ways we help</h2>
 <p class="lede">A client-side project manager, also called an owner's representative, does not design or build. We work alongside your registered consultant and your contractor, adding independent cost, programme and commercial control from your side.</p></div>
 <div class="doors">{door_html}</div>
-<p style="margin-top:30px"><a class="link" href="/services/">All services</a> &nbsp; <a class="link" href="/approach/">How a project runs</a></p>
+<p class="muted" style="margin-top:30px;max-width:72ch">Through construction we are on site regularly, at the frequency agreed in your scope. With the full service we also travel with you to source stone, joinery, lighting and fittings, and check what arrives against what you chose: see <a href="/services/materials-and-specialist-sourcing/">materials and specialist sourcing</a>.</p>
+<p style="margin-top:14px"><a class="link" href="/services/">All services</a> &nbsp; <a class="link" href="/approach/">How a project runs</a></p>
 </div></section>
 
 <section class="section" aria-labelledby="work-h"><div class="wrap feature">
@@ -415,7 +416,7 @@ def case_page():
 <header><b>Eastbridge · Sample monthly report</b><span class="small">Month 27 · Island E worked example</span></header>
 <div class="r-body">
 <div><h4>Progress {MOD}</h4><span class="big">61%</span> <span class="pill watch">3% behind</span><div class="bar"><i style="width:61%"></i><em style="left:64%"></em></div><span class="small muted">Planned 64%. Recovery plan agreed for fit-out.</span></div>
-<div><h4>Forecast final cost {MOD}</h4><span class="big">AED {r(k.REPORT_FORECAST):.2f}m</span> <span class="pill ok">Within allowances</span><div class="bar"><i style="width:{round(k.REPORT_FORECAST / k.APPROVED * 100)}%"></i><em style="left:100%"></em></div><span class="small muted">Development allowances AED {k.APPROVED:.2f}m excluding VAT, with AED {r(k.APPROVED - r(k.REPORT_FORECAST)):.2f}m of contingency not yet committed.</span></div>
+<div><h4>Forecast final cost {MOD}</h4><span class="big">AED {r(k.REPORT_FORECAST):.2f}m</span> <span class="pill ok">Within allowances</span><div class="bar"><i style="width:{round(k.REPORT_FORECAST / k.APPROVED * 100)}%"></i><em style="left:100%"></em></div><span class="small muted">Development allowances AED {k.APPROVED:.2f}m excluding VAT. The forecast final cost is paid to date plus forecast cost to complete; the AED {r(k.APPROVED - r(k.REPORT_FORECAST)):.2f}m of allowances above it is unallocated contingency.</span></div>
 <div class="r-full"><h4>Decisions needed from you</h4><ul><li>Pool tile and coping sample, by the 14th</li><li>Kitchen joinery shop drawings, by the 18th</li><li>Garden lighting scheme, by the 25th</li></ul></div>
 <div><h4>Payment recommendation {MOD}</h4><span>Valuation 12: AED 0.98m claimed, AED 0.91m recommended</span></div>
 <div><h4>Top risk</h4><span>Shamal season during glazing installation; protection plan in place</span></div>

@@ -82,7 +82,7 @@ Dated, labelled photographs organised by area, not a stream of images on a messa
 
 ### Monthly cost-to-complete
 
-Not just what has been paid, but what it will cost to finish. A sound cost report shows the original contract sum, approved variations, pending variations, provisional sums spent and remaining, contingency used, and a forecast final cost. If the forecast only changes when someone asks, it is not a forecast.
+Not just what has been paid, but what it will cost to finish. A sound cost report shows the original contract sum, approved variations, pending variations, provisional sums spent and remaining, contingency used, and a [forecast final cost](/glossary/#forecast-final-cost): what has been paid to date plus the forecast cost to complete, never the whole contract sum added to what has already been paid. If the forecast only changes when someone asks, it is not a forecast.
 
 ### Programme update
 

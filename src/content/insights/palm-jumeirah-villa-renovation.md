@@ -98,7 +98,7 @@ Roof membranes, wet-room tanking, terraces over habitable rooms and basement wat
 
 ### MEP services
 
-Air-conditioning systems, ductwork, pipework and electrical distribution installed when the villa was built may be near the end of their life or undersized for how you want to live now. If you are replacing finishes, it is almost always cheaper to replace tired services at the same time than to open the villa up again in three years.
+Air-conditioning systems, ductwork, pipework and electrical distribution installed when the villa was built may be near the end of their life or undersized for how you want to live now. Have them surveyed: if they do need replacing and you are replacing finishes anyway, it is usually cheaper to do both at the same time than to open the villa up again in three years.
 
 ### Salt exposure
 
