@@ -218,6 +218,16 @@ def tag_forms(soup, lang):
             fm.insert(0, soup.new_tag("input", attrs={"type": "hidden", "name": "language", "value": lang}))
         else:
             fm.find("input", attrs={"name": "language"})["value"] = lang
+        # Netlify registers each form (and the field labels it shows in the dashboard and in
+        # notification emails) from the HTML it finds at deploy. The same form name on five
+        # language pages would let a translated copy define the labels, so only the English
+        # page carries data-netlify. Translated pages post to the same form via form-name.
+        if lang != "en" and fm.has_attr("data-netlify"):
+            if not fm.find("input", attrs={"name": "form-name"}):
+                fm.insert(0, soup.new_tag("input", attrs={"type": "hidden", "name": "form-name", "value": fm.get("name", "")}))
+            del fm["data-netlify"]
+            if fm.has_attr("netlify-honeypot"):
+                del fm["netlify-honeypot"]
 
 def insert_switcher(soup, path, cur):
     for old in soup.select("nav.langs"):
