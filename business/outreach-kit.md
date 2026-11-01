@@ -282,7 +282,7 @@ Only message people who have shared their number with Philip directly (a card, a
 > ### Who we are
 > Eastbridge represents private owners building or renovating villas. We sit on the owner's side of the table, alongside the owner's DM-registered consultant and the contractor. We are paid only by the owner and take no commission or referral fees.
 >
-> Our founder, Philip Chapman, ran P Chapman Construction, a premium UK residential builder, for 21 years: about £17m annual turnover at peak, bespoke contemporary homes on the Cornish coast, JCT contracts, extension-of-time, variation and adjudication matters. Recognition for the company's work includes a RIBA South West Award (Owers House, 2016), LABC Building Excellence Awards (winner 2018, Highly Commended 2020), and Owers House (completed in 2014) featured on Channel 4's *Grand Designs* and reported in *The Times*. (Do not name any architect in public or outreach copy: owner's decision, 31 October 2026.)
+> Our founder, Philip Chapman, ran P Chapman Construction, a premium UK residential builder, for 21 years: bespoke contemporary homes on the Cornish coast, JCT contracts, extension-of-time, variation and adjudication matters. Recognition for the company's work includes a RIBA South West Award (Owers House, 2016), LABC Building Excellence Awards (winner 2018, Highly Commended 2020), and Owers House (completed in 2014) featured on Channel 4's *Grand Designs* and reported in *The Times*. (Do not name any architect in public or outreach copy: owner's decision, 31 October 2026.)
 >
 > Philip leads every appointment personally, supported by a team of three project managers who attend site and provide cover when he is unavailable.
 >

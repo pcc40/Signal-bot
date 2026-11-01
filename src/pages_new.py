@@ -20,7 +20,6 @@ def credit_of(base):
 # ---------------------------------------------------------------- shared components
 def creds_band():
     items = [("21 years", "building premium homes as P Chapman Construction"),
-             ("£17m", "annual turnover at the company's peak, about AED 80m"),
              ("RIBA South West Award 2016", "Owers House, built by P Chapman Construction"),
              ("LABC South West awards", "2018 winner and 2020 Highly Commended, for houses the company built"),
              ("Grand Designs", "Owers House, built by P Chapman Construction, featured on Channel 4")]
@@ -125,7 +124,7 @@ def home(posts, post_cards, stages_html, svc_img):
 <section class="section" aria-labelledby="founder-h"><div class="wrap feature">
 <figure class="portrait">{pic("philip-chapman-01", "Philip Chapman, Founding Partner of Eastbridge Strategic Partners", "(max-width:900px) 100vw, 42vw", cls="reveal")}</figure>
 <div><span class="kicker">Who leads your project</span><h2 id="founder-h">Philip Chapman, Founding Partner</h2>
-<p>Philip founded P Chapman Construction and led it for 21 years, growing it into a premium UK contractor with an annual turnover of around £17 million. Houses the company built have won a RIBA South West Award (Owers House, 2016, also featured on Channel 4's Grand Designs) and LABC Building Excellence Awards (<a href="{LABC_2018_URL}" rel="noopener">a 2018 win</a> and <a href="{LABC_2020_URL}" rel="noopener">a 2020 Highly Commended</a>).</p>
+<p>Philip founded P Chapman Construction and led it for 21 years, growing it into a premium UK contractor. Houses the company built have won a RIBA South West Award (Owers House, 2016, also featured on Channel 4's Grand Designs) and LABC Building Excellence Awards (<a href="{LABC_2018_URL}" rel="noopener">a 2018 win</a> and <a href="{LABC_2020_URL}" rel="noopener">a 2020 Highly Commended</a>).</p>
 <p class="muted">On the high-end houses P Chapman Construction built, he reviewed everything for the client, was on site every week and travelled with owners to choose their materials. He knows how a contractor prices a job, where variations come from and how delay claims are built. In Dubai and Abu Dhabi he puts that knowledge to work for the owner, fairly, and leads each Eastbridge appointment personally.</p>
 <p><a class="link" href="/about/">About Philip and Eastbridge</a></p></div>
 </div></section>

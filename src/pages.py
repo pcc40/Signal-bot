@@ -563,7 +563,7 @@ def about():
     # Career timeline: only facts already published on the site (WRITING_BRIEF.md, projects.RECOGNITION).
     # The founding year of P Chapman Construction and the licence date are not recorded, so they are not shown.
     timeline = "".join(f"<tr><td>{w}</td><td>{t}</td></tr>" for w, t in [
-        ("Before Eastbridge", "Philip founded P Chapman Construction, a premium residential contractor in the UK, and led it for 21 years, growing it to an annual turnover of around £17 million at its peak."),
+        ("Before Eastbridge", "Philip founded P Chapman Construction, a premium residential contractor in the UK, and led it for 21 years."),
         ("2014", "Owers House, built by P Chapman Construction, was completed. It was featured on Channel 4's Grand Designs and reported in The Times."),
         ("2016", "Owers House won a RIBA South West Award."),
         ("2018", "The Old Station Master's House, Fowey, built by P Chapman Construction, won Best Small New Housing Development in the LABC Building Excellence Awards South West."),
@@ -571,11 +571,11 @@ def about():
         ("Now", f"Philip leads {esc(C.LEGAL)}, {esc(C.LICENCE)}, working only for the owner, never the builder."),
     ])
     record = "".join(f"<div><dt>{t}</dt><dd>{d}</dd></div>" for t, d in B.on_record_items() + [("Where we work", esc(C.COVERAGE))])
-    body = B.banner(crumbs, "About Eastbridge", "A client-side practice built on 21 years running a £17m-turnover premium building company whose houses won RIBA and LABC recognition.", "owers-house-04", credit_of("owers-house-04")) + f'''
+    body = B.banner(crumbs, "About Eastbridge", "A client-side practice built on 21 years running a premium building company whose houses won RIBA and LABC recognition.", "owers-house-04", credit_of("owers-house-04")) + f'''
 <section class="section" id="founder"><div class="wrap feature">
 <figure class="portrait">{pic("philip-chapman-01", "Philip Chapman, Founding Partner of Eastbridge Strategic Partners", "(max-width:900px) 100vw, 42vw")}</figure>
 <div><span class="kicker">Founding Partner</span><h2>Philip Chapman</h2><p class="muted">British. Based in Dubai.</p><div class="prose">
-<p>Philip Chapman founded <a href="{C.FOUNDER["company_uk_url"]}" rel="noopener">P Chapman Construction</a> and led it for 21 years, growing it into a premium contractor with an annual turnover of around £17 million and a reputation for exceptionally demanding private houses.</p>
+<p>Philip Chapman founded <a href="{C.FOUNDER["company_uk_url"]}" rel="noopener">P Chapman Construction</a> and led it for 21 years, growing it into a premium contractor with a reputation for exceptionally demanding private houses.</p>
 <p>Houses the company built have been recognised in their own right. Owers House, built by P Chapman Construction and completed in 2014, was featured on Channel 4's Grand Designs, won a RIBA South West Award in 2016 and was reported in <a href="https://www.thetimes.co.uk/article/wings-of-desire-9cgnbh3fg" rel="noopener">The Times</a>. The Old Station Master's House in Fowey won Best Small New Housing Development in the LABC Building Excellence Awards South West 2018 (<a href="https://www.acornpropertygroup.org/old-station-masters-house-wins-labc-award/" rel="noopener">source</a>), and Polgreen Manor was Highly Commended in the 2020 South West awards (<a href="https://www.labc.co.uk/news/labc-south-west-winners-amp-highly-commended-2020" rel="noopener">source</a>). These awards belong to the houses and the teams that designed and built them. Alongside one-off houses it delivered country-house restorations, multi-unit developments, hotel and spa work, and schools, under both traditional and design-and-build contracts.</p>
 <p>Two decades as the builder meant pricing tenders, programming complex sites, managing subcontractors, administering JCT contracts, preparing and defending extension of time and variation claims, and handing finished homes to owners and design teams who expected them to be perfect. It also meant seeing, from the inside, exactly where owners lose money and time.</p>
 <p>In Dubai and Abu Dhabi, Philip works on the other side of the table: for the owner, never the builder. He leads every Eastbridge appointment personally, supported by a team of three project managers who attend site and provide cover when he is unavailable, and he is the person you speak to from the first conversation to handover.</p>
@@ -607,7 +607,7 @@ def about():
 <p>More detail in <a href="/approach/#uae-appointments">how an appointment works in the UAE</a> and <a href="/fees/">how our fees work</a>.</p></div></div></section>
 {B.cta_band()}'''
     B.page("/about/", "About Eastbridge and Founder Philip Chapman | Dubai",
-           "Eastbridge is led by Philip Chapman, who ran P Chapman Construction, a £17m UK builder of award-winning homes, for 21 years. Now he acts only for villa owners.",
+           "Eastbridge is led by Philip Chapman, who ran P Chapman Construction, a UK builder of award-winning homes, for 21 years. Now he acts only for villa owners.",
            body, crumbs, [B.person_schema()], og=B.og_image("owers-house-02"))
 
 # ---------------------------------------------------------------- faq / contact / legal
@@ -848,7 +848,7 @@ def insights(posts):
 {('<div class="keypoints"><h2>Key points</h2><ul>' + kp + '</ul></div>') if kp else ""}
 {toc}
 {body_html}
-<div class="author"><img class="mono" src="/assets/img/philip-chapman-thumb.webp" width="52" height="52" alt="" loading="lazy"><div><b>{esc(C.FOUNDER["name"])}, {esc(C.FOUNDER["role"])}</b><span class="small muted">Founded and ran P Chapman Construction, a £17m UK builder of award-winning homes, for 21 years. Now represents villa owners in Dubai and Abu Dhabi. <a href="/about/#founder">About Philip</a></span></div></div>
+<div class="author"><img class="mono" src="/assets/img/philip-chapman-thumb.webp" width="52" height="52" alt="" loading="lazy"><div><b>{esc(C.FOUNDER["name"])}, {esc(C.FOUNDER["role"])}</b><span class="small muted">Founded and ran P Chapman Construction, a UK builder of award-winning homes, for 21 years. Now represents villa owners in Dubai and Abu Dhabi. <a href="/about/#founder">About Philip</a></span></div></div>
 {('<h2 id="faq">Questions</h2>' + B.faq_html(faqs)) if faqs else ""}
 {('<h2 id="sources">Sources</h2><ol class="small">' + srcs + '</ol>') if srcs else ""}
 {guide_cta(p)}
