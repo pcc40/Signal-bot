@@ -711,6 +711,8 @@ def write_llms(posts):
         full.extend(["", "---", "", f"## {title}", "", f"URL: {url(path)}" + extra, "", text])
     for p in paths:
         section(p)
+    from content.authorities import llms_lines as authority_lines
+    full.extend(["", "---", ""] + authority_lines(url("/insights/which-dubai-authority-covers-my-villa/")))
     for p in posts:
         d, u = post_dates(p)
         section(f"/insights/{p['slug']}/", f"\nBy {C.FOUNDER['name']}, {C.FOUNDER['role']}. Published {d.isoformat()}, updated {u.isoformat()}.")
