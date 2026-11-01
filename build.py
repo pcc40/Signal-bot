@@ -70,6 +70,21 @@ def url(path):
     return C.SITE_URL + path
 
 # ---------------------------------------------------------------- images
+def insight_link(slug, text, before="", after=""):
+    """A link to an insight article only once it is published (src/content/insights/<slug>.md exists), so a
+    page can point at an article that is still on another branch without leaving a broken link."""
+    if (ROOT / "src/content/insights" / f"{slug}.md").exists():
+        return f'{before}<a href="/insights/{slug}/">{text}</a>{after}'
+    return ""
+
+def on_record_items():
+    """The "On the record" credentials (competitor brief 1.4): used on /about/ and in the site-wide footer."""
+    return [("Legal entity", esc(C.LEGAL)),
+            ("Licence", esc(C.LICENCE)),
+            ("What we are", "A client-side project manager and owner's representative"),
+            ("What we are not", "A contractor, an engineering consultancy, a law firm or an estate agency"),
+            ("How we are paid", "Only by the owner we represent")]
+
 def img_meta(base):
     slug = base.rsplit("-", 1)[0]
     for m in MANIFEST.get(slug, []):
@@ -93,6 +108,9 @@ def og_image(base):
 
 # ---------------------------------------------------------------- schema
 ORG_ID = C.SITE_URL + "/#org"
+# Coverage: every community in Dubai and Abu Dhabi (C.COVERAGE); the area pages are examples, not limits.
+AREA_SERVED = [{"@type": "City", "name": "Dubai"}, {"@type": "City", "name": "Abu Dhabi"},
+               {"@type": "Country", "name": "United Arab Emirates"}]
 PERSON_ID = C.SITE_URL + "/about/#founder"
 
 def person_schema():
@@ -122,8 +140,9 @@ def org_schema():
         "telephone": C.PHONE_E164,
         "address": {"@type": "PostalAddress", "streetAddress": C.ADDRESS["street"],
                     "addressLocality": C.ADDRESS["locality"], "addressCountry": C.ADDRESS["country"]},
-        "areaServed": [{"@type": "City", "name": "Dubai"}, {"@type": "City", "name": "Abu Dhabi"},
-                       {"@type": "Country", "name": "United Arab Emirates"}],
+        "identifier": [{"@type": "PropertyValue", "propertyID": "Meydan Free Zone licence number",
+                        "name": "Meydan Free Zone licence", "value": C.LICENCE_NO}],
+        "areaServed": AREA_SERVED,
         "knowsAbout": ["Owner's representation", "Construction project management", "Villa construction",
                        "Villa renovation", "Construction cost management", "Contractor tendering",
                        "Extension of time claims", "Construction contract administration", "Snagging and handover",
@@ -197,7 +216,7 @@ def service_schema(s, path):
     return {"@context": "https://schema.org", "@type": "Service", "@id": url(path) + "#service",
             "name": s["name"], "serviceType": s["name"], "description": s["description"],
             "provider": {"@id": ORG_ID}, "url": url(path),
-            "areaServed": [{"@type": "City", "name": "Dubai"}, {"@type": "City", "name": "Abu Dhabi"}]}
+            "areaServed": AREA_SERVED}
 
 # ---------------------------------------------------------------- components
 def crumbs_html(crumbs):
@@ -305,7 +324,7 @@ def header(path):
     cur = ' aria-current="page"'
     def a(n, p):
         return f'<li><a href="{p}"{cur if path.startswith(p) else ""}>{n}</a></li>'
-    col1 = ["owners-representative", "villa-construction-project-management", "villa-renovation-project-management", "plot-due-diligence", "overseas-owners", "development-advisory"]
+    col1 = ["owners-representative", "villa-construction-project-management", "villa-renovation-project-management", "plot-due-diligence", "materials-and-specialist-sourcing", "overseas-owners", "development-advisory"]
     col2 = ["design-and-approvals", "consultant-and-contractor-selection", "cost-and-programme-control", "site-visits-and-reporting", "variations-delays-and-claims", "stalled-project-rescue", "snagging-and-handover"]
     l1 = "".join(f'<li><a href="/services/{s}/">{esc(S[s]["short"])}</a></li>' for s in col1)
     l2 = "".join(f'<li><a href="/services/{s}/">{esc(S[s]["short"])}</a></li>' for s in col2)
@@ -346,6 +365,7 @@ def footer():
 <div><h3>Where we work</h3><ul>{ar}<li><a href="/areas/">All areas</a></li></ul></div>
 <div><h3>Firm</h3><ul><li><a href="/why-a-client-side-project-manager/">Why client-side</a></li><li><a href="/case-studies/">Case studies</a></li><li><a href="/work/">Work</a></li><li><a href="/about/">About</a></li><li><a href="/approach/">How we work</a></li><li><a href="/independence/">Independence pledge</a></li><li><a href="/fees/">How fees work</a></li><li><a href="/tools/villa-build-cost-calculator/">Cost calculator</a></li><li><a href="/tools/renovate-or-rebuild/">Renovate or rebuild</a></li><li><a href="/tools/stage-payment-planner/">Stage payment planner</a></li><li><a href="/tools/delay-cost-estimator/">Delay cost estimator</a></li><li><a href="/insights/">Insights</a></li><li><a href="/guides/villa-owner-checklist/">Pre-construction checklist</a></li><li><a href="/guides/villa-snagging-checklist/">Snagging checklist</a></li><li><a href="/faq/">Questions</a></li><li><a href="/glossary/">Glossary</a></li><li><a href="/contact/">Contact</a></li></ul></div>
 </div>
+<section class="on-record" aria-labelledby="on-record-h"><h3 id="on-record-h">On the record</h3><dl>{"".join(f"<div><dt>{t}</dt><dd>{d}</dd></div>" for t, d in on_record_items())}</dl></section>
 <div class="legal"><span>© {year} {C.LEGAL}. {C.LICENCE}. Eastbridge acts as the client's project manager and representative. It is not a contractor and does not replace the registered consultant of record required by the authorities.</span>
 <span><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/sitemap.xml">Sitemap</a></span></div>
 </div></footer>
@@ -647,7 +667,8 @@ def llms_facts():
     return [f"- Contact: {C.EMAIL}, {C.PHONE_DISPLAY} (WhatsApp available); {C.HOURS}",
             f"- Office: {C.ADDRESS['street']}, {C.ADDRESS['locality']}, {C.ADDRESS['country_name']}",
             f"- Legal entity: {C.LEGAL}, {C.LICENCE}",
-            "- Serves: Dubai and Abu Dhabi, UAE; many villa owners live in the UK and Europe",
+            f"- Coverage: {C.COVERAGE} The area pages on this site are examples, not limits. Many villa owners live in the UK and Europe.",
+            "- What Eastbridge is: a client-side project manager and owner's representative, paid only by the owner it represents. What it is not: a contractor, an engineering consultancy, a law firm or an estate agency.",
             "- Working language: English",
             f"- Founder: {C.FOUNDER['name']}, who founded and led P Chapman Construction (UK premium residential contractor) for 21 years: {url('/about/#founder')}",
             f"- Team: {C.FOUNDER['name']} leads every appointment personally, supported by a team of three project managers who attend site and provide cover when he is unavailable. Capacity is confirmed before an appointment is accepted.",

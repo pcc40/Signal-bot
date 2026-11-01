@@ -37,7 +37,7 @@ def triad_svg():
         (120, 350, "Interior designer", "Specifies the interiors and finish"),
         (520, 350, "Developer and authority", "Protect the community and the rules"),
     ]
-    g = ['<svg class="triad" viewBox="0 0 640 420" role="img" aria-label="Everyone on a villa project has their own role and commercial position. The owner sits at the centre; Eastbridge sits beside the owner, coordinating on the owner\'s behalf.">']
+    g = ['<svg class="triad" viewBox="0 0 640 420" role="img" aria-label="Everyone on a villa project has their own role and commercial position. The owner sits at the centre; Eastbridge sits beside the owner, coordinating for the owner.">']
     for x, y, *_ in nodes:
         g.append(f'<path class="edge" d="M320 200 L{x} {y}"/>')
     g.append('<path class="edge-eb" d="M320 254 L320 300"/>')
@@ -107,7 +107,7 @@ def home(posts, post_cards, stages_html, svc_img):
     door_html = "".join(f'<a class="door" href="/services/{s}/">{pic(img, "", "(max-width:900px) 100vw, 33vw")}<div><h3>{esc(t)}</h3><p>{esc(d)}</p><span class="go">How we help</span></div></a>' for s, t, d, img in doors)
     owers = PROJ["owers-house"]
     faqs = [
-     ("What does a client-side project manager do?", "We manage your villa build or renovation on your behalf. We set the budget and programme with you, help you compare and choose the consultant and contractor you appoint, check the design against the budget, monitor cost, programme and quality, review payments and variations before you pay, and lead handover."),
+     ("What does a client-side project manager do?", "We manage your villa build or renovation from your side. We set the budget and programme with you, help you compare and choose the consultant and contractor you appoint, check the design against the budget, monitor cost, programme and quality, review payments and variations before you pay, and lead handover."),
      ("Why not leave it to the architect or the contractor?", "A properly appointed consultant has real duties for the design, approvals and statutory supervision, and the contractor is responsible for building to the contract. Each also has its own commercial position, and neither is usually appointed to coordinate the whole project and test every price, payment and claim from your side. That independent coordination and commercial scrutiny is what we add. <a href=\"/why-a-client-side-project-manager/\">Why client-side matters</a>."),
      ("Do you replace the registered consultant?", "No. Your villa needs a registered consultant for the statutory design, permit submissions and supervision duties. We help you choose them and work alongside them and the contractor, so that what is delivered matches what you agreed to pay for."),
      ("Can you guarantee the budget or the completion date?", "No one can honestly guarantee either on a construction project. What we provide are controls that bring problems to light early: a cost plan and a monthly cost-to-complete, programme monitoring, payment review against work done, variations priced before you instruct them, a decision log and records kept from the first day."),
@@ -118,7 +118,7 @@ def home(posts, post_cards, stages_html, svc_img):
 <section class="hero" aria-labelledby="hero-h"><div class="slides">{slides}</div>
 {B.hero_video_html()}<div class="wrap"><span class="kicker">Client-side project management · Dubai and Abu Dhabi</span>
 <h1 id="hero-h">Your villa, managed from your side of the table.</h1>
-<p class="lede">An independent project manager for villa builds and renovations. We set the budget and programme with you, help you choose the team, review every payment and claim, and keep the decisions in your hands. Led personally by Philip Chapman.</p>
+<p class="lede">For a one-off villa, one person on your side reviews every drawing, quote, payment and variation, attends site every week as agreed in your scope, and travels with you to source stone, joinery, lighting and fittings. Led personally by Philip Chapman.</p>
 <div class="actions"><a class="btn" href="/contact/">{esc(B.CTA_LABEL)}</a><a class="btn btn--ghost" href="/why-a-client-side-project-manager/">Why client-side matters</a></div></div>
 <p class="hero-meta">Homes built by P Chapman Construction, founded by Philip Chapman.</p><span class="scroll-cue" aria-hidden="true"></span></section>
 
@@ -126,13 +126,13 @@ def home(posts, post_cards, stages_html, svc_img):
 <figure class="portrait">{pic("philip-chapman-01", "Philip Chapman, Founding Partner of Eastbridge Strategic Partners", "(max-width:900px) 100vw, 42vw", cls="reveal")}</figure>
 <div><span class="kicker">Who leads your project</span><h2 id="founder-h">Philip Chapman, Founding Partner</h2>
 <p>Philip founded P Chapman Construction and led it for 21 years, growing it into a premium UK contractor with an annual turnover of around £17 million. Houses the company built have won a RIBA South West Award (Owers House, 2016, also featured on Channel 4's Grand Designs) and LABC Building Excellence Awards (<a href="{LABC_2018_URL}" rel="noopener">a 2018 win</a> and <a href="{LABC_2020_URL}" rel="noopener">a 2020 Highly Commended</a>).</p>
-<p class="muted">He knows how a contractor prices a job, where variations come from and how delay claims are built. In Dubai and Abu Dhabi he puts that knowledge to work for the owner, fairly, and leads each Eastbridge appointment personally.</p>
+<p class="muted">On the high-end houses P Chapman Construction built, he reviewed everything for the client, was on site every week and travelled with owners to choose their materials. He knows how a contractor prices a job, where variations come from and how delay claims are built. In Dubai and Abu Dhabi he puts that knowledge to work for the owner, fairly, and leads each Eastbridge appointment personally.</p>
 <p><a class="link" href="/about/">About Philip and Eastbridge</a></p></div>
 </div></section>
 
 <section class="section stone" aria-labelledby="what-h"><div class="wrap">
 <div class="head-row"><h2 id="what-h">Three ways we help</h2>
-<p class="lede">A client-side project manager, also called an owner's representative, does not design or build. We work alongside your registered consultant and your contractor, adding independent cost, programme and commercial control on your behalf.</p></div>
+<p class="lede">A client-side project manager, also called an owner's representative, does not design or build. We work alongside your registered consultant and your contractor, adding independent cost, programme and commercial control from your side.</p></div>
 <div class="doors">{door_html}</div>
 <p style="margin-top:30px"><a class="link" href="/services/">All services</a> &nbsp; <a class="link" href="/approach/">How a project runs</a></p>
 </div></section>
@@ -153,7 +153,8 @@ def home(posts, post_cards, stages_html, svc_img):
 </div></section>
 
 <section class="section--tight" aria-labelledby="hfaq-h"><div class="wrap split"><div><h2 id="hfaq-h">Questions owners ask</h2>
-<p class="muted" style="margin-top:1em"><a class="link" href="/faq/">More questions</a> &nbsp; <a class="link" href="/insights/">Insights</a> &nbsp; <a class="link" href="/guides/villa-owner-checklist/">Owner's checklist</a> &nbsp; <a class="link" href="/areas/">Where we work</a></p></div>{B.faq_html(faqs)}</div></section>
+<p class="muted" style="margin-top:1em"><a class="link" href="/faq/">More questions</a> &nbsp; <a class="link" href="/insights/">Insights</a> &nbsp; <a class="link" href="/guides/villa-owner-checklist/">Owner's checklist</a> &nbsp; <a class="link" href="/areas/">Where we work</a></p>
+<p class="muted small">{esc(C.COVERAGE)}</p></div>{B.faq_html(faqs)}</div></section>
 {B.cta_band("Tell us about the house you want to build.", image="sea-glass-house-08")}'''
     B.page("/", "Villa Project Management Dubai | Client-Side Project Manager",
            "Client-side project management for villa builds and renovations in Dubai and Abu Dhabi, led by Philip Chapman, founder of a UK builder of award-winning homes.",

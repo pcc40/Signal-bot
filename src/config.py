@@ -32,6 +32,11 @@ NAME = "Eastbridge Strategic Partners"
 SHORT = "Eastbridge"
 LEGAL = "Eastbridge Strategic Partners L.L.C-FZ"
 LICENCE = "Meydan Free Zone licence 2540153.01"
+LICENCE_NO = LICENCE.rsplit(" ", 1)[-1]
+# Coverage policy (owner's direction, 1 November 2026). The area pages are examples, not limits. Worded as a
+# policy: never as a claim of existing or past clients or overseas projects.
+COVERAGE = ("We cover every community in Dubai and Abu Dhabi. "
+            "For clients we represent, we can also support their projects outside the UAE.")
 ADDRESS = {
     "street": "Business Centre, Meydan Grandstand, 6th Floor, Meydan Road",
     "locality": "Nad Al Sheba, Dubai",

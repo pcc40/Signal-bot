@@ -4,6 +4,7 @@ from email.utils import format_datetime
 import build as B
 import config as C
 from content.services import SERVICES, BY_SLUG as SVC
+import content.services as SV
 from content.areas import AREAS, BY_SLUG as AREA
 from content.projects import PROJECTS, BY_SLUG as PROJ
 
@@ -52,6 +53,7 @@ SVC_IMG = {
  "variations-delays-and-claims": ("trelowen-01", ["trelowen-02", "trelowen-07", "trelowen-04"], "trelowen"),
  "stalled-project-rescue": ("esplanade-road-01", ["esplanade-road-06", "esplanade-road-02", "esplanade-road-04"], "esplanade-road"),
  "snagging-and-handover": ("ansells-01", ["ansells-02", "ansells-08", "ansells-03"], "ansells"),
+ "materials-and-specialist-sourcing": ("morvoren-01", ["morvoren-02", "morvoren-03", "morvoren-05"], "morvoren"),
  "overseas-owners": ("blue-seas-02", ["blue-seas-01", "blue-seas-03", "blue-seas-11"], "blue-seas"),
  "development-advisory": ("three-mile-beach-01", ["three-mile-beach-02", "three-mile-beach-03", "three-mile-beach-10"], "three-mile-beach"),
 }
@@ -124,6 +126,32 @@ def services_hub():
            "Owner's representation, villa builds, renovations, plot reviews, cost control, site reports, claims, snagging and handover in Dubai and Abu Dhabi.",
            body, crumbs, schema)
 
+# ---------------------------------------------------------------- alongside a design-and-build contractor
+# Competitor brief 1.7: for owners already talking to an integrated firm. General terms only; no firm is named.
+ALONGSIDE_ROWS = [
+ ("Who checks the quote?", "You, usually on the headline number", "You; the firm prices its own design", "Your consultant, where it is in their scope", "We review it with you, line by line, before you sign"),
+ ("Who checks variations?", "The contractor prices them; you decide", "The firm that designed the change prices it", "Your consultant, where it is in their scope", "We test each one against the contract before you instruct it"),
+ ("Who checks payments?", "You, from the contractor's application", "You, from the firm's application", "Your consultant, under the terms of their appointment", "We review every application against the work on site and recommend before you pay"),
+ ("Who checks quality?", "The contractor's own site team, and your registered consultant's statutory inspections", "The firm's own team and its in-house reviewer", "Your registered consultant, under their statutory duties", "We observe and record from your side; your registered consultant keeps the statutory duties"),
+ ("Who do you call?", "The contractor", "The firm's project manager, who reports to the firm", "The consultant or the contractor, depending on the issue", "Philip, who works only for you"),
+]
+
+ALONGSIDE_H = "Already talking to a design-and-build firm?"
+
+def alongside_html(split=False):
+    """split=True: the section for /independence/ (heading in the left column); otherwise a block for a prose column."""
+    head = "".join(f"<th scope=\"col\">{esc(h)}</th>" for h in ("", "Contractor-led", "Design-and-build", "Consultant-led", "Client-side project manager"))
+    rows = "".join("<tr>" + f"<th scope=\"row\">{esc(r[0])}</th>" + "".join(f"<td>{esc(c)}</td>" for c in r[1:]) + "</tr>" for r in ALONGSIDE_ROWS)
+    more = B.insight_link("design-build-vs-separate-architect-villa", "Design-and-build or a separate architect for your villa?", " Read more: ", ".")
+    h = f'<h2 id="alongside">{esc(ALONGSIDE_H)}</h2>'
+    body = f'''<p>Integrated design-and-build firms do some things well: one contract, one point of contact, and no gap between designer and builder for a problem to fall into. For many owners that is a sensible route. What it does not give you is a check from your side. The firm's in-house project manager may be very capable, but reports to the firm's owner, and the firm's margin sits inside the price that person is checking.</p>
+<p>A client-side project manager can sit alongside your design-and-build contractor rather than replace it. We review payment applications and variations for you, run or benchmark the tender so the price is tested before you sign, keep the decision log, and advise you when things go wrong. You keep the single contract and gain someone on your side of it.{more}</p>
+<div class="table-wrap"><table aria-describedby="alongside-note"><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>
+<p class="small muted" id="alongside-note">Who checks what under four common arrangements. Typical positions only: every appointment and contract differs.</p>'''
+    if split:
+        return f'<section class="section"><div class="wrap split"><div>{h}</div><div class="prose">{body}</div></div></section>'
+    return h + body
+
 def service_page(s):
     path = f"/services/{s['slug']}/"
     crumbs = [("Home", "/"), ("Services", "/services/"), (s["short"], path)]
@@ -135,13 +163,15 @@ def service_page(s):
     area_p = f'<p class="muted small">Often needed in {area_links}.</p>' if areas else ""
     ban, strip, pslug = SVC_IMG[s["slug"]]
     pj = PROJ[pslug]
+    alongside = alongside_html() if s.get("alongside") else ""
+    read_more = B.insight_link(*s["insight"], before="<p>Read more: ", after=".</p>") if s.get("insight") else ""
     body = B.banner(crumbs, esc(s["h1"]), esc(s["lede"]), ban, credit_of(ban)) + f'''
 <section class="section"><div class="wrap split">
 <div class="side-sticky"><dl class="facts"><div><dt>Stage</dt><dd>{esc(s["stage"])}</dd></div><div><dt>Who it's for</dt><dd>Private villa owners and investors</dd></div><div><dt>Where</dt><dd>Dubai and Abu Dhabi</dd></div></dl>{area_p}
 <figure>{pic(strip[0], proj_of(strip[0])["name"], "(max-width:900px) 100vw, 40vw")}<figcaption>{esc(credit_of(strip[0]))}</figcaption></figure></div>
 <div class="prose">{s["intro"]}
 <h2>What we do</h2><ul>{does}</ul>
-<h2>What you receive</h2><ul>{gets}</ul></div>
+<h2>What you receive</h2><ul>{gets}</ul>{alongside}{read_more}</div>
 </div></section>
 <section class="section--tight"><div class="wrap">{strip_html([ban] + strip[1:])}</div></section>
 <section class="section dark"><div class="wrap feature">
@@ -270,6 +300,10 @@ def project_page(p):
 def approach():
     crumbs = [("Home", "/"), ("How we work", "/approach/")]
     body = B.banner(crumbs, "How we work", "One programme, one budget, one decision log, and an independent firm on your side, working alongside your consultant and contractor.", "polgreen-manor-07", credit_of("polgreen-manor-07")) + f'''
+<section class="section" id="one-off"><div class="wrap split"><div><h2>One person on your side of a one-off villa</h2></div><div class="prose">
+<p>{esc(SV.ONE_OFF_STORY)}</p>
+<p>{esc(SV.UK_RECORD)} We bring the same way of working to villas in Dubai and Abu Dhabi, alongside your registered consultant and your contractor.</p>
+<p>See <a href="/services/owners-representative/">owner's representation</a> and <a href="/services/materials-and-specialist-sourcing/">materials and specialist sourcing</a>.</p></div></div></section>
 <section class="section dark"><div class="wrap">{stages_html()}</div></section>
 <section class="section"><div class="wrap split"><div><h2>The rhythm of a project</h2></div><div class="prose">
 <p>Every project runs to the same rhythm, because rhythm is what keeps a two-year build under control.</p>
@@ -292,7 +326,7 @@ def approach():
 <p>Read more in <a href="/insights/owners-representative-vs-project-manager-vs-consultant/">owner's representative vs project manager vs consultant</a>.</p></div></div></section>
 <section class="section" id="uae-appointments"><div class="wrap split"><div><h2>How an appointment works in the UAE</h2><p class="muted">What you can expect from us on a villa in Dubai or Abu Dhabi, and where our role stops.</p></div><div class="prose">
 <h3>Who leads your project</h3><p>Our founder, Philip Chapman, leads every Eastbridge appointment personally, supported by a team of three project managers who attend site and provide cover when he is unavailable. Philip is the person you speak to from the first conversation to handover. Capacity is confirmed before an appointment is accepted.</p>
-<h3>Site attendance and reporting</h3><p>How often we attend site, which meetings we attend on your behalf and the reports you receive are agreed in writing in the scope of each appointment, before work starts. Attendance follows the stage of the project: typically weekly during active construction, and more often at key stages such as waterproofing, first fix and pre-handover. Agreeing this up front means the time committed to your project is clear from the start.</p>
+<h3>Site attendance and reporting</h3><p>How often we attend site, which meetings we attend for you and the reports you receive are agreed in writing in the scope of each appointment, before work starts. Attendance follows the stage of the project: typically weekly during active construction, and more often at key stages such as waterproofing, first fix and pre-handover. Agreeing this up front means the time committed to your project is clear from the start.</p>
 <h3>Consultants, quantity surveyors, engineers and specialists</h3><p>Where the project needs a registered consultant, a quantity surveyor, an engineer or another specialist, you appoint them and pay them directly. We help you define what is needed, compare proposals like-for-like and choose. We take no commission or referral fee from any of them, and money never passes through us.</p>
 <h3>What we do, and what we don't</h3>
 <p>We provide commercial and project management on your side of the table: the brief, budget and programme, cost reporting, review of payments and variations, commercial and contractual advice, client-side site visits and reporting, decision and issues logs, and handover.</p>
@@ -325,6 +359,7 @@ def independence():
 <p>When the person checking the contractor's invoices also earns a referral fee from that contractor, the check is not independent. When a design-and-build company's in-house project manager reports to the same owner as the builders, the check is not independent. When a consultant reviews the cost of a design they produced, the check is not independent.</p>
 <p>None of these arrangements is necessarily dishonest. They are simply not independent. If you want an independent check, it has to come from someone with no other stake in the project.</p>
 <p>Read more: <a href="/fees/">how our fees work</a>, <a href="/approach/">how we work</a> and <a href="/why-a-client-side-project-manager/">why appoint a client-side project manager</a>.</p></div></div></section>
+{alongside_html(split=True)}
 {B.cta_band()}'''
     B.page("/independence/", "Independence Pledge: No Contractor Commissions | Eastbridge",
            "Eastbridge is paid only by the client. No commissions, referral fees or rebates from contractors, consultants or suppliers. We don't build and we don't design.",
@@ -400,6 +435,17 @@ def about():
     from content.projects import RECOGNITION, TESTIMONIALS, recognition_html
     import pages_new
     rec = recognition_html(RECOGNITION)
+    # Career timeline: only facts already published on the site (WRITING_BRIEF.md, projects.RECOGNITION).
+    # The founding year of P Chapman Construction and the licence date are not recorded, so they are not shown.
+    timeline = "".join(f"<tr><td>{w}</td><td>{t}</td></tr>" for w, t in [
+        ("Before Eastbridge", "Philip founded P Chapman Construction, a premium residential contractor in the UK, and led it for 21 years, growing it to an annual turnover of around £17 million at its peak."),
+        ("2014", "Owers House, built by P Chapman Construction, was completed. It was featured on Channel 4's Grand Designs and reported in The Times."),
+        ("2016", "Owers House won a RIBA South West Award."),
+        ("2018", "The Old Station Master's House, Fowey, built by P Chapman Construction, won Best Small New Housing Development in the LABC Building Excellence Awards South West."),
+        ("2020", "Polgreen Manor, built by P Chapman Construction, was Highly Commended, Best Extension or Alteration to an Existing Dwelling, LABC South West."),
+        ("Now", f"Philip leads {esc(C.LEGAL)}, {esc(C.LICENCE)}, working only for the owner, never the builder."),
+    ])
+    record = "".join(f"<div><dt>{t}</dt><dd>{d}</dd></div>" for t, d in B.on_record_items() + [("Where we work", esc(C.COVERAGE))])
     body = B.banner(crumbs, "About Eastbridge", "A client-side practice built on 21 years running a £17m-turnover premium building company whose houses won RIBA and LABC recognition.", "owers-house-04", credit_of("owers-house-04")) + f'''
 <section class="section" id="founder"><div class="wrap feature">
 <figure class="portrait">{pic("philip-chapman-01", "Philip Chapman, Founding Partner of Eastbridge Strategic Partners", "(max-width:900px) 100vw, 42vw")}</figure>
@@ -410,24 +456,29 @@ def about():
 <p>In Dubai and Abu Dhabi, Philip works on the other side of the table: for the owner, never the builder. He leads every Eastbridge appointment personally, supported by a team of three project managers who attend site and provide cover when he is unavailable, and he is the person you speak to from the first conversation to handover.</p>
 <p>Away from work he is a high-altitude mountaineer, which may explain a fondness for planning, contingency and getting everyone home safely.</p>
 </div></div></div></section>
+<section class="section stone" id="one-off"><div class="wrap split"><div><h2>One person on your side, plot to keys</h2></div><div class="prose">
+<p>{esc(SV.ONE_OFF_STORY)}</p>
+<p>{esc(SV.UK_RECORD)} That is the service Eastbridge offers owners of one-off villas in Dubai and Abu Dhabi, alongside the registered consultant and the contractor they appoint. Snagging and handover are one stage of it, not a separate product.</p>
+<p><a href="/services/owners-representative/">Owner's representation</a> · <a href="/services/materials-and-specialist-sourcing/">Materials and specialist sourcing</a> · <a href="/approach/">How we work</a></p></div></div></section>
 <section class="section--tight" id="recognition"><div class="wrap"><div class="kpis kpis--text">{rec}</div></div></section>
+<section class="section" id="timeline"><div class="wrap split"><div><h2>Career timeline</h2><p class="muted">Awards belong to the houses and the teams that designed and built them.</p></div><div class="prose table-wrap">
+<table><thead><tr><th scope="col">When</th><th scope="col">What</th></tr></thead><tbody>{timeline}</tbody></table></div></div></section>
 <section class="section band-dark"><div class="wrap"><div class="head-row"><h2>What clients said about the work</h2><p class="muted">Clients of P Chapman Construction.</p></div>{pages_new.quotes_html(TESTIMONIALS[:3])}</div></section>
 <section class="section stone"><div class="wrap split"><div><h2>Why the client's side</h2></div><div class="prose">
 <p>Dubai and Abu Dhabi are building some of the most ambitious private homes in the world. The owners commissioning them are often busy, frequently abroad and rarely builders themselves. The market around them is full of capable firms, but few that act only for the owner and take nothing from anyone else.</p>
 <p>That is the gap we fill. We bring the builder's knowledge to the owner's side, and we keep it there. <a href="/why-a-client-side-project-manager/">Why it matters</a>.</p></div></div></section>
-<section class="section"><div class="wrap split"><div><h2>Plainly stated</h2></div><div class="prose">
+<section class="section" id="on-the-record"><div class="wrap split"><div><h2>On the record</h2><p class="muted">Who we are, in plain terms.</p></div><div>
+<dl class="facts">{record}</dl>
+<p class="small" style="margin-top:1.2em">Our <a href="/independence/">independence pledge</a> is written into every appointment.</p></div></div></section>
+<section class="section paper" id="who"><div class="wrap split"><div><h2>Who you'll deal with</h2></div><div class="prose">
 <ul>
-<li>We are {esc(C.LEGAL)}, licensed in the Meydan Free Zone, Dubai ({esc(C.LICENCE.split("licence ")[-1])}).</li>
-<li>We are a client-side project manager and owner's representative. We are not a contractor, an engineering consultancy, a law firm or an estate agency.</li>
-<li>We are paid only by the owner we represent. See our <a href="/independence/">independence pledge</a>.</li>
-</ul></div></div></section>
-<section class="section paper"><div class="wrap split"><div><h2>Working with us in the UAE</h2></div><div class="prose">
-<ul>
-<li>Philip leads every appointment personally, supported by a team of three project managers who attend site and provide cover when he is unavailable. Capacity is confirmed before an appointment is accepted.</li>
-<li>Site attendance and reporting are agreed in writing in the scope of each appointment, before work starts.</li>
-<li>Registered consultants, quantity surveyors, engineers and other specialists are appointed and paid by you directly when the project needs them. We help you compare proposals and choose.</li>
-<li>Our role is commercial and project management on your side. Statutory design, authority submissions and supervision stay with your registered consultant, and legal advice with your UAE-qualified lawyer.</li>
+<li><strong>Philip leads.</strong> Philip leads every appointment personally and is the person you speak to from the first conversation to handover. Messages by WhatsApp, phone or email reach him, and he replies personally within one working day.</li>
+<li><strong>Three project managers on site.</strong> A team of three project managers supports him. They attend site and provide cover when he is unavailable. Capacity is confirmed before an appointment is accepted.</li>
+<li><strong>Site attendance agreed in writing.</strong> How often we attend site and what we report are agreed in the scope of each appointment, before work starts.</li>
+<li><strong>Specialists appointed and paid by you.</strong> Where the project needs a DM-registered consultant, a quantity surveyor, a lawyer or another specialist, you appoint and pay them directly. We help you define what is needed, compare proposals and choose, and we take no commission or referral fee from any of them.</li>
+<li><strong>Where our role stops.</strong> Our role is commercial and project management on your side. Statutory design, authority submissions and supervision stay with your registered consultant, and legal advice with your UAE-qualified lawyer.</li>
 </ul>
+<p><strong>We never publish a client's name, address or photographs without written consent.</strong></p>
 <p>More detail in <a href="/approach/#uae-appointments">how an appointment works in the UAE</a> and <a href="/fees/">how our fees work</a>.</p></div></div></section>
 {B.cta_band()}'''
     B.page("/about/", "About Eastbridge and Founder Philip Chapman | Dubai",
@@ -450,6 +501,7 @@ FAQ_ALL = [
  ("What does it cost to build a villa in Dubai?", "Published 2025–26 guides put construction at roughly AED 300–500 per sq ft for a standard villa, AED 900–1,400 for luxury, and AED 1,200 and above for ultra-luxury, before land, design fees, approvals, interiors and landscaping. See our <a href=\"/insights/villa-construction-cost-dubai/\">full cost guide</a>."),
  ("How long does it take?", "Market guides put plot to keys at roughly 12 to 24 months, and 24 to 36 months for custom luxury villas. See <a href=\"/insights/how-to-build-a-villa-in-dubai/\">how to build a villa in Dubai</a>."),
  ("Do you work in Abu Dhabi?", "Yes. We represent owners in Dubai and Abu Dhabi, always alongside a locally registered consultant of record."),
+ ("Which areas do you cover?", f"{C.COVERAGE} Our <a href=\"/areas/\">area pages</a> are examples of communities we know well, not a limit on where we work."),
  ("Can you help if my project has already started?", "Yes. We can join at any stage, including projects that have stalled or are in dispute. See <a href=\"/services/stalled-project-rescue/\">stalled project rescue</a>."),
  ("Can you work for me if I live in the UK?", "Yes. Many Dubai villa owners live overseas. We report weekly in a format you can read on your phone, and bring you every decision that matters. See <a href=\"/services/overseas-owners/\">owners living overseas</a>."),
  ("Do you speak Arabic?", "We work in English. Arabic-speaking clients are very welcome to bring an interpreter or adviser to any meeting."),
@@ -488,6 +540,7 @@ def contact():
 <p class="contact-actions"><a class="btn" href="{B.wa_link()}" rel="noopener">Message us on WhatsApp</a><a class="btn btn--ghost" href="tel:{C.PHONE_E164}">Call {C.PHONE_DISPLAY}</a></p>
 <p>Email <a href="mailto:{C.EMAIL}">{C.EMAIL}</a></p>
 <p class="muted small">{esc(C.HOURS)}. UK and European clients are welcome to arrange calls in their own time zone.</p>
+<p class="muted small">{esc(C.COVERAGE)}</p>
 <h2 class="h-sm">What happens next</h2>
 {B.steps_html(next_steps, "steps steps--compact")}
 <p class="small"><a class="link" href="/fees/">How fees work</a></p>

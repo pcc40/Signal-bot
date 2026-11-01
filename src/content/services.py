@@ -1,7 +1,14 @@
 """Service pages. Wording follows the compliance rules: Eastbridge represents the owner and works alongside the
 owner's registered consultant and contractor. It does not supervise as consultant of record, submit permits,
 prepare tender documents, prequalify contractors or certify anything."""
-from config import FEES as _FEES, PUBLISH_FEES as _SHOW
+from config import FEES as _FEES, PUBLISH_FEES as _SHOW, COVERAGE as _COVERAGE
+
+# The full-service, one-off villa story (competitor brief 2.0). P Chapman Construction's record is the evidence.
+ONE_OFF_STORY = ("For a truly one-off villa, one person on your side does the work with you. We review every drawing, quote, "
+                 "payment and variation, attend site every week as agreed in your scope of works, and travel with you to "
+                 "source stone, joinery, lighting and fittings.")
+UK_RECORD = ("It is how Philip worked with clients on the high-end houses P Chapman Construction built in the UK over "
+             "21 years: everything reviewed, a weekly presence on site, and sourcing trips with the owner.")
 
 def _fee(key, text, fallback=""):
     """A published fee sentence when PUBLISH_FEES is on; otherwise the fallback (no figure)."""
@@ -18,14 +25,18 @@ SERVICES = [
   "lede": "Your consultant is responsible for the design and its statutory duties. Your contractor is responsible for building it. We represent you, from the plot to the day you move in.",
   "image": "quay-house-01",
   "stage": "From the first budget to the end of the defects period",
-  "intro": """<p>A private villa in Dubai brings together a master developer, a permitting authority, a registered consultant, a main contractor, a dozen specialist subcontractors and an interior designer. Each of them has real duties and each has their own commercial position. What is often missing is someone appointed to coordinate the whole project and look at every price, payment and decision from the owner's side.</p>
+  "intro": f"""<p>A private villa in Dubai brings together a master developer, a permitting authority, a registered consultant, a main contractor, a dozen specialist subcontractors and an interior designer. Each of them has real duties and each has their own commercial position. What is often missing is someone appointed to coordinate the whole project and look at every price, payment and decision from the owner's side.</p>
+<p><strong>{ONE_OFF_STORY}</strong> {UK_RECORD} <a href="/services/materials-and-specialist-sourcing/">Materials and specialist sourcing</a>.</p>
 <p>That is the role we fill. We sit beside you, set the budget and programme with you, help you appoint the right consultant and contractor, then work alongside them to keep the project to what was agreed until handover. Philip spent 21 years running a building company whose houses have won RIBA and LABC recognition, so we know how a tender is priced, where variations come from and how delay claims are assembled. That knowledge now works for you.</p>
-<p>Philip leads every appointment personally, supported by a team of three project managers who attend site and provide cover when he is unavailable. How often we attend site and what we report are agreed in writing in your appointment before work starts, and capacity is confirmed before an appointment is accepted. Where the project needs a quantity surveyor, an engineer or another specialist, you appoint and pay them directly, and we help you compare proposals and choose. Our role is commercial and project management on your side; statutory design, authority submissions and supervision stay with your registered consultant. <a href="/approach/#uae-appointments">How an appointment works in the UAE</a>.</p>""",
+<p>Philip leads every appointment personally, supported by a team of three project managers who attend site and provide cover when he is unavailable. How often we attend site and what we report are agreed in writing in your appointment before work starts, and capacity is confirmed before an appointment is accepted. Where the project needs a quantity surveyor, an engineer or another specialist, you appoint and pay them directly, and we help you compare proposals and choose. Our role is commercial and project management on your side; statutory design, authority submissions and supervision stay with your registered consultant. <a href="/approach/#uae-appointments">How an appointment works in the UAE</a>.</p>
+<p>{_COVERAGE}</p>""",
+  "alongside": True,
   "does": [
    "Set a realistic budget, programme and brief before any design money is spent",
    "Help you choose and appoint a registered consultant and a main contractor, and agree fair terms with each",
    "Run the decision log, so every choice you make is recorded with its cost and time effect",
-   "Visit site on your behalf and report progress, quality and risks in plain English",
+   "Attend site for you and report progress, quality and risks in plain English",
+   "Travel with you to source stone, joinery, lighting and fittings, and check what arrives against what you chose",
    "Review every payment application and variation before you pay it",
    "Deal with disagreements early, on the facts, before they become formal claims",
    "Lead snagging, handover documents and the defects period",
@@ -283,6 +294,46 @@ SERVICES = [
   "related": ["overseas-owners", "cost-and-programme-control", "snagging-and-handover"],
  },
  {
+  "slug": "materials-and-specialist-sourcing",
+  "short": "Materials and specialist sourcing",
+  "name": "Materials and specialist sourcing with the owner",
+  "title": "Villa Materials and Specialist Sourcing Dubai | Eastbridge",
+  "description": "Sourcing stone, joinery, lighting and fittings for a one-off villa in Dubai or Abu Dhabi: trips with you, samples, lead times, shipping and checks on arrival.",
+  "h1": "Choosing the materials that make a one-off villa, with someone on your side",
+  "lede": "Stone, joinery, lighting and fittings decide how a one-off villa looks and feels. We travel with you to choose them, then make sure what arrives on site is what you chose, on time for the programme.",
+  "image": "morvoren-01",
+  "stage": "Design, procurement and construction",
+  "insight": ("sourcing-materials-abroad-dubai-villa", "Sourcing materials abroad for a Dubai villa"),
+  "intro": f"""<p>On a truly one-off villa, the materials are where the owner's taste shows: a particular stone, a joinery workshop, a lighting designer's fittings, taps and ironmongery chosen piece by piece. They are also where programmes slip and budgets leak. Samples are approved without a reference, lead times are guessed, shipping and customs are left to the last month, and the delivery that arrives is not quite what was chosen.</p>
+<p>{ONE_OFF_STORY} {UK_RECORD}</p>
+<p>We plan sourcing around your programme and budget, travel with you to quarries, workshops and showrooms when a choice needs to be made in person, and keep a record of every sample and decision. When the goods arrive, we check them against what you chose before they are fixed. We take no commission, referral fee or discount from any supplier, so the recommendation you receive is about the material, not the margin.</p>
+<p>You buy from the supplier directly or through your contractor, as your contract sets out; money never passes through us. Who orders, receives, stores, insures and fits each owner-supplied item is agreed with your contractor in writing before anything is ordered. Sourcing trips are agreed in your scope of works before they are booked.</p>""",
+  "does": [
+   "Sourcing trips with you to quarries, workshops, showrooms and makers, when a choice needs to be made in person",
+   "Samples and reference panels logged, labelled and kept, so every later delivery is checked against what you approved",
+   "Lead times confirmed with each supplier and set against the construction programme, with order-by dates",
+   "Shipping and UAE customs clearance timing planned with the supplier, the freight forwarder and your contractor",
+   "Owner-supplied items agreed with your contractor: who orders, receives, stores, insures and fits each one",
+   "Deliveries checked on arrival against the approved sample, specification and quantity, before anything is fixed",
+   "No supplier commissions, referral fees or discounts: the only fee on your project is the one you pay us",
+  ],
+  "gets": [
+   "A sourcing schedule: each item, its supplier, lead time, order-by date and delivery window",
+   "A sample record with photographs and the decision you made on each",
+   "A note after each sourcing trip with what was chosen, prices quoted and the next steps",
+   "A delivery check note for every consignment, with any shortfall or damage raised at once",
+  ],
+  "builder_view": "As the builder, the late items on a high-end house were rarely the structure. They were the stone that had to come from one quarry, the joinery made abroad and the light fittings on a long lead time. The owners who travelled with us to choose them, and who signed off a reference sample we kept on site, got what they wanted, when the programme needed it.",
+  "faqs": [
+   ("Will you travel with me to choose stone, joinery and fittings?", "Yes, where a choice needs to be made in person. Sourcing trips are planned around your programme and agreed in your scope of works before they are booked. Where a decision can be made from samples, we arrange the samples instead."),
+   ("Do you take commission from suppliers?", "No. We take no commission, referral fee or discount from any supplier, consultant or contractor. Our only income on your project is the fee you pay us."),
+   ("Who pays the supplier and who imports the goods?", "You buy from the supplier directly or through your contractor, as your contract sets out, and money never passes through us. Shipping and customs clearance are handled by the supplier, a freight forwarder or your contractor; we plan the timing with them so the goods arrive when the programme needs them."),
+   ("How do you check what arrives?", "Against the approved sample, the specification and the order: material, finish, size, quantity and condition. Anything that does not match is recorded and raised with the supplier or contractor before it is fixed."),
+   ("Do you keep a list of approved suppliers?", "No. We help you find and compare suppliers for the material you want, and you choose. We have no approved-supplier list and no supplier arrangements."),
+  ],
+  "related": ["owners-representative", "cost-and-programme-control", "overseas-owners"],
+ },
+ {
   "slug": "variations-delays-and-claims",
   "short": "Variations, delays and claims",
   "name": "Variations, delays and construction claims advice",
@@ -390,8 +441,9 @@ SERVICES = [
   "lede": "Many villa owners are not in Dubai most of the time. The project still needs decisions every week. We bring them to you with the information and a recommendation, so that nothing is decided without you.",
   "image": "menwinnion-01",
   "stage": "The whole project",
-  "intro": """<p>Absentee owners are the most exposed clients in construction. Decisions are made on site because the owner isn't there. Payments are approved from a photograph. Small problems are reported late because nobody wants to deliver bad news by phone. By the time the owner visits, the project has drifted.</p>
-<p>Philip is British and spent 21 years building award-winning homes for demanding owners, many of whom lived away from site, so we know how British and European owners expect a project to be run and reported. We represent you on the ground in Dubai, report in a form you can read in five minutes, and bring you every decision that matters with a clear recommendation.</p>""",
+  "intro": f"""<p>Absentee owners are the most exposed clients in construction. Decisions are made on site because the owner isn't there. Payments are approved from a photograph. Small problems are reported late because nobody wants to deliver bad news by phone. By the time the owner visits, the project has drifted.</p>
+<p>Philip is British and spent 21 years building award-winning homes for demanding owners, many of whom lived away from site, so we know how British and European owners expect a project to be run and reported. We represent you on the ground in Dubai, report in a form you can read in five minutes, and bring you every decision that matters with a clear recommendation.</p>
+<p>{_COVERAGE}</p>""",
   "does": [
    "Representation on site and in meetings in your absence",
    "Weekly photo updates and a monthly written report",

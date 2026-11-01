@@ -563,6 +563,14 @@ body.has-hero .site-head:not(.stuck) .btn{background:#fff;color:var(--ink);borde
 .foot-grid ul{list-style:none;padding:0;margin:0}
 .foot-grid li{margin-bottom:9px}
 .site-foot .logo{color:#fff;margin-bottom:20px}
+.on-record{border-top:1px solid var(--line-dark);margin-top:56px;padding-top:24px;display:grid;grid-template-columns:auto 1fr;gap:12px clamp(24px,4vw,56px);align-items:baseline}
+.on-record h3{font-family:var(--sans);font-size:var(--s--2);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin:0}
+.on-record dl{display:flex;flex-wrap:wrap;gap:10px clamp(20px,3vw,40px);margin:0;font-size:.8rem;line-height:1.5}
+.on-record dt{color:#97A09C;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase}
+.on-record dd{margin:2px 0 0;color:#C2C8C5}
+@media (max-width:760px){.on-record{grid-template-columns:1fr}.on-record dl{display:grid;grid-template-columns:1fr 1fr}}
+@media (max-width:420px){.on-record dl{grid-template-columns:1fr}}
+.on-record + .legal{margin-top:24px}
 .legal{border-top:1px solid var(--line-dark);margin-top:56px;padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;color:#97A09C;font-size:.76rem}
 @media (max-width:900px){.foot-top{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.foot-grid{grid-template-columns:1fr}}
