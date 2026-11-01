@@ -186,6 +186,16 @@ async function runScenarios(p, kind, label) {
     const back = await p.evaluate(() => document.querySelector('[name="area"]').value);
     if (same && area === '557' && back === '6000') ok(`${label} rr: sq ft <-> m² keeps every total (6,000 sq ft = ${area} m²)`);
     else { good = false; fail(`${label} rr: unit switch changes the estimate or the area (${area}, back ${back})`); }
+    // The renovation output is labelled as an area-based whole-villa refurbishment estimate, with a pointer before it.
+    if (label === 'en') {
+      const lb = await p.evaluate(() => {
+        const ptr = document.querySelector('#tool-out .tool-reno-pointer'), card = document.querySelector('#tool-out .tool-card');
+        return { ptr: !!ptr && !!ptr.querySelector('a[href$="/tools/villa-build-cost-calculator/"]') && !!(ptr.compareDocumentPosition(card) & Node.DOCUMENT_POSITION_FOLLOWING),
+                 card: card ? card.querySelector('.calc-label').textContent : '' };
+      });
+      if (lb.ptr && /whole-villa refurbishment estimate \(area-based\)/.test(lb.card)) ok(`${label} rr: renovation labelled as an area-based refurbishment estimate, pointer before the result`);
+      else { good = false; fail(`${label} rr: renovation label or pointer missing (pointer ${lb.ptr}, card "${lb.card}")`); }
+    }
     await setInputs(p, { scope: 'lux' });
     const l = await numbers(p);
     if (l.state === 'low-only') ok(`${label} rr: luxury renovation shows a starting figure only`); else { good = false; fail(`${label} rr: luxury renovation state ${l.state}`); }

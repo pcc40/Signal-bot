@@ -337,8 +337,9 @@ def rr_out(e):
     d = e["nb"]["total"][1] - e["rn"]["total"][1]
     return f'''<div class="calc-out" id="tool-out">
 {print_head("Renovate or rebuild: indicative comparison")}
+<p class="calc-note tool-reno-pointer">The renovation figure here is a whole-villa refurbishment estimate that scales with the existing floor area. The renovation options in our <a href="{PT.CALC_PATH}">cost calculator</a> are fixed typical interior refresh examples that do not use floor area, so for a large villa they read lower.</p>
 <div class="tool-compare">
-<div class="tool-card"><p class="calc-label">Renovate, likely total</p><p class="calc-total"><b data-out="rn-likely">{aed(e["rn"]["total"][1])}</b>
+<div class="tool-card"><p class="calc-label">Renovate: whole-villa refurbishment estimate (area-based), likely total</p><p class="calc-total"><b data-out="rn-likely">{aed(e["rn"]["total"][1])}</b>
 <span class="calc-range">Range <span data-out="rn-low">{aed(e["rn"]["total"][0])}</span> to <span data-out="rn-high">{aed(e["rn"]["total"][2])}</span></span></p>
 <p class="calc-sub" data-out="rn-rate">{RR_MSG["cardRate-sqft"].format(rate=rate_txt(e["rn"]["rate"][1]))}</p></div>
 <div class="tool-card"><p class="calc-label">Knock down and rebuild, likely total</p><p class="calc-total"><b data-out="nb-likely">{aed(e["nb"]["total"][1])}</b>
@@ -347,7 +348,7 @@ def rr_out(e):
 </div>
 <p class="tool-verdict" data-out="verdict" aria-live="polite">{rr_verdict(e)}</p>
 <p class="calc-reviewed">Rates last reviewed: {PT.month_year(PT.RATES_REVIEWED)}, by {esc(C.FOUNDER["name"])}</p>
-<h3 class="calc-h tool-h-side">Renovate</h3>
+<h3 class="calc-h tool-h-side">Renovate (area-based refurbishment)</h3>
 {rr_table("rn", RR_RENO_LINES, e, "Renovation")}
 <h3 class="calc-h tool-h-side">Knock down and rebuild</h3>
 {rr_table("nb", RR_NEW_LINES, e, "Knock down and rebuild")}

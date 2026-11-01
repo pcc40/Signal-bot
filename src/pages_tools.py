@@ -86,8 +86,8 @@ RATES = {
     # structural changes, extensions or complete redesign six months or longer.
     "reno": {
         # "soft": False = no design fees or approvals allowance (cosmetic work rarely needs drawings or a permit).
-        "standard": {"label": "Basic refresh: painting, flooring, small upgrades", "cost": [200000, 300000], "months": [2, 3], "soft": False},
-        "premium": {"label": "Mid-range: kitchens, bathrooms and interiors", "cost": [400000, 800000], "months": [4, 6]},
+        "standard": {"label": "Typical interior refresh example, basic: painting, flooring, small upgrades (whole-villa band, area not used)", "cost": [200000, 300000], "months": [2, 3], "soft": False},
+        "premium": {"label": "Typical interior refresh example, mid-range: kitchens, bathrooms and interiors (whole-villa band, area not used)", "cost": [400000, 800000], "months": [4, 6]},
         "luxury": {"label": "Luxury: premium materials and structural changes", "cost": [1000000, None], "months": [6, None]},
         # The guide publishes no separate ultra-luxury band, so it is treated exactly as luxury.
         "ultra": {"label": "Ultra-luxury: no separate published band, treated as luxury", "cost": [1000000, None], "months": [6, None]},
@@ -422,6 +422,7 @@ def results_html(e, embed=False):
     sources = f'{CALC_PATH}#sources" target="_blank" rel="noopener' if embed else "#sources"
     return f'''<div class="calc-out" id="calc-out">
 {"" if embed else print_head()}
+<p class="calc-note calc-reno-pointer" data-reno-pointer hidden>Renovation here gives typical whole-villa examples, such as an interior refresh, which do not change with floor area. For a whole-villa refurbishment estimate based on your villa’s size, use our <a href="/tools/renovate-or-rebuild/"{' target="_blank" rel="noopener"' if embed else ""}>renovate-or-rebuild tool</a>, which is area-based.</p>
 <p class="calc-label">Indicative total, including soft costs</p>
 <p class="calc-total" aria-live="polite" aria-atomic="true"><span class="sr" data-sr>Likely total: </span><b data-out="likely">{aed(e["total"][1])}</b>
 <span class="calc-range">Range <span data-out="low">{aed(e["total"][0])}</span> to <span data-out="high">{aed(e["total"][2])}{hi_sfx}</span></span></p>
@@ -475,7 +476,7 @@ def form_html():
 <p class="hint" id="c-area-hint" data-area-typical>For scale, Optimal Engineering's budget examples use about 3,000 sq ft for a compact villa, 5,000 sq ft for a mid-range villa and 10,000 sq ft or more for a luxury villa.{cite("opt")}</p>
 <p class="hint" id="c-area-fixed" data-area-fixed hidden>Renovation figures are whole-villa scope examples from a published guide. They do not change with floor area, so the area is not used for them.</p></div>
 <fieldset><legend>Specification</legend><div class="calc-tiers">{tiers}</div>
-<p class="hint is-off" data-reno-hint>For renovations, the specification selects a whole-villa scope example from a published guide, not a rate per square foot. The examples do not change with floor area, so they can read low for a large or older villa, and luxury shows only a starting figure. Pool and landscaping are added on top of the band, and a basic refresh carries no design fees or approvals allowance.</p></fieldset>
+<p class="hint is-off" data-reno-hint>For renovations, the specification selects a whole-villa scope example from a published guide, not a rate per square foot: basic and mid-range are typical interior refresh examples. For a whole-villa refurbishment estimate by size, use our <a href="/tools/renovate-or-rebuild/">renovate-or-rebuild tool</a> (area-based). The examples do not change with floor area, so they can read low for a large or older villa, and luxury shows only a starting figure. Pool and landscaping are added on top of the band, and a basic refresh carries no design fees or approvals allowance.</p></fieldset>
 <fieldset><legend>Extras</legend>
 <div class="calc-row"><div data-new-only><label for="c-base">Basement area (<span data-unit>sq ft</span>)</label><input id="c-base" name="basement" type="number" inputmode="numeric" min="0" step="50" value="0"></div>
 <div><label for="c-garden">Landscaped garden (<span data-unit>sq ft</span>)</label><input id="c-garden" name="garden" type="number" inputmode="numeric" min="0" step="50" value="{EXAMPLE["garden"]}"></div></div>

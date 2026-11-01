@@ -144,6 +144,7 @@
     Object.keys(hints).forEach(function (a) { var h = f.querySelector('[' + a + ']'); show(h, hints[a]); if (h && hints[a] && h.id) desc.push(h.id); });
     areaEl.setAttribute('aria-describedby', desc.join(' '));
     show(q('[data-reno-assess]'), reno);
+    show(q('[data-reno-pointer]'), reno);
 
     Object.keys(R.tiers).forEach(function (k) {
       var el = f.querySelector('[data-tier-note="' + k + '"]');

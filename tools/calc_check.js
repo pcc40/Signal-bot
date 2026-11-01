@@ -214,6 +214,22 @@ async function englishChecks(p) {
     if (r1.areaDisabled && r2.areaDisabled && r1.likely === r2.likely && r1.assess) ok(`renovation ${tier}: area disabled, not used, assessment prompt shown`);
     else fail(`renovation ${tier}: area handling wrong (disabled ${r1.areaDisabled}/${r2.areaDisabled}, ${r1.likely} vs ${r2.likely}, assess ${r1.assess})`);
   }
+  // The two renovation journeys: band options read as typical interior refresh examples, and a pointer to the
+  // area-based renovate-or-rebuild tool is shown before the result in renovation mode only.
+  const pointer = () => p.evaluate(() => {
+    const el = document.querySelector('[data-reno-pointer]'), out = document.getElementById('calc-out');
+    const vis = !!el && !el.hidden && !!(el.offsetWidth || el.offsetHeight);
+    const before = !!el && !!(el.compareDocumentPosition(out.querySelector('.calc-total')) & Node.DOCUMENT_POSITION_FOLLOWING);
+    return { vis, before, link: !!(el && el.querySelector('a[href$="/tools/renovate-or-rebuild/"]')),
+             notes: ['standard', 'premium'].map(k => (document.querySelector(`[data-tier-note="${k}"]`) || {}).textContent || '') };
+  });
+  await setInputs(p, { mode: 'reno', tier: 'premium' });
+  const rp = await pointer();
+  await setInputs(p, { mode: 'new' });
+  const np = await pointer();
+  if (rp.vis && rp.before && rp.link && !np.vis && rp.notes.every(t => /typical interior refresh example/i.test(t) && /area not used/i.test(t)))
+    ok('renovation: band options read as typical interior refresh examples; pointer to the area-based tool shown before the result');
+  else fail(`renovation pointer/labels wrong (reno visible ${rp.vis}, before ${rp.before}, link ${rp.link}, new visible ${np.vis}, notes ${JSON.stringify(rp.notes)})`);
   for (const tier of ['luxury', 'ultra']) {
     await setInputs(p, { mode: 'reno', tier });
     const lx = await snapshot(p);
