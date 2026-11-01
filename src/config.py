@@ -25,7 +25,7 @@ HERO_VIDEO_VIMEO_ID = "219974514"
 # that scope is quoted before it starts. "range" + " " + "basis" reads as one phrase, e.g. "AED 9,500–15,000 per review".
 FEES = {
     "review": {"name": "Review", "range": "AED 9,500–15,000", "basis": "per review"},
-    "part": {"name": "Part service", "range": "from AED 28,000", "basis": "a month"},
+    "part": {"name": "Part service", "range": "a monthly fee", "basis": "agreed in the written scope"},  # no published minimum (owner, 1 Nov 2026)
     "full": {"name": "Full service", "range": "typically 1.75–3%", "basis": "of build cost", "pct": (1.75, 3.0)},
 }
 

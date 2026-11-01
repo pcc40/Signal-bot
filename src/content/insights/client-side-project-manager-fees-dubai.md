@@ -12,7 +12,7 @@ keypoints:
   - "Compare proposals against a written scope of works, not against a headline rate."
 faqs:
   - q: "How much does a client-side project manager cost for a Dubai villa?"
-    a: "There is no published Dubai benchmark, and fees depend on the scope. Eastbridge publishes ranges by level of input: a review costs AED 9,500 to 15,000, part service starts from AED 28,000 a month, and full service is typically 1.75% to 3% of build cost. The exact fee is agreed in a written scope of works after a free first call."
+    a: "There is no published Dubai benchmark, and fees depend on the scope. Eastbridge publishes ranges by level of input: a review costs AED 9,500 to 15,000, part service is a monthly fee agreed in the written scope, and full service is typically 1.75% to 3% of build cost. The exact fee is agreed in a written scope of works after a free first call."
   - q: "Is a percentage fee better than a monthly fee?"
     a: "Neither is better in every case. A percentage suits a well-defined build and ties the fee to the size of the job; a monthly fee suits a project whose length or scope is uncertain. RICS guidance notes that a percentage of construction cost becomes less reliable as complexity increases, so check what each model does if the cost or programme changes."
   - q: "Does a project manager's fee go up if the contractor overruns?"
@@ -113,7 +113,7 @@ Agree this before anything goes wrong. Overruns come in two forms, cost and time
 
 **Cost overruns.** A percentage applied to the final cost rises with it. As an illustration only, using our published full-service range: on a build of AED 12 million, a fee of 2.5% is AED 300,000. If the final cost rises by 10% to AED 13.2 million, the same fee applied to the final cost becomes AED 330,000. Applied to the accepted tender, it stays at AED 300,000. Neither is wrong, but you should know which you have signed.
 
-**Time overruns.** A monthly fee rises with every extra month. At our published starting rate of AED 28,000 a month, a four-month delay adds at least AED 112,000. Percentage fees can also extend in practice, because a firm that has priced eighteen months of attendance will reasonably ask to be paid for twenty-four.
+**Time overruns.** A monthly fee rises with every extra month: a four-month delay adds four months of fees. Percentage fees can also extend in practice, because a firm that has priced eighteen months of attendance will reasonably ask to be paid for twenty-four.
 
 The FIDIC White Book shows how a standard form handles this. Clause 4.4 of the 2017 edition gives the consultant additional fees for "delay, impediment or prevention caused or attributable to the Client" and to "the Client's other consultants, contractors, or other third parties" ([Beale & Co, via ACE](https://www.acenet.co.uk/news/affiliate/prolongation-and-fair-recourse-for-consultants/)). In plain terms, a contractor's delay can increase your project manager's fee. That is fair, because the extra months are real work, but it should be visible and priced in advance.
 
@@ -149,7 +149,7 @@ Every one-off villa is different, so we do not publish a day rate, an hourly rat
 | Level | What it covers | Range |
 |---|---|---|
 | Review | A plot, design, contractor-quote or stalled-project review, with a written report | AED 9,500–15,000 per review |
-| Part service | Cost, contract and payment reviews and monthly reporting, without regular site presence | From AED 28,000 a month |
+| Part service | Cost, contract and payment reviews and monthly reporting, without regular site presence | A monthly fee agreed in the written scope |
 | Full service | Representation from brief to handover, with site attendance, every review, and sourcing trips with you (travel at cost) | Typically 1.75–3% of build cost |
 
 Where a fee sits within its range depends on how often we attend site, how much sourcing travel is involved, the complexity of the design and the length of the programme. The details, including what each level includes, are on our [fees page](/fees/).

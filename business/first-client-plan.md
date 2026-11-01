@@ -199,7 +199,7 @@ The first yes is easiest when the offer is small, fixed, fast and easy to explai
 | **Second-opinion budget review** | Profile C, or any owner with a budget that feels wrong | Review the consultant's or contractor's estimate against cited market ranges and our experience; where the money is likely to leak; contingency advice | 6–8 page note and a 45-minute call | 5 working days (proposed) | AED 7,500 (PROPOSED – owner to confirm) | AED 5,500 (PROPOSED) |
 | **Stalled project rescue review** | Profile A | Site visit, document review (contract, payments, variations, programme, correspondence); independent factual view of where the project stands; options and a recovery plan for the owner and their lawyer | Written report and a 90-minute meeting | Start within a week; full picture within 2–3 weeks (as on the site) | AED 15,000 (PROPOSED – owner to confirm) | AED 12,000 (PROPOSED) |
 
-**Full appointment after a review (PROPOSED – owner to confirm before use):** monthly from AED 28,000 or 1.75%–3% of construction cost, as proposed in config FEES.
+**Full appointment after a review (PROPOSED – owner to confirm before use):** part service at a monthly fee agreed in the written scope (no published minimum), or full service at typically 1.75–3% of build cost, as in config FEES.
 
 ### The founding-client offer (honest version)
 

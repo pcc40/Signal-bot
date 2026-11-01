@@ -131,7 +131,7 @@ Each description stays within the brief's wording. Paste one per service.
 12. **Representation for overseas owners**: For owners living in the UK or elsewhere: a named person in the UAE, regular honest reporting, and no decision made without you.
 13. **Development advisory**: For small developers and investors: plot-to-sale villa projects, small residential schemes and build-to-rent, with a developer-builder's discipline on numbers and delivery.
 
-Fees are published on /fees/ (`PUBLISH_FEES = True`, approved 31 October 2026): plot review AED 9,500; project health check AED 15,000; representation from AED 28,000 a month or 1.75%–3% of construction cost; the final quotation is confirmed in writing after the free call. Follow each platform's own rules on prices in descriptions. Never name any architect P Chapman Construction built for in public copy.
+Fees are published on /fees/ (`PUBLISH_FEES = True`, approved 31 October 2026): reviews AED 9,500–15,000 per review; part service at a monthly fee agreed in the written scope (no published minimum); full service typically 1.75–3% of build cost; no day rate, hourly rate or fixed price; the final quotation is confirmed in writing after the free call. Follow each platform's own rules on prices in descriptions. Never name any architect P Chapman Construction built for in public copy.
 
 ### 1.5 Questions and answers (10 pairs)
 
