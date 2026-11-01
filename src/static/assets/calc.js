@@ -373,7 +373,10 @@
     set('currency', cur);
   }
 
+  // Embed page: "Open this estimate in the full calculator" carries the inputs, so the full page opens on the same estimate.
+  var full = q('[data-full-link]');
   function share() {
+    if (full) full.href = full.href.split('?')[0] + '?' + query();
     if (wa) wa.href = 'https://wa.me/' + (wa.href.match(/wa\.me\/(\d+)/) || [0, ''])[1] + '?text=' + encodeURIComponent(waText());
     printInputs();
     fillSend();
@@ -408,6 +411,27 @@
   }
   window.addEventListener('beforeprint', printInputs);
   if (sendF) sendF.addEventListener('submit', function () { fillSend(); if (window.gtag) gtag('event', 'generate_lead', { form: 'estimate' }); });
+
+  /* ---------- "Add this calculator to your website" (full page): embed code in the page's language, Copy code ---------- */
+  var ec = document.querySelector('[data-embed-code]'), ecb = document.querySelector('[data-embed-copy]'),
+      ecs = document.querySelector('[data-embed-status]'), ep = document.querySelector('[data-embed-preview]');
+  if (ec && ep) {
+    // The preview link is localised by the i18n pipeline (/ru/..., /zh/...), so it gives this language's embed path.
+    var epath = ep.pathname || '';
+    if (/\/embed\/$/.test(epath)) ec.value = ec.value.replace(/src="[^"]*"/, 'src="' + ec.getAttribute('data-site') + epath + '"');
+  }
+  function sayEmbed(t) { if (ecs) ecs.textContent = t; }
+  if (ec && ecb) ecb.addEventListener('click', function () {
+    function fallback() {
+      ec.focus(); ec.select();
+      var okc = false;
+      try { okc = document.execCommand('copy'); } catch (e) { okc = false; }
+      sayEmbed(msg(okc ? 'embedCopied' : 'embedCopyFail'));
+    }
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(ec.value).then(function () { sayEmbed(msg('embedCopied')); }, fallback);
+    else fallback();
+    if (window.gtag) gtag('event', 'share', { method: 'embed_code', content_type: 'calculator' });
+  });
 
   /* ---------- events ---------- */
   function onInput(ev) {

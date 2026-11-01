@@ -23,7 +23,14 @@ for f in files:
     for j in re.findall(r'<script type="application/ld\+json">(.*?)</script>', s, re.S):
         try: json.loads(j)
         except Exception as e: errors.append(f"bad JSON-LD on {rel}: {e}")
-    if "noindex" in s and "404" not in rel and "thanks" not in rel: warns.append(f"noindex on {rel}")
+    # noindex is expected on 404, thank-you pages and the embeddable calculator (/embed/, canonical to the full page)
+    if "noindex" in s and "404" not in rel and "thanks" not in rel and "/embed/" not in rel: warns.append(f"noindex on {rel}")
+    if "/embed/" in rel:
+        if 'content="noindex' not in s: errors.append(f"embed page without noindex: {rel}")
+        if re.search(r'<a (?![^>]*target="_blank")[^>]*href=', s): errors.append(f"embed page link that would open inside the iframe: {rel}")
+        if 'class="site-head"' in s or 'class="site-foot"' in s: errors.append(f"embed page carries the site header or footer: {rel}")
+        can = re.search(r'<link [^>]*rel="canonical"[^>]*href="([^"]+)"', s) or re.search(r'<link [^>]*href="([^"]+)"[^>]*rel="canonical"', s)
+        if not can or "/embed/" in can.group(1): errors.append(f"embed page must be canonical to the full calculator: {rel}")
     t = re.search(r"<title>(.*?)</title>", s); d = re.search(r'<meta (?=[^>]*name="description")[^>]*content="(.*?)"', s)
     if not t or not d: errors.append(f"missing title/description on {rel}"); continue
     t, d = html.unescape(t.group(1)), html.unescape(d.group(1))
@@ -51,6 +58,11 @@ for k, v in titles.items():
     elif len(v) > 1: warns.append(f"title not yet translated on {[r for l, r in v if l != 'en']}")
 for k, v in descs.items():
     if len(v) > 1: warns.append(f"duplicate description on {v}")
+try:
+    sm_text = open(os.path.join(D, "sitemap.xml"), encoding="utf-8").read()
+    if "/embed/" in sm_text: errors.append("sitemap.xml lists an embed page (they are noindex)")
+except OSError:
+    pass
 
 # ---------------------------------------------------------------- structure, schema, media, machine files
 sys.path.insert(0, os.path.join(ROOT, "src"))

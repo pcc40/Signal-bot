@@ -56,7 +56,8 @@ SOURCES = [
     ("Streamlined permit process for minor works (Abu Dhabi Department of Municipalities and Transport)", "https://www.dmt.gov.ae/en/Media-Centre/News/DMT-Unveils-Streamlined-Permit-Process-for-Minor-Works"),
     ("Decennial liability in the UAE: a commentary (Al Tamimi)", "https://www.tamimi.com/law-update-articles/decennial-liability-in-the-uae-a-commentary/"),
     ("PCFC newsletter, issue 37: Trakhees services (Ports, Customs and Free Zone Corporation)", "https://pcfc.ae/en/Publications%20Files/PCFC%20Newsletter-Issue%2037.pdf"),
-    ("Villa build cost calculator (Real Estate Club Dubai)", "https://realestateclubdubai.com/tools/villa-build-cost-calculator"),
+    ("Construction cost in Dubai (Engel & Völkers, December 2025)", "https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai"),
+    ("Cost to build a villa in Dubai, 2026 guide (Optimal Engineering Consultants)", "https://www.optimal.ae/blog/cost-to-build-a-villa-in-dubai"),
     ("Owner's representative vs project manager in the UAE (PRASOON, citing Turner & Townsend)", "https://prasoon.design/insights/owners-representative-vs-project-manager-uae"),
 ]
 
@@ -101,7 +102,7 @@ GLOSSARY = [
   "d": "In Dubai, the engineering consultancy the owner appoints to design the villa, apply for approvals and, where appointed to, oversee the works and administer the contract. Under Dubai Law No. 14 of 2025, only consultancies registered with Dubai Municipality may practise or present themselves as engineering consultants, including in free zones. Eastbridge is not a consultancy: we represent the owner, alongside the owner's DM-registered consultant.",
   "links": L("i:roles", "s:select"), "see": ["owners-representative", "contract-administration", "dm"]},
  {"term": "Contingency", "id": "contingency",
-  "d": "Money set aside in the owner's budget for the unknown: ground conditions, design changes, price rises and decisions not yet made. Real Estate Club Dubai suggests 10 to 15 per cent for villa builds. Keep the contingency in the owner's budget, not hidden in the contractor's price, and track every draw on it. A contingency that is spent by the time the frame is up is an early warning.",
+  "d": "Money set aside in the owner's budget for the unknown: ground conditions, design changes, price rises and decisions not yet made. Engel & Völkers and Optimal Engineering both put it at 10 to 15 per cent for villa builds. Keep the contingency in the owner's budget, not hidden in the contractor's price, and track every draw on it. A contingency that is spent by the time the frame is up is an early warning.",
   "links": L("s:cost", "i:cost", "i:reno"), "see": ["provisional-sum", "variation", "value-engineering"]},
  {"term": "Contract administration", "id": "contract-administration",
   "d": "Running the building contract day to day: issuing instructions, valuing payments, assessing variations and delay claims, and recording completion. The contract names who does this, often the owner's consultant or engineer. Most villa disputes come from contracts that nobody administered properly, not from bad contracts. Eastbridge advises the owner on commercial and contractual matters alongside whoever holds that role.",

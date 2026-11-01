@@ -10,12 +10,16 @@
 [functions]
   directory = "netlify/functions"
 
+# Framing: X-Frame-Options SAMEORIGIN and CSP frame-ancestors 'self' are NOT set here. build.py write_headers()
+# generates dist/_headers with those two headers for every page except the embeddable calculator
+# (/tools/villa-build-cost-calculator/embed/ in each language), which gets "frame-ancestors *" instead.
+# Netlify does not document which value wins when two matching rules set the same header, so the anti-framing
+# rule must never match the embed path; a /* rule here would. Check with: curl -sI <url> | grep -i frame
 [[headers]]
   for = "/*"
   [headers.values]
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    X-Frame-Options = "SAMEORIGIN"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
 

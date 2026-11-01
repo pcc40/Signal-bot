@@ -809,6 +809,35 @@ sup a{text-decoration:none;color:var(--brass);font-size:.75em;margin-right:1px}
 .calc-send{scroll-margin-top:84px}
 .calc-send .form{max-width:none}
 .calc-send__privacy b{color:var(--ink)}
+/* "Add this calculator to your website" (full page) */
+.calc-embed__label{display:block;font-size:var(--s--1);font-weight:600;margin:1.4em 0 8px}
+.calc-embed__code{display:block;width:100%;box-sizing:border-box;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.78rem;line-height:1.5;color:var(--ink);background:var(--stone);border:1px solid #A7ACAA;border-radius:0;padding:12px 14px;resize:vertical;direction:ltr ;text-align:start}
+.calc-embed__code:focus-visible{outline:2px solid var(--brass);outline-offset:1px}
+.calc-embed__row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin:14px 0 0}
+/* Embeddable calculator (/tools/villa-build-cost-calculator/embed/): calculator only, compact, inside other sites' iframes */
+body.bare{background:#fff;padding-bottom:0}
+.embed{padding-top:clamp(14px,2.4vw,24px);padding-bottom:clamp(14px,2.4vw,24px);--gutter:clamp(12px,2.6vw,24px)}
+.embed__head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 20px;padding-bottom:12px;margin-bottom:18px;border-bottom:1px solid var(--line)}
+.embed__title{font-size:var(--s-2);margin:0;line-height:1.1}
+.embed__by{margin:0;font-size:var(--s--1)}
+.embed__by a{font-weight:500;text-decoration:none;border-bottom:1px solid var(--brass);padding-bottom:1px}
+.calc--embed{gap:24px}
+@media (min-width:720px){.calc--embed{gap:clamp(20px,3vw,36px)}}
+@media (min-width:720px){.calc--embed{grid-template-columns:minmax(0,4fr) minmax(0,6fr)}}
+.calc--embed .calc-in{gap:16px}
+.calc--embed .calc-in .hint.is-off,.calc--embed [data-loc-hint]{display:none}
+.calc--embed .calc-in input[type=number],.calc--embed .calc-in select{min-height:44px;padding:8px 12px}
+.calc--embed .calc-seg span{padding:8px 16px;min-height:40px}
+.calc--embed .calc-table th,.calc--embed .calc-table td{padding:.42em .6em;font-size:.8rem;line-height:1.35}
+.calc--embed .cb-legend{margin-bottom:14px}
+.calc--embed .calc-time li{padding:.3em 0;font-size:.84rem}
+.calc--embed .calc-sub{margin-bottom:14px}
+.calc--embed .calc-out{padding:clamp(16px,2.4vw,26px)}
+.calc--embed .calc-total b{font-size:var(--s-3)}
+.calc--embed .calc-tiers{grid-template-columns:1fr 1fr}
+.calc--embed .calc-opt>span{min-height:0;padding:10px 12px}
+.calc-actions--embed .calc-note{margin:10px 0 0}
+.embed__foot{font-size:.78rem;color:var(--ink-soft);margin:16px 0 0;padding-top:10px;border-top:1px solid var(--line)}
 .print-only{display:none}
 @media print{
   @page{size:A4;margin:11mm 14mm 10mm}
