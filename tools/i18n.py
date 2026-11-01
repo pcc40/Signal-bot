@@ -202,10 +202,14 @@ def switcher(path, cur):
     return f'<nav class="langs" aria-label="Language" translate="no"><ul>{items}</ul></nav>'
 
 def add_alternates(soup, path):
+    """Five-language hreflang set. build.py leaves hreflang out of noindex and bare pages (thanks pages,
+    the embeddable calculator); those pages get none here either."""
     head = soup.head
-    for l in soup.find_all("link", rel="alternate"):
-        if l.get("hreflang"):
-            l.decompose()
+    old = [l for l in soup.find_all("link", rel="alternate") if l.get("hreflang")]
+    if not old:
+        return
+    for l in old:
+        l.decompose()
     for l in ALL:
         t = soup.new_tag("link", rel="alternate", href=C.SITE_URL + lang_url(path, l))
         t["hreflang"] = "en" if l == "en" else LANGS[l][1]

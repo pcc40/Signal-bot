@@ -2,7 +2,7 @@
 title: "Renovating a Palm Jumeirah villa: approvals and budget traps"
 description: "How a Palm Jumeirah villa renovation runs: Nakheel NOC, then the authority permit, the right sequence, hidden defects in older villas and realistic budgets."
 date: 2026-10-28
-updated: 2026-10-29
+updated: 2026-11-01
 category: "Renovation"
 keypoints:
   - "On Palm Jumeirah the Nakheel NOC comes first; the building permit follows from Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits."
@@ -28,8 +28,10 @@ sources:
     url: "https://www.dm.gov.ae/dubai-launches-single-window-for-building-permits/"
   - title: "Build in Dubai platform"
     url: "https://buildindubai.gov.ae/"
-  - title: "Real Estate Club Dubai: villa build cost calculator"
-    url: "https://realestateclubdubai.com/tools/villa-build-cost-calculator"
+  - title: "Optimal Engineering: Cost to build a villa in Dubai (pool and contingency figures)"
+    url: "https://www.optimal.ae/blog/cost-to-build-a-villa-in-dubai"
+  - title: "Engel & Völkers: Construction cost in Dubai (contingency)"
+    url: "https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai"
   - title: "Turner & Townsend preliminaries and Currie & Brown inflation, cited by PRASOON"
     url: "https://prasoon.design/insights/owners-representative-vs-project-manager-uae"
 ---
@@ -95,7 +97,7 @@ Wind-borne salt attacks external metalwork, fixings, balustrades, window frames,
 
 ### The pool
 
-Pools on older villas commonly have leaking shells, failed tiling and outdated plant. A pool is a structure, and a rebuild sits firmly in the approvals column. One published Dubai cost guide puts new pool construction at AED 80k–250k, which is a useful reality check if the pool is on your list.
+Pools on older villas commonly have leaking shells, failed tiling and outdated plant. A pool is a structure, and a rebuild sits firmly in the approvals column. Optimal Engineering puts a new pool at AED 80k–120k for basic fibreglass and AED 150k–250k for standard concrete, which is a useful reality check if the pool is on your list.
 
 On the contractor's side, the first thing we priced on any refurbishment of an older coastal house was the risk in the envelope. Interiors are predictable. Roofs, basements and anything facing the sea are not, and an honest contractor will tell you so.
 
@@ -113,7 +115,7 @@ The table below uses one published Dubai renovation guide. These are broad bands
 
 A full refurbishment of a Palm villa, with new services, waterproofing, kitchen, bathrooms, joinery and external works, will usually sit well inside the luxury band. Three further allowances are worth carrying from the start:
 
-- **Contingency.** One Dubai cost guide recommends 10–15% on new builds. For a renovation of an older villa, in our experience you should sit at the top of that range or above until the opening-up survey is done.
+- **Contingency.** Engel & Völkers and Optimal Engineering both put it at 10–15% on new builds. For a renovation of an older villa, in our experience you should sit at the top of that range or above until the opening-up survey is done.
 - **Preliminaries.** Turner & Townsend put contractor preliminaries in Dubai at 12–14% (cited by PRASOON). On a renovation in an occupied community, site set-up, protection, access restrictions and waste removal are real costs, and they should be visible in the bid.
 - **Inflation.** Currie & Brown forecast UAE construction cost inflation of around 3% for 2026 (cited by PRASOON). On a long design and approvals period, that matters.
 

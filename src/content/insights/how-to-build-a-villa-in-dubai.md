@@ -2,17 +2,17 @@
 title: "How to build a villa in Dubai: plot to keys, step by step"
 description: "The stages of building a villa in Dubai, from plot checks to handover: who does what, how long each step takes, and which late decisions cost owners the most."
 date: 2026-10-29
-updated: 2026-10-31
+updated: 2026-11-01
 category: "Process"
 keypoints:
-  - "A custom villa in Dubai typically takes 12–24 months from plot to keys, and 24–36 months for custom luxury, according to Real Estate Club Dubai."
+  - "A custom villa in Dubai typically takes 12–24 months from plot to keys, and 24–36 months for custom luxury, according to a property information website."
   - "The sequence is plot checks, brief and budget, design, master-developer and authority approvals, contractor selection, construction, completion and handover."
   - "Permits run through Dubai's unified e-window, via Dubai Municipality, Trakhees or the Dubai Development Authority depending on where your plot sits."
   - "Your registered consultant designs and submits; your contractor builds; you, the owner, appoint both and make the decisions."
   - "The costliest mistakes are decisions made late: scope, basement, glazing, MEP and finishes changed after pricing or after work has started."
 faqs:
   - q: "How long does it take to build a villa in Dubai?"
-    a: "Real Estate Club Dubai puts design at 3–4 months, approvals at 2–3 months, construction at 8–14 months and snagging at 1–2 months, giving 12–24 months from plot to keys, or 24–36 months for a custom luxury villa."
+    a: "A property information website puts design at 3–4 months, approvals at 2–3 months, construction at 8–14 months and snagging at 1–2 months, giving 12–24 months from plot to keys, or 24–36 months for a custom luxury villa. Engel & Völkers says most villas take 12–24 months from approval to completion."
   - q: "Who applies for the building permit in Dubai?"
     a: "Your registered consultant (or in some cases the contractor) submits drawings and fees online through the unified permit window. The owner appoints the consultant and signs off the design, but does not usually make the technical submission."
   - q: "Do I need the master developer's approval before the authority permit?"
@@ -20,8 +20,10 @@ faqs:
   - q: "Can I build a villa in Dubai while living overseas?"
     a: "Yes, many owners do. It works best when decision-making is planned, with regular reporting and a clear schedule of the choices you need to make and when."
 sources:
-  - title: "Real Estate Club Dubai: Dubai villa architects"
+  - title: "Real Estate Club Dubai (property information website): villa architects and build timelines"
     url: "https://realestateclubdubai.com/dubai-villa-architects"
+  - title: "Engel & Völkers: Construction cost in Dubai (build durations)"
+    url: "https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai"
   - title: "Dubai Municipality: single window for building permits"
     url: "https://www.dm.gov.ae/dubai-launches-single-window-for-building-permits/"
   - title: "Dubai Media Office: Building in Dubai platform"
@@ -45,7 +47,7 @@ sources:
   - title: "Al Tamimi: Dubai law regulating engineering consultancy activities"
     url: "https://www.tamimi.com/news/dubai-issues-new-law-regulating-engineering-consultancy-activities-key-takeaway-points/"
 ---
-To build a villa in Dubai you check the plot, set a brief and budget, appoint a registered consultant to design it, secure master-developer and authority approvals, choose a contractor, build, then complete inspections, connect services and hand over. Real Estate Club Dubai puts the whole journey at 12–24 months from plot to keys, and 24–36 months for a custom luxury villa. The owner appoints every party and makes every key decision; the order in which those decisions are made decides most of the cost.
+To build a villa in Dubai you check the plot, set a brief and budget, appoint a registered consultant to design it, secure master-developer and authority approvals, choose a contractor, build, then complete inspections, connect services and hand over. A [property information website](https://realestateclubdubai.com/dubai-villa-architects) puts the whole journey at 12–24 months from plot to keys, and 24–36 months for a custom luxury villa. The owner appoints every party and makes every key decision; the order in which those decisions are made decides most of the cost.
 
 ## What are the stages of building a villa in Dubai?
 
@@ -62,7 +64,7 @@ The process is well defined. Dubai Municipality's "Building in Dubai" platform, 
 | Completion, snagging and handover | 1–2 months | Contractor, consultant, owner |
 | **Plot to keys** | **12–24 months** (24–36 for custom luxury) | |
 
-Durations without a label are from Real Estate Club Dubai. The others are our own planning allowances and depend heavily on the owner's speed of decision. For a closer look at where those months go, see [how long it takes to build a villa in Dubai](/insights/how-long-to-build-a-villa-dubai/).
+Durations without a label are from a property information website, the only phase-by-phase breakdown we have found published; Engel & Völkers, for comparison, says most villas take 12–24 months from approval to completion. The others are our own planning allowances and depend heavily on the owner's speed of decision. For a closer look at where those months go, see [how long it takes to build a villa in Dubai](/insights/how-long-to-build-a-villa-dubai/).
 
 ## Stage 1: Check the plot before you commit
 

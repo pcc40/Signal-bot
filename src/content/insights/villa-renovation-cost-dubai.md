@@ -2,7 +2,7 @@
 title: "Villa renovation cost in Dubai (2026 guide)"
 description: "Dubai villa renovation costs for 2026: published AED ranges by scope and per sq ft, a worked budget, and the three hidden costs that catch out older villas."
 date: 2026-10-31
-updated: 2026-10-31
+updated: 2026-11-01
 category: "Renovation"
 keypoints:
   - "Smart Renovation's 2026 guide puts Dubai villa renovations at roughly AED 200–300k for basic work (its price breakdown says up to 350k), AED 400–800k for mid-range and over AED 1m for luxury, or about AED 120–450+ per sq ft."
@@ -16,7 +16,7 @@ faqs:
   - q: "What is the cost per square foot to renovate a villa in Dubai?"
     a: "Smart Renovation's 2026 breakdown gives AED 120–250 per sq ft for basic work, AED 250–450 for mid-range and AED 450 or more for luxury. A full refurbishment with new services and waterproofing will normally sit in the upper half of that spread."
   - q: "How much contingency should I hold on a villa renovation?"
-    a: "Real Estate Club Dubai suggests 10–15% on new villa builds. On a renovation of an older villa, in our experience you should sit at 15% or above until the existing building has been properly surveyed and opened up, because the unknowns are greater than on a new build."
+    a: "Engel & Völkers and Optimal Engineering both put contingency at 10–15% on new villa builds. On a renovation of an older villa, in our experience you should sit at 15% or above until the existing building has been properly surveyed and opened up, because the unknowns are greater than on a new build."
   - q: "How long does a villa renovation take in Dubai?"
     a: "Published guides put small interior projects at around two to three months and larger projects with structural changes or extensions at six months or more. Property Finder's table runs from 60–90 days for a townhouse refresh to 150–210 days for structural work on a luxury villa, and approvals come before that."
   - q: "Do I need approval to renovate my villa in Dubai?"
@@ -28,10 +28,10 @@ sources:
     url: "https://smartrenovation.ae/villa-renovation-in-dubai-complete-2026-guide-to-costs-timeline-permits/"
   - title: "Property Finder: Average costs for villa renovation in Dubai (September 2025)"
     url: "https://www.propertyfinder.ae/blog/villa-renovation-dubai/"
-  - title: "Real Estate Club Dubai: Villa build cost calculator"
-    url: "https://realestateclubdubai.com/tools/villa-build-cost-calculator"
-  - title: "Real Estate Club Dubai: Dubai villa architects and engineering"
-    url: "https://realestateclubdubai.com/dubai-villa-architects"
+  - title: "Engel & Völkers: Construction cost in Dubai"
+    url: "https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai"
+  - title: "Optimal Engineering: Cost to build a villa in Dubai"
+    url: "https://www.optimal.ae/blog/cost-to-build-a-villa-in-dubai"
   - title: "PRASOON: Turner & Townsend preliminaries and Currie & Brown inflation forecast"
     url: "https://prasoon.design/insights/owners-representative-vs-project-manager-uae"
   - title: "Dubai Decree No. (45) of 2021 concerning the Dubai Building Code"
@@ -71,9 +71,9 @@ Two cautions. These are averages across very different houses, and a renovation'
 
 Most published figures, and most contractor quotes, cover the building work itself. Outside that, owners usually need to budget for:
 
-- **Design and engineering.** Any renovation that touches structure, layout, services or the façade needs drawings from a DM-registered consultant. Real Estate Club Dubai puts multi-discipline design fees on new villas at 6–12% of construction cost; we use the same range as a guide for a full refurbishment.
+- **Design and engineering.** Any renovation that touches structure, layout, services or the façade needs drawings from a DM-registered consultant. Optimal Engineering puts design and engineering on new villas at 6–12% of the construction contract value; we use the same range as a guide for a full refurbishment.
 - **Approvals.** A master developer NOC where your community has one (see our guide to the [Nakheel NOC for villa renovations](/insights/nakheel-noc-villa-renovation/)), then a permit from Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits. Published fee figures for renovation permits vary widely, so ask your consultant to set out the actual charges for your scope.
-- **Contingency.** Real Estate Club Dubai suggests 10–15% on new builds. A renovation carries more unknowns, not fewer.
+- **Contingency.** Engel & Völkers and Optimal Engineering both put it at 10–15% on new builds. A renovation carries more unknowns, not fewer.
 - **External works.** Smart Renovation puts outdoor, pool and landscaping work at AED 50,000–200,000 combined; a pool rebuild alone can use much of that.
 - **Furniture, AV, lighting control and automation**, which are often outside the main contract.
 - **Living elsewhere.** Rent, storage and removals if you move out for the works.

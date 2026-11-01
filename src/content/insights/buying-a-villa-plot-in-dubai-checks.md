@@ -2,7 +2,7 @@
 title: "Buying a villa plot in Dubai: checks to make before you pay"
 description: "The checks to make before buying a villa plot in Dubai: title, affection plan, design guidelines, build-by deadlines, ground, utilities and build budget."
 date: 2026-10-24
-updated: 2026-10-31
+updated: 2026-11-01
 category: "Plots"
 keypoints:
   - "Read the affection plan and the master developer's design guidelines before you agree a price; they decide what you can actually build."
@@ -22,8 +22,10 @@ faqs:
 sources:
   - title: "Engel & Völkers: construction cost in Dubai"
     url: "https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai"
-  - title: "Real Estate Club Dubai: villa build cost calculator"
-    url: "https://realestateclubdubai.com/tools/villa-build-cost-calculator"
+  - title: "Optimal Engineering: Cost to build a villa in Dubai (authority and connection fees)"
+    url: "https://www.optimal.ae/blog/cost-to-build-a-villa-in-dubai"
+  - title: "Real Estate Club Dubai (property information website): villa architects, FF&E"
+    url: "https://realestateclubdubai.com/dubai-villa-architects"
   - title: "Middle East Construction News: Modon launches residential plots on Hudayriyat Island"
     url: "https://meconstructionnews.com/63729/modon-launches-its-first-residential-plots-community-on-hudayriyat-island"
   - title: "Dubai Municipality: single window for building permits"
@@ -100,7 +102,7 @@ In our experience, foundations and below-ground work are where early budgets mov
 - Is the road access complete and adopted?
 - For newer communities, what is the delivery schedule for infrastructure, and what happens if it slips?
 
-Published guidance puts permits, NOCs and utility connections at roughly AED 25,000 to 75,000, or 2 to 5% of build cost ([Real Estate Club Dubai](https://realestateclubdubai.com/tools/villa-build-cost-calculator)). Treat that as a guide, not a quote.
+[Optimal Engineering](https://www.optimal.ae/blog/cost-to-build-a-villa-in-dubai) puts a permanent DEWA connection at roughly AED 10,000 to 40,000, and authority approvals in total at AED 80,000 to 250,000. Treat that as a guide, not a quote.
 
 ## Neighbouring plots
 
@@ -123,7 +125,7 @@ Published construction-only ranges for Dubai villas, 2025 to 2026, from [Engel &
 | Mid-range | 500–600 | Engel & Völkers |
 | Luxury | 900–1,400 | Engel & Völkers |
 
-On top of construction, add design and engineering (Engel & Völkers quotes AED 50,000 to 150,000 for design, engineering and permits), a contingency (10 to 15% is commonly quoted), pool, landscaping and furniture. At the top end, furniture, fittings and equipment alone are quoted at 30 to 40% on top ([Real Estate Club Dubai](https://realestateclubdubai.com/tools/villa-build-cost-calculator)).
+On top of construction, add design and engineering (Engel & Völkers quotes AED 50,000 to 150,000 for design, engineering and permits), a contingency (Engel & Völkers says 10 to 15% is widely recommended), pool, landscaping and furniture. At the top end, a [property information website](https://realestateclubdubai.com/dubai-villa-architects) quotes furniture, fittings and equipment alone at 30 to 40% on top.
 
 To build a sensible budget:
 

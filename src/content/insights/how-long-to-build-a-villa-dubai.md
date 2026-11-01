@@ -2,26 +2,30 @@
 title: "How long does it take to build a villa in Dubai?"
 description: "A villa in Dubai typically takes 12–24 months from plot to keys, 24–36 for custom luxury. Where the months go, what slows a build and how to shorten it."
 date: 2026-10-31
-updated: 2026-10-31
+updated: 2026-11-01
 category: "Process"
 keypoints:
-  - "Published guidance puts a Dubai villa at 12–24 months from plot to keys, and 24–36 months for a custom luxury villa (Real Estate Club Dubai)."
+  - "Published guidance puts a Dubai villa at 12–24 months from plot to keys, and 24–36 months for a custom luxury villa (a property information website; Engel & Völkers gives 12–24 months from approval to completion)."
   - "Construction itself is typically 8–14 months; design, approvals, contractor selection and handover account for much of the rest."
   - "The building permit is rarely the longest step: master-developer review, rounds of design comments and owner decisions usually take longer than the permit itself."
   - "The summer midday break (12:30–3pm, 15 June to 15 September) reduces productive outdoor hours on site and should be built into the programme."
   - "In our experience, most lost months come from information: late drawings, unmade decisions and long-lead items ordered too late, not from the building work."
 faqs:
   - q: "How long does it take to build a villa in Dubai from start to finish?"
-    a: "Real Estate Club Dubai puts the typical journey at 12–24 months from plot to keys: design 3–4 months, approvals 2–3 months, construction 8–14 months and snagging 1–2 months. A custom luxury villa typically takes 24–36 months."
+    a: "A property information website puts the typical journey at 12–24 months from plot to keys: design 3–4 months, approvals 2–3 months, construction 8–14 months and snagging 1–2 months. A custom luxury villa typically takes 24–36 months. Engel & Völkers says most villas take 12–24 months from approval to completion."
   - q: "Does the summer slow down villa construction in Dubai?"
     a: "It changes how sites work. The UAE midday break bans outdoor work under direct sunlight from 12:30pm to 3pm between 15 June and 15 September, with exemptions such as concrete pours that cannot be interrupted. Contractors adjust shift patterns, but a realistic programme allows for fewer productive outdoor hours in summer."
   - q: "How long does construction take once the contractor starts on site?"
-    a: "Published guidance puts construction at 8–14 months for a villa in Dubai. A large luxury villa with a basement, structural glazing and bespoke finishes will usually sit at or beyond the top of that range."
+    a: "Published guidance puts construction at 8–14 months for a villa in Dubai; Optimal Engineering says typically 12–18 months. A large luxury villa with a basement, structural glazing and bespoke finishes will usually sit at or beyond the top of that range."
   - q: "What is the most common cause of delay on a private villa?"
     a: "In our experience, information rather than labour or materials: drawings issued late, samples left unapproved, finishes chosen after the programme needs them, and design changes made after the permit or after work has started."
 sources:
-  - title: "Real Estate Club Dubai: Dubai villa architects"
+  - title: "Real Estate Club Dubai (property information website): villa architects and build timelines"
     url: "https://realestateclubdubai.com/dubai-villa-architects"
+  - title: "Engel & Völkers: Construction cost in Dubai (build durations)"
+    url: "https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai"
+  - title: "Optimal Engineering: Cost to build a villa in Dubai (approval and construction durations)"
+    url: "https://www.optimal.ae/blog/cost-to-build-a-villa-in-dubai"
   - title: "Dubai Municipality: residential building permit procedures"
     url: "https://dmpmedia.dm.gov.ae/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf"
   - title: "Dubai Municipality: single window for building permits"
@@ -37,7 +41,7 @@ sources:
   - title: "PRASOON: Owner's representative vs project manager in the UAE"
     url: "https://prasoon.design/insights/owners-representative-vs-project-manager-uae"
 ---
-A custom villa in Dubai typically takes 12–24 months from plot to keys, and 24–36 months for a custom luxury villa, according to Real Estate Club Dubai. Construction itself is usually 8–14 months; the rest goes on design, approvals, choosing a contractor and handover. On most projects the months that are lost are lost on paper, before and during the build, not in the concrete and blockwork.
+A custom villa in Dubai typically takes 12–24 months from plot to keys, and 24–36 months for a custom luxury villa, according to a [property information website](https://realestateclubdubai.com/dubai-villa-architects). Construction itself is usually 8–14 months; the rest goes on design, approvals, choosing a contractor and handover. On most projects the months that are lost are lost on paper, before and during the build, not in the concrete and blockwork.
 
 That last point is the one owners rarely hear. What follows is where the time actually goes, which steps you can shorten and which you cannot.
 
@@ -48,13 +52,15 @@ Here is the full journey, with published durations where they exist and our own 
 | Phase | Typical duration | Source |
 |---|---|---|
 | Plot checks, brief and budget | 1–3 months | Our planning allowance |
-| Concept and detailed design | 3–4 months | Real Estate Club Dubai |
-| Master-developer and authority approvals | 2–3 months | Real Estate Club Dubai |
+| Concept and detailed design | 3–4 months | Property information website |
+| Master-developer and authority approvals | 2–3 months | Property information website |
 | Bidding and contractor appointment | 1–2 months | Our planning allowance |
-| Construction | 8–14 months | Real Estate Club Dubai |
-| Completion, snagging and handover | 1–2 months | Real Estate Club Dubai |
+| Construction | 8–14 months | Property information website |
+| Completion, snagging and handover | 1–2 months | Property information website |
 | Sum of phases above, end to end | 16–28 months | Our arithmetic |
-| **Plot to keys, published headline (phases overlap)** | **12–24 months** (24–36 for custom luxury) | Real Estate Club Dubai |
+| **Plot to keys, published headline (phases overlap)** | **12–24 months** (24–36 for custom luxury) | Property information website |
+
+The phase durations come from a property information website, the only phase-by-phase breakdown we have found published. Industry sources broadly agree on the whole: Engel & Völkers says most villas take 12–24 months from approval to completion, and Optimal Engineering allows 4–8 weeks for approvals on a straightforward project and typically 12–18 months for construction.
 
 The published 12–24 months is shorter than the phases added end to end because it assumes some of them overlap. Two things stand out. First, roughly a third to a half of the elapsed time passes before anyone breaks ground. Second, the phases are not fixed blocks. A well-run project overlaps some of them, for example by preparing the bid package while approvals are in progress. A poorly run one stretches each of them, usually because a decision is waiting on someone.
 

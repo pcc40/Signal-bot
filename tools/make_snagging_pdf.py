@@ -288,7 +288,7 @@ def cover(c, doc):
     ty = H * 0.36 - 14 * mm
     for line in ["Systems first, then room by room: what to test before you accept",
                  "a new or renovated villa, the documents to collect at handover,",
-                 "and how long the builder and developer stay liable for defects."]:
+                 "and how long the builder stays liable for defects (UAE-wide) and the developer (Dubai)."]:
         c.drawString(M_L, ty, line); ty -= 5.6 * mm
     c.setFillColor(white); c.setFont(K.SANS_M, 9)
     c.drawString(M_L, M_B + 8 * mm, f"Written by {C.FOUNDER['name']}, {C.FOUNDER['role']}")
@@ -402,7 +402,7 @@ def build():
                                     "show who caused a scratch or a chip.", st, fw)]
 
     # --- documents
-    s += [PageBreak(), Paragraph("PART THREE · SECTION 09", st["kicker"]), Paragraph("Handover documents", st["h1"]),
+    s += [PageBreak(), Paragraph("PART THREE · SECTION 09", st["kicker"]), Paragraph("Handover documents: Dubai", st["h1"]),
           Paragraph("Do not accept the keys without these, or at least a dated list of what is outstanding and when it "
                     "will arrive. The house will be maintained, insured and one day sold on the strength of this file.", st["intro"])]
     drows = [[Paragraph("", b), Paragraph("<b>Document</b>", b), Paragraph("<b>Who issues it</b>", b)]] + \
@@ -418,6 +418,10 @@ def build():
           K.note_box("Check whose name each warranty is in and when it starts. A warranty that began when the product "
                      "was installed may have months less to run than you expect.", st, fw),
           Spacer(1, 8),
+          Paragraph("<b>Abu Dhabi.</b> The list above follows Dubai's procedures. In Abu Dhabi the municipality that issued "
+                    "the building permit issues the completion certificate, applied for through TAMM, and the developer, title "
+                    "and utility documents follow Abu Dhabi's own rules. Ask your consultant for the Abu Dhabi list.", st["body"]),
+          Spacer(1, 4),
           Paragraph("Completion certificate procedure: Dubai Municipality, villas. Title deed: Dubai Land Department, as "
                     "described by Meraas. See the sources on the last page.", st["small"])]
 
@@ -436,11 +440,12 @@ def build():
              for a, p, r, w, src in LIABILITY]
     lw = [40 * mm, 24 * mm, 29 * mm, 33 * mm]
     s += [boxed_table(lrows, lw + [fw - sum(lw)], st)]
-    s += [Spacer(1, 10),
+    s += [Spacer(1, 6),
           Paragraph("The new Civil Transactions Law (Federal Decree-Law No. 25 of 2025) came into force on 1 June 2026. "
                     "Law-firm commentary reports that it largely keeps the ten-year regime, now in articles 821 to 824, and "
-                    "that contracts made before that date generally stay under the 1985 law. Dubai Law No. 6 of 2019 applies "
-                    "to jointly owned property; whether it covers your villa depends on how the community is set up.", st["body"]),
+                    "that contracts made before that date generally stay under the 1985 law, across the UAE. Dubai Law No. 6 of "
+                    "2019 covers jointly owned property in Dubai only, depending on how the community is set up; Abu Dhabi "
+                    "has different developer rules.", st["body"]),
           Spacer(1, 4),
           K.note_box("This is a summary, not legal advice. Notify defects in writing, as your contract requires, and take "
                      "advice from a UAE-qualified lawyer before relying on any period or withholding money.", st, fw)]

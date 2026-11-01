@@ -37,6 +37,32 @@
   function val(n) { var c = f.querySelector('input[name="' + n + '"]:checked'); return c ? c.value : (f.elements[n] || {}).value; }
   function numv(n) { var el = f.elements[n], v = el ? parseFloat(el.value) : NaN; return isFinite(v) && v > 0 ? v : 0; }
   function on(n) { return !!(f.elements[n] && f.elements[n].checked); }
+  // A number input's own max is the tool's limit: the figures never use more, and capHint() says so.
+  function maxOf(el) { var m = el ? parseFloat(el.max) : NaN; return isFinite(m) ? m : Infinity; }
+  function numc(n) { return Math.min(numv(n), maxOf(f.elements[n])); }
+  function capHint(el) {
+    if (!el || el.type !== 'number' || !isFinite(maxOf(el))) return;
+    var over = parseFloat(el.value) > maxOf(el), id = el.id + '-cap', h = document.getElementById(id);
+    if (!h && !over) return;
+    if (!h) {
+      h = document.createElement('p'); h.className = 'hint hint--cap'; h.id = id; h.setAttribute('role', 'status');
+      var anchor = el.parentNode.querySelector('.hint') || el;
+      anchor.parentNode.insertBefore(h, anchor.nextSibling);
+      el.setAttribute('aria-describedby', ((el.getAttribute('aria-describedby') || '') + ' ' + id).trim());
+    }
+    h.hidden = !over && !h.getAttribute('data-capped');
+    h.textContent = msg('capped', { max: iso(N2.format(maxOf(el))) });
+  }
+  // While typing, a value over the limit shows the note; on change the value itself is set back to the limit.
+  f.addEventListener('input', function (ev) { var el = ev.target; if (el.getAttribute) { el.removeAttribute('data-was-capped'); var h = document.getElementById(el.id + '-cap'); if (h) h.removeAttribute('data-capped'); capHint(el); } }, true);
+  f.addEventListener('change', function (ev) {
+    var el = ev.target;
+    if (!el || el.type !== 'number' || !(parseFloat(el.value) > maxOf(el))) return;
+    capHint(el);
+    var h = document.getElementById(el.id + '-cap');
+    el.value = maxOf(el);
+    if (h) { h.setAttribute('data-capped', '1'); h.hidden = false; }
+  }, true);
   function fmtDate() {
     var o = { day: 'numeric', month: 'long', year: 'numeric' };
     try { return new Intl.DateTimeFormat(LANG + '-u-nu-latn', o).format(new Date()); } catch (e) { return new Intl.DateTimeFormat('en-GB', o).format(new Date()); }
@@ -117,13 +143,17 @@
         var lbl = q('[data-rate-label="' + s + '"]'); if (lbl) lbl.textContent = msg('rateLabel-' + unit);
         var c0 = s === 'rn' && lo ? 0 : 1;
         put('[data-out="' + s + '-likely"]', none ? '–' : money(e[s].total[c0], s === 'rn' && lo));
-        put('[data-out="' + s + '-low"]', none ? '–' : money(e[s].total[0]));
+        put('[data-out="' + s + '-low"]', none ? '–' : money(e[s].total[0], s === 'rn' && lo));
+        // No range line without an area, or for a renovation published only as a starting figure.
+        var rg = q('[data-out="' + s + '-low"]'); rg = rg && rg.closest('.calc-range');
+        if (rg) rg.hidden = none || (s === 'rn' && lo);
         put('[data-out="' + s + '-high"]', none || (s === 'rn' && lo) ? '–' : money(e[s].total[2]));
         put('[data-out="' + s + '-rate"]', none ? '–' : msg('cardRate-' + unit, { rate: perUnit(e[s].rate[c0]) + (s === 'rn' && lo ? '+' : '') }));
       });
       var v;
       if (none) v = msg('enterArea');
-      else if (lo) v = msg('verdict-from', { rn: money(e.rn.total[0], true), rb: money(e.nb.total[0]) });
+      // verdict-from already says "from", so no trailing + on the figures.
+      else if (lo) v = msg('verdict-from', { rn: money(e.rn.total[0]), rb: money(e.nb.total[0]) });
       else {
         var d = e.nb.total[1] - e.rn.total[1], pct = e.rn.total[1] ? Math.round(Math.abs(d) / e.rn.total[1] * 100) : 0;
         v = msg(d >= 0 ? 'verdict-more' : 'verdict-less', { diff: money(Math.abs(d)), pct: iso(pct + '%') }) + ' ' +
@@ -173,20 +203,28 @@
       var C = Math.round(i.contract), n = Math.max(1, Math.round(i.months));
       var adv = Math.round(C * i.advance / 100 / 1000) * 1000;
       var w = weights(n, profile), sw = w.reduce(function (a, b) { return a + b; }, 0);
-      var vals = w.slice(0, -1).map(function (x) { return Math.round(C * x / sw / 1000) * 1000; });
-      vals.push(C - vals.reduce(function (a, b) { return a + b; }, 0));
+      // Round the cumulative valuation, not each month, so no month's value can go below zero.
+      var cw = 0, cumR = 0, vals = w.map(function (x, k) {
+        cw += x;
+        var to = k === n - 1 ? C : Math.min(C, Math.round(C * cw / sw / 1000) * 1000), v = to - cumR;
+        cumR = to;
+        return v;
+      });
       var rows = [], cumV = 0, retCum = 0, recCum = 0, paid = adv;
       vals.forEach(function (v, k) {
         cumV += v;
         var retTo = Math.round(cumV * i.retention / 100 / 10) * 10;
         var recTo = k === n - 1 ? adv : (C ? Math.round(adv * cumV / C / 10) * 10 : 0);
-        var ret = retTo - retCum, rec = recTo - recCum;
-        retCum = retTo; recCum = recTo;
+        // Never a negative payment: recover no more of the advance than the month leaves after retention.
+        var ret = retTo - retCum, rec = Math.max(0, Math.min(recTo - recCum, v - ret));
+        retCum = retTo; recCum += rec;
         var pay = v - ret - rec;
         paid += pay;
         rows.push({ m: k + 1, value: v, ret: ret, rec: rec, pay: pay, paid: paid, held: retCum, unrec: adv - recCum });
       });
-      var rel1 = Math.round(retCum / 2 / 10) * 10, rel2 = retCum - rel1;
+      // Advance not recovered by the last month comes off the retention released at handover, then at the end.
+      var short = adv - recCum, rel1 = Math.round(retCum / 2 / 10) * 10, rel2 = retCum - rel1, d1 = Math.min(short, rel1);
+      rel1 -= d1; rel2 -= short - d1;
       var peak = rows.reduce(function (a, r) { return r.pay > a.pay ? r : a; }, rows[0]);
       var total = adv + rows.reduce(function (a, r) { return a + r.pay; }, 0) + rel1 + rel2;
       return { adv: adv, rows: rows, rel1: rel1, rel2: rel2, retTotal: retCum, paidAtHandover: paid + rel1, total: total, peak: peak.pay, peakMonth: peak.m };
@@ -222,12 +260,13 @@
       return tr;
     }
     function render() {
-      var i = { contract: numv('contract'), months: Math.min(60, Math.max(1, Math.round(numv('months')) || 1)), advance: Math.min(100, numv('advance')),
-                retention: Math.min(100, numv('retention')), dlp: Math.round(numv('dlp')) };
+      var i = { contract: numv('contract'), months: Math.max(1, Math.round(numc('months')) || 1), advance: numc('advance'),
+                retention: numc('retention'), dlp: Math.round(numc('dlp')) };
       var profile = val('profile'), tb = q('[data-schedule]'), none = !i.contract;
       out.setAttribute('data-state', none ? 'no-contract' : 'range');
       if (none) {
         ['peak', 'peak-low', 'peak-high'].forEach(function (k) { put('[data-out="' + k + '"]', '–'); });
+        var spr = q('[data-out="peak-low"]'); spr = spr && spr.closest('.calc-range'); if (spr) spr.hidden = true;
         put('[data-out="summary"]', msg('noContract'));
         qa('.tool-peaks [data-v], .tool-schedule tfoot [data-v]').forEach(function (c) { c.textContent = '–'; });
         if (tb) tb.textContent = '';
@@ -235,6 +274,7 @@
         host.__state = { inputs: i, none: true };
         return;
       }
+      var spr2 = q('[data-out="peak-low"]'); spr2 = spr2 && spr2.closest('.calc-range'); if (spr2) spr2.hidden = false;
       var all = PROFILES.map(function (pr) { return plan(i, pr); }), p = plan(i, profile);
       put('[data-out="peak"]', money(all[1].peak));
       put('[data-out="peak-low"]', money(all[0].peak));
@@ -290,8 +330,8 @@
       return r;
     }
     function render() {
-      var i = { months: Math.min(60, Math.round(numv('months'))), loc: f.elements.loc.value === 'ad' ? 'ad' : 'dubai', rent: numv('rent'),
-                borrowed: numv('borrowed'), rate: numv('rate'), remaining: numv('remaining'), contract: numv('contract'),
+      var i = { months: Math.round(numc('months')), loc: f.elements.loc.value === 'ad' ? 'ad' : 'dubai', rent: numv('rent'),
+                borrowed: numv('borrowed'), rate: numc('rate'), remaining: numv('remaining'), contract: numv('contract'),
                 prelims: on('prelims'), fees: numv('fees') };
       f.elements.contract.disabled = !i.prelims;
       var e = est(i);

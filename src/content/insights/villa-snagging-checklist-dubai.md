@@ -36,7 +36,7 @@ sources:
     url: "https://dmpmedia.dm.gov.ae/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf"
   - title: "Meraas: guide to the title deed and Oqood"
     url: "https://meraas.com/en/latest-post/journal/guide-title-deed-and-oqood"
-  - title: "Real Estate Club Dubai: villa architects and build timelines"
+  - title: "Real Estate Club Dubai (property information website): villa architects and build timelines"
     url: "https://realestateclubdubai.com/dubai-villa-architects"
 ---
 
@@ -48,7 +48,7 @@ Below is the checklist we use, a way to grade each defect, the documents to coll
 
 Snagging comes at the end of construction, after the authority's completion inspection and before you formally accept the villa. In Dubai, the residential permit process ends with a joint completion inspection involving Building Control and other bodies, followed by a completion certificate and service connection ([Dubai Municipality](https://dmpmedia.dm.gov.ae/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf)). A completion certificate tells you the building meets the authority's requirements. It does not tell you the grout is clean, the shower drains or the AC holds temperature in August.
 
-Published guidance allows around one to two months for snagging ([Real Estate Club Dubai](https://realestateclubdubai.com/dubai-villa-architects)). In our experience, the realistic sequence is:
+A [property information website](https://realestateclubdubai.com/dubai-villa-architects) allows around one to two months for snagging. In our experience, the realistic sequence is:
 
 1. Contractor declares the works complete.
 2. Pre-handover inspection by the owner's side, with a written, numbered snag list.

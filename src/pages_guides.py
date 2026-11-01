@@ -64,7 +64,7 @@ def landing():
 <div><label for="g-stage">Where is your project now?</label><select id="g-stage" name="stage">{opts}</select></div>
 <p class="small muted">We use your name and email to show you the download and to keep a record of the request. We never sell or publish your details. See our <a href="/privacy/">privacy notice</a>.</p>
 <div><label class="consent" for="g-mkt"><input id="g-mkt" name="marketing_opt_in" type="checkbox" value="yes"> <span>Optional: also send me Eastbridge notes for villa owners by email, no more than once a month. I can unsubscribe at any time by replying to any note or writing to {C.EMAIL}.</span></label></div>
-<p><button class="btn" type="submit">Get the checklist</button></p>
+<p class="submit-row"><button class="btn" type="submit">Get the checklist</button><span class="small muted">We never pass your details to contractors or suppliers.</span></p>
 </form>
 </div></div></section>
 
@@ -130,8 +130,8 @@ SNAG_CHAPTERS = [
     ("Systems first", "Waterproofing and roofs, air conditioning, electrics and low current, plumbing and drainage, the pool, glazing and external works, each tested under load."),
     ("Room by room", "Floors, walls, doors, joinery, kitchen, bathrooms, staircases and basement, with a severity column for every check."),
     ("A severity key", "Critical, major and minor defects, with villa examples and what to ask the contractor for in each case."),
-    ("Handover documents", "The completion certificate, as-built drawings, warranties, manuals and certificates, and who issues each one."),
-    ("Defects liability", "How long the contractor, engineer and developer stay liable, and from when, with the article of the law for each period."),
+    ("Handover documents", "The completion certificate, as-built drawings, warranties, manuals and certificates, and who issues each one in Dubai, with a note on what differs in Abu Dhabi."),
+    ("Defects liability", "How long the contractor and engineer stay liable under UAE law, and a developer under Dubai law, from when, with the article of the law for each period."),
     ("A snag log", "A numbered log for location, photograph, date raised and date closed, so nothing is argued about later."),
 ]
 
@@ -173,7 +173,7 @@ def snag_landing():
 <div><label for="g-stage">Where is your project now?</label><select id="g-stage" name="stage">{opts}</select></div>
 <p class="small muted">We use your name and email to show you the download and to keep a record of the request. We never sell or publish your details. See our <a href="/privacy/">privacy notice</a>.</p>
 <div><label class="consent" for="g-mkt"><input id="g-mkt" name="marketing_opt_in" type="checkbox" value="yes"> <span>Optional: also send me Eastbridge notes for villa owners by email, no more than once a month. I can unsubscribe at any time by replying to any note or writing to {C.EMAIL}.</span></label></div>
-<p><button class="btn" type="submit">Get the snagging checklist</button></p>
+<p class="submit-row"><button class="btn" type="submit">Get the snagging checklist</button><span class="small muted">We never pass your details to contractors or suppliers.</span></p>
 </form>
 </div></div></section>
 

@@ -40,6 +40,10 @@ SOURCES = [
     ("vat", "PwC Worldwide Tax Summaries, United Arab Emirates: other taxes (VAT)",
      "https://taxsummaries.pwc.com/united-arab-emirates/corporate/other-taxes"),
     # Currency display (FX below). Titles carry no date, so the monthly rate refresh changes only FX_AS_AT.
+    # The CBUAE's own monthly table (US dollar 3.6725 on every date). The URL is a monthly PDF, so the refresh may
+    # point it at a newer month; the peg figure does not change.
+    ("cbfx", "Central Bank of the UAE, Exchange rates against the UAE dirham (monthly table: US dollar 3.6725)",
+     "https://centralbank.ae/media/s1hdr5ms/fx_sep26_en.pdf"),
     ("peg", "Gulf News, Creation, history and evolution of the UAE dirham (the dirham's peg of AED 3.6725 to the US dollar)",
      "https://gulfnews.com/uae/year-of-the-50th/creation-history-and-evolution-of-the-uae-dirham-1.1621767243152"),
     ("ecb", "European Central Bank, euro foreign exchange reference rates",
@@ -106,10 +110,11 @@ def month_year(ym):
     return f"{MONTHS[ym[1] - 1]} {ym[0]}"
 
 # ---------------------------------------------------------------- currency display (AED is the only calculation currency)
-# Fixed rates, never fetched live. The figures below are copied from the published sources (SOURCES "peg", "ecb", "cbr")
+# Fixed rates, never fetched live. The figures below are copied from the published sources (SOURCES "cbfx", "peg", "ecb", "cbr")
 # and converted to AED per one unit of each currency. Display-only: every estimate is calculated in AED and converted
 # figures are labelled "approximate, at rates of <FX_AS_AT>". Refresh monthly (AUTOMATION.md, Monthly).
-#   - AED 3.6725 per US dollar: the dirham's fixed peg (Central Bank of the UAE, since November 1997).
+#   - AED 3.6725 per US dollar: the dirham's fixed peg, as published in the Central Bank of the UAE's exchange-rate
+#     table ("cbfx", checked: 3.6725 on 1 September 2026); in place since November 1997 (Gulf News, "peg").
 #   - ECB euro reference rates of 30 October 2026: 1 EUR = 1.1172 USD = 0.83380 GBP = 7.4326 CNY = 106.0840 INR.
 #     (The ECB publishes no rouble rate.)
 #   - Bank of Russia official rate set on 30 October 2026 (effective 31 October): 1 AED = 21.9353 RUB.
@@ -342,7 +347,7 @@ def print_head():
 </div>'''
 
 def print_foot():
-    names = "Engel &amp; Völkers, Knight Frank (via Gulf Construction), Turner &amp; Townsend, Optimal Engineering and Smart Renovation, with Real Estate Club Dubai for the few lines no industry source covers"
+    names = "Engel &amp; Völkers, Knight Frank (via Gulf Construction), Turner &amp; Townsend, Optimal Engineering and Smart Renovation, with a property information website for the few lines no industry source covers"
     return f'''<div class="print-only calc-print-foot">
 <p><b>Sources.</b> Rates are published 2025–26 market ranges from {names}. Other currencies are converted from AED using the dirham’s US dollar peg, the European Central Bank’s euro reference rates and the Bank of Russia’s official rate. Full sources, assumptions and method: {SITE_HOST}{CALC_PATH}#sources</p>
 <p class="calc-print-link">Open this estimate online: <span data-print-url>{SITE_HOST}{CALC_PATH}</span></p>
@@ -420,7 +425,7 @@ def results_html(e, embed=False):
 <p class="calc-fx" data-fx-note hidden></p>
 <p class="calc-sub" data-out="sub">{sub}</p>
 <p class="calc-reviewed">Rates last reviewed: {month_year(RATES_REVIEWED)}, by {esc(C.FOUNDER["name"])}</p>
-<p class="calc-note calc-assess" data-reno-assess hidden>Renovation bands describe a typical villa. A large or older villa, or one that needs new services, waterproofing or structural work, needs a project-specific assessment rather than a band. <a href="/contact/">Ask us for a project-specific assessment</a>.</p>
+<p class="calc-note calc-assess" data-reno-assess hidden>Renovation bands describe a typical villa. A large or older villa, or one that needs new services, waterproofing or structural work, needs a project-specific assessment rather than a band. For a figure that scales with floor area, our <a href="/tools/renovate-or-rebuild/">renovate-or-rebuild tool</a> uses published rates per square foot.<span class="calc-assess__ask"> <a href="/contact/">Ask us for a project-specific assessment</a>.</span></p>
 <div class="cb" role="img" aria-label="Breakdown of the likely total" data-bar>{segs}</div>
 <ul class="cb-legend">{legend}</ul>
 <div class="table-wrap"><table class="table calc-table"><caption class="sr">Cost lines: low, likely and high</caption>
@@ -498,7 +503,7 @@ FAQS = [
     ("How long does it take to build a villa in Dubai?",
      "Engel &amp; Völkers puts most villas at 12–24 months from approval to completion. Published phase estimates are design 3–4 months, approvals 2–3 months, "
      "construction 8–14 months and snagging 1–2 months, about 14–23 months end to end, less where phases overlap, and 24–36 months for a custom luxury villa "
-     "(Real Estate Club Dubai). Optimal Engineering allows 4–8 weeks for approvals on a straightforward project and typically 12–18 months for construction."),
+     "(a property information website). Optimal Engineering allows 4–8 weeks for approvals on a straightforward project and typically 12–18 months for construction."),
     ("How accurate is this calculator?",
      "It is an indicative estimate built from published market ranges, not a quote. The real figure depends on the design, the ground, "
      "the contract and the market when you tender. Treat the range as a starting point for a conversation with your consultant, and test it "
@@ -506,8 +511,14 @@ FAQS = [
 ]
 
 def embed_code(path=EMBED_PATH):
-    return (f'<iframe src="{C.SITE_URL}{path}" title="Villa build cost calculator by {C.NAME}" '
-            f'width="100%" height="{EMBED_HEIGHT}" style="border:0;max-width:1100px;display:block" loading="lazy"></iframe>')
+    """The iframe, then an optional one-line script: calc.js posts {type: "eb-calc-height", height} to the host page
+    on load, on every change and on resize, and the script sets the iframe to that height (only for messages from
+    this iframe on SITE_URL). Without it, phones need about 3,300 pixels."""
+    return (f'<iframe id="eb-calc" src="{C.SITE_URL}{path}" title="Villa build cost calculator by {C.NAME}" '
+            f'width="100%" height="{EMBED_HEIGHT}" style="border:0;max-width:1100px;display:block" loading="lazy"></iframe>\n'
+            '<script>addEventListener("message",function(e){var f=document.getElementById("eb-calc");'
+            f'if(f&&e.origin==="{C.SITE_URL}"&&e.source===f.contentWindow&&e.data&&e.data.type==="eb-calc-height")'
+            'f.style.height=e.data.height+"px"});</script>')
 
 def embed_box_html():
     """'Add this calculator to your website' on the full page. The code box is never translated (translate="no");
@@ -516,10 +527,10 @@ def embed_box_html():
 <p class="muted">For estate agents, architects, lawyers and other advisers whose clients ask what a villa in Dubai or Abu Dhabi costs to build.</p></div><div class="prose">
 <p>The calculator is free to use on your own website. Paste the code below into your page's HTML where it should appear. It shows the calculator only, in the same five languages, with a link back to this page for the sources. We keep the rates up to date, so there is nothing for you to maintain, and no analytics or advertising cookies run inside it.</p>
 <label class="calc-embed__label" for="embed-code">Embed code</label>
-<textarea class="calc-embed__code" id="embed-code" readonly rows="4" spellcheck="false" translate="no" data-embed-code data-site="{C.SITE_URL}">{esc(embed_code())}</textarea>
+<textarea class="calc-embed__code" id="embed-code" readonly rows="6" spellcheck="false" translate="no" data-embed-code data-site="{C.SITE_URL}">{esc(embed_code())}</textarea>
 <p class="calc-embed__row"><button type="button" class="btn btn--sm" data-embed-copy>Copy code</button> <a class="link" href="{EMBED_PATH}" target="_blank" rel="noopener" data-embed-preview>Preview the embedded calculator</a></p>
 <p class="calc-status" data-embed-status role="status" aria-live="polite"></p>
-<p class="small muted">The iframe is {EMBED_HEIGHT} pixels tall by default; change the height value if your layout needs it. Questions about using it: <a href="mailto:{C.EMAIL}">{C.EMAIL}</a>.</p>
+<p class="small muted">The second line of the code is optional but recommended: it lets the calculator set the iframe to its own height as visitors use it, so there is no scroll area inside your page. Without it the iframe is {EMBED_HEIGHT} pixels tall; on phones the calculator needs about 3,300 pixels, so raise the height value if you leave the script out. Questions about using it: <a href="mailto:{C.EMAIL}">{C.EMAIL}</a>.</p>
 </div></div></section>'''
 
 def embed_page():
@@ -601,8 +612,8 @@ def calculator():
 <li><strong>Contingency.</strong> 10–15%, widely recommended.{cite("ev", "opt")} The calculator applies it to construction and uses 12% as the likely figure, our own choice just below the midpoint.</li>
 <li><strong>Furniture, fixtures and equipment.</strong> 30–40% of construction at the top end of the market, with 35% as the likely figure. This is the only published percentage we have found, from a property information website.{cite("reca", "recc")} For comparison, Engel &amp; Völkers puts luxury villa interiors at AED 800,000 to over AED 1 million.{cite("ev")} On standard and premium specifications treat it as a ceiling.</li>
 </ol>
-<p>Renovations work differently. The calculator uses Smart Renovation's whole-villa bands by scope rather than rates per square foot: basic AED 200,000–300,000, mid-range AED 400,000–800,000, and luxury above AED 1 million.{cite("sr")} Those bands suit a typical villa; on a large or older villa needing new services and waterproofing, a per square foot budget will be higher, as our <a href="/insights/villa-renovation-cost-dubai/">renovation cost guide</a> explains. Pool and landscaping are added on top of the band.</p>
-<p><strong>Currencies.</strong> Every figure is calculated in UAE dirhams. Pounds, US dollars and euros (and roubles, yuan or rupees on the Russian, Chinese and Hindi pages) are display-only conversions at fixed rates of {fx_date_text()}: the dirham’s peg of AED 3.6725 to the US dollar,{cite("peg")} the European Central Bank’s euro reference rates{cite("ecb")} and, for the rouble, the Bank of Russia’s official rate.{cite("cbr")} Each converted line is rounded the same way as the dirham figures, so a converted total can differ slightly from the dirham total divided by the rate. The page never fetches live rates; we update them monthly.</p>
+<p>Renovations work differently. The calculator uses Smart Renovation's whole-villa bands by scope rather than rates per square foot: basic AED 200,000–300,000, mid-range AED 400,000–800,000, and luxury above AED 1 million.{cite("sr")} Those bands suit a typical villa; on a large or older villa needing new services and waterproofing, a per square foot budget will be higher, as our <a href="/insights/villa-renovation-cost-dubai/">renovation cost guide</a> explains. Our <a href="/tools/renovate-or-rebuild/">renovate-or-rebuild tool</a> uses Smart Renovation's other published figures, rates per square foot of existing floor area (AED 120–250 basic, 250–450 mid-range, 450 or more luxury), so for the same villa it gives a higher renovation figure: for a 6,000 sq ft mid-range renovation, works of AED 1.5–2.7 million against the band's AED 400,000–800,000. For a large villa, the rate per square foot is the more realistic basis. Pool and landscaping are added on top of the band.</p>
+<p><strong>Currencies.</strong> Every figure is calculated in UAE dirhams. Pounds, US dollars and euros (and roubles, yuan or rupees on the Russian, Chinese and Hindi pages) are display-only conversions at fixed rates of {fx_date_text()}: the dirham’s peg of AED 3.6725 to the US dollar,{cite("cbfx", "peg")} the European Central Bank’s euro reference rates{cite("ecb")} and, for the rouble, the Bank of Russia’s official rate.{cite("cbr")} Each converted line is rounded the same way as the dirham figures, so a converted total can differ slightly from the dirham total divided by the rate. The page never fetches live rates; we update them monthly.</p>
 </div></div></section>
 
 <section class="section--tight"><div class="wrap split"><div><h2>Build rates by specification</h2><p class="muted">Construction only, 2025–26. The right-hand columns apply each rate to a 6,000 sq ft villa with no extras.</p></div><div class="prose">
@@ -648,7 +659,7 @@ def calculator():
 <li>Timelines: design 3–4 months, approvals 2–3 months, construction 8–14 months, snagging 1–2 months; 24–36 months plot to keys for custom luxury. These phase figures come from a property information website, the only published phase-by-phase breakdown we have found.{cite("reca")} Engel &amp; Völkers puts most villas at 12–24 months from approval to completion,{cite("ev")} and Optimal Engineering allows 4–8 weeks for approvals on a straightforward project and typically 12–18 months for construction.{cite("opt")} Renovation works two to six months or longer, with approvals taking a few weeks.{cite("sr")}</li>
 <li>Each cost line is rounded to the nearest AED 1,000, or AED 10,000 above AED 1 million. Construction and the totals are the sums of the rounded lines, so the figures shown add up.</li>
 <li>Renovation bands are whole-villa scope examples from a published guide. No published source gives a reliable way to scale them with floor area, so the calculator does not use the area for them; a large or older villa needs a project-specific assessment.</li>
-<li>Currency rates as at {fx_date_text()}, in AED per unit: {fx_list(("GBP", "USD", "EUR"))}; on the Russian, Chinese and Hindi pages also {fx_list(("RUB", "CNY", "INR"))}. US dollar from the fixed peg;{cite("peg")} pound, euro, yuan and rupee crossed from the European Central Bank’s euro reference rates;{cite("ecb")} rouble from the Bank of Russia’s official rate.{cite("cbr")} Converted figures are approximate and for display only.</li>
+<li>Currency rates as at {fx_date_text()}, in AED per unit: {fx_list(("GBP", "USD", "EUR"))}; on the Russian, Chinese and Hindi pages also {fx_list(("RUB", "CNY", "INR"))}. US dollar from the fixed peg;{cite("cbfx", "peg")} pound, euro, yuan and rupee crossed from the European Central Bank’s euro reference rates;{cite("ecb")} rouble from the Bank of Russia’s official rate.{cite("cbr")} Converted figures are approximate and for display only.</li>
 </ul>
 <p class="small muted">Rates last reviewed {month_year(RATES_REVIEWED)} by {esc(C.FOUNDER["name"])}; currency rates as at {fx_date_text()}. This page gives general information, not financial, legal or engineering advice.</p>
 </div></div></section>
@@ -669,7 +680,7 @@ def calculator():
          "inLanguage": "en-GB", "isAccessibleForFree": True,
          "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AED"},
          "publisher": {"@id": B.ORG_ID}, "provider": {"@id": B.ORG_ID},
-         "citation": [u for _, _, u in SOURCES]},
+         "citation": [u for k, _, u in SOURCES if k not in NOFOLLOW]},
         B.faq_schema(FAQS),
     ]
     B.page(CALC_PATH, "Villa Build Cost Calculator: Dubai & Abu Dhabi | Eastbridge",

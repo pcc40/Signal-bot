@@ -187,7 +187,8 @@
     }
     var sub, cons = fmt(e.construction[1]);
     if (noArea) sub = msg('enterArea');
-    else if (reno) sub = lowOnly ? msg('sub-reno-open', { cons: fmt(e.construction[0], true) }) : msg('sub-reno-fixed', { cons: cons });
+    // sub-reno-open already says "from", so no trailing + on the figure.
+    else if (reno) sub = lowOnly ? msg('sub-reno-open', { cons: fmt(e.construction[0]) }) : msg('sub-reno-fixed', { cons: cons });
     else {
       var rt = i.area ? Math.round(a.build[1] / i.area * (unit === 'm2' ? K : 1) / rate(cur) / 10) * 10 : 0;
       sub = msg('sub-new-' + unit, { cons: cons, rate: rt ? fmt(rt) : '–' });
@@ -313,7 +314,7 @@
 
   /* ---------- share, print, WhatsApp and send ---------- */
   var acts = q('[data-calc-actions]'), status = q('[data-copy-status]'), fb = q('[data-copy-fallback]');
-  var wa = q('[data-wa-estimate]'), sendF = document.querySelector('form[data-estimate]');
+  var sendF = document.querySelector('form[data-estimate]');
 
   function optText(sel) { var o = sel && sel.options[sel.selectedIndex]; return o ? plain(o.textContent) : ''; }
   function tierText() { return txt(f.querySelector('input[name="tier"]:checked + span b')); }
@@ -339,7 +340,8 @@
     rows.push([legend('input[name="mode"]'), txt(f.querySelector('input[name="mode"]:checked + span'))]);
     rows.push([label('loc'), optText(f.elements.loc)]);
     var tn = txt(f.querySelector('input[name="tier"]:checked + span small'));
-    rows.push([legend('input[name="tier"]'), tierText() + (tn ? ' · ' + tn : '')]);
+    // A renovation note already starts with the band name ("Luxury: premium materials..."), so it stands alone.
+    rows.push([legend('input[name="tier"]'), reno && tn ? tn : tierText() + (tn ? ' · ' + tn : '')]);
     if (!reno) {
       rows.push([label('area'), f.elements.area.value ? N0.format(parseFloat(f.elements.area.value)) : '–']);
       if (num('basement')) rows.push([label('basement'), N0.format(parseFloat(f.elements.basement.value))]);
@@ -363,8 +365,9 @@
     if (!sendF || !last) return;
     var s = state(), a = last.aed, e = last.shown;
     function trio(r, c) { return last.noArea ? 'no estimate (no built-up area)' : (last.lowOnly ? 'from ' + c + ' ' + N0.format(r.total[0]) : c + ' low ' + N0.format(r.total[0]) + '; likely ' + N0.format(r.total[1]) + '; high ' + N0.format(r.total[2]) + (r.open ? '+' : '')); }
-    var lines = LINES.filter(function (k) { return a[k][0] || a[k][2]; }).map(function (k) { return k + ' ' + a[k].map(function (x) { return N0.format(x); }).join('/'); });
-    var res = trio(a, 'AED') + (last.noArea ? '' : ' | lines (AED low/likely/high): ' + lines.join(', '));
+    // With no published ceiling (lowOnly) the page shows only the starting column, so Philip gets only that column too.
+    var lines = LINES.filter(function (k) { return a[k][0] || a[k][2]; }).map(function (k) { return k + ' ' + (last.lowOnly ? 'from ' + N0.format(a[k][0]) : a[k].map(function (x) { return N0.format(x); }).join('/')); });
+    var res = trio(a, 'AED') + (last.noArea ? '' : (last.lowOnly ? ' | lines (AED, starting figures): ' : ' | lines (AED low/likely/high): ') + lines.join(', '));
     if (cur !== 'AED' && !last.noArea) res += ' | shown in ' + cur + ' (approximate, rates of ' + FX.asAt + '): ' + trio(e, cur);
     var set = function (n, v) { var el = sendF.elements[n]; if (el) el.value = v; };
     set('estimate_inputs', Object.keys(s).map(function (k) { return k + '=' + s[k]; }).join('; '));
@@ -377,9 +380,32 @@
   var full = q('[data-full-link]');
   function share() {
     if (full) full.href = full.href.split('?')[0] + '?' + query();
-    if (wa) wa.href = 'https://wa.me/' + (wa.href.match(/wa\.me\/(\d+)/) || [0, ''])[1] + '?text=' + encodeURIComponent(waText());
+    // Every WhatsApp link on the page carries the estimate: the result button, the floating button, the phone
+    // action bar (a.ab-wa), the header and the footer.
+    var wt = encodeURIComponent(waText());
+    Array.prototype.forEach.call(document.querySelectorAll('a[href*="wa.me/"]'), function (l) {
+      l.href = 'https://wa.me/' + (l.href.match(/wa\.me\/(\d+)/) || [0, ''])[1] + '?text=' + wt;
+    });
     printInputs();
     fillSend();
+    postHeight();
+  }
+
+  // Inside another site's iframe (the embed page), tell the host page our height so its optional resize snippet
+  // can size the iframe and avoid a scroll area inside a scroll area. Message: {type: 'eb-calc-height', height: px}.
+  var framed = window.parent !== window, lastH = 0;
+  function postHeight() {
+    if (!framed) return;
+    // Measure the content, not the document: the document is never shorter than the iframe, so it could not shrink.
+    var m = document.getElementById('main') || document.body;
+    var h = Math.ceil(m.getBoundingClientRect().bottom + (window.pageYOffset || 0)) + 2;
+    if (h === lastH) return;
+    lastH = h;
+    try { window.parent.postMessage({ type: 'eb-calc-height', height: h }, '*'); } catch (err) { /* host blocked messages */ }
+  }
+  if (framed) {
+    window.addEventListener('load', postHeight);
+    window.addEventListener('resize', function () { lastH = 0; postHeight(); });
   }
 
   function say(t) { if (status) status.textContent = t; }

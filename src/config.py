@@ -56,4 +56,7 @@ FOUNDER = {
     "role": "Founding Partner",
     "company_uk": "P Chapman Construction",
     "company_uk_url": "https://www.pchapmanconstruction.com/",
+    # Philip's own public profiles (e.g. his personal LinkedIn URL). Emitted as sameAs in his Person schema.
+    # Company pages (Eastbridge's LinkedIn company page, Instagram) go in SOCIAL instead (Organization sameAs).
+    "same_as": [],
 }

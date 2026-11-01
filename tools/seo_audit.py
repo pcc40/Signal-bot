@@ -41,7 +41,12 @@ for f in files:
         body = re.sub(r"<[^>]+>", " ", re.sub(r"<(script|style|svg)\b.*?</\1>", "", s.split("<body", 1)[-1], flags=re.S))
         latin = len(re.findall(r"\b[a-z]{4,}\b", body)); allw = len(body.split())
         if allw and latin / allw > 0.12: warns.append(f"looks partly untranslated ({latin}/{allw} English words) {rel}")
-    if s.count('hreflang="x-default"') < 1 and "404" not in rel: errors.append(f"no hreflang on {rel}")
+    # Thank-you pages and the embed page are noindex and carry no hreflang (build.py leaves it out, so hreflang never
+    # points at URLs that are not canonical); every other page needs the full set.
+    exempt = "404" in rel or "thanks" in rel or "/embed/" in rel
+    if exempt and "x-default" not in s and 'content="noindex' not in s: errors.append(f"page without hreflang is not noindex: {rel}")
+    if exempt and 'hreflang="x-default"' in s and ("thanks" in rel or "/embed/" in rel): errors.append(f"hreflang on a noindex page: {rel}")
+    if not exempt and s.count('hreflang="x-default"') < 1: errors.append(f"no hreflang on {rel}")
     if len(t) > 65 and lang == "en": warns.append(f"long title ({len(t)}) {rel}")
     if len(d) > 170 and lang == "en": warns.append(f"long description ({len(d)}) {rel}")
     if s.count("<h1") != 1: errors.append(f"{s.count('<h1')} h1 tags on {rel}")

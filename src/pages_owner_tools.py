@@ -63,7 +63,8 @@ class Cites:
                         f'{esc(ALL_SOURCES[k][1].split("//", 1)[1].split("/", 1)[0])}</a></li>' for k in self.order)
         return f'<ol class="calc-sources">{items}</ol>'
     def urls(self):
-        return [ALL_SOURCES[k][1] for k in self.order]
+        """Schema citations. NOFOLLOW sources stay out: JSON-LD cannot carry rel="nofollow"."""
+        return [ALL_SOURCES[k][1] for k in self.order if k not in PT.NOFOLLOW]
 
 # ---------------------------------------------------------------- shared figures
 R = PT.RATES
@@ -81,7 +82,7 @@ def jr(x):
     return int(math.floor(x + 0.5))
 def rent_month(beds):
     return int(jr(RENT_ANNUAL[beds] / 12 / 100) * 100)
-RENT_DEFAULT = rent_month("4")                     # AED 28,620 a month
+RENT_DEFAULT = rent_month("4")                     # AED 28,600 a month (343,461 / 12 = 28,621.75, to the nearest 100)
 BASE_RATE = 3.9                                    # CBUAE Base Rate from 17 September 2026 (a floor, not a loan rate)
 EXAMPLE_CONS = PT.estimate(PT.EXAMPLE)["construction"][1]   # the cost calculator's worked example, construction only
 # Construction inflation forecasts for 2026 (% a year): Currie & Brown UAE about 3% (via PRASOON); Turner & Townsend
@@ -107,7 +108,8 @@ def months_txt(x):
 def common_msgs():
     return [("money", "AED {n}"), ("notIncluded", "Not included"), ("printed", "Prepared on {date}"),
             ("unit-sqft", "sq ft"), ("unit-m2", "m²"), ("monthsN", "{n} months"), ("monthsPlus", "{n}+ months"),
-            ("jsNote", "Figures update as you change the inputs.")]
+            ("jsNote", "Figures update as you change the inputs."),
+            ("capped", "The maximum here is {max}, so the figures use {max}.")]
 
 def msgs_html(m):
     items = "".join(f'<li data-m="{k}">{v}</li>' for k, v in m)
@@ -363,7 +365,7 @@ def renovate_or_rebuild():
     after = f'''<section class="section--tight paper"><div class="wrap split"><div><h2>How the comparison works</h2></div><div class="prose">
 <p>The short answer: on a sound villa, renovating is usually cheaper per square foot of finished space than knocking down and rebuilding, because the structure stays. The gap narrows when the renovation is deep (new services, waterproofing, structural changes) and when a rebuild adds floor area the existing villa cannot. Our <a href="{RR_ARTICLE}">guide to renovating or rebuilding a Dubai villa</a> explains how to decide.</p>
 <ol>
-<li><strong>Renovation works.</strong> Existing built-up area multiplied by Smart Renovation's published rate for the scope: AED 120–250 per sq ft for a basic renovation, AED 250–450 for mid-range and AED 450 or more for luxury work with structural changes.{srb} Luxury has no published ceiling, so the tool then shows starting figures only.</li>
+<li><strong>Renovation works.</strong> Existing built-up area multiplied by Smart Renovation's published rate for the scope: AED 120–250 per sq ft for a basic renovation, AED 250–450 for mid-range and AED 450 or more for luxury work with structural changes.{srb} Luxury has no published ceiling, so the tool then shows starting figures only. Our <a href="{PT.CALC_PATH}">cost calculator</a> uses a different set of Smart Renovation figures for renovations: whole-villa bands for a typical villa (basic AED 200,000–300,000, mid-range AED 400,000–800,000, luxury from AED 1 million), which do not change with floor area. For the same villa the two tools can therefore give quite different renovation figures; for a large villa, the rate per square foot used here is the more realistic basis.</li>
 <li><strong>Rebuild.</strong> The new built-up area at the cost calculator's construction rates for the chosen specification,{ev}{kf}{opt}{tt} plus demolition of the existing villa at AED 50,000–200,000.{recc}</li>
 <li><strong>Design fees, approvals and contingency</strong> follow the cost calculator: design and engineering 6–12% of construction,{opt} a fixed AED 25,000–75,000 approvals band (our own assumption for a straightforward villa),{recc} and a 10–15% contingency{ev}{opt} with 12% as the likely figure. A basic renovation carries no design fees or approvals allowance.</li>
 <li><strong>Time.</strong> Renovation works take two to three months for a basic refresh, four to six for kitchens, bathrooms and interiors, and six months or longer for structural work.{sr} A rebuild runs through design (3–4 months), approvals (2–3), construction (8–14) and snagging (1–2), and 24–36 months from plot to keys for a custom luxury villa.{reca} Demolition is assumed to sit within the construction phase.</li>
@@ -422,21 +424,34 @@ def plan_sp(i):
     C_, n = int(i["contract"]), max(1, int(i["months"]))
     adv = int(jr(C_ * i["advance"] / 100 / 1000) * 1000)
     w = weights(n, i["profile"])
-    sw = sum(w)
-    vals = [int(jr(C_ * x / sw / 1000) * 1000) for x in w[:-1]]
-    vals.append(C_ - sum(vals))
+    sw = 0.0
+    for x in w:            # plain left-to-right addition, as reduce() in tools.js (Python 3.12's sum() compensates)
+        sw += x
+    # Round the cumulative valuation, not each month, so no month's value can go below zero; the last reaches C exactly.
+    cw, cum_r, vals = 0.0, 0, []
+    for k, x in enumerate(w):
+        cw += x
+        to = C_ if k == n - 1 else min(C_, int(jr(C_ * cw / sw / 1000) * 1000))
+        vals.append(to - cum_r)
+        cum_r = to
     rows, cum_v, ret_cum, rec_cum, paid = [], 0, 0, 0, adv
     for k, v in enumerate(vals):
         cum_v += v
         ret_to = int(jr(cum_v * i["retention"] / 100 / 10) * 10)
         rec_to = adv if k == n - 1 else int(jr(adv * cum_v / C_ / 10) * 10) if C_ else 0
-        ret, rec = ret_to - ret_cum, rec_to - rec_cum
-        ret_cum, rec_cum = ret_to, rec_to
+        ret = ret_to - ret_cum
+        # Never a negative payment: recover no more of the advance than the month leaves after retention. Anything
+        # not recovered by the last month comes off the retention released at handover (then at the end).
+        rec = max(0, min(rec_to - rec_cum, v - ret))
+        ret_cum, rec_cum = ret_to, rec_cum + rec
         pay = v - ret - rec
         paid += pay
         rows.append({"m": k + 1, "value": v, "ret": ret, "rec": rec, "pay": pay, "paid": paid, "held": ret_cum, "unrec": adv - rec_cum})
+    short = adv - rec_cum
     rel1 = int(jr(ret_cum / 2 / 10) * 10)
     rel2 = ret_cum - rel1
+    d1 = min(short, rel1)
+    rel1, rel2 = rel1 - d1, rel2 - (short - d1)
     peak = max(rows, key=lambda r: r["pay"])
     return {"adv": adv, "rows": rows, "rel1": rel1, "rel2": rel2, "retTotal": ret_cum, "paidAtHandover": paid + rel1,
             "total": adv + sum(r["pay"] for r in rows) + rel1 + rel2, "peak": peak["pay"], "peakMonth": peak["m"]}
@@ -448,7 +463,7 @@ SP_MSG = {
     "row-final": "End of the defects period (month {n}): balance of retention released",
     "peakText": "{amount} in month {n}",
     "chartLabel": "Monthly payments to the contractor (bars) and the cumulative total paid (line)",
-    "summary": "With a {adv} advance and {ret}% retention, you pay {peak} in the busiest month and have paid {handover} by handover. {held} of retention is still held after handover until the end of the defects period.",
+    "summary": "With an advance of {adv} and {ret}% retention, you pay {peak} in the busiest month and have paid {handover} by handover. {held} of retention is still held after handover until the end of the defects period.",
     "noContract": "Enter the contract sum and the build period to see the schedule.",
 }
 

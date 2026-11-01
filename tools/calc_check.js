@@ -77,6 +77,9 @@ async function snapshot(p) {
       curOptions: Array.from(document.querySelectorAll('#c-cur option')).map(o => o.value),
       fxNote: (() => { const el = document.querySelector('[data-fx-note]'); return el && !el.hidden ? clean(el.textContent) : ''; })(),
       wa: (() => { const a = document.querySelector('[data-wa-estimate]'); try { return a ? new URL(a.href).searchParams.get('text') : ''; } catch (e) { return ''; } })(),
+      // Every other WhatsApp link on the page (phone action bar, floating button, header, footer) must carry the same text.
+      waOthers: Array.from(document.querySelectorAll('a[href*="wa.me/"]')).filter(a => !a.hasAttribute('data-wa-estimate')).map(a => { try { return new URL(a.href).searchParams.get('text'); } catch (e) { return ''; } }),
+      waBar: (() => { const a = document.querySelector('a.ab-wa'); try { return a ? new URL(a.href).searchParams.get('text') : null; } catch (e) { return ''; } })(),
       href: location.href,
       unit: (document.querySelector('input[name="unit"]:checked') || {}).value,
       checks: ['pool', 'smart', 'ffe', 'demo'].map(k => document.querySelector(`[name="${k}"]`).checked).join(','),
@@ -268,6 +271,10 @@ async function englishChecks(p) {
   const wantWa = `Hello, I used your villa cost calculator: new build, 6,000 sq ft, Premium, Dubai Hills Estate, likely ${compactAED(back.likely, 'AED ')}. Could we talk it through?`;
   if (back.wa === wantWa) ok(`whatsapp: "${back.wa}"`);
   else fail(`whatsapp: got "${back.wa}", expected "${wantWa}"`);
+  if (back.waBar === wantWa) ok('whatsapp: the phone action bar link (a.ab-wa) carries the summary');
+  else fail(`whatsapp: a.ab-wa text is "${back.waBar}", expected "${wantWa}"`);
+  if (back.waOthers.length && back.waOthers.every(t => t === wantWa)) ok(`whatsapp: all ${back.waOthers.length} other WhatsApp links carry the summary`);
+  else fail(`whatsapp: other WhatsApp links differ: ${JSON.stringify(back.waOthers)}`);
   await setInputs(p, { cur: 'GBP' });
   const gw = await snapshot(p);
   if (gw.wa.includes(compactAED(gw.likely, '£')) && !/\{\w+\}/.test(gw.wa)) ok(`whatsapp in GBP: "${gw.wa}"`);

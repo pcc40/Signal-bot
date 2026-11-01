@@ -508,7 +508,7 @@ def contact():
 <div class="field"><label class="consent" for="f-mkt"><input id="f-mkt" name="marketing_opt_in" type="checkbox" value="yes"> <span>Optional: also send me Eastbridge notes for villa owners by email, no more than once a month. Leaving this unticked does not affect your enquiry. Unsubscribe at any time by replying to any note or writing to {C.EMAIL}.</span></label></div>
 <div class="reassure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="1"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg>
 <p><b>Confidential.</b> Read personally by Philip and used to reply to you (and, if you tick the box above, to send our notes). We never share or publish client names, addresses or projects without written permission. See our <a href="/privacy/">privacy notice</a>.</p></div>
-<p class="submit-row"><button class="btn" type="submit">Send your enquiry</button><span class="small muted">{esc(C.RESPONSE_PROMISE)}.</span></p>
+<p class="submit-row"><button class="btn" type="submit">Send your enquiry</button><span class="small muted">{esc(C.RESPONSE_PROMISE)}. We never pass your details to contractors or suppliers.</span></p>
 </form></div></section>'''
     schema = [{"@context": "https://schema.org", "@type": "ContactPage", "url": B.url("/contact/"), "about": {"@id": B.ORG_ID}}]
     B.page("/contact/", "Contact Eastbridge: Arrange a Free 30-Minute Call | Dubai",
@@ -622,7 +622,7 @@ def insights(posts):
         c = [("Home", "/"), ("Insights", "/insights/"), (p["title"], path)]
         kp = "".join(f"<li>{esc(k)}</li>" for k in p.get("keypoints", []))
         faqs = [(f["q"], f["a"]) for f in p.get("faqs", [])]
-        srcs = "".join(f'<li><a href="{esc(s["url"])}" rel="noopener">{esc(s["title"])}</a></li>' for s in p.get("sources", []))
+        srcs = "".join(f'<li><a href="{esc(s["url"])}" rel="{B.rel_for(s["url"])}">{esc(s["title"])}</a></li>' for s in p.get("sources", []))
         heads = re.findall(r'<h2 id="([^"]+)">(.*?)</h2>', p["html"])
         toc = ("<nav class=\"toc\" aria-label=\"In this article\"><strong>In this article</strong><ol>" +
                "".join(f'<li><a href="#{h}">{t}</a></li>' for h, t in heads) + "</ol></nav>") if len(heads) > 2 else ""

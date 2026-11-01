@@ -41,6 +41,31 @@ CSS_HASH = hashlib.md5((ROOT / "src/static/assets/site.css").read_bytes()).hexdi
 
 esc = html.escape
 
+# Hosts we cite but do not want to pass search authority to (a competitor; see WRITING_BRIEF.md).
+# Every link to one of these hosts gets rel="nofollow noopener", wherever it appears: article
+# sources, Markdown article bodies, tool source lists and hand-written pages (page() enforces it).
+NOFOLLOW_HOSTS = {"realestateclubdubai.com"}
+
+def is_nofollow(href):
+    from urllib.parse import urlparse
+    host = (urlparse(href or "").hostname or "").lower()
+    return any(host == h or host.endswith("." + h) for h in NOFOLLOW_HOSTS)
+
+def rel_for(href):
+    """rel value for an external link: nofollow for NOFOLLOW_HOSTS, else noopener."""
+    return "nofollow noopener" if is_nofollow(href) else "noopener"
+
+def nofollow_links(doc):
+    """Give every <a> pointing at a NOFOLLOW_HOSTS site rel="nofollow noopener" (replacing any rel)."""
+    def fix(m):
+        tag = m.group(0)
+        hm = re.search(r'\bhref="([^"]*)"', tag)
+        if not hm or not is_nofollow(html.unescape(hm.group(1))):
+            return tag
+        tag = re.sub(r'\s+rel="[^"]*"', "", tag)
+        return tag[:-1] + ' rel="nofollow noopener">'
+    return re.sub(r"<a\b[^>]*>", fix, doc)
+
 def url(path):
     return C.SITE_URL + path
 
@@ -77,7 +102,8 @@ def person_schema():
             "url": url("/about/#founder"),
             "alumniOf": {"@type": "Organization", "name": C.FOUNDER["company_uk"], "url": C.FOUNDER["company_uk_url"]},
             "knowsAbout": ["Residential construction", "Owner's representation", "Construction project management",
-                           "JCT contracts", "Extension of time claims", "Construction cost management", "Villa construction"]}
+                           "JCT contracts", "Extension of time claims", "Construction cost management", "Villa construction"],
+            **({"sameAs": list(C.FOUNDER["same_as"])} if C.FOUNDER.get("same_as") else {})}
 
 def org_schema():
     return {
@@ -424,6 +450,14 @@ def page(path, title, description, body, crumbs=None, schema=None, og=None, og_t
     hero = hero or body.lstrip().startswith(('<section class="banner"', '<section class="hero"', '<article><section class="banner"'))
     body_cls = ' class="has-hero"' if hero else (' class="bare"' if bare else "")
     pre = lcp_preload(body, preload)
+    body = nofollow_links(body)
+    # Language alternates and the feed link only on pages meant for search. A noindex or bare page (thanks
+    # pages, the embeddable calculator) would otherwise point hreflang at URLs that are not canonical.
+    # tools/i18n.py adds the other languages only where these links exist.
+    listed = not (noindex or bare)
+    alts = (f'<link rel="alternate" hreflang="en" href="{url(path)}">\n'
+            f'<link rel="alternate" hreflang="x-default" href="{url(path)}">\n') if listed else ""
+    feed = '<link rel="alternate" type="application/rss+xml" title="Eastbridge Insights" href="/insights/feed.xml">\n' if listed else ""
     doc = f'''<!doctype html>
 <html lang="en-GB" dir="ltr">
 <head>
@@ -433,9 +467,7 @@ def page(path, title, description, body, crumbs=None, schema=None, og=None, og_t
 <meta name="description" content="{esc(description)}">
 <meta name="robots" content="{robots}">
 <link rel="canonical" href="{url(canonical or path)}">
-<link rel="alternate" hreflang="en" href="{url(path)}">
-<link rel="alternate" hreflang="x-default" href="{url(path)}">
-<meta property="og:type" content="{og_type}">
+{alts}<meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="{C.NAME}">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description)}">
@@ -448,8 +480,7 @@ def page(path, title, description, body, crumbs=None, schema=None, og=None, og_t
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="alternate" type="application/rss+xml" title="Eastbridge Insights" href="/insights/feed.xml">
-<link rel="preload" href="/assets/fonts/iserif-400.woff2" as="font" type="font/woff2" crossorigin>
+{feed}<link rel="preload" href="/assets/fonts/iserif-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/instrument-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/instrument-500.woff2" as="font" type="font/woff2" crossorigin>
 {pre}
@@ -501,7 +532,7 @@ def load_insights():
         if meta.get("draft"):
             continue
         meta["slug"] = meta.get("slug") or f.stem
-        meta["html"] = markdown.markdown(body, extensions=["tables", "toc", "attr_list", "sane_lists"])
+        meta["html"] = nofollow_links(markdown.markdown(body, extensions=["tables", "toc", "attr_list", "sane_lists"]))
         meta["words"] = len(re.findall(r"\w+", body))
         posts.append(meta)
     posts.sort(key=lambda p: str(p["date"]), reverse=True)

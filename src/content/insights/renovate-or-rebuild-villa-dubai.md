@@ -65,6 +65,8 @@ Those are construction rates. On a rebuild, design and engineering fees typicall
 
 Two things make the renovation rate less reassuring than it looks. First, the published bands describe typical villas. An older villa that needs new services, new waterproofing and a new roof finish sits at the top of the range or above it. Second, the rate is per square foot of the existing house. If the family needs more space, a renovation can only add it as an extension, which brings structural work, approvals and a much higher rate for the new area.
 
+The same source also publishes whole-villa bands for a typical villa (basic AED 200,000–300,000, mid-range AED 400,000–800,000, luxury from AED 1 million), and our [cost calculator](/tools/villa-build-cost-calculator/) uses those bands for its renovation mode. They do not change with floor area, so for the 6,000 sq ft villa below the calculator shows mid-range works of AED 400,000–800,000, while the per square foot rates give AED 1.5m–2.7m. The two do not reconcile. For a large villa, the rate per square foot is the more realistic basis, and it is the one our [renovate-or-rebuild tool](/tools/renovate-or-rebuild/) and this article use.
+
 ## A worked example: 6,000 sq ft, mid-range renovation against a premium rebuild
 
 Take a 6,000 sq ft villa. One option is a mid-range renovation: kitchens, bathrooms, interiors. The other is to demolish and rebuild at the same size to a premium specification. In both cases the family rents a four-bedroom villa while the house is unusable, at the Dubai average of AED 343,461 a year from [Engel & Völkers' May 2026 rental data](https://www.engelvoelkers.com/ae/en/resources/villa-rental-prices), about AED 28,600 a month.

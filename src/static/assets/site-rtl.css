@@ -734,6 +734,8 @@ img{color:transparent}
 .calc-in input[type=number],.calc-in select{width:100%;font:inherit;color:var(--ink);background:#fff;border:1px solid #A7ACAA;border-radius:0;padding:11px 14px;min-height:50px;font-variant-numeric:tabular-nums}
 .calc-in input:focus-visible,.calc-in select:focus-visible{outline:2px solid var(--brass);outline-offset:1px}
 .calc-in .hint{font-size:.8rem;color:var(--ink-soft);margin:6px 0 0}
+.calc-in .hint--cap{color:var(--brass);font-weight:500}
+.calc-in .hint--cap[hidden]{display:none}
 .calc-seg{display:flex;border:1px solid var(--ink);width:max-content;max-width:100%}
 .calc-seg label{position:relative;margin:0;cursor:pointer}
 .calc-seg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
@@ -765,6 +767,7 @@ img{color:transparent}
 .calc-total{margin:0 0 6px;font-variant-numeric:tabular-nums}
 .calc-total b{display:block;font-family:var(--serif);font-weight:400;font-size:var(--s-4);line-height:1.05;letter-spacing:-.01em}
 .calc-range{display:block;font-size:var(--s-0);color:var(--ink-soft);margin-top:6px}
+.calc-range[hidden]{display:none!important}
 .calc-sub{font-size:var(--s--1);color:var(--ink-soft);margin:0 0 20px;font-variant-numeric:tabular-nums}
 .cb{display:flex;height:14px;background:#fff;overflow:hidden;margin:0 0 12px}
 .cb-seg{display:block;height:100%;transition:width .35s var(--ease)}
@@ -845,7 +848,7 @@ body.bare{background:#fff;padding-bottom:0}
   .calc-page main > section:not(.calc-sec),.calc-page .page-head{display:none!important}
   .calc-page .calc-sec{padding:0!important}
   .calc-page .calc{display:block}
-  .calc-page .calc-in,.calc-page .calc-actions,.calc-page .cb,.calc-page .cb-legend,.calc-page .calc-js,.calc-page .calc-assess a,.calc-page .calc-flag a,.calc-page .calc-table tr[data-zero]{display:none!important}
+  .calc-page .calc-in,.calc-page .calc-actions,.calc-page .cb,.calc-page .cb-legend,.calc-page .calc-js,.calc-page .calc-assess__ask,.calc-page .calc-flag a,.calc-page .calc-table tr[data-zero]{display:none!important}
   .calc-page .print-only{display:block}
   .calc-page .calc-out{background:#fff!important;padding:0;color:#111}
   .calc-print-brand{display:flex;align-items:center;gap:10px;margin:0 0 8pt;padding-bottom:6pt;border-bottom:1.5pt solid #151C1F;font-size:8.5pt;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
@@ -1011,6 +1014,14 @@ html,body{overflow-x:clip}
   .tool-page .tool-approvals li{font-size:8pt;padding:1.5pt 0}
   .tool-page .calc-note{font-size:8pt;line-height:1.35;margin:0 0 2pt;color:#333}
   .tool-page .calc-flag{font-size:8pt;line-height:1.35;margin:4pt 0 0;padding-top:4pt;border-top:.5pt solid #999}
+  .tool-page .calc-print-foot{break-inside:avoid}
+  /* Stage payment plan: the default 12-month plan fits one A4 page; longer plans break between table rows. */
+  .tool-page [data-tool="sp"] .tool-chart svg{height:84pt}
+  .tool-page [data-tool="sp"] .tool-schedule th,.tool-page [data-tool="sp"] .tool-schedule td{padding:.5pt 2.5pt;line-height:1.15}
+  .tool-page [data-tool="sp"] .tool-schedule th[scope=row]{width:22%}
+  .tool-page [data-tool="sp"] .tool-verdict{margin:1pt 0 4pt;line-height:1.3}
+  .tool-page [data-tool="sp"] .calc-h{margin:4pt 0 1pt}
+  .tool-page [data-tool="sp"] .calc-print-inputs{line-height:1.25}
 }
 .tool-in .calc-checks + div{margin-top:14px}
 /* RTL extras */

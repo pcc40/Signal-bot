@@ -2,7 +2,7 @@
 title: "Dubai villa building permits: what happens, step by step"
 description: "How a Dubai villa building permit works: what your consultant submits, what you sign, the master-developer NOC, inspections and where programmes slip."
 date: 2026-10-31
-updated: 2026-10-31
+updated: 2026-11-01
 category: "Approvals"
 keypoints:
   - "A Dubai villa permit is applied for online by your registered engineering consultant, through Dubai Municipality, Trakhees or the Dubai Development Authority depending on where your plot sits, using the unified building permit window."
@@ -14,7 +14,7 @@ faqs:
   - q: "Who applies for a villa building permit in Dubai?"
     a: "Your appointed engineering consultant, registered in Dubai, submits the drawings and fees online through the relevant authority's system. Under Dubai Law No. 14 of 2025, only registered consultancies may practise engineering consultancy in Dubai. The owner appoints the consultant, provides the plot documents, approves the design and pays the fees."
   - q: "How long does a Dubai Municipality villa permit take?"
-    a: "One widely used property guide says a building permit typically takes around three working days once a complete application is in the system. Real Estate Club Dubai puts the whole approvals stage, including master-developer review, NOCs and comment rounds, at 2–3 months. The difference is mostly rework."
+    a: "One widely used property guide says a building permit typically takes around three working days once a complete application is in the system. Optimal Engineering allows 4–8 weeks for approvals on a straightforward project, and a property information website puts the whole approvals stage, including master-developer review, NOCs and comment rounds, at 2–3 months. The difference is mostly rework."
   - q: "How long is a Dubai building permit valid?"
     a: "Dubizzle's guide to Dubai Municipality building permits says a permit is valid for six months from issue and can be renewed. Confirm the current rule for your authority with your consultant, because a permit that lapses before work starts creates avoidable delay."
   - q: "Can work start on site before the building permit is issued?"
@@ -54,10 +54,10 @@ sources:
     url: "https://www.mediaoffice.ae/en/news/2025/october/05-10/mohammed-bin-rashid"
   - title: "Al Tamimi: Dubai issues new law regulating engineering consultancy activities"
     url: "https://www.tamimi.com/news/dubai-issues-new-law-regulating-engineering-consultancy-activities-key-takeaway-points/"
-  - title: "Real Estate Club Dubai: Dubai villa architects"
+  - title: "Optimal Engineering: Cost to build a villa in Dubai (authority fees and approval times)"
+    url: "https://www.optimal.ae/blog/cost-to-build-a-villa-in-dubai"
+  - title: "Real Estate Club Dubai (property information website): villa architects and build timelines"
     url: "https://realestateclubdubai.com/dubai-villa-architects"
-  - title: "Real Estate Club Dubai: villa build cost calculator"
-    url: "https://realestateclubdubai.com/tools/villa-build-cost-calculator"
 ---
 A villa building permit in Dubai is applied for online by your registered engineering consultant, not by you. The consultant submits the drawings and fees through the unified building permit window to Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits; service-authority NOCs are gathered through the same system; and the permit is issued with stamped drawings. The owner's part is to appoint the team, provide the plot documents, approve a design that is genuinely finished, and pay the fees on time.
 
@@ -102,14 +102,14 @@ The owner does not prepare drawings or make the technical submission, but the ow
 - **Proof of ownership and plot documents.** Title deed, affection plan and any master-developer agreement or conditions attached to the plot.
 - **Master-developer forms.** In master communities the developer's NOC application normally needs the owner's authorisation and fees.
 - **Design approval.** A written sign-off of the drawings that will be submitted. This is the signature that matters most, because every change after it costs time.
-- **Fees.** Authority, developer and service-authority fees. Real Estate Club Dubai puts permits, NOCs and DEWA at AED 25,000–75,000, or 2–5% of the build cost.
+- **Fees.** Authority, developer and service-authority fees. Optimal Engineering puts a Dubai Municipality building permit at AED 15,000–60,000 for a standard villa, a permanent DEWA connection at AED 10,000–40,000, and authority approvals in total at AED 80,000–250,000.
 - **The construction contract.** Signed with the contractor you choose, ideally on a design that has already been permitted.
 
 Your consultant will confirm the exact list for your authority and community. Ask for it in writing at appointment, with a date against each item.
 
 ## How long does a Dubai villa permit take?
 
-There are two honest answers. Dubizzle's guide says it typically takes around three working days to get a building permit once a complete application is in the system. Real Estate Club Dubai puts the whole approvals stage at 2–3 months.
+There are two honest answers, and a range between them. Dubizzle's guide says it typically takes around three working days to get a building permit once a complete application is in the system. Optimal Engineering allows 4–8 weeks for approvals on a straightforward project, and a [property information website](https://realestateclubdubai.com/dubai-villa-architects) puts the whole approvals stage at 2–3 months.
 
 The gap between those figures is the real story. Three working days describes a single clean decision. Two to three months describes what usually happens around it: master-developer review, service-authority NOCs, comments to answer, drawings to revise and resubmit, and owner decisions that arrive late. For how the permit fits into the whole build, see [how long it takes to build a villa in Dubai](/insights/how-long-to-build-a-villa-dubai/).
 
