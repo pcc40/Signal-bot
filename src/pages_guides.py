@@ -55,9 +55,9 @@ def landing():
 <div>
 <h2 class="guide-h">Send me the checklist</h2>
 <p class="muted">Ten pages, six stages, one tick box per question. We will show you the download straight away.</p>
-<form class="form guide-form" name="checklist" method="POST" action="{THANKS}" data-netlify="true" netlify-honeypot="company_site" data-guide>
+<form class="form guide-form" name="checklist" method="POST" action="{THANKS}" data-netlify="true" netlify-honeypot="company_site" data-guide data-attr>
 <input type="hidden" name="form-name" value="checklist">
-<input type="hidden" name="guide" value="villa-owner-checklist">
+<input type="hidden" name="guide" value="villa-owner-checklist">{B.attribution_inputs()}
 <p class="hp"><label>Leave this empty <input name="company_site" tabindex="-1" autocomplete="off"></label></p>
 <div><label for="g-name">Your name</label><input id="g-name" name="name" autocomplete="name" required></div>
 <div><label for="g-email">Email</label><input id="g-email" name="email" type="email" autocomplete="email" required></div>
@@ -97,7 +97,7 @@ def landing():
            body, crumbs, schema, og=COVER)
 
     tcrumbs = crumbs + [("Download", THANKS)]
-    tbody = B.page_head(tcrumbs, "Your checklist is ready.",
+    tbody = B.conversion_marker("checklist_request_success", "checklist", "villa-owner-checklist") + B.page_head(tcrumbs, "Your checklist is ready.",
                         "Thank you. Download the PDF below and keep it with your project papers.") + f'''
 <section class="section--tight"><div class="wrap guide-grid">
 <div class="guide-cover guide-cover--small"><img src="{COVER}" width="900" height="1273" alt="Cover of The Villa Owner’s Pre-Construction Checklist" decoding="async"></div>
@@ -164,9 +164,9 @@ def snag_landing():
 <div>
 <h2 class="guide-h">Send me the snagging checklist</h2>
 <p class="muted">{SNAG_PAGES} pages to print and take round the house: tick boxes, a severity column and a snag log. We will show you the download straight away.</p>
-<form class="form guide-form" name="checklist" method="POST" action="{SNAG_THANKS}" data-netlify="true" netlify-honeypot="company_site" data-guide>
+<form class="form guide-form" name="checklist" method="POST" action="{SNAG_THANKS}" data-netlify="true" netlify-honeypot="company_site" data-guide data-attr>
 <input type="hidden" name="form-name" value="checklist">
-<input type="hidden" name="guide" value="villa-snagging-checklist">
+<input type="hidden" name="guide" value="villa-snagging-checklist">{B.attribution_inputs()}
 <p class="hp"><label>Leave this empty <input name="company_site" tabindex="-1" autocomplete="off"></label></p>
 <div><label for="g-name">Your name</label><input id="g-name" name="name" autocomplete="name" required></div>
 <div><label for="g-email">Email</label><input id="g-email" name="email" type="email" autocomplete="email" required></div>
@@ -206,7 +206,7 @@ def snag_landing():
            body, crumbs, schema, og=SNAG_COVER)
 
     tcrumbs = crumbs + [("Download", SNAG_THANKS)]
-    tbody = B.page_head(tcrumbs, "Your snagging checklist is ready.",
+    tbody = B.conversion_marker("checklist_request_success", "checklist", "villa-snagging-checklist") + B.page_head(tcrumbs, "Your snagging checklist is ready.",
                         "Thank you. Download the PDF below, print it, and take it round the house with a torch and a camera.") + f'''
 <section class="section--tight"><div class="wrap guide-grid">
 <div class="guide-cover guide-cover--small"><img src="{SNAG_COVER}" width="900" height="1273" alt="Cover of The Villa Snagging Checklist" decoding="async"></div>

@@ -49,6 +49,16 @@
   status = 301
   force = true
 
+# The site's original Netlify hostname (live audit, 1 Nov 2026: it still served a full copy of the site).
+# Host-specific, so it matches only this exact hostname: deploy previews and branch deploys are served from
+# other hostnames (deploy-preview-N--incredible-haupia-7adc73.netlify.app, <branch>--incredible-haupia-7adc73.netlify.app)
+# and are not redirected. The calculator embed code points at SITE_URL (the .com), so embeds are unaffected.
+[[redirects]]
+  from = "https://incredible-haupia-7adc73.netlify.app/*"
+  to = "https://eastbridgestrategicpartners.com/:splat"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "https://eastbridgepartners.ae/*"
   to = "https://eastbridgestrategicpartners.com/:splat"

@@ -2,8 +2,35 @@
 
 Static site for Eastbridge Strategic Partners (client-side villa project management, Dubai and Abu Dhabi).
 English source, published in Arabic (/ar/, right to left), Russian (/ru/), Simplified Chinese (/zh/) and Hindi (/hi/).
-The source lives in the GitHub repository `pcc40/eastbridge-website` (branch `main`). Live address: https://eastbridgestrategicpartners.com (contact: philip@eastbridgestrategicpartners.com); the .ae and www hosts 301 to it via `netlify.toml`.
+The source lives in the GitHub repository `pcc40/eastbridge-website` (branch `main`). Live address: https://eastbridgestrategicpartners.com (contact: philip@eastbridgestrategicpartners.com); the .ae and www hosts, and the original Netlify hostname `incredible-haupia-7adc73.netlify.app`, 301 to it via `netlify.toml` (deploy previews and branch deploys use other hostnames and are not redirected).
 A single handoff zip, `eastbridge-website-handoff.zip` (top folder `eastbridge/`), holds the full source including all image sizes. It is gitignored.
+
+## Conversion measurement, attribution and cookie consent (November 2026, branch `eb6/tracking`)
+Source: `reports/live-audit-2026-11-01.txt`, "Fix and verify conversion measurement" and "Review the actual consent implementation". This is the site side only; the GA4 account steps below are Phil's.
+
+**Events (GA4 `G-120XT9N6XB`).** No event fires in a form's submit handler any more (the old `generate_lead` is gone from `build.py` and `calc.js`). Success events fire on the thank-you pages, which Netlify shows only after it has accepted the POST. The submit handler leaves a flag in sessionStorage (`eb_pending_<form-name>`) and the thank-you page removes it, so each event fires once per submission: a reload, a revisit or a direct visit to a thank-you page sends nothing. Marker: `build.conversion_marker()`; logic: `build.SCRIPT`.
+
+| Event | Where it fires | Parameters |
+|---|---|---|
+| `enquiry_success` | `/contact/thanks/` after the contact form (`brief`) | `form=brief` |
+| `estimate_request_success` | `/tools/villa-build-cost-calculator/thanks/` after "Send this estimate" (`estimate`) | `form=estimate` |
+| `checklist_request_success` | `/guides/villa-owner-checklist/thanks/` and `/guides/villa-snagging-checklist/thanks/` (`checklist`) | `form=checklist`, `guide=villa-owner-checklist` or `villa-snagging-checklist` |
+| `newsletter_signup` | `/contact/thanks/#notes` after the footer notes form (`notes`) | `form=notes` |
+| `contact` | click on a WhatsApp link or a phone number (secondary interaction, not a conversion) | `method=whatsapp` or `phone` |
+
+The same events fire on the translated pages (`/ar/`, `/ru/`, `/zh/`, `/hi/`).
+
+**GA4 Admin (Phil, once this is deployed):**
+1. Admin → Events (Data display → Events): the old key event `generate_lead` will stop arriving. Unmark it as a key event, and do not import it into Google Ads.
+2. Mark **`enquiry_success`** as the single primary key event (conversion). `estimate_request_success` may be marked as a secondary key event; if both are imported into Google Ads, set only `enquiry_success` as Primary there. Leave `checklist_request_success`, `newsletter_signup` and `contact` as ordinary events.
+3. Use one conversion source per action: if a Google Ads tag is ever added, do not also import the same GA4 event.
+4. Verify with an explicitly labelled test enquiry (with analytics accepted): one enquiry should produce one `enquiry_success` in DebugView/Realtime, one Netlify submission, one email and one sheet row.
+
+**Campaign attribution.** With analytics accepted, `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content` and `gclid` from the landing URL are kept in sessionStorage (`eb_attr`, last tagged landing wins) and copied into hidden fields of the same names on the `brief`, `estimate` and both `checklist` forms (`form[data-attr]`, `build.ATTRIBUTION_FIELDS`). `submission-created.js` cleans them and writes them to the Google Sheet row and the lead alert, never to a customer email. Add six columns with those names to the sheet if the Apps Script maps columns by name. Netlify registers the new hidden fields on the first deploy that contains them. Tested by `node tools/test_submission_function.js`.
+
+**Cookie consent (Google Consent Mode v2, basic implementation).** `build.analytics()` pushes `consent default` with `analytics_storage`, `ad_storage`, `ad_user_data` and `ad_personalization` all denied before anything else. gtag.js is not loaded, and no `config` or event is queued, until the visitor chooses "Accept analytics"; then `consent update analytics_storage: granted` is pushed, followed by `config` and the gtag.js request. The three ad signals stay denied (the site has no advertising tags). The choice is stored in localStorage `eb_consent` (`granted`/`denied`). The banner (`build.consent_banner()`, styles under "Cookie choice" in `site.css`) is static HTML so it translates; it sits at the bottom of the screen, does not block the page, has "Accept analytics", "Decline" and a privacy notice link, moves above the mobile action bar, and respects reduced motion and right-to-left. "Cookie settings" at the foot of every page (`build.cookie_settings_link()`) reopens it; Escape closes it when reopened. Declining after accepting switches consent back to denied, stops events, removes the `_ga` cookies and clears the stored campaign details. The privacy notice (`/privacy/`, "What we collect" and "Cookies") describes the banner and says analytics runs only after consent. Consent Mode passes the choice to Google; whether this banner meets UK/EEA requirements for a given campaign is a legal review point, not settled here.
+
+**Translations.** The banner, the Cookie settings button and the two changed privacy paragraphs are new English text: run the Languages steps in `AUTOMATION.md`. Until then they show in English on translated pages (`seo_audit.py` warns, 0 errors).
 
 ## Top-10 competitor brief (November 2026): at a glance
 Source: `reports/competitor-brief-top10-2026-11-01.md` with Phil's decisions at its end (D1 ranges confirmed; D2 quote review paid, within the Review range; D5 no insurance statement; D7 no new promises). Integrated from branches `eb4/art-fees`, `eb4/art-db`, `eb4/art-authority`, `eb4/art-sourcing`, `eb4/areas-a`, `eb4/areas-b`, `eb4/sources`, `eb4/safeguards`, `eb5/fees`, `eb5/position` and `eb5/services`. The new and changed English text still needs the Languages steps in `AUTOMATION.md`; until then translated pages fall back to English and `seo_audit.py` warns (0 errors).
@@ -197,7 +224,7 @@ cat dist/robots.txt                 # User-agent: * / Disallow: /
 - Mobile action bar (WhatsApp / Call / Start a brief) replaces the WhatsApp float below 760px; on larger screens the float remains. `build.action_bar()`.
 - "How it starts" strip (free 30-minute call, fixed-fee first review, appointment) sits above the home CTA and in short form on the contact page: `build.start_steps()` / `build.how_it_starts()`. A fee figure appears only when `PUBLISH_FEES = True`.
 - Contact form: Netlify attributes, `form-name` and the `company_site` honeypot are unchanged. New/renamed fields: `stage` (now a select, was checkboxes), `contact_method` (Email / Phone call / WhatsApp; phone becomes required for the last two), `based`, `area`, `budget`. Inline validation messages are HTML (so they translate); the script only shows them.
-- `/contact/thanks/` serves both forms. The newsletter posts to `/contact/thanks/#notes`, which swaps in the subscriber wording.
+- `/contact/thanks/` serves both forms. The newsletter posts to `/contact/thanks/#notes`, which swaps in the subscriber wording. The page reports `enquiry_success` or `newsletter_signup` accordingly (see "Conversion measurement" above).
 
 ## Design checks
 - `python3 tools/contrast_check.py` checks WCAG AA contrast for the colour pairs the stylesheet uses (reads the `:root` tokens). Run it after any palette change.

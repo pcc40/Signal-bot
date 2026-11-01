@@ -378,12 +378,12 @@ def send_form_html():
     return f'''<section class="section--tight paper calc-send" id="send"><div class="wrap split">
 <div><h2>Send this estimate to {first}</h2>
 <p class="muted">Your inputs and the line-by-line result go with the form, so there is nothing to retype. {esc(C.RESPONSE_PROMISE)}, with his view on whether the figures look realistic for your plot and specification. It is free and confidential.</p></div>
-<form class="form calc-send__form" name="estimate" method="POST" action="{THANKS_PATH}" data-netlify="true" netlify-honeypot="company_site" data-estimate>
+<form class="form calc-send__form" name="estimate" method="POST" action="{THANKS_PATH}" data-netlify="true" netlify-honeypot="company_site" data-estimate data-attr>
 <input type="hidden" name="form-name" value="estimate">
 <input type="hidden" name="estimate_inputs" value="">
 <input type="hidden" name="estimate_result" value="">
 <input type="hidden" name="estimate_link" value="">
-<input type="hidden" name="currency" value="AED">
+<input type="hidden" name="currency" value="AED">{B.attribution_inputs()}
 <p class="hp"><label>Leave this empty <input name="company_site" tabindex="-1" autocomplete="off"></label></p>
 <div class="row"><div><label for="e-name">Your name</label><input id="e-name" name="name" autocomplete="name" required></div>
 <div><label for="e-email">Email</label><input id="e-email" name="email" type="email" autocomplete="email" inputmode="email" required></div></div>
@@ -729,7 +729,7 @@ def estimate_thanks():
         ("A plain view of the numbers", "Whether the figures look realistic for the plot and specification, which lines carry the most risk, and what would firm them up."),
         ("A free 30-minute call, if it helps", "At a time that suits you, including UK and European hours. If a closer look is worthwhile, such as a plot review, we set out the scope and the fee in writing before we start" + (f": reviews are priced within our published range of {C.fee_text('review')}" if C.PUBLISH_FEES else "") + "."),
     ]
-    body = f'''<section class="page-head"><div class="wrap">{B.crumbs_html(crumbs)}<h1>Thank you. Your estimate is with {first}.</h1>
+    body = f'''{B.conversion_marker("estimate_request_success", "estimate")}<section class="page-head"><div class="wrap">{B.crumbs_html(crumbs)}<h1>Thank you. Your estimate is with {first}.</h1>
 <p class="lede">{esc(C.RESPONSE_PROMISE)}. We never pass your details to contractors or suppliers.</p></div></section>
 <section class="section--tight thanks"><div class="wrap">
 {B.steps_html(steps)}
