@@ -45,8 +45,8 @@ FOUNDED_TRACK_RECORD_YEARS = 21
 SOCIAL = [
     "https://www.instagram.com/eastbridgestrategicpartners/",
 ]
-GA4_ID = ""          # e.g. "G-XXXXXXX" — leave blank until Google Analytics is set up
-GSC_VERIFICATION = ""  # Google Search Console meta verification code
+GA4_ID = "G-120XT9N6XB"          # e.g. "G-XXXXXXX" — leave blank until Google Analytics is set up
+GSC_VERIFICATION = "oqg5vPdZKpefhBnXRRASYiH1mD9oZu147uoTHLs313I"  # Google Search Console meta verification code
 BING_VERIFICATION = ""
 INDEXNOW_KEY = "1d2397b03615846cedbf11228b7285b9"
 
