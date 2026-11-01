@@ -1,5 +1,36 @@
 """Area pages. Each one says something specific to the community. Authority routes are stated as
 'depending on your plot' — the master developer comes first, then Dubai Municipality, Trakhees or DDA."""
+from config import fee_text as _fee_text, PUBLISH_FEES as _SHOW_FEES
+
+# Island E owner-service section on /areas/dubai-islands/ (live audit, 1 November 2026: a clear conversion route for
+# the Island E ads). Facts only from the repo: the plot review deliverables and five-working-day commitment
+# (WRITING_BRIEF.md, services.py), the Review fee range from config.FEES, and the worked example, which is
+# HYPOTHETICAL and must never be described as completed work. No further Nakheel rules are asserted here.
+_REVIEW_FEE = (f"A plot review is priced within our Review range, {_fee_text('review')}, depending on the documents available "
+               "and your timetable. The scope and fee are confirmed in writing after the free call, before we start."
+               if _SHOW_FEES else
+               "A plot review is quoted in writing after the free call, before we start.")
+ISLAND_E_OWNERS = {
+ "id": "island-e",
+ "kicker": "Island E plot owners",
+ "h2": "Buying or building on an Island E plot",
+ "cta_href": "/contact/?service=plot-due-diligence&area=dubai-islands#brief",
+ "cta": "Ask about an Island E plot review",
+ "body": f"""<p><strong>Who it is for.</strong> Buyers and owners of an Island E villa plot, where you appoint your own designer and contractor and build your own house. If you are buying a villa or townhouse that the developer builds for you, this is not the review you need: the paragraph on developer-built homes above applies instead.</p>
+<p><strong>Get the plot documents first.</strong> Before you rely on any access date, floor-area allowance or build deadline, obtain the current documents for your plot in writing: the sale terms and the development controls that apply to it. Brochures and plot maps are not enough, and the Island E controls used in our worked example were a draft.</p>
+<h3>What the review produces</h3>
+<ul>
+<li>A written plot review report: a plain answer on whether the numbers work, and why.</li>
+<li>A summary of the design rules for the plot: coverage, heights, setbacks and materials.</li>
+<li>Notes on the sale terms, including build-by deadlines and any penalties, flagged for your lawyer.</li>
+<li>A realistic build budget range for the house you want, and the total cost around it.</li>
+<li>A short list of questions to put to the seller or developer.</li>
+</ul>
+<p>We deliver it within five working days of receiving the plot documents. {_REVIEW_FEE} See <a href="/fees/">how fees work</a>.</p>
+<h3>Already bought your plot?</h3>
+<p>Send us the documents you received at purchase. The same review then tests the house you want against the plot's rules and your contract's dates, and sets out a realistic budget and the next steps for design and approvals. If you want us to, we can then represent you from brief to handover.</p>
+<p>To see how we approach a plot like this, read our <a href="/case-studies/island-e-waterfront-villa/">Island E worked project example</a>. It is a hypothetical illustration of our method, with assumed figures and invented events, not a completed project.</p>""",
+}
 
 AREAS = [
  {
@@ -263,6 +294,7 @@ AREAS = [
    ("Nakheel: customer FAQs (NOCs and contractor requirements)", "https://www.nakheel.com/en/contact-us"),
   ],
   "services": ["plot-due-diligence", "villa-construction-project-management", "development-advisory"],
+  "owner_service": ISLAND_E_OWNERS,
  },
  {
   "slug": "palm-jebel-ali",
