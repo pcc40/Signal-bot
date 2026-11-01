@@ -247,12 +247,25 @@ CTA_TINY = "Free call"
 
 CTA_IMAGES = ["sea-glass-house-01", "owers-house-04", "the-lookout-01", "quay-house-03", "saqqara-01", "menwinnion-04"]
 
-def cta_band(title="Tell us about the house you want to build.", text=None, image=None):
+def cta_band(title="Tell us about the house you want to build.", text=None, image=None, contact="/contact/"):
     text = text or (f"{C.RESPONSE_PROMISE}. The first conversation is free. Nothing you send is published, and it is shared only with the service providers named in our privacy notice.")
     image = image or CTA_IMAGES[len(PAGES) % len(CTA_IMAGES)]
     return f'''<section class="cta-band" aria-labelledby="cta-h">{picture(image, "", "100vw")}
 <div class="wrap"><div><h2 id="cta-h">{esc(title)}</h2><p style="margin-top:1em;max-width:46ch">{esc(text)}</p></div>
-<div class="actions"><a class="btn" href="/contact/">{esc(CTA_LABEL)}</a><a class="btn btn--ghost" href="{wa_link()}" rel="noopener">WhatsApp us</a></div></div></section>'''
+<div class="actions"><a class="btn" href="{contact}">{esc(CTA_LABEL)}</a><a class="btn btn--ghost" href="{wa_link()}" rel="noopener">WhatsApp us</a></div></div></section>'''
+
+# WhatsApp message per page (competitor brief 2.4). The template and the topic are ordinary page text, so they
+# are translated like everything else; the script joins them and points every wa.me link on the page at the
+# result, in the page's language. Without the script, links keep the English sentence built here.
+WA_TPL_SERVICE = "Hello, I have a question about {topic}."
+WA_TPL_AREA = "Hello, I have a question about a villa project in {topic}."
+
+def wa_page_msgs(tpl, topic):
+    return (f'<div class="wa-msgs" id="wa-msgs" hidden><ul><li data-m="tpl">{esc(tpl)}</li>'
+            f'<li data-m="topic">{esc(topic)}</li></ul></div>')
+
+def wa_page_link(tpl, topic):
+    return wa_link(tpl.replace("{topic}", topic))
 
 def banner(crumbs, h1, lede=None, image="quay-house-01", credit=None, extra=""):
     l = f'<p class="lede">{lede}</p>' if lede else ""
@@ -396,9 +409,12 @@ if(hv&&mm('(min-width:900px)')&&!mm('(prefers-reduced-motion: reduce)')&&!(navig
 else if(hv&&hv.parentNode){hv.parentNode.removeChild(hv)}
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})}else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')})}
+var wm=document.getElementById('wa-msgs');if(wm){var wg=function(k){var e=wm.querySelector('[data-m="'+k+'"]');return e?e.textContent.trim():''},wt=wg('tpl').split('{topic}').join(wg('topic'));
+ if(wt)document.querySelectorAll('a[href^="https://wa.me"]:not([data-wa-estimate])').forEach(function(a){a.href=a.href.split('?')[0]+'?text='+encodeURIComponent(wt)})}
 if(location.hash==='#notes'){document.querySelectorAll('[data-thanks]').forEach(function(el){el.hidden=el.getAttribute('data-thanks')!=='notes'})}
 var fm=document.querySelector('form[data-enquiry]');
 if(fm){fm.setAttribute('novalidate','');
+ try{var qp=new URLSearchParams(location.search);[['service','f-service'],['area','f-area']].forEach(function(p){var v=(qp.get(p[0])||'').replace(/[^a-z0-9-]/g,''),sel=fm.querySelector('#'+p[1]),o=v&&sel?sel.querySelector('option[data-slug="'+v+'"]'):null;if(o)sel.value=o.value})}catch(e){}
  var ph=fm.querySelector('#f-phone'),phr=fm.querySelector('.ph-req'),pho=fm.querySelector('.ph-opt');
  var mark=function(el,ok){var w=el.closest('.field');if(!w)return;w.classList.toggle('invalid',!ok);if(ok)el.removeAttribute('aria-invalid');else el.setAttribute('aria-invalid','true');var m=w.querySelector('.err');if(m)m.hidden=ok};
  var check=function(el){var ok=el.checkValidity()&&!(el.required&&!el.value.trim());mark(el,ok);return ok};

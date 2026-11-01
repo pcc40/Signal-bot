@@ -271,7 +271,7 @@ AREAS = [
   "developer": "Nakheel",
   "tag": "New waterfront villas and plot builds",
   "title": "Palm Jebel Ali & Jebel Ali Village Villas | Eastbridge",
-  "description": "Building on a Jebel Ali Village plot or customising a Palm Jebel Ali villa? Independent client-side project management, plot review and handover snagging.",
+  "description": "Building on a Jebel Ali Village plot or customising a Palm Jebel Ali villa? Independent client-side project management, plot review and handover.",
   "h1": "Palm Jebel Ali and Jebel Ali Village",
   "lede": "Two Nakheel communities at very different stages: a new island of waterfront villas, and an established village of private plots.",
   "image": "the-lookout-02",
@@ -285,7 +285,7 @@ AREAS = [
 <h2>How we help</h2>
 <p>For new villas, <a href="/services/snagging-and-handover/">handover and the defects period</a> are one stage of our wider service, usually alongside customisation or upgrade work, so that what you receive matches what you paid for. For plot builds, we represent you from the first budget to the end of the defects period.</p>""",
   "faqs": [
-   ("Can you help with handover of my new Palm Jebel Ali villa?", "Yes, as one stage of a wider appointment, for example where we also represent you through customisation or upgrade work. That covers checking the villa against the contract and specification, commissioning and documents, and following defects through the defects period. We do not offer stand-alone snag reports."),
+   ("Can you help with handover of my new Palm Jebel Ali villa?", "Yes, as one stage of a wider appointment, for example where we also represent you through customisation or upgrade work. That covers checking the villa against the contract and specification, commissioning and documents, and following defects through the defects period. We do not offer stand-alone snag reports or a snagging-only fee. For a first pass on a developer villa, our free <a href=\"/guides/villa-snagging-checklist/\">snagging checklist</a> will help."),
    ("When will Palm Jebel Ali villas be handed over?", "Nakheel said in June 2026 that the island will open in phases rather than on one date, with the first residential handovers due by the end of 2026. Your own date is the one in your sale and purchase agreement and Nakheel's notices."),
    ("Can I build my own villa in Jebel Ali Village?", "Yes, on available plots, subject to Nakheel's guidelines and the authority permit."),
   ],
