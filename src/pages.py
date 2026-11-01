@@ -551,7 +551,7 @@ def fees():
 </div></div></section>
 <section class="section paper"><div class="wrap split"><div><h2>Questions about fees and money</h2></div><div>{B.faq_html(faqs)}</div></div></section>
 {B.cta_band("Start with a free 30-minute call.", f"{C.RESPONSE_PROMISE} to arrange a time. We will tell you which first step, if any, would help.")}'''
-    B.page("/fees/", "Owner's Representative Fees in Dubai: How We Charge | Eastbridge",
+    B.page("/fees/", "Owner's Representative Fees in Dubai | Eastbridge",
            "Fees for villa owner's representation in Dubai: a written scope of works, priced within published ranges for a review, part service or full service.",
            body, crumbs, [B.faq_schema(faqs)])
 

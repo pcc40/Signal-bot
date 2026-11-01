@@ -32,6 +32,7 @@ SERVICES = [
 <p>Philip leads every appointment personally, supported by a team of three project managers who attend site and provide cover when he is unavailable. How often we attend site and what we report are agreed in writing in your appointment before work starts, and capacity is confirmed before an appointment is accepted. Where the project needs a quantity surveyor, an engineer or another specialist, you appoint and pay them directly, and we help you compare proposals and choose. Our role is commercial and project management on your side; statutory design, authority submissions and supervision stay with your registered consultant. <a href="/approach/#uae-appointments">How an appointment works in the UAE</a>.</p>
 <p>{_COVERAGE}</p>""",
   "alongside": True,
+  "insight": ("client-side-project-manager-fees-dubai", "Client-side project manager fees in Dubai"),
   "does": [
    "Set a realistic budget, programme and brief before any design money is spent",
    "Help you choose and appoint a registered consultant and a main contractor, and agree fair terms with each",
@@ -286,9 +287,9 @@ SERVICES = [
   "image": "the-lookout-01",
   "stage": "Construction",
   "intro": """<p>On a Dubai villa, the registered consultant carries the statutory supervision role, and the contractor manages the works. Both report properly within their roles, but neither is appointed to report only to you. For an owner who is busy, often abroad, or simply not a builder, it is hard to know whether the project is really where the reports say it is.</p>
-<p>We visit site on your behalf, regularly and sometimes unannounced, and report what we see: progress against programme, quality of workmanship, safety and housekeeping, and anything that will cost money or time later. We raise issues with the consultant and contractor through the proper channels and track them until they are closed.</p>""",
+<p>We visit site for you, regularly and sometimes unannounced, and report what we see: progress against programme, quality of workmanship, safety and housekeeping, and anything that will cost money or time later. We raise issues with the consultant and contractor through the proper channels and track them until they are closed.</p>""",
   "does": [
-   "Scheduled and unannounced site visits on your behalf",
+   "Scheduled and unannounced site visits, reporting to you",
    "Progress checked against the programme, not against the contractor's report",
    "Workmanship and finish observations, with photographs",
    "Issues raised through your consultant and tracked to close-out",
@@ -351,14 +352,14 @@ SERVICES = [
   "slug": "variations-delays-and-claims",
   "short": "Variations, delays and claims",
   "name": "Variations, delays and construction claims advice",
-  "title": "Construction Claims & EOT Advice for Villa Owners | Eastbridge",
+  "title": "Villa Construction Claims and EOT Advice | Eastbridge",
   "description": "Client-side advice on variations, extension of time claims and delay on villa projects in Dubai, led by a builder who prepared and defended claims for 21 years.",
   "h1": "Variations and delay claims, handled by people who used to write them",
   "lede": "Philip spent two decades preparing and defending extension of time and variation claims under JCT contracts and through adjudication. We know how they are built, and where they are weak.",
   "image": "three-mile-beach-01",
   "stage": "Whenever the contract is tested",
   "intro": """<p>Variations and delay are where villa budgets are most often lost, and where owners are least equipped. A contractor's extension of time claim can look persuasive: a programme, a list of events, a delay analysis and a demand for time and money. Whether it is right depends on the contract, the records and the critical path, not on how persuasive it looks.</p>
-<p>We review variation requests and delay claims on your behalf, test them against the contract and the records, and help you reach a fair answer quickly. In our experience, disagreements are cheaper to resolve in the first month than the sixth. Where legal advice is needed, we work alongside your UAE-qualified lawyer and give them the construction analysis they need.</p>""",
+<p>We review variation requests and delay claims for you, test them against the contract and the records, and help you reach a fair answer quickly. In our experience, disagreements are cheaper to resolve in the first month than the sixth. Where legal advice is needed, we work alongside your UAE-qualified lawyer and give them the construction analysis they need.</p>""",
   "does": [
    "Review of variation requests: entitlement, price and time effect",
    "Extension of time claims tested against the programme and records",
@@ -369,7 +370,7 @@ SERVICES = [
   ],
   "gets": [
    "A clear view of what you owe, and what you don't",
-   "A response you can send, or one we send on your behalf",
+   "A draft response for you to send, set out on the facts",
    "Disagreements dealt with early and on the record",
   ],
   "builder_view": "A delay claim is only as strong as the contemporaneous records behind it. The side with better records is usually in the stronger position. We set up your records from the start, so that if a claim ever comes, the facts are already on your side.",

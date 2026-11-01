@@ -67,7 +67,7 @@ In our experience, four moments justify a flight.
 |---|---|
 | Before buying the plot | Orientation, views, neighbours, access and noise do not show up on an affection plan. See our [plot checks](/insights/buying-a-villa-plot-in-dubai-checks/). |
 | Design freeze | Walking the plot with the drawings in hand catches level, view and privacy problems while they are still cheap to fix. |
-| Finishes selection | Stone, timber, joinery samples and lighting look different under Dubai sun than on a screen. Approve physical samples and keep them on site as the reference. |
+| Finishes selection | Stone, timber, joinery samples and lighting look different under Dubai sun than on a screen. Approve physical samples and keep them on site as the reference. See [sourcing materials abroad](/insights/sourcing-materials-abroad-dubai-villa/). |
 | Pre-handover inspection | Snagging is a physical exercise. You need to open, run, flush and test things. Our [snagging checklist](/insights/villa-snagging-checklist-dubai/) covers what to look at. |
 
 A mid-construction visit, when the structure is complete and first-fix services are in, is also worth making. It is the last point at which you can see what is going into the walls and ceilings before it disappears.

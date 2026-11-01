@@ -18,7 +18,7 @@ faqs:
   - q: "How much contingency should I hold on a Dubai villa build?"
     a: "Engel & Völkers and Optimal Engineering both put it at 10–15%. In our experience the right figure depends on how complete the design is when you sign the building contract; the less resolved the design, the higher the contingency should be."
   - q: "Will build costs rise in 2026?"
-    a: "Currie & Brown forecast UAE construction cost inflation of around 3% for 2026, as cited by PRASOON. On a build lasting a year or more, it is sensible to allow for it in the budget."
+    a: "Currie & Brown forecast UAE cost escalation of around 3% for 2026, as reported by TradeArabia, and Turner & Townsend forecast 4% for Dubai. On a build lasting a year or more, it is sensible to allow for it in the budget."
 sources:
   - title: "Engel & Völkers: Construction cost in Dubai"
     url: "https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai"
@@ -30,8 +30,10 @@ sources:
     url: "https://assets.foleon.com/eu-central-1/de-uploads-7e3kk3/48604/uaemi_24_construction_cost_performance.58a8c5990842.pdf"
   - title: "Real Estate Club Dubai (property information website): villa architects, FF&E and approvals"
     url: "https://realestateclubdubai.com/dubai-villa-architects"
-  - title: "PRASOON: Owner's representative vs project manager in the UAE"
-    url: "https://prasoon.design/insights/owners-representative-vs-project-manager-uae"
+  - title: "TradeArabia: construction costs set to rise this year in Saudi Arabia and UAE (Currie & Brown, February 2026)"
+    url: "https://tradearabia.com/News/389130/Construction-costs-set-to-rise-this-year-in-Saudi-Arabia-and-UAE-report"
+  - title: "Turner & Townsend: UAE market intelligence 2025, construction cost performance"
+    url: "https://marketintelligence.turnerandtownsend.com/uaemi-2025/construction-cost-performance/"
   - title: "Gulf News: Dubai Municipality warns consultancies inflating villa designs"
     url: "https://gulfnews.com/uae/dubai-municipality-warns-consultancies-inflating-villa-designs-raising-costs-1.500245704"
 ---
@@ -56,7 +58,7 @@ Two cautions. First, these are averages across very different projects. A rectan
 
 ## What is included in the build cost, and what is not?
 
-The contractor's rate normally covers the building itself: substructure, frame, envelope, internal fit-out to the specified standard, and the mechanical, electrical and plumbing installations. It also includes the contractor's [preliminaries](/glossary/#preliminaries), the cost of running the site. Turner & Townsend put contractor preliminaries in Dubai at 12–14% (as cited by PRASOON), so a meaningful slice of every square foot is site management, welfare, temporary works, insurance and plant rather than the building you will live in.
+The contractor's rate normally covers the building itself: substructure, frame, envelope, internal fit-out to the specified standard, and the mechanical, electrical and plumbing installations. It also includes the contractor's [preliminaries](/glossary/#preliminaries), the cost of running the site. Turner & Townsend's 2025 UAE market intelligence puts contractor preliminaries in Dubai at 12% on a 2,500 m² project and 14% on a 50,000 m² one, so a meaningful slice of every square foot is site management, welfare, temporary works, insurance and plant rather than the building you will live in.
 
 What is usually outside the rate:
 
@@ -86,7 +88,7 @@ Engel & Völkers and Optimal Engineering both put it at 10–15%. We would add o
 
 ### Pools, landscaping and FF&E
 
-Optimal Engineering prices a pool at AED 80k–120k for a basic fibreglass pool and AED 150k–250k for a standard concrete one, and AED 400k or more for a luxury pool. For landscaping and furniture we have found no industry source; a [property information website](https://realestateclubdubai.com/dubai-villa-architects) gives landscaping at AED 100–500 per sq ft of garden and FF&E at 30–40% of build cost at the top end of the market. FF&E is the line owners most often forget, and on a luxury villa it can be one of the largest.
+Optimal Engineering prices a pool at AED 80k–120k for a basic fibreglass pool and AED 150k–250k for a standard concrete one, and AED 400k or more for a luxury pool. For landscaping and furniture we have found no industry source; a [property information website](https://realestateclubdubai.com/dubai-villa-architects) gives landscaping at AED 100–500 per sq ft of garden and FF&E at 30–40% of build cost at the top end of the market. FF&E is the line owners most often forget, and on a luxury villa it can be one of the largest. If stone, joinery or fittings are coming from abroad, add shipping, duty and lead time to the budget early; see [sourcing materials abroad for a Dubai villa](/insights/sourcing-materials-abroad-dubai-villa/).
 
 ## What does a 10,000 sq ft luxury villa cost to build in Dubai?
 
@@ -120,7 +122,7 @@ Our founder spent 21 years running a premium building company whose houses won R
 
 **Over-design.** In August 2025, Dubai Municipality warned villa consultancies about over-designing structures and inflating build costs (Gulf News). An over-specified frame or foundation is cost you pay for without seeing it.
 
-**Delay.** Every extra month on site means another month of the contractor's preliminaries. With preliminaries at 12–14% of the contract (Turner & Townsend, via PRASOON), a long overrun is expensive before a single extra brick is laid. Our guide to [how long it takes to build a villa in Dubai](/insights/how-long-to-build-a-villa-dubai/) explains where programmes usually slip. We cover this in more detail in [what a builder knows that most villa owners don't](/insights/what-the-contractor-knows/).
+**Delay.** Every extra month on site means another month of the contractor's preliminaries. With preliminaries at 12–14% of the contract (Turner & Townsend), a long overrun is expensive before a single extra brick is laid. Our guide to [how long it takes to build a villa in Dubai](/insights/how-long-to-build-a-villa-dubai/) explains where programmes usually slip. We cover this in more detail in [what a builder knows that most villa owners don't](/insights/what-the-contractor-knows/).
 
 ## How do you protect a villa construction budget?
 

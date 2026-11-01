@@ -38,8 +38,8 @@ sources:
     url: "https://www.khaleejtimes.com/uae/dubai-ai-system-villa-construction-permits"
   - title: "Khaleej Times: UAE midday break starts 15 June 2026"
     url: "https://www.khaleejtimes.com/uae/uae-midday-break-starts-june-15-work-under-direct-sunlight-banned-during-peak-afternoon-hours?amp=1"
-  - title: "PRASOON: Owner's representative vs project manager in the UAE"
-    url: "https://prasoon.design/insights/owners-representative-vs-project-manager-uae"
+  - title: "Turner & Townsend: UAE market intelligence 2025, construction cost performance"
+    url: "https://marketintelligence.turnerandtownsend.com/uaemi-2025/construction-cost-performance/"
 ---
 A custom villa in Dubai typically takes 12–24 months from plot to keys, and 24–36 months for a custom luxury villa, according to a [property information website](https://realestateclubdubai.com/dubai-villa-architects). Construction itself is usually 8–14 months; the rest goes on design, approvals, choosing a contractor and handover. On most projects the months that are lost are lost on paper, before and during the build, not in the concrete and blockwork.
 
@@ -125,7 +125,7 @@ On the contractor's side, we always planned the programme so that the client's d
 
 ## Why does delay cost so much?
 
-Because many of the contractor's site costs are time-related. Turner & Townsend put contractor preliminaries in Dubai at 12–14% of the contract (as cited by PRASOON). Those costs are priced per week or per month, so every extra month on site carries its own cost before any additional work is done. Add the owner's own costs, such as rent elsewhere, finance and currency exposure, and a three-month overrun becomes a significant line in the budget. Our guide to [what it costs to build a villa in Dubai](/insights/villa-construction-cost-dubai/) sets out the full budget.
+Because many of the contractor's site costs are time-related. Turner & Townsend's 2025 UAE market intelligence puts contractor preliminaries in Dubai at 12% of construction cost on a 2,500 m² project, and 14% on a 50,000 m² one ([Turner & Townsend](https://marketintelligence.turnerandtownsend.com/uaemi-2025/construction-cost-performance/)). Those costs are priced per week or per month, so every extra month on site carries its own cost before any additional work is done. Add the owner's own costs, such as rent elsewhere, finance and currency exposure, and a three-month overrun becomes a significant line in the budget. Our guide to [what it costs to build a villa in Dubai](/insights/villa-construction-cost-dubai/) sets out the full budget.
 
 ## How can you shorten the time to build a villa?
 

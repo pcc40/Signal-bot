@@ -2,7 +2,7 @@
 title: "Owner's rep vs project manager vs consultant in Dubai"
 description: "Owner's representative, project manager and registered consultant compared for Dubai villa builds: who does what, conflicts, and when you need each."
 date: 2026-10-29
-updated: 2026-10-31
+updated: 2026-11-01
 category: "Choosing a team"
 keypoints:
   - "Your registered consultant designs the villa and carries the statutory technical role; only registered firms may do this under Dubai Law No. 14 of 2025."
@@ -16,7 +16,7 @@ faqs:
   - q: "Can an owner's representative replace my consultant in Dubai?"
     a: "No. Only registered consultancies may practise engineering consultancy in Dubai. The consultant's design and statutory role cannot be handed to an owner's representative; the two roles work alongside each other."
   - q: "How much does an owner's representative cost?"
-    a: "Internationally, owner's representative and project management fees are often estimated at roughly 2–5% of construction cost. PRASOON notes that no credible published benchmark exists for Dubai, so fees should be agreed against a defined scope."
+    a: "There is no published benchmark for owner's representative fees in Dubai. Firms charge a percentage of construction cost, a monthly fee or a fixed fee per review, so compare what each fee covers: the named people, the site attendance, the reports and the exclusions. Agree the fee against a written scope. Our guide to client-side project manager fees in Dubai sets out the questions to ask any firm."
   - q: "Do I need an owner's representative if I use a design-and-build company?"
     a: "It is worth considering. With design and build, one firm designs, prices and builds, so nobody independent is checking the design against your budget or the price against the market unless you arrange it."
 sources:
@@ -26,8 +26,6 @@ sources:
     url: "https://www.mediaoffice.ae/en/news/2025/october/05-10/mohammed-bin-rashid"
   - title: "Al Tamimi: Dubai law regulating engineering consultancy activities"
     url: "https://www.tamimi.com/news/dubai-issues-new-law-regulating-engineering-consultancy-activities-key-takeaway-points/"
-  - title: "PRASOON: Owner's representative vs project manager in the UAE"
-    url: "https://prasoon.design/insights/owners-representative-vs-project-manager-uae"
   - title: "Gulf News: Dubai Municipality warns consultancies inflating villa designs"
     url: "https://gulfnews.com/uae/dubai-municipality-warns-consultancies-inflating-villa-designs-raising-costs-1.500245704"
   - title: "Dubai Municipality: contract forms for private villas"
@@ -124,7 +122,7 @@ To be straightforward about it, not every villa needs one.
 - The budget matters to you and you want someone with no stake in the price testing it.
 - The project has stalled or is in dispute.
 
-Fees are commonly estimated at roughly 2–5% of construction cost internationally, although PRASOON notes there is no credible published benchmark for Dubai. The test is simple: would independent control of cost, programme and variations save more than it costs? On a straightforward villa, it may not. On a complex one, in our experience, it usually does.
+There is no published benchmark for owner's representative fees in Dubai; our guide to [client-side project manager fees in Dubai](/insights/client-side-project-manager-fees-dubai/) compares the fee models and lists the questions to ask any firm, including us. The test is simple: would independent control of cost, programme and variations save more than it costs? On a straightforward villa, it may not. On a complex one, in our experience, it usually does.
 
 ## What should you ask before appointing an owner's representative?
 

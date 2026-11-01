@@ -85,11 +85,11 @@ The table covers the communities we write about most. It is a planning aid, not 
 | Area | Emirate | Master developer (first approval) | Permit authority | What it changes for your programme |
 |---|---|---|---|---|
 | [Palm Jumeirah](/areas/palm-jumeirah/) | Dubai | Nakheel NOC | Confirm with your consultant | Nakheel NOC before any authority submission; Nakheel site-access conditions before the contractor mobilises |
-| Jumeirah Islands | Dubai | Nakheel NOC | Confirm with your consultant | Nakheel NOC first; extensions and external changes need written approval before design is fixed |
+| [Jumeirah Islands](/areas/jumeirah-islands/) | Dubai | Nakheel NOC | Confirm with your consultant | Nakheel NOC first; extensions and external changes need written approval before design is fixed |
 | [Dubai Islands](/areas/dubai-islands/) | Dubai | Nakheel NOC and guidelines | Confirm with your consultant | Plot builds start with Nakheel's design guidelines; allow for a developer review stage before the permit |
 | [Palm Jebel Ali](/areas/palm-jebel-ali/) | Dubai | Nakheel | Confirm with your consultant | Developer villas are built under Nakheel's own approvals; owner changes after handover need a Nakheel NOC first |
 | [Emirates Hills](/areas/emirates-hills/) | Dubai | Emaar design review | Confirm with your consultant | Emaar review of a large, one-off design can take more than one round; programme it before the permit |
-| Arabian Ranches | Dubai | Emaar NOC | Confirm with your consultant | Emaar NOC for extensions and external works before any authority permit |
+| [Arabian Ranches](/areas/arabian-ranches/) | Dubai | Emaar NOC | Confirm with your consultant | Emaar NOC for extensions and external works before any authority permit |
 | [Dubai Hills Estate](/areas/dubai-hills-estate/) | Dubai | Emaar (with Meraas) review | Confirm with your consultant | Sub-community guidelines differ; plot builds and villa extensions both start with developer review |
 | [Jumeirah Bay Island](/areas/jumeirah-bay/) | Dubai | Meraas (Dubai Holding) review | Confirm with your consultant | Developer design review against the island's guidelines comes before the authority permit |
 | [District One, MBR City](/areas/district-one/) | Dubai | Meydan Sobha review | Confirm with your consultant | Plot builds, villa upgrades and shell-and-core fit-outs each have a different developer approval route |

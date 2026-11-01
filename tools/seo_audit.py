@@ -19,7 +19,7 @@ TITLE_MAX = 60  # English titles, including the " | Eastbridge" suffix
 # English pages whose titles are over TITLE_MAX and are owned by another work round (fees page in src/pages.py
 # fees(), claims service in src/content/services.py). They report as warnings until shortened; any other page
 # over TITLE_MAX is an error. Remove an entry once its title is 60 characters or fewer.
-LONG_TITLE_PENDING = {"/fees/", "/services/variations-delays-and-claims/"}
+LONG_TITLE_PENDING = set()
 BANNED_TYPES = {"Review", "AggregateRating", "Rating", "EmployerAggregateRating", "HowTo", "HowToStep",
                 "HowToSection", "HowToDirection", "GovernmentService"}
 BANNED_PROPS = {"review", "reviews", "aggregateRating", "reviewRating"}
