@@ -25,6 +25,12 @@ Site-wide changes: technical SEO and AI-search pass (structured data, `llms.txt`
 
 Calculator: all live-updating text is translated (fixed in the October review round; `node tools/calc_check.js --strict` checks it).
 
+## Snagging lead magnet (November 2026)
+- `/guides/villa-snagging-checklist/` and `/guides/villa-snagging-checklist/thanks/` (thanks is noindex): second lead magnet, The Villa Snagging Checklist PDF, 13 pages (`src/pages_guides.py`; PDF and cover built by `python3 tools/make_snagging_pdf.py`, which reuses the design system in `tools/make_checklist_pdf.py`). Commit the regenerated PDF and `-cover.webp`.
+- Both guides post to the same Netlify form, `checklist`, with identical fields; the hidden field `guide` (`villa-owner-checklist` or `villa-snagging-checklist`) tells them apart. `submission-created.js` writes `guide` to the sheet row and the log line; add a `guide` column header to the Leads sheet and the updated `COLS` from `business/automation-blueprint.md` section 4 to the Apps Script.
+- Linked from `/insights/villa-snagging-checklist-dubai/` (body and end CTA: Handover-category articles show the snagging CTA), the snagging service page, `/tools/`, the footer and `llms.txt`.
+- The defects-liability periods in the PDF (`LIABILITY`) and in the article must stay in step: Civil Transactions Law 1985 arts 880–883 (new law, Federal Decree-Law No. 25 of 2025, arts 821–824, for contracts from 1 June 2026) and Dubai Law No. 6 of 2019 art. 40.
+
 ## Business documents (`business/`)
 - `business/first-client-plan.md` — ideal client profiles, referral partners, founding-client offer, 14-day sprint and 30/60/90 plan, discovery call script and objections
 - `business/automation-blueprint.md` — lead capture, auto-acknowledgement, CRM, booking, WhatsApp, proposals and payment, onboarding, reporting, cost of the stack, and Phil's one-time checklist (section 14)

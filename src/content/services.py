@@ -358,7 +358,8 @@ SERVICES = [
   "image": "ansells-01",
   "stage": "Practical completion and defects period",
   "intro": """<p>A good handover is quiet. The snag list is short because quality was managed throughout, the systems have been tested and demonstrated, and a full set of documents is waiting. A poor handover is a long list, a frustrated contractor who wants to leave, and months of chasing.</p>
-<p>We plan handover from the start of construction, not the end. We inspect room by room and system by system, witness commissioning, compile the snag list with the consultant and contractor, and make sure the documents you'll need for the life of the house are collected before retention is released.</p>""",
+<p>We plan handover from the start of construction, not the end. We inspect room by room and system by system, witness commissioning, compile the snag list with the consultant and contractor, and make sure the documents you'll need for the life of the house are collected before retention is released.</p>
+<p>Doing a first pass yourself? Download our free <a href="/guides/villa-snagging-checklist/">villa snagging checklist</a>: systems and rooms with tick boxes and a severity column, the handover documents to collect, and the defects liability periods with their legal sources.</p>""",
   "does": [
    "Pre-handover inspection, room by room and system by system",
    "Witnessing of commissioning: air conditioning, water, pool, lighting controls, security",
@@ -373,7 +374,7 @@ SERVICES = [
   ],
   "builder_view": "Snag lists stall when they are vague, very long or issued late. Clear photographs, specific locations, and a list issued in sections as areas finish are the fastest way to get every item closed. Retention is your leverage. Spend it wisely.",
   "faqs": [
-   ("What should I check before accepting a new villa?", "Waterproofing, drainage and roof areas, air conditioning performance, plumbing and hot water, electrical and lighting controls, glazing and doors, finishes, pool and external works. Our <a href=\"/insights/villa-snagging-checklist-dubai/\">snagging checklist</a> goes room by room."),
+   ("What should I check before accepting a new villa?", "Waterproofing, drainage and roof areas, air conditioning performance, plumbing and hot water, electrical and lighting controls, glazing and doors, finishes, pool and external works. Our <a href=\"/insights/villa-snagging-checklist-dubai/\">snagging guide</a> goes room by room, and the <a href=\"/guides/villa-snagging-checklist/\">printable checklist</a> adds a severity column and a snag log."),
    ("Can you snag a villa we bought from a developer?", "Yes. We provide independent snagging for completed developer villas as well as private builds."),
    ("What documents should I receive at handover?", "At least the completion certificate, as-built drawings, warranties and guarantees, operation and maintenance manuals, test certificates and keys and codes schedules."),
   ],

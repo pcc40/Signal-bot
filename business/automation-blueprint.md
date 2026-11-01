@@ -138,7 +138,8 @@ const TOKEN = 'paste-the-same-long-random-string';
 const COLS = ['received','form','status','name','email','phone','area','stage','budget','based',
   'message','contact_method','marketing_opt_in','marketing_source','page','language','submission_id',
   'owner','next_action','next_action_date',
-  'source','fee_estimate_aed','probability','proposal_sent','decision_date','lost_reason','notes'];
+  'source','fee_estimate_aed','probability','proposal_sent','decision_date','lost_reason','notes',
+  'guide'];  // which lead magnet a "checklist" row came from; added Nov 2026 (add a "guide" header to an existing sheet)
 function doPost(e) {
   const body = JSON.parse(e.postData.contents || '{}');
   if (TOKEN && body.token !== TOKEN) return ContentService.createTextOutput('forbidden');

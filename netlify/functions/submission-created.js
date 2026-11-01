@@ -7,6 +7,9 @@
 //      "checklist" form -> no email (the download is shown on the thank-you page),
 //                          unless the visitor ticked the optional notes box, in which
 //                          case they get the same subscription confirmation as "notes".
+//                          Both lead magnets post to "checklist"; a hidden field "guide"
+//                          says which one (villa-owner-checklist or villa-snagging-checklist).
+//                          It is written to the sheet row and the log line.
 //   2. Optionally emails an internal lead alert for "brief" (LEAD_ALERT_TO).
 //   3. Optionally logs every submission to a Google Sheet (SHEET_WEBHOOK_URL, a Google
 //      Apps Script web app; see business/automation-blueprint.md, section 4).
@@ -78,6 +81,15 @@ function isOptedIn(formName, data) {
 function marketingSource(formName, optedIn) {
   if (!optedIn) return "";
   return formName === "notes" ? "notes form" : `ticked box on ${formName} form`;
+}
+
+// Lead magnets that post to the "checklist" form (hidden field name="guide").
+// Submissions from before the field existed carry no value and count as the original guide.
+const GUIDES = ["villa-owner-checklist", "villa-snagging-checklist"];
+function guideOf(data) {
+  const v = String((Array.isArray(data && data.guide) ? data.guide[0] : data && data.guide) || "").trim();
+  if (!v) return GUIDES[0];
+  return GUIDES.includes(v) ? v : "unknown";
 }
 
 const asText = (v) => (Array.isArray(v) ? v.join(", ") : v == null ? "" : String(v)).slice(0, 5000);
@@ -279,6 +291,9 @@ exports.handler = async (event) => {
     page: referrer,
     language: langFromReferrer(referrer),
     submission_id: payload.id || "",
+    // Which lead magnet a "checklist" submission came from. Only known slugs are kept, so the
+    // log never carries free text typed into a forged field.
+    guide: formName === "checklist" ? guideOf(d) : "",
   };
 
   const results = {};
@@ -320,10 +335,11 @@ exports.handler = async (event) => {
     }
   }
 
-  console.log("submission-created", formName, payload.id || "", "marketing_opt_in=" + lead.marketing_opt_in, JSON.stringify(results));
+  console.log("submission-created", formName, payload.id || "", ...(lead.guide ? ["guide=" + lead.guide] : []),
+    "marketing_opt_in=" + lead.marketing_opt_in, JSON.stringify(results));
   // Always 200: the submission itself is already stored by Netlify Forms.
   return { statusCode: 200, body: JSON.stringify(results) };
 };
 
 // Exposed for tools/test_submission_function.js only.
-exports._test = { isOptedIn, briefEmail, notesEmail, alertEmail };
+exports._test = { isOptedIn, briefEmail, notesEmail, alertEmail, guideOf };

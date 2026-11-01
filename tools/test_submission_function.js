@@ -91,6 +91,27 @@ const test = async (name, f) => { await f(); passed++; console.log("ok  " + name
     assert.match(r.toCustomer[0].body.text, /philip@eastbridgestrategicpartners\.com/);
   });
 
+  await test("checklist guide field: snagging guide logged; missing means the original guide; forged value is not echoed", async () => {
+    const logs = [];
+    const orig = console.log;
+    console.log = (...a) => logs.push(a.join(" "));
+    let r;
+    try {
+      r = await submit("checklist", { name: "Sarah Example", email: "sarah@example.com", guide: "villa-snagging-checklist" });
+    } finally {
+      console.log = orig;
+    }
+    assert.strictEqual(r.sheet[0].body.row.guide, "villa-snagging-checklist");
+    assert.strictEqual(r.sheet[0].body.row.status, "Checklist download");
+    assert.ok(logs.some((l) => /submission-created checklist .*guide=villa-snagging-checklist/.test(l)), "guide in log line");
+    r = await submit("checklist", { name: "Sarah Example", email: "sarah@example.com" });
+    assert.strictEqual(r.sheet[0].body.row.guide, "villa-owner-checklist");
+    r = await submit("checklist", { name: "Sarah Example", email: "sarah@example.com", guide: "<script>x</script>" });
+    assert.strictEqual(r.sheet[0].body.row.guide, "unknown");
+    r = await submit("brief", base);
+    assert.strictEqual(r.sheet[0].body.row.guide, "");
+  });
+
   await test("notes form: subscribing is the opt-in, confirmation includes manual unsubscribe route", async () => {
     const r = await submit("notes", { email: "sarah@example.com" });
     assert.strictEqual(r.sheet[0].body.row.marketing_opt_in, "yes");

@@ -318,7 +318,7 @@ def footer():
 <p>{esc(C.ADDRESS["street"])}<br>{esc(C.ADDRESS["locality"])}, {esc(C.ADDRESS["country_name"])}</p></div>
 <div><h3>Services</h3><ul>{svc}<li><a href="/services/">All services</a></li></ul></div>
 <div><h3>Where we work</h3><ul>{ar}<li><a href="/areas/">All areas</a></li></ul></div>
-<div><h3>Firm</h3><ul><li><a href="/why-a-client-side-project-manager/">Why client-side</a></li><li><a href="/case-studies/">Case studies</a></li><li><a href="/work/">Work</a></li><li><a href="/about/">About</a></li><li><a href="/approach/">How we work</a></li><li><a href="/independence/">Independence pledge</a></li><li><a href="/fees/">How fees work</a></li><li><a href="/tools/villa-build-cost-calculator/">Cost calculator</a></li><li><a href="/insights/">Insights</a></li><li><a href="/guides/villa-owner-checklist/">Pre-construction checklist</a></li><li><a href="/faq/">Questions</a></li><li><a href="/glossary/">Glossary</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+<div><h3>Firm</h3><ul><li><a href="/why-a-client-side-project-manager/">Why client-side</a></li><li><a href="/case-studies/">Case studies</a></li><li><a href="/work/">Work</a></li><li><a href="/about/">About</a></li><li><a href="/approach/">How we work</a></li><li><a href="/independence/">Independence pledge</a></li><li><a href="/fees/">How fees work</a></li><li><a href="/tools/villa-build-cost-calculator/">Cost calculator</a></li><li><a href="/insights/">Insights</a></li><li><a href="/guides/villa-owner-checklist/">Pre-construction checklist</a></li><li><a href="/guides/villa-snagging-checklist/">Snagging checklist</a></li><li><a href="/faq/">Questions</a></li><li><a href="/glossary/">Glossary</a></li><li><a href="/contact/">Contact</a></li></ul></div>
 </div>
 <div class="legal"><span>© {year} {C.LEGAL}. {C.LICENCE}. Eastbridge acts as the client's project manager and representative. It is not a contractor and does not replace the registered consultant of record required by the authorities.</span>
 <span><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/sitemap.xml">Sitemap</a></span></div>
@@ -363,7 +363,7 @@ if(fm){fm.setAttribute('novalidate','');
   if(bad){e.preventDefault();bad.focus();return}
   var sb=fm.querySelector('button[type=submit]');if(sb){sb.setAttribute('aria-disabled','true');sb.classList.add('is-sending')}
   if(window.gtag)gtag('event','generate_lead',{form:'brief'})})}
-var gf=document.querySelector('form[data-guide]');if(gf){gf.addEventListener('submit',function(){if(window.gtag)gtag('event','generate_lead',{form:'checklist'})})}
+var gf=document.querySelector('form[data-guide]');if(gf){gf.addEventListener('submit',function(){if(window.gtag)gtag('event','generate_lead',{form:'checklist',guide:gf.elements.guide?gf.elements.guide.value:''})})}
 document.querySelectorAll('a[href^="https://wa.me"]').forEach(function(a){a.addEventListener('click',function(){if(window.gtag)gtag('event','contact',{method:'whatsapp'})})});
 })();
 </script>"""
@@ -591,7 +591,8 @@ def llms_facts():
 
 LLMS_FULL_PAGES = ["/about/", "/why-a-client-side-project-manager/", "/services/"]  # + every service page
 LLMS_FULL_TAIL = ["/approach/", "/independence/", "/fees/", "/faq/", "/work/owers-house/", "/case-studies/island-e-waterfront-villa/",
-                  "/tools/villa-build-cost-calculator/", "/glossary/", "/guides/villa-owner-checklist/"]
+                  "/tools/villa-build-cost-calculator/", "/glossary/", "/guides/villa-owner-checklist/",
+                  "/guides/villa-snagging-checklist/"]
 LLMS_DROP = ("script", "style", "svg", "noscript", "form", "button", "img", "picture", "iframe")
 LLMS_DROP_CLASS = {"crumbs", "cta-band", "credit", "toc", "article-aside", "post-cards", "strip", "work-grid",
                    "video", "hero-video", "scroll-cue", "aside-links", "mega", "actions"}
@@ -686,7 +687,8 @@ def write_llms(posts):
         ["", "## Areas"] + [f"- [{a['name']}]({url('/areas/' + a['slug'] + '/')}): {a['tag']}; master developer {a['developer']}" for a in AREAS] + \
         ["", "## Guides"] + [f"- [{p['title']}]({url('/insights/' + p['slug'] + '/')}): {p['description']} (updated {post_dates(p)[1].isoformat()})" for p in posts] + \
         ["", "## Tools", f"- [Villa build and renovation cost calculator]({url('/tools/villa-build-cost-calculator/')}): indicative low, likely and high costs for building or renovating a villa in Dubai or Abu Dhabi, with design fees, approvals, contingency and timeline; every rate cited to published 2025-26 sources"] + \
-        ["", "## Free guide", f"- [The Villa Owner's Pre-Construction Checklist (Dubai & Abu Dhabi)]({url('/guides/villa-owner-checklist/')}): free 10-page PDF of practical checks by stage: plot purchase, brief and budget, choosing a consultant and contractor, contract terms, monthly checks during construction, snagging and handover. Direct PDF: {url('/assets/guides/villa-owner-checklist.pdf')}"] + \
+        ["", "## Free guides", f"- [The Villa Owner's Pre-Construction Checklist (Dubai & Abu Dhabi)]({url('/guides/villa-owner-checklist/')}): free 10-page PDF of practical checks by stage: plot purchase, brief and budget, choosing a consultant and contractor, contract terms, monthly checks during construction, snagging and handover. Direct PDF: {url('/assets/guides/villa-owner-checklist.pdf')}",
+         f"- [The Villa Snagging Checklist (Dubai & Abu Dhabi)]({url('/guides/villa-snagging-checklist/')}): free 13-page printable PDF: systems and room-by-room snagging checks with a severity column, handover documents and who issues them, defects liability periods with their legal sources (UAE Civil Transactions Law arts 880-883; Dubai Law No. 6 of 2019 art. 40), and a snag log. Direct PDF: {url('/assets/guides/villa-snagging-checklist.pdf')}"] + \
         ["", "## About",
          f"- [About Eastbridge and Philip Chapman]({url('/about/')})", f"- [How we work]({url('/approach/')})",
          f"- [Independence pledge]({url('/independence/')})", f"- [How fees work]({url('/fees/')})",
