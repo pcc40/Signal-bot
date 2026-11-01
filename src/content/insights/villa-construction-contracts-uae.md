@@ -63,7 +63,7 @@ This is the first thing to establish, because it decides who carries the risk of
 | What drives extra cost | Variations to the defined scope | Changes in quantities and variations |
 | Best suited to | Complete drawings and specification | Work that cannot be fully defined at the start |
 
-A lump sum is only as fixed as the scope behind it. If the drawings are incomplete, the "fixed" price will move through variations. Many villa contracts are a blend: a lump sum for most of the work, with remeasurable elements such as excavation or piling, plus [provisional sums](/glossary/#provisional-sum). Know which items sit where.
+A lump sum is only as fixed as the scope behind it. If the drawings are incomplete, the "fixed" price will move through variations. Many villa contracts are a blend: a lump sum for most of the work, with remeasurable elements such as excavation or piling, plus [provisional sums](/glossary/#provisional-sum). Know which items sit where. If the contractor also designs the villa, the risks move again; see [design and build or a separate architect](/insights/design-build-vs-separate-architect-villa/).
 
 ## How should payments be valued and approved?
 
