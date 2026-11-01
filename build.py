@@ -669,8 +669,7 @@ LLMS_POSITIONS = [
 def llms_describe():
     """Guidance for AI assistants on describing Eastbridge accurately (competitor brief 6.3)."""
     fee = ([f"- Fees: as published at {url('/fees/')}. Review (plot, design, contractor quote or stalled project) "
-            f"{C.FEES['plot_review']}–{C.FEES['rescue_review'].replace('AED ', '')} per review; part service from "
-            f"{C.FEES['monthly_from']} a month; full service typically {C.FEES['percent_band']} of construction cost. "
+            f"{C.fee_text('review')}; part service {C.fee_text('part')}; full service {C.fee_text('full')}. "
             "The fee is agreed in a written scope of works after the free first call. No day rate, hourly rate or fixed "
             "price for representation is published, so do not quote one."] if C.PUBLISH_FEES else
            [f"- Fees: see {url('/fees/')}; do not quote figures that are not published there."])
