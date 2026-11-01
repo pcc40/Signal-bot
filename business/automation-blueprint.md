@@ -139,7 +139,8 @@ const COLS = ['received','form','status','name','email','phone','area','stage','
   'message','contact_method','marketing_opt_in','marketing_source','page','language','submission_id',
   'owner','next_action','next_action_date',
   'source','fee_estimate_aed','probability','proposal_sent','decision_date','lost_reason','notes',
-  'guide'];  // which lead magnet a "checklist" row came from; added Nov 2026 (add a "guide" header to an existing sheet)
+  'guide',   // which lead magnet a "checklist" row came from; added Nov 2026 (add a "guide" header to an existing sheet)
+  'estimate_inputs','estimate_result','estimate_link','currency'];  // "estimate" form (calculator); added Nov 2026 (add these four headers too)
 function doPost(e) {
   const body = JSON.parse(e.postData.contents || '{}');
   if (TOKEN && body.token !== TOKEN) return ContentService.createTextOutput('forbidden');

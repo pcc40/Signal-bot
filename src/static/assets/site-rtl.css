@@ -878,7 +878,6 @@ body.bare{background:#fff;padding-bottom:0}
   [data-print-url]{direction:ltr;unicode-bidi:isolate}
   .calc-print-contact{color:#111}
 }
-=======
 /* ---------- Glossary ---------- */
 .g-intro{display:grid;grid-template-columns:7fr 4fr;gap:clamp(28px,5vw,80px);align-items:end}
 .g-tools label{display:block;font-weight:600;font-size:var(--s--1);margin-bottom:.4em}
@@ -909,7 +908,6 @@ body.has-hero .g-az{top:83px}
 .g-foot{padding-top:clamp(32px,4vw,56px)}
 @media (max-width:900px){.g-intro{grid-template-columns:1fr}.g-letter{grid-template-columns:1fr}.g-letter > h2{font-size:var(--s-4)}}
 @media (max-width:640px){.g-az ul{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;-webkit-overflow-scrolling:touch}}
-=======
 /* Lead magnet: pre-construction checklist */
 .guide-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:start}
 .guide-cover img{width:100%;max-width:440px;height:auto;box-shadow:0 30px 60px -20px rgba(10,14,16,.45),0 2px 6px rgba(10,14,16,.12);border:1px solid var(--line)}
@@ -985,6 +983,10 @@ html,body{overflow-x:clip}
   .tool-page .calc-h{font-size:8.5pt;letter-spacing:.12em;text-transform:uppercase;margin:6pt 0 2pt;break-after:avoid}
   .tool-page .calc-print-inputs{grid-template-columns:auto 1fr auto 1fr;column-gap:10pt}
   .tool-page .calc-print-foot{margin-top:4pt;padding-top:4pt}
+  .tool-page .tool-h-side{display:none}
+  .tool-page .tool-card .calc-total b{font-size:17pt}
+  .tool-page .tool-card{padding-top:4pt}
+  .tool-page .calc-table th,.tool-page .calc-table td{padding-top:1pt!important;padding-bottom:1pt!important}
   .tool-page .calc-label{font-size:8pt;letter-spacing:.12em;text-transform:uppercase;color:#4A5357;margin:4pt 0 0}
   .tool-page .calc-total b{font-size:20pt;line-height:1.05}
   .tool-page .calc-range{font-size:9pt;color:#333;margin-top:1pt}
