@@ -685,7 +685,10 @@ def tools_hub():
 <h3><a href="{CALC_PATH}">Villa build and renovation cost calculator</a></h3>
 <p>Low, likely and high costs for a new build or renovation, with design fees, approvals, contingency, furniture and an indicative timeline. Built from published 2025–26 market ranges, each one cited.</p>
 <p><a class="btn" href="{CALC_PATH}">Open the calculator</a></p>
-{OT.hub_html()}<h3>Further reading</h3>
+{OT.hub_html()}<h3>Free printable checklists</h3>
+<ul><li><a href="/guides/villa-owner-checklist/">The Villa Owner’s Pre-Construction Checklist</a>: the questions to answer at each stage, from the plot to the end of the defects period.</li>
+<li><a href="/guides/villa-snagging-checklist/">The Villa Snagging Checklist</a>: systems and rooms with a severity column, the handover documents to collect and the defects liability periods.</li></ul>
+<h3>Further reading</h3>
 <ul><li><a href="/insights/villa-construction-cost-dubai/">What it costs to build a villa in Dubai</a></li>
 <li><a href="{OT.RR_ARTICLE}">Renovate or rebuild a villa in Dubai?</a></li>
 <li><a href="{OT.STALLED}">What to do when a villa build stalls</a></li>

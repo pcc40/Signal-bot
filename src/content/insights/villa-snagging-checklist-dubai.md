@@ -2,35 +2,47 @@
 title: "Snagging a new villa in Dubai: what to check before handover"
 description: "A room-by-room and systems snagging checklist for a new Dubai villa, the handover documents to collect, and how to use retention to get snags closed out."
 date: 2026-10-25
-updated: 2026-10-29
+updated: 2026-11-01
 category: "Handover"
 keypoints:
-  - "Snag the systems first (waterproofing, AC, drainage, pool, electrics), because cosmetic defects are cheap to fix and system defects are not."
-  - "Test things under load: run every AC unit, fill every bath, flush every drain and leave the pool circulating before you sign anything."
-  - "Do not accept handover without the completion certificate, as-built drawings, warranties and O&M manuals in hand or on a dated list."
+  - "Snag the systems first (waterproofing, AC, drainage, pool, electrics) and test them under load: run every AC unit, fill every bath and leave the pool circulating before you sign anything."
+  - "Do not accept handover without the completion certificate (issued by Dubai Municipality, Trakhees or the Dubai Development Authority), as-built drawings, warranties and O&M manuals in hand or on a dated list."
+  - "Under the UAE Civil Transactions Law, the contractor and the engineer are jointly liable for 10 years from delivery of the work for collapse and defects that threaten the building's stability or safety; a claim must be brought within 3 years of the collapse or discovery of the defect."
+  - "For a unit bought from a developer in jointly owned property in Dubai, the developer is liable for structural parts for 10 years from the completion certificate and for installations for 1 year from handover; on a private build, other defects are covered by your contract's defects liability period."
   - "Retention and the final payment are your leverage; once they are released, snag lists tend to stall."
-  - "A good snag list is specific, located, photographed and numbered, so nobody can argue about what was meant."
 faqs:
   - q: "When should I snag a new villa in Dubai?"
     a: "Inspect once the contractor says the work is complete and before you accept handover or release further payment. Ideally do a pre-handover inspection, let the contractor close items, then re-inspect. Published guidance allows around one to two months for snagging."
   - q: "What is the defects liability period on a Dubai villa?"
-    a: "It is whatever your contract says. Many contracts set a period, often a year, during which the contractor must return to fix defects. Check your contract and take advice from a UAE-qualified lawyer if the wording is unclear."
+    a: "On a private build, ordinary defects are covered by the defects liability period in your contract. Separately, the UAE Civil Transactions Law makes the contractor and the engineer jointly liable for 10 years from delivery of the work for collapse and for defects that threaten the building's stability or safety. For a unit bought from a developer in jointly owned property in Dubai, Dubai Law No. 6 of 2019 makes the developer liable for structural parts for 10 years from the completion certificate and for installations for 1 year from handover. Take advice from a UAE-qualified lawyer on how these apply to your villa."
+  - q: "Does the 10-year liability run from handover or from the completion certificate?"
+    a: "For the contractor and the engineer, Article 880(3) of the Civil Transactions Law says the ten years start from delivery of the work, which in practice is handover. The completion certificate is the start point for a developer's structural liability under Article 40 of Dubai Law No. 6 of 2019. The two are often confused. Contracts made from 1 June 2026 fall under the new Civil Transactions Law, which law-firm commentary says keeps the ten-year regime in Articles 821 to 824."
   - q: "Should I pay the final instalment before the snags are fixed?"
     a: "In our experience, no. Hold the final payment and any retention in line with your contract until agreed snags are closed and the handover documents are delivered. Check what the contract allows before withholding anything."
   - q: "Do I need a professional to snag my villa?"
     a: "You can do a first pass yourself with this checklist, but system testing, moisture readings and thermal checks benefit from experienced eyes and the right equipment."
 sources:
-  - title: "Real Estate Club Dubai: villa architects and build timelines"
-    url: "https://realestateclubdubai.com/dubai-villa-architects"
-  - title: "Dubai Municipality: residential building permit procedures"
-    url: "https://dmpmedia.dm.gov.ae/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf"
+  - title: "Federal Law No. 5 of 1985, Civil Transactions Law, Articles 880 to 883 (official Arabic text, published by Dubai Municipality)"
+    url: "https://www.dm.gov.ae/documents/federal-law-no-5-of-1985-concerning-the-issuance-of-the-civil-transactions-law-of-the-united-arab-emirates/"
+  - title: "Dubai Law No. 6 of 2019 concerning Ownership of Jointly Owned Real Property, Article 40 (Dubai Legislation Portal)"
+    url: "https://dlp.dubai.gov.ae/Legislation%20Reference/2019/Law%20No.%20%286%29%20of%202019%20Concerning%20Ownership%20of%20Jointly%20Owned%20Real%20Property%20in%20the%20Emirate%20of%20Dubai.html"
+  - title: "Kayrouz & Associates: decennial liability and the new UAE Civil Code (April 2026)"
+    url: "https://www.kayrouzandassociates.com/insights/decennial-liability-uae-contractors-engineers-2026"
   - title: "Charles Russell Speechlys: decennial liability under the new UAE Civil Code"
     url: "https://www.charlesrussellspeechlys.com/en/insights/expert-insights/construction-engineering-and-projects/2026/decennial-liability-and-subcontractors-under-the-new-uae-civil-code-articles-821-to-824/"
+  - title: "Bracewell: the UAE's new Civil Code explained (effective date and transition)"
+    url: "https://www.bracewell.com/resources/the-uaes-new-civil-code-explained-practical-changes-for-businesses-and-investors/"
+  - title: "Dubai Municipality: residential building permit procedures"
+    url: "https://dmpmedia.dm.gov.ae/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf"
+  - title: "Meraas: guide to the title deed and Oqood"
+    url: "https://meraas.com/en/latest-post/journal/guide-title-deed-and-oqood"
+  - title: "Real Estate Club Dubai: villa architects and build timelines"
+    url: "https://realestateclubdubai.com/dubai-villa-architects"
 ---
 
 Snagging a new villa in Dubai means testing every system under real conditions and inspecting every finish before you accept the keys, then holding enough leverage to get the defects fixed. Start with waterproofing, air conditioning, drainage, the pool and electrics, because those are expensive to put right later. Collect the completion certificate, as-built drawings, warranties and operation and maintenance manuals before you sign off.
 
-Below is the checklist we use, followed by the documents to collect and the contractor's view of how snag lists get closed or stalled.
+Below is the checklist we use, a way to grade each defect, the documents to collect, how long the builder stays liable, and the contractor's view of how snag lists get closed or stalled. If you want it on paper, download the [printable villa snagging checklist](/guides/villa-snagging-checklist/), with tick boxes, a severity column and a snag log.
 
 ## When should you snag a new villa?
 
@@ -121,24 +133,53 @@ Inspect in daylight and again with artificial light at a low angle, which shows 
 
 Photograph each item, give it a number and location, and describe the remedy expected. "Paint poor in bedroom" will get a dab of paint. "Bedroom 2, north wall, paint coverage patchy across full wall, repaint wall to match" gets the wall repainted.
 
+## How serious is each defect?
+
+Grade every snag as you write it. It tells the contractor what must be done before handover and tells you how much money to keep back. This is our working classification, not a legal category; your contract decides what must be complete at handover.
+
+| Severity | Villa examples | What to ask for |
+|---|---|---|
+| Critical | Cracking in structural elements; water coming through a roof, terrace or basement; an electrical safety fault such as failed earth leakage protection; an insecure balustrade | Do not accept handover with it open. Ask for the cause to be investigated, the remedy agreed in writing with your registered consultant, and the work re-inspected before you sign |
+| Major | AC that cannot hold temperature; wrong falls to drains or terraces; hollow tiles in wet areas; failing glazing seals; a pool losing water | Fixed before handover, or listed with a written completion date and enough of the final payment or retention held back to cover it |
+| Minor | Paint coverage, scratches and chips, untidy silicone, misaligned doors or joinery, missing door stops | Numbered, photographed and listed, with an agreed close-out date, and checked at the joint re-inspection |
+
+On the contractor's side, the first thing we did with a long snag list was sort it by what would stop us getting paid. Grading it yourself means you set that order, not the contractor.
+
 ## What documents should you collect at handover?
 
 Do not accept the keys without these, or at least a dated list of what is outstanding and when it will be delivered.
 
-- **Completion certificate** from the relevant authority (Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits), plus any master developer completion or no-objection letters.
-- **As-built drawings** for architecture, structure and all MEP services, showing what was actually built, including concealed pipe and cable routes.
-- **Warranties and guarantees**: waterproofing, AC equipment, pool, glazing and façade systems, roofing, appliances, pumps, and any structural guarantees. Check whose name they are in and when they start.
-- **Operation and maintenance (O&M) manuals** for every system, with maintenance schedules and supplier contacts.
-- **Test and commissioning certificates**: electrical, plumbing pressure tests, AC commissioning, fire and life safety where applicable.
-- **Utility account details** and confirmation of connections.
-- **Keys, access cards, remotes and passwords**, with a signed schedule.
-- **Spare materials**: tiles, stone and paint from the same batch, for future repairs.
+| Document | Who issues it | What to check |
+|---|---|---|
+| Building completion certificate | The permitting authority: Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits, after the final inspection your consultant and contractor request ([Dubai Municipality](https://dmpmedia.dm.gov.ae/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf)) | Plot number and the building described match yours |
+| Master developer completion letter or no-objection letter | The master developer, where the community requires one | Any conditions still open |
+| Title deed (villa bought from a developer) | Dubai Land Department, after completion and handover ([Meraas](https://meraas.com/en/latest-post/journal/guide-title-deed-and-oqood)) | Names, unit and plot details |
+| Utility connections and accounts | DEWA and the telecoms provider, once the completion certificate is issued | Meter readings and the date you become responsible |
+| As-built drawings for architecture, structure and all MEP services | Your registered consultant and the contractor, as your contracts require | They show concealed pipe and cable routes as built |
+| Test and commissioning certificates | The contractor and specialist subcontractors | Electrical, plumbing pressure tests, AC commissioning, fire and life safety where applicable |
+| Warranties and guarantees | Manufacturers and specialist subcontractors, through the main contractor | Waterproofing, AC, pool, glazing and façade, roofing, appliances and pumps: whose name they are in and when they start |
+| Operation and maintenance (O&M) manuals | The contractor, compiled from each specialist | Maintenance schedules and supplier contacts for every system |
+| Keys, access cards, remotes and passwords | The contractor | A signed schedule |
+| Spare tiles, stone and paint | The contractor, as the specification requires | Same batch as installed, for future repairs |
 
-Under UAE law, the main contractor and the engineer carry a ten-year liability for serious structural defects from handover, now set out in Articles 821 to 824 of the new Civil Code ([Charles Russell Speechlys](https://www.charlesrussellspeechlys.com/en/insights/expert-insights/construction-engineering-and-projects/2026/decennial-liability-and-subcontractors-under-the-new-uae-civil-code-articles-821-to-824/)). That covers structural matters, not leaking showers. The handover documents are what let you enforce the rest. Take advice from a UAE-qualified lawyer on how liability applies to your project.
+## How long is the builder liable for defects in Dubai?
 
-## Defects liability period and retention
+Two different ten-year clocks exist, and they start at different moments. The builder's liability under the federal Civil Transactions Law runs from delivery of the work. A developer's liability for structural parts under Dubai's jointly owned property law runs from the completion certificate. Mixing them up is the usual source of confusion.
 
-Most villa contracts include a [defects liability period](/glossary/#defects-liability-period) after handover, during which the contractor must come back and fix defects that appear. The length and the mechanics are set by your contract, so read it before handover, not after.
+| Defect | Period | Runs from | Who is liable | Source |
+|---|---|---|---|---|
+| Collapse, or a defect that threatens the stability or safety of the building | 10 years, or longer if the contract says so | Delivery of the work (handover) | The contractor and the engineer, jointly; an engineer who only designed is liable for design defects only | [Civil Transactions Law 1985, arts 880 and 881](https://www.dm.gov.ae/documents/federal-law-no-5-of-1985-concerning-the-issuance-of-the-civil-transactions-law-of-the-united-arab-emirates/) |
+| Making a claim under that liability | Within 3 years | The collapse, or discovery of the defect | Brought by the owner | Art. 883 |
+| A clause excluding or limiting that liability | Void | – | – | Art. 882 |
+| Structural parts of a unit bought from a developer (jointly owned property, Dubai) | 10 years | The project's completion certificate | The developer | [Dubai Law No. 6 of 2019, art. 40(a)](https://dlp.dubai.gov.ae/Legislation%20Reference/2019/Law%20No.%20%286%29%20of%202019%20Concerning%20Ownership%20of%20Jointly%20Owned%20Real%20Property%20in%20the%20Emirate%20of%20Dubai.html) |
+| Mechanical, electrical, sanitary and sewerage installations in that unit | 1 year | Handover of the unit, or the completion certificate if the owner does not take possession | The developer | Art. 40(b) |
+| Other defects on a private build | The defects liability period in your contract | As the contract says | The contractor | Your construction contract |
+
+The ten-year rule is in Article 880 of the 1985 Civil Transactions Law, which states that the period begins from delivery of the work. In practice that is usually the date in the taking-over certificate ([Kayrouz & Associates](https://www.kayrouzandassociates.com/insights/decennial-liability-uae-contractors-engineers-2026)). The new Civil Transactions Law, Federal Decree-Law No. 25 of 2025, came into force on 1 June 2026, and contracts made before that date are generally still governed by the old law ([Bracewell](https://www.bracewell.com/resources/the-uaes-new-civil-code-explained-practical-changes-for-businesses-and-investors/)). Commentary on the new law says it largely keeps the ten-year regime, now in Articles 821 to 824 ([Charles Russell Speechlys](https://www.charlesrussellspeechlys.com/en/insights/expert-insights/construction-engineering-and-projects/2026/decennial-liability-and-subcontractors-under-the-new-uae-civil-code-articles-821-to-824/)).
+
+That ten-year liability covers collapse and structural safety, not leaking showers. Day-to-day defects on a private build depend on the [defects liability period](/glossary/#defects-liability-period) in your contract, so read it before handover, not after. Whether Dubai Law No. 6 of 2019 applies to your villa depends on how the community is set up. Take advice from a UAE-qualified lawyer on how these periods apply to your project, and notify defects in writing as your contract requires.
+
+### Retention and the final payment
 
 Retention is money held back from payments and released in stages, often part at handover and the rest at the end of the defects period. Together with the final payment, it is your main leverage. Our general rule of thumb: do not release more than the contract requires until the agreed snags are closed and the handover documents are delivered. Check your contract and take legal advice before withholding sums the contractor considers due.
 

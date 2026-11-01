@@ -602,8 +602,11 @@ def legal():
     B.page("/terms/", "Website Terms | Eastbridge Strategic Partners", "Terms of use for the Eastbridge Strategic Partners website.", body, crumbs)
 
 # ---------------------------------------------------------------- insights
-def guide_cta():
+def guide_cta(p=None):
+    """The free-guide CTA at the end of an article: the snagging guide for handover articles, else the pre-construction one."""
     import pages_guides
+    if p and p.get("category") == "Handover":
+        return pages_guides.snag_cta_block()
     return pages_guides.cta_block()
 
 def insights(posts):
@@ -649,7 +652,7 @@ def insights(posts):
 <div class="author"><img class="mono" src="/assets/img/philip-chapman-thumb.webp" width="52" height="52" alt="" loading="lazy"><div><b>{esc(C.FOUNDER["name"])}, {esc(C.FOUNDER["role"])}</b><span class="small muted">Founded and ran P Chapman Construction, a £17m UK builder of award-winning homes, for 21 years. Now represents villa owners in Dubai and Abu Dhabi. <a href="/about/#founder">About Philip</a></span></div></div>
 {('<h2 id="faq">Questions</h2>' + B.faq_html(faqs)) if faqs else ""}
 {('<h2 id="sources">Sources</h2><ol class="small">' + srcs + '</ol>') if srcs else ""}
-{guide_cta()}
+{guide_cta(p)}
 <p class="small muted" style="margin-top:2em">This article is general information, not advice for your specific project. Figures are from the sources cited and change over time.</p>
 </div>
 <aside class="article-aside" aria-label="Talk to us"><div class="aside-card">{pic(svc_img_for(p), "", "(max-width:980px) 100vw, 30vw")}<div><h3>Planning a villa in Dubai?</h3><p>Talk it through with Philip. The first conversation is free and confidential.</p><a class="btn" href="/contact/">{esc(B.CTA_LABEL)}</a></div></div>
