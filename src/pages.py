@@ -460,7 +460,7 @@ def faq_page():
     crumbs = [("Home", "/"), ("Questions", "/faq/")]
     body = B.banner(crumbs, "Questions villa owners ask us", None, "quay-house-07", credit_of("quay-house-07")) + f'''
 <section class="section--tight"><div class="wrap">{B.faq_html(FAQ_ALL)}</div></section>{B.cta_band("Ask us anything else.")}'''
-    B.page("/faq/", "Villa Owner's Representative FAQ: Dubai & Abu Dhabi | Eastbridge",
+    B.page("/faq/", "Owner's Representative FAQ: Dubai & Abu Dhabi | Eastbridge",
            "Answers to common questions about owner's representation, villa build costs, timelines, fees, independence and working with Eastbridge in Dubai and Abu Dhabi.",
            body, crumbs, [B.faq_schema(FAQ_ALL)])
 
@@ -614,7 +614,7 @@ def insights(posts):
     items = "".join(f'<li><a href="/insights/{p["slug"]}/"><div><h3>{esc(p["title"])}</h3><p>{esc(p["description"])}</p></div><div class="meta">{esc(p.get("category",""))}<br>{datetime.date.fromisoformat(str(p["date"])).strftime("%-d %b %Y")}</div></a></li>' for p in posts)
     body = B.banner(crumbs, "Insights", "Straight answers for villa owners in Dubai and Abu Dhabi: costs, approvals, contracts and choosing a team, written from the builder's side of the table. New to the jargon? Start with our <a href=\"/glossary/\">villa construction glossary</a>.", "quay-house-04", credit_of("quay-house-04")) + f'''
 <section class="section"><div class="wrap">{post_cards(posts)}</div></section>{B.cta_band()}'''
-    B.page("/insights/", "Villa Building Insights for Dubai & Abu Dhabi Owners | Eastbridge",
+    B.page("/insights/", "Villa Building Insights: Dubai & Abu Dhabi | Eastbridge",
            "Guides for villa owners in Dubai and Abu Dhabi: build costs, approvals, contractors, contracts, snagging and renovation, from the builder's side.",
            body, crumbs)
     for i, p in enumerate(posts):

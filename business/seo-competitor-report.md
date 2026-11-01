@@ -136,6 +136,10 @@ From these fetches, none of the eight shows verifiable Google review counts on i
 
 **For Eastbridge:** set up a Google Business Profile as soon as there is a real, staffed business address that Google's guidelines accept. Never seed reviews. Reviews from P Chapman Construction clients belong to the UK company, not Eastbridge, and must not be presented as Eastbridge reviews.
 
+### 3.3 Next competitor round
+
+**[Ovrex Global](https://ovrexglobal.com/)** (ovrexglobal.com) is on the owner's list as a new owner-side project management firm in the UAE, to be profiled in the next round. Its public site could not be read on 1 November 2026: every request to the home page and `/about` returned HTTP 503 or had the connection reset, and searches for "Ovrex" and "ovrexglobal" in the search tool returned no pages from the site and no coverage of the firm. Nothing about its services, people, credentials, schema, llms.txt or rankings has been confirmed, so none is recorded here. Next round: fetch the home page, sitemap, service pages and any llms.txt; record what it says it is (owner's representative, PMC, contractor or consultant), whether it names principals, which communities it targets, whether it publishes fees, and where it appears in the section 2 target queries.
+
 ---
 
 ## 4. Eastbridge's current pages (inventory)
