@@ -13,22 +13,55 @@ AREAS = [
   "h1": "Palm Jumeirah villas: renovations, extensions and rebuilds",
   "lede": "The fronds were largely built around twenty years ago. Today most serious work on the Palm is the transformation of an existing villa, and that brings a particular set of risks.",
   "image": "quay-house-02",
-  "body": """<h2>What owners on the Palm are usually doing</h2>
-<p>The Signature, Garden Home and Canal Cove villas on the fronds were delivered as a series of standard types. Owners now want larger openings to the water, new pools and terraces, modern kitchens and bathrooms, extensions, new façades and, increasingly, complete rebuilds that replace the original house with something designed from scratch. Each of these has a different approval path and a very different risk profile.</p>
-<h2>The approval route</h2>
-<p>Palm Jumeirah is a Nakheel community. Almost anything beyond like-for-like interior finishes starts with a <a href="/insights/nakheel-noc-villa-renovation/">Nakheel NOC</a> application, assessed against Nakheel's community guidelines, before the building permit is issued by the relevant authority depending on your plot. Extensions, façade changes, pools, structural alterations and rebuilds always need both. Your appointed consultant or licensed contractor prepares and submits the applications; we coordinate the programme so approvals don't hold up the works or, worse, get overtaken by them.</p>
+  "body": """<h2>What makes Palm Jumeirah different</h2>
+<p>Palm Jumeirah is a reclaimed island built by Nakheel, and the villas on its fronds were delivered as a small number of standard types: Signature Villas, Garden Homes and Canal Cove townhouses. Neighbouring houses therefore started life almost identical, and much of what you see on the fronds today is the result of twenty years of owners changing them.</p>
+<p>That history shapes every project here in three ways. First, almost all serious work is a change to an existing house rather than a build on a fresh plot, so what the villa is today matters as much as what you want it to become. Second, Nakheel controls how far a standard type can move from its original form, and it looks at each application on its own merits. Third, the island sets the working conditions: narrow frond roads, neighbours close on both sides, strict community rules on hours and deliveries, and the sea a few metres from the back wall.</p>
+<p>The setting is also the technical challenge. Salt air, wind-blown sand, humidity and groundwater close to the surface work on twenty-year-old waterproofing, metalwork and services. On the contractor's side, we learned on coastal houses that the price is built from the outside in: the envelope and the water first, the finishes last. A Palm villa is no different, and the budgets that fail are usually the ones that started with the kitchen.</p>
+<h2>Renovate, extend or rebuild?</h2>
+<p>Owners on the Palm usually arrive with one of four briefs, and each puts the project on a different approval path with a different risk profile.</p>
+<ul>
+<li><strong>Interior renovation.</strong> Kitchens, bathrooms, floors, joinery and lighting. Nakheel's guidance is that owners may make changes that do not affect the external façade or structure, but an NOC from its Urban Planning team is still needed before any alteration. Once walls, wet areas or services move, the scope stops being cosmetic.</li>
+<li><strong>Renovation with external work.</strong> Larger openings to the water, a new pool, shading, terraces and landscaping. These change how the villa looks from the frond and the beach, so they sit squarely within Nakheel's review and need an authority permit as well.</li>
+<li><strong>Extension.</strong> Adding built-up area on the ground or at roof level. This is where the Palm's arrangements for additional area and roof-level work apply, covered below.</li>
+<li><strong>Rebuild.</strong> Demolishing the original house and building new. When the brief already needs new structure, a new envelope and new services, you are paying for most of a new house without the freedom of a new design. A rebuild takes longer and needs a full design and approval cycle, but it deserves to be priced alongside the renovation, not dismissed.</li>
+</ul>
+<p>The comparison only works with real inputs: a condition survey with opening-up, a design developed far enough to price, and a programme that includes approvals and the cost of living elsewhere while the work is done. Our <a href="/tools/villa-build-cost-calculator/">build and renovation cost calculator</a> gives a sourced first range for both routes, and our guides to <a href="/insights/villa-renovation-cost-dubai/">renovation costs</a> and <a href="/insights/villa-construction-cost-dubai/">construction costs</a> explain where the published figures come from.</p>
+<h2>How approvals work on the Palm</h2>
+<p>Palm Jumeirah is a Nakheel community, so the master developer comes first. Nakheel asks owners to obtain an NOC from its Urban Planning team before making any alterations, requested online or through the My Nakheel app. Gulf News reported Nakheel's position that modification applications are assessed case by case, that various costs apply, that work must be carried out by approved contractors, and that owners with unpaid service charges are not permitted to modify their villas. With the NOC in hand, your registered consultant applies for the building permit from Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits, through Dubai's unified permit window.</p>
+<p>Approval is not the same as access. Before a contractor starts, Nakheel requires a security deposit, a Site Access Permit and a PVC site fence, and it charges AED 52.50 per person for long-term workforce access permits on construction, modification and extension work. Our guide to the <a href="/insights/nakheel-noc-villa-renovation/">Nakheel NOC</a> sets out the sequence in detail. Your appointed consultant or licensed contractor prepares and submits the applications. We keep the programme honest, so that the contractor's start date follows approvals in hand rather than the date the contract was signed.</p>
+<h2>The Villa Status Report: start from what is really there</h2>
+<p>Many Palm villas have already been altered, some with approval and some without: a covered terrace, an enclosed courtyard, a room on the roof. Before new work is considered, the question is how the villa as it stands compares with what Nakheel approved. Owners and agents usually call the inspection that answers it the Villa Status Report. Nakheel's own customer guidance confirms that for a completed villa an inspection report is required before an NOC for transfer can be requested, so the same question arises when you buy and when you sell.</p>
+<p>The mechanism matters more than the name. Where the inspection finds built area or structures that do not match the approved drawings, those items generally have to be regularised or removed, and the cost falls on whoever owns the villa at the time. In another Nakheel community, Gulf News reported owners discovering unapproved work when they came to sell, and then paying a fine and a charge for the extra space. If you are buying a Palm villa that has been extended, ask the seller for the NOC and approved drawings for every change and have the house compared with them before you commit. If you already own the villa, establish its status before design starts, not after the drawings are finished.</p>
+<h2>Buying additional area</h2>
+<p>On the Palm, adding floor area is a commercial question with Nakheel as well as a design and permit question. Nakheel has sold additional land to Palm villa owners who wanted larger gardens, assessing each application individually, and owners extending villas in Nakheel communities have reported charges linked to the area added, on top of NOC and authority fees. Nakheel confirms the fees that apply when it reviews a request, and rates have changed over the years, so we do not publish a figure here. For your budget, the point is simple: have the charge confirmed in writing for your specific proposal before the design is fixed, and carry it as its own line in the cost plan rather than leaving it to the contingency.</p>
+<h2>Roof-level restrictions</h2>
+<p>The roof looks like the obvious place to add space: a roof terrace, a pergola, a gym or a full additional floor. What is permitted at roof level depends on the guidelines for your villa type, the height and coverage limits that apply to your plot, and how the change affects neighbours' views and privacy along the frond. Nakheel decides what it will accept, and the authority permit follows. Some sales listings advertise extra floors and roof rooms; a listing is not evidence of approval. Ask for the NOC and approved drawings for anything above the original roofline, and put any roof-level idea to Nakheel early, before money is spent on detailed design.</p>
+<p>Roofs are also where water gets in. Any work at roof level is the moment to replace failed waterproofing properly, flood-test it and record the result, rather than building a new terrace on an old membrane.</p>
 <h2>Where Palm projects go wrong</h2>
 <ul>
 <li><strong>Water.</strong> Twenty-year-old waterproofing, salt-laden air and high water tables. Roofs, terraces, wet rooms and basements need opening up and testing before the price is agreed, not after.</li>
 <li><strong>Services.</strong> Original air conditioning, plumbing and electrical installations rarely survive a serious renovation. Budgets that assume they will are budgets that will be broken.</li>
-<li><strong>Access and logistics.</strong> Fronds are narrow, neighbours are close and community rules on working hours and deliveries are strict. Contractors who haven't worked on the Palm often under-price this.</li>
-<li><strong>Renovate or rebuild.</strong> When most of the house is changing, a rebuild can cost less per square foot of finished space and produce a far better house. The comparison needs real numbers.</li>
+<li><strong>Access and logistics.</strong> Fronds are narrow, neighbours are close and community rules on working hours and deliveries are strict. Contractors who have not worked on the Palm often under-price this.</li>
+<li><strong>Inherited alterations.</strong> Earlier work without approval, discovered after you have bought, designed and priced, can stop a project until it is resolved.</li>
 </ul>
 <h2>How we help on the Palm</h2>
-<p>We start with a condition review arranged through the right specialists and a straight renovate-or-rebuild comparison. Then we set a budget with a contingency matched to the age of the villa, help you choose a contractor experienced in occupied, tightly-ruled communities, and represent you through the works. Our <a href="/insights/palm-jumeirah-villa-renovation/">Palm Jumeirah renovation guide</a> covers the process in more detail.</p>""",
+<p>We start by establishing what you actually own: the villa's approval history, a condition review arranged through the right specialists, and a straight renovate-or-rebuild comparison. Then we set a budget with a contingency matched to the age of the villa, help you choose a contractor experienced in occupied, tightly ruled communities, and represent you through the works and the defects period. Our <a href="/insights/palm-jumeirah-villa-renovation/">Palm Jumeirah renovation guide</a> covers the process in more detail.</p>""",
   "faqs": [
-   ("Do I need a Nakheel NOC to renovate my Palm Jumeirah villa?", "For most work beyond like-for-like interior finishes, yes. Extensions, façades, pools and structural changes always need a Nakheel NOC followed by an authority permit."),
-   ("Is it better to renovate or rebuild a Palm Jumeirah villa?", "If you are changing most of the house, rebuild is worth costing properly. It often produces a better house at a similar or lower cost per square foot of finished space, though it takes longer."),
+   ("Do I need a Nakheel NOC to renovate my Palm Jumeirah villa?", "Nakheel's guidance is that an NOC from its Urban Planning team is needed before any alteration. Extensions, façades, pools and structural changes also need a building permit from Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits."),
+   ("What is a Villa Status Report?", "It is the name owners and agents usually give to the inspection that compares a villa as it stands with what Nakheel approved. Nakheel requires an inspection report before an NOC for transfer on a completed villa, and unapproved alterations found this way generally have to be regularised or removed before new work goes ahead."),
+   ("Can I add a floor or a roof terrace to my Palm villa?", "Possibly, but it is Nakheel's decision. What is allowed at roof level depends on the guidelines for your villa type, the height and coverage limits for your plot and the effect on neighbours. Put the idea to Nakheel before detailed design, and treat sales listings of extra floors as claims, not approvals."),
+   ("How much does Nakheel charge to extend a Palm villa?", "Nakheel confirms the fees when it reviews a request, and owners extending villas in Nakheel communities have reported charges linked to the area added. Rates have changed over time, so get the charge for your proposal confirmed in writing before the design is fixed."),
+   ("How much does a Palm Jumeirah rebuild or renovation cost?", "It depends on scope, size and specification. For a rebuild, Engel & Völkers puts luxury construction at AED 900 to 1,400 per sq ft, and Knight Frank put high-end villas at about AED 11,000 per square metre in Q2 2025, before design, approvals, interiors and landscaping. For a first range on your own villa, use our <a href='/tools/villa-build-cost-calculator/'>cost calculator</a> and <a href='/insights/villa-renovation-cost-dubai/'>renovation cost guide</a>."),
+   ("Is it better to renovate or rebuild a Palm Jumeirah villa?", "If you are changing most of the house, a rebuild is worth costing properly. It often produces a better house at a similar or lower cost per square foot of finished space, though it takes longer and needs a full design and approval cycle."),
+  ],
+  "sources": [
+   ("Nakheel: customer FAQs (NOCs, inspection report before transfer, access permits, contractor requirements)", "https://www.nakheel.com/en/contact-us"),
+   ("Gulf News: Reptiles OK but no poultry in villas (Emaar and Nakheel community rules, 2018)", "https://gulfnews.com/uae/reptiles-ok-but-no-poultry-in-villas-1.1174994"),
+   ("Gulf News: Jumeirah Islands owners prevented from modifying villas without approval (2018)", "https://gulfnews.com/news/gulf/uae/jumeirah-islands-owners-prevented-from-modifying-villas-without-approval-1.1172089"),
+   ("Middle East Construction News: Nakheel offers villa owners on The Palm more land", "https://meconstructionnews.com/1694/nakheel-offers-villa-owners-on-the-palm-more-land/amp"),
+   ("Dubai Municipality: Dubai launches single window for building permits", "https://www.dm.gov.ae/dubai-launches-single-window-for-building-permits/"),
+   ("Engel & Völkers: construction cost in Dubai (December 2025)", "https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai"),
+   ("Gulf Construction: Knight Frank villa construction costs, Q2 2025", "https://gulfconstructiononline.com/ArticleTA/436847"),
   ],
   "services": ["villa-renovation-project-management", "owners-representative", "snagging-and-handover"],
  },
@@ -43,22 +76,49 @@ AREAS = [
   "h1": "Emirates Hills: building and remodelling at the top of the market",
   "lede": "Large plots, long sightlines over the golf course and some of the most ambitious private houses in the city. The scale is what makes control difficult.",
   "image": "owers-house-02",
-  "body": """<h2>The kind of project here</h2>
-<p>Emirates Hills was laid out as plots for owners to build on, so the community is a mix of original houses, remodelled houses and new mansions built on cleared plots. Projects are large: generous basements, multiple wings, staff accommodation, landscaped grounds and pools. Build costs at this level sit in the luxury and ultra-luxury bands of published guides and, on the most ambitious houses, beyond them.</p>
-<h2>Approvals</h2>
-<p>Emirates Hills is an Emaar community. Designs are reviewed against Emaar's community guidelines before the authority building permit, with your consultant preparing and submitting each stage. On a house of this size, design approvals can take longer than owners expect, so the programme needs to be realistic from the start.</p>
+  "body": """<h2>What makes Emirates Hills different</h2>
+<p>Emirates Hills was laid out by Emaar as a community of private plots around the Montgomerie golf course and its lakes, sold to owners to build the house they wanted. That makes it unlike most Dubai villa communities. There is no single standard villa type to work from; the streets mix original houses, remodelled houses and new mansions on cleared plots; and Emaar has continued to bring land to market here, with AGBI reporting a release of plots in 2022.</p>
+<p>The plots are large, and so are the projects: deep basements, several wings, staff accommodation, pools and landscaped grounds facing the fairways or the water. Many owners appoint architects and interior designers from overseas, and specify stone, glass, joinery and lighting from several countries. Scale is what makes control difficult. A house of this size has more specialists, more long-lead items, more interfaces between architecture, structure, services and interiors, and more decisions waiting on the owner.</p>
+<p>On the contractor's side, the largest houses we built were rarely lost on one big mistake. They were lost on hundreds of small, late decisions, each one priced as a variation and each one moving the programme a few days. The owner who controls the cost of an Emirates Hills house is usually the one who made decisions early and kept a record of them.</p>
+<h2>New build or remodel?</h2>
+<p>Owners here face one of three projects, and the right choice depends on the house you have and the house you want.</p>
+<ul>
+<li><strong>Building on a cleared plot.</strong> A full design and approval cycle, then a long build. The freedom is greatest and so is the owner's exposure: every specification decision is yours, and the design must be developed far enough to price properly before you sign a building contract. Under the UAE Civil Code (Federal Decree-Law No. 25 of 2025, in force from 1 June 2026), the contractor and the designing engineer are jointly liable for structural defects for ten years from delivery, and that liability cannot be excluded by contract. It is still worth knowing exactly who designed what before you sign.</li>
+<li><strong>Remodelling an original house.</strong> You inherit a structure, services and an approval history. A condition survey with opening-up comes first; services that look serviceable often are not, and a remodel that moves walls, openings and floor levels can approach the cost of new structure without its freedom.</li>
+<li><strong>Demolish and rebuild.</strong> Where the original house no longer fits the brief, a rebuild often gives a better result for a similar outlay once the remodel's true scope is priced. It adds demolition, a full approval cycle and time, so the comparison has to include the programme and the cost of living elsewhere.</li>
+</ul>
+<p>At this level, published guides put luxury construction at AED 900 to 1,400 per sq ft (Engel &amp; Völkers, December 2025), and Knight Frank put high-end villas at about AED 11,000 per square metre in Q2 2025, roughly AED 1,020 per sq ft. Those figures exclude land, design fees, interiors and landscaping, and the most ambitious houses here sit above any published band. Our <a href="/tools/villa-build-cost-calculator/">villa build cost calculator</a> gives a sourced first range, and our <a href="/insights/villa-construction-cost-dubai/">construction cost guide</a> explains what the bands include and what they leave out.</p>
+<h2>Approvals and community rules</h2>
+<p>Emirates Hills is an Emaar community, and Emaar's consent comes first. Emaar's Emirates Living community guidelines apply across Emirates Living, which includes Emirates Hills alongside the Springs, the Meadows and the Lakes. Gulf News reported Emaar's position that all home improvements need the consent of the community manager, that owners must submit plans and specifications before building, altering or improving a villa, and that significant improvements also need the authority's approval. Today owners apply for a home modification NOC through Emaar Community Management's online portal, and appointed contractors register and apply for community entry permits separately.</p>
+<p>Emaar says its home modification guidelines exist to control the appearance of the community and preserve its design and architectural quality. In practice, the questions arise at the edges of the house: external appearance and materials, boundary walls, pergolas and shade structures, pools and landscaping. Gulf News reported, for example, that pergolas and exterior shades in Emirates Living must match the approved design. With Emaar's NOC in hand, your registered consultant applies for the building permit from Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits.</p>
+<p>For a new house, Emaar's design review is a substantial stage, not a formality. Ask Emaar Community Management for the current guidelines for your plot before design starts; guidelines change, and summaries that circulate online may be out of date. Your consultant prepares and submits each stage. We track the comments, keep the decision log and make sure the programme allows for at least one round of revisions on a house of this size.</p>
 <h2>What matters most on a project this size</h2>
 <ul>
-<li><strong>A fixed brief.</strong> On large houses, late changes multiply. A wing redesigned after structure is in place is a six-figure decision.</li>
-<li><strong>Interior integration.</strong> Joinery, lighting, automation, art and furniture are often a third or more of the total. They need designing alongside the architecture, not after it.</li>
-<li><strong>Procurement strategy.</strong> Whether to split shell-and-core from fit-out, and how to package specialist work, changes both cost and risk.</li>
+<li><strong>A fixed brief.</strong> On large houses, late changes multiply. A wing redesigned after structure is in place is an expensive decision, in money and in months.</li>
+<li><strong>Interior integration.</strong> Joinery, lighting, automation, art and furniture are a large share of the total on houses like these. They need designing alongside the architecture, not after it, or the structure and services will be in the wrong place.</li>
+<li><strong>Procurement strategy.</strong> Whether to split shell-and-core from fit-out, and how to package specialist work, changes both cost and risk. Each package boundary is a place where scope can fall between two contracts.</li>
+<li><strong>Long-lead items.</strong> Stone, large-format glazing, lifts and bespoke joinery can take many months to make and ship. Late ordering is one of the most common causes of delay on large houses.</li>
 <li><strong>Cost visibility.</strong> With many specialists and long lead items, a monthly cost-to-complete is the only way to know where you really are.</li>
 </ul>
+<h2>Building next to neighbours, and being the neighbour</h2>
+<p>Because Emirates Hills is built out plot by plot, there is often construction on one side of a house while a family lives on the other. Expect community rules on working hours, deliveries, site fencing and protection of the roads and verges, and price them into the contract rather than discovering them on site. If your plot backs on to the course or a lake, protecting that edge during construction is part of the job.</p>
 <h2>How we help in Emirates Hills</h2>
-<p>We represent you from the brief through to the end of the defects period: setting a budget that includes everything, coordinating the design and approvals programme with your consultant, helping you choose and contract the right builders, and keeping cost, time and quality in front of you every month.</p>""",
+<p>We represent you from the brief through to the end of the defects period: setting a budget that includes everything, coordinating the design and approvals programme with your consultant, helping you compare bids like-for-like and choose the right builders, and keeping cost, time and quality in front of you every month. For an existing house, we start with the remodel-or-rebuild comparison.</p>""",
   "faqs": [
-   ("How much does it cost to build a mansion in Emirates Hills?", "It depends on size and specification, but published 2025–26 guides put luxury construction at roughly AED 900 to 1,400 per sq ft and ultra-luxury above AED 1,200, before land, design fees, interiors and landscaping."),
-   ("Who approves building work in Emirates Hills?", "Designs are reviewed by Emaar against the community guidelines, then the authority building permit is issued. Your appointed consultant prepares and submits each stage."),
+   ("How much does it cost to build a mansion in Emirates Hills?", "It depends on size and specification. Engel & Völkers puts luxury construction at AED 900 to 1,400 per sq ft, and Knight Frank put high-end villas at about AED 11,000 per square metre in Q2 2025, before land, design fees, interiors and landscaping. The most ambitious houses sit above any published band. Our <a href='/tools/villa-build-cost-calculator/'>cost calculator</a> gives a sourced first range."),
+   ("Who approves building work in Emirates Hills?", "Emaar first: owners apply for a home modification NOC through Emaar Community Management, and work is reviewed against the community guidelines. The building permit then comes from Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits. Your appointed consultant prepares and submits each stage."),
+   ("Do I need Emaar approval for a pergola, pool or landscaping?", "Expect to. Emaar has said all home improvements need the community manager's consent, and Gulf News reported that pergolas and exterior shades in Emirates Living must match the approved design. Check the current guidelines with Emaar Community Management before you design external work."),
+   ("Should I remodel or rebuild an older Emirates Hills villa?", "If the brief needs new structure, new services and a new envelope, price a rebuild alongside the remodel. Include demolition, the approval cycle, the longer programme and the cost of living elsewhere. Our <a href='/insights/villa-construction-cost-dubai/'>construction cost guide</a> explains the published cost bands."),
+   ("Who is responsible for structural defects in a new villa?", "Under the UAE Civil Code (Federal Decree-Law No. 25 of 2025), the contractor and the designing engineer are jointly liable for structural defects for ten years from delivery, and that liability cannot be excluded by contract. Take advice from a UAE-qualified lawyer on how it applies to your contracts."),
+  ],
+  "sources": [
+   ("Gulf News: Reptiles OK but no poultry in villas (Emirates Living guidelines, 2018)", "https://gulfnews.com/uae/reptiles-ok-but-no-poultry-in-villas-1.1174994"),
+   ("Emaar Community Management: new home modification guidelines", "https://www.ecm.ae/en/news/new-home-modification-guidelines"),
+   ("AGBI: Emaar releases land plots in Emirates Hills (2022)", "https://www.agbi.com/articles/emaar-releases-11m-land-plots-in-beverly-hills-of-dubai/"),
+   ("Mayer Brown: examining the new UAE Civil Code, muqawala contracts (June 2026)", "https://www.mayerbrown.com/en/insights/publications/2026/06/examining-the-new-uae-civil-code-part-2-muqawala-contracts"),
+   ("Engel & Völkers: construction cost in Dubai (December 2025)", "https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai"),
+   ("Gulf Construction: Knight Frank villa construction costs, Q2 2025", "https://gulfconstructiononline.com/ArticleTA/436847"),
+   ("Dubai Municipality: Dubai launches single window for building permits", "https://www.dm.gov.ae/dubai-launches-single-window-for-building-permits/"),
   ],
   "services": ["villa-construction-project-management", "design-and-approvals", "cost-and-programme-control"],
  },
@@ -110,7 +170,7 @@ AREAS = [
 <li><strong>Glass and heat.</strong> Large glazed façades facing the lagoon look spectacular and bring real solar gain. Glazing specification and cooling capacity need to be designed together.</li>
 </ul>
 <h2>How we help</h2>
-<p>Whether you are building on a plot or reworking a completed villa, we set the budget, help you choose the team, review cost and quality on your behalf and manage handover. Our background is contemporary, heavily glazed houses, which is exactly where detailing and coordination matter most.</p>""",
+<p>Whether you are building on a plot or reworking a completed villa, we set the budget, help you choose the team, review cost and quality for you and represent you through handover. Our background is contemporary, heavily glazed houses, which is exactly where detailing and coordination matter most.</p>""",
   "faqs": [
    ("Can I modify a developer-built villa in District One?", "Yes, subject to the community guidelines, a developer NOC and an authority permit for anything beyond interior finishes. Work that moves services or changes structure needs careful pricing."),
    ("Do you handle fit-out of shell-and-core villas?", "Yes. We represent you through interior design, fit-out procurement and delivery, alongside your designer and contractor."),
@@ -184,6 +244,7 @@ AREAS = [
   "image": "saqqara-03",
   "body": """<h2>A new market for private builds</h2>
 <p>Dubai Islands, the Nakheel islands off Deira, has introduced a new supply of villa plots for private builders and investors. Because the plots are new, the questions buyers face are different from established communities: what the design guidelines allow, how the infrastructure will be phased, when services will reach your plot, and what deadlines apply to start and complete building.</p>
+<p>Not every buyer here is building on a plot. Nakheel's first villa sales on Dubai Islands, reported by Gulf News in February 2024, were off-plan townhouses and waterfront villas, with 20% of the price due on handover. For those owners, the handover inspection and the first year in the house matter more than design guidelines, and any later alterations go through Nakheel's NOC process before an authority permit.</p>
 <h2>Before you buy</h2>
 <ul>
 <li><strong>Design guidelines.</strong> Coverage, height, setbacks and material rules decide the house you can actually build.</li>
@@ -196,6 +257,10 @@ AREAS = [
   "faqs": [
    ("Who is the developer of Dubai Islands?", "Nakheel. Building work is reviewed against Nakheel's guidelines before the authority permit."),
    ("Are there deadlines to build on Dubai Islands plots?", "Plot sale terms can include obligations about when building must start or finish. Check your contract carefully and take legal advice."),
+  ],
+  "sources": [
+   ("Gulf News: Nakheel-owned Dubai Islands launches its first villa sales (February 2024)", "https://gulfnews.com/business/property/nakheel-owned-dubai-islands-launches-its-first-villa-sales---and-buyer-rush-is-on-1.1708486333060"),
+   ("Nakheel: customer FAQs (NOCs and contractor requirements)", "https://www.nakheel.com/en/contact-us"),
   ],
   "services": ["plot-due-diligence", "villa-construction-project-management", "development-advisory"],
  },
@@ -211,16 +276,22 @@ AREAS = [
   "lede": "Two Nakheel communities at very different stages: a new island of waterfront villas, and an established village of private plots.",
   "image": "the-lookout-02",
   "body": """<h2>Palm Jebel Ali</h2>
-<p>Palm Jebel Ali has returned as one of Dubai's largest waterfront villa launches. Most buyers are purchasing developer villas off-plan. Where we help is in the things that happen around that: independent snagging at handover, customisation and upgrade projects once owners take possession, and advice on any plot-based opportunities.</p>
+<p>Palm Jebel Ali has returned as one of Dubai's largest waterfront villa launches. Most buyers are purchasing developer villas off-plan. Nakheel says it awarded AED 5 billion of construction contracts in 2024 for 723 Beach and Coral Collection villas across Fronds K to P, with further contracts for villas on Fronds A to F, and that the island will open in phases rather than on a single handover date, with the first homes due by the end of 2026.</p>
+<p>Phased opening matters to an owner. Your villa may be ready before the roads, utilities, landscaping and neighbouring plots around it, and early owners can find themselves living beside active construction for some time. Where we help is around the purchase: preparing for handover and the defects period as one stage of a wider appointment, customisation and upgrade projects once owners take possession, and advice on any plot-based opportunities. Before you commission upgrades, read the sale and purchase agreement and community rules on alterations; Nakheel's NOC process applies here as it does on its other communities.</p>
 <h2>Jebel Ali Village</h2>
 <p>Jebel Ali Village offers plots for private villas in an established, family-oriented community. Here the work is classic plot-to-keys: brief, budget, design within the community guidelines, approvals through your consultant and a build managed carefully from your side.</p>
 <h2>Approvals</h2>
 <p>Both are Nakheel communities. Work is reviewed against Nakheel's guidelines first, then permitted by the relevant authority depending on your plot. Your consultant or licensed contractor prepares the submissions; we track them and keep the programme realistic.</p>
 <h2>How we help</h2>
-<p>For new villas, our <a href="/services/snagging-and-handover/">snagging and handover service</a> makes sure you receive what you paid for. For plot builds, we represent you from the first budget to the end of the defects period.</p>""",
+<p>For new villas, <a href="/services/snagging-and-handover/">handover and the defects period</a> are one stage of our wider service, usually alongside customisation or upgrade work, so that what you receive matches what you paid for. For plot builds, we represent you from the first budget to the end of the defects period.</p>""",
   "faqs": [
-   ("Can you snag my new Palm Jebel Ali villa at handover?", "Yes. We provide independent snagging and handover inspections for developer villas, including commissioning checks and document review."),
+   ("Can you help with handover of my new Palm Jebel Ali villa?", "Yes, as one stage of a wider appointment, for example where we also represent you through customisation or upgrade work. That covers checking the villa against the contract and specification, commissioning and documents, and following defects through the defects period. We do not offer stand-alone snag reports."),
+   ("When will Palm Jebel Ali villas be handed over?", "Nakheel said in June 2026 that the island will open in phases rather than on one date, with the first residential handovers due by the end of 2026. Your own date is the one in your sale and purchase agreement and Nakheel's notices."),
    ("Can I build my own villa in Jebel Ali Village?", "Yes, on available plots, subject to Nakheel's guidelines and the authority permit."),
+  ],
+  "sources": [
+   ("Nakheel: Palm Jebel Ali villas head for first handovers this year (16 June 2026)", "https://www.nakheel.com/media-centre/press-release/news-detail/2026/06/16/dubai-s-palm-jebel-ali-villas-head-for-first-handovers-this-year"),
+   ("Nakheel: customer FAQs (NOCs and contractor requirements)", "https://www.nakheel.com/en/contact-us"),
   ],
   "services": ["snagging-and-handover", "plot-due-diligence", "villa-construction-project-management"],
  },
@@ -244,11 +315,18 @@ AREAS = [
 <li><strong>Coastal conditions.</strong> Beachfront and near-beach plots need careful thought about groundwater, corrosion, wind and glare.</li>
 <li><strong>A realistic programme.</strong> New plot communities build out over years. Neighbouring construction, access and utility connections affect your timeline.</li>
 </ul>
+<h2>Taking over a developer-built villa</h2>
+<p>Not every Saadiyat owner is building on a plot. Aldar's Saadiyat Lagoons, launched in October 2022 with four- to six-bedroom villas, was reported by Gulf News at launch to have handovers expected from the second quarter of 2026. For an owner taking a villa from the developer, the handover inspection and the defects period that follows decide more about the house than any finish selection. Before you sign the handover documents, check the villa against your sale and purchase agreement and its specification, and make sure the warranties, as-built drawings and operating manuals are actually handed over. Then test what can only be tested in use: water on terraces, roofs and wet rooms, air conditioning under summer load, and drainage after the first heavy rain. Report every defect in writing, with photographs and dates, inside the defects period your contract sets, and keep the developer's acknowledgements. Longer-term structural defects are a separate question: the UAE Civil Code (Federal Decree-Law No. 25 of 2025) makes the contractor and the designing engineer jointly liable for ten years from delivery, and how that reaches you as a buyer depends on your contract, so take advice from a UAE-qualified lawyer. Handover is one stage of our wider service rather than a stand-alone snag report; our <a href="/insights/villa-snagging-checklist-dubai/">villa snagging checklist</a> shows what we look for.</p>
 <h2>How we help</h2>
 <p>We review plots before purchase, then represent owners through design, approvals coordination, contractor selection, construction and handover. We work alongside an Abu Dhabi-registered consultant of record appointed by you.</p>""",
   "faqs": [
    ("Who issues building permits in Abu Dhabi?", "The municipality, through the TAMM platform, under rules set by the Department of Municipalities and Transport. Master developer design approval comes first in plot communities."),
    ("Do you work in Abu Dhabi as well as Dubai?", "Yes. We represent owners in both, always alongside a locally registered consultant of record."),
+  ],
+  "sources": [
+   ("Gulf News: Aldar launches Saadiyat Lagoons (October 2022)", "https://gulfnews.com/amp/gulfnews/business/property/abu-dhabis-aldar-launches-saadiyat-lagoons-starting-from-dh61m-1.91475551"),
+   ("Department of Municipalities and Transport: amendments to private villa regulations", "https://www.dmt.gov.ae/en/Media-Centre/News/Department-of-Municipalities-and-Transport-Announces-Amendments-to-Private-Villas-Regulations"),
+   ("Mayer Brown: examining the new UAE Civil Code, muqawala contracts (June 2026)", "https://www.mayerbrown.com/en/insights/publications/2026/06/examining-the-new-uae-civil-code-part-2-muqawala-contracts"),
   ],
   "services": ["plot-due-diligence", "owners-representative", "villa-construction-project-management"],
  },
@@ -272,12 +350,19 @@ AREAS = [
 <li><strong>Price for a busy market.</strong> Demand affects prices and lead times. Budgets need a realistic allowance.</li>
 <li><strong>Think about neighbours.</strong> Construction next door, before and after yours, affects access, programme and finish protection.</li>
 </ul>
+<h2>Developer villas: handover and the first year</h2>
+<p>Alongside the plots, Modon is delivering its own villa communities on the island. Gulf News reported in March 2024 that Modon had launched Nawayef, with 19 villa types from 350 to 2,700 square metres, and Al Naseem, a low-density cluster of villas from 490 to 620 square metres. When many villas are handed over in the same months, the developer's and contractor's aftercare teams are stretched, and defects reported late or informally tend to wait. Agree the handover inspection date in writing, attend it with the specification and the sale and purchase agreement in hand, and do not treat the keys as the end of the contract. Record meter readings and the condition of every room on the day, then log defects in writing as they appear through the defects period your contract sets: leaks after the first rain, air conditioning that cannot hold temperature in August, and cracking as the structure settles. Keep the developer's acknowledgements, because the end of the defects period is a deadline for you as much as for them. For structural defects beyond that period, the UAE Civil Code (Federal Decree-Law No. 25 of 2025) sets ten-year liability on the contractor and designing engineer; take advice from a UAE-qualified lawyer on how it applies to a purchase from a developer. We cover handover as one stage of a wider appointment, not as a one-visit report.</p>
 <p>For the approvals sequence after Modon's design review, see our guide to <a href="/insights/abu-dhabi-villa-permit-tamm/">villa permits in Abu Dhabi through TAMM and the municipality</a>.</p>
 <h2>How we help</h2>
 <p>We help Hudayriyat owners turn a plot into a realistic project: total budget, brief, team selection and a programme that reflects the market. Then we represent you through construction and handover, alongside your Abu Dhabi-registered consultant.</p>""",
   "faqs": [
    ("How many plots are there on Hudayriyat Island?", "Industry reporting on Modon's launch described more than 1,700 residential plots for four to six-bedroom villas in the first plots community."),
    ("When should I appoint a team for my Hudayriyat plot?", "As early as possible. With many owners building at once, the best consultants and contractors will be committed early."),
+  ],
+  "sources": [
+   ("Middle East Construction News: Modon launches its first residential plots community on Hudayriyat Island", "https://meconstructionnews.com/63729/modon-launches-its-first-residential-plots-community-on-hudayriyat-island"),
+   ("Gulf News: Modon Properties launches freehold communities on Hudayriyat Island (March 2024)", "https://gulfnews.com/business/property/in-abu-dhabi-modon-properties-launches-freehold-communities-hudayriyat-island-1.1710482671780"),
+   ("Mayer Brown: examining the new UAE Civil Code, muqawala contracts (June 2026)", "https://www.mayerbrown.com/en/insights/publications/2026/06/examining-the-new-uae-civil-code-part-2-muqawala-contracts"),
   ],
   "services": ["plot-due-diligence", "consultant-and-contractor-selection", "villa-construction-project-management"],
  },

@@ -158,10 +158,10 @@ def areas_hub():
     crumbs = [("Home", "/"), ("Areas", "/areas/")]
     dubai = "".join(f'<li><a href="/areas/{a["slug"]}/">{esc(a["name"])}</a><span>{esc(a["tag"])} · {esc(a["developer"])}</span></li>' for a in AREAS if a["city"] == "Dubai")
     ad = "".join(f'<li><a href="/areas/{a["slug"]}/">{esc(a["name"])}</a><span>{esc(a["tag"])} · {esc(a["developer"])}</span></li>' for a in AREAS if a["city"] == "Abu Dhabi")
-    body = B.banner(crumbs, "Where we work", "Every villa community has its own master developer, design guidelines and practical constraints. Here is what to expect in each.", "menwinnion-05", credit_of("menwinnion-05")) + f'''
+    body = B.banner(crumbs, "Where we work", "We cover every community in Dubai and Abu Dhabi. Each has its own master developer, design guidelines and practical constraints; the pages below are examples of what to expect, not a list of limits.", "menwinnion-05", credit_of("menwinnion-05")) + f'''
 <section class="section--tight"><div class="wrap"><h2>Dubai</h2><ul class="area-list">{dubai}</ul></div></section>
 <section class="section--tight"><div class="wrap"><h2>Abu Dhabi</h2><ul class="area-list">{ad}</ul></div></section>
-<section class="section paper"><div class="wrap split"><div><h2>Not listed?</h2></div><div class="prose"><p>We represent owners across Dubai and Abu Dhabi, including Jumeirah Islands, Jumeirah Golf Estates, Tilal Al Ghaf, Al Wasl, Umm Suqeim and Jumeirah, and Abu Dhabi's island communities. The approach is the same: understand the master developer's rules, set a realistic budget and programme, and represent you from brief to handover.</p><p><a href="/contact/">Tell us where your plot or villa is</a>.</p></div></div></section>
+<section class="section paper"><div class="wrap split"><div><h2>Not listed?</h2></div><div class="prose"><p>We cover every community in Dubai and Abu Dhabi; the area pages above are examples, not limits. That includes Jumeirah Islands, Jumeirah Golf Estates, Tilal Al Ghaf, Al Wasl, Umm Suqeim and Jumeirah, and Abu Dhabi's island communities. The approach is the same: understand the master developer's rules, set a realistic budget and programme, and represent you from brief to handover.</p><p><a href="/contact/">Tell us where your plot or villa is</a>.</p></div></div></section>
 {B.cta_band()}'''
     B.page("/areas/", "Villa Communities We Work In: Dubai & Abu Dhabi | Eastbridge",
            "Villa build and renovation representation on Palm Jumeirah, Emirates Hills, Jumeirah Bay, District One, Dubai Hills, Al Barari, Saadiyat and more.",
@@ -174,10 +174,14 @@ def area_page(a):
     img = AREA_IMG.get(a["slug"], a["image"])
     pj = proj_of(img)
     others = [m["base"] for m in B.MANIFEST[pj["slug"]] if m["base"] != img][1:4]
+    srcs = ""
+    if a.get("sources"):
+        items = "".join(f'<li><a href="{esc(u)}" rel="noopener">{esc(t)}</a></li>' for t, u in a["sources"])
+        srcs = f'<h2>Sources</h2><ul class="small">{items}</ul>'
     body = B.banner(crumbs, esc(a["h1"]), esc(a["lede"]), img, credit_of(img)) + f'''
 <section class="section"><div class="wrap split">
 <div><dl class="facts"><div><dt>City</dt><dd>{esc(a["city"])}</dd></div><div><dt>Master developer</dt><dd>{esc(a["developer"])}</dd></div><div><dt>Typical work</dt><dd>{esc(a["tag"])}</dd></div></dl></div>
-<div class="prose">{a["body"]}</div></div></section>
+<div class="prose"><p class="muted">We cover every community in Dubai and Abu Dhabi. This page is one example of how we approach a community, not a limit on where we work.</p>{a["body"]}{srcs}</div></div></section>
 <section class="section--tight"><div class="wrap">{strip_html(others)}</div></section>
 <section class="section paper"><div class="wrap split"><div><h2>Questions about {esc(a["name"])}</h2></div><div>{B.faq_html(a["faqs"])}</div></div></section>
 <section class="section"><div class="wrap"><h2>Services most relevant here</h2>{svc}</div></section>
