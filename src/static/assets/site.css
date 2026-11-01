@@ -947,3 +947,73 @@ html,body{overflow-x:clip}
 @media (max-width:600px){.outputs{grid-template-columns:1fr}}
 .evidence-list{list-style:none;padding:0;margin:0;max-width:860px}
 .evidence-list li{padding:14px 0;border-top:1px solid var(--line)}
+/* ---------- Owner tools: renovate or rebuild, stage payment planner, delay cost estimator (tools.js) ---------- */
+.tool-compare{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(16px,2.4vw,32px);margin:0 0 14px}
+.tool-card{border-top:2px solid var(--ink);padding-top:12px;min-width:0}
+.tool-card + .tool-card{border-top-color:var(--brass)}
+.tool-card .calc-total b{font-size:var(--s-3)}
+.tool-card .calc-sub{margin-bottom:8px}
+@media (max-width:560px){.tool-compare{grid-template-columns:1fr;gap:14px}}
+.tool-verdict{font-size:var(--s-0);line-height:1.5;margin:0 0 18px;padding:12px 14px;background:#fff;border-left:2px solid var(--brass-light)}
+.calc-reviewed + .calc-h,.tool-verdict + .calc-reviewed{margin-top:0}
+.tool-verdict + .calc-reviewed{margin-top:-6px}
+.calc-table tfoot .tool-meta th,.calc-table tfoot .tool-meta td{font-weight:400;border-top:1px solid var(--line);color:var(--ink-soft)}
+.tool-approvals{list-style:none;padding:0;margin:0 0 14px}
+.tool-approvals li{font-size:.88rem;padding:.55em 0;border-bottom:1px solid var(--line)}
+.tool-approvals li:first-child{border-top:1px solid var(--line)}
+.tool-chart{margin:4px 0 12px;background:#fff;padding:8px 8px 0;min-height:0}
+.tool-chart:empty{display:none}
+.tool-chart svg{display:block;max-width:100%;height:auto}
+.tool-chart .tc-axis{stroke:var(--ink);stroke-width:1}
+.tool-chart .tc-bar{fill:var(--slate-2)}
+.tool-chart .tc-peak{fill:var(--ink)}
+.tool-chart .tc-adv{fill:var(--brass)}
+.tool-chart .tc-rel{fill:var(--brass-light)}
+.tool-chart .tc-line{fill:none;stroke:var(--brass);stroke-width:2;stroke-linejoin:round}
+.tool-chart .tc-tick,.tool-chart .tc-max{font-family:var(--sans);font-size:11px;fill:var(--ink-soft)}
+.tool-schedule{font-size:.8rem}
+.tool-schedule th[scope=row]{white-space:normal;min-width:9em}
+.tool-schedule tr.is-peak th,.tool-schedule tr.is-peak td{font-weight:600}
+.tool-in input:disabled{opacity:.45}
+.tool-peaks td{white-space:normal}
+@media print{
+  .tool-page body{font-size:9.5pt;line-height:1.4}
+  .tool-page main > section:not(.tool-sec),.tool-page .page-head{display:none!important}
+  .tool-page .tool-sec{padding:0!important}
+  .tool-page .calc{display:block}
+  .tool-page .calc-in,.tool-page .calc-actions,.tool-page .calc-js,.tool-page .calc-flag a{display:none!important}
+  .tool-page .print-only{display:block}
+  .tool-page .calc-out{background:#fff!important;padding:0;color:#111}
+  .tool-page .calc-h{font-size:8.5pt;letter-spacing:.12em;text-transform:uppercase;margin:6pt 0 2pt;break-after:avoid}
+  .tool-page .calc-print-inputs{grid-template-columns:auto 1fr auto 1fr;column-gap:10pt}
+  .tool-page .calc-print-foot{margin-top:4pt;padding-top:4pt}
+  .tool-page .tool-h-side{display:none}
+  .tool-page .tool-card .calc-total b{font-size:17pt}
+  .tool-page .tool-card{padding-top:4pt}
+  .tool-page .calc-table th,.tool-page .calc-table td{padding-top:1pt!important;padding-bottom:1pt!important}
+  .tool-page .calc-label{font-size:8pt;letter-spacing:.12em;text-transform:uppercase;color:#4A5357;margin:4pt 0 0}
+  .tool-page .calc-total b{font-size:20pt;line-height:1.05}
+  .tool-page .calc-range{font-size:9pt;color:#333;margin-top:1pt}
+  .tool-page .calc-sub{font-size:8.5pt;margin:0 0 3pt;color:#333}
+  .tool-page .calc-reviewed{font-size:8pt;margin:0 0 6pt;color:#4A5357}
+  .tool-page .tool-verdict{font-size:9pt;padding:4pt 8pt;margin:2pt 0 6pt;border-left:1.5pt solid #999}
+  .tool-page .tool-compare{gap:0 18pt;margin:0 0 4pt}
+  .tool-page .table-wrap{overflow:visible}
+  .tool-page .calc-table{margin:0 0 4pt;font-size:8.6pt;line-height:1.25;width:100%;break-inside:avoid}
+  .tool-page .calc-table th,.tool-page .calc-table td{padding:1.3pt 4pt;border-bottom:.5pt solid #ccc;background:#fff!important}
+  .tool-page .calc-table thead th{font-size:7.4pt;letter-spacing:.05em;text-transform:uppercase;border-bottom:1pt solid #151C1F}
+  .tool-page .calc-table tfoot th,.tool-page .calc-table tfoot td{border-top:1.2pt solid #151C1F;border-bottom:0}
+  .tool-page .calc-table tfoot .tool-meta th,.tool-page .calc-table tfoot .tool-meta td{border-top:.5pt solid #ccc}
+  .tool-page .tool-schedule{font-size:7.6pt}
+  .tool-page .tool-schedule th,.tool-page .tool-schedule td{padding:1pt 2.5pt;font-size:7.2pt}
+  .tool-page .tool-schedule thead th{white-space:normal;font-size:6.4pt;letter-spacing:.02em;vertical-align:bottom}
+  .tool-page .tool-schedule th[scope=row]{min-width:0;width:17%;white-space:normal}
+  .tool-page .tool-schedule{break-inside:auto}
+  .tool-page .tool-schedule tr{break-inside:avoid}
+  .tool-page .tool-chart{padding:0;break-inside:avoid}
+  .tool-page .tool-chart svg{height:120pt}
+  .tool-page .tool-approvals li{font-size:8pt;padding:1.5pt 0}
+  .tool-page .calc-note{font-size:8pt;line-height:1.35;margin:0 0 2pt;color:#333}
+  .tool-page .calc-flag{font-size:8pt;line-height:1.35;margin:4pt 0 0;padding-top:4pt;border-top:.5pt solid #999}
+}
+.tool-in .calc-checks + div{margin-top:14px}

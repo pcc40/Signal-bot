@@ -677,6 +677,7 @@ def calculator():
            body, crumbs, schema)
 
 def tools_hub():
+    import pages_owner_tools as OT
     crumbs = [("Home", "/"), ("Tools", "/tools/")]
     body = B.page_head(crumbs, "Tools for villa owners",
                        "Free planning tools for owners building or renovating a villa in Dubai or Abu Dhabi. Each one shows its sources.") + f'''
@@ -684,16 +685,18 @@ def tools_hub():
 <h3><a href="{CALC_PATH}">Villa build and renovation cost calculator</a></h3>
 <p>Low, likely and high costs for a new build or renovation, with design fees, approvals, contingency, furniture and an indicative timeline. Built from published 2025–26 market ranges, each one cited.</p>
 <p><a class="btn" href="{CALC_PATH}">Open the calculator</a></p>
-<h3>Further reading</h3>
+{OT.hub_html()}<h3>Further reading</h3>
 <ul><li><a href="/insights/villa-construction-cost-dubai/">What it costs to build a villa in Dubai</a></li>
+<li><a href="{OT.RR_ARTICLE}">Renovate or rebuild a villa in Dubai?</a></li>
+<li><a href="{OT.STALLED}">What to do when a villa build stalls</a></li>
 <li><a href="/insights/buying-a-villa-plot-in-dubai-checks/">Checks before buying a villa plot</a></li>
 <li><a href="/fees/">How our fees work</a></li></ul>
 </div></div></section>
 {B.cta_band("Have a plot or a villa in mind?")}'''
     schema = [{"@context": "https://schema.org", "@type": "CollectionPage", "url": B.url("/tools/"), "name": "Tools for villa owners",
-               "hasPart": [{"@id": B.url(CALC_PATH) + "#app"}]}]
+               "hasPart": [{"@id": B.url(p) + "#app"} for p in [CALC_PATH] + [h[0] for h in OT.HUB]]}]
     B.page("/tools/", "Villa Planning Tools: Dubai & Abu Dhabi | Eastbridge",
-           "Free, sourced planning tools for villa owners in Dubai and Abu Dhabi, starting with a build and renovation cost calculator covering fees, approvals and timeline.",
+           "Free, sourced tools for villa owners in Dubai and Abu Dhabi: build cost calculator, renovate or rebuild, stage payment planner and delay cost estimator.",
            body, crumbs, schema)
 
 def estimate_thanks():
@@ -719,6 +722,8 @@ def estimate_thanks():
     B.page(THANKS_PATH, "Estimate sent | Eastbridge", "Your estimate from the villa build cost calculator has been sent to Philip at Eastbridge.", body, crumbs, noindex=True)
 
 def build_tools():
+    import pages_owner_tools as OT      # imported here: it builds on this module's rates and sources
+    OT.build_owner_tools()
     tools_hub()
     calculator()
     estimate_thanks()
