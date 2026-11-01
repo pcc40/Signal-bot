@@ -2,7 +2,7 @@
 title: "What a builder knows that most villa owners don't"
 description: "Two decades on the contractor's side, translated for Dubai villa owners: bid pricing, provisional sums, variations, float, valuations and snagging leverage."
 date: 2026-10-29
-updated: 2026-10-29
+updated: 2026-11-01
 category: "Contracts"
 keypoints:
   - "A contractor's bid is a commercial strategy, not just a cost estimate: the margin is often planned in the gaps, not in the headline."
@@ -16,12 +16,22 @@ faqs:
   - q: "What is a provisional sum in a villa building contract?"
     a: "An allowance in the contract for work that has not been fully designed or chosen yet, such as a kitchen or lighting system. When the real item is selected, the contract sum is adjusted up or down to the actual cost."
   - q: "What are preliminaries on a construction bid?"
-    a: "The contractor's cost of running the site: management, welfare, temporary works, plant, insurance and similar. Turner & Townsend put them at 12–14% in Dubai, as cited by PRASOON. Many are time-related, so they grow with delay."
+    a: "The contractor's cost of running the site: management, welfare, temporary works, plant, insurance and similar. Turner & Townsend put them at 12% of construction cost in Dubai on a 2,500 m² project and 14% on a 50,000 m² project. Many are time-related, so they grow with delay."
   - q: "When do I have the most leverage over my contractor?"
     a: "Before handover, while payments and retention are still held. Once you have taken possession and released money, the contractor's incentive to return for defects drops."
 sources:
-  - title: "PRASOON: Owner's representative vs project manager in the UAE"
-    url: "https://prasoon.design/insights/owners-representative-vs-project-manager-uae"
+  - title: "Turner & Townsend: UAE market intelligence 2025, construction cost performance (preliminaries)"
+    url: "https://marketintelligence.turnerandtownsend.com/uaemi-2025/construction-cost-performance/"
+  - title: "RICS: Tendering strategies, 1st edition, guidance note (2014)"
+    url: "https://www.rics.org/content/dam/ricsglobal/documents/standards/tendering_strategies_1st_edition_rics.pdf"
+  - title: "RICS: Appropriate contract selection, 2nd edition, practice information (April 2024)"
+    url: "https://www.rics.org/content/dam/ricsglobal/documents/standards/Appropriate-contract-selection-2nd-edition.pdf"
+  - title: "ICC: An explanation of the ins and outs of claims under FIDIC 2017 (Driver Trett)"
+    url: "https://iccwbo.org/news-publications/guests-blog-speeches/guest-blog-its-easy-when-you-know-how-an-explanation-of-the-ins-and-outs-of-claims-under-fidic-2017/"
+  - title: "K&L Gates: The impact of the new Civil Transactions Law on construction contracts in the UAE (March 2026)"
+    url: "https://www.klgates.com/The-Impact-of-the-New-Civil-Transactions-Law-on-Construction-Contracts-in-the-United-Arab-Emirates-3-9-2026"
+  - title: "Kayrouz & Associates: decennial liability for UAE contractors and engineers (2026)"
+    url: "https://www.kayrouzandassociates.com/insights/decennial-liability-uae-contractors-engineers-2026"
   - title: "Dubai Municipality: contract forms for private villas"
     url: "https://www.dm.gov.ae/municipality-business/guidance-contracts-forms-for-engineering-consulting-services-and-construction-contracting-for-private-villas/"
   - title: "Gulf News: Dubai Municipality warns consultancies inflating villa designs"
@@ -55,11 +65,11 @@ From the builder's side, provisional sums do three useful things for the contrac
 
 In Dubai, this is particularly relevant on luxury villas, where kitchens, wardrobes, lighting, automation, AV and loose specialist items are often left as allowances because the owner has not chosen yet. In our experience, a bid where these make up a large share of the total is not really a fixed price at all.
 
-What to do: resolve as many items as you can before pricing. Where you cannot, set the provisional sums yourself, at realistic levels, so every bidder carries the same figure. Then compare bids on what is left.
+What to do: resolve as many items as you can before pricing. Where you cannot, set the provisional sums yourself, at realistic levels, so every bidder carries the same figure. Then compare bids on what is left. RICS guidance on tendering makes the same point about information: an answer given to one bidder's query should go to every bidder, so that no one prices on a different basis.
 
 ## Why are preliminaries the line to watch?
 
-Preliminaries are the cost of running the site: the site manager, welfare, security, temporary power and water, scaffolding, hoarding, plant, insurances, waste and so on. Turner & Townsend put contractor preliminaries in Dubai at 12–14% (as cited by PRASOON).
+Preliminaries are the cost of running the site: the site manager, welfare, security, temporary power and water, scaffolding, hoarding, plant, insurances, waste and so on. Turner & Townsend's 2025 UAE market intelligence puts preliminaries in Dubai at 12% of construction cost on a 2,500 m² project and 14% on a 50,000 m² project.
 
 The important point is that many preliminaries are time-related. They are priced per week or per month. That means:
 
@@ -81,7 +91,9 @@ How a variation claim is typically assembled:
 - **Time**: if the change affects the critical path, an extension of time, and with it time-related preliminaries.
 - **Disruption**: loss of productivity from working out of sequence.
 
-The defence is the same in every case: price the variation and agree its time effect before it is instructed, in writing. A variation agreed after the work is done is priced by one party, the one that did it. We cover the contractual side in [villa construction contracts in the UAE](/insights/villa-construction-contracts-uae/); take advice from a UAE-qualified lawyer on your specific contract.
+The defence is the same in every case: price the variation and agree its time effect before it is instructed, in writing. A variation agreed after the work is done is priced by one party, the one that did it.
+
+Notice matters as much as price. Commentary on the UAE's new Civil Transactions Law, in force for contracts made from 1 June 2026, notes that it deals with payment for changes or increases in scope caused by the employer (Article 829(2)) and requires the contractor to notify the employer immediately of events that may impede the work (Article 816(3)) (K&L Gates). International standard forms are stricter still: under the FIDIC 2017 Red Book, a party that does not give notice of a claim within 28 days of becoming aware of the event loses its entitlement (ICC). A contractor's commercial team diarises those dates from day one. The owner's side should too. We cover the contractual side in [villa construction contracts in the UAE](/insights/villa-construction-contracts-uae/); take advice from a UAE-qualified lawyer on your specific contract.
 
 ## Who owns the programme float?
 
@@ -100,6 +112,8 @@ A decision schedule, agreed at the start, listing every owner choice and the lat
 ## Why is the cheapest bid rarely the cheapest outcome?
 
 Put the pieces together. The lowest bid often has some combination of low provisional sums, tight exclusions, a short programme with low preliminaries, and keen rates on the measured work but generous scope to recover through new rates. It may also have been priced by a contractor who needs the turnover.
+
+RICS practice information on contract selection treats the basis of the contract sum, whether a fixed-price lump sum, remeasurement or a target cost, as one of the main choices an employer makes. A lump sum is only as fixed as the scope behind it.
 
 None of that is visible in the total. It is visible in the breakdown, which is why bids should be compared line by line, with provisional sums normalised, exclusions priced back in, and preliminaries tested against a realistic programme. Our guide to [choosing a villa contractor in Dubai](/insights/how-to-choose-a-villa-contractor-dubai/) shows how.
 
@@ -131,6 +145,8 @@ So:
 - Do not release payments or retention until agreed defects are rectified, within what your contract allows.
 - Insist on as-built drawings, operating manuals, warranties and test certificates before handover, not after.
 - Know your defects liability period and diarise inspections well before it ends.
+
+Structural safety sits outside this bargaining. UAE law makes the contractor and the engineer jointly liable for ten years from handover for collapse or defects that threaten the building's stability or safety, and that liability cannot be excluded by contract (Kayrouz & Associates). Everything else, from a leaking shower to an undersized air-conditioning unit, depends on your contract and on the leverage you kept.
 
 ## How Eastbridge can help
 

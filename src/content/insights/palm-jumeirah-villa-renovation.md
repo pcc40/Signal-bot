@@ -16,24 +16,33 @@ faqs:
   - q: "Which authority issues the renovation permit on Palm Jumeirah?"
     a: "Building permits in Dubai are issued by Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits. Your registered consultant will confirm which applies to your plot and submit through the unified permit system."
   - q: "How much does a Palm Jumeirah villa renovation cost?"
-    a: "One published Dubai guide puts basic villa renovations at AED 200–300k, mid-range at AED 400–800k and luxury at AED 1m and above. A full Palm refurbishment with new MEP, waterproofing and a pool rebuild will normally sit towards the upper end, before furniture."
+    a: "Published guides disagree. One Dubai renovation contractor's guide puts basic villa renovations at AED 200–300k, mid-range at AED 400–800k and luxury at AED 1m and above. Property Finder puts structural work with premium materials on a luxury villa, giving the Palm as an example, at AED 1.5–3.5m or more. A full Palm refurbishment with new MEP, waterproofing and a pool rebuild will normally sit towards the upper end, before furniture."
   - q: "Can I live in the villa while it is being renovated?"
     a: "For a light interior refresh, sometimes. For anything involving services replacement, roof or basement waterproofing or structural work, we would advise moving out. It shortens the programme and avoids paying the contractor to work around you."
   - q: "Should I renovate or knock down and rebuild?"
     a: "If the brief needs new structure, a new envelope and complete services replacement, you are paying for most of a new house without the freedom of a new design. Price both routes properly before deciding."
 sources:
-  - title: "Villa renovation in Dubai: complete 2026 guide to costs, timeline and permits (Smart Renovation)"
+  - title: "A Dubai renovation contractor's villa renovation guide, 2026 (figures not sourced by the publisher)"
     url: "https://smartrenovation.ae/villa-renovation-in-dubai-complete-2026-guide-to-costs-timeline-permits/"
+    nofollow: true
+  - title: "Property Finder: average costs for villa renovation in Dubai (September 2025)"
+    url: "https://www.propertyfinder.ae/blog/villa-renovation-dubai/"
   - title: "Dubai launches single window for building permits (Dubai Municipality)"
     url: "https://www.dm.gov.ae/dubai-launches-single-window-for-building-permits/"
   - title: "Build in Dubai platform"
     url: "https://buildindubai.gov.ae/"
-  - title: "Optimal Engineering: Cost to build a villa in Dubai (pool and contingency figures)"
+  - title: "Nakheel: Development Control and Planning Approval, preliminary design NOC (example issued June 2026)"
+    url: "https://www.cgidubai.gov.in/content/Nakheel-PD-approval-PD_IC1-CTYL-16_013_09-Jun-2026.pdf"
+  - title: "Gulf News: Jumeirah Islands owners prevented from modifying villas without approval (October 2018)"
+    url: "https://gulfnews.com/news/gulf/uae/jumeirah-islands-owners-prevented-from-modifying-villas-without-approval-1.1172089"
+  - title: "Optimal Engineering Consultants: cost to build a villa in Dubai (March 2026)"
     url: "https://www.optimal.ae/blog/cost-to-build-a-villa-in-dubai"
-  - title: "Engel & Völkers: Construction cost in Dubai (contingency)"
+  - title: "Engel & Völkers: construction cost in Dubai (December 2025)"
     url: "https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai"
-  - title: "Turner & Townsend preliminaries and Currie & Brown inflation, cited by PRASOON"
-    url: "https://prasoon.design/insights/owners-representative-vs-project-manager-uae"
+  - title: "Turner & Townsend: UAE market intelligence 2025, construction cost performance"
+    url: "https://marketintelligence.turnerandtownsend.com/uaemi-2025/construction-cost-performance/"
+  - title: "TradeArabia: construction costs set to rise this year in Saudi Arabia and UAE (Currie & Brown, February 2026)"
+    url: "https://tradearabia.com/News/389130/Construction-costs-set-to-rise-this-year-in-Saudi-Arabia-and-UAE-report"
 ---
 Renovating a villa on Palm Jumeirah starts with a Nakheel NOC, then a building permit from Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits. Anything that changes the structure, the footprint, the façade or the pool needs both; purely cosmetic interior work usually needs far less. The money is usually lost not in the approvals but in what the contractor finds once the walls, roofs and pool shells are opened up.
 
@@ -41,7 +50,7 @@ Renovating a villa on Palm Jumeirah starts with a Nakheel NOC, then a building p
 
 Palm Jumeirah is a Nakheel master community. That means two layers of approval sit above your design.
 
-**The master developer.** Renovation and extension approvals in Nakheel communities start with an NOC application through Nakheel's portal. Nakheel is checking that your proposal respects the community's design guidelines, plot limits and frontage rules, and that the works will be carried out in a way that does not disrupt neighbours or damage shared infrastructure. Expect to submit drawings, contractor details and, for larger work, a deposit or undertaking.
+**The master developer.** Renovation and extension approvals in Nakheel communities start with an NOC application through Nakheel's portal. Nakheel is checking that your proposal respects the community's design guidelines, plot limits and frontage rules, and that the works will be carried out in a way that does not disrupt neighbours or damage shared infrastructure. Expect to submit drawings, contractor details and, for larger work, a deposit or undertaking. A Nakheel design approval issued in June 2026 shows the pattern: the design is checked against the plot's development control regulations, the approval is valid for six months, and a Nakheel site access NOC and a security deposit for modification works are required before any construction starts, applied for through Nakheel's online services ([Nakheel](https://www.cgidubai.gov.in/content/Nakheel-PD-approval-PD_IC1-CTYL-16_013_09-Jun-2026.pdf)). The same document notes two Palm-specific points: PVC site hoarding is mandatory on Palm Jumeirah, and the gas NOC there comes from a different provider from other Nakheel communities.
 
 **The permitting authority.** With the NOC in hand, your registered consultant applies for the building permit from Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits. Service-authority NOCs now come through one online window rather than door to door. The Build in Dubai platform now covers alterations as well as new builds. Our [step-by-step guide to Dubai villa building permits](/insights/dubai-municipality-villa-building-permit/) explains what the consultant submits and what the owner signs.
 
@@ -61,7 +70,7 @@ Requirements change, and Nakheel and the authorities publish their own lists, so
 | Kitchen and bathroom refits with no layout or services change | Usually lighter or no approval, but confirm with Nakheel first |
 | Painting, flooring, joinery, loose furniture | Generally cosmetic; access and contractor registration rules still apply |
 
-The point we make to every owner is simple. If you are not sure whether something needs approval, assume it does until the consultant has confirmed otherwise in writing. Unapproved work on the Palm tends to surface at the worst possible moment: when you sell, when you apply for a later extension, or when a neighbour complains.
+The point we make to every owner is simple. If you are not sure whether something needs approval, assume it does until the consultant has confirmed otherwise in writing. Unapproved work on the Palm tends to surface at the worst possible moment: when you sell, when you apply for a later extension, or when a neighbour complains. Nakheel has enforced the point before: in 2018, Gulf News reported that Jumeirah Islands owners who altered villas without approval faced fines, alongside a charge for the added space ([Gulf News](https://gulfnews.com/news/gulf/uae/jumeirah-islands-owners-prevented-from-modifying-villas-without-approval-1.1172089)).
 
 ## In what order should a Palm Jumeirah renovation run?
 
@@ -97,27 +106,26 @@ Wind-borne salt attacks external metalwork, fixings, balustrades, window frames,
 
 ### The pool
 
-Pools on older villas commonly have leaking shells, failed tiling and outdated plant. A pool is a structure, and a rebuild sits firmly in the approvals column. Optimal Engineering puts a new pool at AED 80k–120k for basic fibreglass and AED 150k–250k for standard concrete, which is a useful reality check if the pool is on your list.
+Pools on older villas commonly have leaking shells, failed tiling and outdated plant. A pool is a structure, and a rebuild sits firmly in the approvals column. One Dubai engineering consultancy puts a basic fibreglass pool at AED 80,000–120,000 and a standard concrete villa pool at AED 150,000–250,000 ([Optimal Engineering](https://www.optimal.ae/blog/cost-to-build-a-villa-in-dubai)), which is a useful reality check if the pool is on your list.
 
 On the contractor's side, the first thing we priced on any refurbishment of an older coastal house was the risk in the envelope. Interiors are predictable. Roofs, basements and anything facing the sea are not, and an honest contractor will tell you so.
 
 ## What does it cost to renovate a villa on Palm Jumeirah?
 
-The table below uses one published Dubai renovation guide. These are broad bands across Dubai, not Palm-specific quotes.
+Published guides disagree, and none of them is specific to the Palm. The table sets two side by side.
 
-| Scope | Published range (AED) |
-|---|---|
-| Basic renovation | 200,000–300,000 |
-| Mid-range renovation | 400,000–800,000 |
-| Luxury renovation | 1,000,000+ |
+| Scope | Published range (AED) | Source |
+|---|---|---|
+| Basic renovation | 200,000–300,000 | A Dubai renovation contractor's 2026 guide |
+| Mid-range renovation | 400,000–800,000 | A Dubai renovation contractor's 2026 guide |
+| Luxury renovation | 1,000,000+ | A Dubai renovation contractor's 2026 guide |
+| Luxury villa: structural work and premium materials (Palm given as an example) | 1,500,000–3,500,000+ | [Property Finder](https://www.propertyfinder.ae/blog/villa-renovation-dubai/) (Sep 2025) |
 
-*Source: Smart Renovation, Dubai villa renovation guide 2026.*
+The contractor's guide cites no sources for its figures. Property Finder's table ties its bands to villa type and scope; it names communities only as examples, not as a reason for a price difference. A full refurbishment of a Palm villa, with new services, waterproofing, kitchen, bathrooms, joinery and external works, will usually sit well inside the luxury band. Three further allowances are worth carrying from the start:
 
-A full refurbishment of a Palm villa, with new services, waterproofing, kitchen, bathrooms, joinery and external works, will usually sit well inside the luxury band. Three further allowances are worth carrying from the start:
-
-- **Contingency.** Engel & Völkers and Optimal Engineering both put it at 10–15% on new builds. For a renovation of an older villa, in our experience you should sit at the top of that range or above until the opening-up survey is done.
-- **Preliminaries.** Turner & Townsend put contractor preliminaries in Dubai at 12–14% (cited by PRASOON). On a renovation in an occupied community, site set-up, protection, access restrictions and waste removal are real costs, and they should be visible in the bid.
-- **Inflation.** Currie & Brown forecast UAE construction cost inflation of around 3% for 2026 (cited by PRASOON). On a long design and approvals period, that matters.
+- **Contingency.** Engel & Völkers says a contingency of 10–15% of total project cost is widely recommended on new builds ([Engel & Völkers](https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai)). For a renovation of an older villa, in our experience you should sit at the top of that range or above until the opening-up survey is done.
+- **Preliminaries.** Turner & Townsend's 2025 UAE market intelligence puts preliminaries in Dubai at 12% of construction cost on a 2,500 m² project ([Turner & Townsend](https://marketintelligence.turnerandtownsend.com/uaemi-2025/construction-cost-performance/)). On a renovation in an occupied community, site set-up, protection, access restrictions and waste removal are real costs, and they should be visible in the bid.
+- **Inflation.** Currie & Brown forecast UAE cost escalation of around 3% for 2026 ([TradeArabia](https://tradearabia.com/News/389130/Construction-costs-set-to-rise-this-year-in-Saudi-Arabia-and-UAE-report)); Turner & Townsend forecast 4% for Dubai. On a long design and approvals period, that matters.
 
 For a full renovation budget with a worked example, see [villa renovation costs in Dubai](/insights/villa-renovation-cost-dubai/). For a fuller breakdown of new-build costs, see [how much it costs to build a villa in Dubai](/insights/villa-construction-cost-dubai/).
 

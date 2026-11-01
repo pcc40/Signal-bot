@@ -626,7 +626,7 @@ def insights(posts):
         c = [("Home", "/"), ("Insights", "/insights/"), (p["title"], path)]
         kp = "".join(f"<li>{esc(k)}</li>" for k in p.get("keypoints", []))
         faqs = [(f["q"], f["a"]) for f in p.get("faqs", [])]
-        srcs = "".join(f'<li><a href="{esc(s["url"])}" rel="{B.rel_for(s["url"])}">{esc(s["title"])}</a></li>' for s in p.get("sources", []))
+        srcs = "".join(f'<li><a href="{esc(s["url"])}" rel="{"nofollow noopener" if s.get("nofollow") else B.rel_for(s["url"])}">{esc(s["title"])}</a></li>' for s in p.get("sources", []))
         heads = re.findall(r'<h2 id="([^"]+)">(.*?)</h2>', p["html"])
         toc = ("<nav class=\"toc\" aria-label=\"In this article\"><strong>In this article</strong><ol>" +
                "".join(f'<li><a href="#{h}">{t}</a></li>' for h, t in heads) + "</ol></nav>") if len(heads) > 2 else ""

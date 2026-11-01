@@ -2,7 +2,7 @@
 title: "UAE villa construction contracts: variations and delays"
 description: "How UAE villa construction contracts handle variations, delays, payment, retention and bonds, and how owners protect themselves with good contract administration."
 date: 2026-10-27
-updated: 2026-10-31
+updated: 2026-11-01
 category: "Contracts"
 keypoints:
   - "Dubai Municipality publishes guidance contract forms for private villa consultancy and construction, in Arabic; they are not mandatory and can be amended by agreement."
@@ -32,6 +32,16 @@ sources:
     url: "https://www.tamimi.com/news/dubai-issues-new-law-regulating-engineering-consultancy-activities-key-takeaway-points/"
   - title: "Residential buildings: building permits procedures (Dubai Municipality)"
     url: "https://dmpmedia.dm.gov.ae/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf"
+  - title: "K&L Gates: The impact of the new Civil Transactions Law on construction contracts in the UAE (March 2026)"
+    url: "https://www.klgates.com/The-Impact-of-the-New-Civil-Transactions-Law-on-Construction-Contracts-in-the-United-Arab-Emirates-3-9-2026"
+  - title: "Fenwick Elliott: Liquidated damages, the differing approaches in the UAE and the UK"
+    url: "https://www.fenwickelliott.com/research-insight/newsletters/international-quarterly/liquidated-damages-uae-uk"
+  - title: "Kayrouz & Associates: decennial liability for UAE contractors and engineers (2026)"
+    url: "https://www.kayrouzandassociates.com/insights/decennial-liability-uae-contractors-engineers-2026"
+  - title: "ICC: An explanation of the ins and outs of claims under FIDIC 2017 (Driver Trett)"
+    url: "https://iccwbo.org/news-publications/guests-blog-speeches/guest-blog-its-easy-when-you-know-how-an-explanation-of-the-ins-and-outs-of-claims-under-fidic-2017/"
+  - title: "RICS: Appropriate contract selection, 2nd edition, practice information (April 2024)"
+    url: "https://www.rics.org/content/dam/ricsglobal/documents/standards/Appropriate-contract-selection-2nd-edition.pdf"
 ---
 A villa construction contract in the UAE protects you on variations and delays only if it says clearly how changes are instructed and priced, how delays are notified and assessed, and what happens if the villa is late, and if both sides then follow those rules every week of the build. Most disputes we have seen did not start with a bad contract. They started with a reasonable contract that nobody administered.
 
@@ -53,7 +63,7 @@ Your consultant's appointment matters too. Under Dubai Law No. 14 of 2025, engin
 
 ## Lump sum or remeasure: which contract do I have?
 
-This is the first thing to establish, because it decides who carries the risk of quantities.
+This is the first thing to establish, because it decides who carries the risk of quantities. RICS practice information on contract selection lists the main ways of setting the contract sum as a fixed-price lump sum, remeasurement and target cost, alongside prime cost plus a fee, and treats the choice as one of the main decisions in choosing a contract.
 
 | | Lump sum | Remeasure |
 |---|---|---|
@@ -88,6 +98,8 @@ These are the owner's main forms of financial security.
 
 Ask also for evidence of contractors' all-risks and third-party liability insurance for the duration of the works.
 
+**Decennial liability** sits outside the contract's security. UAE law makes the contractor and the engineer jointly liable for ten years from handover for total or partial collapse and for defects that threaten the building's stability or safety, and any clause that tries to exclude or limit that liability is void. The rule is in Articles 880 to 883 of the 1985 Civil Code and, from 1 June 2026, Articles 821 to 824 of the new code ([Kayrouz & Associates](https://www.kayrouzandassociates.com/insights/decennial-liability-uae-contractors-engineers-2026)). It does not cover finishes or ordinary services faults, which is why retention and the defects period still matter.
+
 ## How do variations work in a villa contract?
 
 A variation is any change to the work described in the contract: an added room, a different finish, a moved wall, an omission. Variations are normal. Unmanaged variations are the single biggest cause of budget overruns we have seen.
@@ -103,17 +115,19 @@ On the contractor's side, we learned early that verbal instructions were where m
 
 Keep a variation register: number, description, date instructed, quoted cost, agreed cost, time effect, status. Review it monthly against the budget.
 
+The law sets a floor under all this. Commentary on the new Civil Transactions Law notes that Article 829(2) deals with payment where the scope of work changes or increases through the employer's fault, and that Article 829(3) lets a court restore the balance between the parties if exceptional general circumstances arise, including by extending the completion period or adjusting the price ([K&L Gates](https://www.klgates.com/The-Impact-of-the-New-Civil-Transactions-Law-on-Construction-Contracts-in-the-United-Arab-Emirates-3-9-2026)). A written variation procedure keeps you out of that territory.
+
 ## Extension of time and liquidated damages, in plain English
 
 These two clauses work as a pair.
 
-**Liquidated damages (LDs)** are a sum the contractor pays for each day or week the villa is late beyond the completion date. They are agreed in advance so the owner does not have to prove the actual loss of a late handover. How they are treated is a matter of UAE law, including whether a court or tribunal may adjust them, so take advice from a UAE-qualified lawyer on your specific clause.
+**Liquidated damages (LDs)** are a sum the contractor pays for each day or week the villa is late beyond the completion date. They are agreed in advance so the owner does not have to prove the actual loss of a late handover. How they are treated is a matter of UAE law. Under Article 390 of the 1985 Civil Code, a court may, at either party's request, vary agreed compensation to equal the actual loss, and an agreement to the contrary is void ([Fenwick Elliott](https://www.fenwickelliott.com/research-insight/newsletters/international-quarterly/liquidated-damages-uae-uk)). For contracts made from 1 June 2026, the new Civil Transactions Law (Federal Decree-Law No. 25 of 2025) replaces it with Article 340: the court may reduce the pre-agreed amount, and the owner can claim more only by proving fraud or gross negligence ([K&L Gates](https://www.klgates.com/The-Impact-of-the-New-Civil-Transactions-Law-on-Construction-Contracts-in-the-United-Arab-Emirates-3-9-2026)). Which law applies depends on when your contract was made, so take advice from a UAE-qualified lawyer on your specific clause.
 
 **Extension of time (EOT)** moves the completion date when the delay is caused by something the contract says is not the contractor's risk: owner changes, late information from the owner's side, authority delays outside the contractor's control, or other listed events. If an EOT is granted, the contractor is not liable for LDs for that period.
 
 A well-drafted contract also sets out:
 
-- **Notice periods.** The contractor must notify a delay event within a set time.
+- **Notice periods.** The contractor must notify a delay event within a set time. Under the FIDIC 2017 Red Book, for example, a party that does not give notice of a claim within 28 days of becoming aware of the event loses its entitlement, and a fully detailed claim follows within 84 days ([ICC](https://iccwbo.org/news-publications/guests-blog-speeches/guest-blog-its-easy-when-you-know-how-an-explanation-of-the-ins-and-outs-of-claims-under-fidic-2017/)). The new UAE Civil Transactions Law also requires the contractor to notify the employer immediately of events that may impede the work (Article 816(3)) ([K&L Gates](https://www.klgates.com/The-Impact-of-the-New-Civil-Transactions-Law-on-Construction-Contracts-in-the-United-Arab-Emirates-3-9-2026)).
 - **Substantiation.** The notice should be followed by details of cause, effect and evidence.
 - **Assessment.** The person named in the contract assesses the claim within a set period.
 - **Loss and expense.** Whether the contractor can recover additional cost, such as extended preliminaries, as well as time.
