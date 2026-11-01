@@ -318,7 +318,7 @@ def footer():
 <p>{esc(C.ADDRESS["street"])}<br>{esc(C.ADDRESS["locality"])}, {esc(C.ADDRESS["country_name"])}</p></div>
 <div><h3>Services</h3><ul>{svc}<li><a href="/services/">All services</a></li></ul></div>
 <div><h3>Where we work</h3><ul>{ar}<li><a href="/areas/">All areas</a></li></ul></div>
-<div><h3>Firm</h3><ul><li><a href="/why-a-client-side-project-manager/">Why client-side</a></li><li><a href="/case-studies/">Case studies</a></li><li><a href="/work/">Work</a></li><li><a href="/about/">About</a></li><li><a href="/approach/">How we work</a></li><li><a href="/independence/">Independence pledge</a></li><li><a href="/fees/">How fees work</a></li><li><a href="/tools/villa-build-cost-calculator/">Cost calculator</a></li><li><a href="/insights/">Insights</a></li><li><a href="/guides/villa-owner-checklist/">Pre-construction checklist</a></li><li><a href="/faq/">Questions</a></li><li><a href="/glossary/">Glossary</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+<div><h3>Firm</h3><ul><li><a href="/why-a-client-side-project-manager/">Why client-side</a></li><li><a href="/case-studies/">Case studies</a></li><li><a href="/work/">Work</a></li><li><a href="/about/">About</a></li><li><a href="/approach/">How we work</a></li><li><a href="/independence/">Independence pledge</a></li><li><a href="/fees/">How fees work</a></li><li><a href="/tools/villa-build-cost-calculator/">Cost calculator</a></li><li><a href="/tools/renovate-or-rebuild/">Renovate or rebuild</a></li><li><a href="/tools/stage-payment-planner/">Stage payment planner</a></li><li><a href="/tools/delay-cost-estimator/">Delay cost estimator</a></li><li><a href="/insights/">Insights</a></li><li><a href="/guides/villa-owner-checklist/">Pre-construction checklist</a></li><li><a href="/faq/">Questions</a></li><li><a href="/glossary/">Glossary</a></li><li><a href="/contact/">Contact</a></li></ul></div>
 </div>
 <div class="legal"><span>© {year} {C.LEGAL}. {C.LICENCE}. Eastbridge acts as the client's project manager and representative. It is not a contractor and does not replace the registered consultant of record required by the authorities.</span>
 <span><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/sitemap.xml">Sitemap</a></span></div>
@@ -401,7 +401,10 @@ def deprioritise_slides(body):
     return re.sub(r'<div class="slides">.*?</div>', fix, body, count=1, flags=re.S)
 
 def page(path, title, description, body, crumbs=None, schema=None, og=None, og_type="website",
-         preload=None, noindex=False, hero=False):
+         preload=None, noindex=False, hero=False, canonical=None, bare=False):
+    """canonical: another path this page points search engines to (default: the page itself).
+    bare: no site header, footer, action bar, site script or analytics, for pages shown inside another site's
+    iframe (the embeddable calculator). Bare pages carry body class "bare"."""
     crumbs = crumbs or [("Home", "/")]
     schema = list(schema or [])
     if path == "/":
@@ -419,7 +422,7 @@ def page(path, title, description, body, crumbs=None, schema=None, og=None, og_t
     if C.BING_VERIFICATION:
         verif += f'<meta name="msvalidate.01" content="{C.BING_VERIFICATION}">'
     hero = hero or body.lstrip().startswith(('<section class="banner"', '<section class="hero"', '<article><section class="banner"'))
-    body_cls = ' class="has-hero"' if hero else ""
+    body_cls = ' class="has-hero"' if hero else (' class="bare"' if bare else "")
     pre = lcp_preload(body, preload)
     doc = f'''<!doctype html>
 <html lang="en-GB" dir="ltr">
@@ -429,7 +432,7 @@ def page(path, title, description, body, crumbs=None, schema=None, og=None, og_t
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
 <meta name="robots" content="{robots}">
-<link rel="canonical" href="{url(path)}">
+<link rel="canonical" href="{url(canonical or path)}">
 <link rel="alternate" hreflang="en" href="{url(path)}">
 <link rel="alternate" hreflang="x-default" href="{url(path)}">
 <meta property="og:type" content="{og_type}">
@@ -452,24 +455,29 @@ def page(path, title, description, body, crumbs=None, schema=None, og=None, og_t
 {pre}
 <link rel="stylesheet" href="/assets/site.css?v={CSS_HASH}">
 {ld}
-{analytics()}
+{"" if bare else analytics()}
 </head>
 <body{body_cls}>
-{header(path)}
+{"" if bare else header(path)}
 <main id="main">
 {body}
 </main>
-{footer()}
-{SCRIPT}
+{"" if bare else footer()}
+{"" if bare else SCRIPT}
 </body>
 </html>'''
     out = DIST / path.lstrip("/") / "index.html" if path.endswith("/") else DIST / path.lstrip("/")
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(doc, encoding="utf-8")
+    ALL_PAGES.append(path)
+    if bare:
+        FRAMEABLE.append(path)
     if not noindex:
         PAGES.append(path)
 
-PAGES = []
+PAGES = []          # indexable pages (sitemap)
+ALL_PAGES = []      # every English page, for the generated _headers file
+FRAMEABLE = []      # bare pages that other sites may show in an iframe
 
 def page_head(crumbs, h1, lede=None, extra=""):
     l = f'<p class="lede">{lede}</p>' if lede else ""
@@ -525,6 +533,35 @@ def write_sitemap(posts=()):
     (DIST / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
         + "".join(items) + "</urlset>\n", encoding="utf-8")
+
+LANG_PREFIXES = ("", "/ar", "/ru", "/zh", "/hi")   # tools/i18n.py writes a copy of every page under each prefix
+
+def write_headers():
+    """dist/_headers: anti-framing headers for every page except the embeddable ones (FRAMEABLE).
+    Netlify does not document which value wins when two matching header rules set the same header, and a
+    multi-value header would make browsers apply the strictest policy, so no rule that blocks framing may match
+    an embed page at all. netlify.toml therefore sets no framing header on /*; this file covers each site
+    section with a wildcard, or with exact paths where a section contains an embed page, in every language."""
+    frame = sorted(set(FRAMEABLE))
+    deny, groups = [], {}
+    for p in sorted(set(ALL_PAGES) - set(frame)):
+        seg = p.strip("/").split("/")[0] if p != "/" else ""
+        groups.setdefault(seg, []).append(p)
+    for seg, ps in sorted(groups.items()):
+        if seg == "" or "." in seg:                 # home page, /404.html
+            deny += ps
+        elif any(f.startswith(f"/{seg}/") for f in frame):
+            deny += ps                               # exact paths only, so the embed page is never matched
+        else:
+            deny.append(f"/{seg}/*")
+    lines = ["# Generated by build.py write_headers(). Do not edit; see the docstring there.", ""]
+    for pre in LANG_PREFIXES:
+        for p in deny:
+            lines += [pre + p, "  X-Frame-Options: SAMEORIGIN", "  Content-Security-Policy: frame-ancestors 'self'", ""]
+    for pre in LANG_PREFIXES:
+        for p in frame:
+            lines += [pre + p + "*", "  Content-Security-Policy: frame-ancestors *", ""]
+    (DIST / "_headers").write_text("\n".join(lines), encoding="utf-8")
 
 def write_robots():
     if not C.INDEXABLE:
@@ -685,7 +722,10 @@ def write_llms(posts):
         "", "## Services"] + [f"- [{s['name']}]({url('/services/' + s['slug'] + '/')}): {s['description']}" for s in SERVICES] + \
         ["", "## Areas"] + [f"- [{a['name']}]({url('/areas/' + a['slug'] + '/')}): {a['tag']}; master developer {a['developer']}" for a in AREAS] + \
         ["", "## Guides"] + [f"- [{p['title']}]({url('/insights/' + p['slug'] + '/')}): {p['description']} (updated {post_dates(p)[1].isoformat()})" for p in posts] + \
-        ["", "## Tools", f"- [Villa build and renovation cost calculator]({url('/tools/villa-build-cost-calculator/')}): indicative low, likely and high costs for building or renovating a villa in Dubai or Abu Dhabi, with design fees, approvals, contingency and timeline; every rate cited to published 2025-26 sources"] + \
+        ["", "## Tools", f"- [Villa build and renovation cost calculator]({url('/tools/villa-build-cost-calculator/')}): indicative low, likely and high costs for building or renovating a villa in Dubai or Abu Dhabi, with design fees, approvals, contingency and timeline; every rate cited to published 2025-26 sources",
+         f"- [Renovate or rebuild?]({url('/tools/renovate-or-rebuild/')}): renovating a villa against knocking it down and rebuilding, with low, likely and high totals, cost per sq ft of finished space, time and approvals",
+         f"- [Stage payment and cash-flow planner]({url('/tools/stage-payment-planner/')}): a villa build budget spread over a typical UAE payment schedule (advance, monthly valuations, retention and release), month by month",
+         f"- [Delay cost estimator]({url('/tools/delay-cost-estimator/')}): the monthly cost to an owner of a delayed villa build (rent, finance, escalation, extended site costs, fees)"] + \
         ["", "## Free guide", f"- [The Villa Owner's Pre-Construction Checklist (Dubai & Abu Dhabi)]({url('/guides/villa-owner-checklist/')}): free 10-page PDF of practical checks by stage: plot purchase, brief and budget, choosing a consultant and contractor, contract terms, monthly checks during construction, snagging and handover. Direct PDF: {url('/assets/guides/villa-owner-checklist.pdf')}"] + \
         ["", "## About",
          f"- [About Eastbridge and Philip Chapman]({url('/about/')})", f"- [How we work]({url('/approach/')})",
@@ -738,6 +778,7 @@ def main():
     posts = load_insights()
     pages.build_all(posts)
     write_sitemap(posts)
+    write_headers()
     write_robots()
     write_feed(posts)
     write_llms(posts)

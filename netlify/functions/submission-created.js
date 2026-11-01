@@ -7,12 +7,16 @@
 //      "checklist" form -> no email (the download is shown on the thank-you page),
 //                          unless the visitor ticked the optional notes box, in which
 //                          case they get the same subscription confirmation as "notes".
-//   2. Optionally emails an internal lead alert for "brief" (LEAD_ALERT_TO).
+//      "estimate" form  -> sends an acknowledgement that the calculator estimate reached
+//                          Philip (from /tools/villa-build-cost-calculator/). The email never
+//                          repeats the submitted figures: the hidden fields can be edited by
+//                          anyone, so only the lead alert and the sheet carry them.
+//   2. Optionally emails an internal lead alert for "brief" and "estimate" (LEAD_ALERT_TO).
 //   3. Optionally logs every submission to a Google Sheet (SHEET_WEBHOOK_URL, a Google
 //      Apps Script web app; see business/automation-blueprint.md, section 4).
 //
 // Marketing consent
-//   The "brief" and "checklist" forms carry an optional, unticked checkbox
+//   The "brief", "checklist" and "estimate" forms carry an optional, unticked checkbox
 //   name="marketing_opt_in" value="yes". Only a ticked box counts as consent.
 //   Subscribing through the "notes" form is itself the request for notes.
 //   The result is written as marketing_opt_in "yes"/"no" (plus marketing_source)
@@ -102,21 +106,52 @@ function waLink(text) {
 
 // ---------- email copy (British English, calm, no exclamation marks) ---------
 
+// Copy for the two acknowledgement emails. Everything except the first name is fixed text.
+const ACK = {
+  brief: {
+    subject: "Your brief has reached Eastbridge",
+    intro: "Thank you for sending us your brief. It has reached us safely and Philip Chapman, our founding partner, replies personally within one working day.",
+    steps: [
+      "We read your brief carefully.",
+      "We arrange a free 30-minute call at a time that suits you.",
+      "If we can help, we propose a fixed-fee first review, such as a plot review or a project health check, with the scope and fee in writing before we start. If we cannot, we say so and, where we can, point you to someone who can.",
+    ],
+    wa: "Hello Eastbridge, I have just sent a brief through your website.",
+  },
+  estimate: {
+    subject: "Your estimate has reached Eastbridge",
+    intro: "Thank you for sending us your estimate from our villa build cost calculator. Your inputs and the line-by-line result have reached us safely, and Philip Chapman, our founding partner, replies personally within one working day.",
+    steps: [
+      "Philip looks at your inputs, the result and any notes about the plot.",
+      "He replies with a plain view of whether the figures look realistic for the plot and specification, and which lines carry the most risk.",
+      "If a closer look would help, such as a plot review, we set out the scope and a fixed fee in writing before we start. A free 30-minute call is always available first.",
+    ],
+    wa: "Hello Eastbridge, I have just sent you an estimate from your villa cost calculator.",
+  },
+};
+
 function briefEmail(firstName, optedIn) {
+  return ackEmail("brief", firstName, optedIn);
+}
+
+function estimateEmail(firstName, optedIn) {
+  return ackEmail("estimate", firstName, optedIn);
+}
+
+function ackEmail(kind, firstName, optedIn) {
+  const copy = ACK[kind];
   const hello = firstName ? `Dear ${firstName},` : "Hello,";
   const booking = process.env.BOOKING_URL || "";
-  const wa = waLink("Hello Eastbridge, I have just sent a brief through your website.");
-  const subject = "Your brief has reached Eastbridge";
+  const wa = waLink(copy.wa);
+  const subject = copy.subject;
 
   const text = [
     hello,
     "",
-    "Thank you for sending us your brief. It has reached us safely and Philip Chapman, our founding partner, replies personally within one working day.",
+    copy.intro,
     "",
     "What happens next:",
-    "1. We read your brief carefully.",
-    "2. We arrange a free 30-minute call at a time that suits you.",
-    "3. If we can help, we propose a fixed-fee first review, such as a plot review or a project health check, with the scope and fee in writing before we start. If we cannot, we say so and, where we can, point you to someone who can.",
+    ...copy.steps.map((t, i) => `${i + 1}. ${t}`),
     "",
     booking ? `If you would like to choose a time for that call now, you can book here: ${booking}` : "",
     `If it is urgent, message us on WhatsApp: ${wa}`,
@@ -143,12 +178,10 @@ function briefEmail(firstName, optedIn) {
 <tr><td style="padding:28px 32px;border-bottom:1px solid #e5e0d8;font-family:Arial,Helvetica,sans-serif;font-size:13px;letter-spacing:.14em;text-transform:uppercase">Eastbridge Strategic Partners</td></tr>
 <tr><td style="padding:32px;font-size:17px;line-height:1.6">
 <p style="margin:0 0 16px">${esc(hello)}</p>
-<p style="margin:0 0 16px">Thank you for sending us your brief. It has reached us safely and Philip Chapman, our founding partner, replies personally within one working day.</p>
+<p style="margin:0 0 16px">${esc(copy.intro)}</p>
 <p style="margin:24px 0 8px;font-family:Arial,Helvetica,sans-serif;font-size:13px;letter-spacing:.1em;text-transform:uppercase">What happens next</p>
 <ol style="margin:0 0 16px;padding-left:20px">
-<li style="margin-bottom:6px">We read your brief carefully.</li>
-<li style="margin-bottom:6px">We arrange a free 30-minute call at a time that suits you.</li>
-<li>If we can help, we propose a fixed-fee first review, such as a plot review or a project health check, with the scope and fee in writing before we start. If we cannot, we say so and, where we can, point you to someone who can.</li>
+${copy.steps.map((t, i) => `<li${i < copy.steps.length - 1 ? ' style="margin-bottom:6px"' : ""}>${esc(t)}</li>`).join("\n")}
 </ol>
 <p style="margin:24px 0 8px">${booking ? btn(booking, "Choose a time to talk") : ""}${btn(wa, "Message us on WhatsApp")}</p>
 <p style="margin:16px 0 0;font-size:15px">Or call <a href="tel:${PHONE_E164}" style="color:#1f2a2e">${PHONE_DISPLAY}</a>, ${esc(HOURS)}.</p>
@@ -195,7 +228,7 @@ function alertEmail(formName, lead) {
     .map(([k, v]) => `${k}: ${v}`)
     .join("\n");
   return {
-    subject: `New ${formName} enquiry: ${lead.name || lead.email || "unknown"}${lead.area ? " (" + lead.area + ")" : ""}`.slice(0, 150),
+    subject: `New ${formName} enquiry: ${lead.name || lead.email || "unknown"}${lead.area || lead.plot ? " (" + (lead.area || lead.plot) + ")" : ""}`.slice(0, 150),
     text,
     html: `<table style="font-family:Arial,Helvetica,sans-serif;font-size:14px">${rows}</table>`,
   };
@@ -274,6 +307,11 @@ exports.handler = async (event) => {
     based: asText(d.based),
     message: asText(d.message),
     contact_method: asText(d.contact_method),
+    plot: asText(d.plot).slice(0, 300),
+    estimate_inputs: asText(d.estimate_inputs).slice(0, 1000),
+    estimate_result: asText(d.estimate_result).slice(0, 2000),
+    estimate_link: asText(d.estimate_link).slice(0, 1000),
+    currency: asText(d.currency).slice(0, 8),
     marketing_opt_in: optedIn ? "yes" : "no",
     marketing_source: marketingSource(formName, optedIn),
     page: referrer,
@@ -285,7 +323,7 @@ exports.handler = async (event) => {
 
   // 1. Log first, so a lead is never lost even if email fails.
   try {
-    const status = formName === "brief" ? "New enquiry" : formName === "checklist" ? "Checklist download" : "Subscriber";
+    const status = { brief: "New enquiry", estimate: "Estimate request", checklist: "Checklist download" }[formName] || "Subscriber";
     results.sheet = await logToSheet({ ...lead, status });
   } catch (e) {
     console.error("Sheet log failed:", e.message);
@@ -295,10 +333,11 @@ exports.handler = async (event) => {
   // 2. Customer acknowledgement.
   const autoreplyOff = String(process.env.AUTOREPLY_DISABLED || "").toLowerCase() === "true";
   // "checklist" gets an email only when the visitor opted in to notes.
-  const wantsAck = formName === "brief" || formName === "notes" || (formName === "checklist" && optedIn);
+  const wantsAck = formName === "brief" || formName === "estimate" || formName === "notes" || (formName === "checklist" && optedIn);
   if (!autoreplyOff && isEmail(email) && wantsAck) {
     try {
-      const msg = formName === "brief" ? briefEmail(safeFirstName(d.name), optedIn) : notesEmail();
+      const first = safeFirstName(d.name);
+      const msg = formName === "brief" ? briefEmail(first, optedIn) : formName === "estimate" ? estimateEmail(first, optedIn) : notesEmail();
       results.ack = await sendEmail({ to: email, ...msg });
     } catch (e) {
       console.error("Acknowledgement failed:", e.message);
@@ -311,7 +350,7 @@ exports.handler = async (event) => {
     .split(",")
     .map((s) => s.trim())
     .filter(isEmail);
-  if (alertTo.length && formName === "brief") {
+  if (alertTo.length && (formName === "brief" || formName === "estimate")) {
     try {
       results.alert = await sendEmail({ to: alertTo, ...alertEmail(formName, lead), replyTo: isEmail(email) ? email : undefined });
     } catch (e) {
@@ -326,4 +365,4 @@ exports.handler = async (event) => {
 };
 
 // Exposed for tools/test_submission_function.js only.
-exports._test = { isOptedIn, briefEmail, notesEmail, alertEmail };
+exports._test = { isOptedIn, briefEmail, estimateEmail, notesEmail, alertEmail };

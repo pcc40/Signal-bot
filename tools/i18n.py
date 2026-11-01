@@ -316,7 +316,10 @@ def translate_page(f, lang, tr, missing):
             if l.get("href", "").startswith("/assets/site.css"):
                 l["href"] = l["href"].replace("/assets/site.css", "/assets/site-rtl.css")
     can = soup.find("link", rel="canonical")
-    if can: can["href"] = C.SITE_URL + lang_url(path, lang)
+    if can:
+        # Usually the page itself; a page may point elsewhere (the calculator embed points to the full calculator).
+        cpath = can["href"][len(C.SITE_URL):] if can["href"].startswith(C.SITE_URL + "/") else path
+        can["href"] = C.SITE_URL + lang_url(cpath, lang)
     ogu = soup.find("meta", property="og:url")
     if ogu: ogu["content"] = C.SITE_URL + lang_url(path, lang)
     ogl = soup.find("meta", property="og:locale")

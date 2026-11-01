@@ -16,6 +16,8 @@ Standard sign-off for email:
 > Founding Partner, Eastbridge Strategic Partners
 > +971 56 744 0057 · philip@eastbridgestrategicpartners.com · eastbridgestrategicpartners.com
 
+**Something useful to offer every partner: the embeddable cost calculator.** Agents, architects and lawyers can put our villa build and renovation cost calculator on their own website for free. It is the calculator only, with a "Calculator by Eastbridge Strategic Partners" link back to us, in all five languages, and we keep the rates current. The iframe code is in the "Add this calculator to your website" box at https://eastbridgestrategicpartners.com/tools/villa-build-cost-calculator/#embed (preview: /tools/villa-build-cost-calculator/embed/). Offer it as a P.S. once a conversation has started, for example: "P.S. If your clients ask what a villa costs to build, you are welcome to put our sourced cost calculator on your site; the code is here: [link]." It is a free tool, not a referral arrangement: no fees change hands, and we never ask a partner to link to us in return.
+
 ---
 
 ## (a) Partner-introduction email templates
