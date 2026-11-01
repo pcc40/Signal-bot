@@ -91,7 +91,7 @@ Ask any firm to put in writing:
 - What you receive after each visit, and each month.
 - Whether the named lead can be replaced without your agreement.
 
-At Eastbridge, our founder, Philip Chapman, leads every appointment personally, supported by a team of three project managers who attend site and provide cover. Site attendance is agreed in writing in the scope of each appointment: typically weekly during active construction, and more often at key stages.
+At Eastbridge, our founder, Philip Chapman, leads every appointment personally, supported by a team of three project managers who attend site and provide cover. Site attendance is agreed in writing in the scope of each appointment.
 
 From the builder's side, we can tell you how this looked on the other side of the table. On a contractor's team, you quickly learn which client representatives actually turn up, and which ones read the monthly report and nothing else. The ones who appeared at the right moments, before concrete was poured and before walls were closed up, were the ones whose questions we prepared for. Site presence changes behaviour in a way that a report alone does not.
 

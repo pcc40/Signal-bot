@@ -29,7 +29,7 @@ SITE_HOST = PT.SITE_HOST
 
 # ---------------------------------------------------------------- sources (in addition to pages_tools.SOURCES)
 EXTRA_SOURCES = [
-    ("srb", "Smart Renovation, How much does villa renovation cost in Dubai? Full price breakdown (2026): AED per sq ft by scope",
+    ("srb", "A Dubai renovation contractor, villa renovation cost, full price breakdown (2026; figures not sourced by the publisher): AED per sq ft by scope",
      "https://smartrenovation.ae/how-much-does-villa-renovation-cost-in-dubai-full-price-breakdown-2026/"),
     ("evr", "Engel & Völkers, Average villa rental prices in Dubai (2026), data from Property Monitor, updated 21 May 2026",
      "https://www.engelvoelkers.com/ae/en/resources/villa-rental-prices"),
@@ -68,7 +68,7 @@ class Cites:
 
 # ---------------------------------------------------------------- shared figures
 R = PT.RATES
-# Smart Renovation's price breakdown, AED per sq ft of existing floor area. Luxury is published only as "450 or more"
+# A renovation contractor's price breakdown (never named in copy; nofollow), AED per sq ft of existing floor area. Luxury is published only as "450 or more"
 # (None = no published ceiling: only the starting column is shown, like the luxury band in the cost calculator).
 RENO_RATES = {
     "basic": {"label": "Basic refresh", "rate": [120, 250], "months": R["reno"]["standard"]["months"], "soft": False},
@@ -85,7 +85,7 @@ def rent_month(beds):
 RENT_DEFAULT = rent_month("4")                     # AED 28,600 a month (343,461 / 12 = 28,621.75, to the nearest 100)
 BASE_RATE = 3.9                                    # CBUAE Base Rate from 17 September 2026 (a floor, not a loan rate)
 EXAMPLE_CONS = PT.estimate(PT.EXAMPLE)["construction"][1]   # the cost calculator's worked example, construction only
-# Construction inflation forecasts for 2026 (% a year): Currie & Brown UAE about 3% (via PRASOON); Turner & Townsend
+# Construction inflation forecasts for 2026 (% a year): Currie & Brown UAE about 3% (reported by TradeArabia); Turner & Townsend
 # Dubai 4%, Abu Dhabi 5%. Low = Currie & Brown, high = Turner & Townsend for the emirate, likely = the midpoint.
 ESCALATION = {"dubai": [3.0, 3.5, 4.0], "ad": [3.0, 4.0, 5.0]}
 # Turner & Townsend 2025: preliminaries on a 2,500 m² project, Dubai 12%, Abu Dhabi 15% of construction cost.
@@ -359,18 +359,18 @@ def rr_out(e):
 <p class="calc-note calc-js" data-js-note>Showing the example below. Switch on JavaScript to change the inputs.</p>
 <p class="calc-flag">An indicative comparison from published market ranges, not a quotation. Each line is rounded and the totals are the sum of the lines. Excludes the plot, pool, landscaping, furniture, finance, VAT, inflation and advisers' fees, including ours. <a href="#sources">Sources and assumptions</a></p>
 {actions_html("Hello, I used your renovate or rebuild tool and would like to talk through my villa.")}
-{print_foot(RR_PATH, "Renovation rates: Smart Renovation. New-build rates, fees, contingency and approvals: the Eastbridge cost calculator (Engel &amp; Völkers, Optimal Engineering, Knight Frank, Turner &amp; Townsend). Demolition and timeline: a property information website. Rents: Engel &amp; Völkers.")}
+{print_foot(RR_PATH, "Renovation rates: a Dubai renovation contractor’s guide, set beside Property Finder. New-build rates, fees, contingency and approvals: the Eastbridge cost calculator (Engel &amp; Völkers, Optimal Engineering, Knight Frank, Turner &amp; Townsend). Demolition and timeline: a property information website. Rents: Engel &amp; Völkers.")}
 </div>'''
 
 def renovate_or_rebuild():
     c = Cites()
     e = estimate_rr(RR_EXAMPLE)
-    srb, opt, ev, kf, tt, reca, recc, sr, evr, dmp, dbc = (c("srb"), c("opt"), c("ev"), c("kf"), c("tt"), c("reca"), c("recc"),
-                                                           c("sr"), c("evr"), c("dmp"), c("dbc"))
+    srb, pf, opt, ev, kf, tt, reca, recc, sr, evr, dmp, dbc = (c("srb"), c("pf"), c("opt"), c("ev"), c("kf"), c("tt"), c("reca"),
+                                                               c("recc"), c("sr"), c("evr"), c("dmp"), c("dbc"))
     after = f'''<section class="section--tight paper"><div class="wrap split"><div><h2>How the comparison works</h2></div><div class="prose">
 <p>The short answer: on a sound villa, renovating is usually cheaper per square foot of finished space than knocking down and rebuilding, because the structure stays. The gap narrows when the renovation is deep (new services, waterproofing, structural changes) and when a rebuild adds floor area the existing villa cannot. Our <a href="{RR_ARTICLE}">guide to renovating or rebuilding a Dubai villa</a> explains how to decide.</p>
 <ol>
-<li><strong>Renovation works.</strong> Existing built-up area multiplied by Smart Renovation's published rate for the scope: AED 120–250 per sq ft for a basic renovation, AED 250–450 for mid-range and AED 450 or more for luxury work with structural changes.{srb} Luxury has no published ceiling, so the tool then shows starting figures only. Our <a href="{PT.CALC_PATH}">cost calculator</a> uses a different set of Smart Renovation figures for renovations: whole-villa bands for a typical villa (basic AED 200,000–300,000, mid-range AED 400,000–800,000, luxury from AED 1 million), which do not change with floor area. For the same villa the two tools can therefore give quite different renovation figures; for a large villa, the rate per square foot used here is the more realistic basis.</li>
+<li><strong>Renovation works.</strong> Existing built-up area multiplied by a Dubai renovation contractor's published rate for the scope: AED 120–250 per sq ft for a basic renovation, AED 250–450 for mid-range and AED 450 or more for luxury work with structural changes.{srb} The publisher gives no sources, and the published figures disagree: Property Finder gives a wider villa range of AED 150–600 per sq ft.{pf} Luxury has no published ceiling, so the tool then shows starting figures only. Our <a href="{PT.CALC_PATH}">cost calculator</a> uses a different set of figures from the same contractor's guide for renovations: whole-villa bands for a typical villa (basic AED 200,000–300,000, mid-range AED 400,000–800,000, luxury from AED 1 million), which do not change with floor area. For the same villa the two tools can therefore give quite different renovation figures; for a large villa, the rate per square foot used here is the more realistic basis.</li>
 <li><strong>Rebuild.</strong> The new built-up area at the cost calculator's construction rates for the chosen specification,{ev}{kf}{opt}{tt} plus demolition of the existing villa at AED 50,000–200,000.{recc}</li>
 <li><strong>Design fees, approvals and contingency</strong> follow the cost calculator: design and engineering 6–12% of construction,{opt} a fixed AED 25,000–75,000 approvals band (our own assumption for a straightforward villa),{recc} and a 10–15% contingency{ev}{opt} with 12% as the likely figure. A basic renovation carries no design fees or approvals allowance.</li>
 <li><strong>Time.</strong> Renovation works take two to three months for a basic refresh, four to six for kitchens, bathrooms and interiors, and six months or longer for structural work.{sr} A rebuild runs through design (3–4 months), approvals (2–3), construction (8–14) and snagging (1–2), and 24–36 months from plot to keys for a custom luxury villa.{reca} Demolition is assumed to sit within the construction phase.</li>
@@ -395,7 +395,7 @@ def renovate_or_rebuild():
             "demo": R["demo"], "design": R["design"], "contingency": R["contingency"], "permitsFixed": R["permitsFixed"], "time": R["time"]}
     faqs = [
         ("Is it cheaper to renovate or rebuild a villa in Dubai?",
-         "Usually cheaper to renovate, if the structure is sound. Published 2026 renovation rates run from about AED 120–250 per sq ft for basic work to AED 250–450 for mid-range and AED 450 or more for luxury or structural work (Smart Renovation), while new-build construction runs from about AED 300–500 per sq ft at a standard specification to AED 850–1,200 or more for luxury, before demolition, fees and contingency. A deep renovation of an older villa can close much of that gap."),
+         "Usually cheaper to renovate, if the structure is sound. Published 2026 renovation rates run from about AED 120–250 per sq ft for basic work to AED 250–450 for mid-range and AED 450 or more for luxury or structural work (a Dubai renovation contractor's guide; Property Finder gives a wider AED 150–600), while new-build construction runs from about AED 300–500 per sq ft at a standard specification to AED 850–1,200 or more for luxury, before demolition, fees and contingency. A deep renovation of an older villa can close much of that gap."),
         ("How long does a rebuild take compared with a renovation?",
          "Renovation works typically take two to six months, longer for structural changes. A rebuild goes through design, approvals, construction and snagging, about 14–23 months end to end on published phase estimates and 24–36 months for a custom luxury villa. You can usually stay in the old villa while the new one is designed and approved, so the months out of the house are fewer than the total."),
         ("Do I need a permit to demolish and rebuild my villa?",
@@ -646,19 +646,19 @@ def dc_out(e):
 <p class="calc-note calc-js" data-js-note>Showing the example below. Switch on JavaScript to change the inputs.</p>
 <p class="calc-flag">An indicative estimate, not a claim valuation. Each line is rounded to the nearest AED 100 and the totals are the sum of the lines. Excludes storage, travel, lost rental income from the finished villa and the cost of disputes. <a href="#sources">Sources and assumptions</a></p>
 {actions_html("Hello, I used your delay cost estimator and would like to talk about my project.")}
-{print_foot(DC_PATH, "Rents from Engel &amp; Völkers (Property Monitor data); base rate from the Central Bank of the UAE; construction inflation from Turner &amp; Townsend and Currie &amp; Brown (via PRASOON); preliminaries from Turner &amp; Townsend.")}
+{print_foot(DC_PATH, "Rents from Engel &amp; Völkers (Property Monitor data); base rate from the Central Bank of the UAE; construction inflation from Turner &amp; Townsend and Currie &amp; Brown (reported by TradeArabia); preliminaries from Turner &amp; Townsend.")}
 </div>'''
 
 def delay_cost_estimator():
     c = Cites()
     e = estimate_dc(DC_EXAMPLE)
-    evr, cbuae, tt25, pra, reca = c("evr"), c("cbuae"), c("tt25"), c("pra"), c("reca")
+    evr, cbuae, tt25, ta, reca = c("evr"), c("cbuae"), c("tt25"), c("ta"), c("reca")
     after = f'''<section class="section--tight paper"><div class="wrap split"><div><h2>How the estimate works</h2></div><div class="prose">
 <p>The short answer: a month's delay on a villa build costs the owner the rent or hotel they are still paying, the interest on money already borrowed, the rise in the price of the work not yet built and, if the delay is on the owner's side, the contractor's time-related site costs. Fees that run by the month come on top. The estimator adds those up, line by line.</p>
 <ol>
 <li><strong>Rent or hotel.</strong> The monthly figure you enter. The default is Engel &amp; Völkers' average Dubai rent for a four-bedroom villa, AED {RENT_ANNUAL["4"]:,} a year as of May 2026 (three bedrooms AED {RENT_ANNUAL["3"]:,}; five bedrooms AED {RENT_ANNUAL["5"]:,}), from Property Monitor data.{evr} It is the same in every column.</li>
 <li><strong>Finance.</strong> Money borrowed multiplied by the annual rate, divided by twelve. The default rate is the Central Bank of the UAE's base rate, raised to {BASE_RATE:g}% from 17 September 2026.{cbuae} It is the floor for overnight money-market rates, not what a bank charges for a loan, so enter your own rate.</li>
-<li><strong>Escalation.</strong> The value of the work still to build, multiplied by a month's construction inflation. For 2026, Turner &amp; Townsend forecast 4% in Dubai and 5% in Abu Dhabi,{tt25} and Currie &amp; Brown about 3% for the UAE.{pra} The low column uses 3%, the high column Turner &amp; Townsend's figure for the emirate, and the likely column the midpoint.</li>
+<li><strong>Escalation.</strong> The value of the work still to build, multiplied by a month's construction inflation. For 2026, Turner &amp; Townsend forecast 4% in Dubai and 5% in Abu Dhabi,{tt25} and Currie &amp; Brown about 3% for the UAE, as reported by TradeArabia.{ta} The low column uses 3%, the high column Turner &amp; Townsend's figure for the emirate, and the likely column the midpoint.</li>
 <li><strong>Contractor's extended site costs.</strong> Off by default. If the delay is on the owner's side (late decisions, late design information, late payment), the contractor may be entitled to more time and its time-related costs. The estimator spreads Turner &amp; Townsend's preliminaries, 12% of construction cost on a 2,500 m² project in Dubai and 15% in Abu Dhabi,{tt25} over a construction phase of 8–14 months:{reca} the shortest build gives the highest monthly figure. Treat it as an order of magnitude; the contract and the records decide what is actually due.</li>
 <li><strong>Professional fees.</strong> Whatever monthly fees continue under your appointments. There is no published benchmark, so nothing is assumed.</li>
 </ol>

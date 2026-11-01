@@ -12,7 +12,7 @@ keypoints:
   - "Decide on evidence: a condition survey and some opening-up of the existing villa, then a cost plan for each option, before any design is fixed."
 faqs:
   - q: "Is it cheaper to renovate or rebuild a villa in Dubai?"
-    a: "Usually cheaper to renovate if the structure is sound. Smart Renovation's 2026 figures put renovation at about AED 120–450 or more per sq ft depending on scope, while new-build construction starts at about AED 300–500 per sq ft at a standard specification and rises to AED 850–1,200 or more for luxury, before demolition, design fees, approvals and contingency. A deep renovation of an older villa can close much of that gap."
+    a: "Usually cheaper to renovate if the structure is sound. One Dubai renovation contractor's 2026 figures put renovation at about AED 120–450 or more per sq ft depending on scope, and Property Finder gives a wider villa range of AED 150–600, while new-build construction starts at about AED 300–500 per sq ft at a standard specification and rises to AED 850–1,200 or more for luxury, before demolition, design fees, approvals and contingency. A deep renovation of an older villa can close much of that gap."
   - q: "How long does it take to knock down and rebuild a villa in Dubai?"
     a: "Published phase estimates are design 3–4 months, approvals 2–3, construction 8–14 and snagging 1–2, about 14–23 months end to end, and 24–36 months for a custom luxury villa. Engel & Völkers puts most villas at 12–24 months from approval to completion."
   - q: "Do I need a permit to demolish and rebuild a villa?"
@@ -22,10 +22,14 @@ faqs:
   - q: "Can I live in the villa during a renovation?"
     a: "During a light refresh, sometimes. During a full renovation with new services, structural work or waterproofing, rarely: the house is usually without power, water or cooling for long stretches. Budget for living elsewhere for the length of the works."
 sources:
-  - title: "Smart Renovation: How much does villa renovation cost in Dubai? Full price breakdown (2026)"
+  - title: "A Dubai renovation contractor: villa renovation cost, full price breakdown (2026; figures not sourced by the publisher)"
     url: "https://smartrenovation.ae/how-much-does-villa-renovation-cost-in-dubai-full-price-breakdown-2026/"
-  - title: "Smart Renovation: Villa renovation in Dubai, complete 2026 guide to costs, timeline and permits"
+    nofollow: true
+  - title: "A Dubai renovation contractor: villa renovation guide to costs, timeline and permits (2026; figures not sourced by the publisher)"
     url: "https://smartrenovation.ae/villa-renovation-in-dubai-complete-2026-guide-to-costs-timeline-permits/"
+    nofollow: true
+  - title: "Property Finder: Average costs for villa renovation in Dubai (September 2025)"
+    url: "https://www.propertyfinder.ae/blog/villa-renovation-dubai/"
   - title: "Engel & Völkers: Construction cost in Dubai (December 2025)"
     url: "https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai"
   - title: "Optimal Engineering Consultants: Cost to build a villa in Dubai (2026 guide)"
@@ -53,13 +57,16 @@ The fair comparison is cost per square foot of finished space, with the soft cos
 
 | Option | Published rate, AED per sq ft | Source |
 |---|---|---|
-| Basic renovation (painting, flooring, small upgrades) | 120–250 | [Smart Renovation](https://smartrenovation.ae/how-much-does-villa-renovation-cost-in-dubai-full-price-breakdown-2026/) |
-| Mid-range renovation (kitchens, bathrooms, interiors) | 250–450 | Smart Renovation |
-| Luxury renovation with structural changes | 450 or more | Smart Renovation |
+| Basic renovation (painting, flooring, small upgrades) | 120–250 | [A Dubai renovation contractor's guide](https://smartrenovation.ae/how-much-does-villa-renovation-cost-in-dubai-full-price-breakdown-2026/) |
+| Mid-range renovation (kitchens, bathrooms, interiors) | 250–450 | Renovation contractor's guide |
+| Luxury renovation with structural changes | 450 or more | Renovation contractor's guide |
+| Villa renovation, all scopes | 150–600 | [Property Finder](https://www.propertyfinder.ae/blog/villa-renovation-dubai/) (Sep 2025) |
 | New build, standard specification | 300–500 | [Engel & Völkers](https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai), [Optimal Engineering](https://www.optimal.ae/blog/cost-to-build-a-villa-in-dubai) |
 | New build, premium | 500–850 | Engel & Völkers, Optimal Engineering |
 | New build, luxury | 850–1,200 | Optimal Engineering |
 | New build, ultra-luxury | 1,200 or more | Optimal Engineering |
+
+The renovation sources disagree. Property Finder's villa range starts higher than the contractor's basic band and runs well past its mid-range band, and neither publisher explains how its figures were built, so treat any one band as a starting point rather than a price. Our [villa renovation cost guide](/insights/villa-renovation-cost-dubai/) sets the published ranges side by side.
 
 Those are construction rates. On a rebuild, design and engineering fees typically add 6–12% of the construction cost, and Optimal Engineering recommends a contingency of 10–15%; Engel & Völkers calls 10–15% "widely recommended". Approvals, NOCs and connections add a further sum, and demolition of the existing villa is an extra line: our [cost calculator](/tools/villa-build-cost-calculator/) uses AED 50,000–200,000, the only published figure we have found. A renovation that touches structure, façade or services carries fees and approvals too; a cosmetic refresh usually does not.
 
@@ -93,7 +100,7 @@ If the plot's rules allow a larger villa, say 8,000 sq ft instead of 6,000, the 
 
 ## How long does each option take?
 
-Renovation is quicker by a wide margin. Smart Renovation's guide puts interior upgrades at around two to three months, kitchens and bathrooms at four to six months, and structural changes, extensions or a complete redesign at six months or longer. Approvals for a renovation, where they are needed, typically take a few weeks.
+Renovation is quicker by a wide margin. The renovation contractor's guide puts interior upgrades at around two to three months, kitchens and bathrooms at four to six months, and structural changes, extensions or a complete redesign at six months or longer. Approvals for a renovation, where they are needed, typically take a few weeks.
 
 A rebuild runs through the full sequence. The phase estimates we use, the only phase-by-phase breakdown we have found (published by a property information website), are design 3–4 months, approvals 2–3, construction 8–14 and snagging 1–2: about 14–23 months end to end, less where phases overlap, and 24–36 months for a custom luxury villa. Engel & Völkers puts most villas at 12–24 months from approval to completion, and Optimal Engineering typically allows 12–18 months for construction.
 

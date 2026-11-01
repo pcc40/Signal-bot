@@ -55,7 +55,7 @@ sources:
   - title: "Al Tamimi: Dubai law regulating engineering consultancy activities"
     url: "https://www.tamimi.com/news/dubai-issues-new-law-regulating-engineering-consultancy-activities-key-takeaway-points/"
 ---
-In Abu Dhabi, a villa building permit is issued by the municipality through its services on TAMM, the emirate's government services platform, under regulations set by the Department of Municipalities and Transport (DMT). Since June 2025, new private villa applications have been processed through Binaa, DMT's AI-assisted permits platform. In plot communities such as Saadiyat or Hudayriyat, you need the master developer's design approval first, and your registered consultant prepares and submits the application on your behalf.
+In Abu Dhabi, a villa building permit is issued by the municipality through its services on TAMM, the emirate's government services platform, under regulations set by the Department of Municipalities and Transport (DMT). Since June 2025, new private villa applications have been processed through Binaa, DMT's AI-assisted permits platform. In plot communities such as Saadiyat or Hudayriyat, you need the master developer's design approval first, and your registered consultant prepares and submits the application.
 
 If you have built or renovated in Dubai, the shape will feel familiar, but the regulator, the platforms and the villa rules are different. This guide explains the Abu Dhabi route from the owner's side, and where it departs from Dubai.
 

@@ -38,6 +38,8 @@ sources:
     url: "https://mediaoffice.ae/en/news/2024/march/16-03/mohammed-bin-rashid-mandates-incorporation-of-nakheel-and-meydan"
   - title: "Nakheel: Contact us and customer FAQs (NOCs, access permits, contractor requirements)"
     url: "https://www.nakheel.com/en/contact-us"
+  - title: "Emaar Community Management: Arabian Ranches community (NOCs through the community portal)"
+    url: "https://www.ecm.ae/en/communities/arabian-ranches/discover/communities-arabian-ranches"
   - title: "Gulf News: Jumeirah Islands owners prevented from modifying villas without approval (2018)"
     url: "https://gulfnews.com/news/gulf/uae/jumeirah-islands-owners-prevented-from-modifying-villas-without-approval-1.1172089"
   - title: "TAMM: Request a Building Permit"
@@ -87,14 +89,14 @@ The table covers the communities we write about most. It is a planning aid, not 
 | [Palm Jumeirah](/areas/palm-jumeirah/) | Dubai | Nakheel NOC | Confirm with your consultant | Nakheel NOC before any authority submission; Nakheel site-access conditions before the contractor mobilises |
 | [Jumeirah Islands](/areas/jumeirah-islands/) | Dubai | Nakheel NOC | Confirm with your consultant | Nakheel NOC first; extensions and external changes need written approval before design is fixed |
 | [Dubai Islands](/areas/dubai-islands/) | Dubai | Nakheel NOC and guidelines | Confirm with your consultant | Plot builds start with Nakheel's design guidelines; allow for a developer review stage before the permit |
-| [Palm Jebel Ali](/areas/palm-jebel-ali/) | Dubai | Nakheel | Confirm with your consultant | Developer villas are built under Nakheel's own approvals; owner changes after handover need a Nakheel NOC first |
-| [Emirates Hills](/areas/emirates-hills/) | Dubai | Emaar design review | Confirm with your consultant | Emaar review of a large, one-off design can take more than one round; programme it before the permit |
+| [Palm Jebel Ali](/areas/palm-jebel-ali/) | Dubai | Nakheel | Confirm with your consultant | Nakheel NOC before any change to the villa or plot; get the current guidelines and NOC process from Nakheel |
+| [Emirates Hills](/areas/emirates-hills/) | Dubai | Emaar | Confirm with your consultant | Developer approval first; get Emaar's current design guidelines and review process, and programme the review before the permit |
 | [Arabian Ranches](/areas/arabian-ranches/) | Dubai | Emaar NOC | Confirm with your consultant | Emaar NOC for extensions and external works before any authority permit |
-| [Dubai Hills Estate](/areas/dubai-hills-estate/) | Dubai | Emaar (with Meraas) review | Confirm with your consultant | Sub-community guidelines differ; plot builds and villa extensions both start with developer review |
-| [Jumeirah Bay Island](/areas/jumeirah-bay/) | Dubai | Meraas (Dubai Holding) review | Confirm with your consultant | Developer design review against the island's guidelines comes before the authority permit |
-| [District One, MBR City](/areas/district-one/) | Dubai | Meydan Sobha review | Confirm with your consultant | Plot builds, villa upgrades and shell-and-core fit-outs each have a different developer approval route |
-| [Al Barari](/areas/al-barari/) | Dubai | Al Barari review | Confirm with your consultant | Design and external works, including landscape, are reviewed against community guidelines first |
-| [Saadiyat Island](/areas/saadiyat/) | Abu Dhabi | Aldar (for most current villa districts) | Abu Dhabi municipality through TAMM, under DMT regulations | Developer approval, then municipality building permit with ADDC and Civil Defence approvals; some minor works follow a quicker route |
+| [Dubai Hills Estate](/areas/dubai-hills-estate/) | Dubai | Emaar with Meraas | Confirm with your consultant | Developer approval first; get the current guidelines and NOC process for your sub-community from the developer |
+| [Jumeirah Bay Island](/areas/jumeirah-bay/) | Dubai | Meraas (Dubai Holding) | Confirm with your consultant | Developer approval first; get the current guidelines and NOC process from Meraas |
+| [District One, MBR City](/areas/district-one/) | Dubai | Meydan Sobha | Confirm with your consultant | Developer approval first; get the current guidelines and NOC process from Meydan Sobha |
+| [Al Barari](/areas/al-barari/) | Dubai | Al Barari | Confirm with your consultant | Developer approval first; get the current guidelines and NOC process from Al Barari |
+| [Saadiyat Island](/areas/saadiyat/) | Abu Dhabi | Aldar | Abu Dhabi municipality through TAMM, under DMT regulations | Developer approval first, then the municipality building permit through TAMM; under DMT's 2025 rules some minor works follow a quicker route |
 | [Hudayriyat Island](/areas/hudayriyat/) | Abu Dhabi | Modon | Abu Dhabi municipality through TAMM, under DMT regulations | Modon's plot requirements first, then the municipality permit; DMT's 2025 private-villa rule changes apply |
 
 ### Why the Dubai rows all say "confirm"

@@ -118,7 +118,7 @@ def home(posts, post_cards, stages_html, svc_img):
 <section class="hero" aria-labelledby="hero-h"><div class="slides">{slides}</div>
 {B.hero_video_html()}<div class="wrap"><span class="kicker">Client-side project management · Dubai and Abu Dhabi</span>
 <h1 id="hero-h">Your villa, managed from your side of the table.</h1>
-<p class="lede">For a one-off villa, one person on your side reviews every drawing, quote, payment and variation, attends site every week as agreed in your scope, and travels with you to source stone, joinery, lighting and fittings. Led personally by Philip Chapman.</p>
+<p class="lede">For a one-off villa, one person on your side reviews every drawing, quote, payment and variation, is on site regularly through construction, at the frequency agreed in your scope, and travels with you to source stone, joinery, lighting and fittings. Led personally by Philip Chapman.</p>
 <div class="actions"><a class="btn" href="/contact/">{esc(B.CTA_LABEL)}</a><a class="btn btn--ghost" href="/why-a-client-side-project-manager/">Why client-side matters</a></div></div>
 <p class="hero-meta">Homes built by P Chapman Construction, founded by Philip Chapman.</p><span class="scroll-cue" aria-hidden="true"></span></section>
 

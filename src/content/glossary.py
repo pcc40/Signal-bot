@@ -58,7 +58,7 @@ SOURCES = [
     ("PCFC newsletter, issue 37: Trakhees services (Ports, Customs and Free Zone Corporation)", "https://pcfc.ae/en/Publications%20Files/PCFC%20Newsletter-Issue%2037.pdf"),
     ("Construction cost in Dubai (Engel & Völkers, December 2025)", "https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai"),
     ("Cost to build a villa in Dubai, 2026 guide (Optimal Engineering Consultants)", "https://www.optimal.ae/blog/cost-to-build-a-villa-in-dubai"),
-    ("Owner's representative vs project manager in the UAE (PRASOON, citing Turner & Townsend)", "https://prasoon.design/insights/owners-representative-vs-project-manager-uae"),
+    ("UAE market intelligence 2025, construction cost performance (Turner & Townsend)", "https://marketintelligence.turnerandtownsend.com/uaemi-2025/construction-cost-performance/"),
 ]
 
 GLOSSARY = [
@@ -206,7 +206,7 @@ GLOSSARY = [
   "links": L("s:select", "i:contracts"), "see": ["subcontractor", "prime-cost-sum", "extension-of-time"]},
  # ---------------------------------------------------------------- O
  {"term": "Owner's representative", "id": "owners-representative",
-  "d": "An independent adviser who acts only for the owner, paid only by the owner, managing the project on their behalf: budget, programme, team selection, progress reporting, payments and decisions. Eastbridge is a client-side project manager in this sense. We represent the owner alongside the owner's DM-registered consultant and the contractor, and do not replace the consultant of record that the authorities require.",
+  "d": "An independent adviser who acts only for the owner, paid only by the owner, managing the project for them: budget, programme, team selection, progress reporting, payments and decisions. Eastbridge is a client-side project manager in this sense. We represent the owner alongside the owner's DM-registered consultant and the contractor, and do not replace the consultant of record that the authorities require.",
   "links": L("s:rep", "i:roles"), "see": ["consultant", "contract-administration", "quantity-surveyor"]},
  # ---------------------------------------------------------------- P
  {"term": "Performance bond", "id": "performance-bond",

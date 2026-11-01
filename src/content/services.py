@@ -5,7 +5,8 @@ from config import fee_text as _fee_text, PUBLISH_FEES as _SHOW, COVERAGE as _CO
 
 # The full-service, one-off villa story (competitor brief 2.0). P Chapman Construction's record is the evidence.
 ONE_OFF_STORY = ("For a truly one-off villa, one person on your side does the work with you. We review every drawing, quote, "
-                 "payment and variation, attend site every week as agreed in your scope of works, and travel with you to "
+                 "payment and variation, are on site regularly through construction, at the frequency agreed in your scope of works, "
+                 "and travel with you to "
                  "source stone, joinery, lighting and fittings.")
 UK_RECORD = ("It is how Philip worked with clients on the high-end houses P Chapman Construction built in the UK over "
              "21 years: everything reviewed, a weekly presence on site, and sourcing trips with the owner.")
@@ -127,7 +128,7 @@ SERVICES = [
   "builder_view": "In 21 years of altering and extending houses, the expensive surprises were almost always the same three: water where it shouldn't be, services that couldn't be reused, and structure that wasn't what the old drawings showed. Opening up a few areas before the price is agreed costs little and can remove a large part of that risk.",
   "faqs": [
    ("Do I need approval to renovate a villa on Palm Jumeirah?", "Most work beyond like-for-like interior finishes needs a Nakheel NOC first, then a permit from the relevant authority depending on your plot. Extensions, façade changes, pools and structural alterations always do. See our <a href=\"/insights/palm-jumeirah-villa-renovation/\">Palm Jumeirah renovation guide</a> and our explainer on the <a href=\"/insights/nakheel-noc-villa-renovation/\">Nakheel NOC</a>."),
-   ("How much does a villa renovation cost in Dubai?", "Smart Renovation's 2026 guide puts basic villa renovations at around AED 200,000 to 300,000 (its price breakdown says up to 350,000), mid-range at AED 400,000 to 800,000 and luxury from AED 1 million. Full strip-outs of large villas on prime plots go well beyond that. Our <a href=\"/insights/villa-renovation-cost-dubai/\">villa renovation cost guide</a> sets out a worked budget and the hidden costs in older villas."),
+   ("How much does a villa renovation cost in Dubai?", "Published guides disagree. <a href=\"https://www.propertyfinder.ae/blog/villa-renovation-dubai/\" rel=\"noopener\">Property Finder</a> (September 2025) runs from about AED 250,000–400,000 for a three-bedroom townhouse refresh to AED 1.5–3.5 million or more for structural work on a luxury villa, while <a href=\"https://smartrenovation.ae/villa-renovation-in-dubai-complete-2026-guide-to-costs-timeline-permits/\" rel=\"nofollow noopener\">a Dubai renovation contractor's 2026 guide</a> (the publisher gives no sources) puts mid-range work at AED 400,000–800,000 and luxury from AED 1 million. Full strip-outs of large villas on prime plots go well beyond that. Our <a href=\"/insights/villa-renovation-cost-dubai/\">villa renovation cost guide</a> sets out a worked budget and the hidden costs in older villas."),
    ("Should I renovate or knock down and rebuild?", "It depends on the structure, the plot's current guidelines and how much of the existing house survives your brief. When more than about half the house is changing, the comparison is worth doing properly. We do it with real numbers."),
   ],
   "related": ["owners-representative", "stalled-project-rescue", "snagging-and-handover"],
@@ -224,7 +225,7 @@ SERVICES = [
   ],
   # Contractor quote review (competitor brief 2.1; paid, within the Review range per decision D2).
   "extra": """<h2 id="quote-review">Contractor quote review</h2>
-<p>Already holding a contractor's quote? Send it to us with the draft contract before you sign. We spent 21 years pricing quotes like these as the builder, so we read one the way the contractor wrote it: where the price leaves room, what it leaves out, and which lines are likely to come back as variations.</p>
+<p>Already holding a contractor's quote? Send it to us with the draft contract before you sign. Philip spent 21 years pricing quotes like these as the builder, at P Chapman Construction, so we read one the way the contractor wrote it: where the price leaves room, what it leaves out, and which lines are likely to come back as variations.</p>
 <h3>What we look at</h3>
 <ul><li>Scope gaps: what the drawings and specification show that the quote does not price</li>
 <li>Provisional sums and allowances: how much of the price is still an estimate</li>

@@ -29,12 +29,15 @@ SOURCES = [
      "https://assets.foleon.com/eu-central-1/de-uploads-7e3kk3/48604/uaemi_24_construction_cost_performance.58a8c5990842.pdf"),
     ("opt", "Optimal Engineering Consultants, Cost to build a villa in Dubai (2026 guide, March 2026)",
      "https://www.optimal.ae/blog/cost-to-build-a-villa-in-dubai"),
-    ("sr", "Smart Renovation, Villa renovation in Dubai: 2026 guide to costs, timeline and permits",
+    # A renovation contractor's guide (the publisher gives no sources). Never named in copy; links carry rel="nofollow".
+    ("sr", "A Dubai renovation contractor, villa renovation guide to costs, timeline and permits (2026; figures not sourced by the publisher)",
      "https://smartrenovation.ae/villa-renovation-in-dubai-complete-2026-guide-to-costs-timeline-permits/"),
     ("tt25", "Turner & Townsend, UAE market intelligence 2025: construction cost performance (inflation, preliminaries)",
      "https://marketintelligence.turnerandtownsend.com/uaemi-2025/construction-cost-performance/"),
-    ("pra", "PRASOON, Owner's representative vs project manager in the UAE (citing Currie & Brown)",
-     "https://prasoon.design/insights/owners-representative-vs-project-manager-uae"),
+    ("pf", "Property Finder, Average costs for villa renovation in Dubai (September 2025)",
+     "https://www.propertyfinder.ae/blog/villa-renovation-dubai/"),
+    ("ta", "TradeArabia, Construction costs set to rise this year in Saudi Arabia and UAE (Currie & Brown forecast, February 2026)",
+     "https://tradearabia.com/News/389130/Construction-costs-set-to-rise-this-year-in-Saudi-Arabia-and-UAE-report"),
     ("gn", "Gulf News, Dubai Municipality warns consultancies over inflated villa designs (August 2025)",
      "https://gulfnews.com/uae/dubai-municipality-warns-consultancies-inflating-villa-designs-raising-costs-1.500245704"),
     ("vat", "PwC Worldwide Tax Summaries, United Arab Emirates: other taxes (VAT)",
@@ -58,7 +61,7 @@ SOURCES = [
     ("recc", "Real Estate Club Dubai (property information website), Villa build cost calculator methodology",
      "https://realestateclubdubai.com/tools/villa-build-cost-calculator"),
 ]
-NOFOLLOW = {"reca", "recc"}
+NOFOLLOW = {"reca", "recc", "sr", "srb"}
 
 def rel_of(k):
     return "nofollow noopener" if k in NOFOLLOW else "noopener"
@@ -77,7 +80,7 @@ RATES = {
         "luxury": {"label": "Luxury", "nb": [850, 1200]},
         "ultra": {"label": "Ultra-luxury", "nb": [1200, 1400], "open": True},
     },
-    # Renovation: published whole-villa bands by scope (Smart Renovation guide). null = no published ceiling: only the
+    # Renovation: published whole-villa bands by scope (a renovation contractor's guide, set beside Property Finder). null = no published ceiling: only the
     # starting figure is shown and anything above it needs a project-specific assessment. No size formula is used.
     # "months" are the guide's durations: interior upgrades two to three months, kitchens and bathrooms four to six,
     # structural changes, extensions or complete redesign six months or longer.
@@ -347,7 +350,7 @@ def print_head():
 </div>'''
 
 def print_foot():
-    names = "Engel &amp; Völkers, Knight Frank (via Gulf Construction), Turner &amp; Townsend, Optimal Engineering and Smart Renovation, with a property information website for the few lines no industry source covers"
+    names = "Engel &amp; Völkers, Knight Frank (via Gulf Construction), Turner &amp; Townsend, Optimal Engineering and Property Finder, with a renovation contractor’s guide and a property information website for the few lines no industry source covers"
     return f'''<div class="print-only calc-print-foot">
 <p><b>Sources.</b> Rates are published 2025–26 market ranges from {names}. Other currencies are converted from AED using the dirham’s US dollar peg, the European Central Bank’s euro reference rates and the Bank of Russia’s official rate. Full sources, assumptions and method: {SITE_HOST}{CALC_PATH}#sources</p>
 <p class="calc-print-link">Open this estimate online: <span data-print-url>{SITE_HOST}{CALC_PATH}</span></p>
@@ -497,9 +500,13 @@ FAQS = [
      "approvals, NOCs and utility connections (from AED 25,000–75,000 for a straightforward villa to AED 80,000–250,000 in total, depending on the authority and the source), a contingency of 10–15%, "
      "and any pool, landscaping, smart home or furniture. Plot cost, VAT and finance are also outside the rate."),
     ("How much does a villa renovation cost in Dubai?",
-     "A 2026 guide from Smart Renovation puts a basic renovation (painting, flooring, small upgrades) from around AED 200,000–300,000, "
+     "Published sources disagree. A Dubai renovation contractor's 2026 guide puts a basic renovation (painting, flooring, small upgrades) at around AED 200,000–300,000, "
      "a mid-range renovation of kitchens, bathrooms and interiors at AED 400,000–800,000, and a luxury renovation with structural "
-     "changes above AED 1 million. Works typically take two to six months, longer for structural changes or extensions."),
+     "changes above AED 1 million. Property Finder's September 2025 figures run from AED 250,000–400,000 for a three-bedroom townhouse refresh "
+     "to AED 1.5–3.5 million or more for structural work on a luxury villa. Works typically take two to six months, longer for structural changes or extensions."),
+    ("Why doesn't the calculator change the rate by community?",
+     "We have found no published source that supports a location premium for villa construction or renovation in Dubai or Abu Dhabi. "
+     "So the area you choose changes the approvals route shown, not the rate; community rules, access and approvals still need pricing for your own villa."),
     ("How long does it take to build a villa in Dubai?",
      "Engel &amp; Völkers puts most villas at 12–24 months from approval to completion. Published phase estimates are design 3–4 months, approvals 2–3 months, "
      "construction 8–14 months and snagging 1–2 months, about 14–23 months end to end, less where phases overlap, and 24–36 months for a custom luxury villa "
@@ -612,7 +619,7 @@ def calculator():
 <li><strong>Contingency.</strong> 10–15%, widely recommended.{cite("ev", "opt")} The calculator applies it to construction and uses 12% as the likely figure, our own choice just below the midpoint.</li>
 <li><strong>Furniture, fixtures and equipment.</strong> 30–40% of construction at the top end of the market, with 35% as the likely figure. This is the only published percentage we have found, from a property information website.{cite("reca", "recc")} For comparison, Engel &amp; Völkers puts luxury villa interiors at AED 800,000 to over AED 1 million.{cite("ev")} On standard and premium specifications treat it as a ceiling.</li>
 </ol>
-<p>Renovations work differently. The calculator uses Smart Renovation's whole-villa bands by scope rather than rates per square foot: basic AED 200,000–300,000, mid-range AED 400,000–800,000, and luxury above AED 1 million.{cite("sr")} Those bands suit a typical villa; on a large or older villa needing new services and waterproofing, a per square foot budget will be higher, as our <a href="/insights/villa-renovation-cost-dubai/">renovation cost guide</a> explains. Our <a href="/tools/renovate-or-rebuild/">renovate-or-rebuild tool</a> uses Smart Renovation's other published figures, rates per square foot of existing floor area (AED 120–250 basic, 250–450 mid-range, 450 or more luxury), so for the same villa it gives a higher renovation figure: for a 6,000 sq ft mid-range renovation, works of AED 1.5–2.7 million against the band's AED 400,000–800,000. For a large villa, the rate per square foot is the more realistic basis. Pool and landscaping are added on top of the band.</p>
+<p>Renovations work differently. The calculator uses a Dubai renovation contractor's whole-villa bands by scope rather than rates per square foot: basic AED 200,000–300,000, mid-range AED 400,000–800,000, and luxury above AED 1 million.{cite("sr")} The publisher gives no sources, and other published figures disagree: Property Finder puts a three-bedroom townhouse refresh at AED 250,000–400,000 and structural work on a luxury villa at AED 1.5–3.5 million or more.{cite("pf")} Those bands suit a typical villa; on a large or older villa needing new services and waterproofing, a per square foot budget will be higher, as our <a href="/insights/villa-renovation-cost-dubai/">renovation cost guide</a> explains. Our <a href="/tools/renovate-or-rebuild/">renovate-or-rebuild tool</a> uses the same contractor's other published figures, rates per square foot of existing floor area (AED 120–250 basic, 250–450 mid-range, 450 or more luxury), so for the same villa it gives a higher renovation figure: for a 6,000 sq ft mid-range renovation, works of AED 1.5–2.7 million against the band's AED 400,000–800,000. For a large villa, the rate per square foot is the more realistic basis. Pool and landscaping are added on top of the band.</p>
 <p><strong>Currencies.</strong> Every figure is calculated in UAE dirhams. Pounds, US dollars and euros (and roubles, yuan or rupees on the Russian, Chinese and Hindi pages) are display-only conversions at fixed rates of {fx_date_text()}: the dirham’s peg of AED 3.6725 to the US dollar,{cite("cbfx", "peg")} the European Central Bank’s euro reference rates{cite("ecb")} and, for the rouble, the Bank of Russia’s official rate.{cite("cbr")} Each converted line is rounded the same way as the dirham figures, so a converted total can differ slightly from the dirham total divided by the rate. The page never fetches live rates; we update them monthly.</p>
 </div></div></section>
 
@@ -641,7 +648,7 @@ def calculator():
 <li>The plot, transfer fees and any service charges.</li>
 <li>VAT. The UAE's general VAT rate is 5%.{cite("vat")} Published rates do not consistently state whether it is included, so allow for 5% VAT on contractor invoices if your quotes exclude it.</li>
 <li>Finance costs, insurance and your own advisers' fees, including ours.</li>
-<li>Cost inflation. For 2026, Turner &amp; Townsend forecast construction inflation of 4% in Dubai and 5% in Abu Dhabi,{cite("tt25")} and Currie &amp; Brown about 3% for the UAE;{cite("pra")} the calculator does not apply it.</li>
+<li>Cost inflation. For 2026, Turner &amp; Townsend forecast construction inflation of 4% in Dubai and 5% in Abu Dhabi,{cite("tt25")} and Currie &amp; Brown about 3% for the UAE, as reported by TradeArabia;{cite("ta")} the calculator does not apply it.</li>
 <li>A location premium. We have found no published source that supports one, so the area you choose changes the approvals route shown, not the rate.</li>
 </ul>
 </div></div></section>

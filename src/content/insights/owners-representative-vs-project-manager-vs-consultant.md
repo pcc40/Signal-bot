@@ -98,7 +98,7 @@ Whatever you call the role, put it in writing. Take advice from a UAE-qualified 
 
 - Who they act for, stated explicitly
 - A clear scope: budget, programme, bid comparison, valuation and variation review, site visits, reporting frequency
-- What they may and may not instruct on the owner's behalf; in our view, the owner should keep the authority to approve cost
+- What they may and may not instruct for the owner; in our view, the owner should keep the authority to approve cost
 - A confirmation that they have no financial relationship with the consultant, contractor or suppliers
 - A fee basis linked to scope, not to construction value, where possible
 - The interface with the consultant, so roles do not overlap or leave gaps
@@ -111,7 +111,7 @@ Covered in our guide to [villa construction contracts in the UAE](/insights/vill
 
 To be straightforward about it, not every villa needs one.
 
-**You probably do not need one if** the villa is relatively simple, the design is complete before pricing, you have built before, you live in Dubai, you have time to attend site and read the monthly reports, and you trust your consultant to act firmly on your behalf with the contractor. In that case, a well-appointed consultant and a sound contract may be enough.
+**You probably do not need one if** the villa is relatively simple, the design is complete before pricing, you have built before, you live in Dubai, you have time to attend site and read the monthly reports, and you trust your consultant to act firmly for you with the contractor. In that case, a well-appointed consultant and a sound contract may be enough.
 
 **You probably do need one if** any of the following apply:
 

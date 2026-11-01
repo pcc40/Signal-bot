@@ -41,10 +41,10 @@ CSS_HASH = hashlib.md5((ROOT / "src/static/assets/site.css").read_bytes()).hexdi
 
 esc = html.escape
 
-# Hosts we cite but do not want to pass search authority to (a competitor; see WRITING_BRIEF.md).
+# Hosts we cite but do not want to pass search authority to (competitors; see WRITING_BRIEF.md).
 # Every link to one of these hosts gets rel="nofollow noopener", wherever it appears: article
 # sources, Markdown article bodies, tool source lists and hand-written pages (page() enforces it).
-NOFOLLOW_HOSTS = {"realestateclubdubai.com"}
+NOFOLLOW_HOSTS = {"realestateclubdubai.com", "smartrenovation.ae", "prasoon.design"}
 
 def is_nofollow(href):
     from urllib.parse import urlparse
@@ -260,9 +260,12 @@ def cta_band(title="Tell us about the house you want to build.", text=None, imag
 WA_TPL_SERVICE = "Hello, I have a question about {topic}."
 WA_TPL_AREA = "Hello, I have a question about a villa project in {topic}."
 
+# The English pair is kept untranslated (translate="no"): while a template has no translation yet, the script uses
+# the English topic with it, so the message never mixes languages.
 def wa_page_msgs(tpl, topic):
     return (f'<div class="wa-msgs" id="wa-msgs" hidden><ul><li data-m="tpl">{esc(tpl)}</li>'
-            f'<li data-m="topic">{esc(topic)}</li></ul></div>')
+            f'<li data-m="topic">{esc(topic)}</li><li data-m="tpl-en" translate="no">{esc(tpl)}</li>'
+            f'<li data-m="topic-en" translate="no">{esc(topic)}</li></ul></div>')
 
 def wa_page_link(tpl, topic):
     return wa_link(tpl.replace("{topic}", topic))
@@ -409,12 +412,12 @@ if(hv&&mm('(min-width:900px)')&&!mm('(prefers-reduced-motion: reduce)')&&!(navig
 else if(hv&&hv.parentNode){hv.parentNode.removeChild(hv)}
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})}else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')})}
-var wm=document.getElementById('wa-msgs');if(wm){var wg=function(k){var e=wm.querySelector('[data-m="'+k+'"]');return e?e.textContent.trim():''},wt=wg('tpl').split('{topic}').join(wg('topic'));
+var wm=document.getElementById('wa-msgs');if(wm){var wg=function(k){var e=wm.querySelector('[data-m="'+k+'"]');return e?e.textContent.trim():''},wtp=wg('tpl'),wt=wtp.split('{topic}').join(wtp===wg('tpl-en')?wg('topic-en'):wg('topic'));
  if(wt)document.querySelectorAll('a[href^="https://wa.me"]:not([data-wa-estimate])').forEach(function(a){a.href=a.href.split('?')[0]+'?text='+encodeURIComponent(wt)})}
 if(location.hash==='#notes'){document.querySelectorAll('[data-thanks]').forEach(function(el){el.hidden=el.getAttribute('data-thanks')!=='notes'})}
 var fm=document.querySelector('form[data-enquiry]');
 if(fm){fm.setAttribute('novalidate','');
- try{var qp=new URLSearchParams(location.search);[['service','f-service'],['area','f-area']].forEach(function(p){var v=(qp.get(p[0])||'').replace(/[^a-z0-9-]/g,''),sel=fm.querySelector('#'+p[1]),o=v&&sel?sel.querySelector('option[data-slug="'+v+'"]'):null;if(o)sel.value=o.value})}catch(e){}
+ try{var qp=new URLSearchParams(location.search);[['service','f-service'],['area','f-area']].forEach(function(p){var v=(qp.get(p[0])||'').replace(/[^a-z0-9-]/g,''),sel=fm.querySelector('#'+p[1]),o=v&&sel?sel.querySelector('option[data-slug="'+v+'"]'):null;if(o){sel.value=o.value;var pf=fm.querySelector('[data-prefill="'+p[0]+'"]');if(pf){pf.querySelector('b').textContent=o.textContent;pf.hidden=false}}})}catch(e){}
  var ph=fm.querySelector('#f-phone'),phr=fm.querySelector('.ph-req'),pho=fm.querySelector('.ph-opt');
  var mark=function(el,ok){var w=el.closest('.field');if(!w)return;w.classList.toggle('invalid',!ok);if(ok)el.removeAttribute('aria-invalid');else el.setAttribute('aria-invalid','true');var m=w.querySelector('.err');if(m)m.hidden=ok};
  var check=function(el){var ok=el.checkValidity()&&!(el.required&&!el.value.trim());mark(el,ok);return ok};

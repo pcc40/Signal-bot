@@ -268,7 +268,14 @@ def translate_page(f, lang, tr, missing):
                 node.replace_with(NavigableString(v))
         else:
             v = T(inner(node))
-            if v is not None:
+            if v is None:
+                # Untranslated: the English falls back, marked as English so screen readers and, on the Arabic
+                # pages, the text direction (a closing full stop stays at the end of the line) stay correct.
+                if node.name not in ("text", "title", "tspan") and not node.get("lang"):
+                    node["lang"] = "en"
+                    if LANGS[lang][2] == "rtl":
+                        node["dir"] = "ltr"
+            else:
                 src_imgs = [dict(i.attrs) for i in node.find_all(["img", "source"])]
                 node.clear()
                 frag = BeautifulSoup(BARE_AMP.sub("&amp;", v), "html.parser")

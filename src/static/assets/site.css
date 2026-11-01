@@ -701,6 +701,8 @@ html[dir="rtl"],html[dir="rtl"] body{overflow-x:clip}
 .contact-grid{grid-template-columns:4fr 7fr}
 @media (max-width:900px){.contact-grid{grid-template-columns:1fr}.contact-grid .form{order:-1}}
 .form-note{margin:0;padding-bottom:4px;border-bottom:1px solid var(--line)}
+.form-prefill{margin:0;padding:10px 14px;background:var(--stone);border-inline-start:3px solid var(--brass)}
+.form-prefill[hidden]{display:none}
 .form .opt{font-weight:400;color:var(--ink-soft);font-size:.82em;margin-left:.5em}
 .form .req{font-weight:600;color:var(--ink);font-size:.82em;margin-left:.5em}
 .form .err{display:flex;gap:8px;align-items:flex-start;color:#A3321F;font-size:.84rem;margin:6px 0 0;line-height:1.4}
@@ -808,7 +810,7 @@ img{color:transparent}
 .calc-note{font-size:.84rem;color:var(--ink-soft);margin:0 0 10px}
 .calc-flag{font-size:.84rem;font-weight:600;margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line)}
 .calc-sources li{word-break:break-word}
-.calc-sources a{white-space:nowrap}
+.calc-sources a{overflow-wrap:anywhere}
 sup a{text-decoration:none;color:var(--brass);font-size:.75em;margin-left:1px}
 @media (max-width:520px){.calc-table th,.calc-table td{padding:.6em .45em;font-size:.76rem}.calc-out{padding:18px 14px}}
 /* Currency, review line, share/save/send */

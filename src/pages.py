@@ -234,7 +234,7 @@ def areas_hub():
     body = B.banner(crumbs, "Where we work", "We cover every community in Dubai and Abu Dhabi. Each has its own master developer, design guidelines and practical constraints; the pages below are examples of what to expect, not a list of limits.", "menwinnion-05", credit_of("menwinnion-05")) + f'''
 <section class="section--tight"><div class="wrap"><h2>Dubai</h2><ul class="area-list">{dubai}</ul></div></section>
 <section class="section--tight"><div class="wrap"><h2>Abu Dhabi</h2><ul class="area-list">{ad}</ul></div></section>
-<section class="section paper"><div class="wrap split"><div><h2>Not listed?</h2></div><div class="prose"><p>We cover every community in Dubai and Abu Dhabi; the area pages above are examples, not limits. That includes Jumeirah Golf Estates, Tilal Al Ghaf, Al Wasl, Umm Suqeim and Jumeirah, and Abu Dhabi's island communities. The approach is the same: understand the master developer's rules, set a realistic budget and programme, and represent you from brief to handover.</p><p><a href="/contact/">Tell us where your plot or villa is</a>.</p></div></div></section>
+<section class="section paper"><div class="wrap split"><div><h2>Not listed?</h2></div><div class="prose"><p>We cover every community in Dubai and Abu Dhabi; the area pages above are examples, not limits. That includes Jumeirah Golf Estates, Tilal Al Ghaf, Al Wasl, Umm Suqeim and Jumeirah, and Abu Dhabi's island communities. The approach is the same: understand the master developer's rules, set a realistic budget and programme, and represent you from brief to handover.</p><p>{esc(C.COVERAGE_INTL)}</p><p><a href="/contact/">Tell us where your plot or villa is</a>.</p></div></div></section>
 {B.cta_band()}'''
     B.page("/areas/", "Villa Communities We Work In: Dubai & Abu Dhabi | Eastbridge",
            "Villa build and renovation representation on Palm Jumeirah, Emirates Hills, Jumeirah Bay, District One, Dubai Hills, Al Barari, Saadiyat and more.",
@@ -654,7 +654,11 @@ def contact():
     community += [x for x in [("jumeirah-islands", "Jumeirah Islands"), ("arabian-ranches", "Arabian Ranches")]
                   if x[0] not in {s for s, _ in community}]
     areas = "".join(f'<option value="{esc(n)}" data-slug="{sl}">{esc(n)}</option>' for sl, n in community) + '<option value="Other">Other</option>'
-    services = "".join(f'<option value="{esc(s["short"])}" data-slug="{s["slug"]}">{esc(s["short"])}</option>' for s in SERVICES)
+    # Snagging and handover is one stage of the full service, never a product on its own (competitor brief 2.3),
+    # so its option says so; data-slug keeps the /contact/?service=snagging-and-handover deep link working.
+    svc_label = {"snagging-and-handover": "Handover, as part of the full service"}
+    services = "".join(f'<option value="{esc(svc_label.get(s["slug"], s["short"]))}" data-slug="{s["slug"]}">'
+                       f'{esc(svc_label.get(s["slug"], s["short"]))}</option>' for s in SERVICES)
     tell = "".join(f"<li>{esc(t)}</li>" for t in ["Plot or villa, and the community", "The stage you are at",
                                                      "When you want to start", "The property type and size",
                                                      "Drawings, quotes or a contract, if you have them (not essential)"])
@@ -686,6 +690,8 @@ def contact():
 <form class="form" id="brief" name="brief" method="POST" action="/contact/thanks/" data-netlify="true" netlify-honeypot="company_site" data-enquiry>
 <input type="hidden" name="form-name" value="brief">
 <p class="hp"><label>Leave this empty <input name="company_site" tabindex="-1" autocomplete="off"></label></p>
+<p class="form-prefill small" data-prefill="service" hidden>You are asking about: <b></b>. <a href="#f-service">Change</a></p>
+<p class="form-prefill small" data-prefill="area" hidden>Community: <b></b>. <a href="#f-area">Change</a></p>
 <p class="form-note small muted">Three fields are required: your name, your email and a few words about the project. Fields marked Optional help us reply usefully, but you can leave them blank.</p>
 <div class="row"><div class="field"><label for="f-name">Your name {req}</label><input id="f-name" name="name" autocomplete="name" required aria-describedby="f-name-err">{err("f-name", "Please tell us your name.")}</div>
 <div class="field"><label for="f-email">Email {req}</label><input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="f-email-err">{err("f-email", "Please enter an email address we can reply to, such as name@example.com.")}</div></div>
