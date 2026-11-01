@@ -45,7 +45,7 @@ SERVICES = [
    "Lead snagging, handover documents and the defects period",
   ],
   "gets": [
-   "A single monthly report: cost to complete, programme, decisions needed, risks",
+   "A single monthly report: forecast final cost, programme, decisions needed, risks",
    "A weekly photo update from site",
    "A clear recommendation before every payment",
    "A record of every decision, so nothing is relitigated later",
@@ -86,7 +86,7 @@ SERVICES = [
   "gets": [
    "A budget built from the brief and the plot, with contingency held by you, not the contractor",
    "A programme with the decisions you need to make, and when",
-   "Monthly cost-to-complete and programme reports",
+   "Monthly cost and programme reports, with the forecast final cost",
    "A clean handover file: completion certificate, as-built drawings, warranties and manuals",
   ],
   "builder_view": "When we priced a one-off house as a contractor, the first thing we looked for was what the drawings didn't say. Every gap became a provisional sum, and every provisional sum became a conversation later. The best protection an owner has is a complete design and a contract that leaves little to interpretation. We help you get both before you sign.",
@@ -104,7 +104,7 @@ SERVICES = [
   "title": "Villa Renovation Project Management Dubai | Eastbridge",
   "description": "Renovating a villa on Palm Jumeirah, Emirates Hills or Dubai Hills? We manage budget, programme, contractor and handover, and coordinate approvals with your consultant.",
   "h1": "Renovations and extensions, with the unknowns planned for",
-  "lede": "Renovation is where budgets break. Old waterproofing, tired services and approvals that take longer than promised. We plan for all three before the first wall comes down.",
+  "lede": "Renovation is where budgets are most at risk: waterproofing and services of unknown condition, and approvals that take longer than promised. We investigate all three before the first wall comes down.",
   "image": "trelowen-01",
   "stage": "Survey to handover",
   "intro": """<p>A large share of Dubai's best villas are not new. They are fifteen or twenty-year-old houses on outstanding plots, waiting for a new layout, a new façade, a pool, an extension or a complete strip-out. Renovation can create a great deal of value. It also carries more unknowns than a new build, because nobody knows what is behind the walls until they come down.</p>
@@ -249,15 +249,15 @@ SERVICES = [
   "short": "Cost and programme control",
   "name": "Villa construction cost and programme control",
   "title": "Villa Construction Cost Control Dubai | Eastbridge",
-  "description": "Client-side cost and programme control for villa builds in Dubai: monthly cost-to-complete, payment review and variation control.",
+  "description": "Client-side cost and programme control for villa builds in Dubai: monthly forecast final cost, payment review and variation control.",
   "h1": "Know the final cost before it arrives",
-  "lede": "Every month you should know three numbers: what you've paid, what you've committed, and what it will cost to finish. Most owners only know the first.",
+  "lede": "Every month you should know three numbers: what you have paid, what it will cost to finish, and what the house will cost in total. Most owners only know the first.",
   "image": "polgreen-manor-01",
   "stage": "Design through final account",
   "intro": """<p>Construction budgets rarely fail in one dramatic moment. They drift: a variation here, a provisional sum that came in high, a delay that becomes a claim. By the time the drift is visible without proper reporting, much of it is hard to recover.</p>
 <p>We keep a live cost plan from the first budget to the final account, and a programme that shows the real critical path rather than the optimistic one. Every payment application and every variation is reviewed before you pay it, with a clear recommendation.</p>""",
   "does": [
-   "Cost plan at each design stage, then a live cost-to-complete during construction",
+   "Cost plan at each design stage, then a monthly forecast cost to complete and forecast final cost during construction",
    "Review of every payment application against work actually done",
    "Variation control: is it a genuine change, is the price fair, what does it do to time?",
    "Programme review and monitoring of the critical path",
@@ -271,7 +271,7 @@ SERVICES = [
   ],
   "builder_view": "Contractors live on cash flow. Front-loaded valuations, over-measured work and early release of retention are normal pressures, not dishonesty. An owner who reviews every valuation properly is not being difficult. They are keeping the job balanced, which is better for everyone.",
   "faqs": [
-   ("What is cost-to-complete?", "It is the forecast final cost of your project: what has been paid, plus what is committed, plus a realistic estimate of everything still to come, including risks. It is the number that tells you whether you are on budget."),
+   ("What is the difference between cost to complete and forecast final cost?", "Forecast cost to complete is what is still to be spent: committed cost not yet paid, the forecast cost of work not yet committed, and an allowance for the remaining risks. It leaves out what you have already paid. Forecast final cost is what you have paid to date plus the forecast cost to complete. Set against your approved budget, the forecast final cost tells you whether you are on budget. See the <a href=\"/glossary/#forecast-final-cost\">glossary</a> for each term."),
    ("How much contingency should a villa build carry?", "Published guidance suggests 10 to 15 percent for new builds. Renovations of older villas often need more. The key point is that you hold it, not the contractor."),
    ("Do you replace a quantity surveyor?", "On most private villas we provide the cost control an owner needs. On larger projects we can work alongside an appointed quantity surveyor."),
   ],
@@ -533,7 +533,7 @@ DELIVERABLES = {
  "owners-representative": [
   ("Brief, budget and programme", "Agreed with you before design money is spent, with contingency held by you."),
   ("Site note after every visit", "Photographs, progress against programme, workmanship observations and issues raised."),
-  ("Monthly cost and programme report", "Paid, committed and forecast cost to complete; programme against the contract date; risks; decisions needed."),
+  ("Monthly cost and programme report", "Paid to date, forecast cost to complete and forecast final cost; programme against the contract date; risks; decisions needed."),
   ("Normalised tender comparison", "Consultant and contractor bids set out like-for-like: exclusions, provisional sums, preliminaries and programme."),
   ("Payment-application review notes", "Each application checked against the work in place and the contract, with a recommended amount."),
   ("Variation register", "Every change request with its reason, price, time effect, status and your decision."),
@@ -546,7 +546,7 @@ DELIVERABLES = {
   ("Design-stage cost check notes", "The design reviewed against the budget at concept, detailed design and before pricing."),
   ("Normalised tender comparison", "Contractor bids set out like-for-like, with the assumptions tested."),
   ("Site note after every visit", "Photographs, progress against programme and anything that will cost money or time later."),
-  ("Monthly cost and programme report", "Paid, committed and forecast cost to complete, with the programme and the decisions needed."),
+  ("Monthly cost and programme report", "Paid to date, forecast cost to complete and forecast final cost, with the programme and the decisions needed."),
   ("Payment-application review notes", "A recommendation before every payment."),
   ("Variation register", "Every change logged with its price, time effect and your decision."),
   ("Decision log", "What you decided, when, and what it changed."),
@@ -559,7 +559,7 @@ DELIVERABLES = {
   ("Approvals tracker", "Master developer NOC and authority permit status, followed with your consultant or contractor."),
   ("Normalised tender comparison", "Renovation bids set out like-for-like."),
   ("Site note after every visit", "Photographs, progress and anything found once walls and ceilings are opened."),
-  ("Monthly cost and programme report", "Cost to complete, programme, risks and decisions needed."),
+  ("Monthly cost and programme report", "Forecast cost to complete and forecast final cost, programme, risks and decisions needed."),
   ("Payment-application review notes and variation register", "A recommendation before every payment, and every change logged."),
   ("Snag list and close-out document list", "Defects tracked to close-out and the handover documents collected."),
  ],
@@ -587,14 +587,14 @@ DELIVERABLES = {
  ],
  "cost-and-programme-control": [
   ("Cost plan at each design stage", "The budget broken down and updated as the design develops."),
-  ("Monthly cost and programme report", "One page: paid, committed, forecast cost to complete, contingency, programme and decisions needed, with the detail behind it."),
-  ("Cost-to-complete forecast", "Paid, plus committed, plus a realistic estimate of everything still to come, including risks."),
+  ("Monthly cost and programme report", "One page: paid to date, forecast cost to complete, forecast final cost against your budget, programme and decisions needed, with the detail behind it."),
+  ("Cost-to-complete forecast", "What is still to be spent: remaining committed cost, remaining uncommitted cost and a risk allowance, each shown separately and counted once. Added to paid to date, it gives the forecast final cost."),
   ("Payment-application review notes", "Each application checked against the work actually done, with a recommended amount before you pay."),
   ("Payment and cash-flow forecast", "What falls due and when, so the money is ready before it is needed."),
   ("Variation register", "Every change request: is it a genuine change, is the price fair, what does it do to time, and your decision."),
   ("Provisional sum tracker", "Each provisional sum against its final cost, as the work is priced and built."),
-  ("Contingency register", "Contingency held and released by you, with a clear audit trail."),
-  ("Advance payment and retention tracker", "What has been paid in advance, recovered, held back and released, against the contract terms."),
+  ("Contingency register", "Contingency held and released by you, with a clear audit trail. Open risks are priced from it into the risk allowance; the rest is shown as unallocated, never as a second allowance on top."),
+  ("Advance payment and retention tracker", "What has been paid in advance, recovered, held back and released, against the contract terms. Retention held back is still owed, so it stays in remaining committed cost until it is released."),
   ("Programme review notes", "The contractor's programme tested, and the critical path watched month by month."),
   ("Risk register", "Each risk with its likely cost and time exposure, and who owns it."),
   ("Final account statement", "Agreed line by line, with the records behind every figure."),
@@ -625,7 +625,7 @@ DELIVERABLES = {
   ("Position report", "Progress, quality, payments and the contract position, within two to three weeks."),
   ("Record of work in place", "A photographed record of what is built, its condition and what is defective."),
   ("Payments reconciliation", "What has been paid against the value of the work in place."),
-  ("Cost and time to complete", "A realistic forecast of what it will take to finish."),
+  ("Cost and time to complete", "A realistic forecast of what it will take to finish, kept separate from what has already been paid."),
   ("Options appraisal", "Continue, renegotiate or replace, with the cost and risk of each."),
   ("Recovery programme and monthly report", "The plan you choose, and progress against it through to completion."),
  ],
@@ -654,13 +654,40 @@ DELIVERABLES = {
  ],
 }
 
+# The headline outcome, one line above each "You receive" list (audit 1 November 2026, priority 3), so a buyer
+# sees what the service achieves before the detailed paperwork. Same wording rules as DELIVERABLES.
+OUTCOMES = {
+ "owners-representative": "One person on your side from brief to handover, so you always know where the cost, the programme and the decisions stand.",
+ "villa-construction-project-management": "A design checked against your budget at every stage, a contractor chosen on like-for-like bids, and every payment and change reviewed before you approve it.",
+ "villa-renovation-project-management": "A renovation scoped and priced on what the house actually needs, with the approvals route and the budget clear before work starts.",
+ "plot-due-diligence": "A written answer on whether the plot suits the house you want, and what the whole project is likely to cost, before you commit.",
+ "design-and-approvals": "A design checked against your brief and budget before it goes for approval, and the approvals your consultant submits tracked through to the permit.",
+ "consultant-and-contractor-selection": "Bids you can compare like-for-like, and a contract you understand, before you make the appointment.",
+ "cost-and-programme-control": "Every month, an up-to-date forecast final cost set against your budget, and a recommendation in front of you before any payment or change.",
+ "site-visits-and-reporting": "An independent view of progress and workmanship, reported to you in plain English.",
+ "materials-and-specialist-sourcing": "The stone, joinery, lighting and fittings you chose, with lead times planned and each delivery checked against the sample you approved.",
+ "variations-delays-and-claims": "Every variation and delay claim tested against the contract and the records before you decide.",
+ "stalled-project-rescue": "A clear picture of where the project stands and a costed route to completion that you choose.",
+ "snagging-and-handover": "Defects listed and tracked to close-out, and the handover documents checked, before you accept the house.",
+ "overseas-owners": "A project you can follow and decide on from abroad, with nothing agreed without your sign-off.",
+ "development-advisory": "Construction assumptions your partners and lenders can test, and one monthly report on cost, programme and risk.",
+}
+
 # An illustrative layout shown beside the document list. No figures: the owner's own cost plan supplies them.
+# Cost vocabulary (audit 1 November 2026), used the same way across the site and in the glossary:
+# paid to date + forecast cost to complete = forecast final cost, where forecast cost to complete =
+# remaining committed cost + remaining uncommitted cost + risk allowance, and approved budget - forecast final
+# cost = unallocated contingency. Nothing is counted twice: remaining committed cost excludes what has been
+# paid, and the risk allowance is drawn from the contingency, so the two are never added together.
 SPECIMENS = {
  "cost-and-programme-control": ("The one-page monthly summary", [
-  ("Paid to date", "Every payment, against the contract sum"),
-  ("Committed", "Contract sum plus agreed variations"),
-  ("Forecast cost to complete", "Committed, plus pending changes and priced risks"),
-  ("Contingency remaining", "Held by you; each release recorded"),
+  ("Paid to date", "Cash actually paid, including any advance payment"),
+  ("Remaining committed cost", "Contract sum, agreed variations and signed orders, less paid to date. Retention held back stays here until released"),
+  ("Remaining uncommitted cost", "Work not yet let or agreed, at its forecast value, including pending variations and the forecast change to provisional sums"),
+  ("Risk allowance", "Each open risk, priced and drawn from your contingency, counted once"),
+  ("Forecast cost to complete", "Remaining committed plus remaining uncommitted cost plus risk allowance. Excludes paid to date"),
+  ("Forecast final cost", "Paid to date plus forecast cost to complete"),
+  ("Unallocated contingency", "Approved budget less forecast final cost: held by you, each release recorded"),
   ("Variations awaiting your decision", "Price and time effect of each"),
   ("Programme", "Forecast completion against the contract date"),
   ("Decisions needed this month", "With the date each one is needed by"),
@@ -675,7 +702,7 @@ MONTH_ON_PROJECT = [
  ("Payment application", "We check the contractor's application against the work in place and the contract, and send you review notes with a recommended amount. You decide, and you pay the contractor directly."),
  ("Change requests", "Each one goes into the variation register with its price and time effect, and comes to you with a recommendation. Nothing changes without your decision."),
  ("Decisions", "The decision log shows what you need to decide, by when, and what each option costs."),
- ("Month end", "Your monthly cost and programme report: paid, committed, forecast cost to complete, programme, risks and decisions needed. Then a call to go through it."),
+ ("Month end", "Your monthly cost and programme report: paid to date, forecast cost to complete, forecast final cost, programme, risks and decisions needed. Then a call to go through it."),
 ]
 
 # WhatsApp: the topic slotted into the page's message template ("Hello, I have a question about {topic}.").

@@ -3,7 +3,7 @@ import json, datetime, re, html as H
 from email.utils import format_datetime
 import build as B
 import config as C
-from content.services import SERVICES, BY_SLUG as SVC, DELIVERABLES, SPECIMENS, MONTH_ON_PROJECT, WA_TOPIC
+from content.services import SERVICES, BY_SLUG as SVC, DELIVERABLES, OUTCOMES, SPECIMENS, MONTH_ON_PROJECT, WA_TOPIC
 import content.services as SV
 from content.areas import AREAS, BY_SLUG as AREA
 from content.projects import PROJECTS, BY_SLUG as PROJ
@@ -169,11 +169,14 @@ def deliverables_html(slug):
         title, rows = SPECIMENS[slug]
         dl = "".join(f"<div><dt>{esc(a)}</dt><dd>{esc(b)}</dd></div>" for a, b in rows)
         spec = (f'<figure class="specimen"><div class="specimen__head"><span class="specimen__tag">Illustrative</span>'
-                f'<b>{esc(title)}</b></div><dl>{dl}</dl><figcaption>Illustrative layout only. The figures come from your own cost plan and contract.</figcaption></figure>')
+                f'<b>{esc(title)}</b></div><dl>{dl}</dl><figcaption>Illustrative layout only. The figures come from your own cost plan and contract. '
+                f'Each term is defined in our <a href="/glossary/#forecast-cost-to-complete">glossary</a>.</figcaption></figure>')
+    outcome = (f'<p class="doc-outcome"><span class="kicker">The outcome</span>{esc(OUTCOMES[slug])}</p>'
+               if slug in OUTCOMES else "")
     return (f'<section class="section paper deliverables" id="you-receive" aria-labelledby="receive-h"><div class="wrap split">'
             f'<div><span class="kicker">The paperwork</span><h2 id="receive-h">You receive</h2>'
             f'<p class="muted">{lede} What you receive, and how often, is set out in your written scope of works before work starts.</p>{spec}</div>'
-            f'<div><ul class="doc-list">{lis}</ul></div></div></section>')
+            f'<div>{outcome}<ul class="doc-list">{lis}</ul></div></div></section>')
 
 def month_html(slug):
     """'A month on your project': an illustrative month, owners-representative page only."""
@@ -355,7 +358,7 @@ def approach():
 <section class="section"><div class="wrap split"><div><h2>The rhythm of a project</h2></div><div class="prose">
 <p>Every project runs to the same rhythm, because rhythm is what keeps a two-year build under control.</p>
 <h3>Every week</h3><ul><li>A short photo update from site</li><li>Any decisions you need to make, with a recommendation and a deadline</li></ul>
-<h3>Every month</h3><ul><li>A written report: progress against programme, cost to complete, risks and issues</li><li>Our recommendation on the contractor's payment application</li><li>A review of variations, approved, rejected or pending</li></ul>
+<h3>Every month</h3><ul><li>A written report: progress against programme, forecast cost to complete and forecast final cost, risks and issues</li><li>Our recommendation on the contractor's payment application</li><li>A review of variations, approved, rejected or pending</li></ul>
 <h3>At every key stage</h3><ul><li>A walk-round with you, in person or by video</li><li>A check that the next stage can start without avoidable risk</li></ul>
 <h3>Always</h3><ul><li>A decision log, so nothing you agree is forgotten or reopened</li><li>An issues log with owners and dates</li></ul>
 <p>The exact rhythm, including how often we are on site at each stage, is agreed in writing in your appointment.</p>
@@ -539,7 +542,7 @@ def fees():
 <li><strong>Sourcing alongside you.</strong> Stone, joinery, lighting and fittings chosen with you, with samples, lead times and deliveries checked against what you chose.</li>
 <li><strong>One person accountable to you</strong> from brief to handover, with a record of every decision.</li></ul>
 <p>Set that against the cost exposures every owner carries on a villa build:</p>
-<ul><li><strong>Provisional sums.</strong> Parts of the price that are still estimates. Each becomes a real figure later, and rarely a smaller one.</li>
+<ul><li><strong>Provisional sums.</strong> Parts of the price that are still estimates. Each becomes a real figure later, and an allowance set too low can grow, so test what each one covers before you sign.</li>
 <li><strong>Variations.</strong> Changes priced after the contract is signed, when there is no competition left to test the price.</li>
 <li><strong>Payment applications ahead of progress.</strong> Money paid for work not yet done, or not done properly, is hard to recover.</li>
 <li><strong>Programme overrun.</strong> Each extra month carries the contractor's time-related costs and your own rent and finance. Our <a href="/tools/delay-cost-estimator/">delay cost estimator</a> shows the monthly figure.</li>
