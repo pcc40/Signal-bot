@@ -39,6 +39,8 @@ Contractor selection goes wrong most often before the first bid arrives. If bidd
 
 Your registered consultant should provide a complete, consistent set of drawings and a specification. Every bidder prices exactly the same thing, on the same form, by the same date. The owner then appoints. Our role at Eastbridge is to help you compare the bids like-for-like and choose, alongside your consultant.
 
+If you are considering a single firm to design and build the villa instead, the comparison works differently, because each bidder prices its own design. See [design and build or a separate architect](/insights/design-build-vs-separate-architect-villa/).
+
 ## The 12 questions to ask a villa contractor
 
 ### 1. Are you registered for this type of work, with this authority?

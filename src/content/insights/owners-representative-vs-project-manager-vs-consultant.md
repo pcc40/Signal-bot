@@ -119,7 +119,7 @@ To be straightforward about it, not every villa needs one.
 
 - You live overseas or travel a lot. See [building a villa in Dubai from the UK](/insights/building-a-villa-in-dubai-from-the-uk/).
 - The villa is large, bespoke or technically demanding: basements, waterfront plots, structural glazing, heavy automation.
-- You are using a design-and-build firm.
+- You are using a design-and-build firm. See [design and build or a separate architect](/insights/design-build-vs-separate-architect-villa/).
 - You have not built before and do not know what a valuation or variation should look like.
 - The budget matters to you and you want someone with no stake in the price testing it.
 - The project has stalled or is in dispute.
