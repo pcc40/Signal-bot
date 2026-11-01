@@ -3,8 +3,9 @@
 // (Kept outside netlify/functions/ so Netlify does not deploy it as a function.)
 //
 // global.fetch is replaced with a recorder, so no email is sent and no sheet is written.
-// It checks the marketing consent paths: opt-in captured, logged to the sheet, shown in the
-// lead alert, and no marketing content in emails to people who did not opt in.
+// It checks the marketing consent paths (brief, checklist, notes, estimate): opt-in captured, logged to the sheet, shown in the
+// lead alert, and no marketing content in emails to people who did not opt in; and for "estimate" that the
+// inputs, result and link reach the sheet and the alert but never the customer email.
 
 "use strict";
 const assert = require("assert");
@@ -97,6 +98,57 @@ const test = async (name, f) => { await f(); passed++; console.log("ok  " + name
     assert.strictEqual(r.sheet[0].body.row.marketing_source, "notes form");
     assert.strictEqual(r.sheet[0].body.row.status, "Subscriber");
     assert.match(r.toCustomer[0].body.text, /reply with "unsubscribe" or write to philip@eastbridgestrategicpartners\.com/);
+  });
+
+  const est = {
+    name: "Sarah Example", email: "sarah@example.com", phone: "+44 7700 900123", plot: "Dubai Hills Estate, plot 12",
+    message: "Design stage, no quotes yet.",
+    estimate_inputs: "mode=new; tier=premium; loc=dubai-hills-estate; unit=sqft; cur=GBP; area=6000; basement=0; garden=3000; pool=1; smart=0; ffe=0; demo=0",
+    estimate_result: "AED low 5,113,000; likely 6,239,000; high 7,365,000 | shown in GBP (approximate, rates of 2026-10-30): GBP low 1,039,000; likely 1,268,000; high 1,497,000",
+    estimate_link: "https://eastbridgestrategicpartners.com/tools/villa-build-cost-calculator/?mode=new&tier=premium",
+    currency: "GBP",
+    referrer: "https://eastbridgestrategicpartners.com/ru/tools/villa-build-cost-calculator/",
+  };
+
+  await test("estimate without opt-in: logged with inputs and result, estimate acknowledgement, alert carries the estimate", async () => {
+    const r = await submit("estimate", est);
+    assert.strictEqual(r.sheet.length, 1);
+    const row = r.sheet[0].body.row;
+    assert.strictEqual(row.status, "Estimate request");
+    assert.strictEqual(row.marketing_opt_in, "no");
+    assert.strictEqual(row.plot, est.plot);
+    assert.strictEqual(row.estimate_inputs, est.estimate_inputs);
+    assert.strictEqual(row.estimate_result, est.estimate_result);
+    assert.strictEqual(row.estimate_link, est.estimate_link);
+    assert.strictEqual(row.currency, "GBP");
+    assert.strictEqual(row.language, "ru");
+    assert.strictEqual(r.toCustomer.length, 1);
+    const ack = r.toCustomer[0].body;
+    assert.match(ack.subject, /estimate has reached Eastbridge/);
+    assert.match(ack.text, /replies personally within one working day/);
+    assert.ok(!MARKETING.test(ack.text) && !MARKETING.test(ack.html), "no marketing in the acknowledgement");
+    // The submitted figures and link are attacker-editable, so they never appear in the customer email.
+    assert.ok(!ack.text.includes("6,239,000") && !ack.html.includes("6,239,000") && !ack.text.includes("tier=premium"));
+    assert.strictEqual(r.alerts.length, 1);
+    assert.match(r.alerts[0].body.subject, /New estimate enquiry: Sarah Example \(Dubai Hills Estate, plot 12\)/);
+    assert.match(r.alerts[0].body.text, /estimate_result: AED low 5,113,000/);
+    assert.match(r.alerts[0].body.text, /estimate_link: https:\/\/eastbridgestrategicpartners\.com\/tools\/villa-build-cost-calculator\//);
+    assert.match(r.alerts[0].body.text, /marketing_opt_in: no/);
+    assert.strictEqual(r.alerts[0].body.reply_to, "sarah@example.com");
+  });
+
+  await test("estimate with opt-in: logged as yes, acknowledgement carries unsubscribe line", async () => {
+    const r = await submit("estimate", { ...est, marketing_opt_in: "yes" });
+    assert.strictEqual(r.sheet[0].body.row.marketing_opt_in, "yes");
+    assert.strictEqual(r.sheet[0].body.row.marketing_source, "ticked box on estimate form");
+    assert.match(r.toCustomer[0].body.text, /reply with "unsubscribe" or write to philip@eastbridgestrategicpartners\.com/);
+  });
+
+  await test("estimate with a hostile name: first name only, no markup in the email", async () => {
+    const r = await submit("estimate", { ...est, name: "<img src=x onerror=alert(1)> Bob" });
+    const ack = r.toCustomer[0].body;
+    assert.ok(!/<img|onerror|alert\(/.test(ack.html) && !/<img|onerror/.test(ack.text));
+    assert.match(ack.text, /^(Hello|Dear [\p{L}'-]+),\n/u);
   });
 
   console.log(`\n${passed} tests passed`);

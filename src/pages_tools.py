@@ -8,10 +8,12 @@ import json
 import math
 import html as H
 import build as B
+import config as C
 from content.areas import AREAS
 
 esc = H.escape
 CALC_PATH = "/tools/villa-build-cost-calculator/"
+THANKS_PATH = CALC_PATH + "thanks/"
 SQFT_PER_M2 = 10.7639
 
 # ---------------------------------------------------------------- sources
@@ -32,6 +34,13 @@ SOURCES = [
      "https://prasoon.design/insights/owners-representative-vs-project-manager-uae"),
     ("gn", "Gulf News, Dubai Municipality warns consultancies over inflated villa designs (August 2025)",
      "https://gulfnews.com/uae/dubai-municipality-warns-consultancies-inflating-villa-designs-raising-costs-1.500245704"),
+    # Currency display (FX below). Titles carry no date, so the monthly rate refresh changes only FX_AS_AT.
+    ("peg", "Gulf News, Creation, history and evolution of the UAE dirham (the dirham's peg of AED 3.6725 to the US dollar)",
+     "https://gulfnews.com/uae/year-of-the-50th/creation-history-and-evolution-of-the-uae-dirham-1.1621767243152"),
+    ("ecb", "European Central Bank, euro foreign exchange reference rates",
+     "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html"),
+    ("cbr", "Bank of Russia, official exchange rates of foreign currencies against the rouble",
+     "https://www.cbr.ru/eng/currency_base/daily/"),
 ]
 SRC_NUM = {k: i + 1 for i, (k, _, _) in enumerate(SOURCES)}
 
@@ -70,6 +79,60 @@ RATES = {
     "permitsFixed": [25000, 50000, 75000],
     "time": {"design": [3, 4], "approvals": [2, 3], "build": [8, 14], "snag": [1, 2], "luxTotal": [24, 36]},
 }
+
+# Month the construction rates above were last reviewed against their sources (year, month). Shown near the
+# result as "Rates last reviewed: <month year>, by Philip Chapman". The AUTOMATION.md monthly step updates it.
+RATES_REVIEWED = (2026, 10)
+MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
+          "November", "December"]
+
+def month_year(ym):
+    return f"{MONTHS[ym[1] - 1]} {ym[0]}"
+
+# ---------------------------------------------------------------- currency display (AED is the only calculation currency)
+# Fixed rates, never fetched live. The figures below are copied from the published sources (SOURCES "peg", "ecb", "cbr")
+# and converted to AED per one unit of each currency. Display-only: every estimate is calculated in AED and converted
+# figures are labelled "approximate, at rates of <FX_AS_AT>". Refresh monthly (AUTOMATION.md, Monthly).
+#   - AED 3.6725 per US dollar: the dirham's fixed peg (Central Bank of the UAE, since November 1997).
+#   - ECB euro reference rates of 30 October 2026: 1 EUR = 1.1172 USD = 0.83380 GBP = 7.4326 CNY = 106.0840 INR.
+#     (The ECB publishes no rouble rate.)
+#   - Bank of Russia official rate set on 30 October 2026 (effective 31 October): 1 AED = 21.9353 RUB.
+FX_AS_AT = "2026-10-30"
+FX_INPUTS = {
+    "aedPerUsd": 3.6725,
+    "ecbPerEur": {"USD": 1.1172, "GBP": 0.83380, "CNY": 7.4326, "INR": 106.0840},
+    "rubPerAed": 21.9353,
+}
+
+def _fx_table(i):
+    aed_per_eur = i["ecbPerEur"]["USD"] * i["aedPerUsd"]
+    per = {"USD": i["aedPerUsd"], "EUR": aed_per_eur, "GBP": aed_per_eur / i["ecbPerEur"]["GBP"],
+           "CNY": aed_per_eur / i["ecbPerEur"]["CNY"], "INR": aed_per_eur / i["ecbPerEur"]["INR"],
+           "RUB": 1 / i["rubPerAed"]}
+    return {k: round(v, 6) for k, v in per.items()}
+
+FX = {"asAt": FX_AS_AT, "aedPer": _fx_table(FX_INPUTS)}
+
+# (code, option label, language page that also offers it). AED is the default everywhere; GBP, USD and EUR are
+# offered on every page, RUB only on /ru/, CNY only on /zh/ and INR only on /hi/ (calc.js removes the others).
+CURRENCIES = [
+    ("AED", "UAE dirham (AED)", None), ("GBP", "British pound (GBP)", None), ("USD", "US dollar (USD)", None),
+    ("EUR", "Euro (EUR)", None), ("RUB", "Russian rouble (RUB)", "ru"), ("CNY", "Chinese yuan (CNY)", "zh"),
+    ("INR", "Indian rupee (INR)", "hi"),
+]
+# How a converted amount is written: (full figure, thousands, millions). Translators may adapt them per language.
+CUR_FORMAT = {
+    "GBP": ("£{n}", "£{n}k", "£{n}m"), "USD": ("US${n}", "US${n}k", "US${n}m"), "EUR": ("€{n}", "€{n}k", "€{n}m"),
+    "RUB": ("RUB {n}", "RUB {n}k", "RUB {n}m"), "CNY": ("CNY {n}", "CNY {n}k", "CNY {n}m"),
+    "INR": ("INR {n}", "INR {n}k", "INR {n}m"),
+}
+
+def fx_date_text():
+    y, m, d = (int(x) for x in FX_AS_AT.split("-"))
+    return f"{d} {MONTHS[m - 1]} {y}"
+
+def fx_list(codes):
+    return "; ".join("%s %s" % (c, format(FX["aedPer"][c], ".4g")) for c in codes)
 
 def tri(pair):
     lo, hi = pair
@@ -230,10 +293,81 @@ def calc_messages():
     m += [("note-new", time_note(False, False)), ("note-new-base", time_note(False, True)),
           ("note-lux", time_note(True, False)), ("note-lux-base", time_note(True, True)), ("note-reno", RENO_NOTE)]
     m += [(f"route-{k}", v) for k, v in ROUTES.items()]
+    # Currency display, sharing and the WhatsApp summary.
+    for c, (full, k, mm) in CUR_FORMAT.items():
+        m += [(f"money-{c}", full), (f"moneyK-{c}", k), (f"moneyM-{c}", mm)]
+    m += [("fxNote", "Calculated in AED: {aed}. Other currencies are approximate, at rates of {date}."),
+          ("copied", "Link copied. Anyone with the link sees this estimate."),
+          ("copyFail", "Copy this link:"), ("none", "None"),
+          ("wa-new", "Hello, I used your villa cost calculator: new build, {area}, {tier}, {loc}, likely {total}. Could we talk it through?"),
+          ("wa-reno", "Hello, I used your villa cost calculator: renovation, {tier}, {loc}, likely {total}. Could we talk it through?"),
+          ("wa-from", "Hello, I used your villa cost calculator: renovation, {tier}, {loc}, from {total}. Could we talk it through?"),
+          ("wa-none", "Hello, I used your villa cost calculator and would like to talk through my project.")]
     items = "".join(f'<li data-m="{k}">{v}</li>' for k, v in m)
     devs = sorted({a["developer"] for a in AREAS if a.get("developer")})
     items += "".join(f'<li data-dev="{esc(d)}">{esc(d)}</li>' for d in devs)
     return f'<div class="calc-msgs" id="calc-msgs" hidden><ul>{items}</ul></div>'
+
+# ---------------------------------------------------------------- share, save and send
+SITE_HOST = C.SITE_URL.split("//", 1)[1]
+WA_DEFAULT = "Hello, I used your villa cost calculator and would like to talk through my project."
+
+def print_head():
+    """Letterhead and input summary, shown only when the estimate is printed or saved as PDF.
+    calc.js fills the date, the input list and the link from the form (so they are in the page's language)."""
+    return f'''<div class="print-only calc-print-head">
+<p class="calc-print-brand"><img src="/assets/logo.png" alt="" width="40" height="40"><span>{esc(C.NAME)}</span></p>
+<p class="calc-print-title">Indicative villa cost estimate</p>
+<p class="calc-print-meta">Prepared on <span data-print-date></span> with the villa build cost calculator at {SITE_HOST}</p>
+<h3 class="calc-h">Your inputs</h3>
+<dl class="calc-print-inputs" data-print-inputs></dl>
+</div>'''
+
+def print_foot():
+    names = "Engel &amp; Völkers, Knight Frank (via Gulf Construction), Real Estate Club Dubai, Optimal Engineering and Smart Renovation"
+    return f'''<div class="print-only calc-print-foot">
+<p><b>Sources.</b> Rates are published 2025–26 market ranges from {names}. Other currencies are converted from AED using the dirham’s US dollar peg, the European Central Bank’s euro reference rates and the Bank of Russia’s official rate. Full sources, assumptions and method: {SITE_HOST}{CALC_PATH}#sources</p>
+<p class="calc-print-link">Open this estimate online: <span data-print-url>{SITE_HOST}{CALC_PATH}</span></p>
+<p class="calc-print-contact"><b>{esc(C.NAME)}</b> · Client-side project management for private villas in Dubai and Abu Dhabi · {C.EMAIL} · {C.PHONE_DISPLAY} · {SITE_HOST}</p>
+</div>'''
+
+def actions_html():
+    """Copy link, Save as PDF, WhatsApp and send. Hidden until calc.js runs, because each one needs the live estimate."""
+    return f'''<div class="calc-actions" data-calc-actions hidden>
+<p class="calc-h">Keep or share this estimate</p>
+<div class="calc-actions__row">
+<button type="button" class="btn btn--ghost btn--sm" data-copy-link>Copy link</button>
+<button type="button" class="btn btn--ghost btn--sm" data-print>Save as PDF</button>
+<a class="btn btn--ghost btn--sm" data-wa-estimate href="{B.wa_link(WA_DEFAULT)}" rel="noopener">Discuss on WhatsApp</a>
+<a class="btn btn--sm" href="#send">Send this estimate to Philip</a>
+</div>
+<p class="calc-status" data-copy-status role="status" aria-live="polite"></p>
+<input class="calc-copy-fallback" data-copy-fallback type="text" readonly hidden aria-label="Link to this estimate">
+</div>'''
+
+def send_form_html():
+    """'Send this estimate to Philip': Netlify form "estimate". calc.js keeps the hidden fields in step with the
+    calculator (inputs as codes, the AED result and any converted figures, and the shareable link)."""
+    first = esc(C.FOUNDER["name"].split()[0])
+    return f'''<section class="section--tight paper calc-send" id="send"><div class="wrap split">
+<div><h2>Send this estimate to {first}</h2>
+<p class="muted">Your inputs and the line-by-line result go with the form, so there is nothing to retype. {esc(C.RESPONSE_PROMISE)}, with his view on whether the figures look realistic for your plot and specification. It is free and confidential.</p></div>
+<form class="form calc-send__form" name="estimate" method="POST" action="{THANKS_PATH}" data-netlify="true" netlify-honeypot="company_site" data-estimate>
+<input type="hidden" name="form-name" value="estimate">
+<input type="hidden" name="estimate_inputs" value="">
+<input type="hidden" name="estimate_result" value="">
+<input type="hidden" name="estimate_link" value="">
+<input type="hidden" name="currency" value="AED">
+<p class="hp"><label>Leave this empty <input name="company_site" tabindex="-1" autocomplete="off"></label></p>
+<div class="row"><div><label for="e-name">Your name</label><input id="e-name" name="name" autocomplete="name" required></div>
+<div><label for="e-email">Email</label><input id="e-email" name="email" type="email" autocomplete="email" inputmode="email" required></div></div>
+<div class="row"><div><label for="e-phone">Phone or WhatsApp number <span class="opt">Optional</span></label><input id="e-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="e-phone-hint"><p class="hint" id="e-phone-hint">Include the country code, for example +971 or +44.</p></div>
+<div><label for="e-plot">Plot location <span class="opt">Optional</span></label><input id="e-plot" name="plot" autocomplete="off" aria-describedby="e-plot-hint"><p class="hint" id="e-plot-hint">The community, and the plot number if you have one.</p></div></div>
+<div><label for="e-notes">Notes <span class="opt">Optional</span></label><textarea id="e-notes" name="message" rows="4" aria-describedby="e-notes-hint"></textarea><p class="hint" id="e-notes-hint">Anything the calculator cannot see: the design stage, quotes you already have, or what worries you.</p></div>
+<div><label class="consent" for="e-mkt"><input id="e-mkt" name="marketing_opt_in" type="checkbox" value="yes"> <span>Optional: also send me Eastbridge notes for villa owners by email, no more than once a month. Leaving this unticked does not affect your estimate. Unsubscribe at any time by replying to any note or writing to {C.EMAIL}.</span></label></div>
+<p class="small muted calc-send__privacy"><b>We never pass your details to contractors or suppliers.</b> {first} reads every estimate personally and uses your details to reply to you. See our <a href="/privacy/">privacy notice</a>.</p>
+<p class="submit-row"><button class="btn" type="submit">Send this estimate to {first}</button></p>
+</form></div></section>'''
 
 def results_html(e):
     """Server-rendered result panel. calc.js updates the same nodes in place (no layout shift)."""
@@ -250,10 +384,13 @@ def results_html(e):
     sub = SUB["new-sqft"].format(cons=f'<span data-out="cons">{aed(e["construction"][1])}</span>',
                                  rate=f'<span data-out="rate">{aed_rate(e["build"][1] / max(EXAMPLE["area"], 1))}</span>')
     return f'''<div class="calc-out" id="calc-out">
+{print_head()}
 <p class="calc-label">Indicative total, including soft costs</p>
 <p class="calc-total" aria-live="polite" aria-atomic="true"><span class="sr" data-sr>Likely total: </span><b data-out="likely">{aed(e["total"][1])}</b>
 <span class="calc-range">Range <span data-out="low">{aed(e["total"][0])}</span> to <span data-out="high">{aed(e["total"][2])}{hi_sfx}</span></span></p>
+<p class="calc-fx" data-fx-note hidden></p>
 <p class="calc-sub" data-out="sub">{sub}</p>
+<p class="calc-reviewed">Rates last reviewed: {month_year(RATES_REVIEWED)}, by {esc(C.FOUNDER["name"])}</p>
 <p class="calc-note calc-assess" data-reno-assess hidden>Renovation bands describe a typical villa. A large or older villa, or one that needs new services, waterproofing or structural work, needs a project-specific assessment rather than a band. <a href="/contact/">Ask us for a project-specific assessment</a>.</p>
 <div class="cb" role="img" aria-label="Breakdown of the likely total" data-bar>{segs}</div>
 <ul class="cb-legend">{legend}</ul>
@@ -269,6 +406,8 @@ def results_html(e):
 <p class="calc-note" data-route>{route}</p>
 <p class="calc-note calc-js" data-js-note>Showing the worked example below. Switch on JavaScript to change the inputs.</p>
 <p class="calc-flag">An indicative estimate from published market ranges, not a quotation. Each line is rounded and the totals are the sum of the lines. Excludes the plot, finance, insurance, cost inflation and advisers' fees, including ours; allow for 5% VAT if your quotes exclude it. <a href="#sources">Sources and assumptions</a></p>
+{actions_html()}
+{print_foot()}
 </div>'''
 
 def form_html():
@@ -278,6 +417,10 @@ def form_html():
         for k, v in RATES["tiers"].items())
     dubai = "".join(f'<option value="{a["slug"]}" data-city="Dubai" data-dev="{esc(a["developer"])}"{" selected" if a["slug"] == EXAMPLE["loc"] else ""}>{esc(a["name"])}</option>' for a in AREAS if a["city"] == "Dubai")
     ad = "".join(f'<option value="{a["slug"]}" data-city="Abu Dhabi" data-dev="{esc(a["developer"])}">{esc(a["name"])}</option>' for a in AREAS if a["city"] == "Abu Dhabi")
+    def cur_opt(c, lbl, lang):
+        extra = (' data-cur-lang="%s"' % lang if lang else "") + (" selected" if c == "AED" else "")
+        return f'<option value="{c}"{extra}>{esc(lbl)}</option>'
+    curs = "".join(cur_opt(*x) for x in CURRENCIES)
     return f'''<form class="calc-in" id="calc" novalidate onsubmit="return false">
 <fieldset><legend>Project type</legend><div class="calc-seg">
 <label><input type="radio" name="mode" value="new" checked><span>New build</span></label>
@@ -289,6 +432,8 @@ def form_html():
 <fieldset><legend>Units</legend><div class="calc-seg calc-seg--sm">
 <label><input type="radio" name="unit" value="sqft" checked><span>sq ft</span></label>
 <label><input type="radio" name="unit" value="m2"><span>m²</span></label></div></fieldset>
+<div class="calc-cur"><label for="c-cur">Show amounts in</label><select id="c-cur" name="cur" aria-describedby="c-cur-hint">{curs}</select>
+<p class="hint" id="c-cur-hint">The estimate is always calculated in UAE dirhams. Other currencies are approximate conversions, at rates of {fx_date_text()}.</p></div>
 <div data-area-field><label for="c-area">Built-up area (<span data-unit>sq ft</span>)</label><input id="c-area" name="area" type="number" inputmode="numeric" min="0" step="50" value="{EXAMPLE["area"]}" aria-describedby="c-area-hint">
 <p class="hint" id="c-area-hint" data-area-typical>Typical 4-bedroom villas are about 4,000–5,000 sq ft; 5-bedroom 6,000–8,000 sq ft.{cite("recc")}</p>
 <p class="hint" id="c-area-fixed" data-area-fixed hidden>Renovation figures are whole-villa scope examples from a published guide. They do not change with floor area, so the area is not used for them.</p></div>
@@ -357,7 +502,8 @@ def calculator():
     srcs = "".join(f'<li id="src-{k}">{esc(t)}. <a href="{u}" rel="noopener">{esc(u.split("//", 1)[1].split("/", 1)[0])}</a></li>' for k, t, u in SOURCES)
     # The script needs only the numbers; every word it shows comes from #calc-msgs.
     js_rates = {**RATES, "tiers": {k: {kk: vv for kk, vv in v.items() if kk != "label"} for k, v in RATES["tiers"].items()},
-                "reno": {k: {kk: vv for kk, vv in v.items() if kk != "label"} for k, v in RATES["reno"].items()}}
+                "reno": {k: {kk: vv for kk, vv in v.items() if kk != "label"} for k, v in RATES["reno"].items()},
+                "fx": FX}
     data = json.dumps(js_rates, separators=(",", ":"))
     body = B.page_head(crumbs, "Villa build and renovation cost calculator",
                        "An indicative cost for building or renovating a private villa in Dubai or Abu Dhabi, from published 2025–26 market ranges. "
@@ -366,6 +512,7 @@ def calculator():
 {form_html()}
 {results_html(e)}
 </div></section>
+{send_form_html()}
 <script type="application/json" id="calc-data">{data}</script>
 <script src="/assets/calc.js" defer></script>
 
@@ -380,6 +527,7 @@ def calculator():
 <li><strong>Furniture, fixtures and equipment.</strong> 30–40% of construction at the top end of the market.{cite("reca", "recc")} On standard and premium specifications treat this as a ceiling.</li>
 </ol>
 <p>Renovations work differently. The calculator uses Smart Renovation's whole-villa bands by scope rather than rates per square foot: basic AED 200,000–300,000, mid-range AED 400,000–800,000, and luxury above AED 1 million.{cite("sr")} Those bands suit a typical villa; on a large or older villa needing new services and waterproofing, a per square foot budget will be higher, as our <a href="/insights/villa-renovation-cost-dubai/">renovation cost guide</a> explains. Pool and landscaping are added on top of the band.</p>
+<p><strong>Currencies.</strong> Every figure is calculated in UAE dirhams. Pounds, US dollars and euros (and roubles, yuan or rupees on the Russian, Chinese and Hindi pages) are display-only conversions at fixed rates of {fx_date_text()}: the dirham’s peg of AED 3.6725 to the US dollar,{cite("peg")} the European Central Bank’s euro reference rates{cite("ecb")} and, for the rouble, the Bank of Russia’s official rate.{cite("cbr")} Each converted line is rounded the same way as the dirham figures, so a converted total can differ slightly from the dirham total divided by the rate. The page never fetches live rates; we update them monthly.</p>
 </div></div></section>
 
 <section class="section--tight"><div class="wrap split"><div><h2>Build rates by specification</h2><p class="muted">Construction only, 2025–26. The right-hand columns apply each rate to a 6,000 sq ft villa with no extras.</p></div><div class="prose">
@@ -425,8 +573,9 @@ def calculator():
 <li>Timelines: design 3–4 months, approvals 2–3 months, construction 8–14 months, snagging 1–2 months; 24–36 months plot to keys for custom luxury.{cite("reca")} Renovation works two to six months or longer, with approvals taking a few weeks.{cite("sr")}</li>
 <li>Each cost line is rounded to the nearest AED 1,000, or AED 10,000 above AED 1 million. Construction and the totals are the sums of the rounded lines, so the figures shown add up.</li>
 <li>Renovation bands are whole-villa scope examples from a published guide. No published source gives a reliable way to scale them with floor area, so the calculator does not use the area for them; a large or older villa needs a project-specific assessment.</li>
+<li>Currency rates as at {fx_date_text()}, in AED per unit: {fx_list(("GBP", "USD", "EUR"))}; on the Russian, Chinese and Hindi pages also {fx_list(("RUB", "CNY", "INR"))}. US dollar from the fixed peg;{cite("peg")} pound, euro, yuan and rupee crossed from the European Central Bank’s euro reference rates;{cite("ecb")} rouble from the Bank of Russia’s official rate.{cite("cbr")} Converted figures are approximate and for display only.</li>
 </ul>
-<p class="small muted">Rates last checked October 2026. This page gives general information, not financial, legal or engineering advice.</p>
+<p class="small muted">Rates last reviewed {month_year(RATES_REVIEWED)} by {esc(C.FOUNDER["name"])}; currency rates as at {fx_date_text()}. This page gives general information, not financial, legal or engineering advice.</p>
 </div></div></section>
 
 <section class="section--tight paper"><div class="wrap split"><div><h2>Questions</h2></div><div>{B.faq_html(FAQS)}</div></div></section>
@@ -470,6 +619,29 @@ def tools_hub():
            "Free, sourced planning tools for villa owners in Dubai and Abu Dhabi, starting with a build and renovation cost calculator covering fees, approvals and timeline.",
            body, crumbs, schema)
 
+def estimate_thanks():
+    """Thank-you page for the "estimate" form (noindex, like the other thank-you pages)."""
+    first = esc(C.FOUNDER["name"].split()[0])
+    crumbs = [("Home", "/"), ("Tools", "/tools/"), ("Villa build cost calculator", CALC_PATH), ("Thank you", THANKS_PATH)]
+    steps = [
+        (f"{first} reads your estimate", f"He looks at your inputs, the line-by-line result and any notes on the plot. {esc(C.RESPONSE_PROMISE)}, by email or by phone if you gave a number. Our hours are {esc(C.HOURS)}."),
+        ("A plain view of the numbers", "Whether the figures look realistic for the plot and specification, which lines carry the most risk, and what would firm them up."),
+        ("A free 30-minute call, if it helps", "At a time that suits you, including UK and European hours. If a closer look is worthwhile, such as a plot review, we set out the scope and a fixed fee in writing before we start."),
+    ]
+    body = f'''<section class="page-head"><div class="wrap">{B.crumbs_html(crumbs)}<h1>Thank you. Your estimate is with {first}.</h1>
+<p class="lede">{esc(C.RESPONSE_PROMISE)}. We never pass your details to contractors or suppliers.</p></div></section>
+<section class="section--tight thanks"><div class="wrap">
+{B.steps_html(steps)}
+<div class="split thanks-more"><div><h2 class="h-sm">If it is urgent</h2><p class="contact-actions"><a class="btn" href="{B.wa_link("Hello, I have just sent you an estimate from your villa cost calculator.")}" rel="noopener">Message us on WhatsApp</a><a class="btn btn--ghost" href="tel:{C.PHONE_E164}">Call {C.PHONE_DISPLAY}</a></p></div>
+<div><h2 class="h-sm">While you wait</h2><ul class="read-list">
+<li><a href="{CALC_PATH}"><b>Back to the calculator</b><span>Your browser’s back button returns you to your estimate.</span></a></li>
+<li><a href="/insights/villa-construction-cost-dubai/"><b>What it costs to build a villa in Dubai</b><span>Published build costs, tier by tier.</span></a></li>
+<li><a href="/services/plot-due-diligence/"><b>Plot due diligence</b><span>What we check before you commit to a plot or a design.</span></a></li>
+</ul></div></div>
+</div></section>'''
+    B.page(THANKS_PATH, "Estimate sent | Eastbridge", "Your estimate from the villa build cost calculator has been sent to Philip at Eastbridge.", body, crumbs, noindex=True)
+
 def build_tools():
     tools_hub()
     calculator()
+    estimate_thanks()

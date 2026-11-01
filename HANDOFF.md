@@ -5,6 +5,18 @@ English source, published in Arabic (/ar/, right to left), Russian (/ru/), Simpl
 The source lives in the GitHub repository `pcc40/eastbridge-website` (branch `main`). Live address: https://eastbridgestrategicpartners.com (contact: philip@eastbridgestrategicpartners.com); the .ae and www hosts 301 to it via `netlify.toml`.
 A single handoff zip, `eastbridge-website-handoff.zip` (top folder `eastbridge/`), holds the full source including all image sizes. It is gitignored.
 
+## Calculator: currency, share, save and send (November 2026, branch `eb3/calc`)
+From the competitor brief (`reports/competitor-brief-recd-2026-11-01.md`, items 1, 2 and 8):
+- **Currency display.** "Show amounts in" selector: AED (default everywhere), GBP, USD and EUR on every language; RUB only on /ru/, CNY only on /zh/, INR only on /hi/. AED stays the only calculation currency; other currencies are display-only conversions labelled "approximate, at rates of <date>". Each converted line is rounded like the AED lines, so converted columns still add up. Fixed rates live in `FX` / `FX_INPUTS` / `FX_AS_AT` in `src/pages_tools.py` (no live API calls): US dollar from the AED 3.6725 peg, GBP/EUR/CNY/INR crossed from the ECB euro reference rates, RUB from the Bank of Russia official rate. Sources are listed on the page (sources 9–11) and in the methodology.
+- **Shareable link.** Inputs are mirrored to the query string (`history.replaceState`) and read on load; "Copy link" button.
+- **Save as PDF.** `window.print()` with a dedicated print stylesheet (`@media print` block under "Currency, review line, share/save/send" in `site.css`): letterhead, inputs, line-by-line result (lines not included are left out), timeline, date, sources note, Eastbridge contact line and the link to reopen the estimate. One A4 page in all five languages, even with every extra selected.
+- **WhatsApp with the estimate.** "Discuss on WhatsApp" is pre-filled with a one-line summary (messages `wa-*` in `#calc-msgs`, translated like every calculator message).
+- **"Send this estimate to Philip".** New Netlify form **`estimate`** on the calculator page (name, email, optional phone, plot location and notes; hidden `estimate_inputs`, `estimate_result`, `estimate_link`, `currency`; `company_site` honeypot; optional unticked `marketing_opt_in`; "We never pass your details to contractors or suppliers."). Thanks page `/tools/villa-build-cost-calculator/thanks/` (noindex). Registered in `netlify/functions/submission-created.js`: logged to the sheet (status "Estimate request"), lead alert, and an acknowledgement that never repeats the submitted figures. After deploy, check the `estimate` form appears under Netlify → Forms and send a test from the English and one translated page.
+- **Trust line.** "Rates last reviewed: <month year>, by Philip Chapman" under the result, from `RATES_REVIEWED` in `src/pages_tools.py`.
+- **Privacy notice** lists calculator estimates.
+- Checks: `node tools/calc_check.js --strict` now also covers currency switching, the URL round trip, Copy link, the WhatsApp text, the hidden form fields and the one-page PDF; `node tools/test_submission_function.js` covers the `estimate` form.
+- **Monthly upkeep:** refresh `FX_INPUTS` and `FX_AS_AT`, and `RATES_REVIEWED` once the construction rates are re-checked (AUTOMATION.md, Monthly, step 12). The dates appear in translated text, so run the Languages steps afterwards.
+
 ## What was added in the latest round (October 2026)
 All new pages are translated into the four other languages (1,337 new segments per language, 0 untranslated) and pass `tools/seo_audit.py` with 0 errors and 0 warnings across 390 pages.
 
@@ -76,7 +88,7 @@ cat dist/robots.txt                 # User-agent: * / Disallow: /
 - `src/static/assets/site.css` and generated `site-rtl.css` (run `sh tools/make_rtl.sh` after editing site.css)
 - `AUTOMATION.md` — the daily SEO engine playbook; `tools/indexnow.py` — pings search engines
 - `src/pages_tools.py`, `src/pages_glossary.py`, `src/pages_guides.py` — calculator, glossary and lead-magnet templates
-- `netlify/functions/submission-created.js` — form auto-acknowledgement and lead log
+- `netlify/functions/submission-created.js` — form auto-acknowledgement and lead log (forms `brief`, `checklist`, `notes`, `estimate`)
 - `tools/i18n_check.py` — checks translation chunks (placeholders, tags, numbers) before merging
 - `business/` — business plans and kits (see above)
 

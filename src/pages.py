@@ -560,16 +560,18 @@ def legal():
 <ul>
 <li><b>Project enquiries.</b> What you enter in the enquiry form: your name, email, how you would like us to reply and, if you give them, your phone number, where you are based, your project stage, location and budget band, and your message. The same applies to anything you send us by email, phone or WhatsApp.</li>
 <li><b>Checklist requests.</b> Your name, your email and, if you choose one, your project stage.</li>
-<li><b>Our notes.</b> Your email address, if you subscribe or tick the optional box on the enquiry or checklist form, and a record of that choice.</li>
+<li><b>Calculator estimates.</b> If you send us an estimate from our cost calculator: your name, your email, the calculator inputs and result, a link to the estimate and, if you give them, your phone number, plot location and notes.</li>
+<li><b>Our notes.</b> Your email address, if you subscribe or tick the optional box on the enquiry, checklist or estimate form, and a record of that choice.</li>
 <li><b>Technical data.</b> Our website host processes technical data, such as your IP address, to deliver the site and to filter spam from form submissions.</li>
 </ul>
 {analytics}
 <h2>How we use it</h2>
 <ul>
 <li><b>Enquiries:</b> to reply to you by the method you choose, to prepare a proposal if you ask for one, and to deliver our services if you appoint us.</li>
+<li><b>Calculator estimates:</b> for Philip to review the estimate and reply to you. We never pass your details to contractors or suppliers.</li>
 <li><b>Checklist requests:</b> to give you the download and keep a record of the request. Asking for the checklist does not add you to our notes.</li>
 <li><b>Confirmation emails:</b> when you send a form, we may send an automatic email confirming that it reached us. It contains no marketing unless you have asked for our notes.</li>
-<li><b>Our notes (marketing):</b> occasional emails for villa owners, no more than once a month. We send them only to people who subscribe or who tick the optional box on a form. Leaving the box unticked never affects an enquiry or a checklist request.</li>
+<li><b>Our notes (marketing):</b> occasional emails for villa owners, no more than once a month. We send them only to people who subscribe or who tick the optional box on a form. Leaving the box unticked never affects an enquiry, an estimate or a checklist request.</li>
 </ul>
 <p>We do not sell your data, publish it or use it for unrelated marketing.</p>
 <h2>Unsubscribing from our notes</h2>
@@ -583,7 +585,7 @@ def legal():
 </ul>
 <p>Some of these providers process data outside the UAE. If you contact us on WhatsApp, WhatsApp handles those messages under its own terms. Films on our project pages are hosted by Vimeo or YouTube and load only when you press play; the provider then receives technical data such as your IP address.{film}</p>
 <p>We share project information with third parties, such as a consultant or contractor, only with your agreement.</p>
-<h2>How long we keep it</h2><p>We review our records each month and delete enquiries and checklist requests that don't lead to an appointment within 24 months. Notes subscriptions are kept until you unsubscribe. Client records are kept for the period required by law.</p>
+<h2>How long we keep it</h2><p>We review our records each month and delete enquiries, estimate requests and checklist requests that don't lead to an appointment within 24 months. Notes subscriptions are kept until you unsubscribe. Client records are kept for the period required by law.</p>
 <h2>Your rights</h2><p>You can ask to see, correct or delete your data, object to how we use it, or withdraw your agreement to our notes at any time, by emailing <a href="mailto:{C.EMAIL}">{C.EMAIL}</a>.</p>
 <h2>Cookies</h2>{cookies}
 </div></section>'''

@@ -34,6 +34,7 @@ English is the source. Translations are stored in src/i18n/<lang>.json, keyed by
 ## Monthly (first run of the month)
 10. Review reports/visibility.csv trends; propose (don't make) changes to titles/descriptions of pages that are stuck on page 2.
 11. Suggest 3 off-site actions (directory listings, a guest article, a trade-press story, a YouTube explainer script) — off-site citations matter as much as on-site content for AI answers.
+12. Calculator rates: refresh the currency table in `src/pages_tools.py` — `FX_INPUTS` (AED 3.6725 per USD peg; ECB euro reference rates for USD, GBP, CNY, INR from https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml; Bank of Russia AED rate from https://www.cbr.ru/eng/currency_base/daily/) and `FX_AS_AT` (the ECB date). Re-check the construction rates against their sources and set `RATES_REVIEWED` to the current month ("Rates last reviewed: <month year>, by Philip Chapman"); if a rate changes, update the worked example, FAQ and translations. Never call a live rate API from the site. Then run the Languages steps (the dates appear in translated text) and `node tools/calc_check.js --strict`.
 
 ## Report to Phil (every run) — max 8 lines
 - What was published or updated (with URLs)

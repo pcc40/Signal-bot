@@ -9,9 +9,17 @@
 //     ultra-luxury renovation show only a starting (low) figure, with no likely or high figure;
 //   - a new build with no built-up area shows no estimate;
 //   - pool and garden choices are kept per project type when switching modes;
-//   - no unfilled {placeholder} is left in the output.
+//   - no unfilled {placeholder} is left in the output;
+//   - currency display: AED is the default; the AED figures behind the display never change; each converted line is
+//     the AED line divided by the FX rate and rounded the same way, the converted columns add up and the converted
+//     total is within rounding of AED total / rate; an "approximate, at rates of <date>" note is shown;
+//   - the inputs round-trip through the URL (history.replaceState, read on load) and "Copy link" copies that URL;
+//   - the WhatsApp link carries the one-line summary; the "estimate" form's hidden fields follow the calculator;
+//   - the print stylesheet shows the letterhead and inputs, hides the form, and saves as a one-page A4 PDF.
 // On /ar/ /ru/ /zh/ /hi/ it repeats the arithmetic checks and looks for English calculator messages in the visible
-// output. Missing translations are reported, not failed, unless --strict is given.
+// output, checks the language's currencies (RUB on /ru/, CNY on /zh/, INR on /hi/), the WhatsApp text, the link round
+// trip and the translated estimate form. Missing translations are reported, not failed, unless --strict is given.
+// POST requests are aborted, so the checks never submit a form.
 const { chromium } = require('playwright');
 const { spawn } = require('child_process');
 const path = require('path');
@@ -62,6 +70,19 @@ async function snapshot(p) {
       assess: visible(document.querySelector('[data-reno-assess]')) && !!document.querySelector('[data-reno-assess] a[href$="/contact/"]'),
       pool: document.querySelector('[name="pool"]').checked, garden: document.querySelector('#c-garden').value,
       output: clean(out.innerText),
+      // AED value behind each displayed cell (calc.js writes data-aed), the display currency and the share outputs.
+      aed: [0, 1, 2].map(i => lines.concat(['total']).map(k => { const el = document.querySelector(`[data-v="${k}-${i}"]`); return el && el.getAttribute('data-aed') ? Number(el.getAttribute('data-aed')) : 0; })),
+      cur: out.getAttribute('data-cur') || 'AED',
+      curSelect: (document.querySelector('#c-cur') || {}).value,
+      curOptions: Array.from(document.querySelectorAll('#c-cur option')).map(o => o.value),
+      fxNote: (() => { const el = document.querySelector('[data-fx-note]'); return el && !el.hidden ? clean(el.textContent) : ''; })(),
+      wa: (() => { const a = document.querySelector('[data-wa-estimate]'); try { return a ? new URL(a.href).searchParams.get('text') : ''; } catch (e) { return ''; } })(),
+      href: location.href,
+      unit: (document.querySelector('input[name="unit"]:checked') || {}).value,
+      checks: ['pool', 'smart', 'ffe', 'demo'].map(k => document.querySelector(`[name="${k}"]`).checked).join(','),
+      sendFields: (() => { const fm = document.querySelector('form[name="estimate"]'); if (!fm) return null;
+        return { inputs: fm.elements.estimate_inputs.value, result: fm.elements.estimate_result.value, link: fm.elements.estimate_link.value,
+                 currency: fm.elements.currency.value, netlify: fm.hasAttribute('data-netlify'), formName: (fm.querySelector('input[name="form-name"]') || {}).value }; })(),
     };
   });
 }
@@ -95,7 +116,51 @@ async function setInputs(p, o) {
     if (o.loc) { f.elements.loc.value = o.loc; fire(f.elements.loc, 'change'); }
     ['area', 'basement', 'garden'].forEach(k => { if (o[k] != null) { const el = f.elements[k]; el.value = o[k]; fire(el, 'input'); fire(el, 'change'); } });
     ['pool', 'smart', 'ffe', 'demo'].forEach(k => { if (o[k] != null && f.elements[k].checked !== o[k]) { f.elements[k].checked = o[k]; fire(f.elements[k], 'change'); } });
+    if (o.cur) { f.elements.cur.value = o.cur; fire(f.elements.cur, 'change'); }
   }, o);
+}
+
+// Currency: AED figures behind the display never change; each converted line is the AED line / rate, rounded like the
+// AED lines; the converted columns still add up; the converted total is within rounding of AED total / rate.
+const rnd = x => { const s = x >= 1e6 ? 1e4 : 1e3; return Math.round(x / s) * s; };
+async function fxRates(p) { return p.evaluate(() => JSON.parse(document.getElementById('calc-data').textContent).fx); }
+function checkCurrency(base, s, cur, fx, label) {
+  let good = true;
+  const rate = fx.aedPer[cur];
+  if (!rate) { fail(`${label}: no FX rate for ${cur}`); return false; }
+  if (s.cur !== cur || s.curSelect !== cur) { fail(`${label}: display currency is ${s.cur}/${s.curSelect}, expected ${cur}`); return false; }
+  if (JSON.stringify(s.aed) !== JSON.stringify(base.aed)) { good = false; fail(`${label}: AED figures changed when switching to ${cur}`); }
+  s.cols.forEach((c, i) => {
+    const aedCol = base.aed[i];
+    c.lines.forEach((v, n) => {
+      if (!aedCol[n]) return;
+      const want = rnd(aedCol[n] / rate);
+      if (v !== want) { good = false; fail(`${label}: ${cur} line ${n} column ${i} shows ${v}, expected ${want} (AED ${aedCol[n]} / ${rate})`); }
+    });
+    const aedTot = aedCol[aedCol.length - 1];
+    if (aedTot && c.total) {
+      const step = aedTot / rate >= 1e6 ? 1e4 : 1e3;
+      if (Math.abs(c.total - aedTot / rate) > 6 * step) { good = false; fail(`${label}: ${cur} total ${c.total} is not within rounding of AED ${aedTot} / ${rate}`); }
+    }
+  });
+  if (!checkSums(s, label)) good = false;
+  if (!s.fxNote || !/\d{4}/.test(s.fxNote)) { good = false; fail(`${label}: no "approximate, at rates of <date>" note beside ${cur} figures`); }
+  return good;
+}
+
+// The expected English WhatsApp summary for a new build (mirrors compact() in calc.js).
+function compactAED(x, sym) {
+  x = rnd(x);
+  const f = new Intl.NumberFormat('en-GB', { maximumFractionDigits: 2 });
+  return x >= 1e6 ? `${sym}${f.format(x / 1e6)}m` : `${sym}${new Intl.NumberFormat('en-GB').format(Math.round(x / 1000))}k`;
+}
+
+// Saves the page as a PDF the way "Save as PDF" prints it and counts the pages.
+async function pdfPages(p) {
+  await p.emulateMedia({ media: 'print' });
+  const buf = await p.pdf({ format: 'A4', preferCSSPageSize: true, printBackground: true });
+  await p.emulateMedia({ media: 'screen' });
+  return { pages: (buf.toString('latin1').match(/\/Type\s*\/Page[^s]/g) || []).length, buf };
 }
 
 const SCENARIOS = [
@@ -174,6 +239,103 @@ async function englishChecks(p) {
   else fail(`modes: extras not kept per mode (reno ${m1.pool}/${m1.garden}, new ${m2.pool}/${m2.garden}, reno again ${m3.pool}/${m3.garden})`);
   if (checkSums(m3, 'en after mode switches')) ok('modes: totals reconcile after switching');
 
+  // Currency display.
+  const fx = await fxRates(p);
+  await setInputs(p, { mode: 'new', unit: 'sqft', tier: 'premium', loc: 'dubai-hills-estate', area: 6000, basement: 0, garden: 3000, pool: true, smart: false, ffe: false, demo: false, cur: 'AED' });
+  const base = await snapshot(p);
+  if (base.fxNote) fail('currency: AED shows an FX note');
+  const enOpts = base.curOptions.join(',');
+  if (enOpts === 'AED,GBP,USD,EUR' && base.curSelect === 'AED') ok('currency: English page offers AED (default), GBP, USD, EUR only');
+  else fail(`currency: English page offers ${enOpts} (selected ${base.curSelect})`);
+  for (const cur of ['GBP', 'USD', 'EUR']) {
+    await setInputs(p, { cur });
+    const s = await snapshot(p);
+    if (checkCurrency(base, s, cur, fx, `en ${cur}`)) ok(`currency: ${cur} lines = AED / ${fx.aedPer[cur]} (rounded), AED unchanged, columns reconcile, note "${s.fxNote}"`);
+  }
+  for (const sc of [SCENARIOS[1], SCENARIOS[5], SCENARIOS[4]]) {
+    await setInputs(p, { ...sc, cur: 'AED' });
+    const b = await snapshot(p);
+    await setInputs(p, { cur: 'EUR' });
+    const s = await snapshot(p);
+    if (checkCurrency(b, s, 'EUR', fx, `en EUR ${sc.mode}/${sc.tier}`)) ok(`currency: EUR correct for ${sc.mode}/${sc.tier} (state ${s.state})`);
+  }
+  await setInputs(p, { ...SCENARIOS[7], cur: 'AED' });
+  const back = await snapshot(p);
+  if (back.likely === base.likely && !back.fxNote) ok('currency: back to AED restores the original figures');
+  else fail(`currency: back to AED shows ${back.likely}, expected ${base.likely}`);
+
+  // WhatsApp summary.
+  const wantWa = `Hello, I used your villa cost calculator: new build, 6,000 sq ft, Premium, Dubai Hills Estate, likely ${compactAED(back.likely, 'AED ')}. Could we talk it through?`;
+  if (back.wa === wantWa) ok(`whatsapp: "${back.wa}"`);
+  else fail(`whatsapp: got "${back.wa}", expected "${wantWa}"`);
+  await setInputs(p, { cur: 'GBP' });
+  const gw = await snapshot(p);
+  if (gw.wa.includes(compactAED(gw.likely, '£')) && !/\{\w+\}/.test(gw.wa)) ok(`whatsapp in GBP: "${gw.wa}"`);
+  else fail(`whatsapp in GBP: "${gw.wa}"`);
+  await setInputs(p, { mode: 'reno', tier: 'luxury', cur: 'AED' });
+  const rw = await snapshot(p);
+  if (/renovation, Luxury, .*, from AED [\d.]+m/.test(rw.wa)) ok(`whatsapp renovation (starting figure): "${rw.wa}"`);
+  else fail(`whatsapp renovation: "${rw.wa}"`);
+  await setInputs(p, { mode: 'new', area: '' });
+  const nw = await snapshot(p);
+  if (nw.wa && !/likely|\{/.test(nw.wa)) ok('whatsapp with no estimate: generic message');
+  else fail(`whatsapp with no estimate: "${nw.wa}"`);
+
+  // Shareable link: the URL carries every input and reopens the same estimate.
+  await setInputs(p, { mode: 'new', unit: 'm2', tier: 'luxury', loc: 'saadiyat', area: 650, basement: 120, garden: 400, pool: false, smart: true, ffe: true, demo: true, cur: 'USD' });
+  const u1 = await snapshot(p);
+  const q = new URL(u1.href).searchParams;
+  if (['mode', 'tier', 'loc', 'unit', 'cur', 'area', 'basement', 'garden', 'pool', 'smart', 'ffe', 'demo'].every(k => q.has(k)) && q.get('cur') === 'USD' && q.get('unit') === 'm2') ok(`url: inputs written to the query string (${new URL(u1.href).search.slice(0, 80)}...)`);
+  else fail(`url: query string incomplete: ${new URL(u1.href).search}`);
+  const p2 = await p.context().newPage();
+  await p2.goto(u1.href, { waitUntil: 'load' });
+  const u2 = await snapshot(p2);
+  const same = ['likely', 'low', 'high', 'area', 'unit', 'cur', 'checks', 'state'].every(k => u1[k] === u2[k]) && JSON.stringify(u1.aed) === JSON.stringify(u2.aed)
+    && await p2.evaluate(() => document.querySelector('#c-loc').value) === 'saadiyat';
+  if (same) ok(`url: reopening the link restores the estimate (${u2.likelyText}, ${u2.area} m², ${u2.cur})`);
+  else fail(`url: round trip differs (${u1.likely}/${u2.likely}, area ${u1.area}/${u2.area}, cur ${u1.cur}/${u2.cur}, checks ${u1.checks}/${u2.checks})`);
+  // Copy link puts the same URL on the clipboard.
+  await p2.click('[data-copy-link]');
+  await p2.waitForTimeout(200);
+  const clip = await p2.evaluate(() => navigator.clipboard.readText().catch(() => ''));
+  const st = await p2.evaluate(() => document.querySelector('[data-copy-status]').textContent);
+  if (clip && new URL(clip).search === new URL(u1.href).search && st) ok(`copy link: clipboard holds the estimate URL; status "${st}"`);
+  else fail(`copy link: clipboard "${clip}", status "${st}"`);
+  // A forged or partial link falls back safely.
+  await p2.goto(`http://127.0.0.1:${PORT}${CALC}?mode=reno&tier=bogus&loc=%3Cscript%3E&area=-5&cur=RUB&pool=1`, { waitUntil: 'load' });
+  const u3 = await snapshot(p2);
+  if (u3.cur === 'AED' && u3.state && checkSums(u3, 'en forged link')) ok('url: unknown tier, location and currency are ignored (RUB not offered on the English page)');
+  else fail(`url: forged link not handled (cur ${u3.cur})`);
+  await p2.close();
+
+  // "Send this estimate to Philip": hidden fields follow the calculator; Netlify form registered on the English page.
+  await setInputs(p, { ...SCENARIOS[7], unit: 'sqft', cur: 'GBP' });
+  const sf = await snapshot(p);
+  const f = sf.sendFields;
+  if (f && f.netlify && f.formName === 'estimate' && f.currency === 'GBP' && f.link === sf.href.split('#')[0]
+      && f.result.includes('likely ' + new Intl.NumberFormat('en-GB').format(sf.aed[1][10])) && /shown in GBP/.test(f.result) && /tier=premium/.test(f.inputs)) ok('send form: hidden fields carry the inputs, AED result, GBP figures and link');
+  else fail(`send form: hidden fields wrong ${JSON.stringify(f)}`);
+
+  // Save as PDF: one A4 page, with the letterhead and inputs, without the form.
+  await setInputs(p, { ...SCENARIOS[1], cur: 'AED' });
+  await p.evaluate(() => window.dispatchEvent(new Event('beforeprint')));
+  await p.emulateMedia({ media: 'print' });
+  const pr = await p.evaluate(() => {
+    const vis = s => { const el = document.querySelector(s); return !!el && getComputedStyle(el).display !== 'none' && !!el.getClientRects().length; };
+    return { head: vis('.calc-print-head'), foot: vis('.calc-print-foot'), form: vis('#calc'), send: vis('#send'), header: vis('.site-head'),
+             inputs: document.querySelectorAll('[data-print-inputs] dt').length, date: document.querySelector('[data-print-date]').textContent };
+  });
+  await p.emulateMedia({ media: 'screen' });
+  if (pr.head && pr.foot && !pr.form && !pr.send && !pr.header && pr.inputs >= 5 && pr.date) ok(`print: letterhead, ${pr.inputs} inputs, date "${pr.date}" and contact line shown; form, send section and site header hidden`);
+  else fail(`print layout wrong ${JSON.stringify(pr)}`);
+  for (const sc of [SCENARIOS[1], SCENARIOS[3]]) {
+    await setInputs(p, { ...sc, cur: 'GBP' });
+    const { pages } = await pdfPages(p);
+    if (pages === 1) ok(`print: ${sc.mode}/${sc.tier} in GBP saves as a one-page PDF`);
+    else fail(`print: ${sc.mode}/${sc.tier} saves as ${pages} pages`);
+  }
+  await setInputs(p, { ...SCENARIOS[7], cur: 'AED' });
+
   // Known English message fragments, for the leak check on translated pages.
   return p.evaluate(() => Array.from(document.querySelectorAll('#calc-msgs li')).map(li => ({
     key: li.getAttribute('data-m') || 'dev:' + li.getAttribute('data-dev'),
@@ -193,7 +355,8 @@ async function langChecks(p, lang, en) {
   const untranslated = [];
   // Terms TRANSLATION_BRIEF.md says stay in Latin script in every language ("AED", "sq ft", "m²").
   // A message made only of these, numbers and placeholders is correct when left unchanged.
-  const latinOnly = x => !/[A-Za-z]{2,}/.test(x.replace(/\{\w+\}/g, '').replace(/\bAED\b|\bsq ft\b/g, ''));
+  // Currency codes (and "US" in "US$") also stay in Latin script.
+  const latinOnly = x => !/[A-Za-z]{2,}/.test(x.replace(/\{\w+\}/g, '').replace(/\b(AED|GBP|USD|EUR|RUB|CNY|INR|US)\b|\bsq ft\b/g, ''));
   en.forEach(m => {
     const t = byKey[m.key];
     if (!t) { fail(`${lang}: message ${m.key} missing from the page`); return; }
@@ -219,6 +382,45 @@ async function langChecks(p, lang, en) {
   if (untranslated.length) report(`${lang}: ${untranslated.length} of ${en.length} calculator messages not yet translated (${untranslated.slice(0, 6).join(', ')}${untranslated.length > 6 ? ', ...' : ''})`);
   if (leaks.size) report(`${lang}: English calculator text visible: ${Array.from(leaks).slice(0, 4).map(x => JSON.stringify(x)).join('; ')}${leaks.size > 4 ? ` and ${leaks.size - 4} more` : ''}`);
   else ok(`${lang}: no English calculator messages visible`);
+
+  // Currencies: GBP, USD, EUR everywhere, plus RUB on /ru/, CNY on /zh/, INR on /hi/; AED stays the default.
+  const LOCAL = { ru: 'RUB', zh: 'CNY', hi: 'INR' };
+  const want = ['AED', 'GBP', 'USD', 'EUR'].concat(LOCAL[lang] ? [LOCAL[lang]] : []).join(',');
+  await setInputs(p, { mode: 'new', unit: 'sqft', tier: 'premium', loc: 'dubai-hills-estate', area: 6000, basement: 0, garden: 3000, pool: true, smart: false, ffe: false, demo: false, cur: 'AED' });
+  const base = await snapshot(p);
+  if (base.curOptions.join(',') === want && base.curSelect === 'AED') ok(`${lang}: currencies ${want}, AED by default`);
+  else fail(`${lang}: currencies ${base.curOptions.join(',')} (selected ${base.curSelect}), expected ${want}`);
+  const fx = await fxRates(p);
+  for (const cur of ['GBP'].concat(LOCAL[lang] ? [LOCAL[lang]] : [])) {
+    await setInputs(p, { cur });
+    const s = await snapshot(p);
+    if (checkCurrency(base, s, cur, fx, `${lang} ${cur}`)) ok(`${lang}: ${cur} conversion correct, AED unchanged`);
+    const all = [s.fxNote].concat(s.texts).join(' \n ');
+    frags.forEach(fr => { if (all.includes(fr)) report(`${lang} ${cur}: English calculator text visible: ${JSON.stringify(fr)}`); });
+  }
+  // WhatsApp summary: filled in, in the page language.
+  await setInputs(p, { cur: 'AED' });
+  const w = await snapshot(p);
+  const waLeaks = frags.filter(fr => w.wa.includes(fr));
+  if (!w.wa || /\{\w+\}/.test(w.wa) || !w.wa.includes(new Intl.NumberFormat('en-GB', { maximumFractionDigits: 2 }).format(rnd(w.likely) / 1e6))) fail(`${lang}: WhatsApp text not filled in: "${w.wa}"`);
+  else if (waLeaks.length) report(`${lang}: WhatsApp text still in English: "${w.wa}"`);
+  else ok(`${lang}: WhatsApp text "${w.wa}"`);
+  // URL round trip in the local currency.
+  if (LOCAL[lang]) {
+    await setInputs(p, { cur: LOCAL[lang], tier: 'luxury', unit: 'm2' });
+    const a = await snapshot(p);
+    const p2 = await p.context().newPage();
+    await p2.goto(a.href, { waitUntil: 'load' });
+    const b = await snapshot(p2);
+    await p2.close();
+    if (a.likely === b.likely && b.cur === LOCAL[lang] && b.unit === 'm2') ok(`${lang}: link reopens the estimate in ${LOCAL[lang]}`);
+    else fail(`${lang}: link round trip differs (${a.likely}/${b.likely}, ${b.cur}, ${b.unit})`);
+    await setInputs(p, { cur: 'AED', unit: 'sqft' });
+  }
+  // Translated pages post to the English form registration (tools/i18n.py tag_forms).
+  const sf = base.sendFields;
+  if (sf && !sf.netlify && sf.formName === 'estimate') ok(`${lang}: estimate form posts via form-name (no data-netlify on the translated page)`);
+  else fail(`${lang}: estimate form attributes wrong ${JSON.stringify(sf && { netlify: sf.netlify, formName: sf.formName })}`);
 }
 
 (async () => {
@@ -227,7 +429,10 @@ async function langChecks(p, lang, en) {
   try {
     await waitFor(`http://127.0.0.1:${PORT}${CALC}`, 50);
     browser = await chromium.launch();
-    const p = await browser.newPage();
+    const ctx = await browser.newContext({ permissions: ['clipboard-read', 'clipboard-write'] });
+    const p = await ctx.newPage();
+    // Never submit anything from the checks.
+    await ctx.route(u => u.hostname === '127.0.0.1', r => r.request().method() === 'POST' ? r.abort() : r.continue());
     const errors = [];
     p.on('pageerror', e => errors.push(e.message));
     p.on('console', m => { if (m.type() === 'error') errors.push(m.text()); });
