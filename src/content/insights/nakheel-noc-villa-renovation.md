@@ -2,7 +2,7 @@
 title: "Nakheel NOC for villa renovations explained"
 description: "What a Nakheel NOC is, which renovation works trigger one, how it fits before the authority permit, and how to sequence contractor mobilisation around it."
 date: 2026-10-31
-updated: 2026-10-31
+updated: 2026-11-03
 category: "Approvals"
 keypoints:
   - "A Nakheel NOC is the master developer's written no-objection to your works; Nakheel says you must obtain one from its Urban Planning team before making any alterations."
@@ -136,7 +136,7 @@ In our experience the problems are rarely the NOC itself. They are about timing 
 - **Access permits expiring mid-job.** Long-term permits cannot be extended, so a slipping programme needs fresh applications.
 - **Exclusions in the bid.** Deposit, fencing and permit charges left out of the price come back as extras.
 
-For a fuller picture of renovating in one Nakheel community, see our guide to [renovating a Palm Jumeirah villa](/insights/palm-jumeirah-villa-renovation/).
+For a fuller picture of renovating in one Nakheel community, see our guide to [renovating a Palm Jumeirah villa](/insights/palm-jumeirah-villa-renovation/). For the wider mistakes that push renovations over time and budget, see [villa renovation mistakes, from the builder's side](/insights/villa-renovation-mistakes-dubai/).
 
 ## How Eastbridge can help
 

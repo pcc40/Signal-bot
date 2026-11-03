@@ -2,7 +2,7 @@
 title: "Villa renovation cost in Dubai (2026 guide)"
 description: "Dubai villa renovation costs for 2026: published AED ranges by scope and per sq ft, where sources disagree, a worked budget and hidden costs in older villas."
 date: 2026-10-31
-updated: 2026-11-01
+updated: 2026-11-03
 category: "Renovation"
 keypoints:
   - "Published Dubai figures disagree: whole-villa renovation ranges run from about AED 200,000 for a basic refresh to AED 3.5 million or more for structural work on a luxury villa, and per sq ft figures from AED 120 to over AED 600."
@@ -162,6 +162,8 @@ Living in the villa during the works rarely saves money once services, waterproo
 - **Price every change before it is instructed.** Cost and time, in writing, first.
 - **Decide early, order early.** Finishes and long-lead items fixed before work starts protect the programme.
 - **Read the contract.** See [villa construction contracts in the UAE](/insights/villa-construction-contracts-uae/), and take advice from a UAE-qualified lawyer.
+
+The mistakes that push renovations over budget are surprisingly consistent; we set out the seven we saw most often as the contractor in [villa renovation mistakes, from the builder's side](/insights/villa-renovation-mistakes-dubai/).
 
 If the scope keeps growing towards new structure, a new envelope and full services replacement, stop and price a rebuild properly alongside it. Our [Palm Jumeirah renovation guide](/insights/palm-jumeirah-villa-renovation/) covers that decision and the approvals sequence, and our guide to [what it costs to build a villa in Dubai](/insights/villa-construction-cost-dubai/) gives the new-build comparison.
 

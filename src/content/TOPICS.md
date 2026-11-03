@@ -12,7 +12,7 @@
 - [x] which-dubai-authority-covers-my-villa | Dubai Municipality, Trakhees or DDA: how to find out which applies to your plot | dubai municipality vs trakhees vs dda | why the answer changes your programme; confirm with your consultant, never assume by community
 - [x] sourcing-materials-abroad-dubai-villa | Sourcing materials abroad for a Dubai villa | source materials abroad villa dubai | samples, lead times, shipping, customs and checks on arrival; no supplier commissions
 # Competitor brief (reports/competitor-brief-top10-2026-11-01.md, section 3): publish these next, in this order. The twice-weekly cap still applies.
-- [ ] villa-renovation-mistakes-dubai | Villa renovation mistakes we saw from the contractor's side | villa renovation mistakes dubai | starting on site before the scope is frozen; ordering finishes late
+- [x] villa-renovation-mistakes-dubai | Villa renovation mistakes we saw from the contractor's side | villa renovation mistakes dubai | starting on site before the scope is frozen; ordering finishes late
 - [ ] older-villa-mep-renovation | Rewiring and replumbing an older Dubai villa | villa mep renovation dubai | what you find behind the walls and how contractors price the unknown
 - [ ] villa-renovation-timeline-dubai | How long a villa renovation takes in Dubai | villa renovation timeline dubai | NOC, permit and long-lead items set the date, not the site work
 - [ ] how-to-plan-a-villa-renovation-dubai | How to plan a villa renovation in Dubai | plan villa renovation dubai | hub linking all renovation content; linked from the renovation service page

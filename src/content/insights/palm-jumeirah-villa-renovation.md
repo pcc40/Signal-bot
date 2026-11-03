@@ -2,7 +2,7 @@
 title: "Renovating a Palm Jumeirah villa: approvals and budget traps"
 description: "How a Palm Jumeirah villa renovation runs: Nakheel NOC, then the authority permit, the right sequence, hidden defects in older villas and realistic budgets."
 date: 2026-10-28
-updated: 2026-11-01
+updated: 2026-11-03
 category: "Renovation"
 keypoints:
   - "On Palm Jumeirah the Nakheel NOC comes first; the building permit follows from Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits."
@@ -138,6 +138,8 @@ The traps are rarely dramatic. They are small decisions that compound.
 - **Design changes after the NOC.** Altering an approved design can mean resubmitting to Nakheel and the authority, with time and fees attached.
 - **Programme slippage.** Every extra month is another month of preliminaries, another month of rent if you have moved out, and another month before you can use the house.
 - **Exclusions.** Landscaping, pool plant, AV, lighting control and loose furniture are frequently outside the main contract. Ask what is not included, not just what is.
+
+These traps are not unique to the Palm; we cover the seven we saw most often as the contractor in [villa renovation mistakes, from the builder's side](/insights/villa-renovation-mistakes-dubai/).
 
 ## Renovating in an occupied community
 
