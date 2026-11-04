@@ -776,7 +776,7 @@ def legal():
     film = (" On larger screens the home page may also load a muted background film from Vimeo automatically."
             if C.HERO_VIDEO else "")
     body = B.page_head(crumbs, "Privacy notice", None) + f'''<section class="section--tight"><div class="wrap prose">
-<p>Last updated {datetime.date.today().strftime("%-d %B %Y")}.</p>
+<p>Last updated {esc(getattr(C, "PRIVACY_UPDATED", "1 November 2026"))}.</p>
 <p>{esc(C.LEGAL)} ("Eastbridge", "we") is licensed in the Meydan Free Zone, Dubai ({esc(C.LICENCE)}). This notice explains how we handle personal data collected through this website, consistent with the UAE Personal Data Protection Law (Federal Decree-Law No. 45 of 2021) and, for visitors in the UK and EU, the UK and EU GDPR.</p>
 <h2>What we collect</h2>
 <ul>

@@ -72,3 +72,6 @@ FOUNDER = {
     # Company pages (Eastbridge's LinkedIn company page, Instagram) go in SOCIAL instead (Organization sameAs).
     "same_as": ["https://www.linkedin.com/in/philip-chapman-757627448/"],
 }
+
+# Date the privacy notice last changed in substance. Update it (and run the Languages steps) whenever the notice text changes.
+PRIVACY_UPDATED = "1 November 2026"
