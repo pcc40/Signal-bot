@@ -1,0 +1,46 @@
+[
+  {
+    "file": "palm-jumeirah-01.jpg",
+    "role": "hero",
+    "shows": "Sunset aerial of Palm Jumeirah looking along the trunk and the villa-lined fronds towards Atlantis.",
+    "credit": "Image: Nakheel",
+    "source_page": "https://www.nakheel.com/en/developments/nakheel-collections/palmjumeirah",
+    "image_url": "https://www.nakheel.com/images/nakheelcorporatelibraries/amenities/palm-jumeirah_1.jpg",
+    "w": 1920,
+    "h": 1080,
+    "is_render": false
+  },
+  {
+    "file": "palm-jumeirah-02.jpg",
+    "role": "support",
+    "shows": "Low aerial of two Palm Jumeirah fronds lined with beachfront villas, Atlantis The Royal on the horizon.",
+    "credit": "Image: Nakheel",
+    "source_page": "https://www.nakheel.com/en/developments/nakheel-collections/palmjumeirah",
+    "image_url": "https://www.nakheel.com/images/nakheelcorporatelibraries/developments/palm-jumeirah190d7ee8-1b0a-4dd3-9ea4-523de16fa3cc.jpg",
+    "w": 1920,
+    "h": 1080,
+    "is_render": false
+  },
+  {
+    "file": "palm-jumeirah-03.jpg",
+    "role": "support",
+    "shows": "Aerial over the Palm Jumeirah frond villas and trunk, looking back towards The Palm Tower and Dubai Marina.",
+    "credit": "Image: Nakheel",
+    "source_page": "https://www.nakheel.com/en/developments/nakheel-collections/palmjumeirah",
+    "image_url": "https://www.nakheel.com/images/nakheelcorporatelibraries/developments/palm-jumeirahe6a8226b-c8f2-4ee8-82d9-2015b61bdde8.jpg",
+    "w": 1920,
+    "h": 1080,
+    "is_render": false
+  },
+  {
+    "file": "palm-jumeirah-04.jpg",
+    "role": "support",
+    "shows": "Panoramic aerial of the Palm Jumeirah fronds with their private beaches and villas.",
+    "credit": "Image: Nakheel",
+    "source_page": "https://www.nakheel.com/en/developments/nakheel-collections/palmjumeirah",
+    "image_url": "https://www.nakheel.com/images/nakheelcorporatelibraries/developments/projects/palm-jumeirah4629cdc3-258c-48cc-b860-2c9f1c74cf6a.jpg",
+    "w": 1240,
+    "h": 480,
+    "is_render": false
+  }
+]

@@ -1,0 +1,35 @@
+[
+ {
+  "file": "district-one-01.jpg",
+  "role": "hero",
+  "shows": "The District One crystal lagoon in MBR City with the Burj Khalifa on the skyline",
+  "credit": "Image: Crystal Lagoons (District One, MBR City)",
+  "source_page": "https://www.crystal-lagoons.com/new-stage-of-mohammed-bin-rashid-al-maktoum-city-district-one/",
+  "image_url": "https://www.crystal-lagoons.com/wp-content/uploads/2023/05/12-07.jpg",
+  "w": 1920,
+  "h": 1080,
+  "is_render": false
+ },
+ {
+  "file": "district-one-02.jpg",
+  "role": "support",
+  "shows": "Living room of a District One West villa looking out to the lagoon",
+  "credit": "Developer render: Nakheel and Meydan (District One West)",
+  "source_page": "https://west.district1.com/",
+  "image_url": "https://cdn.prod.website-files.com/6419b0ba0155553525a7880b/647725ac5e9047a330a7337e_D1W_OpenGraph.webp",
+  "w": 1920,
+  "h": 1129,
+  "is_render": true
+ },
+ {
+  "file": "district-one-03.jpg",
+  "role": "support",
+  "shows": "Lagoon beach at District One with downtown Dubai behind",
+  "credit": "Image: Crystal Lagoons (District One, MBR City)",
+  "source_page": "https://www.crystal-lagoons.com/proyectos/mbrc-district-1/",
+  "image_url": "https://www.crystal-lagoons.com/wp-content/uploads/2025/08/DISTRICT1_Crystal-Lagoons-1-05-abr-2024-CAMBIO-AGUA-CR-NEW.jpg",
+  "w": 1800,
+  "h": 1094,
+  "is_render": false
+ }
+]

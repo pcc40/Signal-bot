@@ -375,16 +375,17 @@ def apply():
         insert_switcher(soup, path, "en")
         tag_forms(soup, "en")
         f.write_text(str(soup), encoding="utf-8")
-    # sitemap with alternates
+    # sitemap with alternates. Image entries (<image:image>, written by build.write_sitemap for area, article and
+    # case-study heroes) are kept and repeated on every language version of the page: the image is the same file.
     sm = (DIST / "sitemap.xml").read_text(encoding="utf-8")
-    locs = re.findall(r"<url><loc>(.*?)</loc><lastmod>(.*?)</lastmod><priority>(.*?)</priority></url>", sm)
-    out = ['<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
-    for loc, lm, pr in locs:
+    locs = re.findall(r"<url><loc>(.*?)</loc><lastmod>(.*?)</lastmod><priority>(.*?)</priority>((?:<image:image>.*?</image:image>)*)</url>", sm)
+    out = ['<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">']
+    for loc, lm, pr, imgs in locs:
         path = loc[len(C.SITE_URL):]
         alts = "".join(f'<xhtml:link rel="alternate" hreflang="{("en" if l == "en" else LANGS[l][1])}" href="{C.SITE_URL + lang_url(path, l)}"/>' for l in ALL)
         alts += f'<xhtml:link rel="alternate" hreflang="x-default" href="{loc}"/>'
         for l in ALL:
-            out.append(f"<url><loc>{C.SITE_URL + lang_url(path, l)}</loc><lastmod>{lm}</lastmod><priority>{pr}</priority>{alts}</url>")
+            out.append(f"<url><loc>{C.SITE_URL + lang_url(path, l)}</loc><lastmod>{lm}</lastmod><priority>{pr}</priority>{alts}{imgs}</url>")
     out.append("</urlset>\n")
     (DIST / "sitemap.xml").write_text("".join(out), encoding="utf-8")
     llms = DIST / "llms.txt"

@@ -14,6 +14,8 @@ def proj_of(base):
     return PROJ[base.rsplit("-", 1)[0]]
 
 def credit_of(base):
+    if B.is_uae(base):
+        return B.img_credit(base)
     p = proj_of(base)
     return f'{p["name"]}, {p["place"]}' + (f' · photograph {p["photo"]}' if p["photo"] else "")
 
@@ -85,11 +87,23 @@ def quotes_html(items):
 
 def svc_cards(items, imgs):
     return '<div class="svc-grid">' + "".join(
-        f'<a class="svc-card" href="/services/{s["slug"]}/"><figure>{pic(imgs[s["slug"]][0], "", "(max-width:600px) 100vw, (max-width:980px) 50vw, 33vw", cls="reveal")}</figure>'
+        f'<a class="svc-card" href="/services/{s["slug"]}/"><figure>{pic(imgs[s["slug"]][0], "", "(max-width:600px) 100vw, (max-width:980px) 50vw, 33vw", cls="reveal")}{B.fig_credit(imgs[s["slug"]][0])}</figure>'
         f'<h3>{esc(s["short"])}</h3><p>{esc(s["lede"])}</p></a>' for s in items) + "</div>"
 
 # ---------------------------------------------------------------- home
-HERO_SLIDES = ["quay-house-01", "owers-house-01", "sea-glass-house-01", "the-lookout-02"]
+# Home hero slideshow (brief 2026-11-05): three UAE communities first, then two houses P Chapman Construction built.
+# Each slide has its own caption in .hero-meta, shown with its slide: UAE images as the community with the image
+# credit, UK houses as P Chapman Construction's work. site.css times the cross-fade for five slides.
+HERO_SLIDES = ["uae-palm-jumeirah-01", "uae-dubai-islands-01", "uae-emirates-hills-01", "quay-house-01", "sea-glass-house-01"]
+# "Built by our founder in the UK" strip on the home page, linking to /work/
+FOUNDER_UK_STRIP = ["owers-house-01", "the-lookout-02", "saqqara-01"]
+
+def slide_caption(base):
+    if B.is_uae(base):
+        return f'{B.img_meta(base)["name"]}. {B.img_credit(base)}.'
+    p = proj_of(base)
+    return f'{p["name"]}, {p["place"]}. Built by P Chapman Construction, founded by Philip Chapman.'
+
 LABC_2020_URL = "https://www.labc.co.uk/news/labc-south-west-winners-amp-highly-commended-2020"
 LABC_2018_URL = "https://www.acornpropertygroup.org/old-station-masters-house-wins-labc-award/"
 
@@ -97,7 +111,9 @@ def home(posts, post_cards, stages_html, svc_img):
     """Order (review brief 2026-10-31, section 5): proposition and contact; founder evidence; three routes;
     one real UK project; how an appointment starts, with independence; owner questions and final contact.
     Detail lives on its own pages. posts, post_cards, stages_html and svc_img stay in the signature for pages.home()."""
+    import pages
     slides = "".join(f'<figure>{pic(b, "", "100vw", eager=(i == 0))}</figure>' for i, b in enumerate(HERO_SLIDES))
+    slide_caps = "".join(f"<p>{esc(slide_caption(b))}</p>" for b in HERO_SLIDES)
     doors = [
      ("villa-construction-project-management", "Build a new villa", "From the plot and the first budget to handover, alongside your consultant and contractor.", "sea-glass-house-02"),
      ("villa-renovation-project-management", "Renovate or extend", "Surveys, the approvals route, budget, contractor and handover for an existing villa.", "menwinnion-01"),
@@ -119,7 +135,7 @@ def home(posts, post_cards, stages_html, svc_img):
 <h1 id="hero-h">Your villa, managed from your side of the table.</h1>
 <p class="lede">For a one-off villa, one person represents you alongside your consultant and contractor, and keeps your budget under control by reviewing every quote, payment and variation before you commit. Led personally by Philip Chapman.</p>
 <div class="actions"><a class="btn" href="/contact/">{esc(B.CTA_LABEL)}</a><a class="btn btn--ghost" href="/why-a-client-side-project-manager/">Why client-side matters</a></div></div>
-<p class="hero-meta">Homes built by P Chapman Construction, founded by Philip Chapman.</p><span class="scroll-cue" aria-hidden="true"></span></section>
+<div class="hero-meta">{slide_caps}</div><span class="scroll-cue" aria-hidden="true"></span></section>
 
 <section class="section" aria-labelledby="founder-h"><div class="wrap feature">
 <figure class="portrait">{pic("philip-chapman-01", "Philip Chapman, Founding Partner of Eastbridge Strategic Partners", "(max-width:900px) 100vw, 42vw", cls="reveal")}</figure>
@@ -144,6 +160,12 @@ def home(posts, post_cards, stages_html, svc_img):
 <p><a class="btn" href="/work/owers-house/#case-study">Read the case study</a> &nbsp; <a class="link" href="/work/">See more of the work</a></p></div>
 </div></section>
 
+<section class="section--tight" aria-labelledby="ukbuilt-h"><div class="wrap">
+<div class="head-row"><div><span class="kicker">Philip Chapman's record</span><h2 id="ukbuilt-h">Built by our founder in the UK</h2></div>
+<p class="muted">Houses built by P Chapman Construction, the company Philip founded and led for 21 years. UK contracting work, not Eastbridge appointments. <a class="link" href="/work/">See the work</a></p></div>
+{pages.strip_html(FOUNDER_UK_STRIP)}
+</div></section>
+
 <section class="section--tight starts" aria-labelledby="starts-h"><div class="wrap">
 <div class="head-row"><div><span class="kicker">How it starts</span><h2 id="starts-h">From first call to appointment</h2></div>
 <p class="muted">You decide at each step whether to go on. <a class="link" href="/fees/">How fees work</a></p></div>
@@ -158,7 +180,7 @@ def home(posts, post_cards, stages_html, svc_img):
 {B.cta_band("Tell us about the house you want to build.", image="sea-glass-house-08")}'''
     B.page("/", "Villa Project Management Dubai | Client-Side Project Manager",
            "Client-side project management for villa builds and renovations in Dubai and Abu Dhabi, led by Philip Chapman, founder of a UK builder of award-winning homes.",
-           body, schema=[B.faq_schema(faqs)], preload="/assets/img/quay-house-01-1280.webp", hero=True)
+           body, schema=[B.faq_schema(faqs)], preload=f"/assets/img/{HERO_SLIDES[0]}-1280.webp", hero=True)
 
 # ---------------------------------------------------------------- why client-side
 MOMENTS = [
@@ -271,7 +293,14 @@ def case_hub():
            "Owers House, a RIBA award-winning UK house built by P Chapman Construction, and a hypothetical worked example of how Eastbridge would manage an Island E villa.",
            body, crumbs, og=B.og_image("owers-house-04"))
 
+# Island E images: Nakheel's Bay Estates reference designs and renders (owner's decision, 5 November 2026).
+# The social preview stays the generated diagram card (CASE_OG), labelled "Hypothetical worked example".
+CASE_HERO = "uae-island-e-01"
+CASE_STRIP = ["uae-island-e-03", "uae-island-e-02", "uae-island-e-04"]
+CASE_STRIP_NOTE = "Developer renders, Bay Estates by Nakheel, Island E. For illustration; Eastbridge was not involved in their design."
+
 def case_page():
+    import pages
     path = CASE_URL
     crumbs = [("Home", "/"), ("Case studies", "/case-studies/"), ("Island E worked example", path)]
     k = CS
@@ -328,9 +357,10 @@ def case_page():
 </tr></tbody></table></div>'''
     body = B.banner(crumbs, "How we would manage an Island E villa: a worked project example",
                     "A hypothetical waterfront villa on Island E, Dubai Islands, from plot review to keys. It shows the budget structure, cash-flow plan, tender comparison and programme review we would produce for an owner.",
-                    "saqqara-01", "Photograph: Saqqara, Feock, a waterfront house built in the UK by P Chapman Construction",
+                    CASE_HERO, B.img_credit(CASE_HERO),
                     '<span class="tag">Worked example · Hypothetical</span>') + f'''
 <section class="section--tight"><div class="wrap">{notice}</div></section>
+<section class="section--tight"><div class="wrap">{pages.strip_html(CASE_STRIP, note=CASE_STRIP_NOTE)}</div></section>
 <section class="section--tight"><div class="wrap">
 <h2>What is published, what is assumed, what is invented</h2>
 {sources_kept_apart}
@@ -452,12 +482,12 @@ def case_page():
 <ul class="small"><li>Nakheel: Bay Estate, Island E price and payment plan sheet, masterplan and draft development control regulations, issued 24 September 2026</li><li><a href="{k.DLD_URL}" rel="noopener">Dubai Land Department: registering the initial sale of off-plan units and land plots</a></li><li><a href="{k.VAT_GUIDE_URL}" rel="noopener">Federal Tax Authority: VAT real estate guide</a></li><li><a href="https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai" rel="noopener">Engel &amp; Völkers: construction cost in Dubai</a></li><li><a href="https://www.optimal.ae/blog/cost-to-build-a-villa-in-dubai" rel="noopener">Optimal Engineering: cost to build a villa in Dubai</a></li></ul>
 </div></section>
 </div>
-{B.cta_band("Buying on Island E?", "Send us the plot number, or the plots you are choosing between. We will tell you what the draft rules allow and what a complete budget needs to cover.", "saqqara-04")}'''
+{B.cta_band("Buying on Island E?", "Send us the plot number, or the plots you are choosing between. We will tell you what the draft rules allow and what a complete budget needs to cover.", "uae-island-e-05")}'''
     art = {"@context": "https://schema.org", "@type": "Article", "headline": "How we would manage an Island E villa: a worked project example (hypothetical)",
            "description": "A hypothetical worked example, not a completed project: budget structure, cash-flow plan, tender comparison and programme for a waterfront villa on Island E, Dubai Islands.",
            "author": {"@id": B.PERSON_ID}, "publisher": {"@id": B.ORG_ID}, "mainEntityOfPage": B.url(path),
-           "image": B.url(CASE_OG), "inLanguage": "en-GB", "about": "Villa construction project management, Dubai Islands",
+           "image": [B.url(CASE_OG), B.url(B.og_image(CASE_HERO))], "inLanguage": "en-GB", "about": "Villa construction project management, Dubai Islands",
            "genre": "Worked example"}
     B.page(path, "Island E Villa: Worked Project Example | Eastbridge",
            "A hypothetical worked example of how we would manage an Island E villa on Dubai Islands: budget structure, cash flow, tender comparison and programme review.",
-           body, crumbs, [art], og=CASE_OG)
+           body, crumbs, [art], og=CASE_OG, images=[CASE_HERO] + CASE_STRIP)

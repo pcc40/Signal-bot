@@ -1,0 +1,57 @@
+[
+  {
+    "file": "palm-jebel-ali-01.jpg",
+    "role": "hero",
+    "shows": "Masterplan aerial render of Palm Jebel Ali showing the fronds, crescent and mainland.",
+    "credit": "Image: Nakheel",
+    "source_page": "https://www.nakheel.com/en/developments/nakheel-collections/palmjebelali",
+    "image_url": "https://www.nakheel.com/images/nakheelcorporatelibraries/construction-updates/palm-jebel-ali_banner1_apr-26.jpg",
+    "w": 1920,
+    "h": 1080,
+    "is_render": true
+  },
+  {
+    "file": "palm-jebel-ali-02.jpg",
+    "role": "support",
+    "shows": "Render of a contemporary Palm Jebel Ali beachfront villa at dusk with pool.",
+    "credit": "Image: Nakheel",
+    "source_page": "https://www.nakheel.com/en/developments/nakheel-collections/palmjebelali",
+    "image_url": "https://www.nakheel.com/images/nakheelcorporatelibraries/nakheel-collection/palm-jebel-ali_vc_4.jpg",
+    "w": 1920,
+    "h": 1080,
+    "is_render": true
+  },
+  {
+    "file": "palm-jebel-ali-03.jpg",
+    "role": "support",
+    "shows": "Render of a three-storey Palm Jebel Ali frond villa with pool and garden.",
+    "credit": "Image: Nakheel",
+    "source_page": "https://www.nakheel.com/en/developments/nakheel-collections/palmjebelali",
+    "image_url": "https://www.nakheel.com/images/nakheelcorporatelibraries/nakheel-collection/palm-jebel-ali_vc_7.jpg",
+    "w": 1920,
+    "h": 1080,
+    "is_render": true
+  },
+  {
+    "file": "palm-jebel-ali-04.jpg",
+    "role": "support",
+    "shows": "Render of a modern Palm Jebel Ali villa with infinity pool facing the beach.",
+    "credit": "Image: Nakheel",
+    "source_page": "https://www.nakheel.com/en/developments/nakheel-collections/palmjebelali",
+    "image_url": "https://www.nakheel.com/images/nakheelcorporatelibraries/nakheel-collection/palm-jebel-ali_vc_1.jpg",
+    "w": 1920,
+    "h": 1080,
+    "is_render": true
+  },
+  {
+    "file": "palm-jebel-ali-05.jpg",
+    "role": "support",
+    "shows": "Render of a Palm Jebel Ali villa terrace and pool beside a private beach.",
+    "credit": "Image: Nakheel",
+    "source_page": "https://www.nakheel.com/en/developments/nakheel-collections/palmjebelali",
+    "image_url": "https://www.nakheel.com/images/nakheelcorporatelibraries/nakheel-collection/palm-jebel-ali_vc_8.jpg",
+    "w": 1920,
+    "h": 1080,
+    "is_render": true
+  }
+]

@@ -1,0 +1,57 @@
+[
+ {
+  "file": "al-barari-01.jpg",
+  "role": "hero",
+  "shows": "Aerial view over Al Barari's lake and dense planting, with villas among the trees",
+  "credit": "Image: Al Barari",
+  "source_page": "https://www.albarari.com/villa-living",
+  "image_url": "https://static.wixstatic.com/media/95d3dc_2520420e751f4a25abf20aeab4a40617~mv2.jpg",
+  "w": 2400,
+  "h": 1599,
+  "is_render": false
+ },
+ {
+  "file": "al-barari-02.jpg",
+  "role": "support",
+  "shows": "Modern Al Barari villa with a long pool and lawn, framed by palms",
+  "credit": "Image: Al Barari",
+  "source_page": "https://www.albarari.com/villa-living",
+  "image_url": "https://static.wixstatic.com/media/95d3dc_1dba83a0e3a84b7baed1e4f489ac5033~mv2.jpg",
+  "w": 2400,
+  "h": 1597,
+  "is_render": false
+ },
+ {
+  "file": "al-barari-03.jpg",
+  "role": "support",
+  "shows": "Row of white contemporary villas behind palms and rock gardens in Al Barari",
+  "credit": "Image: Al Barari",
+  "source_page": "https://www.albarari.com/villa-living",
+  "image_url": "https://static.wixstatic.com/media/95d3dc_90c113c04ef44d92a15810b6980caaa1~mv2.jpg",
+  "w": 2400,
+  "h": 1601,
+  "is_render": false
+ },
+ {
+  "file": "al-barari-04.jpg",
+  "role": "support",
+  "shows": "Villa with private pool and terrace in Al Barari in bright sunshine",
+  "credit": "Image: Al Barari",
+  "source_page": "https://www.albarari.com/villa-living",
+  "image_url": "https://static.wixstatic.com/media/95d3dc_c72b59a9862041f59cac323972cca5d3~mv2.jpg",
+  "w": 2400,
+  "h": 1601,
+  "is_render": false
+ },
+ {
+  "file": "al-barari-05.jpg",
+  "role": "support",
+  "shows": "Stream running through Al Barari's planted gardens",
+  "credit": "Image: Al Barari",
+  "source_page": "https://www.albarari.com/",
+  "image_url": "https://static.wixstatic.com/media/95d3dc_e102293aeefd4fffb704a304a022d5fb~mv2.jpg",
+  "w": 2400,
+  "h": 1601,
+  "is_render": false
+ }
+]

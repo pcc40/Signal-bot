@@ -1,0 +1,57 @@
+[
+ {
+  "file": "saadiyat-01.webp",
+  "role": "hero",
+  "shows": "Contemporary two-storey villas along a palm-lined residential street in Saadiyat Lagoons",
+  "credit": "Image: Aldar (Saadiyat Lagoons)",
+  "source_page": "https://www.aldar.com/en/saadiyat-lagoons",
+  "image_url": "https://images4.cmp.optimizely.com/assets/3--z1-v6_streetscape-view_2-alghaf-1.webp/Zz1lNzNkYTRhNmMwNjkxMWYwYjE4ZWM2OGVjZmY1OTU5Nw==",
+  "w": 1920,
+  "h": 1079,
+  "is_render": true
+ },
+ {
+  "file": "saadiyat-02.webp",
+  "role": "support",
+  "shows": "Villa terrace overlooking a communal pool and landscaped gardens at Saadiyat Reserve, The Dunes",
+  "credit": "Image: Aldar (Saadiyat Reserve - The Dunes)",
+  "source_page": "https://www.aldar.com/en/saadiyat-reserve-the-dunes",
+  "image_url": "https://images2.cmp.optimizely.com/assets/saadiyat_reserve_dunes_img.webp/Zz00NTIyOTAyNmJlZDYxMWYwYWIwZjFlOGQwZWFlYjhjNQ==",
+  "w": 1920,
+  "h": 1080,
+  "is_render": true
+ },
+ {
+  "file": "saadiyat-03.jpg",
+  "role": "support",
+  "shows": "Nobu Residences beside Saadiyat's white-sand beach, with the Guggenheim Abu Dhabi in the distance",
+  "credit": "Image: Aldar (Nobu Residences Saadiyat)",
+  "source_page": "https://www.aldar.com/en/nobu",
+  "image_url": "https://images2.cmp.optimizely.com/assets/carousel-image3.jpg/Zz02YTBjNWI2Y2RhNWUxMWYwOThhM2EyNDI3YmIwM2ZjOQ==",
+  "w": 1920,
+  "h": 1080,
+  "is_render": true
+ },
+ {
+  "file": "saadiyat-04.jpg",
+  "role": "support",
+  "shows": "Sea-facing terrace with an infinity pool at sunset, Nobu Residences on Saadiyat Island",
+  "credit": "Image: Aldar (Nobu Residences Saadiyat)",
+  "source_page": "https://www.aldar.com/en/nobu",
+  "image_url": "https://images3.cmp.optimizely.com/assets/carousel-image1.jpg/Zz02OTZmZjRkNGRhNWUxMWYwYjI1ODJlMzQyMjY4MTI4YQ==",
+  "w": 1922,
+  "h": 1080,
+  "is_render": true
+ },
+ {
+  "file": "saadiyat-05.jpg",
+  "role": "support",
+  "shows": "Louvre Abu Dhabi on the Saadiyat waterfront at dusk, with the city skyline across the water",
+  "credit": "Image: Aldar (Saadiyat Island destination)",
+  "source_page": "https://www.aldar.com/en/saadiyat-lagoons",
+  "image_url": "https://images4.cmp.optimizely.com/assets/Saadiyat+Island+-+Destination+Listing+Banner/Zz0wOWRmYTU4NjVkMDUxMWYwYTE4YWVhYjY4MTA0YTNkYg==",
+  "w": 1440,
+  "h": 640,
+  "is_render": false
+ }
+]

@@ -5,6 +5,21 @@ English source, published in Arabic (/ar/, right to left), Russian (/ru/), Simpl
 The source lives in the GitHub repository `pcc40/eastbridge-website` (branch `main`). Live address: https://eastbridgestrategicpartners.com (contact: philip@eastbridgestrategicpartners.com); the .ae and www hosts, and the original Netlify hostname `incredible-haupia-7adc73.netlify.app`, 301 to it via `netlify.toml` (deploy previews and branch deploys use other hostnames and are not redirected).
 A single handoff zip, `eastbridge-website-handoff.zip` (top folder `eastbridge/`), holds the full source including all image sizes. It is gitignored.
 
+## UAE images (November 2026, branch `eb7/images`)
+Source: `reports/brief-uae-images-and-content-2026-11-05.md` (sections 1, 2 and the image checks in 4).
+
+**Owner's decision (Phil, 5 November 2026).** As a Dubai broker with developer marketing access, Phil approved using the master developers' own marketing images and renders (Nakheel, Emaar, Meraas, Aldar, Modon, Meydan Sobha, Al Barari) on the area pages, the Island E worked example and related articles, and takes responsibility for that use. Rules:
+- Every developer image carries a visible credit, exactly as in its folder's `manifest.json` ("Image: Nakheel", "Developer render: Nakheel and Meydan (District One West)"). Credits that are not a developer's (Crystal Lagoons; the Wikimedia Commons photo under CC BY 3.0, which must name the author and licence) print exactly as given.
+- Never caption or place a developer image so that it suggests Eastbridge designed, built or managed what it shows. Area-page images read as illustrations of the community; strips with UAE images end with "For illustration. Eastbridge was not involved in the design or construction of what these images show."
+- UK photographs stay, labelled as P Chapman Construction's work, where the subject is that work or Philip's record: `/work/`, `/about/`, `/approach/`, the Owers House case study, the "Built by our founder in the UK" strip on the home page, and the builder's-view articles (what the contractor knows, contracts, choosing a contractor, sourcing materials).
+- No people's faces, no other agents' listing photos, no watermarks, no stock images to fill gaps.
+
+**Library and tool.** Originals: `assets-src/uae-images/<folder>/` with a `manifest.json` per folder (never published: `build.py` copies only `src/static/`). `python3 tools/make_uae_images.py` (needs Pillow; not needed on Netlify) writes `uae-<folder>-NN-640/-1280/-1600.webp` (never upscaled; images under 1280 px wide, such as the 880 px Jumeirah Bay ones, get only the 640 size and are used in strips only), `-320.webp` for hero thumbnails, and a 1200 x 630 `-og.jpg` crop for each hero into `src/static/assets/img/`, and adds the entries to `src/img_manifest.json` under `uae-<folder>` (name, place, credit, alt from the `shows` line, role). The two general images keep descriptive bases: `uae-dubai-skyline-villas-01`, `uae-abu-dhabi-skyline-01`. To add a community: add its folder and manifest, add it to `NAMES` (and `NAME_HINTS`) in the tool, run it, commit the generated files.
+
+**Where they are used.** Area pages: hero = the folder's hero image (og:image = its 1200 x 630 crop), strip and CTA band from its support images, service cards text-only. `/areas/` hub: a thumbnail and credit per community. Island E worked example: hero `uae-island-e-01`, a three-render strip under the introduction with the brief's caption; the "hypothetical worked example" label and the generated diagram social card are unchanged. Articles: `POST_IMG` in `src/pages.py` (mappings for articles not yet written are harmless); a `hero:` front-matter base overrides it; unmapped articles fall back to a general Dubai image. Home: the slideshow leads with Palm Jumeirah, Dubai Islands and Emirates Hills, then Quay House and Sea Glass House, each with its own caption; then the "Built by our founder in the UK" strip linking to `/work/`. Services: renovation (the Nakheel NOC service) and plot due diligence; the "From the builder's side" feature stays UK.
+
+**Image SEO and performance.** `sitemap.xml` lists `<image:image>` for area, hub, article and Island E heroes (`tools/i18n.py apply` keeps them on every language URL). Article, area Service and service-page Service JSON-LD carry `image`. Only the first hero is preloaded; everything else is lazy. The home hero's first slide is about 100 KB at 1280 px. `tools/seo_audit.py` fails if an area page, the `/areas/` hub or the Island E page shows an image whose file name does not start with `uae-`.
+
 ## Conversion measurement, attribution and cookie consent (November 2026, branch `eb6/tracking`)
 Source: `reports/live-audit-2026-11-01.txt`, "Fix and verify conversion measurement" and "Review the actual consent implementation". This is the site side only; the GA4 account steps below are Phil's.
 
@@ -213,7 +228,7 @@ cat dist/robots.txt                 # User-agent: * / Disallow: /
 ## Rules that must not be broken
 - Eastbridge is a client-side project manager / owner's representative. Never an engineer, architect, contractor or design consultant.
 - Never claim or imply UAE projects or existing Eastbridge clients. The Island E case study is illustrative and must stay labelled so.
-- No client names. All project photos are P Chapman Construction's (UK) and Phil holds the rights.
+- No client names. All project photos are P Chapman Construction's (UK) and Phil holds the rights. UAE images are the master developers' (and the other credited sources') and carry a visible credit; see "UAE images" above.
 
 ## Home hero film (`HERO_VIDEO` in `src/config.py`)
 - Default `False`: the hero shows the photo slideshow only. The Vimeo film (`HERO_VIDEO_VIMEO_ID`, 219974514) currently returns 401 because its privacy setting does not allow embedding on our domain, which used to leave a loading spinner over the hero.

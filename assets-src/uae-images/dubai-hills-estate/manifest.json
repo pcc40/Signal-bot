@@ -1,0 +1,57 @@
+[
+ {
+  "file": "dubai-hills-estate-01.jpg",
+  "role": "hero",
+  "shows": "Aerial render of contemporary villas set around a landscaped lake and canal at Address Villas Hillcrest, Dubai Hills Estate.",
+  "credit": "Image: Emaar",
+  "source_page": "https://www.emaar.com/en/our-communities/dubai-hills-estate",
+  "image_url": "https://uae-cms.emaar.com/uploads/05.03-Gallery---2880-1920px.jpg",
+  "w": 2400,
+  "h": 1600,
+  "is_render": true
+ },
+ {
+  "file": "dubai-hills-estate-02.jpg",
+  "role": "support",
+  "shows": "Render of a villa streetscape with modern two-storey villas and palm-lined road at Golf Place II, Dubai Hills Estate.",
+  "credit": "Image: Emaar",
+  "source_page": "https://www.emaar.com/en/our-communities/dubai-hills-estate",
+  "image_url": "https://uae-cms.emaar.com/uploads/2037_property_Main_Image_5098fa59ec_prod.jpg",
+  "w": 2400,
+  "h": 1411,
+  "is_render": true
+ },
+ {
+  "file": "dubai-hills-estate-03.jpg",
+  "role": "support",
+  "shows": "Render of a modern white villa exterior with terrace and landscaped garden at Address Villas Hillcrest.",
+  "credit": "Image: Emaar",
+  "source_page": "https://www.emaar.com/en/properties/address-villas-hillcrest",
+  "image_url": "https://uae-cms.emaar.com/uploads/236300_property_Hero_Image_59c5e917fe_prod.jpg",
+  "w": 1620,
+  "h": 832,
+  "is_render": true
+ },
+ {
+  "file": "dubai-hills-estate-04.jpg",
+  "role": "support",
+  "shows": "Elevated view over the Dubai Hills golf course and surrounding villa neighbourhoods, with an apartment building on the right.",
+  "credit": "Image: Emaar",
+  "source_page": "https://www.emaar.com/en/our-communities/dubai-hills-estate",
+  "image_url": "https://uae-cms.emaar.com/uploads/05.04-Gallery---2880-1920px.jpg",
+  "w": 2400,
+  "h": 1600,
+  "is_render": true
+ },
+ {
+  "file": "dubai-hills-estate-05.jpg",
+  "role": "support",
+  "shows": "Aerial render of Palm Hills villas, park and pools with the Downtown Dubai skyline beyond.",
+  "credit": "Image: Emaar",
+  "source_page": "https://www.emaar.com/en/properties/palm-hills",
+  "image_url": "https://uae-cms.emaar.com/uploads/110540_property_Hero_Image_7da28e1c85_prod.jpg",
+  "w": 1620,
+  "h": 832,
+  "is_render": true
+ }
+]

@@ -1,0 +1,25 @@
+[
+ {
+  "file": "emirates-hills-01.jpg",
+  "role": "hero",
+  "shows": "The Montgomerie golf clubhouse in Emirates Hills, reflected in the lake",
+  "credit": "Image: Emaar",
+  "source_page": "https://www.emaar.com/en/our-communities/emirates-living",
+  "image_url": "https://uae-cms.emaar.com/uploads/418659_hero_Image_d97aa11971_prod.jpg",
+  "w": 1920,
+  "h": 1080,
+  "is_render": false
+ },
+ {
+  "file": "emirates-hills-02.jpg",
+  "role": "support",
+  "shows": "The Montgomerie golf course in Emirates Hills with the Dubai Marina towers behind",
+  "credit": "Photo: giggel, CC BY 3.0, via Wikimedia Commons",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Dubai_%E2%80%93_Marina_-_%D8%AF%D8%A8%D9%8A_%E2%80%93_%D9%85%D8%A7%D8%B1%D9%8A%D9%86%D8%A7_-_Golf_-_Emirates_Hills_2_-_%D8%AC%D9%88%D9%84%D9%81_-_%D8%AA%D9%84%D8%A7%D9%84_%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D8%B1%D8%A7%D8%AA_2_-_panoramio_(3).jpg",
+  "image_url": "upload.wikimedia.org (3840px thumbnail)",
+  "w": 2400,
+  "h": 1306,
+  "is_render": false,
+  "licence": "CC BY 3.0: credit must name the author and licence"
+ }
+]

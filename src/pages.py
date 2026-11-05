@@ -44,8 +44,10 @@ def stages_html(light=False):
 SVC_IMG = {
  "owners-representative": ("quay-house-01", ["quay-house-03", "quay-house-05", "quay-house-12"], "quay-house"),
  "villa-construction-project-management": ("sea-glass-house-02", ["sea-glass-house-03", "sea-glass-house-04", "sea-glass-house-06"], "sea-glass-house"),
- "villa-renovation-project-management": ("menwinnion-01", ["menwinnion-03", "menwinnion-07", "polgreen-manor-04"], "menwinnion"),
- "plot-due-diligence": ("saqqara-01", ["saqqara-02", "saqqara-04", "saqqara-09"], "saqqara"),
+ # Renovation (the Nakheel NOC service) and plot due diligence use UAE library images (owner's decision, 5 Nov 2026);
+ # the "From the builder's side" feature on each stays a UK project built by P Chapman Construction.
+ "villa-renovation-project-management": ("uae-palm-jumeirah-02", ["uae-jumeirah-islands-02", "uae-palm-jumeirah-03", "uae-jumeirah-islands-03"], "menwinnion"),
+ "plot-due-diligence": ("uae-dubai-islands-01", ["uae-palm-jebel-ali-01", "uae-dubai-islands-02", "uae-island-e-03"], "saqqara"),
  "design-and-approvals": ("owers-house-01", ["owers-house-07", "owers-house-05", "the-lookout-04"], "owers-house"),
  "consultant-and-contractor-selection": ("gooden-heane-01", ["gooden-heane-02", "gooden-heane-03", "gooden-heane-05"], "gooden-heane"),
  "cost-and-programme-control": ("polgreen-manor-01", ["polgreen-manor-05", "polgreen-manor-04", "polgreen-manor-03"], "polgreen-manor"),
@@ -57,53 +59,140 @@ SVC_IMG = {
  "overseas-owners": ("blue-seas-02", ["blue-seas-01", "blue-seas-03", "blue-seas-11"], "blue-seas"),
  "development-advisory": ("three-mile-beach-01", ["three-mile-beach-02", "three-mile-beach-03", "three-mile-beach-10"], "three-mile-beach"),
 }
-AREA_IMG = {"palm-jumeirah": "quay-house-09", "emirates-hills": "owers-house-02", "jumeirah-bay": "saqqara-05",
-            "district-one": "sea-glass-house-05", "dubai-hills-estate": "gooden-heane-07", "al-barari": "quay-house-14",
-            "dubai-islands": "saqqara-03", "palm-jebel-ali": "the-lookout-06", "saadiyat": "gooden-heane-08", "hudayriyat": "ansells-06"}
-POST_IMG = {"villa-construction-cost-dubai": "sea-glass-house-05", "how-to-build-a-villa-in-dubai": "saqqara-07",
-            "owners-representative-vs-project-manager-vs-consultant": "owers-house-08", "what-the-contractor-knows": "quay-house-02",
-            "palm-jumeirah-villa-renovation": "menwinnion-11", "how-to-choose-a-villa-contractor-dubai": "gooden-heane-04",
-            "villa-construction-contracts-uae": "polgreen-manor-02", "building-a-villa-in-dubai-from-the-uk": "blue-seas-01",
-            "villa-snagging-checklist-dubai": "the-lookout-11", "buying-a-villa-plot-in-dubai-checks": "saqqara-09"}
+def area_images(slug):
+    """(hero, support images) for an area page, from the UAE library folder of the same name (uae-<slug>).
+    The hero is the folder's "hero" image; supports are the rest, widest first (images under 1280 px, such as the
+    880 px Jumeirah Bay images, are only ever used at strip size)."""
+    imgs = B.MANIFEST[f"uae-{slug}"]
+    hero = next(m["base"] for m in imgs if m["role"] == "hero")
+    support = sorted((m for m in imgs if m["base"] != hero), key=lambda m: -min(m["w"], 1280))
+    return hero, [m["base"] for m in support]
+
+# Article heroes (brief 2026-11-05, section 2). Place-specific articles use their area's UAE images; general Dubai
+# articles use the general Dubai image, Dubai Hills or a Palm aerial; articles about the builder's view (contracts,
+# choosing a contractor, what the contractor knows, sourcing) keep a UK photograph captioned as P Chapman
+# Construction's work. Slugs whose article does not exist yet are simply unused.
+GENERAL_DUBAI = ["uae-dubai-skyline-villas-01", "uae-dubai-hills-estate-04", "uae-dubai-hills-estate-05", "uae-palm-jumeirah-02"]
+POST_IMG = {
+    # place-specific
+    "palm-jumeirah-villa-renovation": "uae-palm-jumeirah-01",
+    "nakheel-noc-villa-renovation": "uae-palm-jumeirah-02",
+    "how-to-plan-a-villa-renovation-dubai": "uae-palm-jumeirah-03",
+    "buying-a-villa-plot-in-dubai-checks": "uae-dubai-islands-01",
+    "dubai-islands-plot-guide": "uae-island-e-03",
+    "abu-dhabi-villa-permit-tamm": "uae-hudayriyat-03",
+    "villa-renovation-mistakes-dubai": "uae-jumeirah-islands-01",
+    "renovate-or-rebuild-villa-dubai": "uae-jumeirah-islands-02",
+    "villa-renovation-cost-dubai": "uae-jumeirah-islands-03",
+    "villa-renovation-timeline-dubai": "uae-jumeirah-islands-04",
+    "jumeirah-islands-villa-renovation": "uae-jumeirah-islands-02",
+    "emirates-hills-villa-cost": "uae-emirates-hills-01",
+    "emaar-community-villa-renovation": "uae-dubai-hills-estate-03",
+    "defects-liability-period-uae": "uae-dubai-hills-estate-02",
+    # general Dubai
+    "how-to-build-a-villa-in-dubai": "uae-dubai-skyline-villas-01",
+    "how-to-choose-client-side-project-manager": "uae-dubai-skyline-villas-01",
+    "building-a-villa-in-dubai-from-the-uk": "uae-dubai-skyline-villas-01",
+    "building-on-a-plot-from-abroad": "uae-dubai-skyline-villas-01",
+    "which-dubai-authority-covers-my-villa": "uae-dubai-skyline-villas-01",
+    "dubai-municipality-villa-building-permit": "uae-dubai-hills-estate-04",
+    "client-side-project-manager-fees-dubai": "uae-dubai-hills-estate-04",
+    "villa-snagging-checklist-dubai": "uae-dubai-hills-estate-04",
+    "snagging-developer-villa-handover": "uae-dubai-hills-estate-04",
+    "villa-construction-cost-dubai": "uae-dubai-hills-estate-05",
+    "owners-representative-vs-project-manager-vs-consultant": "uae-dubai-hills-estate-05",
+    "how-long-to-build-a-villa-dubai": "uae-dubai-hills-estate-05",
+    "stalled-villa-project-dubai": "uae-palm-jumeirah-02",
+    "design-build-vs-separate-architect-villa": "uae-dubai-hills-estate-02",
+    "older-villa-mep-renovation": "uae-jumeirah-islands-03",
+    # the builder's view: UK photographs, captioned as P Chapman Construction's work
+    "what-the-contractor-knows": "quay-house-02",
+    "how-to-choose-a-villa-contractor-dubai": "gooden-heane-04",
+    "villa-construction-contracts-uae": "polgreen-manor-02",
+    "sourcing-materials-abroad-dubai-villa": "morvoren-03",
+}
 
 def proj_of(base):
     return PROJ[base.rsplit("-", 1)[0]]
 
 def credit_of(base):
+    """Visible credit: the UAE library credit exactly as in its manifest.json, or the UK project and photographer."""
+    if B.is_uae(base):
+        return B.img_credit(base)
     p = proj_of(base)
     return f'{p["name"]}, {p["place"]}' + (f' · photograph {p["photo"]}' if p["photo"] else "")
+
+def img_alt_of(base, fallback=""):
+    """Alt text: a UAE image's own description, else the given fallback (UK project name and place)."""
+    return B.img_alt(base) if B.is_uae(base) else fallback
+
+def caption_of(base):
+    """Figure caption: UAE images as an illustration with their credit; UK photographs as P Chapman Construction's work."""
+    if B.is_uae(base):
+        return B.img_caption(base)
+    p = proj_of(base)
+    return f'{p["name"]}, {p["place"]}. Built by P Chapman Construction.'
 
 def svc_img_for(p):
     alts = ["sea-glass-house-01", "owers-house-02", "the-lookout-03", "saqqara-05", "gooden-heane-03", "quay-house-05"]
     return alts[sum(map(ord, p["slug"])) % len(alts)]
 
 def post_img(p):
-    if p.get("hero"):
+    """Article hero: a `hero:` base in the front matter (if it exists), else POST_IMG, else a general Dubai image."""
+    if p.get("hero") in B.IMG_INDEX:
         return p["hero"]
     if p["slug"] in POST_IMG:
         return POST_IMG[p["slug"]]
-    pool = [m["base"] for v in B.MANIFEST.values() for m in v[:4]]
-    return pool[sum(map(ord, p["slug"])) % len(pool)]
+    return GENERAL_DUBAI[sum(map(ord, p["slug"])) % len(GENERAL_DUBAI)]
 
-def svc_cards(items):
-    return '<div class="svc-grid">' + "".join(
-        f'<a class="svc-card" href="/services/{s["slug"]}/"><figure>{pic(SVC_IMG[s["slug"]][0], "", "(max-width:600px) 100vw, (max-width:980px) 50vw, 33vw")}</figure>'
+def inline_imgs(hero):
+    """Two images placed inside an article body: from the hero's own UK project, or for a UAE hero from the same
+    library folder (the general images borrow a Palm and a Dubai Hills aerial)."""
+    m = B.img_meta(hero)
+    if m.get("uae"):
+        key = next(k for k, v in B.MANIFEST.items() if m in v)
+        pool = GENERAL_DUBAI if key == "uae-general" else [x["base"] for x in B.MANIFEST[key] if x["w"] >= 1280]
+        return [b for b in pool if b != hero and b != "uae-palm-jumeirah-03"][:2]  # -03 is the same photo as the general image
+    return [x["base"] for x in B.MANIFEST[proj_of(hero)["slug"]] if x["base"] != hero][:2]
+
+def svc_cards(items, images=True):
+    """Service cards. images=False gives text-only cards (area pages, which show UAE images only)."""
+    def fig(s):
+        if not images:
+            return ""
+        b = SVC_IMG[s["slug"]][0]
+        return f'<figure>{pic(b, "", "(max-width:600px) 100vw, (max-width:980px) 50vw, 33vw")}{B.fig_credit(b)}</figure>'
+    return f'<div class="svc-grid{"" if images else " svc-grid--text"}">' + "".join(
+        f'<a class="svc-card" href="/services/{s["slug"]}/">{fig(s)}'
         f'<h3>{esc(s["short"])}</h3><p>{esc(s["lede"])}</p></a>' for s in items) + "</div>"
 
 service_rows = svc_cards
 
 def post_cards(posts):
     return '<div class="post-cards">' + "".join(
-        f'<a class="post-card" href="/insights/{p["slug"]}/"><figure>{pic(post_img(p), "", "(max-width:600px) 100vw, (max-width:980px) 50vw, 33vw")}</figure>'
+        f'<a class="post-card" href="/insights/{p["slug"]}/"><figure>{pic(post_img(p), "", "(max-width:600px) 100vw, (max-width:980px) 50vw, 33vw")}{B.fig_credit(post_img(p))}</figure>'
         f'<div class="meta">{esc(p.get("category",""))}</div><h3>{esc(p["title"])}</h3><p>{esc(p["description"])}</p></a>' for p in posts) + "</div>"
 
-def strip_html(bases):
+UAE_STRIP_NOTE = "For illustration. Eastbridge was not involved in the design or construction of what these images show."
+
+def strip_html(bases, note=None):
+    """Image strip (one wide image and two smaller). UK photographs link to their project and carry its name;
+    UAE images carry their credit, and a strip with any UAE image ends with a note that they are illustrations
+    (note= replaces that note and the individual credits, for a strip whose note itself names the source)."""
     figs = []
     for i, b in enumerate(bases):
-        p = proj_of(b)
         sizes = "(max-width:760px) 100vw, 50vw" if i == 0 else "(max-width:760px) 50vw, 25vw"
+        if B.is_uae(b):
+            cap = "" if note else f'<figcaption>{esc(B.img_credit(b))}</figcaption>'
+            figs.append(f'<figure>{pic(b, B.img_alt(b), sizes)}{cap}</figure>')
+            continue
+        p = proj_of(b)
         figs.append(f'<figure><a href="/work/{p["slug"]}/">{pic(b, p["name"] + ", " + p["place"], sizes)}</a><figcaption>{esc(p["name"])}, {esc(p["place"])}</figcaption></figure>')
-    return '<div class="strip">' + "".join(figs) + "</div>"
+    n = len(bases)
+    cls = "strip" + (f" strip--{n}" if n < 3 else "")
+    note = note or (UAE_STRIP_NOTE if any(B.is_uae(b) for b in bases) else "")
+    note_html = f'<p class="strip-note small muted">{esc(note)}</p>' if note else ""
+    return f'<div class="{cls}">' + "".join(figs) + "</div>" + note_html
 
 HERO_SLIDES = ["sea-glass-house-01", "owers-house-01", "saqqara-01", "quay-house-01", "the-lookout-02"]
 
@@ -212,7 +301,7 @@ def service_page(s):
     body = B.banner(crumbs, esc(s["h1"]), esc(s["lede"]), ban, credit_of(ban)) + f'''
 <section class="section"><div class="wrap split">
 <div class="side-sticky"><dl class="facts"><div><dt>Stage</dt><dd>{esc(s["stage"])}</dd></div><div><dt>Who it's for</dt><dd>Private villa owners and investors</dd></div><div><dt>Where</dt><dd>Dubai and Abu Dhabi</dd></div></dl>{area_p}
-<figure>{pic(strip[0], proj_of(strip[0])["name"], "(max-width:900px) 100vw, 40vw")}<figcaption>{esc(credit_of(strip[0]))}</figcaption></figure></div>
+<figure>{pic(strip[0], img_alt_of(strip[0], proj_of(strip[0])["name"] if not B.is_uae(strip[0]) else ""), "(max-width:900px) 100vw, 40vw")}<figcaption>{esc(B.img_caption(strip[0]) if B.is_uae(strip[0]) else credit_of(strip[0]))}</figcaption></figure></div>
 <div class="prose">{s["intro"]}
 <h2>What we do</h2><ul>{does}</ul>
 <h2>What it gives you</h2><ul>{gets}</ul>{s.get("extra", "")}{alongside}{read_more}</div>
@@ -227,29 +316,40 @@ def service_page(s):
 <section class="section paper"><div class="wrap"><h2>Related services</h2>{related}</div></section>
 {B.cta_band(contact=contact_href("service", s["slug"]))}{B.wa_page_msgs(B.WA_TPL_SERVICE, WA_TOPIC[s["slug"]])}'''
     B.page(path, s["title"], s["description"], body, crumbs,
-           [B.service_schema(s, path), B.faq_schema(s["faqs"])], og=B.og_image(ban))
+           [B.service_schema(s, path, ban), B.faq_schema(s["faqs"])], og=B.og_image(ban))
 
 # ---------------------------------------------------------------- areas
+HUB_BANNER = "uae-dubai-skyline-villas-01"
+
+def area_item(a):
+    """One community on /areas/: a thumbnail of its hero (with the image credit), name, typical work and developer."""
+    hero = area_images(a["slug"])[0]
+    return (f'<li class="area-item"><a href="/areas/{a["slug"]}/"><span class="area-thumb">{pic(hero, "", "112px")}</span>'
+            f'{esc(a["name"])}</a><span>{esc(a["tag"])} · {esc(a["developer"])}</span>'
+            f'<small class="area-credit">{esc(B.img_credit(hero))}</small></li>')
+
 def areas_hub():
     crumbs = [("Home", "/"), ("Areas", "/areas/")]
-    dubai = "".join(f'<li><a href="/areas/{a["slug"]}/">{esc(a["name"])}</a><span>{esc(a["tag"])} · {esc(a["developer"])}</span></li>' for a in AREAS if a["city"] == "Dubai")
-    ad = "".join(f'<li><a href="/areas/{a["slug"]}/">{esc(a["name"])}</a><span>{esc(a["tag"])} · {esc(a["developer"])}</span></li>' for a in AREAS if a["city"] == "Abu Dhabi")
-    body = B.banner(crumbs, "Where we work", "We cover every community in Dubai and Abu Dhabi. Each has its own master developer, design guidelines and practical constraints; the pages below are examples of what to expect, not a list of limits.", "menwinnion-05", credit_of("menwinnion-05")) + f'''
-<section class="section--tight"><div class="wrap"><h2>Dubai</h2><ul class="area-list">{dubai}</ul></div></section>
-<section class="section--tight"><div class="wrap"><h2>Abu Dhabi</h2><ul class="area-list">{ad}</ul></div></section>
+    dubai = "".join(area_item(a) for a in AREAS if a["city"] == "Dubai")
+    ad = "".join(area_item(a) for a in AREAS if a["city"] == "Abu Dhabi")
+    body = B.banner(crumbs, "Where we work", "We cover every community in Dubai and Abu Dhabi. Each has its own master developer, design guidelines and practical constraints; the pages below are examples of what to expect, not a list of limits.", HUB_BANNER, credit_of(HUB_BANNER)) + f'''
+<section class="section--tight"><div class="wrap"><h2>Dubai</h2><ul class="area-list area-list--thumbs">{dubai}</ul></div></section>
+<section class="section--tight"><div class="wrap"><h2>Abu Dhabi</h2><ul class="area-list area-list--thumbs">{ad}</ul>
+<p class="strip-note small muted">Images of each community for illustration, credited to their source. Eastbridge was not involved in the design or construction of what they show.</p></div></section>
 <section class="section paper"><div class="wrap split"><div><h2>Not listed?</h2></div><div class="prose"><p>We cover every community in Dubai and Abu Dhabi; the area pages above are examples, not limits. That includes Jumeirah Golf Estates, Tilal Al Ghaf, Al Wasl, Umm Suqeim and Jumeirah, and Abu Dhabi's island communities. The approach is the same: understand the master developer's rules, set a realistic budget and programme, and represent you from brief to handover.</p><p>{esc(C.COVERAGE_INTL)}</p><p><a href="/contact/">Tell us where your plot or villa is</a>.</p></div></div></section>
-{B.cta_band()}'''
+{B.cta_band(image="uae-palm-jumeirah-02")}'''
     B.page("/areas/", "Villa Communities We Work In: Dubai & Abu Dhabi | Eastbridge",
            "Villa build and renovation representation on Palm Jumeirah, Emirates Hills, Jumeirah Bay, District One, Dubai Hills, Al Barari, Saadiyat and more.",
-           body, crumbs)
+           body, crumbs, og=B.og_image(HUB_BANNER), images=[HUB_BANNER])
 
 def area_page(a):
     path = f"/areas/{a['slug']}/"
     crumbs = [("Home", "/"), ("Areas", "/areas/"), (a["name"], path)]
-    svc = service_rows([SVC[s] for s in a["services"]])
-    img = AREA_IMG.get(a["slug"], a["image"])
-    pj = proj_of(img)
-    others = [m["base"] for m in B.MANIFEST[pj["slug"]] if m["base"] != img][1:4]
+    svc = svc_cards([SVC[s] for s in a["services"]], images=False)
+    # Hero and strip from the community's own UAE library folder (owner's decision, 5 November 2026)
+    img, support = area_images(a["slug"])
+    others = support[:3]
+    cta_img = support[3] if len(support) > 3 else (support[-1] if support else img)
     srcs = ""
     if a.get("sources"):
         items = "".join(f'<li><a href="{esc(u)}" rel="noopener">{esc(t)}</a></li>' for t, u in a["sources"])
@@ -270,12 +370,12 @@ def area_page(a):
 {owner}<section class="section--tight"><div class="wrap">{strip_html(others)}</div></section>
 <section class="section paper"><div class="wrap split"><div><h2>Questions about {esc(a["name"])}</h2></div><div>{B.faq_html(a["faqs"])}</div></div></section>
 <section class="section"><div class="wrap"><h2>Services most relevant here</h2>{svc}</div></section>
-{B.cta_band(f"Building or renovating in {a['name']}?", contact=contact_href("area", a["slug"]))}{B.wa_page_msgs(B.WA_TPL_AREA, a["name"])}'''
+{B.cta_band(f"Building or renovating in {a['name']}?", image=cta_img, contact=contact_href("area", a["slug"]))}{B.wa_page_msgs(B.WA_TPL_AREA, a["name"])}'''
     schema = [B.faq_schema(a["faqs"]), {"@context": "https://schema.org", "@type": "Service",
               "name": f"Villa project management and owner's representation in {a['name']}",
               "provider": {"@id": B.ORG_ID}, "areaServed": {"@type": "Place", "name": f"{a['name']}, {a['city']}"},
-              "url": B.url(path)}]
-    B.page(path, a["title"], a["description"], body, crumbs, schema, og=B.og_image(img))
+              "url": B.url(path), "image": B.url(B.og_image(img))}]
+    B.page(path, a["title"], a["description"], body, crumbs, schema, og=B.og_image(img), images=[img])
 
 # ---------------------------------------------------------------- work
 def work_hub():
@@ -858,12 +958,12 @@ def insights(posts):
         upd = f" · Updated {u.strftime('%-d %B %Y')}" if u != d else ""
         hero_img = post_img(p)
         body_html = p["html"]
-        pj = proj_of(hero_img)
-        inline = [m["base"] for m in B.MANIFEST[pj["slug"]] if m["base"] != hero_img][:2]
+        inline = inline_imgs(hero_img)
         parts = re.split(r'(?=<h2 id=)', body_html)
         for k, ins in zip((2, 5), inline):
             if len(parts) > k:
-                parts[k] = f'<figure>{pic(ins, pj["name"] + ", " + pj["place"], "(max-width:760px) 100vw, 720px")}<figcaption>{esc(pj["name"])}, {esc(pj["place"])}. Built by P Chapman Construction.</figcaption></figure>' + parts[k]
+                alt = img_alt_of(ins, "" if B.is_uae(ins) else f'{proj_of(ins)["name"]}, {proj_of(ins)["place"]}')
+                parts[k] = f'<figure>{pic(ins, alt, "(max-width:760px) 100vw, 720px")}<figcaption>{esc(caption_of(ins))}</figcaption></figure>' + parts[k]
         body_html = "".join(parts)
         meta = f'{esc(p.get("category",""))} · {d.strftime("%-d %B %Y")}{upd} · {mins} min read · By <a href="/about/#founder">{esc(C.FOUNDER["name"])}</a>'
         body = "<article>" + B.banner(c, esc(p["title"]), None, hero_img, credit_of(hero_img), f'<p class="article-meta">{meta}</p>') + f'''
@@ -890,7 +990,7 @@ def insights(posts):
                "about": p.get("category", ""), "citation": [s["url"] for s in p.get("sources", [])]}
         sch = [art] + ([B.faq_schema(faqs)] if faqs else [])
         B.page(path, p["title"] + (" | Eastbridge" if len(p["title"]) <= 47 else ""), p["description"], body, c, sch, og_type="article",
-               og=B.og_image(hero_img))
+               og=B.og_image(hero_img), images=[hero_img])
     # insights/feed.xml is written by build.write_feed()
 
 # ---------------------------------------------------------------- 404, misc
