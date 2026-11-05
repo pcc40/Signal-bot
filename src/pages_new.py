@@ -112,7 +112,7 @@ def home(posts, post_cards, stages_html, svc_img):
     one real UK project; how an appointment starts, with independence; owner questions and final contact.
     Detail lives on its own pages. posts, post_cards, stages_html and svc_img stay in the signature for pages.home()."""
     import pages
-    slides = "".join(f'<figure>{pic(b, "", "100vw", eager=(i == 0))}</figure>' for i, b in enumerate(HERO_SLIDES))
+    slides = "".join(f'<figure>{pic(b, B.img_alt(b) if B.is_uae(b) else "", "100vw", eager=(i == 0))}</figure>' for i, b in enumerate(HERO_SLIDES))
     slide_caps = "".join(f"<p>{esc(slide_caption(b))}</p>" for b in HERO_SLIDES)
     doors = [
      ("villa-construction-project-management", "Build a new villa", "From the plot and the first budget to handover, alongside your consultant and contractor.", "sea-glass-house-02"),
@@ -293,11 +293,11 @@ def case_hub():
            "Owers House, a RIBA award-winning UK house built by P Chapman Construction, and a hypothetical worked example of how Eastbridge would manage an Island E villa.",
            body, crumbs, og=B.og_image("owers-house-04"))
 
-# Island E images: Nakheel's Bay Estates reference designs and renders (owner's decision, 5 November 2026).
+# Island E images: Nakheel's Bay Estate reference designs and renders (owner's decision, 5 November 2026).
 # The social preview stays the generated diagram card (CASE_OG), labelled "Hypothetical worked example".
 CASE_HERO = "uae-island-e-01"
 CASE_STRIP = ["uae-island-e-03", "uae-island-e-02", "uae-island-e-04"]
-CASE_STRIP_NOTE = "Developer renders, Bay Estates by Nakheel, Island E. For illustration; Eastbridge was not involved in their design."
+CASE_STRIP_NOTE = "Developer renders, Bay Estate by Nakheel, Island E. For illustration; Eastbridge was not involved in their design."
 
 def case_page():
     import pages

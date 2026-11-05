@@ -134,9 +134,56 @@ def caption_of(base):
     p = proj_of(base)
     return f'{p["name"]}, {p["place"]}. Built by P Chapman Construction.'
 
+# Articles about the builder's view (brief 2026-11-05, section 2): the only articles whose aside card and closing
+# band may show a UK photograph, labelled as P Chapman Construction's work.
+BUILDERS_VIEW = {"what-the-contractor-knows", "villa-construction-contracts-uae", "how-to-choose-a-villa-contractor-dubai"}
+
+def uae_extra_imgs(p):
+    """UAE images for an article's aside card and closing band: from the same library folder as the article's
+    hero (general Dubai images for general articles), skipping the hero and the two inline images."""
+    hero = post_img(p)
+    used = {hero, "uae-palm-jumeirah-03"} | set(inline_imgs(hero))
+    m = B.img_meta(hero)
+    if m.get("uae"):
+        key = next(k for k, v in B.MANIFEST.items() if m in v)
+        pool = [x["base"] for x in B.MANIFEST[key] if x["w"] >= 1280] if key != "uae-general" else []
+    else:
+        pool = []
+    # After the hero's own folder: for Dubai, other Nakheel villa communities (Nakheel heroes only), the general Dubai images and then the wider Dubai Hills and Palm
+    # Jumeirah sets (a general article uses up GENERAL_DUBAI on its hero and inline images); for Abu Dhabi, other
+    # Abu Dhabi images only.
+    place = m.get("place", "Dubai")
+    if place != "Abu Dhabi":
+        # a Nakheel community article borrows other Nakheel villa communities before the general images
+        nakheel = [x["base"] for k in ("uae-palm-jumeirah", "uae-jumeirah-islands") for x in B.MANIFEST[k]
+                   if x["w"] >= 1280] if "Nakheel" in (m.get("credit") or "") else []
+        wider = nakheel + GENERAL_DUBAI + [x["base"] for k in ("uae-dubai-hills-estate", "uae-palm-jumeirah")
+                                 for x in B.MANIFEST[k] if x["w"] >= 1280]
+    else:
+        wider = [x["base"] for v in B.MANIFEST.values() for x in v
+                 if x.get("uae") and x.get("place") == place and x["w"] >= 1280]
+    out = []
+    for b in pool + wider:
+        if b not in used:
+            used.add(b)
+            out.append(b)
+    return out[0], out[1]
+
 def svc_img_for(p):
-    alts = ["sea-glass-house-01", "owers-house-02", "the-lookout-03", "saqqara-05", "gooden-heane-03", "quay-house-05"]
-    return alts[sum(map(ord, p["slug"])) % len(alts)]
+    """Image on the article's "Planning a villa in Dubai?" aside card."""
+    if p["slug"] in BUILDERS_VIEW:
+        alts = ["sea-glass-house-01", "owers-house-02", "the-lookout-03", "saqqara-05", "gooden-heane-03", "quay-house-05"]
+        return alts[sum(map(ord, p["slug"])) % len(alts)]
+    return uae_extra_imgs(p)[0]
+
+def cta_img_for(p):
+    """Closing cta-band image of an article: UAE (credited) except on builder's-view articles (UK, labelled)."""
+    return None if p["slug"] in BUILDERS_VIEW else uae_extra_imgs(p)[1]
+
+def aside_fig(base):
+    """Aside-card image with its visible credit: the manifest credit for UAE images, the builder label for UK."""
+    cr = B.img_credit(base) if B.is_uae(base) else B.uk_label(base)
+    return f'<figure class="aside-fig">{pic(base, "", "(max-width:980px) 100vw, 30vw")}<span class="fig-credit">{esc(cr)}</span></figure>'
 
 def post_img(p):
     """Article hero: a `hero:` base in the front matter (if it exists), else POST_IMG, else a general Dubai image."""
@@ -179,12 +226,12 @@ UAE_STRIP_NOTE = "For illustration. Eastbridge was not involved in the design or
 def strip_html(bases, note=None):
     """Image strip (one wide image and two smaller). UK photographs link to their project and carry its name;
     UAE images carry their credit, and a strip with any UAE image ends with a note that they are illustrations
-    (note= replaces that note and the individual credits, for a strip whose note itself names the source)."""
+    (note= replaces that general note; each UAE figure still carries its exact manifest credit)."""
     figs = []
     for i, b in enumerate(bases):
         sizes = "(max-width:760px) 100vw, 50vw" if i == 0 else "(max-width:760px) 50vw, 25vw"
         if B.is_uae(b):
-            cap = "" if note else f'<figcaption>{esc(B.img_credit(b))}</figcaption>'
+            cap = f'<figcaption>{esc(B.img_credit(b))}</figcaption>'
             figs.append(f'<figure>{pic(b, B.img_alt(b), sizes)}{cap}</figure>')
             continue
         p = proj_of(b)
@@ -325,7 +372,7 @@ HUB_BANNER = "uae-dubai-skyline-villas-01"
 def area_item(a):
     """One community on /areas/: a thumbnail of its hero (with the image credit), name, typical work and developer."""
     hero = area_images(a["slug"])[0]
-    return (f'<li class="area-item"><a href="/areas/{a["slug"]}/"><span class="area-thumb">{pic(hero, "", "112px")}</span>'
+    return (f'<li class="area-item"><a href="/areas/{a["slug"]}/"><span class="area-thumb">{pic(hero, B.img_alt(hero), "112px")}</span>'
             f'{esc(a["name"])}</a><span>{esc(a["tag"])} · {esc(a["developer"])}</span>'
             f'<small class="area-credit">{esc(B.img_credit(hero))}</small></li>')
 
@@ -978,11 +1025,11 @@ def insights(posts):
 {guide_cta(p)}
 <p class="small muted" style="margin-top:2em">This article is general information, not advice for your specific project. Figures are from the sources cited and change over time.</p>
 </div>
-<aside class="article-aside" aria-label="Talk to us"><div class="aside-card">{pic(svc_img_for(p), "", "(max-width:980px) 100vw, 30vw")}<div><h3>Planning a villa in Dubai?</h3><p>Talk it through with Philip. The first conversation is free and confidential.</p><a class="btn" href="/contact/">{esc(B.CTA_LABEL)}</a></div></div>
+<aside class="article-aside" aria-label="Talk to us"><div class="aside-card">{aside_fig(svc_img_for(p))}<div><h3>Planning a villa in Dubai?</h3><p>Talk it through with Philip. The first conversation is free and confidential.</p><a class="btn" href="/contact/">{esc(B.CTA_LABEL)}</a></div></div>
 <div class="aside-links"><b>Services</b>{"".join(f'<a href="/services/{x}/">{esc(SVC[x]["short"])}</a>' for x in ("owners-representative","villa-construction-project-management","villa-renovation-project-management","plot-due-diligence"))}</div></aside>
 </div></section></article>
 <section class="section paper"><div class="wrap"><h2>Read next</h2>{post_cards(rel)}</div></section>
-{B.cta_band()}'''
+{B.cta_band(image=cta_img_for(p))}'''
         art = {"@context": "https://schema.org", "@type": "BlogPosting", "@id": B.url(path) + "#article",
                "headline": p["title"], "description": p["description"], "url": B.url(path),
                "datePublished": d.isoformat(), "dateModified": u.isoformat(), "author": {"@id": B.PERSON_ID},

@@ -29,8 +29,6 @@ sources:
     nofollow: true
   - title: "Nakheel: Contact us and customer FAQs (NOCs, access permits, contractor requirements)"
     url: "https://www.nakheel.com/en/contact-us"
-  - title: "Nakheel: Development Control and Planning Approval, preliminary design NOC (example issued June 2026)"
-    url: "https://www.cgidubai.gov.in/content/Nakheel-PD-approval-PD_IC1-CTYL-16_013_09-Jun-2026.pdf"
   - title: "Gulf News: Jumeirah Islands owners prevented from modifying villas without approval (October 2018)"
     url: "https://gulfnews.com/news/gulf/uae/jumeirah-islands-owners-prevented-from-modifying-villas-without-approval-1.1172089"
   - title: "Emaar Community Management: Arabian Ranches home modification FAQs"
@@ -75,7 +73,7 @@ The table below is our own rule of thumb for a full renovation of an older villa
 | Master-developer NOC | 3–6 weeks, including one round of comments | Nakheel and others assess case by case and publish no single turnaround |
 | Detailed design and authority permit, where needed | 2–6 weeks, overlapping the tender | Scope; a renovation contractor's guide says "a few weeks" |
 | Tender, comparison and contract | 3–6 weeks | Number of bidders, clarity of the drawings |
-| Mobilisation and community site requirements | 1–2 weeks | Deposit, Site Access Permit, fence, workforce permits (Nakheel quotes 3–4 working days' lead time for access permits) |
+| Mobilisation and community site requirements | 1–2 weeks | Deposit, Site Access Permit, fence, workforce permits (Nakheel recommends requesting long-term workforce access permits 3–4 working days before they are needed) |
 | Long-lead procurement (kitchens, stone, glazing, plant) | 2–4 months from order, running alongside | Origin, bespoke or standard, shipping and customs |
 | Strip-out and opening-up | 2–4 weeks | Size of villa, what the strip-out reveals |
 | Structure, waterproofing and MEP first fix | 6–10 weeks | Extent of rewiring, re-plumbing, air conditioning |
@@ -90,7 +88,7 @@ Added end to end, the phases before the work on site come to roughly 15–32 wee
 
 **Design to NOC level.** The master developer needs to see what will change: layout, structure, façade, pool, external plant. The design should be priced at the same time, so you do not seek approval for something you cannot afford.
 
-**The master-developer NOC.** In Nakheel communities, Nakheel says an NOC from its Urban Planning team is needed before any alteration, requested through its online services ([Nakheel](https://www.nakheel.com/en/contact-us)). It has said that villa modification applications are assessed case by case ([Gulf News](https://gulfnews.com/news/gulf/uae/jumeirah-islands-owners-prevented-from-modifying-villas-without-approval-1.1172089)), and it does not publish a single turnaround. A Nakheel design approval issued in June 2026 was valid for six months ([Nakheel approval, June 2026](https://www.cgidubai.gov.in/content/Nakheel-PD-approval-PD_IC1-CTYL-16_013_09-Jun-2026.pdf)), which matters if the start slips. Emaar communities follow a similar pattern: in Arabian Ranches, any alteration needs Emaar's approval through a home modification NOC ([Emaar Community Management](https://www.ecm.ae/en/communities/arabian-ranches/lifestyle/faqs/home-modifications-arabian-ranches/)). Our [Nakheel NOC guide](/insights/nakheel-noc-villa-renovation/) covers the process in detail.
+**The master-developer NOC.** In Nakheel communities, Nakheel says an NOC from its Urban Planning team is needed before any alteration, requested through its online services ([Nakheel](https://www.nakheel.com/en/contact-us)). It has said that villa modification applications are assessed case by case ([Gulf News](https://gulfnews.com/news/gulf/uae/jumeirah-islands-owners-prevented-from-modifying-villas-without-approval-1.1172089)), and it does not publish a single turnaround. Nakheel approvals carry an expiry date, so check yours and keep the contractor's start within it. Emaar communities follow a similar pattern: in Arabian Ranches, any alteration needs Emaar's approval through a home modification NOC ([Emaar Community Management](https://www.ecm.ae/en/communities/arabian-ranches/lifestyle/faqs/home-modifications-arabian-ranches/)). Our [Nakheel NOC guide](/insights/nakheel-noc-villa-renovation/) covers the process in detail.
 
 **The authority permit.** Where the scope needs one, your DM-registered consultant applies to Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits, with service-authority NOCs gathered through Dubai's unified window ([Dubai Municipality](https://www.dm.gov.ae/dubai-launches-single-window-for-building-permits/); [Build in Dubai](https://buildindubai.gov.ae/)). Light interior work often needs less, but confirm it in writing.
 

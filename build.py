@@ -117,6 +117,12 @@ def img_caption(base):
     m = img_meta(base)
     return f'{m["name"]}, for illustration. {m["credit"]}.'
 
+def uk_label(base):
+    """Visible label of a UK photograph used outside /work/: the house, its place, and who built it."""
+    from content.projects import BY_SLUG
+    p = BY_SLUG[base.rsplit("-", 1)[0]]
+    return f'{p["name"]}, {p["place"]}. Built by P Chapman Construction.'
+
 def fig_credit(base):
     """Small visible credit laid over a card image, for UAE images only."""
     return f'<span class="fig-credit">{esc(img_credit(base))}</span>' if is_uae(base) else ""
@@ -287,7 +293,7 @@ CTA_IMAGES = ["sea-glass-house-01", "owers-house-04", "the-lookout-01", "quay-ho
 def cta_band(title="Tell us about the house you want to build.", text=None, image=None, contact="/contact/"):
     text = text or (f"{C.RESPONSE_PROMISE}. The first conversation is free. Nothing you send is published, and it is shared only with the service providers named in our privacy notice.")
     image = image or CTA_IMAGES[len(PAGES) % len(CTA_IMAGES)]
-    credit = f'<span class="credit">{esc(img_credit(image))}</span>' if is_uae(image) else ""
+    credit = f'<span class="credit">{esc(img_credit(image) if is_uae(image) else uk_label(image))}</span>'
     return f'''<section class="cta-band" aria-labelledby="cta-h">{picture(image, "", "100vw")}{credit}
 <div class="wrap"><div><h2 id="cta-h">{esc(title)}</h2><p style="margin-top:1em;max-width:46ch">{esc(text)}</p></div>
 <div class="actions"><a class="btn" href="{contact}">{esc(CTA_LABEL)}</a><a class="btn btn--ghost" href="{wa_link()}" rel="noopener">WhatsApp us</a></div></div></section>'''

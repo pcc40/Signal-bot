@@ -515,6 +515,8 @@ body.has-hero .site-head:not(.stuck) .btn{background:#fff;color:var(--ink);borde
 .article-aside{position:sticky;top:110px}
 .aside-card{background:var(--slate);color:#E8EBE9;overflow:hidden}
 .aside-card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.aside-card .aside-fig{position:relative;margin:0}
+.aside-card .aside-fig img{display:block}
 .aside-card div{padding:24px}
 .aside-card h3{font-size:var(--s-2);color:#fff}
 .aside-card p{color:var(--muted-dark);font-size:.95rem}
@@ -569,6 +571,7 @@ body.has-hero .site-head:not(.stuck) .btn{background:#fff;color:var(--ink);borde
 .cta-band p{color:#E2E5E3}
 .cta-band .actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end}
 .cta-band .credit{position:absolute;right:var(--gutter);bottom:12px;z-index:2;font-size:.68rem;opacity:.75}
+@media (max-width:760px){.cta-band .credit{left:var(--gutter);bottom:8px;text-align:right;font-size:.62rem}}
 @media (max-width:880px){.cta-band .wrap{grid-template-columns:1fr}.cta-band .actions{justify-content:flex-start}}
 
 .video{position:relative;aspect-ratio:16/9;background:var(--ink);overflow:hidden}

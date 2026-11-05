@@ -92,7 +92,7 @@ Watch for an appointment that gives the project manager open-ended power to "act
 
 ## Who will actually attend site, and how often?
 
-A project management fee is mostly the cost of people's time, so the people are the service. In RICS's suggested criteria for assessing project management proposals, "key personnel" carries the largest weighting, 30% to 40% of the quality score ([RICS GN 107/2013](https://www.rics.org/content/dam/ricsglobal/documents/standards/appointing_a_project_manager_1st_edition_rics.pdf)).
+A project management fee is mostly the cost of people's time, so the people are the service. In RICS's suggested criteria for assessing project management proposals, "people" (key and other personnel) carries the largest typical weighting, 30% to 40% of the quality score ([RICS GN 107/2013](https://www.rics.org/content/dam/ricsglobal/documents/standards/appointing_a_project_manager_1st_edition_rics.pdf)).
 
 Ask for these in writing:
 
@@ -107,7 +107,7 @@ From the builder's side, we can tell you how this looks on the other side of the
 
 ## What reports should you expect?
 
-Reporting is how you see the project when you are not there, which for many owners is most of the time. Ask for a sample report from a past appointment, with names removed, and check it answers four questions: where is the money, where is the programme, what has changed, and what do you need to decide.
+Reporting is how you see the project when you are not there, which for many owners is most of the time. Ask for a sample or template report, with names removed, and check it answers four questions: where is the money, where is the programme, what has changed, and what do you need to decide.
 
 The FIDIC White Book, the international standard form for appointing consultants, which FIDIC describes as suitable for services including project management ([FIDIC](https://fidic.org/node/42966)), treats reporting as an absolute obligation in its 2017 edition, alongside a programme the consultant must provide within 14 days of commencement ([Curtis](https://omanlawblog.curtis.com/2017/10/whats-new-in-2017-fidic-white-book.html)). Whatever form you use, the scope should say what reports you receive, how often, and what each contains: photographs, cost to date and forecast final cost, programme against plan, open variations, risks, and the decisions needed from you. Our [site visits and reporting](/services/site-visits-and-reporting/) page shows the shape of ours.
 
@@ -131,7 +131,7 @@ Our published ranges are on our [fees page](/fees/): a review costs AED 9,500–
 6. Can you instruct the contractor, agree a variation or release a payment without my written approval?
 7. Is the fee fixed, monthly or a percentage, and if a percentage, of what?
 8. What is excluded, and how is work outside the scope priced?
-9. Can I see a sample monthly report?
+9. Can I see a sample or template of your monthly report?
 10. How does the appointment end, and what do I receive at the end?
 
 ## Red flags when choosing a project manager

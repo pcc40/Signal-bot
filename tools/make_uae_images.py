@@ -29,6 +29,11 @@ MANIFEST = ROOT / "src/img_manifest.json"
 SIZES = (640, 1280, 1600)
 OG = (1200, 630)
 QUALITY = 78
+# Byte budget per width: a file over it is re-encoded at lower quality (down to MIN_QUALITY) until it fits.
+# 1280 px is the hero size most pages preload as the LCP image. MIN_QUALITY is a visual floor: a very detailed
+# image (al-barari-05, dubai-hills-estate-01) may stay a little over budget rather than show artefacts.
+BUDGET = {1280: 200_000}
+MIN_QUALITY = 62
 
 # Folder -> (community name used in captions and alt text, place)
 NAMES = {
@@ -120,7 +125,11 @@ def make(folder, e, force):
             continue
         im = im or load(src)
         r = im if size == w else im.resize((size, round(h * size / w)), Image.LANCZOS)
-        r.save(dst, "WEBP", quality=QUALITY, method=6)
+        q = QUALITY
+        r.save(dst, "WEBP", quality=q, method=6)
+        while size in BUDGET and dst.stat().st_size > BUDGET[size] and q > MIN_QUALITY:
+            q -= 3
+            r.save(dst, "WEBP", quality=q, method=6)
         written.append(dst.name)
     og = w >= OG[0] and (e["role"] == "hero" or folder == "general")
     if og:
