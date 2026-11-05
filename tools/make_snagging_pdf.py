@@ -276,7 +276,7 @@ def cover(c, doc):
     c.setStrokeColor(K.BRASS_LIGHT); c.setLineWidth(0.8)
     c.line(M_L, H * 0.36, W - M_R, H * 0.36)
     K.logo_mark(c, M_L, H - M_T - 12 * mm, 12 * mm)
-    K.draw_tracked(c, M_L + 16 * mm, H - M_T - 5 * mm, "EASTBRIDGE", K.SANS_M, 10, 3.2, white)
+    K.draw_tracked(c, M_L + 16 * mm, H - M_T - 5 * mm, "Eastbridge", K.SERIF, 16.0, 0, white)
     K.draw_tracked(c, M_L + 16 * mm, H - M_T - 10 * mm, "STRATEGIC PARTNERS", K.SANS, 6.3, 2.2, K.MUTED_DARK)
     K.draw_tracked(c, M_L, H * 0.68, "A FREE GUIDE FOR VILLA OWNERS", K.SANS_B, 8, 2.2, K.BRASS_LIGHT)
     c.setFillColor(white); c.setFont(K.SERIF, 44)
@@ -301,7 +301,7 @@ def cover(c, doc):
 def body_page(c, doc):
     c.saveState()
     K.logo_mark(c, M_L, H - 15 * mm, 6 * mm, stroke=K.INK)
-    K.draw_tracked(c, M_L + 8.5 * mm, H - 12.4 * mm, "EASTBRIDGE", K.SANS_M, 7, 2.2, K.INK)
+    K.draw_tracked(c, M_L + 8.5 * mm, H - 12.4 * mm, "Eastbridge", K.SERIF, 11.2, 0, K.INK)
     K.draw_tracked(c, W - M_R - 60 * mm, H - 12.4 * mm, "VILLA SNAGGING CHECKLIST", K.SANS, 6.5, 1.6, K.INK_SOFT)
     c.setStrokeColor(K.STONE_2); c.setLineWidth(0.6); c.line(M_L, H - 17.5 * mm, W - M_R, H - 17.5 * mm)
     c.line(M_L, 15 * mm, W - M_R, 15 * mm)

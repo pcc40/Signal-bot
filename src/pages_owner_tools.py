@@ -117,7 +117,7 @@ def msgs_html(m):
 
 def print_head(title):
     return f'''<div class="print-only calc-print-head">
-<p class="calc-print-brand"><img src="/assets/logo.png" alt="" width="40" height="40"><span>{esc(C.NAME)}</span></p>
+<p class="calc-print-brand"><img src="/assets/logo-lockup.png" alt="{esc(C.NAME)}" width="180" height="48"></p>
 <p class="calc-print-title">{title}</p>
 <p class="calc-print-meta" data-print-date></p>
 <h3 class="calc-h">Your inputs</h3>

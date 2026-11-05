@@ -342,7 +342,7 @@ def print_head():
     """Letterhead and input summary, shown only when the estimate is printed or saved as PDF.
     calc.js fills the date, the input list and the link from the form (so they are in the page's language)."""
     return f'''<div class="print-only calc-print-head">
-<p class="calc-print-brand"><img src="/assets/logo.png" alt="" width="40" height="40"><span>{esc(C.NAME)}</span></p>
+<p class="calc-print-brand"><img src="/assets/logo-lockup.png" alt="{esc(C.NAME)}" width="180" height="48"></p>
 <p class="calc-print-title">Indicative villa cost estimate</p>
 <p class="calc-print-meta">Prepared on <span data-print-date></span> with the villa build cost calculator at {SITE_HOST}</p>
 <h3 class="calc-h">Your inputs</h3>

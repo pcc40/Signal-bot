@@ -106,10 +106,12 @@ figcaption{font-size:var(--s--2);color:var(--ink-soft);padding-top:8px;line-heig
 body.has-hero .site-head{position:absolute;right:0;left:0;top:36px;background:linear-gradient(-180deg,rgba(10,14,16,.55),rgba(10,14,16,0));border-bottom-color:rgba(255,255,255,.18);backdrop-filter:none;color:#fff}
 body.has-hero .site-head.stuck{position:fixed;top:0;background:rgba(255,255,255,.97);color:var(--ink);border-bottom-color:var(--line)}
 .logo{display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit}
-.logo svg{width:38px;height:38px;flex:0 0 38px}
+.logo svg{width:36px;height:36px;flex:0 0 36px}
+.logo .ks{fill:var(--brass)}
+.site-foot .logo .ks,body.has-hero .site-head:not(.stuck) .logo .ks{fill:var(--brass-light)}
 .logo .wm{display:flex;flex-direction:column;line-height:1}
-.logo .wm b{font-weight:500;font-size:1.02rem;letter-spacing:.32em;text-transform:uppercase}
-.logo .wm span{font-size:.62rem;letter-spacing:.34em;text-transform:uppercase;opacity:.75;margin-top:6px}
+.logo .wm b{font-family:var(--serif);font-weight:400;font-size:1.72rem;letter-spacing:.005em;line-height:.9}
+.logo .wm span{font-size:.58rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;opacity:.75;margin-top:7px}
 .logo:hover{color:inherit}
 .nav{display:flex;align-items:center;gap:clamp(16px,1.8vw,30px)}
 .nav > ul{display:flex;gap:clamp(16px,1.8vw,30px);list-style:none;margin:0;padding:0;align-items:center}

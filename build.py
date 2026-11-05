@@ -370,11 +370,11 @@ def action_bar():
             f'<a class="ab-call" href="tel:{C.PHONE_E164}">{CALL_ICON}<span>Call</span></a>'
             f'<a class="ab-brief" href="/contact/">{BRIEF_ICON}<span>{esc(CTA_TINY)}</span></a></nav>')
 
-LOGO_MARK = ('<svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">'
-             '<rect x="0.75" y="0.75" width="38.5" height="38.5" fill="none" stroke="currentColor" stroke-width="1.5"/>'
-             '<path d="M7 29 H33" stroke="currentColor" stroke-width="1.5"/>'
-             '<path d="M10 29 V24 A10 10 0 0 1 30 24 V29" fill="none" stroke="currentColor" stroke-width="1.5"/>'
-             '<path d="M20 14 V29" stroke="#C9A961" stroke-width="1.5"/></svg>')
+# Keystone arch (chosen by the owner, 5 November 2026): a stone arch with a brass keystone. The arch takes the
+# text colour (currentColor); the keystone colour is set in site.css (.logo .ks) for light and dark grounds.
+LOGO_MARK = ('<svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">'
+             '<path fill="currentColor" fill-rule="evenodd" d="M5 44V25a19 19 0 0 1 38 0v19h-8V25a11 11 0 0 0-22 0v19z"/>'
+             '<path class="ks" d="M21 6h6l-1.25 8.6h-3.5z"/></svg>')
 
 def logo(cls=""):
     return (f'<a class="logo {cls}" href="/" aria-label="{C.NAME}, home">{LOGO_MARK}'

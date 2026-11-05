@@ -303,16 +303,22 @@ W, H = A4
 M_L, M_R, M_T, M_B = 22 * mm, 22 * mm, 26 * mm, 22 * mm
 
 def logo_mark(c, x, y, s, stroke=white):
-    """The Eastbridge bridge mark, drawn at (x, y) bottom-left, size s."""
-    k = s / 40.0
-    c.saveState(); c.setLineWidth(1.1); c.setStrokeColor(stroke)
-    c.rect(x + 0.75 * k, y + 0.75 * k, 38.5 * k, 38.5 * k, stroke=1, fill=0)
-    yy = lambda v: y + (40 - v) * k
-    c.line(x + 7 * k, yy(29), x + 33 * k, yy(29))
-    p = c.beginPath(); p.moveTo(x + 10 * k, yy(29)); p.lineTo(x + 10 * k, yy(24))
-    p.arcTo(x + 10 * k, yy(34), x + 30 * k, yy(14), startAng=180, extent=-180)
-    p.lineTo(x + 30 * k, yy(29)); c.drawPath(p, stroke=1, fill=0)
-    c.setStrokeColor(HexColor("#C9A961")); c.line(x + 20 * k, yy(14), x + 20 * k, yy(29))
+    """The Eastbridge keystone-arch mark (owner's choice, 5 November 2026), drawn at (x, y) bottom-left, size s.
+    The arch takes `stroke` as its colour; the keystone is brass."""
+    k = s / 48.0
+    X = lambda v: x + v * k
+    Y = lambda v: y + (48 - v) * k
+    c.saveState(); c.setFillColor(stroke); c.setStrokeColor(stroke)
+    p = c.beginPath()
+    p.moveTo(X(5), Y(44)); p.lineTo(X(5), Y(25))
+    p.arcTo(X(5), Y(44), X(43), Y(6), startAng=180, extent=-180)   # outer arc, centre (24, 25), r 19
+    p.lineTo(X(43), Y(44)); p.lineTo(X(35), Y(44)); p.lineTo(X(35), Y(25))
+    p.arcTo(X(13), Y(36), X(35), Y(14), startAng=0, extent=180)    # inner arc, r 11
+    p.lineTo(X(13), Y(44)); p.close()
+    c.drawPath(p, stroke=0, fill=1)
+    c.setFillColor(HexColor("#CFAE72") if stroke != INK else HexColor("#7A5C2C"))
+    q = c.beginPath(); q.moveTo(X(21), Y(6)); q.lineTo(X(27), Y(6)); q.lineTo(X(25.75), Y(14.6)); q.lineTo(X(22.25), Y(14.6)); q.close()
+    c.drawPath(q, stroke=0, fill=1)
     c.restoreState()
 
 def draw_tracked(c, x, y, text, font, size, space, color):
@@ -330,7 +336,7 @@ def cover(c, doc):
     c.setStrokeColor(BRASS_LIGHT); c.setLineWidth(0.8)
     c.line(M_L, H * 0.36, W - M_R, H * 0.36)
     logo_mark(c, M_L, H - M_T - 12 * mm, 12 * mm)
-    draw_tracked(c, M_L + 16 * mm, H - M_T - 5 * mm, "EASTBRIDGE", SANS_M, 10, 3.2, white)
+    draw_tracked(c, M_L + 16 * mm, H - M_T - 5 * mm, "Eastbridge", SERIF, 16.0, 0, white)
     draw_tracked(c, M_L + 16 * mm, H - M_T - 10 * mm, "STRATEGIC PARTNERS", SANS, 6.3, 2.2, MUTED_DARK)
     draw_tracked(c, M_L, H * 0.68, "A FREE GUIDE FOR VILLA OWNERS", SANS_B, 8, 2.2, BRASS_LIGHT)
     c.setFillColor(white); c.setFont(SERIF, 44)
@@ -354,7 +360,7 @@ def cover(c, doc):
 def body_page(c, doc):
     c.saveState()
     logo_mark(c, M_L, H - 15 * mm, 6 * mm, stroke=INK)
-    draw_tracked(c, M_L + 8.5 * mm, H - 12.4 * mm, "EASTBRIDGE", SANS_M, 7, 2.2, INK)
+    draw_tracked(c, M_L + 8.5 * mm, H - 12.4 * mm, "Eastbridge", SERIF, 11.2, 0, INK)
     draw_tracked(c, W - M_R - 72 * mm, H - 12.4 * mm, "PRE-CONSTRUCTION CHECKLIST", SANS, 6.5, 1.6, INK_SOFT)
     c.setStrokeColor(STONE_2); c.setLineWidth(0.6); c.line(M_L, H - 17.5 * mm, W - M_R, H - 17.5 * mm)
     c.line(M_L, 15 * mm, W - M_R, 15 * mm)
@@ -372,7 +378,7 @@ def back_page(c, doc):
         c.line(W * i / 9, H * 0.82, W * i / 9, H)
     c.setStrokeColor(BRASS_LIGHT); c.setLineWidth(0.8); c.line(M_L, H * 0.82, W - M_R, H * 0.82)
     logo_mark(c, M_L, M_B + 4 * mm, 10 * mm)
-    draw_tracked(c, M_L + 14 * mm, M_B + 10 * mm, "EASTBRIDGE", SANS_M, 9, 3, white)
+    draw_tracked(c, M_L + 14 * mm, M_B + 10 * mm, "Eastbridge", SERIF, 14.4, 0, white)
     draw_tracked(c, M_L + 14 * mm, M_B + 5.5 * mm, "STRATEGIC PARTNERS", SANS, 6, 2, MUTED_DARK)
     c.restoreState()
 
