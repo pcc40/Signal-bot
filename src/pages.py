@@ -223,6 +223,26 @@ def post_cards(posts):
 
 UAE_STRIP_NOTE = "For illustration. Eastbridge was not involved in the design or construction of what these images show."
 
+# Cornish houses built by P Chapman Construction, shown across the site to evidence build quality (owner's
+# direction, 5 November 2026). Same wording as the home-page strip, so existing translations apply. Pages
+# rotate through the pool deterministically by path, so different pages show different houses.
+UK_QUALITY_POOL = [f"{p}-0{i}" for p in ("owers-house", "quay-house", "sea-glass-house", "saqqara", "the-lookout",
+                   "polgreen-manor", "trelowen", "morvoren", "blue-seas", "menwinnion", "gooden-heane", "esplanade-road")
+                   for i in (1, 2, 3)]
+
+def founder_uk_section(key):
+    import zlib
+    projs = sorted({b.rsplit("-", 1)[0] for b in UK_QUALITY_POOL})
+    start = zlib.crc32(key.encode()) % len(projs)
+    picks = [projs[(start + k * 5) % len(projs)] for k in range(3)]
+    bases = [f"{pr}-0{1 + (zlib.crc32((key + pr).encode()) % 3)}" for pr in picks]
+    return f'''<section class="section--tight founder-uk" aria-labelledby="ukbuilt-h"><div class="wrap">
+<div class="head-row"><div><span class="kicker">Philip Chapman's record</span><h2 id="ukbuilt-h">Built by our founder in the UK</h2></div>
+<p class="muted">Houses built by P Chapman Construction, the company Philip founded and led for 21 years. UK contracting work, not Eastbridge appointments. <a class="link" href="/work/">See the work</a></p></div>
+{strip_html(bases)}
+</div></section>
+'''
+
 def strip_html(bases, note=None):
     """Image strip (one wide image and two smaller). UK photographs link to their project and carry its name;
     UAE images carry their credit, and a strip with any UAE image ends with a note that they are illustrations
@@ -362,7 +382,7 @@ def service_page(s):
 <section class="section"><div class="wrap split"><div><h2>Questions</h2></div><div>{B.faq_html(s["faqs"])}</div></div></section>
 {service_enquiry_html(s)}
 <section class="section paper"><div class="wrap"><h2>Related services</h2>{related}</div></section>
-{B.cta_band(contact=contact_href("service", s["slug"]))}{B.wa_page_msgs(B.WA_TPL_SERVICE, WA_TOPIC[s["slug"]])}'''
+{founder_uk_section("/services/" + s["slug"] + "/")}{B.cta_band(contact=contact_href("service", s["slug"]))}{B.wa_page_msgs(B.WA_TPL_SERVICE, WA_TOPIC[s["slug"]])}'''
     B.page(path, s["title"], s["description"], body, crumbs,
            [B.service_schema(s, path, ban), B.faq_schema(s["faqs"])], og=B.og_image(ban))
 
@@ -418,7 +438,7 @@ def area_page(a):
 {owner}<section class="section--tight"><div class="wrap">{strip_html(others)}</div></section>
 <section class="section paper"><div class="wrap split"><div><h2>Questions about {esc(a["name"])}</h2></div><div>{B.faq_html(a["faqs"])}</div></div></section>
 <section class="section"><div class="wrap"><h2>Services most relevant here</h2>{svc}</div></section>
-{B.cta_band(f"Building or renovating in {a['name']}?", image=cta_img, contact=contact_href("area", a["slug"]))}{B.wa_page_msgs(B.WA_TPL_AREA, a["name"])}'''
+{founder_uk_section("/areas/" + a["slug"] + "/")}{B.cta_band(f"Building or renovating in {a['name']}?", image=cta_img, contact=contact_href("area", a["slug"]))}{B.wa_page_msgs(B.WA_TPL_AREA, a["name"])}'''
     schema = [B.faq_schema(a["faqs"]), {"@context": "https://schema.org", "@type": "Service",
               "name": f"Villa project management and owner's representation in {a['name']}",
               "provider": {"@id": B.ORG_ID}, "areaServed": {"@type": "Place", "name": f"{a['name']}, {a['city']}"},
@@ -1029,7 +1049,7 @@ def insights(posts):
 <div class="aside-links"><b>Services</b>{"".join(f'<a href="/services/{x}/">{esc(SVC[x]["short"])}</a>' for x in ("owners-representative","villa-construction-project-management","villa-renovation-project-management","plot-due-diligence"))}</div></aside>
 </div></section></article>
 <section class="section paper"><div class="wrap"><h2>Read next</h2>{post_cards(rel)}</div></section>
-{B.cta_band(image=cta_img_for(p))}'''
+{founder_uk_section(path)}{B.cta_band(image=cta_img_for(p))}'''
         art = {"@context": "https://schema.org", "@type": "BlogPosting", "@id": B.url(path) + "#article",
                "headline": p["title"], "description": p["description"], "url": B.url(path),
                "datePublished": d.isoformat(), "dateModified": u.isoformat(), "author": {"@id": B.PERSON_ID},

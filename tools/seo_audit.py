@@ -239,6 +239,9 @@ for f in files:
     en_path = path_of(rel if is_en(rel) else "/" + rel.split("/", 2)[2])
     if en_path.startswith("/areas/") or en_path == UAE_ONLY_CASE:
         main_html = s.split("<main", 1)[-1].split("</main>", 1)[0]
+        # The "Built by our founder in the UK" quality strip is allowed: it is labelled as P Chapman
+        # Construction's UK work, never as the community (owner's direction, 5 November 2026).
+        main_html = re.sub(r'<section\b[^>]*\bfounder-uk\b[^>]*>.*?</section>', "", main_html, flags=re.S)
         for f_img in sorted(set(re.findall(r"/assets/img/([^\"\s,?]+?\.(?:webp|jpe?g|png|avif|gif))", main_html))):
             if not f_img.startswith("uae-"):
                 errors.append(f"non-UAE image on {rel}: {f_img} (area pages and the Island E example use UAE library images only)")
