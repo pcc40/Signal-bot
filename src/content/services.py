@@ -108,7 +108,8 @@ SERVICES = [
   "image": "trelowen-01",
   "stage": "Survey to handover",
   "intro": """<p>A large share of Dubai's best villas are not new. They are fifteen or twenty-year-old houses on outstanding plots, waiting for a new layout, a new façade, a pool, an extension or a complete strip-out. Renovation can create a great deal of value. It also carries more unknowns than a new build, because nobody knows what is behind the walls until they come down.</p>
-<p>We start with what can be known: a condition survey arranged through the right specialists, the master developer's renovation rules and NOC requirements, and a realistic budget with a contingency set for the age of the house. Then we help you choose a contractor who is good at this kind of work, which is a different skill from building new.</p>""",
+<p>We start with what can be known: a condition survey arranged through the right specialists, the master developer's renovation rules and NOC requirements, and a realistic budget with a contingency set for the age of the house. Then we help you choose a contractor who is good at this kind of work, which is a different skill from building new.</p>
+<p>Planning a renovation? Our <a href="/insights/how-to-plan-a-villa-renovation-dubai/">step-by-step plan for a villa renovation in Dubai</a> links every renovation guide and tool we publish, from renovate or rebuild to snagging.</p>""",
   "does": [
    "Condition review of the existing villa before design, arranged with the right specialists",
    "Master developer NOC and authority route coordinated with your consultant or contractor",
