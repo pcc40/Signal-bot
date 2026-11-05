@@ -28,7 +28,7 @@ The site is built in English and published in Arabic (/ar/, right to left), Russ
 - Build: `python3 build.py && python3 tools/i18n.py apply` (Netlify runs both; needs `beautifulsoup4`).
 - Translations live in `src/i18n/<lang>.json`, keyed by a hash of each English sentence. Change the English and the old translation drops out; `python3 tools/i18n.py extract` lists what needs translating. Until it is translated, that text shows in English.
 - Every page carries hreflang links for all five languages, a language switcher, and a hidden `language` field on forms so you can see which language an enquiry came from.
-- Arabic uses `src/static/assets/site-rtl.css`; regenerate it with `sh tools/make_rtl.sh` after editing `site.css`.
+- Arabic uses `src/static/assets/site-rtl.css`; regenerate it with `sh tools/make_rtl.sh` after editing `site.css`, then rebuild and run `node tools/make_critical.js` to refresh the inlined first-screen CSS (`src/critical.json`).
 
 ## Go live
 See the go-live checklist in HANDOFF.md: `SITE_URL`, `PUBLISH_FEES`, `HERO_VIDEO`, `GA4_ID` / `GSC_VERIFICATION`, Netlify environment variables for the form function (`EMAIL_API_KEY`, `EMAIL_FROM` and optional extras), Google Business Profile, and Claude GitHub app access for the daily SEO task.

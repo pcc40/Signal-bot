@@ -27,6 +27,7 @@ DIST = ROOT / "dist"
 I18N = ROOT / "src" / "i18n"
 sys.path.insert(0, str(ROOT / "src"))
 import config as C
+import critical
 
 LANGS = {  # code: (native name, html lang, dir, og locale)
     "ar": ("العربية", "ar", "rtl", "ar_AE"),
@@ -244,11 +245,51 @@ def insert_switcher(soup, path, cur):
         nav.append(BeautifulSoup(switcher(path, cur).replace('class="langs"', 'class="langs langs--nav"'), "html.parser"))
 
 FONTS = {
-    "ar": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Noto+Naskh+Arabic:wght@500&display=swap",
-    "ru": "https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Noto+Serif+Display:wght@400&display=swap",
-    "zh": "https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@500&display=swap",
-    "hi": "https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Serif+Devanagari:wght@500&display=swap",
+    "ar": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Noto+Naskh+Arabic:wght@500&display=optional",
+    "ru": "https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Noto+Serif+Display:wght@400&display=optional",
+    "zh": "https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@500&display=optional",
+    "hi": "https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Serif+Devanagari:wght@500&display=optional",
 }
+
+def swap_stylesheet(soup, sheet, path):
+    """Point the page at another stylesheet (site-rtl.css on /ar/): the full sheet's links and the inlined critical
+    CSS cut from it (src/critical.py). Without a current critical cut for that sheet, the page gets a plain
+    render-blocking <link> instead, never the left-to-right critical rules."""
+    old = [soup.find("style", id="critical-css")] + [
+        l.parent if l.parent and l.parent.name == "noscript" else l
+        for l in soup.find_all("link", href=re.compile(r"^/assets/site\.css"))]
+    old = [t for t in old if t is not None]
+    tags = BeautifulSoup(critical.css_tags(path, sheet), "html.parser")
+    if old:
+        old[0].insert_before(tags)
+    else:
+        soup.head.append(tags)
+    for t in old:
+        t.decompose()
+
+def language_fonts(soup, lang):
+    """Translated pages set their own --serif/--sans (site.css, "per-language type") and never use the Latin
+    Instrument fonts, so their preloads are dropped: they only competed with the first paint. The Google Fonts
+    stylesheet for the language loads without blocking the first paint, with both Google hosts preconnected early.
+    FONTS use display=optional, not swap: a late web font no longer re-flows the page (the swap moved the cookie
+    banner and the hero text, cumulative layout shift about 0.26 on /ar/ in the lab, November 2026). A first visit
+    on a slow connection may show the system font for that page; the next page uses the cached web font."""
+    for l in soup.find_all("link", rel="preload"):
+        if l.get("as") == "font" and l.get("href", "").startswith("/assets/fonts/"):
+            l.decompose()
+    anchor = soup.head.find("meta", attrs={"name": "viewport"}) or soup.head.contents[0]
+    for host, cors in (("https://fonts.gstatic.com", True), ("https://fonts.googleapis.com", False)):
+        pre = soup.new_tag("link", rel="preconnect", href=host)
+        if cors:
+            pre["crossorigin"] = ""
+        anchor.insert_after(pre)
+    css = soup.new_tag("link", rel="preload", href=FONTS[lang])
+    css["as"] = "style"
+    css["onload"] = "this.onload=null;this.rel='stylesheet'"
+    soup.head.append(css)
+    ns = soup.new_tag("noscript")
+    ns.append(soup.new_tag("link", rel="stylesheet", href=FONTS[lang]))
+    soup.head.append(ns)
 
 def translate_page(f, lang, tr, missing):
     soup = BeautifulSoup(f.read_text(encoding="utf-8"), "html.parser")
@@ -323,9 +364,7 @@ def translate_page(f, lang, tr, missing):
     soup.html["lang"] = LANGS[lang][1]
     soup.html["dir"] = LANGS[lang][2]
     if LANGS[lang][2] == "rtl":
-        for l in soup.find_all("link", rel="stylesheet"):
-            if l.get("href", "").startswith("/assets/site.css"):
-                l["href"] = l["href"].replace("/assets/site.css", "/assets/site-rtl.css")
+        swap_stylesheet(soup, "site-rtl.css", path)
     can = soup.find("link", rel="canonical")
     if can:
         # Usually the page itself; a page may point elsewhere (the calculator embed points to the full calculator).
@@ -336,9 +375,7 @@ def translate_page(f, lang, tr, missing):
     ogl = soup.find("meta", property="og:locale")
     if ogl: ogl["content"] = LANGS[lang][3]
     rss = soup.find("link", type="application/rss+xml")
-    pre = soup.new_tag("link", rel="preconnect", href="https://fonts.gstatic.com"); pre["crossorigin"] = ""
-    soup.head.append(pre)
-    soup.head.append(soup.new_tag("link", rel="stylesheet", href=FONTS[lang]))
+    language_fonts(soup, lang)
     add_alternates(soup, path)
     insert_switcher(soup, path, lang)
     tag_forms(soup, lang)

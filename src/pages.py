@@ -2,6 +2,7 @@
 import json, datetime, re, html as H
 from email.utils import format_datetime
 import build as B
+import related
 import config as C
 from content.services import SERVICES, BY_SLUG as SVC, DELIVERABLES, OUTCOMES, SPECIMENS, MONTH_ON_PROJECT, WA_TOPIC
 import content.services as SV
@@ -951,9 +952,8 @@ def insights(posts):
         d = datetime.date.fromisoformat(str(p["date"]))
         u = datetime.date.fromisoformat(str(p.get("updated", p["date"])))
         mins = max(3, round(p["words"] / 230))
-        rel = [q for q in posts if q["slug"] != p["slug"] and q.get("category") == p.get("category")][:2] or \
-              [q for q in posts if q["slug"] != p["slug"]][:3]
-        rel = (rel + [q for q in posts if q["slug"] != p["slug"] and q not in rel])[:3]
+        ranked = related.ranked(p, posts, SVC, AREA)        # src/related.py: first three in "Related reading"
+        rel = ranked[3:6] if len(ranked) >= 6 else ranked[:3]
         rel_html = "".join(f'<li><a href="/insights/{q["slug"]}/"><div><h3>{esc(q["title"])}</h3><p>{esc(q["description"])}</p></div><div class="meta">{esc(q.get("category",""))}</div></a></li>' for q in rel)
         upd = f" · Updated {u.strftime('%-d %B %Y')}" if u != d else ""
         hero_img = post_img(p)
@@ -971,6 +971,7 @@ def insights(posts):
 {('<div class="keypoints"><h2>Key points</h2><ul>' + kp + '</ul></div>') if kp else ""}
 {toc}
 {body_html}
+{related.block_html(p, posts, SVC, AREA, esc)}
 <div class="author"><img class="mono" src="/assets/img/philip-chapman-thumb.webp" width="52" height="52" alt="" loading="lazy"><div><b>{esc(C.FOUNDER["name"])}, {esc(C.FOUNDER["role"])}</b><span class="small muted">Founded and ran P Chapman Construction, a UK builder of award-winning homes, for 21 years. Now represents villa owners in Dubai and Abu Dhabi. <a href="/about/#founder">About Philip</a></span></div></div>
 {('<h2 id="faq">Questions</h2>' + B.faq_html(faqs)) if faqs else ""}
 {('<h2 id="sources">Sources</h2><ol class="small">' + srcs + '</ol>') if srcs else ""}
