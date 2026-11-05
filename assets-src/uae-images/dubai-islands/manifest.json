@@ -1,0 +1,46 @@
+[
+  {
+    "file": "dubai-islands-01.jpg",
+    "role": "hero",
+    "shows": "Masterplan aerial render of the Dubai Islands off the Deira coast.",
+    "credit": "Image: Nakheel",
+    "source_page": "https://www.nakheel.com/en/developments/nakheel-collections/dubaiislands",
+    "image_url": "https://www.nakheel.com/images/nakheelcorporatelibraries/developments/main-dubai-islands-0217eaed95-3700-4cd4-ae39-f7e4130d8163.jpg",
+    "w": 1920,
+    "h": 1080,
+    "is_render": true
+  },
+  {
+    "file": "dubai-islands-02.jpg",
+    "role": "support",
+    "shows": "Aerial render of Bay Villas on Dubai Islands along the beach and breakwater.",
+    "credit": "Image: Nakheel",
+    "source_page": "https://www.nakheel.com/en/under-construction/bay-villas-dubai-islands",
+    "image_url": "https://www.nakheel.com/images/nakheelcorporatelibraries/construction-updates/bay-villas_banner1_apr-26.jpg",
+    "w": 1920,
+    "h": 1080,
+    "is_render": true
+  },
+  {
+    "file": "dubai-islands-03.jpg",
+    "role": "support",
+    "shows": "Render of a Dubai Islands beach bay with resort and residential buildings.",
+    "credit": "Image: Nakheel",
+    "source_page": "https://www.nakheel.com/en/developments/nakheel-collections/dubaiislands",
+    "image_url": "https://www.nakheel.com/images/nakheelcorporatelibraries/developments/main-dubai-islands-01.jpg",
+    "w": 1920,
+    "h": 1080,
+    "is_render": true
+  },
+  {
+    "file": "dubai-islands-04.jpg",
+    "role": "support",
+    "shows": "Render of a Dubai Islands marina and waterfront promenade at dusk.",
+    "credit": "Image: Nakheel",
+    "source_page": "https://www.nakheel.com/en/developments/nakheel-collections/dubaiislands",
+    "image_url": "https://www.nakheel.com/images/nakheelcorporatelibraries/developments/dubai-islands4.jpg",
+    "w": 1920,
+    "h": 1080,
+    "is_render": true
+  }
+]

@@ -1,0 +1,57 @@
+[
+ {
+  "file": "jumeirah-bay-01.jpg",
+  "role": "hero",
+  "shows": "Aerial of Jumeirah Bay island with the Bulgari Resort and marina, Dubai skyline behind",
+  "credit": "Image: Meraas (Jumeirah Bay)",
+  "source_page": "https://meraas.com/en/master-development/jumeriah-bay-island",
+  "image_url": "https://meraas.com/sites/default/files/2024-03/Jumeirah%20Bay%20MD%20Listing%20Image.jpg",
+  "w": 1920,
+  "h": 1080,
+  "is_render": false
+ },
+ {
+  "file": "jumeirah-bay-02.jpg",
+  "role": "support",
+  "shows": "Jumeirah Bay island and its access bridge from the air",
+  "credit": "Image: Meraas (Jumeirah Bay)",
+  "source_page": "https://meraas.com/en/master-development/jumeriah-bay-island",
+  "image_url": "https://meraas.com/sites/default/files/2024-06/Jumeirah%20Bay%20-%20TG%20%E2%80%93%204%20%281%29_0.jpg",
+  "w": 880,
+  "h": 860,
+  "is_render": false
+ },
+ {
+  "file": "jumeirah-bay-03.jpg",
+  "role": "support",
+  "shows": "Jumeirah Bay island with the Bulgari Lighthouse tower under construction",
+  "credit": "Image: Meraas (Jumeirah Bay)",
+  "source_page": "https://meraas.com/",
+  "image_url": "https://meraas.com/sites/default/files/2026-10/DJI_20260910160237_0006_D.jpg",
+  "w": 1200,
+  "h": 700,
+  "is_render": false
+ },
+ {
+  "file": "jumeirah-bay-04.jpg",
+  "role": "support",
+  "shows": "The Bulgari marina on Jumeirah Bay at sunset",
+  "credit": "Image: Meraas (Jumeirah Bay)",
+  "source_page": "https://meraas.com/en/master-development/jumeriah-bay-island",
+  "image_url": "https://meraas.com/sites/default/files/2024-06/Jumeirah%20Bay%20-%20TG%20-3%20%281%29.jpg",
+  "w": 880,
+  "h": 860,
+  "is_render": false
+ },
+ {
+  "file": "jumeirah-bay-05.jpg",
+  "role": "support",
+  "shows": "Bulgari residences and yacht club on Jumeirah Bay",
+  "credit": "Image: Meraas (Jumeirah Bay)",
+  "source_page": "https://meraas.com/en/master-development/jumeriah-bay-island",
+  "image_url": "https://meraas.com/sites/default/files/2024-06/Jumeirah%20Bay%20-%20TG%20-2%20%281%29.jpg",
+  "w": 880,
+  "h": 860,
+  "is_render": false
+ }
+]

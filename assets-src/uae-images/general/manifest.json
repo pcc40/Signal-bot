@@ -1,0 +1,24 @@
+[
+ {
+  "file": "dubai-skyline-villas-01.jpg",
+  "role": "support",
+  "shows": "Aerial view along Palm Jumeirah's trunk over villa fronds towards the Dubai Marina skyline",
+  "credit": "Image: Nakheel (Palm Jumeirah)",
+  "source_page": "https://www.nakheel.com/en/communities/palm-jumeirah",
+  "image_url": "https://www.nakheel.com/images/nakheelcorporatelibraries/developments/palm-jumeirahe6a8226b-c8f2-4ee8-82d9-2015b61bdde8.jpg",
+  "w": 1920,
+  "h": 1080,
+  "is_render": false
+ },
+ {
+  "file": "abu-dhabi-skyline-01.jpg",
+  "role": "support",
+  "shows": "Abu Dhabi city skyline lit up at night across the water from the Corniche",
+  "credit": "Image: Visit Abu Dhabi (Department of Culture and Tourism)",
+  "source_page": "https://visitabudhabi.ae/en/where-to-go/beaches/abu-dhabi-corniche",
+  "image_url": "https://visitabudhabi.ae/-/media/project/vad/plan-your-trip/about-abu-dhabi/abu-dhabi-conrniche/abu-dhabi-corniche-01.jpg",
+  "w": 2400,
+  "h": 1346,
+  "is_render": false
+ }
+]

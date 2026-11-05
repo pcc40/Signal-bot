@@ -203,6 +203,7 @@ except OSError:
 # ---------------------------------------------------------------- structure, schema, media, machine files
 import xml.etree.ElementTree as ET
 LANG_DIRS = ("ar", "ru", "zh", "hi")
+UAE_ONLY_CASE = "/case-studies/island-e-waterfront-villa/"
 
 def rel_of(f):
     return f.replace(D, "")
@@ -233,6 +234,14 @@ for f in files:
     for tag in re.findall(r"<img\b[^>]*>", s):
         if not re.search(r'\swidth="\d+"', tag) or not re.search(r'\sheight="\d+"', tag):
             errors.append(f"img without width/height on {rel}: {tag[:90]}")
+    # Area pages (and the /areas/ hub) and the Island E worked example show UAE images only (owner's decision,
+    # 5 November 2026): every image in <main> must come from the UAE library (files named uae-*).
+    en_path = path_of(rel if is_en(rel) else "/" + rel.split("/", 2)[2])
+    if en_path.startswith("/areas/") or en_path == UAE_ONLY_CASE:
+        main_html = s.split("<main", 1)[-1].split("</main>", 1)[0]
+        for f_img in sorted(set(re.findall(r"/assets/img/([^\"\s,?]+?\.(?:webp|jpe?g|png|avif|gif))", main_html))):
+            if not f_img.startswith("uae-"):
+                errors.append(f"non-UAE image on {rel}: {f_img} (area pages and the Island E example use UAE library images only)")
     if not is_en(rel) or "404" in rel:
         continue
     path = path_of(rel)

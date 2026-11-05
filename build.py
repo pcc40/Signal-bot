@@ -85,18 +85,50 @@ def on_record_items():
             ("What we are not", "A contractor, an engineering consultancy, a law firm or an estate agency"),
             ("How we are paid", "Only by the owner we represent")]
 
+# Every image by base name. UK photographs are keyed by project slug; the UAE library (tools/make_uae_images.py)
+# is keyed "uae-<folder>" and its entries carry name, place, credit, alt and "uae": True.
+IMG_INDEX = {m["base"]: m for v in MANIFEST.values() for m in v}
+
 def img_meta(base):
-    slug = base.rsplit("-", 1)[0]
-    for m in MANIFEST.get(slug, []):
-        if m["base"] == base:
-            return m
-    raise KeyError(base)
+    try:
+        return IMG_INDEX[base]
+    except KeyError:
+        raise KeyError(base) from None
+
+def img_widths(base):
+    return [w for w in (320, 640, 1280, 1600, 2000) if (ROOT / f"src/static/assets/img/{base}-{w}.webp").exists()]
+
+def is_uae(base):
+    """True for an image from the UAE library (developer marketing images and the other credited UAE sources)."""
+    return bool(img_meta(base).get("uae"))
+
+def img_credit(base):
+    """The visible credit of a UAE image, exactly as in its folder's manifest.json; None for UK photographs."""
+    return img_meta(base).get("credit")
+
+def img_alt(base):
+    """Descriptive alt text of a UAE image (from its 'shows' line); "" for images without one."""
+    return img_meta(base).get("alt", "")
+
+def img_caption(base):
+    """Caption for a UAE image: an illustration of the community, with its credit. Never implies Eastbridge
+    designed, built or managed what it shows."""
+    m = img_meta(base)
+    return f'{m["name"]}, for illustration. {m["credit"]}.'
+
+def fig_credit(base):
+    """Small visible credit laid over a card image, for UAE images only."""
+    return f'<span class="fig-credit">{esc(img_credit(base))}</span>' if is_uae(base) else ""
+
+def img_largest(base):
+    """URL of the largest published size, for image sitemaps."""
+    return f"/assets/img/{base}-{img_widths(base)[-1]}.webp"
 
 def picture(base, alt, sizes="100vw", eager=False, cls=""):
     m = img_meta(base)
-    widths = [w for w in (640, 1280, 1600, 2000) if (ROOT / f"src/static/assets/img/{base}-{w}.webp").exists()]
+    widths = img_widths(base)
     srcset = ", ".join(f"/assets/img/{base}-{w}.webp {min(w, m['w'])}w" for w in widths)
-    mid = widths[1] if len(widths) > 1 else widths[0]
+    mid = next(w for w in (1280, 640, 1600, 2000, 320) if w in widths)
     h = round(m["h"] * 1280 / m["w"])
     load = 'fetchpriority="high" loading="eager"' if eager else 'loading="lazy"'
     c = f' class="{cls}"' if cls else ""
@@ -104,7 +136,11 @@ def picture(base, alt, sizes="100vw", eager=False, cls=""):
             f'width="1280" height="{h}" alt="{esc(alt)}" {load} decoding="async">')
 
 def og_image(base):
-    return f"/assets/img/{base}-1280.webp"
+    """Social preview: the 1200 x 630 crop where tools/make_uae_images.py made one (UAE heroes), else the 1280 size."""
+    if (ROOT / f"src/static/assets/img/{base}-og.jpg").exists():
+        return f"/assets/img/{base}-og.jpg"
+    w = next((w for w in (1280, 1600, 640) if (ROOT / f"src/static/assets/img/{base}-{w}.webp").exists()), 1280)
+    return f"/assets/img/{base}-{w}.webp"
 
 # ---------------------------------------------------------------- schema
 ORG_ID = C.SITE_URL + "/#org"
@@ -213,11 +249,11 @@ def faq_schema(faqs):
                             "acceptedAnswer": {"@type": "Answer", "text": re.sub(r"<[^>]+>", "", a)}}
                            for q, a in faqs]}
 
-def service_schema(s, path):
+def service_schema(s, path, image=None):
     return {"@context": "https://schema.org", "@type": "Service", "@id": url(path) + "#service",
             "name": s["name"], "serviceType": s["name"], "description": s["description"],
             "provider": {"@id": ORG_ID}, "url": url(path),
-            "areaServed": AREA_SERVED}
+            "areaServed": AREA_SERVED} | ({"image": url(og_image(image))} if image else {})
 
 # ---------------------------------------------------------------- components
 def crumbs_html(crumbs):
@@ -250,7 +286,8 @@ CTA_IMAGES = ["sea-glass-house-01", "owers-house-04", "the-lookout-01", "quay-ho
 def cta_band(title="Tell us about the house you want to build.", text=None, image=None, contact="/contact/"):
     text = text or (f"{C.RESPONSE_PROMISE}. The first conversation is free. Nothing you send is published, and it is shared only with the service providers named in our privacy notice.")
     image = image or CTA_IMAGES[len(PAGES) % len(CTA_IMAGES)]
-    return f'''<section class="cta-band" aria-labelledby="cta-h">{picture(image, "", "100vw")}
+    credit = f'<span class="credit">{esc(img_credit(image))}</span>' if is_uae(image) else ""
+    return f'''<section class="cta-band" aria-labelledby="cta-h">{picture(image, "", "100vw")}{credit}
 <div class="wrap"><div><h2 id="cta-h">{esc(title)}</h2><p style="margin-top:1em;max-width:46ch">{esc(text)}</p></div>
 <div class="actions"><a class="btn" href="{contact}">{esc(CTA_LABEL)}</a><a class="btn btn--ghost" href="{wa_link()}" rel="noopener">WhatsApp us</a></div></div></section>'''
 
@@ -273,7 +310,7 @@ def wa_page_link(tpl, topic):
 def banner(crumbs, h1, lede=None, image="quay-house-01", credit=None, extra=""):
     l = f'<p class="lede">{lede}</p>' if lede else ""
     c = f'<span class="credit">{esc(credit)}</span>' if credit else ""
-    return (f'<section class="banner">{picture(image, "", "100vw", eager=True)}'
+    return (f'<section class="banner">{picture(image, img_alt(image), "100vw", eager=True)}'
             f'<div class="wrap">{crumbs_html(crumbs)}<h1>{h1}</h1>{l}{extra}</div>{c}</section>')
 
 def video_html(provider, vid, poster_base, title):
@@ -549,8 +586,9 @@ def deprioritise_slides(body):
     return re.sub(r'<div class="slides">.*?</div>', fix, body, count=1, flags=re.S)
 
 def page(path, title, description, body, crumbs=None, schema=None, og=None, og_type="website",
-         preload=None, noindex=False, hero=False, canonical=None, bare=False):
-    """canonical: another path this page points search engines to (default: the page itself).
+         preload=None, noindex=False, hero=False, canonical=None, bare=False, images=None):
+    """images: image bases listed for this page in sitemap.xml (<image:image>), e.g. the hero of an area or article.
+    canonical: another path this page points search engines to (default: the page itself).
     bare: no site header, footer, action bar, site script or analytics, for pages shown inside another site's
     iframe (the embeddable calculator). Bare pages carry body class "bare"."""
     crumbs = crumbs or [("Home", "/")]
@@ -628,10 +666,13 @@ def page(path, title, description, body, crumbs=None, schema=None, og=None, og_t
         FRAMEABLE.append(path)
     if not noindex:
         PAGES.append(path)
+        if images:
+            PAGE_IMAGES[path] = [img_largest(b) for b in images]
 
 PAGES = []          # indexable pages (sitemap)
 ALL_PAGES = []      # every English page, for the generated _headers file
 FRAMEABLE = []      # bare pages that other sites may show in an iframe
+PAGE_IMAGES = {}    # path -> image URLs for the image sitemap
 
 def page_head(crumbs, h1, lede=None, extra=""):
     l = f'<p class="lede">{lede}</p>' if lede else ""
@@ -677,15 +718,17 @@ def page_lastmod(path, posts):
     return SITE_DATE
 
 def write_sitemap(posts=()):
-    # Keep this exact <url><loc/><lastmod/><priority/></url> shape: tools/i18n.py apply parses it to add
-    # the hreflang alternates and the translated URLs.
+    # Keep this exact <url><loc/><lastmod/><priority/>[<image:image>...]</url> shape: tools/i18n.py apply parses it
+    # to add the hreflang alternates and the translated URLs, and copies the image entries to every language.
     items = []
     for p in sorted(set(PAGES)):
         pri = "1.0" if p == "/" else ("0.9" if p.count("/") == 3 and p.startswith("/services/") else
                                       "0.8" if p.startswith("/insights/") else "0.7")
-        items.append(f"<url><loc>{esc(url(p))}</loc><lastmod>{page_lastmod(p, posts)}</lastmod><priority>{pri}</priority></url>")
+        imgs = "".join(f"<image:image><image:loc>{esc(url(i))}</image:loc></image:image>" for i in PAGE_IMAGES.get(p, []))
+        items.append(f"<url><loc>{esc(url(p))}</loc><lastmod>{page_lastmod(p, posts)}</lastmod><priority>{pri}</priority>{imgs}</url>")
     (DIST / "sitemap.xml").write_text(
-        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+        'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">'
         + "".join(items) + "</urlset>\n", encoding="utf-8")
 
 LANG_PREFIXES = ("", "/ar", "/ru", "/zh", "/hi")   # tools/i18n.py writes a copy of every page under each prefix

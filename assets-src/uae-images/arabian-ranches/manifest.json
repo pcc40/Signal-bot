@@ -1,0 +1,35 @@
+[
+ {
+  "file": "arabian-ranches-01.jpg",
+  "role": "hero",
+  "shows": "Photograph of Mediterranean-style Arabian Ranches villas reflected in a lake, with flowers in the foreground.",
+  "credit": "Image: Emaar",
+  "source_page": "https://www.emaar.com/en/our-communities/arabian-ranches",
+  "image_url": "https://uae-cms.emaar.com/uploads/1268_hero_Image_70e56c5ea9_prod.jpg",
+  "w": 2400,
+  "h": 1600,
+  "is_render": false
+ },
+ {
+  "file": "arabian-ranches-02.jpg",
+  "role": "support",
+  "shows": "Elevated photograph at sunset over rows of Arabian Ranches villas, a lake and the golf course.",
+  "credit": "Image: Emaar",
+  "source_page": "https://www.emaar.com/en/arabian-ranches-golf-club",
+  "image_url": "https://uae-cms.emaar.com/uploads/Arabian_Ranches_desk_673072522c_prod.jpg",
+  "w": 1620,
+  "h": 600,
+  "is_render": false
+ },
+ {
+  "file": "arabian-ranches-03.jpg",
+  "role": "support",
+  "shows": "Render of a Spanish-style villa exterior with tiled roof and garage at Aseel, Arabian Ranches.",
+  "credit": "Image: Emaar",
+  "source_page": "https://www.emaar.com/en/properties/aseel",
+  "image_url": "https://uae-cms.emaar.com/uploads/1330_property_Hero_Image_10b8ba4763_prod.jpg",
+  "w": 2400,
+  "h": 1699,
+  "is_render": true
+ }
+]

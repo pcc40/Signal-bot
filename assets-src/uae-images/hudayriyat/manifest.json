@@ -1,0 +1,57 @@
+[
+ {
+  "file": "hudayriyat-01.png",
+  "role": "hero",
+  "shows": "Aerial view of terracotta-roofed villas and townhouses on Hudayriyat Island at sunset, with the hillside residences and sea beyond",
+  "credit": "Image: Modon (Hudayriyat Island)",
+  "source_page": "https://www.modon.ae/real-estate/hudayriyat-island",
+  "image_url": "https://www.modon.ae/images/modoncorporatelibraries/real-estate/hudayriyat-island-hero.png",
+  "w": 1404,
+  "h": 747,
+  "is_render": true
+ },
+ {
+  "file": "hudayriyat-02.jpg",
+  "role": "support",
+  "shows": "Villa terrace in Wadeem Gardens looking over landscaped streets towards a Hudayriyat landmark building",
+  "credit": "Image: Modon (Wadeem Gardens, Hudayriyat Island)",
+  "source_page": "https://www.modon.ae/real-estate/wadeem-gardens",
+  "image_url": "https://www.modon.ae/images/modoncorporatelibraries/real-estate/wadeem/wadeem-gardens-hero-banner-desktop.jpg",
+  "w": 1920,
+  "h": 1080,
+  "is_render": true
+ },
+ {
+  "file": "hudayriyat-03.jpg",
+  "role": "support",
+  "shows": "Tree-lined residential street and park with a fountain and play area among villas in Wadeem",
+  "credit": "Image: Modon (Wadeem, Hudayriyat Island)",
+  "source_page": "https://www.modon.ae/media-centre/details/2025/07/01/modon-launches-wadeem--its-first-residential-plots-communityon-hudayriyat-island",
+  "image_url": "https://www.modon.ae/images/modoncorporatelibraries/news/modon-launches-wadeem-its-first-residential-plots-community-on-hudayriyat-island246c0b2c-5614-422a-aba6-af80f5805408.jpg",
+  "w": 1920,
+  "h": 1080,
+  "is_render": true
+ },
+ {
+  "file": "hudayriyat-04.jpg",
+  "role": "support",
+  "shows": "Shaded green walkway with a fitness area running between villas in Wadeem",
+  "credit": "Image: Modon (Wadeem, Hudayriyat Island)",
+  "source_page": "https://www.modon.ae/media-centre/details/2025/07/04/modon-sells-out-wadeem--the-first-residential-plots-on-hudayriyat-island--within-72-hours",
+  "image_url": "https://www.modon.ae/images/modoncorporatelibraries/news/modon-sells-out-wadeem-the-first-residential-plots-on-hudayriyat-island-within-72-hours.jpg",
+  "w": 1920,
+  "h": 1080,
+  "is_render": true
+ },
+ {
+  "file": "hudayriyat-05.jpg",
+  "role": "support",
+  "shows": "Landscaped boulevard with footpath and cycle lane past townhouses in Wadeem Gardens",
+  "credit": "Image: Modon (Wadeem Gardens, Hudayriyat Island)",
+  "source_page": "https://www.modon.ae/media-centre/details/2026/09/30/modon-launches-phase-one-of-wadeem-gardens--abu-dhabi-s-first-villa-community-to-offer-up-to-75--off-plan-home-finance-with-adib",
+  "image_url": "https://www.modon.ae/images/modoncorporatelibraries/news/modon-launches-phase-one-of-wadeem-gardens-abu-dhabi-s-first-villa-community-to-offer-up-to-75-off-plan-home-finance-with-adib.jpg",
+  "w": 1920,
+  "h": 1080,
+  "is_render": true
+ }
+]
