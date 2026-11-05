@@ -11,6 +11,7 @@ from email.utils import format_datetime
 ROOT = Path(__file__).parent
 sys.path.insert(0, str(ROOT / "src"))
 import config as C
+import critical
 import markdown, yaml
 
 DIST = ROOT / "dist"
@@ -606,7 +607,7 @@ def page(path, title, description, body, crumbs=None, schema=None, og=None, og_t
 <link rel="preload" href="/assets/fonts/instrument-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/instrument-500.woff2" as="font" type="font/woff2" crossorigin>
 {pre}
-<link rel="stylesheet" href="/assets/site.css?v={CSS_HASH}">
+{critical.css_tags(path)}
 {ld}
 {"" if bare else analytics()}
 </head>

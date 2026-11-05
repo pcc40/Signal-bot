@@ -266,6 +266,17 @@ for f in files:
     main_links = {h.split("#")[0] for h in re.findall(r'href="(/[^"?]*)', main)} - {path, ""}
     if not noindex and len(main_links) < 3 and path not in ("/privacy/", "/terms/", "/contact/"):  # utility pages
         warns.append(f"only {len(main_links)} internal links in the main content of {rel}")
+    # every article: at least three other articles, a service page and an area page (src/related.py)
+    if re.fullmatch(r"/insights/[a-z0-9-]+/", path):
+        arts = {h for h in main_links if re.fullmatch(r"/insights/[a-z0-9-]+/", h)}
+        if len(arts) < 3:
+            errors.append(f"article links to {len(arts)} other articles (minimum 3): {rel}")
+        if not any(h.startswith("/services/") and h != "/services/" for h in main_links):
+            errors.append(f"article links to no service page: {rel}")
+        if not any(h.startswith("/areas/") and h != "/areas/" for h in main_links):
+            errors.append(f"article links to no area page: {rel}")
+        if 'class="keypoints related-reading"' not in main:
+            errors.append(f"article has no Related reading block: {rel}")
     for h in {h.split("#")[0] for h in re.findall(r'href="(/[^"?]*)', s)}:
         if h != path:
             inbound.setdefault(h, set()).add(path)
@@ -335,6 +346,13 @@ for name in ("llms.txt", "llms-full.txt"):
 for a in ("/assets/logo.png", "/favicon.svg", "/apple-touch-icon.png", "/site.webmanifest"):
     if not os.path.exists(D + a):
         errors.append(f"missing {a}")
+
+# first-screen CSS (src/critical.json): a stale file is safe (pages fall back to the blocking stylesheet) but slower
+import critical
+for sheet in ("site.css", "site-rtl.css"):
+    if critical.critical_css(sheet, "/") is None:
+        warns.append(f"src/critical.json is missing or out of date for {sheet}: pages use the render-blocking stylesheet. "
+                     "Run python3 build.py && python3 tools/i18n.py apply && node tools/make_critical.js, then build again")
 
 print(f"Audited {len(files)} pages: {len(errors)} errors, {len(warns)} warnings")
 for e in errors: print("ERROR", e)
