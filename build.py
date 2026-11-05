@@ -385,8 +385,8 @@ def header(path):
     l2 = "".join(f'<li><a href="/services/{s}/">{esc(S[s]["short"])}</a></li>' for s in col2)
     mega = (f'<div class="mega"><div><h4>For your project</h4><ul>{l1}</ul></div>'
             f'<div><h4>At every stage</h4><ul>{l2}</ul></div>'
-            f'<a class="mega-feature" href="/case-studies/island-e-waterfront-villa/">{picture("saqqara-01", "", "240px")}'
-            f'<small class="mega-credit">Photo: Saqqara, a UK house built by P Chapman Construction</small>'
+            f'<a class="mega-feature" href="/case-studies/island-e-waterfront-villa/">{picture("uae-island-e-01", "", "240px")}'
+            f'<small class="mega-credit">{esc(img_credit("uae-island-e-01"))}. For illustration</small>'
             f'<span>Worked project example (hypothetical): how we would manage an Island E villa</span></a></div>')
     svc_cur = cur if path.startswith("/services/") else ""
     return f'''<a class="skip" href="#main">Skip to content</a>

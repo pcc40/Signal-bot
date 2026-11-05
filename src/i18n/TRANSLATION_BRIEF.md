@@ -22,6 +22,7 @@ Eastbridge, Eastbridge Strategic Partners, P Chapman Construction, Philip Chapma
 in running text, but keep Latin where it stands alone), WhatsApp, Google, Instagram, RIBA, LABC, NHBC, RICS, AED, GBP, £,
 sq ft, project and house names (Saqqara, Sea Glass House, Morvoren, St Michael's Hotel and Spa, etc.) and UK place names
 (Cornwall, Falmouth, Feock, Rock, Polzeath, St Ives...). Meydan Free Zone licence numbers.
+Developer and place names in credits stay in Latin script.
 
 ## Dubai names: use the standard local-language form
 Dubai, Abu Dhabi, Nakheel, Emaar, Dubai Municipality, Dubai Development Authority (DDA), Trakhees, Palm Jumeirah,

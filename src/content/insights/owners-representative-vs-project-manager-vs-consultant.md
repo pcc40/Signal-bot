@@ -126,7 +126,7 @@ There is no published benchmark for owner's representative fees in Dubai; our gu
 
 ## What should you ask before appointing an owner's representative?
 
-If you decide you want one, test the fit before you sign. These are the questions we would ask in your position:
+If you decide you want one, test the fit before you sign; our guide to [choosing a client-side project manager](/insights/how-to-choose-client-side-project-manager/) goes into more detail. These are the questions we would ask in your position:
 
 - **Who else pays you on this project?** The only acceptable answer is nobody. Ask whether they receive referral fees, commissions or any other benefit from consultants, contractors or suppliers.
 - **What have you built, and from which side?** Experience on the contractor's side, the consultant's side or the developer's side gives different strengths. Ask for specifics, and be wary of anyone who claims experience they cannot describe in detail.

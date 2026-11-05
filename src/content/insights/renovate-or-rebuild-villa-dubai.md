@@ -100,7 +100,7 @@ If the plot's rules allow a larger villa, say 8,000 sq ft instead of 6,000, the 
 
 ## How long does each option take?
 
-Renovation is quicker by a wide margin. The renovation contractor's guide puts interior upgrades at around two to three months, kitchens and bathrooms at four to six months, and structural changes, extensions or a complete redesign at six months or longer. Approvals for a renovation, where they are needed, typically take a few weeks.
+Renovation is quicker by a wide margin. The renovation contractor's guide puts interior upgrades at around two to three months, kitchens and bathrooms at four to six months, and structural changes, extensions or a complete redesign at six months or longer. Approvals for a renovation, where they are needed, typically take a few weeks. Our [villa renovation timeline](/insights/villa-renovation-timeline-dubai/) shows where those months go, phase by phase.
 
 A rebuild runs through the full sequence. The phase estimates we use, the only phase-by-phase breakdown we have found (published by a property information website), are design 3–4 months, approvals 2–3, construction 8–14 and snagging 1–2: about 14–23 months end to end, less where phases overlap, and 24–36 months for a custom luxury villa. Engel & Völkers puts most villas at 12–24 months from approval to completion, and Optimal Engineering typically allows 12–18 months for construction.
 

@@ -306,7 +306,7 @@ A Looker Studio dashboard (free) on GA4, Search Console and the pipeline Sheet. 
 
 ## 11. Daily SEO engine (scheduled task)
 
-**Already built:** `AUTOMATION.md` is the full playbook. Daily: build, audit (`tools/seo_audit.py`, must report 0 errors), live checks, visibility check into `reports/visibility.csv`, competitor watch, freshness updates. Tuesday and Friday: one researched article each from `src/content/TOPICS.md`, internal links, translation into Arabic, Russian, Chinese and Hindi through `tools/i18n.py`, commit and push, then `tools/indexnow.py`. Monthly: trend review and three off-site actions. A report to Phil of eight lines or fewer, every run.
+**Already built:** `AUTOMATION.md` is the full playbook. Daily: build, audit (`tools/seo_audit.py`, must report 0 errors), live checks, visibility check into `reports/visibility.csv`, competitor watch, freshness updates. Tuesday, Thursday and Saturday: one researched article each from `src/content/TOPICS.md` (Monday: deepen one existing page; every second Monday: a new area page), internal links, translation into Arabic, Russian, Chinese and Hindi through `tools/i18n.py`, commit and push, then `tools/indexnow.py`. Monthly: trend review and three off-site actions. A report to Phil of eight lines or fewer, every run.
 
 **Status (31 Oct 2026):** the Claude GitHub app can reach `pcc40/eastbridge-website` and the daily scheduled task "Eastbridge SEO engine" (06:38 Dubai) runs in full mode against it. Pushes only go live once Netlify is linked to the repository (section 1, step 2).
 

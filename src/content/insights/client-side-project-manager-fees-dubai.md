@@ -127,7 +127,7 @@ Points to agree in writing:
 
 ## What questions should you ask any project manager about fees?
 
-Ask every firm the same questions, including us, and ask for the answers in writing.
+Ask every firm the same questions, including us, and ask for the answers in writing. Fees are only part of the choice: our guide to [choosing a client-side project manager](/insights/how-to-choose-client-side-project-manager/) covers independence, who does the work and how to compare firms.
 
 1. What exactly is in the scope of works, and what is outside it?
 2. Is the fee fixed, monthly or a percentage? If a percentage, what is it applied to, and what does "construction cost" include?

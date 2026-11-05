@@ -148,7 +148,7 @@ In our experience, a brief that starts as "kitchen, bathrooms and finishes" and 
 
 Every extra month on a renovation costs you three ways. The contractor's preliminaries, the cost of running the site, continue: Turner & Townsend's 2025 UAE market intelligence puts preliminaries in Dubai at 12% of construction cost on a 2,500 m² project. Your rent and storage continue if you have moved out. And the house is unusable for another month.
 
-Time is lost in predictable places: discoveries that need redesign, late decisions on finishes, design changes after the NOC that need resubmitting, and long-lead items such as glazing, joinery and imported stone ordered too late. Published guides put larger projects with structural work at six months or more on site, before approvals.
+Time is lost in predictable places: discoveries that need redesign, late decisions on finishes, design changes after the NOC that need resubmitting, and long-lead items such as glazing, joinery and imported stone ordered too late. Published guides put larger projects with structural work at six months or more on site, before approvals. Our [villa renovation timeline](/insights/villa-renovation-timeline-dubai/) breaks the months down phase by phase.
 
 Living in the villa during the works rarely saves money once services, waterproofing or structure are involved. The contractor has to phase the job around you, protect occupied rooms and work slower, and you pay for all of it in preliminaries.
 

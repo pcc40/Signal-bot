@@ -52,7 +52,7 @@ We spent 21 years on the contractor's side of premium residential work in the UK
 
 ## Why do villa renovations run over budget?
 
-Renovation budgets leak through the gaps between what was priced and what is built. On a new build the drawings describe almost everything. On a renovation the existing villa hides things, and every surprise becomes a price agreed after the contract is signed, when the owner has the least bargaining power.
+Renovation budgets leak through the gaps between what was priced and what is built. On a new build the drawings describe almost everything. On a renovation the existing villa hides things, and every surprise becomes a price agreed after the contract is signed, when the owner has the least bargaining power. Our [step-by-step plan for a villa renovation in Dubai](/insights/how-to-plan-a-villa-renovation-dubai/) shows the order that avoids most of the mistakes below.
 
 Published figures show how wide the range already is before anything goes wrong. [Property Finder](https://www.propertyfinder.ae/blog/villa-renovation-dubai/) and [a Dubai renovation contractor's 2026 guide](https://smartrenovation.ae/villa-renovation-in-dubai-complete-2026-guide-to-costs-timeline-permits/) give different bands for the same kinds of work, which is one reason we never let an owner budget from a single headline rate. Our [villa renovation cost guide](/insights/villa-renovation-cost-dubai/) sets the sources side by side.
 

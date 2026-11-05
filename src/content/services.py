@@ -430,7 +430,7 @@ SERVICES = [
 <p>Snagging and handover are one stage of our full client-side service, on a villa we have represented you on from the start. They are not sold on their own, and there is no separate snagging fee.</p>
 <h2>How this differs from a one-visit snag report</h2>
 <p>A snagging inspection firm usually visits once, near the end, and reports what it can see on the day. That is a useful service, and a different one. Because we have followed the villa through construction, we know what sits behind the finishes, which areas gave trouble on the way, and what the contract says about completion, retention and defects. So our work does not stop at a report: it runs through close-out of every item, the handover documents, the release of retention and the defects liability period.</p>
-<p>Doing a first pass yourself? Download our free <a href="/guides/villa-snagging-checklist/">villa snagging checklist</a>: systems and rooms with tick boxes and a severity column, the handover documents to collect, and the defects liability periods with their legal sources.</p>""",
+<p>Doing a first pass yourself? Download our free <a href="/guides/villa-snagging-checklist/">villa snagging checklist</a>: systems and rooms with tick boxes and a severity column, the handover documents to collect, and the defects liability periods with their legal sources. After handover, our guide to <a href="/insights/defects-liability-period-uae/">the defects liability period in the UAE</a> covers what to do in the first year.</p>""",
   "does": [
    "Pre-handover inspection, room by room and system by system",
    "Witnessing of commissioning: air conditioning, water, pool, lighting controls, security",

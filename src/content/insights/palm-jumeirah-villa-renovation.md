@@ -74,7 +74,7 @@ The point we make to every owner is simple. If you are not sure whether somethin
 
 ## In what order should a Palm Jumeirah renovation run?
 
-A clean sequence saves months. The one we work to looks like this.
+A clean sequence saves months. The one we work to looks like this; our [plan for a villa renovation in Dubai](/insights/how-to-plan-a-villa-renovation-dubai/) sets out the same steps for any community.
 
 1. **Brief and budget.** Agree what you want, what you will spend, and what you would cut first if the numbers come in high.
 2. **Condition survey and opening-up.** Before any design is fixed, get the existing villa properly inspected: roofs, basement, wet areas, pool, MEP plant and distribution. Where it matters, open up small areas.
