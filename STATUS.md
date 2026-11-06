@@ -46,6 +46,7 @@ Emails are sent from philip@eastbridgestrategicpartners.com through Bird (sendin
 | 1 | Late Oct, sent by Phil | 8 firms (ANARCHITECT, CK, SAOTA, Bluehaus, Kat Black, Shawa, Unique Properties, Hadef) | `business/outreach-drafts-ready.md` |
 | 2 | 5 Nov 2026, 20:31 UTC | 20 sent; Galadari bounced (spam filter), the rest delivered or retrying | `business/outreach-batch-2.md`, `business/outreach-batch-2-log.md` |
 | 3 | 6 Nov 2026, 07:16 UTC | 23 sent, 23 delivered (architecture and design firms from the research doc) | `business/outreach-batch-3.md`, `business/outreach-batch-3-log.md` |
+| 4 | 6 Nov 2026, 13:08 UTC (#1–2); #3–20 scheduled Mon 9 Nov 09:05 Dubai | 2 sent and delivered; 18 held by Bird's 50-a-day limit (each send counts 2 with the BCC) | `business/outreach-batch-4.md`, `business/outreach-batch-4-log.md` |
 
 **Follow-ups:** created as Outlook drafts by the Claude Desktop chat (Chrome), as replies to Phil's BCC copies. Phil reviews and sends them. They go only to firms that have not replied, bounced or opted out.
 | Batch | Day-4 drafts | Day-10 (final) drafts |
@@ -83,4 +84,4 @@ On each sweep:
    - "Eastbridge outreach": section 4 (totals, replies, next follow-up date).
    - "Eastbridge open items": section 5 (count and the top item).
 3. Open Outlook (philip@) in Chrome and list new replies from any firm in batches 1–3, plus any website enquiries (Netlify notifications). For each genuine reply, draft an answer in Outlook (never send) and record it in the B7 outreach row. Put follow-up draft dates in the diary.
-4. Feeds master line for B7 (40 words or fewer): "Eastbridge: site live; 51 partner emails out (1 bounce); follow-up drafts 9, 10 and 16 Nov; replies: 1 (Aparna Kaushik, not now). Next: Phil sends follow-ups, answer replies within a day, verify the Google Business Profile."
+4. Feeds master line for B7 (40 words or fewer): "Eastbridge: site live; 51 partner emails out (1 bounce); batch 4 (18) sends Mon 9 Nov; follow-up drafts 9, 10 and 16 Nov; replies: 1 (Aparna Kaushik, not now). Next: Phil sends follow-ups, answer replies within a day, verify the Google Business Profile."
