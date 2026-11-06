@@ -8,7 +8,7 @@ Raw URL for Master Control: `https://raw.githubusercontent.com/pcc40/eastbridge-
 - Any Code session that changes the site or sends outreach updates the relevant section and the *Last updated* line.
 - Master Control does not edit this file. It mirrors it into tracker B7 (see the last section).
 
-Last updated: 6 November 2026, by the Code session (website build and outreach).
+Last updated: 6 November 2026, by the Code session (website build and outreach; first reply logged).
 
 ---
 
@@ -53,7 +53,8 @@ Emails are sent from philip@eastbridgestrategicpartners.com through Bird (sendin
 | 2 | Mon 9 Nov, 09:20 Dubai | Mon 16 Nov, 09:20 Dubai |
 | 3 | Tue 10 Nov, 09:20 Dubai | Mon 16 Nov, 09:20 Dubai |
 
-**Replies so far:** none recorded. Update this line, or the Master Control row, when one arrives.
+**Replies so far:**
+- 6 Nov: **Aparna Kaushik Design Group** (batch 2, #2). Polite holding reply from Nupur Kapoor, EA to Ms. Kaushik: they will review and come back if there is an opportunity. Status: *replied, not now*. No follow-ups; one light check-in in about three months (early Feb 2027).
 **Next batch:** research 30–50 more firms (Abu Dhabi studios, villa agents, family offices and relocation firms), excluding everyone above. Send about 20 a day.
 
 ## 5. Open items for Phil
@@ -82,4 +83,4 @@ On each sweep:
    - "Eastbridge outreach": section 4 (totals, replies, next follow-up date).
    - "Eastbridge open items": section 5 (count and the top item).
 3. Open Outlook (philip@) in Chrome and list new replies from any firm in batches 1–3, plus any website enquiries (Netlify notifications). For each genuine reply, draft an answer in Outlook (never send) and record it in the B7 outreach row. Put follow-up draft dates in the diary.
-4. Feeds master line for B7 (40 words or fewer): "Eastbridge: site live; 51 partner emails out (1 bounce); follow-up drafts 9, 10 and 16 Nov; replies: <n>. Next: Phil sends follow-ups, answer replies within a day, verify the Google Business Profile."
+4. Feeds master line for B7 (40 words or fewer): "Eastbridge: site live; 51 partner emails out (1 bounce); follow-up drafts 9, 10 and 16 Nov; replies: 1 (Aparna Kaushik, not now). Next: Phil sends follow-ups, answer replies within a day, verify the Google Business Profile."

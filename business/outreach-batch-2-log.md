@@ -7,7 +7,7 @@ Emails and sources: `business/outreach-batch-2.md`. Bird tag: `campaign:outreach
 | # | Firm | Address | Status (20:40 UTC) |
 |---|---|---|---|
 | 1 | B1 Properties | info@b1properties.ae | Delivered |
-| 2 | Aparna Kaushik Design Group | enquiries@aparnakaushik.com | Delivered |
+| 2 | Aparna Kaushik Design Group | enquiries@aparnakaushik.com | Delivered. **Replied 6 Nov** (Nupur Kapoor, EA to Ms. Kaushik): will review and revert if there is an opportunity. No follow-ups; check in early Feb 2027. |
 | 3 | Al Mujassam Architects | info@almujassam.ae | Delivered |
 | 4 | Settle Architects | info@settlecreate.com | Delivered |
 | 5 | B8 Architecture and Design Studio | weare@b8architecture.com | Delivered |
