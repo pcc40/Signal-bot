@@ -79,7 +79,7 @@ If you are unsure whether a piece of work needs approval, assume it does until t
 
 ## Step 3: Survey the villa before anything is designed
 
-An older villa hides its condition behind finishes. Air-conditioning, wiring, plumbing, drainage and waterproofing are the usual unknowns, and structure sometimes is too. A condition survey arranged through the right specialists, with some opening-up of walls, ceilings and wet areas, answers those questions while answers are still cheap.
+An older villa hides its condition behind finishes. Air-conditioning, wiring, plumbing, drainage and waterproofing are the usual unknowns, and structure sometimes is too. A condition survey arranged through the right specialists, with some opening-up of walls, ceilings and wet areas, answers those questions while answers are still cheap. Our article on [rewiring and replumbing an older Dubai villa](/insights/older-villa-mep-renovation/) covers the services survey in detail.
 
 Our guide to [villa renovation mistakes](/insights/villa-renovation-mistakes-dubai/) puts skipping this step near the top of the list, for a simple reason: whatever the survey does not find, the strip-out will, and by then the contractor is on site and pricing the answer.
 

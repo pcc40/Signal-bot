@@ -123,7 +123,7 @@ From the builder's side, the jobs where we told a client to stop and think again
 Rebuilding tends to make sense when:
 
 - **The structure or waterproofing is failing.** Cracking, corroded reinforcement, persistent leaks through roofs, terraces or basements. Repairs are possible but expensive, and they leave you with an old building.
-- **The services are finished.** Replacing cooling, electrics, plumbing and drainage throughout means opening every wall and ceiling. At that point most of the renovation cost is demolition and making good.
+- **The services are finished.** Replacing cooling, electrics, plumbing and drainage throughout means opening every wall and ceiling. At that point most of the renovation cost is demolition and making good. See [rewiring and replumbing an older Dubai villa](/insights/older-villa-mep-renovation/) for how to find out before you decide.
 - **The plot allows a much larger or better villa.** If the permitted built-up area, height or layout allows meaningfully more house, the rebuild buys space a renovation cannot.
 - **The layout cannot work.** Moving stairs, changing floor-to-ceiling heights or opening up structural walls on every floor is a rebuild by another name.
 

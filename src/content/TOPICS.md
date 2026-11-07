@@ -13,7 +13,7 @@
 - [x] sourcing-materials-abroad-dubai-villa | Sourcing materials abroad for a Dubai villa | source materials abroad villa dubai | samples, lead times, shipping, customs and checks on arrival; no supplier commissions
 # UAE images and content brief (reports/brief-uae-images-and-content-2026-11-05.md, section 3.4), 5 Nov 2026: publish these next, in this order, ahead of everything below. Three articles a week (Tue/Thu/Sat Dubai); each uses at least one UAE library image and a table or diagram.
 - [x] how-to-choose-client-side-project-manager | How to choose a client-side project manager for your villa | hire project manager villa dubai | independence questions to ask anyone, including us
-- [ ] older-villa-mep-renovation | Rewiring and replumbing an older Dubai villa | villa mep renovation dubai | what you find behind the walls and how contractors price the unknown
+- [x] older-villa-mep-renovation | Rewiring and replumbing an older Dubai villa | villa mep renovation dubai | what you find behind the walls and how contractors price the unknown
 - [x] villa-renovation-timeline-dubai | How long a villa renovation takes in Dubai | villa renovation timeline dubai | NOC, permit and long-lead items set the date, not the site work
 - [x] how-to-plan-a-villa-renovation-dubai | How to plan a villa renovation in Dubai | plan villa renovation dubai | hub linking all renovation content; linked from the renovation service page
 - [ ] emaar-community-villa-renovation | Renovating in an Emaar community: approvals and sequence | emaar noc villa renovation | developer NOC before authority permit; contractor access rules

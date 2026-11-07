@@ -154,7 +154,7 @@ Living in the villa during the works rarely saves money once services, waterproo
 
 ## How do you keep a villa renovation on budget?
 
-- **Survey before you design.** Commission a proper condition survey of roofs, wet areas, basement, pool and MEP, and open up small areas where it matters. It is the cheapest money on the project.
+- **Survey before you design.** Commission a proper condition survey of roofs, wet areas, basement, pool and MEP, and open up small areas where it matters. It is the cheapest money on the project. Our guide to [rewiring and replumbing an older villa](/insights/older-villa-mep-renovation/) sets out what to test and open up.
 - **Price the design at concept stage.** Get an early cost check before the drawings are finished, so the brief and budget can be adjusted while it is cheap to do so.
 - **Turn provisional sums into scope.** If the bid carries an allowance for "waterproofing repairs" or "MEP remedials", the real cost is still unknown. Investigate before signing, or at least agree rates.
 - **Compare bids like-for-like.** Normalise exclusions, allowances and preliminaries before looking at totals. Our guide to [choosing a villa contractor in Dubai](/insights/how-to-choose-a-villa-contractor-dubai/) explains how.
