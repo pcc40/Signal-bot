@@ -90,6 +90,7 @@ POST_IMG = {
     "emirates-hills-villa-cost": "uae-emirates-hills-01",
     "emaar-community-villa-renovation": "uae-dubai-hills-estate-03",
     "defects-liability-period-uae": "uae-dubai-hills-estate-02",
+    "older-villa-mep-renovation": "uae-arabian-ranches-02",
     # general Dubai
     "how-to-build-a-villa-in-dubai": "uae-dubai-skyline-villas-01",
     "how-to-choose-client-side-project-manager": "uae-dubai-skyline-villas-01",
@@ -105,7 +106,6 @@ POST_IMG = {
     "how-long-to-build-a-villa-dubai": "uae-dubai-hills-estate-05",
     "stalled-villa-project-dubai": "uae-palm-jumeirah-02",
     "design-build-vs-separate-architect-villa": "uae-dubai-hills-estate-02",
-    "older-villa-mep-renovation": "uae-jumeirah-islands-03",
     # the builder's view: UK photographs, captioned as P Chapman Construction's work
     "what-the-contractor-knows": "quay-house-02",
     "how-to-choose-a-villa-contractor-dubai": "gooden-heane-04",
