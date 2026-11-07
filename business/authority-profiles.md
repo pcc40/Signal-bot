@@ -330,3 +330,12 @@ Philip Chapman
 - What to do with the answers: compare bids like for like, keep a written change log, and take advice from a UAE-qualified lawyer before signing.
 
 **Word check.** Each pitch body above is about 150 words (excluding greeting and sign-off) and the bio is 50 words (counted 7 November 2026). None names a UAE project or client.
+
+
+## Press pitch log
+
+| Outlet | Sent | To | Follow-up due | Result |
+|---|---|---|---|---|
+| Construction Week ME | 7 Nov 2026 | julianne.tolentino@itp.com, cc shehzin.shaikh@itp.com | 14 Nov 2026 | awaiting |
+| Gulf News (Property) | 7 Nov 2026 | readers@gulfnews.com | 14 Nov 2026 | awaiting |
+| Khaleej Times | 7 Nov 2026 | letters@khaleejtimes.com, cc news@khaleejtimes.com | 14 Nov 2026 | awaiting |

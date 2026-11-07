@@ -67,7 +67,7 @@ Emails are sent from philip@eastbridgestrategicpartners.com through Bird (sendin
 5. Search Console: request indexing for the new key pages.
 6. Send test submissions from the contact, estimate and checklist forms, and check that each arrives in Netlify Forms and by email.
 7. Native-speaker check of the Russian and Chinese place names.
-8. Create the third-party profiles in `business/authority-profiles.md` (LinkedIn page, Bing Places, Apple Business, Houzz, 2GIS, Yellow Pages UAE first) and send the three press pitches in its section 10.
+8. Create the third-party profiles in `business/authority-profiles.md` (LinkedIn page, Bing Places, Apple Business, Houzz, 2GIS, Yellow Pages UAE first) The three press pitches in its section 10 were SENT on 7 Nov 2026 (Construction Week to julianne.tolentino@itp.com cc shehzin.shaikh@itp.com; Gulf News readers@; Khaleej Times letters@ cc news@). One follow-up each on 14 Nov if no reply, then stop.
 9. Start the weekly AI visibility run: paste the prompt in `reports/ai-visibility/README.md` (section 3) into Claude Desktop each Sunday.
 10. Quay House case study: send the facts (scope, dates, role of P Chapman Construction, authorised photographs) so it can be written.
 
