@@ -8,7 +8,7 @@ Raw URL for Master Control: `https://raw.githubusercontent.com/pcc40/eastbridge-
 - Any Code session that changes the site or sends outreach updates the relevant section and the *Last updated* line.
 - Master Control does not edit this file. It mirrors it into tracker B7 (see the last section).
 
-Last updated: 6 November 2026, by the Code session (website build and outreach; first reply logged).
+Last updated: 7 November 2026, by the Code session (AI visibility baseline, authority profiles kit, competitor watch, 30/60/90-day plan in section 8).
 
 ---
 
@@ -37,6 +37,7 @@ Eastbridge Strategic Partners L.L.C-FZ (Meydan Free Zone licence 2540153.01) is 
 | Indexing | Google first showed impressions on 3 Nov 2026. Search Console is verified (GSC_VERIFICATION in `src/config.py`). The sitemap has 460 URLs and 215 image entries. IndexNow resubmitted all 460 URLs on 6 Nov. |
 | Analytics | GA4 G-120XT9N6XB, consent-gated. **Phil to do:** in GA4, unmark `generate_lead` and mark `enquiry_success` as the key event. |
 | Next topics | See `src/content/TOPICS.md` (top of the backlog). |
+| AI visibility | 40 fixed buyer prompts in `reports/ai-visibility/` (method and weekly Claude Desktop prompt in its README). Baseline 7 Nov 2026, web-search proxy only: Eastbridge in 0 of 40; Tanmu named in 25 of 40. AI platforms (ChatGPT, Gemini, Perplexity, Google AI Mode) are run by Claude Desktop every Sunday from 8 Nov; the SEO engine reruns the proxy every Monday and adds monthly rates to section 8. |
 
 ## 4. Outreach (partner referrals)
 Emails are sent from philip@eastbridgestrategicpartners.com through Bird (sending domain verified 5 Nov: DKIM, DMARC, return path). Each email is BCC'd to Philip, and replies arrive in his Eastbridge Outlook.
@@ -66,6 +67,9 @@ Emails are sent from philip@eastbridgestrategicpartners.com through Bird (sendin
 5. Search Console: request indexing for the new key pages.
 6. Send test submissions from the contact, estimate and checklist forms, and check that each arrives in Netlify Forms and by email.
 7. Native-speaker check of the Russian and Chinese place names.
+8. Create the third-party profiles in `business/authority-profiles.md` (LinkedIn page, Bing Places, Apple Business, Houzz, 2GIS, Yellow Pages UAE first) and send the three press pitches in its section 10.
+9. Start the weekly AI visibility run: paste the prompt in `reports/ai-visibility/README.md` (section 3) into Claude Desktop each Sunday.
+10. Quay House case study: send the facts (scope, dates, role of P Chapman Construction, authorised photographs) so it can be written.
 
 ## 6. What can and cannot be automated (and who does it)
 | Job | Done by | Notes |
@@ -85,3 +89,34 @@ On each sweep:
    - "Eastbridge open items": section 5 (count and the top item).
 3. Open Outlook (philip@) in Chrome and list new replies from any firm in batches 1–3, plus any website enquiries (Netlify notifications). For each genuine reply, draft an answer in Outlook (never send) and record it in the B7 outreach row. Put follow-up draft dates in the diary.
 4. Feeds master line for B7 (40 words or fewer): "Eastbridge: site live; 51 partner emails out (1 bounce); batch 4 (18) sends Mon 9 Nov; follow-up drafts 9, 10 and 16 Nov; replies: 1 (Aparna Kaushik, not now). Next: Phil sends follow-ups, answer replies within a day, verify the Google Business Profile."
+
+## 8. 30/60/90-day plan and KPIs
+Set 7 November 2026 from the AI search visibility audit (items 1, 2, 4 and 5 approved by Phil). **Targets are goals, not claims or forecasts.** Baselines are what was measured or known on 7 November 2026; "not measured" means nobody has the number yet, not zero.
+
+**Milestones**
+| By | Milestones |
+|---|---|
+| **7 Dec 2026 (30 days)** | Google Business Profile verified. LinkedIn company page, Bing Places and Apple Business live (copy in `business/authority-profiles.md`). Weekly AI visibility runs started on all four AI platforms (first run 8 Nov). Three press pitches sent (Construction Week, Gulf News, Khaleej Times). GA4 key event switched to `enquiry_success` and one labelled test enquiry seen end to end. Quay House facts received from Phil. Search Console baseline recorded in this table. |
+| **6 Jan 2027 (60 days)** | Houzz, 2GIS, Yellow Pages UAE and ProTenders live; Meydan FZ asked about a listing; decision on Dubai Chambers and British Chamber membership. Quay House case study published (P Chapman Construction's UK work, clearly labelled). At least one press piece or quoted comment published. Second outreach follow-up round complete. Monthly AI rates added below for November and December. |
+| **5 Feb 2027 (90 days)** | All section 9 profiles in `authority-profiles.md` live and listed in `SOCIAL`. Second press piece. Three months of weekly AI data, with the trend reported per platform. Review which prompts still show no Eastbridge mention and plan content for them (Island E, Saadiyat, stalled projects and fees were open gaps in the baseline). |
+
+**KPIs**
+| KPI | Source | Baseline (7 Nov 2026) | Goal by 7 Dec | Goal by 6 Jan | Goal by 5 Feb |
+|---|---|---|---|---|---|
+| Search Console impressions (28 days) | GSC, Performance | Not measured in this session; first impressions seen 3 Nov | Record baseline | 2x the 7 Dec figure | 4x the 7 Dec figure |
+| Non-branded clicks (28 days; queries without "eastbridge") | GSC, Performance, query filter | Not measured | Record baseline | 10 | 30 |
+| Enquiries (`enquiry_success` events) | GA4 (after the key-event switch) | 0 recorded; no client yet | Tracking verified | 2 cumulative | 5 cumulative |
+| Outreach replies | `business/outreach-batch-*-log.md`, section 4 | 53 emails sent (1 bounce), 1 reply (not now) | 4 replies | 8 replies | 12 replies |
+| Outreach meetings or calls held | Outlook / diary | 0 | 1 | 3 | 5 |
+| AI mention rate, 40 prompts, per platform | `reports/ai-visibility/tracking.csv` | web_search_proxy 0/40 (0%); ChatGPT, Gemini, Perplexity, Google AI Mode: first run 8 Nov | Baselines recorded on all four AI platforms; proxy at least 2/40 | At least 4/40 (10%) on two or more platforms | At least 8/40 (20%) on two or more platforms |
+| AI recommendation rate, per platform | same | web_search_proxy 0/40 (0%) | Baselines recorded | At least 1/40 on one platform | At least 4/40 (10%) on one platform |
+| AI citation rate (link to our site), per platform | same | web_search_proxy 0/40 (0%) | Baselines recorded | At least 2/40 on one platform | At least 4/40 (10%) on two platforms |
+| Live third-party profiles | tracker in `business/authority-profiles.md` | 1 (Instagram) | 4 | 8 | 10 |
+| Press pieces published or quoted | links logged here | 0 | 3 pitches sent | 1 | 2 |
+| Google Business Profile verified | GBP dashboard | No | Yes | Yes | Yes |
+| Quay House case study published | site | No (pending Phil's facts) | Facts received | Published | Published |
+
+**Monthly AI rates** (added by the SEO engine on the first run of each month; see `AUTOMATION.md` step 10a)
+| Month | Platform | Runs | Mention | Recommendation | Citation |
+|---|---|---|---|---|---|
+| Nov 2026 (baseline, 7 Nov) | web_search_proxy | 1 | 0/40 (0%) | 0/40 (0%) | 0/40 (0%) |

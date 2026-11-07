@@ -1,0 +1,41 @@
+id,prompt,intent,segment
+P01,Who can independently manage my villa build in Dubai?,find_provider,choosing_pm
+P02,Who is the best owner's representative for a private villa build in Dubai?,find_provider,choosing_pm
+P03,I'm building a villa in Abu Dhabi. Who can represent me against the contractor?,find_provider,choosing_pm
+P04,What does an owner's representative do on a villa project in Dubai and do I actually need one?,informational,choosing_pm
+P05,How do I choose a project manager for a luxury villa in Dubai who isn't tied to the contractor?,evaluate,choosing_pm
+P06,Owner's rep or project management consultant for a villa in Dubai: which do I need?,evaluate,choosing_pm
+P07,Recommend villa project management firms in Dubai that work only for the owner,find_provider,choosing_pm
+P08,I've bought a plot in Dubai to build a custom villa. Who should I hire first?,find_provider,new_build
+P09,Who can help me manage the construction of a new villa in Abu Dhabi?,find_provider,new_build
+P10,How do I build a luxury villa in Dubai without the budget running away?,informational,new_build
+P11,What are the steps to build a bespoke villa in Dubai and who do I need to appoint?,informational,new_build
+P12,Independent client-side project manager for a high-end villa renovation in Dubai,find_provider,renovation
+P13,Who can oversee my villa renovation in Dubai on my side rather than the contractor's?,find_provider,renovation
+P14,Project manager for a full villa refurbishment in Abu Dhabi,find_provider,renovation
+P15,Should I renovate or knock down and rebuild my villa in Dubai and who can advise me?,evaluate,renovation
+P16,Best independent project manager for a Palm Jumeirah villa renovation,find_provider,community_palm_jumeirah
+P17,Who can manage building a new villa in Emirates Hills for me?,find_provider,community_emirates_hills
+P18,Project manager for a custom villa build in Dubai Hills Estate,find_provider,community_dubai_hills
+P19,I have a plot on Dubai Islands (Island E). Who can help me manage building a villa there?,find_provider,community_dubai_islands
+P20,Owner's representative for a villa renovation on Jumeirah Islands,find_provider,community_jumeirah_islands
+P21,Who can represent me on a villa build on Saadiyat Island in Abu Dhabi?,find_provider,community_saadiyat
+P22,I live in London and want to build a villa in Dubai. How do I manage it from the UK?,informational,overseas_uk
+P23,Who can be my eyes on site for a Dubai villa renovation while I'm living in the UK?,find_provider,overseas_uk
+P24,British owner building a house in Dubai: what should I watch out for?,informational,overseas_uk
+P25,Independent project manager for overseas owners building villas in Dubai,find_provider,overseas_uk
+P26,How do I control costs on a villa build in Dubai?,informational,cost_control
+P27,My villa contractor in Dubai keeps issuing variations. Who can check them for me?,find_provider,cost_control
+P28,Who can review the contractor's payment applications on my Dubai villa build?,find_provider,cost_control
+P29,How do I stop my villa budget overrunning in Dubai?,informational,cost_control
+P30,My contractor is claiming an extension of time on my Dubai villa. Who can advise me?,find_provider,cost_control
+P31,My villa project in Dubai has stalled. Who can help get it moving again?,find_provider,stalled
+P32,The contractor has walked off my villa build in Dubai. What should I do and who can help?,find_provider,stalled
+P33,How do I rescue a delayed villa construction project in Abu Dhabi?,informational,stalled
+P34,Who can review contractor quotes for my villa build in Dubai?,find_provider,quote_review
+P35,How do I compare villa contractor bids like for like in Dubai?,informational,quote_review
+P36,Is my villa construction quote in Dubai too high? Who can check it independently?,find_provider,quote_review
+P37,Design-and-build contractor or a separate architect for a villa in Dubai: which is better?,evaluate,procurement_route
+P38,Should I use a design-and-build company for my Dubai villa or appoint my own consultant?,evaluate,procurement_route
+P39,How much does a client-side project manager cost for a villa build in Dubai?,fees,fees
+P40,What fees do owner's representatives charge for villa projects in Dubai and Abu Dhabi?,fees,fees
