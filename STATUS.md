@@ -8,7 +8,7 @@ Raw URL for Master Control: `https://raw.githubusercontent.com/pcc40/eastbridge-
 - Any Code session that changes the site or sends outreach updates the relevant section and the *Last updated* line.
 - Master Control does not edit this file. It mirrors it into tracker B7 (see the last section).
 
-Last updated: 8 November 2026, daily SEO engine (no article on Sundays; checks 0/0 across 495 pages; Search Console read).
+Last updated: 9 November 2026, daily SEO engine (Monday deepen: Jumeirah Bay Island area page; checks 0/0).
 
 ---
 
