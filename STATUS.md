@@ -47,17 +47,21 @@ Emails are sent from philip@eastbridgestrategicpartners.com through Bird (sendin
 | 1 | Late Oct, sent by Phil | 8 firms (ANARCHITECT, CK, SAOTA, Bluehaus, Kat Black, Shawa, Unique Properties, Hadef) | `business/outreach-drafts-ready.md` |
 | 2 | 5 Nov 2026, 20:31 UTC | 20 sent; Galadari bounced (spam filter), the rest delivered or retrying | `business/outreach-batch-2.md`, `business/outreach-batch-2-log.md` |
 | 3 | 6 Nov 2026, 07:16 UTC | 23 sent, 23 delivered (architecture and design firms from the research doc) | `business/outreach-batch-3.md`, `business/outreach-batch-3-log.md` |
-| 4 | 6 Nov 2026, 13:08 UTC (#1–2); #3–20 scheduled Mon 9 Nov 09:05 Dubai | 2 sent and delivered; 18 held by Bird's 50-a-day limit (each send counts 2 with the BCC) | `business/outreach-batch-4.md`, `business/outreach-batch-4-log.md` |
+| 4 | 6 Nov 2026 (#1–2); 9 Nov 2026, 03:45 UTC (#3–20) | 20 sent, 20 delivered (Abu Dhabi studios and agents, Dubai villa agencies, relocation and private-client advisers, Dubai studios, QS) | `business/outreach-batch-4.md`, `business/outreach-batch-4-log.md` |
+| 5 | 9 Nov 2026, 03:52 UTC | 7 sent, 7 delivered (construction law, landscape and pool, UK interiors with Dubai villas, relocation) | `business/outreach-batch-5.md`, `business/outreach-batch-5-log.md` |
+
+**Totals (9 Nov):** 78 firms contacted (8 by Phil, 70 via Bird); 1 bounce (Galadari); 1 reply (Aparna Kaushik, not now). Daily runs continue to Fri 13 Nov at up to 25 firms a day.
 
 **Follow-ups:** created as Outlook drafts by the Claude Desktop chat (Chrome), as replies to Phil's BCC copies. Phil reviews and sends them. They go only to firms that have not replied, bounced or opted out.
 | Batch | Day-4 drafts | Day-10 (final) drafts |
 |---|---|---|
 | 2 | Mon 9 Nov, 09:20 Dubai | Mon 16 Nov, 09:20 Dubai |
 | 3 | Tue 10 Nov, 09:20 Dubai | Mon 16 Nov, 09:20 Dubai |
+| 4 and 5 | Fri 13 Nov (not yet scheduled) | Thu 19 Nov (not yet scheduled) |
 
 **Replies so far:**
 - 6 Nov: **Aparna Kaushik Design Group** (batch 2, #2). Polite holding reply from Nupur Kapoor, EA to Ms. Kaushik: they will review and come back if there is an opportunity. Status: *replied, not now*. No follow-ups; one light check-in in about three months (early Feb 2027).
-**Next batch:** research 30–50 more firms (Abu Dhabi studios, villa agents, family offices and relocation firms), excluding everyone above. Send about 20 a day.
+**Next batch:** the daily run (07:41 Dubai, Tue 10 – Fri 13 Nov) researches and sends up to 25 new firms a day, excluding everyone above.
 
 ## 5. Open items for Phil
 1. Google Business Profile: finish verification (copy is in `business/offsite-authority-kit.md`).
@@ -88,7 +92,7 @@ On each sweep:
    - "Eastbridge outreach": section 4 (totals, replies, next follow-up date).
    - "Eastbridge open items": section 5 (count and the top item).
 3. Open Outlook (philip@) in Chrome and list new replies from any firm in batches 1–3, plus any website enquiries (Netlify notifications). For each genuine reply, draft an answer in Outlook (never send) and record it in the B7 outreach row. Put follow-up draft dates in the diary.
-4. Feeds master line for B7 (40 words or fewer): "Eastbridge: site live; 51 partner emails out (1 bounce); batch 4 (18) sends Mon 9 Nov; follow-up drafts 9, 10 and 16 Nov; replies: 1 (Aparna Kaushik, not now). Next: Phil sends follow-ups, answer replies within a day, verify the Google Business Profile."
+4. Feeds master line for B7 (40 words or fewer): "Eastbridge: site live; 78 partner firms contacted (1 bounce); 25 a day to 13 Nov; follow-up drafts 9, 10 and 16 Nov; replies: 1 (Aparna Kaushik, not now). Next: Phil sends follow-ups, answer replies within a day, verify the Google Business Profile."
 
 ## 8. 30/60/90-day plan and KPIs
 Set 7 November 2026 from the AI search visibility audit (items 1, 2, 4 and 5 approved by Phil). **Targets are goals, not claims or forecasts.** Baselines are what was measured or known on 7 November 2026; "not measured" means nobody has the number yet, not zero.
