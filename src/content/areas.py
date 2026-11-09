@@ -160,24 +160,44 @@ AREAS = [
   "developer": "Meraas (Dubai Holding)",
   "tag": "Ultra-prime plot builds",
   "title": "Jumeirah Bay Island Villa Construction | Eastbridge",
-  "description": "Building on Jumeirah Bay Island? Independent client-side project management for ultra-prime plot builds, from brief to handover.",
+  "description": "Building on Jumeirah Bay Island? Plot values, build costs, approvals and island logistics, with independent client-side project management from brief to handover.",
   "h1": "Jumeirah Bay Island: ultra-prime, plot by plot",
   "lede": "A small island of private plots and some of the highest land values in Dubai. When the plot costs this much, the house has to be delivered exactly as intended.",
   "image": "saqqara-02",
-  "body": """<h2>Building on the island</h2>
-<p>Jumeirah Bay Island, off the Jumeirah coastline, is a Meraas community of private villa plots. Owners here tend to commission internationally known architects and interior designers, specify materials from around the world and expect a level of finish comparable to the best private houses anywhere. The challenge is less about getting a house built than about getting <em>this</em> house built, without compromise creeping in under programme or cost pressure.</p>
+  "body": """<h2>What makes Jumeirah Bay different</h2>
+<p>Jumeirah Bay Island sits just off the Jumeirah coastline, reached by a bridge, and is a Meraas master development that also holds the Bulgari resort, residences and marina. The villa land is sold as private plots: 128 of them, according to Dubai Sotheby's International Realty. Each owner builds their own house, so there is no standard villa type. You get a series of one-off houses, many designed by internationally known architects and interior designers.</p>
+<p>Land values set the tone. In April 2023 Knight Frank sold a 24,500 sq ft plot on the island for AED 125 million, about AED 5,100 per sq ft, and said that at Jumeirah Bay a sum of that size "only buys you the sand". In March 2025 Dubai Sotheby's reported the sale of a villa on a 26,895 sq ft plot at the island's tip for AED 330 million. When the land costs that much, a few percent overrun on the build is still a very large number, and so is a year's delay.</p>
+<h2>New build or remodel</h2>
+<p>Most work on the island is either a new house on a vacant plot or a remodel of a completed villa for a new owner. A new build gives you a free hand within the community guidelines, but the programme runs from design through the developer's review and the authority permit before construction starts. A remodel is quicker to start but brings its own unknowns: what the original approvals cover, how the services were installed, and how far the new design can move from the approved one. For a completed house, we start with a straight remodel-or-rebuild comparison, and our <a href="/insights/older-villa-mep-renovation/">guide to rewiring and replumbing</a> sets out what to survey first.</p>
+<h2>The approval route</h2>
+<p>Meraas is the master developer, and its approval of the design comes before any building permit. Your DM-registered consultant of record prepares the submissions and confirms which authority issues the permit for your plot and what the community guidelines require, such as setbacks, heights and the treatment of the waterfront. Ask for the guidelines before the architect starts sketching: a design that has to be reworked after the developer's review costs months.</p>
 <h2>Particular considerations</h2>
 <ul>
-<li><strong>Island logistics.</strong> Restricted access, limited laydown space and strict community rules affect cost and programme. They need to be priced, not discovered.</li>
+<li><strong>Island logistics.</strong> One access route, limited laydown space and strict community rules affect cost and programme. Deliveries, working hours, crane positions and the protection of neighbouring plots need to be priced, not discovered.</li>
 <li><strong>International design teams.</strong> Architects and designers based overseas need a local registered consultant of record and close coordination. Gaps between the two are where cost and time are lost.</li>
-<li><strong>Long-lead materials.</strong> Stone, glazing and bespoke joinery from overseas can take many months. Late ordering is a common cause of delay.</li>
-<li><strong>Waterfront exposure.</strong> Coastal plots demand careful waterproofing, corrosion protection and façade detailing.</li>
+<li><strong>Long-lead materials.</strong> Stone, glazing and bespoke joinery from overseas can take many months. Late ordering is a common cause of delay; set order dates in the programme from the start.</li>
+<li><strong>Waterfront exposure.</strong> Coastal plots demand careful waterproofing, corrosion protection and façade detailing. Specify for salt air from day one rather than replacing fittings after the first summer.</li>
+<li><strong>Building next to a working site.</strong> With houses going up plot by plot, you may build beside a finished home or have a site start next to yours. Dust, noise and access rules belong in the contract.</li>
 </ul>
-<h2>How we help</h2>
-<p>We represent you between the international design team, the local consultant of record and the contractor, keeping a single programme, a single budget and a single decision log. We have spent two decades delivering waterside houses with demanding architects and complex finishes, and we bring that discipline to your project.</p>""",
+<h2>What it costs to build</h2>
+<p>Published construction rates are a starting point, not a budget. Engel &amp; Völkers puts luxury construction in Dubai at AED 900 to 1,400 per sq ft, and Knight Frank put high-end villas at about AED 11,000 per square metre in Q2 2025, in both cases before land, design fees, interiors and landscaping. The most ambitious houses on the island sit above any published band. Our <a href="/tools/villa-build-cost-calculator/">villa build cost calculator</a> gives a sourced first range you can test against your brief.</p>
+<h2>How we help on Jumeirah Bay</h2>
+<p>We represent you between the international design team, the local consultant of record and the contractor, keeping a single programme, a single budget and a single decision log. That means a budget that includes everything, a design and approvals programme your consultant can deliver, like-for-like comparison of bids, and independent client-side site visits and reporting through to the end of the defects period. We have spent two decades building waterside houses with demanding architects and complex finishes in the UK, and we bring that discipline to your project.</p>""",
   "faqs": [
-   ("Who is the master developer for Jumeirah Bay Island?", "Meraas, part of Dubai Holding. Designs are reviewed against the community guidelines before the authority permit."),
+   ("Who is the master developer for Jumeirah Bay Island?", "Meraas, part of Dubai Holding. Expect the developer to review your design against the community guidelines before the building permit; your DM-registered consultant confirms the route for your plot."),
+   ("How many villa plots are there on Jumeirah Bay Island?", "Dubai Sotheby's International Realty puts the total at 128 plots. Each is sold as land for the owner to build their own house."),
+   ("How much do plots on Jumeirah Bay Island cost?", "Very little land changes hands, so prices vary. Knight Frank sold a 24,500 sq ft plot for AED 125 million in April 2023, about AED 5,100 per sq ft, and Dubai Sotheby's reported a villa on a 26,895 sq ft plot selling for AED 330 million in March 2025."),
+   ("How much does it cost to build a villa on Jumeirah Bay Island?", "It depends on size and specification. Engel &amp; Völkers puts luxury construction at AED 900 to 1,400 per sq ft, and Knight Frank put high-end villas at about AED 11,000 per square metre in Q2 2025, before land, design fees, interiors and landscaping. Our <a href='/tools/villa-build-cost-calculator/'>cost calculator</a> gives a sourced first range."),
    ("Can I use an overseas architect for my Jumeirah Bay villa?", "Yes, many owners do. You will also need a locally registered consultant to act as consultant of record for submissions and statutory duties. Coordinating the two well is critical."),
+   ("What makes building on an island harder?", "Access, space and neighbours. One route in, little room to store materials and strict community rules all affect cost and programme, so the contractor should price them at tender rather than discover them on site."),
+  ],
+  "sources": [
+   ("Khaleej Times: Dubai plot sold for a record Dh125 million on Jumeirah Bay Island (April 2023)", "https://www.khaleejtimes.com/business/property/dubai-plot-sold-for-a-record-dh125-million-on-jumeirah-bay-island"),
+   ("Zawya: Dubai Sotheby's International Realty sale of AED 330mln villa on Jumeirah Bay Island", "https://www.zawya.com/en/press-release/companies-news/dubai-sothebys-international-realty-breaks-all-records-with-sale-of-aed-330mln-villa-on-jumeirah-bay-island-yjtqkpuv"),
+   ("Gulf Today: A villa on Dubai's Jumeirah Bay Island sells for Dhs330 million (March 2025)", "https://www.gulftoday.ae/business/2025/03/06/a-villa-on-dubais-jumeirah-bay-island-sells-for-dhs330-million"),
+   ("Meraas: Jumeira Bay master development", "https://meraas.com/en/master-development/jumeriah-bay-island"),
+   ("Engel & Völkers: construction cost in Dubai (December 2025)", "https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai"),
+   ("Gulf Construction: Knight Frank villa construction costs, Q2 2025", "https://gulfconstructiononline.com/ArticleTA/436847"),
   ],
   "services": ["owners-representative", "design-and-approvals", "site-visits-and-reporting"],
  },
