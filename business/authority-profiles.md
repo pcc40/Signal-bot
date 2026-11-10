@@ -234,7 +234,7 @@ None of these sells a "best" badge or a link package. Do not pay for premium pla
 | Dubai Chambers (optional) | | | | n/a |
 | Meydan FZ (if any listing) | | | | n/a |
 | 2GIS | | | | n/a |
-| Yellow Pages UAE | submitted 10 Nov 2026 (free listing form, awaiting YP approval) | | Meydan address, +971 56 744 0057 | |
+| Yellow Pages UAE | submitted 10 Nov 2026 (free listing form, awaiting YP approval); DealDeed also submitted 10 Nov with p.chapman.consulting@gmail.com | | Meydan address, +971 56 744 0057 | |
 | ProTenders | | | | |
 | British Chamber of Commerce Dubai | | | | |
 
