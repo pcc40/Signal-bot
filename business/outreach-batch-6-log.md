@@ -16,7 +16,7 @@ Sent 10 November 2026 (part B #14–25 first, then part A #1–12) from philip@e
 | 10 | Almira | info@almira.ae | Abu Dhabi private-client agency | em_01m71tcc51fn8bjee8vnjpezav | Delivered |
 | 11 | Dacha Real Estate | info@dacha.ae | Dubai agency | em_01m71tcswsfgm8a8d9pneed5ct | Delivered |
 | 12 | LuxuryProperty.com | hello@luxuryproperty.com | Dubai brokerage | em_01m71td7t6fdg84d11hbsvw1mx | Delivered |
-| 13 | Primo Capital | info@primocapital.ae | Dubai brokerage | — | HELD – Phil to confirm (possible connection to Phil) |
+| 13 | Primo Capital | info@primocapital.ae | Dubai brokerage | — | DROPPED – Phil, 10 Nov (do not contact) |
 | 14 | Elicyon | studio@elicyon.com | UK interiors, Dubai villa | em_01m71smc6zf63tseyb9spdkj4k | Delivered |
 | 15 | Laura Hammett | studio@laurahammett.com | UK interiors, Dubai villa | em_01m71smsk4em1t1pa2ssfm2ab9 | Delivered |
 | 16 | Alix Lawson | studio@alixlawson.com | UK interiors, Dubai Hills | em_01m71sn8qdeeesp5ch71rnznds | Delivered |

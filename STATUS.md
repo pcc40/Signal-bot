@@ -49,7 +49,7 @@ Emails are sent from philip@eastbridgestrategicpartners.com through Bird (sendin
 | 3 | 6 Nov 2026, 07:16 UTC | 23 sent, 23 delivered (architecture and design firms from the research doc) | `business/outreach-batch-3.md`, `business/outreach-batch-3-log.md` |
 | 4 | 6 Nov 2026 (#1–2); 9 Nov 2026, 03:45 UTC (#3–20) | 20 sent, 20 delivered (Abu Dhabi studios and agents, Dubai villa agencies, relocation and private-client advisers, Dubai studios, QS) | `business/outreach-batch-4.md`, `business/outreach-batch-4-log.md` |
 | 5 | 9 Nov 2026, 03:52 UTC | 7 sent, 7 delivered (construction law, landscape and pool, UK interiors with Dubai villas, relocation) | `business/outreach-batch-5.md`, `business/outreach-batch-5-log.md` |
-| 6 | 10 Nov 2026 | 24 sent, 24 delivered (UAE villa studios and agencies incl. Abu Dhabi; UK interiors with Dubai villas; wealth, family office, relocation; law; QS; landscape and pool). Primo Capital held pending Phil | `business/outreach-batch-6a.md`, `business/outreach-batch-6b.md`, `business/outreach-batch-6-log.md` |
+| 6 | 10 Nov 2026 | 24 sent, 24 delivered (UAE villa studios and agencies incl. Abu Dhabi; UK interiors with Dubai villas; wealth, family office, relocation; law; QS; landscape and pool). Primo Capital dropped on Phil's instruction (do not contact) | `business/outreach-batch-6a.md`, `business/outreach-batch-6b.md`, `business/outreach-batch-6-log.md` |
 
 **Totals (10 Nov):** 102 firms contacted (8 by Phil, 94 via Bird); 1 bounce (Galadari); 1 reply (Aparna Kaushik, not now). Daily runs continue to Fri 13 Nov at up to 25 firms a day.
 
