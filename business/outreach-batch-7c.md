@@ -2,11 +2,11 @@
 
 Prepared 10 November 2026 for sending Wed 11 Nov, after Phil's review. Phil has approved up to 50 outreach emails a day; this part is firms 26–50 (parts A and B cover 1–25). Send from philip@eastbridgestrategicpartners.com; the signature is added to each email (in Bird, from the HTML in the batch 7C JSON), so each body below ends at "Kind regards,". Nothing has been sent.
 
-Mix: a buyer's agent and mortgage brokers whose clients buy plots or villas, or fund builds and renovations (26–31); holiday-home and villa management operators (32–36); villa specialists that owners hire directly during a renovation: smart-home and AV integrators, lighting design studios, a kitchen studio and a joinery workshop (37–43); independent snagging, handover and building-inspection firms and a structural and MEP consultancy (44–50). Every firm is UAE-based or has a UAE office.
+Mix: a buyer's agent and mortgage brokers whose clients buy plots or villas, or fund builds and renovations (26–31); holiday-home and villa management operators (32–36 and 43); villa specialists that owners hire directly during a renovation: smart-home and AV integrators, lighting design studios and a kitchen studio (37–42); independent snagging, handover and building-inspection firms and a structural and MEP consultancy (44–50). Every firm is UAE-based or has a UAE office.
 
 Excluded because already contacted or dropped earlier: every firm and domain in batches 1–6 (including 6a and 6b), their logs and dropped lists, and batch 4's excluded list (XBD Collective, Riccardo Vicarelli, Studio Shizen, Al Tamimi, Espace, LW Design and Cracknell). Firms on the lead table in `business/first-client-plan.md` were also left out, and Primo Capital stays on do-not-contact. No architecture or interior design studio, real estate agency, law firm, quantity surveyor, landscape or pool firm, wealth, family-office or relocation firm is included: those segments belong to parts A and B. Any firm describing itself as a turnkey or fit-out contractor, or offering client-side project management as a core service, was left out.
 
-Dropped while researching this batch: Finasi (describes a turnkey approach to high-end villa renovation and fit-out), AEM Engineering Consultancy and Optimal Engineering Consultants (both list project management among their core services), British Arabian (valuation surveyors, not building surveys), snag.ae (snagging software and EHS consultancy), UMAYA Lighting Design (home page currently carries injected gambling spam), Huspy (also lists and sells property, so closer to an agency), Huxberry (mainly furniture and beds), Venezia Designs (also sells fit-out), Geesmart (apartment smart products), MKB Bespoke Audio (only an online-shop address), Nulty (hospitality-led lighting work), Betterway and Money Maestro (no specific villa fact to open on), Maison Privée, Mortgage Finder, Luxury Explorers Collection and MySmartHome (no address on the site, or the page would not render), Deluxe Holiday Homes (site returned 403), Enness, Oliva and Black Brick (sites did not load), LVH Global (US-based), bnbme (only personal staff addresses), Elite LUX and KeyOne (apartment-led or general agencies), Bespoke Residences (address on a different domain). Kept in reserve: Money Maestro (info@moneymaestro.ae), Prime Inspections (connect@primeinspections.ae) and Keysplease (info@keysplease.ae).
+Dropped by Phil on review, 10 Nov: OH Woodworks (replaced at #43 by Keys Please). Dropped while researching this batch: Finasi (describes a turnkey approach to high-end villa renovation and fit-out), AEM Engineering Consultancy and Optimal Engineering Consultants (both list project management among their core services), British Arabian (valuation surveyors, not building surveys), snag.ae (snagging software and EHS consultancy), UMAYA Lighting Design (home page currently carries injected gambling spam), Huspy (also lists and sells property, so closer to an agency), Huxberry (mainly furniture and beds), Venezia Designs (also sells fit-out), Geesmart (apartment smart products), MKB Bespoke Audio (only an online-shop address), Nulty (hospitality-led lighting work), Betterway and Money Maestro (no specific villa fact to open on), Maison Privée, Mortgage Finder, Luxury Explorers Collection and MySmartHome (no address on the site, or the page would not render), Deluxe Holiday Homes (site returned 403), Enness, Oliva and Black Brick (sites did not load), LVH Global (US-based), bnbme (only personal staff addresses), Elite LUX and KeyOne (apartment-led or general agencies), Bespoke Residences (address on a different domain). Kept in reserve: Money Maestro (info@moneymaestro.ae) and Prime Inspections (connect@primeinspections.ae).
 
 Every address below is published on the firm's own website, checked with curl on 10 November 2026. Where it appears only in the site's contact data, behind Cloudflare email protection, or on another domain owned by the same firm, the Source line says so. Re-open each firm's site before sending, in case a project, listing or page referred to in the opening line has changed. Every Eastbridge link below returned 200 on 10 November 2026.
 
@@ -403,23 +403,23 @@ We take no referral fees and pay none. Would a 20-minute call be useful?
 Kind regards,
 ```
 
-## 43. OH Woodworks
+## 43. Keys Please
 
-**To:** contact@ohwoodworks.com
-**Source:** https://ohwoodworks.com (site contact section and footer, beside 15B Street, Al Quoz Industrial 4)
-**Why this firm:** (Bespoke joinery) Al Quoz joinery workshop making bespoke kitchens, custom wardrobes and fire-rated timber doors for villas and apartments; joinery is the trade that feels villa programme slippage most.
-**Subject:** Bespoke joinery and a villa programme that holds
+**To:** info@keysplease.ae
+**Source:** https://keysplease.ae/contact-us (contact page under "Email", beside +971 52 811 6111 and the Tamani Arts Offices, Business Bay corporate office; also on https://keysplease.ae)
+**Why this firm:** (Holiday-home / villa management) DET-licensed Dubai holiday-home operator, licensed since 2003, with linen, room attendants and maintenance in-house and villas in Arabian Ranches, DAMAC Hills and JVT; owners who renovate a let villa lose bookings as well as money when works overrun.
+**Subject:** Renovations that take a villa out of your calendar
 
 ```
-Dear OH Woodworks team,
+Dear Keys Please team,
 
-OH Woodworks makes bespoke kitchens, custom wardrobes and fire-rated timber doors from its base in Al Quoz Industrial 4.
+Keys Please has been a licensed Dubai holiday-home operator since 2003, with maintenance in-house and villas in Arabian Ranches, DAMAC Hills and JVT among its homes.
 
 Eastbridge is a client-side project manager for private villas in Dubai and Abu Dhabi. Our founder, Philip Chapman, ran P Chapman Construction, a premium UK residential builder, for 21 years.
 
-On a villa renovation, joinery is usually the last trade in and the first to feel delays: measurements wait for plastering, and site dates move with the main contractor. We represent private villa owners: a clear scope, decisions on time, payment applications checked against work done and a programme that holds. That makes a client easier to plan around. We work alongside you and the contractor.
+Owners sometimes take a villa off the market to renovate, and an overrun costs them bookings as well as money. We represent the owner on that work: a clear scope, like-for-like contractor quotes, payment applications checked against work done and a programme that holds, so the villa comes back when promised. We do not manage rentals; we work alongside your team.
 
-How we keep villa cost and programme under control: https://eastbridgestrategicpartners.com/services/cost-and-programme-control/
+How to choose a villa contractor in Dubai: https://eastbridgestrategicpartners.com/insights/how-to-choose-a-villa-contractor-dubai/
 
 We take no referral fees and pay none. Would a 20-minute call be useful?
 
