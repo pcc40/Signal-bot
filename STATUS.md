@@ -8,7 +8,7 @@ Raw URL for Master Control: `https://raw.githubusercontent.com/pcc40/eastbridge-
 - Any Code session that changes the site or sends outreach updates the relevant section and the *Last updated* line.
 - Master Control does not edit this file. It mirrors it into tracker B7 (see the last section).
 
-Last updated: 9 November 2026, daily SEO engine (Monday deepen: Jumeirah Bay Island area page; checks 0/0).
+Last updated: 10 November 2026, daily SEO engine (Tuesday article: renovating a villa in an Emaar community; checks 0/0).
 
 ---
 
@@ -23,7 +23,7 @@ Eastbridge Strategic Partners L.L.C-FZ (Meydan Free Zone licence 2540153.01) is 
 |---|---|
 | Live site | https://eastbridgestrategicpartners.com. The .ae and www addresses redirect to it with a 301, and so does the old Netlify preview address. |
 | Code | `pcc40/eastbridge-website`, branch `main`. Netlify builds every push automatically (Python 3.11). Backup copy: `pcc40/Signal-bot`, branch `claude/eastbridge-website-automation-veh823`. |
-| Size | 92 pages × 5 languages (English, Arabic, Russian, Chinese, Hindi) = 460 URLs, all returning 200. 27 insight articles (latest: /insights/older-villa-mep-renovation/, 7 Nov). 4 tools: cost calculator, renovate or rebuild, stage payment planner, delay cost estimator. 2 free PDF guides. 14 service pages. 12 area pages. |
+| Size | 92 pages × 5 languages (English, Arabic, Russian, Chinese, Hindi) = 460 URLs, all returning 200. 28 insight articles (latest: /insights/emaar-community-villa-renovation/, 10 Nov). 4 tools: cost calculator, renovate or rebuild, stage payment planner, delay cost estimator. 2 free PDF guides. 14 service pages. 12 area pages. |
 | Brand | Keystone-arch logo (chosen 5 Nov). The Outlook signature is in `business/email-signature.html`. |
 | Images | UAE developer images, with credits, on area pages and place-based articles. The "Built by our founder in the UK" strip of Cornish houses appears on home, area, service and article pages. |
 | Checks | `python3 build.py && python3 tools/i18n.py apply && python3 tools/seo_audit.py` must report 0 errors and 0 warnings. Last run: 495 pages, 0/0 (8 Nov). |
