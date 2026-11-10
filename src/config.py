@@ -56,6 +56,7 @@ RESPONSE_PROMISE = "Philip replies personally within one working day"
 FOUNDED_TRACK_RECORD_YEARS = 21
 SOCIAL = [
     "https://www.instagram.com/eastbridgestrategicpartners/",
+    "https://www.linkedin.com/company/eastbridge-strategic-partners/",
 ]
 GA4_ID = "G-120XT9N6XB"          # e.g. "G-XXXXXXX" — leave blank until Google Analytics is set up
 GSC_VERIFICATION = "oqg5vPdZKpefhBnXRRASYiH1mD9oZu147uoTHLs313I"  # Google Search Console meta verification code
@@ -70,7 +71,7 @@ FOUNDER = {
     "company_uk_url": "https://www.pchapmanconstruction.com/",
     # Philip's own public profiles (e.g. his personal LinkedIn URL). Emitted as sameAs in his Person schema.
     # Company pages (Eastbridge's LinkedIn company page, Instagram) go in SOCIAL instead (Organization sameAs).
-    "same_as": ["https://www.linkedin.com/in/philip-chapman-757627448/"],
+    "same_as": ["https://www.linkedin.com/in/philip-chapman-eastbridge/"],
 }
 
 # Date the privacy notice last changed in substance. Update it (and run the Languages steps) whenever the notice text changes.

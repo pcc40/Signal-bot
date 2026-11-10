@@ -230,7 +230,8 @@ None of these sells a "best" badge or a link package. Do not pay for premium pla
 | Houzz | account created 10 Nov 2026 (consulting email); no suitable professional category, not pursued | | | |
 | Bing Places | | | | n/a |
 | Apple Business | | | | n/a |
-| LinkedIn company page | | | | |
+| LinkedIn company page | https://www.linkedin.com/company/eastbridge-strategic-partners/ (admin 146962089) | 10 Nov 2026 | Meydan address, +971 56 744 0057 | yes |
+| LinkedIn: DealDeed page | https://www.linkedin.com/company/dealdeed/ (admin 146955358) | 10 Nov 2026 | Meydan address, +971 56 744 0057 | n/a (DealDeed site) |
 | Dubai Chambers (optional) | | | | n/a |
 | Meydan FZ (if any listing) | | | | n/a |
 | 2GIS | submitted 10 Nov 2026 via Add company (status emails to philip@); DealDeed also submitted 10 Nov (status emails to consulting); awaiting 2GIS staff verification | | Meydan address, +971 56 744 0057 | n/a |
