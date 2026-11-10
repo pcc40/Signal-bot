@@ -196,28 +196,7 @@ We take no referral fees and pay none. Would a 20-minute call be useful?
 Kind regards,
 ```
 
-## 22. DG Jones and Partners
-
-**To:** dubai@dgjones.com
-**Source:** https://dgjonesworld.com/offices/uae (Dubai office contact block, beside +971 4 4490933; shown via Cloudflare email protection. The address is on the firm's dgjones.com domain, which redirects to its website dgjonesworld.com)
-**Why this firm:** (Cost consultant / QS) Long-established chartered quantity surveying and cost management practice whose Dubai office, opened in 1967, was the first chartered QS firm in Dubai; its project list includes a Palaces and Villas category and Jawaher Al Saadiyat villas; complementary to an owner's representative.
-**Subject:** Cost advice for private villa owners, and where we fit
-
-```
-Dear DG Jones team,
-
-Your site records that the Dubai office, opened in 1967, was the first chartered quantity surveying firm in Dubai, and your project list includes a Palaces and Villas category.
-
-Eastbridge is a client-side project manager and owner's representative for private villas in Dubai and Abu Dhabi. Our founder, Philip Chapman, ran P Chapman Construction, a premium UK residential builder, for 21 years.
-
-Our roles are complementary. We sit on the owner's side for the whole project: contract, programme, decisions and reporting. When a private owner needs a cost plan, a bill of quantities or a valuation of variations, that is a quantity surveyor's work, and we would rather bring in an independent firm than stretch beyond our role.
-
-How we control cost and programme for villa owners: https://eastbridgestrategicpartners.com/services/cost-and-programme-control/
-
-No referral fees change hands either way. Would a 20-minute coffee suit you?
-
-Kind regards,
-```
+## 22. DG Jones and Partners: DROPPED by Phil on review, 10 Nov (offers client representation itself, so closer to a competitor). Not sent.
 
 ## 23. Dezire Project Consultant
 
