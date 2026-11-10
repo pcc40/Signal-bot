@@ -16,7 +16,7 @@
 - [x] older-villa-mep-renovation | Rewiring and replumbing an older Dubai villa | villa mep renovation dubai | what you find behind the walls and how contractors price the unknown
 - [x] villa-renovation-timeline-dubai | How long a villa renovation takes in Dubai | villa renovation timeline dubai | NOC, permit and long-lead items set the date, not the site work
 - [x] how-to-plan-a-villa-renovation-dubai | How to plan a villa renovation in Dubai | plan villa renovation dubai | hub linking all renovation content; linked from the renovation service page
-- [ ] emaar-community-villa-renovation | Renovating in an Emaar community: approvals and sequence | emaar noc villa renovation | developer NOC before authority permit; contractor access rules
+- [x] emaar-community-villa-renovation | Renovating in an Emaar community: approvals and sequence | emaar noc villa renovation | developer NOC before authority permit; contractor access rules
 - [ ] jumeirah-islands-villa-renovation | Renovating a Jumeirah Islands villa | jumeirah islands villa renovation | Nakheel NOC sequence, lakeside works, older MEP
 - [x] defects-liability-period-uae | The defects period: what to do in the first year | defects liability period uae | keeping leverage after handover
 - [ ] snagging-developer-villa-handover | Snagging a developer villa before you accept it | villa snagging dubai | the 20 items we check first

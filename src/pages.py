@@ -88,9 +88,9 @@ POST_IMG = {
     "villa-renovation-timeline-dubai": "uae-jumeirah-islands-04",
     "jumeirah-islands-villa-renovation": "uae-jumeirah-islands-02",
     "emirates-hills-villa-cost": "uae-emirates-hills-01",
-    "emaar-community-villa-renovation": "uae-dubai-hills-estate-03",
     "defects-liability-period-uae": "uae-dubai-hills-estate-02",
     "older-villa-mep-renovation": "uae-arabian-ranches-02",
+    "emaar-community-villa-renovation": "uae-arabian-ranches-03",
     # general Dubai
     "how-to-build-a-villa-in-dubai": "uae-dubai-skyline-villas-01",
     "how-to-choose-client-side-project-manager": "uae-dubai-skyline-villas-01",

@@ -72,7 +72,7 @@ That makes your community the second question, not an afterthought. Our area gui
 
 - [Palm Jumeirah](/areas/palm-jumeirah/), with our detailed guide to [renovating a Palm Jumeirah villa](/insights/palm-jumeirah-villa-renovation/): older frond villas, salt exposure, Nakheel's site requirements.
 - [Jumeirah Islands](/areas/jumeirah-islands/): a Nakheel community where owners have reported charges for added floor area and penalties for unapproved work ([Gulf News, 2018](https://gulfnews.com/news/gulf/uae/jumeirah-islands-owners-prevented-from-modifying-villas-without-approval-1.1172089)).
-- [Arabian Ranches](/areas/arabian-ranches/): an Emaar community with sub-community home modification guidelines.
+- [Arabian Ranches](/areas/arabian-ranches/): an Emaar community with sub-community home modification guidelines. Our guide to [renovating in an Emaar community](/insights/emaar-community-villa-renovation/) sets out the sequence.
 - [Emirates Hills](/areas/emirates-hills/) (Emaar) and [Dubai Hills Estate](/areas/dubai-hills-estate/) (Emaar with Meraas): each guide sets out the master developer's approval route.
 
 If you are unsure whether a piece of work needs approval, assume it does until the master developer has said otherwise in writing.

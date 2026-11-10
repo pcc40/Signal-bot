@@ -70,7 +70,7 @@ Nakheel publishes its rules to owners through its portal, and requirements chang
 | Kitchen and bathroom refit, same layout and services | Confirm with Nakheel | Usually lighter or none | Waste, access and working hours |
 | Painting, flooring, joinery, loose furniture | Confirm with Nakheel | Generally none | Contractor access and community rules |
 
-Our rule of thumb: if you are not sure whether a piece of work needs an NOC, assume it does until Nakheel has said otherwise in writing. An email from the community team is worth more than any number of contractors telling you "nobody bothers for that".
+Our rule of thumb: if you are not sure whether a piece of work needs an NOC, assume it does until Nakheel has said otherwise in writing. An email from the community team is worth more than any number of contractors telling you "nobody bothers for that". If your villa is in an Emaar community instead, see our guide to [renovating in an Emaar community](/insights/emaar-community-villa-renovation/).
 
 ## What does Nakheel ask for in an NOC application?
 
