@@ -26,7 +26,7 @@ Dear SHH team,
 
 Your Dubai Villa is a 28,000 sq ft new build, designed from London. On a house that size the owner's decisions and the contractor's payment applications pile up between your visits.
 
-Eastbridge is an independent client-side project manager for private villas in Dubai and Abu Dhabi; our founder ran P Chapman Construction, a premium UK residential builder, for 21 years. We don't design. No referral fees either way.
+I founded Eastbridge, an independent client-side project manager for private villas in Dubai and Abu Dhabi, after running P Chapman Construction, a premium UK residential builder, for 21 years. We don't design. No referral fees either way.
 
 Who looked after the owner's side on site there?
 
@@ -45,7 +45,7 @@ Dear 1508 London team,
 
 Your New Build Mansion Villa in Dubai relies on details like its louvres being built as drawn. Owners of such houses are often abroad, with nobody independent checking the work.
 
-Eastbridge is an independent client-side project manager for private villas in Dubai and Abu Dhabi; our founder ran P Chapman Construction, a premium UK residential builder, for 21 years. We don't design.
+I founded Eastbridge, an independent client-side project manager for private villas in Dubai and Abu Dhabi, after running P Chapman Construction, a premium UK residential builder, for 21 years. We don't design.
 
 Do your Dubai clients usually appoint their own project manager?
 
@@ -64,7 +64,7 @@ Dear Gunter & Co team,
 
 Your Dubai Luxury Villa took 18 months on site, with pieces made in Europe. That is a long time for an owner to pay a builder and overseas makers with nobody independent checking payments against progress.
 
-Eastbridge is an independent client-side project manager for private villas in Dubai and Abu Dhabi; our founder ran P Chapman Construction, a premium UK residential builder, for 21 years.
+I founded Eastbridge, an independent client-side project manager for private villas in Dubai and Abu Dhabi, after running P Chapman Construction, a premium UK residential builder, for 21 years.
 
 On that villa, did the owner have anyone on their side?
 
@@ -83,7 +83,7 @@ Dear Legacy Private team,
 
 Some of the families you plan for will build or renovate a villa here. Contractors' stage payments rarely keep to plan, and delays can move large sums by months.
 
-Eastbridge is an independent client-side project manager for private villas in Dubai and Abu Dhabi; our founder ran P Chapman Construction, a premium UK residential builder, for 21 years. No referral fees either way.
+I founded Eastbridge, an independent client-side project manager for private villas in Dubai and Abu Dhabi, after running P Chapman Construction, a premium UK residential builder, for 21 years. No referral fees either way.
 
 Has a client's villa build ever upset a plan you wrote?
 
@@ -102,7 +102,7 @@ Dear Pharos team,
 
 Your FAMILY framework covers a family's wealth, governance and legacy. When one of them builds a villa, whoever holds their affairs together usually hears only the contractor's version of progress.
 
-Eastbridge is an independent client-side project manager for private villas in Dubai and Abu Dhabi; our founder ran P Chapman Construction, a premium UK residential builder, for 21 years. No referral fees either way.
+I founded Eastbridge, an independent client-side project manager for private villas in Dubai and Abu Dhabi, after running P Chapman Construction, a premium UK residential builder, for 21 years. No referral fees either way.
 
 Do members ever ask Pharos Privé to keep an eye on a villa build?
 
@@ -121,7 +121,7 @@ Dear GSB team,
 
 GSB advises globally mobile families from the DIFC, and some will build or renovate a villa here. A contractor's delays and variations can move large payments by months.
 
-Eastbridge is an independent client-side project manager for private villas in Dubai and Abu Dhabi; our founder ran P Chapman Construction, a premium UK residential builder, for 21 years. No referral fees either way.
+I founded Eastbridge, an independent client-side project manager for private villas in Dubai and Abu Dhabi, after running P Chapman Construction, a premium UK residential builder, for 21 years. No referral fees either way.
 
 When a client builds, do you see the contractor's payment schedule?
 
@@ -140,7 +140,7 @@ Dear Habib Al Mulla and Partners team,
 
 Your construction and real estate practice drafts and assesses construction contracts. Many villa owners sign the contractor's standard form unread and meet its variations clause mid-build.
 
-Eastbridge is an independent client-side project manager for private villas in Dubai and Abu Dhabi; our founder ran P Chapman Construction, a premium UK residential builder, for 21 years. We give no legal advice.
+I founded Eastbridge, an independent client-side project manager for private villas in Dubai and Abu Dhabi, after running P Chapman Construction, a premium UK residential builder, for 21 years. We give no legal advice.
 
 Do private villa owners reach you before they sign, or after?
 
@@ -159,7 +159,7 @@ Dear Stephenson Harwood team,
 
 Your Dubai office pairs construction disputes with a private wealth team. When a private client's villa project stalls, the record of what was instructed, built and paid is usually scattered.
 
-Eastbridge is an independent client-side project manager for private villas in Dubai and Abu Dhabi; our founder ran P Chapman Construction, a premium UK residential builder, for 21 years. We assemble that record. We give no legal advice.
+I founded Eastbridge, an independent client-side project manager for private villas in Dubai and Abu Dhabi, after running P Chapman Construction, a premium UK residential builder, for 21 years. We assemble that record. We give no legal advice.
 
 Does your Dubai team take on private villa matters?
 
@@ -180,7 +180,7 @@ Dear Dezire team,
 
 Dezire's work is cost, contracts and tender documents. Villa owners often need exactly that and have no quantity surveyor to ask.
 
-Eastbridge is an independent client-side project manager for private villas in Dubai and Abu Dhabi; our founder ran P Chapman Construction, a premium UK residential builder, for 21 years. We don't do a quantity surveyor's work, so we would rather bring one in.
+I founded Eastbridge, an independent client-side project manager for private villas in Dubai and Abu Dhabi, after running P Chapman Construction, a premium UK residential builder, for 21 years. We don't do a quantity surveyor's work, so we would rather bring one in.
 
 Do you take on one-off private villas?
 
@@ -199,7 +199,7 @@ Dear Poolsco team,
 
 Poolsco has completed more than 40 projects in Dubai since 2022. A pool often goes in while other villa works are under way, leaving your team waiting on an owner juggling several contractors.
 
-Eastbridge is an independent client-side project manager for private villas in Dubai and Abu Dhabi; our founder ran P Chapman Construction, a premium UK residential builder, for 21 years. We don't design or build.
+I founded Eastbridge, an independent client-side project manager for private villas in Dubai and Abu Dhabi, after running P Chapman Construction, a premium UK residential builder, for 21 years. We don't design or build.
 
 How often do your pool jobs wait on the owner's other contractors?
 
@@ -218,7 +218,7 @@ Dear Panamera team,
 
 You show clients a 3D render before any construction starts. On most villa builds the garden and pool are still planned last, after the budget has gone.
 
-Eastbridge is an independent client-side project manager for private villas in Dubai and Abu Dhabi; our founder ran P Chapman Construction, a premium UK residential builder, for 21 years. We don't design or build. No referral fees either way.
+I founded Eastbridge, an independent client-side project manager for private villas in Dubai and Abu Dhabi, after running P Chapman Construction, a premium UK residential builder, for 21 years. We don't design or build. No referral fees either way.
 
 At what stage of a build do owners usually first call you?
 
