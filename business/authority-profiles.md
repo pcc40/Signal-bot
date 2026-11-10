@@ -227,13 +227,13 @@ None of these sells a "best" badge or a link package. Do not pay for premium pla
 | Platform | Profile URL | Date live | NAP checked | Added to `SOCIAL` |
 |---|---|---|---|---|
 | Google Business Profile (see `offsite-authority-kit.md`) | verification started 10 Nov 2026: hidden mailing address = Sobha Hartland Waves; video verification to record | | | n/a |
-| Houzz | | | | |
+| Houzz | account created 10 Nov 2026 (consulting email); no suitable professional category, not pursued | | | |
 | Bing Places | | | | n/a |
 | Apple Business | | | | n/a |
 | LinkedIn company page | | | | |
 | Dubai Chambers (optional) | | | | n/a |
 | Meydan FZ (if any listing) | | | | n/a |
-| 2GIS | | | | n/a |
+| 2GIS | submitted 10 Nov 2026 via Add company (status emails to philip@); DealDeed also submitted 10 Nov (status emails to consulting); awaiting 2GIS staff verification | | Meydan address, +971 56 744 0057 | n/a |
 | Yellow Pages UAE | submitted 10 Nov 2026 (free listing form, awaiting YP approval); DealDeed also submitted 10 Nov with p.chapman.consulting@gmail.com | | Meydan address, +971 56 744 0057 | |
 | ProTenders | | | | |
 | British Chamber of Commerce Dubai | | | | |
