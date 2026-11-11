@@ -9,28 +9,37 @@ Mix: opportunity, buyer brief, opportunity, market/launch radar, "how the desk w
 
 ## Queued
 
-### Thu 12 Nov 2026, 12:00 Dubai — Buyer brief: ready 3-bed
-Buyer brief on the desk this week.
+### Thu 12 Nov 2026, 12:00 Dubai — Buyer brief: ready 3-bed (with image card: cards/2026-11-12-buyer-brief.png)
+One buyer. AED 10–12M. Ready now.
 
-Wanted: a ready 3-bedroom in Dubai Marina, Emaar Beachfront or on the Palm.
-Budget: AED 10–12M, at or below the original price.
+The brief: a ready 3-bedroom apartment in Dubai Marina, Emaar Beachfront or on Palm Jumeirah, priced at or below what the current owner paid.
 
-Agents — if you hold stock that fits, submit it to the desk. Every deal is agent to agent, your client stays yours, and DealDeed's fixed introduction fee is paid by the agent only when a deal completes.
+• Completed, ready stock only
+• At least two en-suite bedrooms
+• A four-bedroom is considered for the right layout
+• Budget AED 10–12M, flexible for the right unit
+
+Agents: if you hold stock that fits, submit it to the desk. Every deal is agent to agent, your client stays yours, and DealDeed's fixed introduction fee is paid by the agent only when a deal completes.
+
+Holding something that fits?
 
 dealdeed.ae/desk#briefs
 
 #DubaiMarina #EmaarBeachfront #PalmJumeirah #DubaiRealEstate #RealEstateAgents
 
-### Fri 13 Nov 2026, 12:00 Dubai — Athlon townhouse below purchase price
-A real loss, not a sticker discount.
+### Fri 13 Nov 2026, 12:00 Dubai — Athlon townhouse below purchase price (with image card: cards/2026-11-13-athlon-townhouse.png)
+This owner is selling for AED 167,000 less than they paid.
+
+A real loss on a 2024 purchase, not a sticker discount.
 
 A 3-bedroom townhouse in Athlon by Aldar, Dubailand:
-• 2,300 sq ft built-up on a 2,000 sq ft plot — larger than most Athlon townhouse plots
+• 2,300 sq ft built-up on a 2,000 sq ft plot, larger than most Athlon townhouse plots
 • Asking AED 3,050,000, about AED 1,326 per sq ft
-• AED 167,000 under what the owner paid Aldar in 2024
 • Balance on Aldar's plan to handover in 2028
 
-The owner needs out before handover. Purchase price checked against the developer's statement of account before introduction; the unit is released to registered buyers on agreed terms.
+The owner needs out before handover. The purchase price was checked against the developer's statement of account before introduction, and the detail is released to registered buyers on agreed terms.
+
+Buyers and agents: ask the desk.
 
 dealdeed.ae/desk
 
@@ -59,6 +68,6 @@ dealdeed.ae/launches
 | Date | Post | Status |
 |---|---|---|
 | Wed 11 Nov 08:00 UK | Al Barari villa | Posted (confirmed live in LinkedIn 11 Nov) |
-| Thu 12 Nov 08:00 UK | Buyer brief: ready 3-bed Marina/Beachfront/Palm | Scheduled 10 Nov |
-| Fri 13 Nov 08:00 UK | Athlon townhouse below purchase price | Scheduled 10 Nov |
+| Thu 12 Nov 08:00 UK | Buyer brief: ready 3-bed Marina/Beachfront/Palm + image card | Rescheduled 11 Nov with image (text-only version deleted) |
+| Fri 13 Nov 08:00 UK | Athlon townhouse below purchase price + image card | Rescheduled 11 Nov with image (text-only version deleted) |
 | Mon 16 Nov 08:00 UK | Abu Dhabi launch radar (Oct AED 12.97bn; Man City Ph2, Riviera Ph2, Orchard, One&Only Al Maryah) + image card | Scheduled 11 Nov |
