@@ -33,7 +33,7 @@ sources:
   - title: "Dubai Municipality: new and improved building permits app launched"
     url: "https://www.dm.gov.ae/new-improved-building-permits-app-launched-for-streamlined-services/"
   - title: "Dubai Building Code, 2021 edition (UAE Government portal)"
-    url: "https://u.ae/-/media/Documents-2023/Dubai-Building-Code_English_2021-Edition_compressed-(1).pdf"
+    url: "https://www.dm.gov.ae/municipality-business/planning-and-construction/dubai-building-code-2/"
   - title: "Dubizzle: how to apply for a new building permit in Dubai"
     url: "https://www.dubizzle.com/blog/property/apply-new-building-permit-dubai/"
   - title: "Dubizzle: permit for construction site preparation by Dubai Municipality"

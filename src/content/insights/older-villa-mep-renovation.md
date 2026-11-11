@@ -27,7 +27,7 @@ sources:
   - title: "Solarthermalworld: Dubai, no solar thermal system, no building permit (on Circular 183 of 2011)"
     url: "https://solarthermalworld.org/news/dubai-no-solar-thermal-system-no-building-permit/"
   - title: "ICC Building Safety Journal: Dubai Executive Council issues Dubai's new building code"
-    url: "https://www.iccsafe.org/building-safety-journal//dubai-executive-council-issues-dubais-new-building-code"
+    url: "https://www.iccsafe.org/building-safety-journal/bsj-technical/dubai-executive-council-issues-dubais-new-building-code/"
   - title: "Emaar Community Management: Arabian Ranches home modification FAQs"
     url: "https://www.ecm.ae/en/communities/arabian-ranches/lifestyle/faqs/home-modifications-arabian-ranches/"
   - title: "DEWA: Electricity network modification"

@@ -680,7 +680,7 @@ body.has-hero .site-head:not(.stuck) .btn{background:#fff;color:var(--ink);borde
 /* per-language type */
 html[lang="ar"]{--serif:"Noto Naskh Arabic","IBM Plex Sans Arabic",Tahoma,serif;--sans:"IBM Plex Sans Arabic",Tahoma,"Segoe UI",sans-serif}
 html[lang="ru"]{--serif:"Noto Serif Display","Noto Serif",Georgia,serif;--sans:"Golos Text","Segoe UI",Arial,sans-serif}
-html[lang="zh-Hans"]{--serif:"Noto Serif SC","Songti SC","STSong",serif;--sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif}
+html[lang="zh-Hans"]{--serif:"Songti SC","STSong","Noto Serif CJK SC","Source Han Serif SC","SimSun",serif;--sans:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC",sans-serif}
 html[lang="hi"]{--serif:"Noto Serif Devanagari","Noto Sans Devanagari",serif;--sans:"Noto Sans Devanagari","Nirmala UI",sans-serif}
 html:not([lang^="en"]) h1,html:not([lang^="en"]) h2,html:not([lang^="en"]) h3{letter-spacing:0;line-height:1.25}
 html:not([lang^="en"]) .hero h1{line-height:1.18;max-width:16ch}
@@ -812,6 +812,7 @@ img{color:transparent}
 .calc-checks input{width:20px;height:20px;accent-color:var(--ink);margin:0}
 .calc-in .is-off{opacity:.42}
 .calc-in .hint.is-off{visibility:hidden}
+@media (max-width:760px){.calc-in .hint.is-off{display:none}}
 .calc-out{background:var(--stone);padding:clamp(22px,3vw,40px)}
 .page-head--tool{padding-block:clamp(36px,4.5vw,72px) 0}
 .page-head--tool h1{max-width:22ch;font-size:var(--s-4)}
@@ -1131,3 +1132,36 @@ html,body{overflow-x:clip}
 }
 @media (prefers-reduced-motion:reduce){.cookie-banner{transform:none;transition:none}}
 @media print{.cookie-banner,.cookie-settings{display:none!important}}
+
+/* ---- 11 Nov 2026: phone hero and cookie banner ---- */
+/* The header sits over the hero, so the hero text needs room above it on short phone screens (it used to ride up over the logo and the photo credit). */
+@media (max-width:760px){
+  .hero .wrap{padding-top:124px;padding-bottom:clamp(40px,7vh,72px)}
+  .hero h1{font-size:clamp(2.2rem,1.2rem + 5.2vw,2.9rem)}
+  .hero .actions{margin-top:22px}
+}
+@media (max-width:760px) and (max-height:720px){
+  .hero h1{font-size:2.15rem;margin-bottom:.3em}
+  .hero .lede{font-size:.98rem;line-height:1.45}
+  .hero .actions{margin-top:16px;gap:8px}
+  .hero .actions .btn{padding:.7em 1.1em}
+}
+/* Cookie banner: a slim bar, so it no longer covers the first call button. */
+.cookie-banner__h{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cookie-banner__p{font-size:.78rem;line-height:1.45;margin:0 0 10px}
+.cookie-banner .btn{min-height:40px;padding:.5em 1.1em;font-size:.82rem}
+.cookie-banner__in{padding:12px 14px 14px}
+@media (max-width:760px){
+  .cookie-banner__p{font-size:.74rem;line-height:1.4;margin-bottom:8px}
+  .cookie-banner__in{padding:10px 12px 12px}
+  .cookie-banner .btn{min-height:38px}
+}
+@media (min-width:761px){
+  .cb-open .hero .wrap{padding-bottom:max(clamp(64px,11vh,130px),calc(var(--cb-h,0px) + 68px))}
+  .cb-open .hero-meta{bottom:calc(var(--cb-h,0px) + 132px)}
+  .cb-open .action-bar{bottom:calc(var(--cb-h,0px) + 14px)}
+  .cookie-banner{inset-inline:0;bottom:0;max-width:none;border-inline:0;border-bottom:0}
+  .cookie-banner__in{display:flex;align-items:center;gap:20px;padding:10px max(20px,var(--gutter))}
+  .cookie-banner__p{margin:0;flex:1 1 auto}
+  .cookie-banner__acts{flex:0 0 auto;flex-wrap:nowrap}
+}

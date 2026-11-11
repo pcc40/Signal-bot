@@ -247,7 +247,6 @@ def insert_switcher(soup, path, cur):
 FONTS = {
     "ar": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Noto+Naskh+Arabic:wght@500&display=optional",
     "ru": "https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Noto+Serif+Display:wght@400&display=optional",
-    "zh": "https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@500&display=optional",
     "hi": "https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Serif+Devanagari:wght@500&display=optional",
 }
 
@@ -277,6 +276,10 @@ def language_fonts(soup, lang):
     for l in soup.find_all("link", rel="preload"):
         if l.get("as") == "font" and l.get("href", "").startswith("/assets/fonts/"):
             l.decompose()
+    if lang not in FONTS:
+        # Chinese (11 Nov 2026): no web font. Noto Sans/Serif SC added about 1.9 MB to every /zh/ page; the system
+        # fonts named in site.css (PingFang SC, Microsoft YaHei, Songti SC) are on every Apple, Windows and Android device.
+        return
     anchor = soup.head.find("meta", attrs={"name": "viewport"}) or soup.head.contents[0]
     for host, cors in (("https://fonts.gstatic.com", True), ("https://fonts.googleapis.com", False)):
         pre = soup.new_tag("link", rel="preconnect", href=host)

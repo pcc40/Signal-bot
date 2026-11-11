@@ -281,3 +281,10 @@ cat dist/robots.txt                 # User-agent: * / Disallow: /
 
 ## Project films hosted on the site (11 Nov 2026)
 The P Chapman Vimeo films stopped playing on 11 Nov 2026 ("This video isn't available"). Three films are now hosted on this site instead: Quay House, Sea Glass House and Polgreen Manor (`src/static/assets/video/<name>.mp4`, 1080p H.264, about 20–45 MB each, made from Phil's originals with `ffmpeg -crf 24 -maxrate 3M -movflags +faststart`). In `src/content/projects.py` a project's `"video": ("file", "<name>")` plays that file in a native player after the visitor presses Play; `("vimeo", id)` still loads Vimeo. The other project pages still point at Vimeo and need either Phil's original files or their film block removed.
+
+## 11 Nov 2026: site check fixes
+- Phone hero: extra top padding and smaller headline under 760px so the kicker no longer runs under the header.
+- Cookie banner: slim full-width bar on desktop, compact card on phones. While it is open the script sets `html.cb-open` and `--cb-h` (banner height); the hero padding, photo credit and WhatsApp button use them to stay clear of the bar.
+- Calculator: hidden hint no longer leaves a gap on phones.
+- Chinese pages use system fonts (no web-font download); "zh" removed from FONTS in tools/i18n.py.
+- Dead Dubai Building Code source links replaced (dm.gov.ae page, ICC article). The stgportalnew.dm.gov.ae PDF link in glossary.py and renovate-or-rebuild could not be checked from the build machine and is unchanged.

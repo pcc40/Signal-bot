@@ -47,7 +47,7 @@ sources:
   - title: "Dubai Decree No. (45) of 2021 concerning the Dubai Building Code"
     url: "https://dlp.dubai.gov.ae/Legislation%20Reference/2021/Decree%20No.%20(45)%20of%202021%20Concerning%20the%20Dubai%20Building%20Code.html"
   - title: "Dubai Building Code, 2021 edition (Government of Dubai)"
-    url: "https://u.ae/-/media/Documents-2023/Dubai-Building-Code_English_2021-Edition_compressed-(1).pdf"
+    url: "https://www.dm.gov.ae/municipality-business/planning-and-construction/dubai-building-code-2/"
   - title: "Dubai Municipality: Dubai Building Code"
     url: "https://www.dm.gov.ae/municipality-business/planning-and-construction/dubai-building-code-2/"
   - title: "Dubai Municipality: Single window for building permits"
