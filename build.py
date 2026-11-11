@@ -321,9 +321,15 @@ def banner(crumbs, h1, lede=None, image="quay-house-01", credit=None, extra=""):
             f'<div class="wrap">{crumbs_html(crumbs)}<h1>{h1}</h1>{l}{extra}</div>{c}</section>')
 
 def video_html(provider, vid, poster_base, title):
-    src = (f"https://player.vimeo.com/video/{vid}?autoplay=1&dnt=1" if provider == "vimeo"
-           else f"https://www.youtube-nocookie.com/embed/{vid}?autoplay=1&rel=0")
-    return f'''<div class="video" data-src="{src}" data-title="{esc(title)}">{picture(poster_base, title + " — film still", "(max-width:900px) 100vw, 1100px")}
+    """provider "file" plays a film hosted on this site (src/static/assets/video/<vid>.mp4) in a native
+    player; "vimeo" and "youtube" load the provider's player in an iframe. Either way nothing loads until Play."""
+    if provider == "file":
+        attr = f'data-file="/assets/video/{vid}.mp4"'
+    else:
+        src = (f"https://player.vimeo.com/video/{vid}?autoplay=1&dnt=1" if provider == "vimeo"
+               else f"https://www.youtube-nocookie.com/embed/{vid}?autoplay=1&rel=0")
+        attr = f'data-src="{src}"'
+    return f'''<div class="video" {attr} data-title="{esc(title)}">{picture(poster_base, title + " — film still", "(max-width:900px) 100vw, 1100px")}
 <button type="button" aria-label="Play the film: {esc(title)}"><span>Play the film</span></button></div>'''
 
 def hero_video_html():
@@ -477,7 +483,7 @@ function setNav(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o
 if(b&&n){b.addEventListener('click',function(){setNav(!n.classList.contains('open'))});if(x)x.addEventListener('click',function(){setNav(false)})}
 document.querySelectorAll('.has-mega > a').forEach(function(a){a.addEventListener('click',function(e){if(window.innerWidth<=1100){e.preventDefault();a.parentNode.classList.toggle('open')}})});
 var h=document.querySelector('.site-head');if(document.body.classList.contains('has-hero')&&h){var f=function(){h.classList.toggle('stuck',window.scrollY>140)};f();window.addEventListener('scroll',f,{passive:true})}
-document.querySelectorAll('.video button').forEach(function(btn){btn.addEventListener('click',function(){var v=btn.parentNode,fr=document.createElement('iframe');fr.src=v.dataset.src;fr.title=v.dataset.title;fr.allow='autoplay; fullscreen; picture-in-picture';fr.allowFullscreen=true;v.innerHTML='';v.appendChild(fr)})});
+document.querySelectorAll('.video button').forEach(function(btn){btn.addEventListener('click',function(){var v=btn.parentNode,fr;if(v.dataset.file){fr=document.createElement('video');fr.src=v.dataset.file;fr.controls=true;fr.autoplay=true;fr.playsInline=true;fr.setAttribute('aria-label',v.dataset.title);fr.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0;background:#000'}else{fr=document.createElement('iframe');fr.src=v.dataset.src;fr.title=v.dataset.title;fr.allow='autoplay; fullscreen; picture-in-picture';fr.allowFullscreen=true}v.innerHTML='';v.appendChild(fr)})});
 var sl=document.querySelectorAll('.slides img[data-src]');
 if(sl.length&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){window.addEventListener('load',function(){setTimeout(function(){sl.forEach(function(i){if(i.dataset.srcset)i.srcset=i.dataset.srcset;i.src=i.dataset.src})},2000)})}
 var hv=document.querySelector('.hero-video'),mm=function(q){return window.matchMedia&&window.matchMedia(q).matches};

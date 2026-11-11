@@ -10,7 +10,7 @@ PROJECTS = [
  {"slug": "quay-house", "name": "Quay House", "place": "St Mawes, Cornwall", "type": "Bespoke waterside residence",
   "sector": "Private house", "team": 'MBA (consulting engineers), Wellers (quantity surveyors)',
   "recognition": [],
-  "source": 'https://www.pchapmanconstruction.com/construction-projects-south-west-builders/quay-house-st-mawes/', "photo": "Hugh Hastings", "video": ("vimeo", "219974514"), "layout": "wide",
+  "source": 'https://www.pchapmanconstruction.com/construction-projects-south-west-builders/quay-house-st-mawes/', "photo": "Hugh Hastings", "video": ("file", "quay-house-film"), "layout": "wide",
   "summary": "A curved, green-roofed house set into the trees above the Percuil River.",
   "text": "<p>Quay House overlooks the Percuil River from a secluded, wooded site near St Mawes. A natural green roof and sweeping curves let the house settle into the landscape rather than stand over it. Behind that calm exterior sits some of the most demanding construction P Chapman Construction delivered: curved structural glazing, cedar cladding to tight radii, cantilevered timber terraces, stone retaining walls and a polished stone interior, all built on a steep site with restricted access.</p>",
   "dubai": "Curved glazing, deep overhangs and large waterside terraces are exactly the elements that drive cost and risk on Palm Jumeirah, Jumeirah Bay and Dubai Islands villas. They need detailing, sequencing and protection planned from the start."},
