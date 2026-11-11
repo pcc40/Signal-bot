@@ -49,7 +49,7 @@ Sent 11 November 2026 from philip@eastbridgestrategicpartners.com through Bird, 
 | 44 | Property Inspection Dubai | info@propertyinspectiondubai.ae | After the inspection report | em_01m74mc31qerhrjxh28q9r6wz3 | Delivered |
 | 45 | Ample Inspections | info@ampleinspections.com | Mudon Al Ranim handovers | em_01m74mcgrffbdas6evb59n3j2q | Delivered |
 | 46 | RAMI Property Inspections | ops@ramipropertyinspections.com | Older villa findings | em_01m74mcy2kffvv7rtac6kn877p | Delivered |
-| 47 | Fedari Inspection | info@fedari.ae | Behind the walls | em_01m74mdb4fec68aaj665yt2a84 | Delivered |
+| 47 | Fedari Inspection | info@fedari.ae | Behind the walls | em_01m74mdb4fec68aaj665yt2a84 | Delivered. **REPLIED 11 Nov** (Khalid Gaddur: call, partnership, Al Barari lead). Exclude from follow-ups |
 | 48 | GTA Inspectors | info@gtainspectors.com | Pre-purchase villa reports | em_01m74mdrq3fbn8r3bptdgvczt1 | Delivered |
 | 49 | Eagle Eye Property Inspection | info@eagleeyepropertyinspection.com | Who fixes the findings | em_01m74me6c7f8asyjkn1pqshxpr | Delivered |
 | 50 | Moduline Engineering Consultancy | info@moduline.ae | Villa extension findings | em_01m74mekhefa9a71rafwg4q8fe | Delivered |

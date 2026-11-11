@@ -53,7 +53,7 @@ Emails are sent from philip@eastbridgestrategicpartners.com through Bird (sendin
 | 6 | 10 Nov 2026 | 24 sent, 24 delivered (UAE villa studios and agencies incl. Abu Dhabi; UK interiors with Dubai villas; wealth, family office, relocation; law; QS; landscape and pool). Primo Capital dropped on Phil's instruction (do not contact) | `business/outreach-batch-6a.md`, `business/outreach-batch-6b.md`, `business/outreach-batch-6-log.md` |
 | 7 | 11 Nov 2026 | 49 sent, 49 delivered, no BCC. **First short-style batch** (55–85 words, no link, one question) for comparing reply rates with batches 2–6. UAE studios and agencies, UK practices, wealth and family offices, law, QS, landscape, mortgage brokers, holiday-home operators, smart-home and lighting, kitchens, inspectors | `business/outreach-batch-7a.md`, `7b.md`, `7c.md`, `business/outreach-batch-7-log.md` |
 
-**Totals (11 Nov):** 151 firms contacted (8 by Phil, 143 via Bird); 1 bounce (Galadari); 1 reply (Aparna Kaushik, not now). Daily runs continue to Fri 13 Nov at up to 50 firms a day, no BCC, short style.
+**Totals (11 Nov):** 151 firms contacted (8 by Phil, 143 via Bird); 1 bounce (Galadari); 2 replies (Aparna Kaushik, not now; Fedari, partnership and a possible Al Barari introduction). Daily runs continue to Fri 13 Nov at up to 50 firms a day, no BCC, short style.
 
 **Follow-ups:** created as Outlook drafts by the Claude Desktop chat (Chrome), as replies to Phil's BCC copies. Phil reviews and sends them. They go only to firms that have not replied, bounced or opted out.
 | Batch | Day-4 drafts | Day-10 (final) drafts |
@@ -66,6 +66,7 @@ Emails are sent from philip@eastbridgestrategicpartners.com through Bird (sendin
 
 **Replies so far:**
 - 6 Nov: **Aparna Kaushik Design Group** (batch 2, #2). Polite holding reply from Nupur Kapoor, EA to Ms. Kaushik: they will review and come back if there is an opportunity. Status: *replied, not now*. No follow-ups; one light check-in in about three months (early Feb 2027).
+- 11 Nov: **Fedari Building Inspection** (batch 7, #47, short style). Khalid Gaddur, Managing Director, phoned and then emailed the same day: wants a two-way referral partnership and mutual website listings, and mentioned a possible introduction to an owner in Al Barari planning a small renovation. Status: *warm, first possible project*. Reply drafted 11 Nov (no referral fees either way; our listing details sent; asks for theirs and for the Al Barari introduction). To do once Fedari sends its logo and text: add a Fedari listing to the website. No follow-up emails to Fedari from the sequence.
 **Next batch:** the daily run (07:41 Dubai, Tue 10 – Fri 13 Nov) researches and sends up to 25 new firms a day, excluding everyone above.
 
 ## 5. Open items for Phil
