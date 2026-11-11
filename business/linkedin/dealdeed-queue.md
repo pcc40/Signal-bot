@@ -4,6 +4,7 @@ Page: https://www.linkedin.com/company/dealdeed/ (admin id 146955358)
 Rhythm: one post every UAE working day (Mon–Fri), 12:00 Dubai (08:00 UK), scheduled in LinkedIn's own scheduler from the page admin. Keep three working days queued at all times.
 Source: only what is published on https://dealdeed.ae/desk (and /desk#briefs, /launch-radar) on the day of writing. Never a unit/villa/plot number, developer type code, party name, Phil's UK number, a percentage fee, or a figure not on the site.
 NEVER describe anything as "off-market" or "exclusive" (Phil, 10 Nov: never claim off-market in Dubai). Prices and "below comparable" wording only exactly as the desk states them.
+Images (Phil, 11 Nov): every post carries an image. Use a DealDeed-branded card built from business/linkedin/cards/card-template-*.html (own typography, figures only from the site) or DealDeed's own listing photos; never third-party/developer renders. Open with a one-line hook and close with a question or clear call to action. Upload via the composer's "Add media" → "Upload from computer" input.
 Mix: opportunity, buyer brief, opportunity, market/launch radar, "how the desk works" — then repeat. Max 5 hashtags.
 
 ## Queued
@@ -35,18 +36,20 @@ dealdeed.ae/desk
 
 #Athlon #Aldar #Dubailand #DubaiRealEstate #OffPlan
 
-### Mon 16 Nov 2026, 12:00 Dubai — Abu Dhabi launch radar (DRAFT — NOT YET SCHEDULED in LinkedIn; run of 11 Nov could not pick a Chrome browser)
-Abu Dhabi launch radar, checked 9 November.
+### Mon 16 Nov 2026, 12:00 Dubai — Abu Dhabi launch radar (with image card: cards/2026-11-16-abu-dhabi-launch-radar.png)
+AED 12.97bn of homes sold in Abu Dhabi in a single month.
 
-Abu Dhabi sold AED 12.97bn of homes in October, 35% up on October 2025, with 77% of it sold straight from developers (ADREC data, as analysed by Springfield Properties).
+That was October: 35% up on October 2025, with 77% of it off-plan (ADREC data, as analysed by Springfield Properties).
 
-What changed since October:
-• Manchester City Yas Residences Phase 2 — Ohana says about 92% sold within 48 hours; remaining villas on request
-• Riviera Residences Phase 2 on Al Reem — announced 4 November, designed by Herzog & de Meuron, prices on request
-• The Orchard at Sobha City — four-bedroom villas from AED 9.1m on the developer's schedule
-• One&Only Private Residences, Al Maryah Island — announced, not yet priced
+What has moved since:
+• Manchester City Yas Residences Phase 2: Ohana says about 92% sold within 48 hours. Remaining villas on request.
+• Riviera Residences Phase 2 on Al Reem: announced 4 November, designed by Herzog & de Meuron.
+• The Orchard at Sobha City: four-bedroom villas from AED 9.1m.
+• One&Only Private Residences, Al Maryah Island: announced, not yet priced.
 
-First releases are allocated before they reach a portal. Every launch, dated and sourced:
+First releases are allocated before they reach a portal. When the price is public, the allocation is already done.
+
+We track every Abu Dhabi launch, dated and sourced. Which one are you watching?
 
 dealdeed.ae/launches
 
@@ -55,7 +58,7 @@ dealdeed.ae/launches
 ## Posted / scheduled log
 | Date | Post | Status |
 |---|---|---|
-| Wed 11 Nov 08:00 UK | Al Barari villa | Posted (scheduled 10 Nov; not re-checked in LinkedIn 11 Nov) |
+| Wed 11 Nov 08:00 UK | Al Barari villa | Posted (confirmed live in LinkedIn 11 Nov) |
 | Thu 12 Nov 08:00 UK | Buyer brief: ready 3-bed Marina/Beachfront/Palm | Scheduled 10 Nov |
 | Fri 13 Nov 08:00 UK | Athlon townhouse below purchase price | Scheduled 10 Nov |
-| Mon 16 Nov 08:00 UK | Abu Dhabi launch radar (Oct AED 12.97bn; Man City Ph2, Riviera Ph2, Orchard, One&Only Al Maryah) | DRAFTED 11 Nov — NOT scheduled (two Chrome browsers connected, none selected) |
+| Mon 16 Nov 08:00 UK | Abu Dhabi launch radar (Oct AED 12.97bn; Man City Ph2, Riviera Ph2, Orchard, One&Only Al Maryah) + image card | Scheduled 11 Nov |
