@@ -8,7 +8,7 @@ Raw URL for Master Control: `https://raw.githubusercontent.com/pcc40/eastbridge-
 - Any Code session that changes the site or sends outreach updates the relevant section and the *Last updated* line.
 - Master Control does not edit this file. It mirrors it into tracker B7 (see the last section).
 
-Last updated: 10 November 2026, daily SEO engine (Tuesday article: renovating a villa in an Emaar community; checks 0/0).
+Last updated: 11 November 2026, daily SEO engine (Wednesday checks only, no article; audit 0/0, all live checks 200).
 
 ---
 
@@ -26,7 +26,7 @@ Eastbridge Strategic Partners L.L.C-FZ (Meydan Free Zone licence 2540153.01) is 
 | Size | 92 pages × 5 languages (English, Arabic, Russian, Chinese, Hindi) = 460 URLs, all returning 200. 28 insight articles (latest: /insights/emaar-community-villa-renovation/, 10 Nov). 4 tools: cost calculator, renovate or rebuild, stage payment planner, delay cost estimator. 2 free PDF guides. 14 service pages. 12 area pages. |
 | Brand | Keystone-arch logo (chosen 5 Nov). The Outlook signature is in `business/email-signature.html`. |
 | Images | UAE developer images, with credits, on area pages and place-based articles. The "Built by our founder in the UK" strip of Cornish houses appears on home, area, service and article pages. |
-| Checks | `python3 build.py && python3 tools/i18n.py apply && python3 tools/seo_audit.py` must report 0 errors and 0 warnings. Last run: 495 pages, 0/0 (8 Nov). |
+| Checks | `python3 build.py && python3 tools/i18n.py apply && python3 tools/seo_audit.py` must report 0 errors and 0 warnings. Last run: 500 pages, 0/0 (11 Nov). |
 | Forms | Netlify Forms: `brief` (contact), `estimate`, `checklist` and `notes`. Only the English pages register the forms. Success events fire only on the thank-you pages. There is a cookie banner, and GA4 runs only after the visitor consents. |
 | Rules | See `src/content/WRITING_BRIEF.md` and `HANDOFF.md`:<br>• never supervise, certify, turnkey or "on your behalf"<br>• no UAE projects or clients claimed<br>• no architect names, no turnover, no team names<br>• Island E is hypothetical |
 
@@ -34,9 +34,10 @@ Eastbridge Strategic Partners L.L.C-FZ (Meydan Free Zone licence 2540153.01) is 
 | Item | State |
 |---|---|
 | Daily SEO engine | Scheduled task "Eastbridge SEO engine", 06:38 Dubai daily, playbook `AUTOMATION.md`. It publishes 3 articles a week (Tuesday, Thursday and Saturday), deepens one page every Monday and adds a new area page every second Monday, and writes the visibility log in `reports/visibility.csv`. |
-| Indexing | Google first showed impressions on 3 Nov 2026; Search Console, 7 days to 5 Nov: 1 click, 10 impressions (UAE 7, India 2, Russia 1), average position 14.5; page indexing (9 Nov): 452 indexed, 8 not — 1 noindex (calculator embed, intended), 1 canonical alternate (contact ?area= link, intended), 4 crawled-not-indexed (ar/ru renovation guide, hi timeline, feed.xml), 2 discovered (ru Hudayriyat, zh FAQ). Sitemap resubmitted 9 Nov. GA4 6–7 Nov: first Google organic visits (3) and first ChatGPT referral (1). Search Console is verified (GSC_VERIFICATION in `src/config.py`). The sitemap has 460 URLs and 215 image entries. IndexNow resubmitted all 460 URLs on 6 Nov. |
+| Indexing | Google first showed impressions on 3 Nov 2026; Search Console, 7 days to 8 Nov: 1 click, 29 impressions, average position 22.3 (queries incl. villa renovation cost dubai, villa renovation emirates hills, villa construction cost; first Russian query); request indexing 10 Nov for Emaar article, Jumeirah Bay, ru Hudayriyat, zh FAQ; page indexing (11 Nov): 452 indexed, 8 not — 1 noindex (calculator embed, intended), 1 canonical alternate (contact ?area= link, intended), 4 crawled-not-indexed (ar/ru renovation guide, hi timeline, feed.xml), 2 discovered (ru Hudayriyat, zh FAQ). Sitemap resubmitted 9 Nov. GA4 6–7 Nov: first Google organic visits (3) and first ChatGPT referral (1). Search Console is verified (GSC_VERIFICATION in `src/config.py`). The sitemap has 460 URLs and 215 image entries. IndexNow resubmitted all 460 URLs on 6 Nov. |
+| LinkedIn | Company pages live 10 Nov: Eastbridge (/company/eastbridge-strategic-partners/, in SOCIAL sameAs) and DealDeed (/company/dealdeed/). Personal-profile posts now carry the link in the first comment (scheduled task adds it at 09:04 UK). |
 | Analytics | GA4 G-120XT9N6XB, consent-gated. **Phil to do:** in GA4, unmark `generate_lead` and mark `enquiry_success` as the key event. |
-| Next topics | See `src/content/TOPICS.md` (top of the backlog). Next: emaar-community-villa-renovation (Tue 10 Nov). |
+| Next topics | See `src/content/TOPICS.md` (top of the backlog). Next article Thu 12 Nov (first unticked topic). |
 | AI visibility | 40 fixed buyer prompts in `reports/ai-visibility/` (method and weekly Claude Desktop prompt in its README). Baseline 7 Nov 2026, web-search proxy only: Eastbridge in 0 of 40; Tanmu named in 25 of 40. AI platforms (ChatGPT, Gemini, Perplexity, Google AI Mode) are run by Claude Desktop every Sunday from 8 Nov; the SEO engine reruns the proxy every Monday and adds monthly rates to section 8. |
 
 ## 4. Outreach (partner referrals)
