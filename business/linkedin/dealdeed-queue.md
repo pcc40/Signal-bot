@@ -8,20 +8,6 @@ Mix: opportunity, buyer brief, opportunity, market/launch radar, "how the desk w
 
 ## Queued
 
-### Wed 11 Nov 2026, 12:00 Dubai — Al Barari villa
-Al Barari — a 4 + 1 bedroom villa on one of the community's larger plots.
-
-• 9,777 sq ft built-up on a 12,800 sq ft plot
-• Furnished and vacant
-• Private pool with a shaded entertaining terrace
-• AED 28,000,000 — below comparable large-plot villas in Al Barari
-
-Verified before introduction. Photos, a walkthrough video and the full brochure are on the desk; detail is released to registered buyers through their appointed agent.
-
-dealdeed.ae/desk
-
-#AlBarari #DubaiVillas #DubaiProperty #DubaiRealEstate #LuxuryRealEstate
-
 ### Thu 12 Nov 2026, 12:00 Dubai — Buyer brief: ready 3-bed
 Buyer brief on the desk this week.
 
@@ -49,9 +35,27 @@ dealdeed.ae/desk
 
 #Athlon #Aldar #Dubailand #DubaiRealEstate #OffPlan
 
+### Mon 16 Nov 2026, 12:00 Dubai — Abu Dhabi launch radar (DRAFT — NOT YET SCHEDULED in LinkedIn; run of 11 Nov could not pick a Chrome browser)
+Abu Dhabi launch radar, checked 9 November.
+
+Abu Dhabi sold AED 12.97bn of homes in October, 35% up on October 2025, with 77% of it sold straight from developers (ADREC data, as analysed by Springfield Properties).
+
+What changed since October:
+• Manchester City Yas Residences Phase 2 — Ohana says about 92% sold within 48 hours; remaining villas on request
+• Riviera Residences Phase 2 on Al Reem — announced 4 November, designed by Herzog & de Meuron, prices on request
+• The Orchard at Sobha City — four-bedroom villas from AED 9.1m on the developer's schedule
+• One&Only Private Residences, Al Maryah Island — announced, not yet priced
+
+First releases are allocated before they reach a portal. Every launch, dated and sourced:
+
+dealdeed.ae/launches
+
+#AbuDhabi #AbuDhabiRealEstate #OffPlan #YasIsland #AlReemIsland
+
 ## Posted / scheduled log
 | Date | Post | Status |
 |---|---|---|
-| Wed 11 Nov 08:00 UK | Al Barari villa | Scheduled 10 Nov |
+| Wed 11 Nov 08:00 UK | Al Barari villa | Posted (scheduled 10 Nov; not re-checked in LinkedIn 11 Nov) |
 | Thu 12 Nov 08:00 UK | Buyer brief: ready 3-bed Marina/Beachfront/Palm | Scheduled 10 Nov |
 | Fri 13 Nov 08:00 UK | Athlon townhouse below purchase price | Scheduled 10 Nov |
+| Mon 16 Nov 08:00 UK | Abu Dhabi launch radar (Oct AED 12.97bn; Man City Ph2, Riviera Ph2, Orchard, One&Only Al Maryah) | DRAFTED 11 Nov — NOT scheduled (two Chrome browsers connected, none selected) |
