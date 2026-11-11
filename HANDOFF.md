@@ -278,3 +278,6 @@ cat dist/robots.txt                 # User-agent: * / Disallow: /
 - `python3 tools/contrast_check.py` checks WCAG AA contrast for the colour pairs the stylesheet uses (reads the `:root` tokens). Run it after any palette change.
 - `node tools/screens.js <port> <outdir> <tag>` takes desktop (1440) and mobile (390) screenshots of the key pages from a locally served `dist/`. Before/after shots from the design pass, and the final QA shots (`final-*.png`), are in `reports/screens/`.
 - After editing `site.css`, run `sh tools/make_rtl.sh`, rebuild, run `node tools/make_critical.js`, rebuild, and check `/ar/`.
+
+## Project films hosted on the site (11 Nov 2026)
+The P Chapman Vimeo films stopped playing on 11 Nov 2026 ("This video isn't available"). Three films are now hosted on this site instead: Quay House, Sea Glass House and Polgreen Manor (`src/static/assets/video/<name>.mp4`, 1080p H.264, about 20–45 MB each, made from Phil's originals with `ffmpeg -crf 24 -maxrate 3M -movflags +faststart`). In `src/content/projects.py` a project's `"video": ("file", "<name>")` plays that file in a native player after the visitor presses Play; `("vimeo", id)` still loads Vimeo. The other project pages still point at Vimeo and need either Phil's original files or their film block removed.
