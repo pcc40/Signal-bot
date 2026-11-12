@@ -444,7 +444,7 @@ def case_page():
 
 <section class="chapter" aria-labelledby="c6"><header><b>06</b><span>Construction</span></header><div>
 <h2 id="c6">Nineteen months on site</h2>
-<p>Every week the owners would receive a photo update; every month, a written report with progress, the forecast final cost, the risks and the decisions they need to make. The moments that would decide the final account might look like this.</p>
+<p>Through construction the owners would receive photo updates at the frequency agreed in their scope of works and, every month, a written report with progress, the forecast final cost, the risks and the decisions they need to make. The moments that would decide the final account might look like this.</p>
 <ol class="events">{events}</ol>
 <h3>The monthly report</h3>
 <p>One page the owners can read in five minutes, wherever they are. This sample is for month 27 of the example; it is not an actual client report.</p>

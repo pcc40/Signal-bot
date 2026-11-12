@@ -536,7 +536,7 @@ def approach():
 <section class="section dark"><div class="wrap">{stages_html()}</div></section>
 <section class="section"><div class="wrap split"><div><h2>The rhythm of a project</h2></div><div class="prose">
 <p>Every project runs to the same rhythm, because rhythm is what keeps a two-year build under control.</p>
-<h3>Every week</h3><ul><li>A short photo update from site</li><li>Any decisions you need to make, with a recommendation and a deadline</li></ul>
+<h3>Regularly, at the frequency agreed in your scope of works</h3><ul><li>A short photo update from site</li><li>Any decisions you need to make, with a recommendation and a deadline</li></ul>
 <h3>Every month</h3><ul><li>A written report: progress against programme, forecast cost to complete and forecast final cost, risks and issues</li><li>Our recommendation on the contractor's payment application</li><li>A review of variations, approved, rejected or pending</li></ul>
 <h3>At every key stage</h3><ul><li>A walk-round with you, in person or by video</li><li>A check that the next stage can start without avoidable risk</li></ul>
 <h3>Always</h3><ul><li>A decision log, so nothing you agree is forgotten or reopened</li><li>An issues log with owners and dates</li></ul>
@@ -555,7 +555,7 @@ def approach():
 <p>Read more in <a href="/insights/owners-representative-vs-project-manager-vs-consultant/">owner's representative vs project manager vs consultant</a>.</p></div></div></section>
 <section class="section" id="uae-appointments"><div class="wrap split"><div><h2>How an appointment works in the UAE</h2><p class="muted">What you can expect from us on a villa in Dubai or Abu Dhabi, and where our role stops.</p></div><div class="prose">
 <h3>Who leads your project</h3><p>Our founder, Philip Chapman, leads every Eastbridge appointment personally, supported by a team of three project managers who attend site and provide cover when he is unavailable. Philip is the person you speak to from the first conversation to handover. Capacity is confirmed before an appointment is accepted.</p>
-<h3>Site attendance and reporting</h3><p>How often we attend site, which meetings we attend for you and the reports you receive are agreed in writing in the scope of each appointment, before work starts. Attendance follows the stage of the project: typically weekly during active construction, and more often at key stages such as waterproofing, first fix and pre-handover. Agreeing this up front means the time committed to your project is clear from the start.</p>
+<h3>Site attendance and reporting</h3><p>How often we attend site, which meetings we attend for you and the reports you receive are agreed in writing in the scope of each appointment, before work starts. Attendance follows the stage of the project: we are on site regularly through construction, at the frequency agreed in your scope of works, planned around key stages such as waterproofing, first fix and pre-handover. Agreeing this up front means the time committed to your project is clear from the start.</p>
 <h3>Consultants, quantity surveyors, engineers and specialists</h3><p>Where the project needs a registered consultant, a quantity surveyor, an engineer or another specialist, you appoint them and pay them directly. We help you define what is needed, compare proposals like-for-like and choose. We take no commission or referral fee from any of them, and money never passes through us.</p>
 <h3>What we do, and what we don't</h3>
 <p>We provide commercial and project management on your side of the table: the brief, budget and programme, cost reporting, review of payments and variations, commercial and contractual advice, client-side site visits and reporting, decision and issues logs, and handover.</p>
@@ -567,7 +567,7 @@ def approach():
 <p>See <a href="/insights/what-the-contractor-knows/">what a builder knows that most villa owners don't</a>.</p></div></div></section>
 {B.cta_band()}'''
     B.page("/approach/", "How We Work: Villa Projects, Stage by Stage | Eastbridge",
-           "Our six-stage approach to villa builds and renovations in Dubai, from brief and budget to handover, with weekly and monthly reporting.",
+           "Our six-stage approach to villa builds and renovations in Dubai, from brief and budget to handover, with regular written reporting.",
            body, crumbs)
 
 def independence():
@@ -594,6 +594,38 @@ def independence():
     B.page("/independence/", "Independence Pledge: No Contractor Commissions | Eastbridge",
            "Eastbridge is paid only by the client. No commissions, referral fees or rebates from contractors, consultants or suppliers. We don't build and we don't design.",
            body, crumbs, [B.faq_schema(MONEY_FAQS)])
+
+def partners():
+    """/partners/: independent firms whose services complement ours, from C.PARTNERS. Not built when the list is empty."""
+    if not C.PARTNERS:
+        return
+    crumbs = [("Home", "/"), ("Partners", "/partners/")]
+    def card(p):
+        logo = (f'<div class="partner-card__logo"><img src="{esc(p["logo"])}" alt="{esc(p["name"])} logo" height="64" loading="lazy" decoding="async"></div>'
+                if p.get("logo") else "")
+        host = p["url"].split("//", 1)[-1].rstrip("/")
+        return (f'<li class="partner-card">{logo}<h3><a href="{esc(p["url"])}">{esc(p["name"])}</a></h3>'
+                f'<p>{esc(p["desc"])}</p><p class="small muted" translate="no">{esc(host)}</p></li>')
+    cards = "".join(card(p) for p in C.PARTNERS)
+    body = B.page_head(crumbs, "Partners", "Eastbridge works alongside independent firms whose services complement owner-side project management on villas in Dubai and Abu Dhabi.") + f'''
+<section class="section--tight"><div class="wrap split"><div><h2>Recommended on merit</h2></div><div class="prose">
+<p>We neither pay nor accept referral fees, so every recommendation we make is on merit. You appoint and pay any firm listed here directly, and nothing passes between us and them. See our <a href="/independence/">independence pledge</a>.</p>
+<p>Firms interested in partnering with us can contact Philip at <a href="mailto:{C.EMAIL}">{C.EMAIL}</a> or through our <a href="/contact/">contact page</a>.</p>
+</div></div></section>
+<section class="section paper"><div class="wrap"><h2>Our partners</h2><ul class="partner-cards">{cards}</ul></div></section>
+{B.cta_band()}'''
+    page_url = B.url("/partners/")
+    schema = [{"@context": "https://schema.org", "@type": "WebPage", "@id": page_url + "#webpage", "url": page_url,
+               "name": "Partners", "publisher": {"@id": B.ORG_ID}, "about": {"@id": B.ORG_ID},
+               "mainEntity": {"@type": "ItemList", "name": "Eastbridge partner firms",
+                              "itemListElement": [{"@type": "ListItem", "position": i,
+                                                   "item": {"@type": "Organization", "name": p["name"], "url": p["url"],
+                                                            "description": p["desc"],
+                                                            **({"logo": B.url(p["logo"])} if p.get("logo") else {})}}
+                                                  for i, p in enumerate(C.PARTNERS, 1)]}}]
+    B.page("/partners/", "Partners | Eastbridge Strategic Partners",
+           "Independent firms Eastbridge works alongside on villa projects in Dubai and Abu Dhabi. No referral fees paid or taken: every recommendation is on merit.",
+           body, crumbs, schema)
 
 # Money and working questions, shared by /faq/, /independence/ and /fees/ (FAQPage markup on each).
 MONEY_FAQS = [
@@ -631,7 +663,7 @@ def fees():
     levels = [
         ("review", "A plot, design, contractor-quote or stalled-project review, with a written report.",
          "Before you buy a plot, before you sign a contract, or when a project is in difficulty."),
-        ("part", "Cost, contract and payment reviews and monthly reporting, without weekly site presence.",
+        ("part", "Cost, contract and payment reviews and monthly reporting, without regular site attendance.",
          "Owners with a capable team in place who want every price, payment and variation checked from their side."),
         ("full", "Everything: regular site visits through construction, every review, the decision log, handover, and sourcing trips with you for stone, joinery, lighting and fittings (travel at cost).",
          "A truly one-off villa, where one person on your side does everything with you from brief to handover. Where the fee sits depends on the input required."),
@@ -821,7 +853,7 @@ FAQ_ALL = [
  ("How is that different from the consultant I have to appoint?", "In Dubai, a registered consultant carries the statutory design, submission and supervision responsibilities. They owe you proper professional care in that role. We add independent coordination and commercial scrutiny alongside them, acting only for you on cost, time, decisions, contracts and quality."),
  MONEY_FAQS[2],
  ("Who attends site, and who covers when Philip is away?", "Philip leads every appointment and attends site himself. He is supported by a team of three project managers who attend site and provide cover when he is unavailable, for example when he is travelling. How often we attend site is agreed in writing in your appointment."),
- ("How often will you be on site?", "It is agreed in writing in the scope of your appointment, before work starts. Attendance follows the stage of the project: typically weekly during active construction and more often at key stages. See <a href=\"/approach/#uae-appointments\">how an appointment works in the UAE</a>."),
+ ("How often will you be on site?", "It is agreed in writing in the scope of your appointment, before work starts. We are on site regularly through construction, at the frequency agreed in your scope of works, planned around key stages. See <a href=\"/approach/#uae-appointments\">how an appointment works in the UAE</a>."),
  ("Who appoints the quantity surveyor, engineers and other specialists?", "You do, and you pay them directly. We help you work out what is needed, compare proposals like-for-like and choose. We take no commission or referral fee from anyone we help you appoint."),
  ("Do you handle permits, supervision or legal advice?", "No. Statutory design, authority submissions and supervision are the duties of the registered consultant you appoint, and legal advice should come from a UAE-qualified lawyer. Our role is commercial and project management on your side, alongside them."),
  MONEY_FAQS[0],
@@ -833,7 +865,7 @@ FAQ_ALL = [
  ("Do you work in Abu Dhabi?", "Yes. We represent owners in Dubai and Abu Dhabi, always alongside a locally registered consultant of record."),
  ("Which areas do you cover?", f"{C.COVERAGE} Our <a href=\"/areas/\">area pages</a> are examples of communities we know well, not a limit on where we work."),
  ("Can you help if my project has already started?", "Yes. We can join at any stage, including projects that have stalled or are in dispute. See <a href=\"/services/stalled-project-rescue/\">stalled project rescue</a>."),
- ("Can you work for me if I live in the UK?", "Yes. Many Dubai villa owners live overseas. We report weekly in a format you can read on your phone, and bring you every decision that matters. See <a href=\"/services/overseas-owners/\">owners living overseas</a>."),
+ ("Can you work for me if I live in the UK?", "Yes. Many Dubai villa owners live overseas. We send regular written reports with photographs, at the frequency agreed in your scope of works, in a format you can read on your phone, and bring you every decision that matters. See <a href=\"/services/overseas-owners/\">owners living overseas</a>."),
  ("Do you speak Arabic?", "We work in English. Arabic-speaking clients are very welcome to bring an interpreter or adviser to any meeting."),
  ("Is my enquiry confidential?", "Yes. We never share or publish client names, addresses or projects without written permission."),
 ]
@@ -1105,7 +1137,7 @@ def build_all(posts):
     for a in AREAS: area_page(a)
     work_hub()
     for p in PROJECTS: project_page(p)
-    approach(); independence(); fees(); about(); faq_page(); contact(); legal()
+    approach(); independence(); partners(); fees(); about(); faq_page(); contact(); legal()
     insights(posts)
     pages_tools.build_tools()
     pages_glossary.glossary_page()

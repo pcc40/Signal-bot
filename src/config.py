@@ -74,5 +74,16 @@ FOUNDER = {
     "same_as": ["https://www.linkedin.com/in/philip-chapman-eastbridge/"],
 }
 
+# Partners shown on /partners/ (approved by Phil, 12 Nov 2026). Independent firms whose services complement owner-side
+# project management. No referral fees are paid or accepted either way. Each entry: name, url, desc (one line, from the
+# firm's own site) and optional logo (a path under src/static, e.g. "/assets/partners/fedari.svg"; the card shows the
+# logo above the name when set). Outbound links are normal followed links. List a partner only here: /partners/ is the
+# one place partners appear. If the list is empty, /partners/ is not built and the footer link is left out.
+PARTNERS = [
+    {"name": "Fedari Building Inspection L.L.C.", "url": "https://fedari.ae/",
+     "desc": "Independent property snagging, handover and resale inspections in Dubai and across the UAE.",
+     "logo": ""},  # Fedari will send their logo
+]
+
 # Date the privacy notice last changed in substance. Update it (and run the Languages steps) whenever the notice text changes.
 PRIVACY_UPDATED = "1 November 2026"

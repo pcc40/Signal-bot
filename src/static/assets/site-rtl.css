@@ -486,6 +486,16 @@ body.has-hero .site-head:not(.stuck) .btn{background:#fff;color:var(--ink);borde
 .post-card figure,.svc-card figure,.door{position:relative}
 .svc-grid--text .svc-card{border-top:1px solid var(--line);padding-top:18px}
 
+/* ---------- Partners ---------- */
+.partner-cards{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:clamp(28px,3vw,44px) clamp(16px,2vw,28px)}
+.partner-card{border-top:1px solid var(--line);padding-top:20px}
+.partner-card__logo{height:64px;display:flex;align-items:center;margin-bottom:16px}
+.partner-card__logo img{height:auto;max-height:64px;width:auto;max-width:220px;object-fit:contain}
+.partner-card h3{font-size:var(--s-2);margin-bottom:.3em}
+.partner-card h3 a{text-decoration:none}
+.partner-card h3 a:hover{color:var(--brass)}
+.partner-card p{color:var(--ink-soft);margin:0 0 .5em;font-size:.97rem}
+
 /* ---------- Insights ---------- */
 .post-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(32px,3.4vw,52px) clamp(16px,2vw,28px)}
 .post-card{display:block;text-decoration:none}

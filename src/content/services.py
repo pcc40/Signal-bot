@@ -46,7 +46,7 @@ SERVICES = [
   ],
   "gets": [
    "A single monthly report: forecast final cost, programme, decisions needed, risks",
-   "A weekly photo update from site",
+   "Regular photo updates from site, at the frequency agreed in your scope of works",
    "A clear recommendation before every payment",
    "A record of every decision, so nothing is relitigated later",
   ],
@@ -54,7 +54,7 @@ SERVICES = [
   "faqs": [
    ("What does an owner's representative do on a villa build?", "We act as your single point of control. We set the budget and programme with you, help you appoint the consultant and contractor, track cost and time, review payments and variations, report progress and lead handover. We do not replace the registered consultant, who remains responsible for the statutory design, permit submissions and supervision duties."),
    ("Is an owner's representative worth it on a villa?", "On a straightforward build with an experienced owner who lives in Dubai, perhaps not. On a bespoke villa, a major renovation, or any project where you are often abroad, it gives you regular cost reporting, programme monitoring, review of every payment and variation, and early warning of risks, from someone who works only for you. We will tell you honestly if you don't need us. See <a href=\"/fees/#worth-it\">is it worth it?</a>"),
-   ("Who will I deal with, and how often will you be on site?", "Philip Chapman, our founder, leads every appointment personally and is your point of contact throughout. He is supported by a team of three project managers who attend site and provide cover when he is unavailable. Site attendance and reporting are agreed in writing in the scope of your appointment: typically weekly during active construction, and more often at key stages such as waterproofing, first fix and pre-handover."),
+   ("Who will I deal with, and how often will you be on site?", "Philip Chapman, our founder, leads every appointment personally and is your point of contact throughout. He is supported by a team of three project managers who attend site and provide cover when he is unavailable. Site attendance and reporting are agreed in writing in the scope of your appointment: we are on site regularly through construction, at the frequency agreed in your scope of works, planned around key stages such as waterproofing, first fix and pre-handover."),
    ("Who appoints the quantity surveyor and engineers?", "You do, and you pay them directly. We help you work out which specialists the project needs, compare their proposals like-for-like and choose. We take no commission or referral fee from any of them."),
    ("Do you take commission from contractors or suppliers?", "No. We take no commission, referral fee or discount from any consultant, contractor or supplier. Our only income on your project is the fee you pay us. That is written into our appointment."),
    ("Do you replace the architect or the consultant?", "No. Your registered consultant designs, submits for permits and carries the statutory responsibilities. We represent you alongside them and check the design against your budget and brief at each stage."),
@@ -298,14 +298,14 @@ SERVICES = [
    "Attendance at progress meetings as your representative",
   ],
   "gets": [
-   "A weekly photo update",
+   "Regular photo updates, at the frequency agreed in your scope of works",
    "A monthly written report with the decisions you need to make",
    "An issues log with owners and dates",
   ],
   "builder_view": "Every site manager knows the difference between a visit and an inspection. A visit is a walk round and a coffee. An inspection opens the ceiling void before it's boarded. We know which areas get closed up quickly, and we make sure we see them first.",
   "faqs": [
    ("Is this the same as construction supervision?", "No. Statutory supervision on a Dubai villa is carried out by the registered consultant. Our visits are independent, client-side monitoring and reporting, which sits alongside that role and reports only to you."),
-   ("How often do you visit?", "It depends on the stage and your appointment, typically weekly during active construction and more often at key stages such as waterproofing, first fix and pre-handover."),
+   ("How often do you visit?", "It depends on the stage and your appointment. We are on site regularly through construction, at the frequency agreed in your scope of works, planned around key stages such as waterproofing, first fix and pre-handover."),
    ("Can I see the reports on my phone?", "Yes. Reports are short, photo-led and readable on a phone, with a fuller version for your records."),
   ],
   "related": ["overseas-owners", "cost-and-programme-control", "snagging-and-handover"],
@@ -460,7 +460,7 @@ SERVICES = [
   "short": "For owners living overseas",
   "name": "Villa project representation for owners living overseas",
   "title": "Build a Dubai Villa From the UK or Abroad | Eastbridge",
-  "description": "Building or renovating a villa in Dubai while living in the UK or Europe? We represent you on the ground and report clearly every week.",
+  "description": "Building or renovating a villa in Dubai while living in the UK or Europe? We represent you on the ground and send you clear, regular reports.",
   "h1": "Building in Dubai while living somewhere else",
   "lede": "Many villa owners are not in Dubai most of the time. The project still needs decisions every week. We bring them to you with the information and a recommendation, so that nothing is decided without you.",
   "image": "menwinnion-01",
@@ -470,7 +470,7 @@ SERVICES = [
 <p>{_COVERAGE}</p>""",
   "does": [
    "Representation on site and in meetings in your absence",
-   "Weekly photo updates and a monthly written report",
+   "Regular written reports with photographs, at the frequency agreed in your scope of works",
    "A decision log so nothing is agreed without your sign-off",
    "Payment review before any money leaves your account",
    "Video walk-throughs at key stages",
@@ -484,7 +484,7 @@ SERVICES = [
   "builder_view": "The sites that ran best for remote clients were the ones with a disciplined weekly rhythm: a set report, a set call, and decisions logged with dates. It isn't complicated. It just has to happen every week without fail.",
   "faqs": [
    ("Can I build a villa in Dubai without living there?", "Yes. Many owners do. You will need a reliable local team, clear reporting, and a few well-timed visits at the key decision points. Our <a href=\"/insights/building-a-villa-in-dubai-from-the-uk/\">guide for overseas owners</a> explains how."),
-   ("How do you report to me?", "A short weekly photo update and a monthly written report, plus calls whenever a decision is needed. Everything is readable on a phone."),
+   ("How do you report to me?", "Regular written reports with photographs, at the frequency agreed in your scope of works, plus calls whenever a decision is needed. Everything is readable on a phone."),
    ("Do I need to give you power of attorney?", "Usually not. We advise and represent; you make the decisions and payments. Where a formal authority is needed for a specific task, take legal advice first."),
   ],
   "related": ["site-visits-and-reporting", "owners-representative", "cost-and-programme-control"],

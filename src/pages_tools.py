@@ -519,11 +519,12 @@ FAQS = [
 ]
 
 def embed_code(path=EMBED_PATH):
-    """The iframe, then an optional one-line script: calc.js posts {type: "eb-calc-height", height} to the host page
+    """The iframe, a plain visible credit line linking to the full calculator, then an optional one-line script: calc.js posts {type: "eb-calc-height", height} to the host page
     on load, on every change and on resize, and the script sets the iframe to that height (only for messages from
     this iframe on SITE_URL). Without it, phones need about 3,300 pixels."""
     return (f'<iframe id="eb-calc" src="{C.SITE_URL}{path}" title="Villa build cost calculator by {C.NAME}" '
             f'width="100%" height="{EMBED_HEIGHT}" style="border:0;max-width:1100px;display:block" loading="lazy"></iframe>\n'
+            f'<p>Villa build cost calculator by <a href="{C.SITE_URL}{CALC_PATH}">{C.NAME}</a></p>\n'
             '<script>addEventListener("message",function(e){var f=document.getElementById("eb-calc");'
             f'if(f&&e.origin==="{C.SITE_URL}"&&e.source===f.contentWindow&&e.data&&e.data.type==="eb-calc-height")'
             'f.style.height=e.data.height+"px"});</script>')
@@ -535,10 +536,10 @@ def embed_box_html():
 <p class="muted">For estate agents, architects, lawyers and other advisers whose clients ask what a villa in Dubai or Abu Dhabi costs to build.</p></div><div class="prose">
 <p>The calculator is free to use on your own website. Paste the code below into your page's HTML where it should appear. It shows the calculator only, in the same five languages, with a link back to this page for the sources. We keep the rates up to date, so there is nothing for you to maintain, and no analytics or advertising cookies run inside it.</p>
 <label class="calc-embed__label" for="embed-code">Embed code</label>
-<textarea class="calc-embed__code" id="embed-code" readonly rows="6" spellcheck="false" translate="no" data-embed-code data-site="{C.SITE_URL}">{esc(embed_code())}</textarea>
+<textarea class="calc-embed__code" id="embed-code" readonly rows="7" spellcheck="false" translate="no" data-embed-code data-site="{C.SITE_URL}">{esc(embed_code())}</textarea>
 <p class="calc-embed__row"><button type="button" class="btn btn--sm" data-embed-copy>Copy code</button> <a class="link" href="{EMBED_PATH}" target="_blank" rel="noopener" data-embed-preview>Preview the embedded calculator</a></p>
 <p class="calc-status" data-embed-status role="status" aria-live="polite"></p>
-<p class="small muted">The second line of the code is optional but recommended: it lets the calculator set the iframe to its own height as visitors use it, so there is no scroll area inside your page. Without it the iframe is {EMBED_HEIGHT} pixels tall; on phones the calculator needs about 3,300 pixels, so raise the height value if you leave the script out. Questions about using it: <a href="mailto:{C.EMAIL}">{C.EMAIL}</a>.</p>
+<p class="small muted">Please keep the credit line under the calculator. The last line of the code is optional but recommended: it lets the calculator set the iframe to its own height as visitors use it, so there is no scroll area inside your page. Without it the iframe is {EMBED_HEIGHT} pixels tall; on phones the calculator needs about 3,300 pixels, so raise the height value if you leave the script out. Questions about using it: <a href="mailto:{C.EMAIL}">{C.EMAIL}</a>.</p>
 </div></div></section>'''
 
 def embed_page():

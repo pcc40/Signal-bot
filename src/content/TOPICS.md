@@ -77,7 +77,7 @@
 - [ ] palm-jumeirah-rebuild-guide | Rebuilding a Palm Jumeirah villa: process and programme | palm jumeirah villa rebuild | demolition to handover
 - [ ] hudayriyat-plot-build-guide | Building on Hudayriyat: from plot to villa | hudayriyat plots | busy-market procurement
 - [ ] jct-vs-uae-villa-contracts | JCT vs UAE villa contracts: a guide for British owners | jct vs fidic | what changes, what doesn't
-- [ ] remote-villa-reporting-template | The weekly report every remote villa owner should get | construction progress report template | include a free template
+- [ ] remote-villa-reporting-template | The progress report every remote villa owner should get | construction progress report template | include a free template
 - [ ] villa-build-insurance-uae | Insurance on a villa build: CAR, liability and who holds it | contractor all risks uae | general guide; take broker advice
 - [ ] off-plan-villa-customisation | Customising an off-plan villa before handover | customise off plan villa dubai | what developers allow and when
 - [ ] dubai-building-code-villa-owners | The Dubai Building Code: what a villa owner needs to know | dubai building code villa | where code decisions drive cost; AI drawing checks (DM, Aug 2026)

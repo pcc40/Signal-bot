@@ -2,7 +2,7 @@
 title: "Building a villa in Dubai while living in the UK"
 description: "What a UK-based owner can run remotely on a Dubai villa build, what needs you on site, the reporting to insist on, and where absentee projects go wrong."
 date: 2026-10-26
-updated: 2026-11-01
+updated: 2026-11-12
 category: "Overseas owners"
 keypoints:
   - "Most of a Dubai villa build can be run from the UK, but a handful of decisions (plot, design freeze, finishes, handover) are far better made in person."
@@ -76,9 +76,9 @@ A mid-construction visit, when the structure is complete and first-fix services 
 
 On the contractor's side, we learned that the clients who asked for structured information got a better-run job, because the discipline of producing it forced us to look at our own numbers. Ask for the following from the start, and write it into appointments where you can.
 
-### Weekly photo reports
+### Dated photo reports
 
-Dated, labelled photographs organised by area, not a stream of images on a messaging app. Each set should show the same locations week on week so progress (or lack of it) is obvious. Include close-ups of anything about to be covered: waterproofing, insulation, pipework, cable routes, structural connections.
+Dated, labelled photographs organised by area, not a stream of images on a messaging app. Each set should show the same locations from one report to the next so progress (or lack of it) is obvious. Include close-ups of anything about to be covered: waterproofing, insulation, pipework, cable routes, structural connections.
 
 ### Monthly cost-to-complete
 
