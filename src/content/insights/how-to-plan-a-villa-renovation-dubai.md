@@ -64,6 +64,8 @@ Start with what you want the villa to do: more bedrooms, a better layout, a mode
 
 Our [renovate or rebuild guide](/insights/renovate-or-rebuild-villa-dubai/) compares the two with sourced rates and a worked example, including the months the family spends out of the house. The [renovate-or-rebuild tool](/tools/renovate-or-rebuild/) runs the same comparison on your own villa size and specification. When the brief keeps growing towards new structure, new services and a new envelope, it is usually time to look at the rebuild figures properly.
 
+If the plan includes more space, our guide to [extending a Dubai villa](/insights/villa-extension-dubai/) covers developer consent, built-up area limits and what extensions really cost. For an interior-led project, see [villa fit-out in Dubai](/insights/villa-fit-out-dubai/).
+
 ## Step 2: Learn what your community allows
 
 In Dubai's master-planned communities, the master developer decides what can change before any authority sees the drawings. Nakheel says an NOC from its Urban Planning team is needed before any alteration ([Nakheel](https://www.nakheel.com/en/contact-us)). In Arabian Ranches, Emaar Community Management says any alteration needs Emaar's approval through a home modification NOC, and external changes that alter the look of the villas are not permitted ([Emaar Community Management](https://www.ecm.ae/en/communities/arabian-ranches/lifestyle/faqs/home-modifications-arabian-ranches/)).
@@ -106,6 +108,8 @@ Our [Nakheel NOC guide](/insights/nakheel-noc-villa-renovation/) explains what t
 Renovation is a different skill from building new. Ask bidders about comparable renovations, how they handle discoveries after strip-out and how they price provisional sums. Give every bidder the same survey findings and approved drawings, then compare the exclusions as carefully as the totals. Our guide on [how to choose a villa contractor in Dubai](/insights/how-to-choose-a-villa-contractor-dubai/) lists the questions to ask, and an independent [contractor quote review](/services/consultant-and-contractor-selection/#quote-review) sets bids side by side on the same basis.
 
 The contract should tie the start date to approvals in hand, set out how changes are priced and agreed, and link payments to work done. Our guide to [villa construction contracts in the UAE](/insights/villa-construction-contracts-uae/) explains the main forms and clauses; take advice from a UAE-qualified lawyer before you sign.
+
+Our guide to [choosing a villa renovation company](/insights/how-to-choose-villa-renovation-company-dubai/) sets out ten checks to make before you sign, and [kitchen and bathroom renovation costs](/insights/villa-kitchen-bathroom-renovation-cost-dubai/) shows what the two most expensive rooms usually cost.
 
 ## Step 8: Run the works with your hands on the controls
 

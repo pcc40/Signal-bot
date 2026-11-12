@@ -93,6 +93,8 @@ No published source we have found supports a location premium for renovation: Pr
 
 Two cautions. These are averages across very different houses, and a renovation's tier is decided less by the finishes you choose than by what the existing building needs. A villa with sound roofs and healthy services can be refreshed at the bottom of a band. The same villa with failed waterproofing and end-of-life air conditioning is a different project, whatever the finishes schedule says.
 
+For room-level figures, see our guide to [kitchen and bathroom renovation costs in a Dubai villa](/insights/villa-kitchen-bathroom-renovation-cost-dubai/); for adding space, [extending a Dubai villa](/insights/villa-extension-dubai/).
+
 ## What is not included in a renovation quote?
 
 Most published figures, and most contractor quotes, cover the building work itself. Outside that, owners usually need to budget for:

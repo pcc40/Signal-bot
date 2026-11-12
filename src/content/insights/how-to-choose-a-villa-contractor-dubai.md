@@ -123,6 +123,8 @@ Then hold a short clarification meeting with each serious bidder. Ask the same q
 
 Before you compare, also be clear what kind of contract you are pricing. RICS practice information on contract selection describes the main choices for the contract sum as a fixed-price lump sum, remeasurement or a target cost, and the choice changes how much of the bid is really fixed. Our guide to [villa construction contracts in the UAE](/insights/villa-construction-contracts-uae/) explains the difference.
 
+Renovating rather than building new? Our guide to [choosing a villa renovation company in Dubai](/insights/how-to-choose-villa-renovation-company-dubai/) adapts these checks for renovation and design-and-build firms.
+
 ## Red flags when choosing a contractor
 
 - A price far below the others, with no clear explanation.
