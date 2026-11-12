@@ -52,8 +52,9 @@ Emails are sent from philip@eastbridgestrategicpartners.com through Bird (sendin
 | 5 | 9 Nov 2026, 03:52 UTC | 7 sent, 7 delivered (construction law, landscape and pool, UK interiors with Dubai villas, relocation) | `business/outreach-batch-5.md`, `business/outreach-batch-5-log.md` |
 | 6 | 10 Nov 2026 | 24 sent, 24 delivered (UAE villa studios and agencies incl. Abu Dhabi; UK interiors with Dubai villas; wealth, family office, relocation; law; QS; landscape and pool). Primo Capital dropped on Phil's instruction (do not contact) | `business/outreach-batch-6a.md`, `business/outreach-batch-6b.md`, `business/outreach-batch-6-log.md` |
 | 7 | 11 Nov 2026 | 49 sent, 49 delivered, no BCC. **First short-style batch** (55–85 words, no link, one question) for comparing reply rates with batches 2–6. UAE studios and agencies, UK practices, wealth and family offices, law, QS, landscape, mortgage brokers, holiday-home operators, smart-home and lighting, kitchens, inspectors | `business/outreach-batch-7a.md`, `7b.md`, `7c.md`, `business/outreach-batch-7-log.md` |
+| 8 | 12 Nov 2026 | 45 sent (5 dropped by Phil on review); 43 delivered, #21 V. Concept deferred (retrying), #50 KLG awaiting confirmation; no bounces. Short style, no BCC. Inspectors, villa maintenance, conveyancers, UAE studios and agencies, UK practices, mortgage brokers, holiday homes, specialists | `business/outreach-batch-8a.md`, `8b.md`, `8c.md`, `business/outreach-batch-8-log.md` |
 
-**Totals (11 Nov):** 151 firms contacted (8 by Phil, 143 via Bird); 1 bounce (Galadari); 2 replies (Aparna Kaushik, not now; Fedari, partnership and a possible Al Barari introduction). Daily runs continue to Fri 13 Nov at up to 50 firms a day, no BCC, short style.
+**Totals (12 Nov):** 196 firms contacted (8 by Phil, 188 via Bird); 1 bounce (Galadari); 2 replies (Aparna Kaushik, not now; Fedari, partnership and a possible Al Barari introduction). Daily runs continue to Fri 13 Nov at up to 50 firms a day, no BCC, short style.
 
 **Follow-ups:** created as Outlook drafts by the Claude Desktop chat (Chrome), as replies to Phil's BCC copies. Phil reviews and sends them. They go only to firms that have not replied, bounced or opted out.
 | Batch | Day-4 drafts | Day-10 (final) drafts |
@@ -63,6 +64,7 @@ Emails are sent from philip@eastbridgestrategicpartners.com through Bird (sendin
 | 4 and 5 | Fri 13 Nov (not yet scheduled) | Thu 19 Nov (not yet scheduled) |
 | 6 | Mon 16 Nov (not yet scheduled) | Fri 20 Nov (not yet scheduled) |
 | 7 | Mon 16 Nov, via Bird (no BCC copies; not yet scheduled) | Fri 20 Nov, via Bird (not yet scheduled) |
+| 8 | Tue 17 Nov, via Bird (not yet scheduled) | Mon 23 Nov, via Bird (not yet scheduled) |
 
 **Replies so far:**
 - 6 Nov: **Aparna Kaushik Design Group** (batch 2, #2). Polite holding reply from Nupur Kapoor, EA to Ms. Kaushik: they will review and come back if there is an opportunity. Status: *replied, not now*. No follow-ups; one light check-in in about three months (early Feb 2027).
@@ -98,7 +100,7 @@ On each sweep:
    - "Eastbridge outreach": section 4 (totals, replies, next follow-up date).
    - "Eastbridge open items": section 5 (count and the top item).
 3. Open Outlook (philip@) in Chrome and list new replies from any firm in batches 1–3, plus any website enquiries (Netlify notifications). For each genuine reply, draft an answer in Outlook (never send) and record it in the B7 outreach row. Put follow-up draft dates in the diary.
-4. Feeds master line for B7 (40 words or fewer): "Eastbridge: site live; 151 partner firms contacted (1 bounce); 50 a day to 13 Nov; follow-up drafts 9, 10 and 16 Nov; replies: 1 (Aparna Kaushik, not now). Next: Phil sends follow-ups, answer replies within a day, verify the Google Business Profile."
+4. Feeds master line for B7 (40 words or fewer): "Eastbridge: site live; 196 partner firms contacted (1 bounce); 50 a day to 13 Nov; follow-up drafts 9, 10 and 16 Nov; replies: 1 (Aparna Kaushik, not now). Next: Phil sends follow-ups, answer replies within a day, verify the Google Business Profile."
 
 ## 8. 30/60/90-day plan and KPIs
 Set 7 November 2026 from the AI search visibility audit (items 1, 2, 4 and 5 approved by Phil). **Targets are goals, not claims or forecasts.** Baselines are what was measured or known on 7 November 2026; "not measured" means nobody has the number yet, not zero.
