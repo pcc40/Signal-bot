@@ -12,6 +12,6 @@
 
 **Hard rules (never break):**
 - Never use: supervise/supervision, certify, turnkey, "on your behalf", obtain/submit permits, prequalify, engineer (verb).
-- Never claim UAE projects or clients, UAE experience, team names/size detail, turnover, or name architects as partners.
+- Never claim UAE projects or clients, UAE experience, team names or extra team detail, turnover, or name architects as partners. The one approved team line (Phil, Oct 2026) is that Philip is supported by a team of three project managers who attend site.
 - British English, no exclamation marks.
 - Cold email: sent through Bird from philip@ (sending domain verified), 50/day limit, one at a time, no open/click tracking. Primo Capital is do-not-contact. Logs in business/outreach-batch-*-log.md; status in STATUS.md.
