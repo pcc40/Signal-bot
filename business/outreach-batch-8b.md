@@ -136,45 +136,9 @@ On renovations, do owners ask you to look over the contractor's quotes?
 Kind regards,
 ```
 
-## 24. ANA Design Studio
+## 24. ANA Design Studio: DROPPED by Phil on review, 11 Nov. Not sent.
 
-**To:** info@anaarch.com
-**Segment:** Architecture and interior design studio (Abu Dhabi villa)
-**Source:** https://www.anaarch.com (site footer and contact block, I-Rise Tower, Tecom)
-**Why this firm:** (Studio, Abu Dhabi work) Boutique Dubai architecture and interiors studio led by Aslı Naz Atasoy; its residential list includes the Abu Dhabi Beach Villa ("where the majlis meets the sea") and Myra Residence, Dubai South. Doubt: fit-out is one of its nine listed services.
-**Subject:** The Abu Dhabi Beach Villa
-
-```
-Dear ANA Design Studio team,
-
-Your Abu Dhabi Beach Villa, where the majlis meets the sea, is the kind of house whose owners are often abroad during the build. That is when payment claims and variations need a careful read.
-
-I founded Eastbridge, an independent client-side project manager for private villas in Dubai and Abu Dhabi, after running P Chapman Construction, a premium UK residential builder, for 21 years.
-
-How often are your villa clients overseas during the build?
-
-Kind regards,
-```
-
-## 25. SAY Studio
-
-**To:** info@saystudio.com
-**Segment:** Interior design and architecture consultancy (Abu Dhabi villa)
-**Source:** https://www.saystudio.com/contact (contact page)
-**Why this firm:** (Studio, Abu Dhabi work) Dubai design consultancy whose residential work includes the interiors of the 1,266 m² Jubail Island show villa in Abu Dhabi, shortlisted at the International Design & Architecture Awards 2025. Doubt: this is a developer show villa; most of its other work is workplace and hospitality.
-**Subject:** Jubail Island show villa
-
-```
-Dear SAY Studio team,
-
-Your interiors for the 1,266 m² show villa on Jubail Island set the tone for the island's private villas. When those owners fit out their own homes, cost and programme control is what they often lack.
-
-I founded Eastbridge, an independent client-side project manager for private villas in Dubai and Abu Dhabi, after running P Chapman Construction, a premium UK residential builder, for 21 years.
-
-Have Jubail Island owners come to you for their own villas since?
-
-Kind regards,
-```
+## 25. SAY Studio: DROPPED by Phil on review, 11 Nov. Not sent.
 
 ## 26. Apricity Real Estate
 

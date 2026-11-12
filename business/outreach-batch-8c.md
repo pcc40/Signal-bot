@@ -90,43 +90,9 @@ How many of your plot borrowers start building within a year?
 Kind regards,
 ```
 
-## 39. John Mason International
+## 39. John Mason International: DROPPED by Phil on review, 11 Nov. Not sent.
 
-**To:** sales@johnmason.com
-**Source:** https://johnmason.com/blog/a-family-move-from-the-uk-to-dubai/ (site contact data on the page)
-**Why this firm:** (Relocation firm) UK international removals and relocation firm whose case study of a family moving from Oldham to Dubai says their belongings were stored "until their new home in Dubai was ready"; when that home is a villa under renovation, the date depends on a contractor.
-**Subject:** Until the home was ready
-
-```
-Dear John Mason team,
-
-Your Oldham family's belongings were stored until their new Dubai home was ready. When that home is a villa under renovation, ready depends on a contractor, and storage costs grow with every delay.
-
-I founded Eastbridge, an independent client-side project manager for private villas in Dubai and Abu Dhabi, after running P Chapman Construction, a premium UK residential builder, for 21 years.
-
-How long do Dubai-bound families usually keep goods in storage?
-
-Kind regards,
-```
-
-## 40. Bishop's Move
-
-**To:** enquiries@bishopsmove.com
-**Source:** https://www.bishopsmove.com/moving-to-dubai/ (in the page text and behind Cloudflare email protection)
-**Why this firm:** (Relocation firm) UK removals firm whose Dubai page says its move managers have coordinated hundreds of UK to Dubai moves and offers storage "if your property in Dubai is not ready"; families renovating a villa before moving in are the ones whose dates move.
-**Subject:** Storage while Dubai waits
-
-```
-Dear Bishop's Move team,
-
-Your Dubai page offers storage if the property is not ready. Families who buy a villa and renovate before moving in often see that finish date move more than once.
-
-I founded Eastbridge, an independent client-side project manager for private villas in Dubai and Abu Dhabi, after running P Chapman Construction, a premium UK residential builder, for 21 years.
-
-Do many of your Dubai clients wait on building work before delivery?
-
-Kind regards,
-```
+## 40. Bishop's Move: DROPPED by Phil on review, 11 Nov. Not sent.
 
 ## 41. Kredium
 
@@ -185,24 +151,7 @@ Do your non-resident clients ask who will manage the works?
 Kind regards,
 ```
 
-## 44. Oliver's Travels
-
-**To:** info@oliverstravels.com
-**Source:** https://www.oliverstravels.com/contact/ (contact page). Listing: https://www.oliverstravels.com/uae/dubai/villa-frond/
-**Why this firm:** (Villa rental operator) UK villa rental company whose Dubai collection includes Villa Frond, a five-bedroom Palm Jumeirah villa with a private pool, and which says only the top 2% of the homes it reviews earn a place; Dubai owners who fall short need a renovation first.
-**Subject:** The top 2 per cent
-
-```
-Dear Oliver's Travels team,
-
-Only the top 2 per cent of homes you review make your collection, Villa Frond on Palm Jumeirah among them. Some Dubai owners must come close but need a renovation first, run from abroad.
-
-I founded Eastbridge, an independent client-side project manager for private villas in Dubai and Abu Dhabi, after running P Chapman Construction, a premium UK residential builder, for 21 years.
-
-Do you ever tell a Dubai owner what would get their villa accepted?
-
-Kind regards,
-```
+## 44. Oliver's Travels: DROPPED by Phil on review, 11 Nov. Not sent.
 
 ## 45. Livbnb
 
