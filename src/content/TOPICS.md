@@ -17,6 +17,11 @@
 - [x] villa-renovation-timeline-dubai | How long a villa renovation takes in Dubai | villa renovation timeline dubai | NOC, permit and long-lead items set the date, not the site work
 - [x] how-to-plan-a-villa-renovation-dubai | How to plan a villa renovation in Dubai | plan villa renovation dubai | hub linking all renovation content; linked from the renovation service page
 - [x] emaar-community-villa-renovation | Renovating in an Emaar community: approvals and sequence | emaar noc villa renovation | developer NOC before authority permit; contractor access rules
+# Keyword gap (12 Nov 2026, reports/keyword-gap-2026-11-12.md): publish these first. Competitors rank for them and we have no page.
+- [ ] villa-extension-dubai | Extending a Dubai villa: built-up area, approvals and cost | villa extension dubai | remaining allowable area, structure tie-ins, the extension that costs more than a rebuild
+- [ ] villa-kitchen-bathroom-renovation-cost-dubai | Kitchen and bathroom renovation costs in a Dubai villa | villa kitchen renovation cost dubai | at least two independent sources; sources-disagree table
+- [ ] villa-fit-out-dubai | Fitting out a shell-and-core or new villa in Dubai | villa fit out dubai | what a fit-out contract covers and leaves out; who manages the interface between designer, fit-out contractor and MEP; approvals for fit-out works
+- [ ] how-to-choose-villa-renovation-company-dubai | How to choose a villa renovation company in Dubai | villa renovation company dubai | 10 checks from the builder's side; design-build firm vs contractor plus designer; licence, insurance, references, BOQ; no company names
 - [ ] jumeirah-islands-villa-renovation | Renovating a Jumeirah Islands villa | jumeirah islands villa renovation | Nakheel NOC sequence, lakeside works, older MEP
 - [x] defects-liability-period-uae | The defects period: what to do in the first year | defects liability period uae | keeping leverage after handover
 - [ ] snagging-developer-villa-handover | Snagging a developer villa before you accept it | villa snagging dubai | the 20 items we check first
@@ -33,12 +38,10 @@
 # Section 3.12 (not a new article): add a Palm Jumeirah owner briefing (Villa Status Report, buying additional area, roof-level restrictions) to /insights/palm-jumeirah-villa-renovation/; figures only if confirmed from Nakheel documents.
 # Moved up: competitors already rank for these.
 - [ ] renovating-villa-to-sell-dubai | Renovating a Dubai villa to sell: where the budget should go | villa renovation roi dubai | what buyers pay for versus owner taste; no promised returns
-- [ ] villa-extension-dubai | Extending a Dubai villa: built-up area, approvals and cost | villa extension dubai | remaining allowable area, structure tie-ins, the extension that costs more than a rebuild
 - [ ] design-fees-villa-dubai | Villa design fees in Dubai: what's normal | villa design fees dubai | scope gaps between design packages
 # Added from the competitor brief, lower priority.
 - [ ] dubai-construction-calendar-villa-programme | The Dubai construction calendar and your villa programme | construction working hours ramadan dubai | Ramadan hours, the midday break 15 June to 15 September (cite MoHRE), Eid; merges summer-midday-break-villa-programme
 - [ ] best-time-to-renovate-villa-dubai | The best time of year to renovate a Dubai villa | best time to renovate villa dubai | summer working limits, approvals lead time, living elsewhere
-- [ ] villa-kitchen-bathroom-renovation-cost-dubai | Kitchen and bathroom renovation costs in a Dubai villa | villa kitchen renovation cost dubai | at least two independent sources; sources-disagree table
 - [ ] villa-renovation-rules-gated-communities-dubai | Renovation rules in Dubai's gated communities | villa renovation rules dubai community | Emaar, Nakheel, Meraas and Dubai Holding NOC routes compared from primary sources
 - [ ] renovating-mortgaged-villa-dubai | Renovating a mortgaged villa in Dubai | renovate mortgaged villa dubai bank noc | bank NOC; verify with a lender or primary source first
 - [ ] villa-car-lift-basement-garage | Car lifts and basement garages in a Dubai villa | villa car lift dubai | from the builder's side; pair with villa-basement-construction-dubai; any worked example labelled hypothetical
