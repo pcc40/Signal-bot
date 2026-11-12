@@ -129,6 +129,12 @@ def home(posts, post_cards, stages_html, svc_img):
      ("How are you paid?", "By you alone. We take no commission, referral fee or discount from any contractor, consultant or supplier. See <a href=\"/fees/\">how fees work</a>."),
      ("What happens after I get in touch?", "Send a short note through the contact form or on WhatsApp and we will reply to arrange the free 30-minute call at a time that suits you. There is no obligation to go further."),
     ]
+    if C.PUBLISH_FEES:
+        # Answer-first fee question (AI-visibility pass, 12 Nov 2026): published ranges only, from config.FEES.
+        faqs.insert(5, ("How much does a client-side project manager cost in Dubai?",
+                        f"We publish fee ranges by level of input. A review is {C.fee_text('review')}; part service is {C.fee_text('part')}; "
+                        f"full service is {C.fee_text('full')}. The fee is agreed in a written scope of works after the free call. "
+                        "See <a href=\"/fees/\">how fees work</a>."))
     body = f'''
 <section class="hero" aria-labelledby="hero-h"><div class="slides">{slides}</div>
 {B.hero_video_html()}<div class="wrap"><span class="kicker">Client-side project management · Dubai and Abu Dhabi</span>

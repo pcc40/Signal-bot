@@ -6,6 +6,7 @@ import related
 import config as C
 from content.services import SERVICES, BY_SLUG as SVC, DELIVERABLES, OUTCOMES, SPECIMENS, MONTH_ON_PROJECT, WA_TOPIC
 import content.services as SV
+import content.answers as ANS
 from content.areas import AREAS, BY_SLUG as AREA
 from content.projects import PROJECTS, BY_SLUG as PROJ
 
@@ -280,7 +281,7 @@ def services_hub():
 {B.cta_band()}'''
     schema = [{"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [
         {"@type": "ListItem", "position": i + 1, "url": B.url(f"/services/{s['slug']}/"), "name": s["name"]} for i, s in enumerate(SERVICES)]}]
-    B.page("/services/", "Villa Project Management Services Dubai | Eastbridge",
+    B.page("/services/", "Services for Villa Owners in Dubai & Abu Dhabi | Eastbridge",
            "Owner's representation, villa builds, renovations, plot reviews, cost control, site reports, claims, snagging and handover in Dubai and Abu Dhabi.",
            body, crumbs, schema)
 
@@ -371,7 +372,7 @@ def service_page(s):
 <section class="section"><div class="wrap split">
 <div class="side-sticky"><dl class="facts"><div><dt>Stage</dt><dd>{esc(s["stage"])}</dd></div><div><dt>Who it's for</dt><dd>Private villa owners and investors</dd></div><div><dt>Where</dt><dd>Dubai and Abu Dhabi</dd></div></dl>{area_p}
 <figure>{pic(strip[0], img_alt_of(strip[0], proj_of(strip[0])["name"] if not B.is_uae(strip[0]) else ""), "(max-width:900px) 100vw, 40vw")}<figcaption>{esc(B.img_caption(strip[0]) if B.is_uae(strip[0]) else credit_of(strip[0]))}</figcaption></figure></div>
-<div class="prose">{s["intro"]}
+<div class="prose">{ANS.answer_html(path)}{s["intro"]}
 <h2>What we do</h2><ul>{does}</ul>
 <h2>What it gives you</h2><ul>{gets}</ul>{s.get("extra", "")}{alongside}{read_more}</div>
 </div></section>
@@ -662,7 +663,7 @@ def fees():
                 '<a href="/independence/">Our independence pledge</a>']
     reading_html = "".join(f"<li>{r}</li>" for r in reading)
     body = B.banner(crumbs, "How our fees work", "Every one-off villa is different, so we agree a written scope of works and price it within published ranges. Paid only by you.", "owers-house-11", credit_of("owers-house-11")) + f'''
-<section class="section" id="scope"><div class="wrap split"><div><span class="kicker">The principle</span><h2>A written scope of works, then a fee</h2></div><div class="prose">
+<section class="section" id="scope"><div class="wrap split"><div><span class="kicker">The principle</span><h2>A written scope of works, then a fee</h2></div><div class="prose">{ANS.answer_html("/fees/")}
 <p>Every one-off villa is different: the plot, the design, the programme, and how much of the work you want us to carry. An exact price given before we understand those would be a guess, so we don't give one. After the free call we agree a written scope of works with you and price it within the published range for the level of input you need. Any work outside that scope is quoted in writing before it starts.</p>
 <p>We publish ranges by level of input, not a day rate, an hourly rate or a fixed price. That is deliberate: it is the honest way to price work that is different every time, and it means the fee you agree is the fee you pay for the scope you agreed.</p>
 </div></div></section>
@@ -732,9 +733,31 @@ def fees():
 </div></div></section>
 <section class="section paper"><div class="wrap split"><div><h2>Questions about fees and money</h2></div><div>{B.faq_html(faqs)}</div></div></section>
 {B.cta_band("Start with a free 30-minute call.", f"{C.RESPONSE_PROMISE} to arrange a time. We will tell you which first step, if any, would help.")}'''
-    B.page("/fees/", "Owner's Representative Fees in Dubai | Eastbridge",
-           "Fees for villa owner's representation in Dubai: a written scope of works, priced within published ranges for a review, part service or full service.",
-           body, crumbs, [B.faq_schema(faqs)])
+    fee_desc = (f"Owner's representative fees in Dubai: review {C.FEES['review']['range']}; full service "
+                f"{C.fee_text('full')}; part service a monthly fee. All agreed in a written scope." if show else
+                "Fees for villa owner's representation in Dubai: a written scope of works, priced within published ranges for a review, part service or full service.")
+    B.page("/fees/", "Owner's Representative Fees in Dubai | Eastbridge", fee_desc,
+           body, crumbs, [B.faq_schema(faqs)] + ([fees_schema(levels)] if show else []))
+
+def fees_schema(levels):
+    """Service with the three published fee levels as offers (only figures already shown on /fees/).
+    The review range is also given as a numeric price range; the other two levels are described in words."""
+    import re as _re
+    offers = []
+    for k, covers, _who in levels:
+        o = {"@type": "Offer", "name": C.FEES[k]["name"], "description": f"{_cap(C.fee_text(k))}. {covers}",
+             "priceCurrency": "AED", "url": B.url("/fees/#levels")}
+        m = _re.fullmatch(r"AED ([\d,]+)–([\d,]+)", C.FEES[k]["range"])
+        if m:
+            o["priceSpecification"] = {"@type": "PriceSpecification", "priceCurrency": "AED",
+                                       "minPrice": int(m.group(1).replace(",", "")), "maxPrice": int(m.group(2).replace(",", ""))}
+        offers.append(o)
+    return {"@context": "https://schema.org", "@type": "Service", "@id": B.url("/fees/#service"),
+            "name": "Owner's representative and client-side villa project management",
+            "serviceType": "Owner's representative", "provider": {"@id": B.ORG_ID}, "areaServed": B.AREA_SERVED,
+            "url": B.url("/fees/"),
+            "description": "Fees are published as ranges by level of input and agreed in a written scope of works after a free 30-minute call.",
+            "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Fee levels", "itemListElement": offers}}
 
 def about():
     crumbs = [("Home", "/"), ("About", "/about/")]

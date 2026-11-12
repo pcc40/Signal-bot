@@ -223,7 +223,8 @@ def org_ref():
 
 def person_ref():
     return {"@type": "Person", "@id": PERSON_ID, "name": C.FOUNDER["name"], "url": url("/about/#founder"),
-            "jobTitle": C.FOUNDER["role"]}
+            "jobTitle": C.FOUNDER["role"],
+            **({"sameAs": list(C.FOUNDER["same_as"])} if C.FOUNDER.get("same_as") else {})}
 
 def enrich_schema(o, body="", top=True):
     """Expand bare {"@id": org/founder} references into named nodes, and mark article key points as speakable."""
@@ -782,7 +783,8 @@ def write_robots():
                "User-agent: *\nAllow: /\n\n"
                "User-agent: GPTBot\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nUser-agent: ChatGPT-User\nAllow: /\n\n"
                "User-agent: ClaudeBot\nAllow: /\n\nUser-agent: Claude-SearchBot\nAllow: /\n\nUser-agent: Claude-User\nAllow: /\n\n"
-               "User-agent: PerplexityBot\nAllow: /\n\nUser-agent: Google-Extended\nAllow: /\n\nUser-agent: Applebot-Extended\nAllow: /\n\n"
+               "User-agent: PerplexityBot\nAllow: /\n\nUser-agent: Perplexity-User\nAllow: /\n\n"
+               "User-agent: Bingbot\nAllow: /\n\nUser-agent: Googlebot\nAllow: /\n\nUser-agent: Google-Extended\nAllow: /\n\nUser-agent: Applebot-Extended\nAllow: /\n\n"
                f"Sitemap: {url('/sitemap.xml')}\n")
     (DIST / "robots.txt").write_text(txt)
 
@@ -867,7 +869,12 @@ def llms_describe():
         *fee,
         "- Coverage: Eastbridge covers every community in Dubai and Abu Dhabi; the area pages are examples, not limits. For "
         "clients it represents, it can also support their projects outside the UAE.",
-    ]
+    ] + _answers_llms()
+
+def _answers_llms():
+    """The answer-first summaries shown on the key pages (src/content/answers.py), as plain text."""
+    from content.answers import llms_lines
+    return [re.sub(r"<[^>]+>", "", l) for l in llms_lines(url)]
 
 LLMS_FULL_PAGES = ["/about/", "/why-a-client-side-project-manager/", "/services/"]  # + every service page
 LLMS_FULL_TAIL = ["/approach/", "/independence/", "/fees/", "/faq/", "/work/owers-house/", "/case-studies/island-e-waterfront-villa/",
