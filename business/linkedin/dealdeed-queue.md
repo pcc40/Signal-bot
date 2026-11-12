@@ -9,7 +9,7 @@ Mix: opportunity, buyer brief, opportunity, market/launch radar, "how the desk w
 
 ## Queued
 
-### Thu 12 Nov 2026, 12:00 Dubai — Buyer brief: ready 3-bed (with image card: cards/2026-11-12-buyer-brief.png)
+### [POSTED 12 Nov] Thu 12 Nov 2026, 12:00 Dubai — Buyer brief: ready 3-bed (with image card: cards/2026-11-12-buyer-brief.png)
 One buyer. AED 10–12M. Ready now.
 
 The brief: a ready 3-bedroom apartment in Dubai Marina, Emaar Beachfront or on Palm Jumeirah, priced at or below what the current owner paid.
@@ -64,6 +64,25 @@ dealdeed.ae/launches
 
 #AbuDhabi #AbuDhabiRealEstate #OffPlan #YasIsland #AlReemIsland
 
+### Tue 17 Nov 2026, 12:00 Dubai — How the desk works (with image card: cards/2026-11-17-how-the-desk-works.png) — DRAFTED, NOT YET SCHEDULED
+Nobody pays DealDeed until a deal completes.
+
+Here is how the desk works, in three steps.
+
+01 Register a brief, privately. Agents submit motivated mandates or buyer briefs. Owners and investors register their position and are paired with a vetted RERA-licensed agent. Free, in minutes.
+
+02 We verify, then match. Every deal is benchmarked to Dubai Land Department transactions, the seller's position evidenced and the all-in cost normalised. Only then is it matched, and you see only what fits.
+
+03 Agents close, we step back. The two licensed agents handle representation, negotiation and transfer. When the deal completes, each agent pays a fixed introduction fee. If nothing closes, no one pays anything.
+
+DealDeed is an introducer, not a brokerage. Buyers and sellers never pay us.
+
+Holding a mandate or a brief that deserves a careful match?
+
+dealdeed.ae
+
+#DubaiRealEstate #AbuDhabiRealEstate #RealEstateAgents #RERA #PropertyInvestment
+
 ## Posted / scheduled log
 | Date | Post | Status |
 |---|---|---|
@@ -71,3 +90,5 @@ dealdeed.ae/launches
 | Thu 12 Nov 08:00 UK | Buyer brief: ready 3-bed Marina/Beachfront/Palm + image card | Rescheduled 11 Nov with image (text-only version deleted) |
 | Fri 13 Nov 08:00 UK | Athlon townhouse below purchase price + image card | Rescheduled 11 Nov with image (text-only version deleted) |
 | Mon 16 Nov 08:00 UK | Abu Dhabi launch radar (Oct AED 12.97bn; Man City Ph2, Riviera Ph2, Orchard, One&Only Al Maryah) + image card | Scheduled 11 Nov |
+| Thu 12 Nov 08:00 UK | Buyer brief: ready 3-bed | Posted (scheduled time passed; not re-checked live 12 Nov) |
+| Tue 17 Nov 08:00 UK | How the desk works (3 steps, fixed fee on completion) + image card | Drafted 12 Nov — NOT scheduled: two Chrome browsers connected, none selected for the run |
