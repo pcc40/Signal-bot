@@ -106,6 +106,7 @@ POST_IMG = {
     "how-long-to-build-a-villa-dubai": "uae-dubai-hills-estate-05",
     "stalled-villa-project-dubai": "uae-palm-jumeirah-02",
     "design-build-vs-separate-architect-villa": "uae-dubai-hills-estate-02",
+    "owner-site-visits-villa-build": "uae-dubai-hills-estate-02",
     # the builder's view: UK photographs, captioned as P Chapman Construction's work
     "what-the-contractor-knows": "quay-house-02",
     "how-to-choose-a-villa-contractor-dubai": "gooden-heane-04",

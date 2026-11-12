@@ -101,6 +101,8 @@ Published guidance puts construction at 8–14 months. The table below is our ow
 | External works, pool and landscaping | 1–3 months, overlapping | Levels, drainage, planting season |
 | Testing, commissioning and completion inspections | 3–6 weeks | Systems complexity, authority inspections |
 
+First fix and the weeks before ceilings close are when an owner's visit is worth most; our guide to [owner site visits](/insights/owner-site-visits-villa-build/) explains what to check at each stage.
+
 Add a basement and the substructure stage can easily double. Dubai Municipality's procedure refers to staged inspections, such as shoring, foundations and slabs, so each structural milestone also carries a short wait for inspection, which a good programme allows for.
 
 ## Does the summer slow construction in Dubai?

@@ -92,7 +92,7 @@ The current programme against the baseline, with the critical path marked and an
 
 A single running record of every decision you have made: what was asked, what you approved, the date, and any cost or time effect. When disputes arise months later, the decision log is usually the most useful document on the project. It also protects you from the phrase "the client asked for it" being applied to things you never approved.
 
-Our [site visits and reporting](/services/site-visits-and-reporting/) and [cost and programme control](/services/cost-and-programme-control/) services are built around exactly these documents.
+Our [site visits and reporting](/services/site-visits-and-reporting/) and [cost and programme control](/services/cost-and-programme-control/) services are built around exactly these documents. For the six moments on a build when someone on your side should be on site, see our guide to [owner site visits on a villa build](/insights/owner-site-visits-villa-build/).
 
 ## How do payments and banking work from the UK?
 

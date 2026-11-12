@@ -56,6 +56,8 @@ A [property information website](https://realestateclubdubai.com/dubai-villa-arc
 4. Re-inspection, item by item.
 5. Handover, with any minor outstanding items listed and agreed in writing.
 
+Snagging is far easier if someone on your side has already seen the hidden work before it was covered. Our guide to [owner site visits on a villa build](/insights/owner-site-visits-villa-build/) sets out the earlier visits, from setting out to the last check before ceilings close.
+
 ## Systems checklist: test before you look
 
 ### Waterproofing and roofs
