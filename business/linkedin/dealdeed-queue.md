@@ -10,24 +10,6 @@ Mix: opportunity, buyer brief, opportunity, market/launch radar, "how the desk w
 
 ## Queued
 
-### Fri 13 Nov 2026, 12:00 Dubai — Athlon townhouse below purchase price (with image card: cards/2026-11-13-athlon-townhouse.png)
-This owner is selling for AED 167,000 less than they paid.
-
-A real loss on a 2024 purchase, not a sticker discount.
-
-A 3-bedroom townhouse in Athlon by Aldar, Dubailand:
-• 2,300 sq ft built-up on a 2,000 sq ft plot, larger than most Athlon townhouse plots
-• Asking AED 3,050,000, about AED 1,326 per sq ft
-• Balance on Aldar's plan to handover in 2028
-
-The owner needs out before handover. The purchase price was checked against the developer's statement of account before introduction, and the detail is released to registered buyers on agreed terms.
-
-Buyers and agents: ask the desk.
-
-dealdeed.ae/desk
-
-#Athlon #Aldar #Dubailand #DubaiRealEstate #OffPlan
-
 ### Mon 16 Nov 2026, 12:00 Dubai — Abu Dhabi launch radar (with image card: cards/2026-11-16-abu-dhabi-launch-radar.png)
 AED 12.97bn of homes sold in Abu Dhabi in a single month.
 
@@ -66,6 +48,25 @@ dealdeed.ae
 
 #DubaiRealEstate #AbuDhabiRealEstate #RealEstateAgents #RERA #PropertyInvestment
 
+### Wed 18 Nov 2026, 12:00 Dubai — Nad Al Sheba Gardens Ph 4 corner townhouse (with image card: cards/2026-11-18-nad-al-sheba-townhouse.png)
+Priced under every recent sale of its type in the finished phase.
+
+A 3-bedroom corner townhouse in Nad Al Sheba Gardens Phase 4 by Meraas:
+• 2,750 sq ft built-up on a 2,841 sq ft plot
+• 3 bedrooms, maid's room and an upstairs family room
+• Asking AED 5,100,000, about AED 1,855 per sq ft
+• 60% already paid to Meraas; handover expected Q2 2027
+
+The same type in the ready Phase 2 sold at AED 5.55M in July 2026 and AED 6.0M in February 2026, as reported by the listing agent and checked against the Land Department register before introduction.
+
+The owner wants out before handover. The unit is released to registered buyers on agreed terms.
+
+Is this the kind of deal you are looking for? Ask the desk.
+
+dealdeed.ae/desk
+
+#NadAlSheba #Meraas #DubaiRealEstate #DubaiTownhouses #OffPlan
+
 ## Posted / scheduled log
 | Date | Post | Status |
 |---|---|---|
@@ -75,3 +76,5 @@ dealdeed.ae
 | Mon 16 Nov 08:00 UK | Abu Dhabi launch radar (Oct AED 12.97bn; Man City Ph2, Riviera Ph2, Orchard, One&Only Al Maryah) + image card | Scheduled 11 Nov |
 | Thu 12 Nov 08:00 UK | Buyer brief: ready 3-bed + image card | Posted (confirmed live in LinkedIn 13 Nov) |
 | Tue 17 Nov 08:00 UK | How the desk works (3 steps, fixed fee on completion) + image card | Scheduled 13 Nov (Browser 2); queue confirmed: Fri 13, Mon 16, Tue 17 |
+| Fri 13 Nov 08:00 UK | Athlon townhouse below purchase price + image card | Posted (confirmed live in LinkedIn 13 Nov) |
+| Wed 18 Nov 08:00 UK | Opportunity: Nad Al Sheba Gardens Ph 4 corner townhouse, AED 5.1M, 60% paid + image card | Scheduled 13 Nov (Browser 2); queue confirmed: Mon 16, Tue 17, Wed 18 |
