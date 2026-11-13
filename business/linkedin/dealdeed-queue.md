@@ -5,6 +5,7 @@ Rhythm: one post every UAE working day (Mon–Fri), 12:00 Dubai (08:00 UK), sche
 Source: only what is published on https://dealdeed.ae/desk (and /desk#briefs, /launch-radar) on the day of writing. Never a unit/villa/plot number, developer type code, party name, Phil's UK number, a percentage fee, or a figure not on the site.
 NEVER describe anything as "off-market" or "exclusive" (Phil, 10 Nov: never claim off-market in Dubai). Prices and "below comparable" wording only exactly as the desk states them.
 Images (Phil, 11 Nov): every post carries an image. Use a DealDeed-branded card built from business/linkedin/cards/card-template-*.html (own typography, figures only from the site) or DealDeed's own listing photos; never third-party/developer renders. Open with a one-line hook and close with a question or clear call to action. Upload via the composer's "Add media" → "Upload from computer" input.
+Browser (Phil, 13 Nov): LinkedIn is signed in on Chrome "Browser 2" (deviceId fddc85a8-0b48-4d7a-9b25-8bd48df4ee0f). If two browsers are connected, select_browser that one.
 Mix: opportunity, buyer brief, opportunity, market/launch radar, "how the desk works" — then repeat. Max 5 hashtags.
 
 ## Queued
