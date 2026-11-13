@@ -31,7 +31,7 @@ Takeaways: decision/question hooks win; first-comment links beat link cards; don
 
 | Date | Day | Topic | Comment link | Status |
 |---|---|---|---|---|
-| 13 Nov | Fri | Stalled build: first ten days | Full guide: https://eastbridgestrategicpartners.com/insights/stalled-villa-project-dubai/ | Queued |
+| 13 Nov | Fri | Stalled build: first ten days | Full guide: https://eastbridgestrategicpartners.com/insights/stalled-villa-project-dubai/ | Posted (link comment in; 177 impr. at 10h) |
 | 14 Nov | Sat | How long to build a villa | Full guide: https://eastbridgestrategicpartners.com/insights/how-long-to-build-a-villa-dubai/ | Queued |
 | 15 Nov | Sun | Plot checks before you pay | Full guide: https://eastbridgestrategicpartners.com/insights/buying-a-villa-plot-in-dubai-checks/ | Queued |
 | 16 Nov | Mon | Renovation mistakes | Full guide: https://eastbridgestrategicpartners.com/insights/villa-renovation-mistakes-dubai/ | Queued |
