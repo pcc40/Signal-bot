@@ -5,27 +5,10 @@ Rhythm: one post every UAE working day (Mon–Fri), 12:00 Dubai (08:00 UK), sche
 Source: only what is published on https://dealdeed.ae/desk (and /desk#briefs, /launch-radar) on the day of writing. Never a unit/villa/plot number, developer type code, party name, Phil's UK number, a percentage fee, or a figure not on the site.
 NEVER describe anything as "off-market" or "exclusive" (Phil, 10 Nov: never claim off-market in Dubai). Prices and "below comparable" wording only exactly as the desk states them.
 Images (Phil, 11 Nov): every post carries an image. Use a DealDeed-branded card built from business/linkedin/cards/card-template-*.html (own typography, figures only from the site) or DealDeed's own listing photos; never third-party/developer renders. Open with a one-line hook and close with a question or clear call to action. Upload via the composer's "Add media" → "Upload from computer" input.
+Browser (Phil, 13 Nov): LinkedIn is signed in on Chrome "Browser 2" (deviceId fddc85a8-0b48-4d7a-9b25-8bd48df4ee0f). If two browsers are connected, select_browser that one.
 Mix: opportunity, buyer brief, opportunity, market/launch radar, "how the desk works" — then repeat. Max 5 hashtags.
 
 ## Queued
-
-### [POSTED 12 Nov] Thu 12 Nov 2026, 12:00 Dubai — Buyer brief: ready 3-bed (with image card: cards/2026-11-12-buyer-brief.png)
-One buyer. AED 10–12M. Ready now.
-
-The brief: a ready 3-bedroom apartment in Dubai Marina, Emaar Beachfront or on Palm Jumeirah, priced at or below what the current owner paid.
-
-• Completed, ready stock only
-• At least two en-suite bedrooms
-• A four-bedroom is considered for the right layout
-• Budget AED 10–12M, flexible for the right unit
-
-Agents: if you hold stock that fits, submit it to the desk. Every deal is agent to agent, your client stays yours, and DealDeed's fixed introduction fee is paid by the agent only when a deal completes.
-
-Holding something that fits?
-
-dealdeed.ae/desk#briefs
-
-#DubaiMarina #EmaarBeachfront #PalmJumeirah #DubaiRealEstate #RealEstateAgents
 
 ### Fri 13 Nov 2026, 12:00 Dubai — Athlon townhouse below purchase price (with image card: cards/2026-11-13-athlon-townhouse.png)
 This owner is selling for AED 167,000 less than they paid.
@@ -64,7 +47,7 @@ dealdeed.ae/launches
 
 #AbuDhabi #AbuDhabiRealEstate #OffPlan #YasIsland #AlReemIsland
 
-### Tue 17 Nov 2026, 12:00 Dubai — How the desk works (with image card: cards/2026-11-17-how-the-desk-works.png) — DRAFTED, NOT YET SCHEDULED
+### Tue 17 Nov 2026, 12:00 Dubai — How the desk works (with image card: cards/2026-11-17-how-the-desk-works.png)
 Nobody pays DealDeed until a deal completes.
 
 Here is how the desk works, in three steps.
@@ -90,5 +73,5 @@ dealdeed.ae
 | Thu 12 Nov 08:00 UK | Buyer brief: ready 3-bed Marina/Beachfront/Palm + image card | Rescheduled 11 Nov with image (text-only version deleted) |
 | Fri 13 Nov 08:00 UK | Athlon townhouse below purchase price + image card | Rescheduled 11 Nov with image (text-only version deleted) |
 | Mon 16 Nov 08:00 UK | Abu Dhabi launch radar (Oct AED 12.97bn; Man City Ph2, Riviera Ph2, Orchard, One&Only Al Maryah) + image card | Scheduled 11 Nov |
-| Thu 12 Nov 08:00 UK | Buyer brief: ready 3-bed | Posted (scheduled time passed; not re-checked live 12 Nov) |
-| Tue 17 Nov 08:00 UK | How the desk works (3 steps, fixed fee on completion) + image card | Drafted 12 Nov — NOT scheduled: two Chrome browsers connected, none selected for the run |
+| Thu 12 Nov 08:00 UK | Buyer brief: ready 3-bed + image card | Posted (confirmed live in LinkedIn 13 Nov) |
+| Tue 17 Nov 08:00 UK | How the desk works (3 steps, fixed fee on completion) + image card | Scheduled 13 Nov (Browser 2); queue confirmed: Fri 13, Mon 16, Tue 17 |
