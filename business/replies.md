@@ -2,6 +2,7 @@
 
 One line per reply, bounce or opt-out, newest first: date | firm | address | type (positive / neutral / not now / no / auto-reply / bounce / sales pitch / unsubscribe) | note. Firms here get no further automatic outreach or follow-up (auto-replies excepted only if marked "follow up ok").
 
+2026-11-13 | V. Concept Design Studio | info@vconceptdesign.ae | bounce | deferred from 12 Nov, final bounce 13 Nov: no mail servers for this domain
 2026-11-13 | Halo Property Inspections | info@haloinspection.ae | bounce | address does not exist
 2026-11-13 | MM Studio+ (Mattia Michelon) | info@mattiamichelon.com | positive (inbound) | Mattia contacted us 10 Nov; Phil met him at the studio 13 Nov; wants to be Eastbridge's architecture and interiors partner; sent profile and HERA brochure. Draft thank-you in PCC Drafts 14 Nov (no Partners-page listing: the site never names architects as partners)
 2026-11-12 | Chartered Conveyancing | info@charteredconveyancing.com (reply from maddie@charteredconveyancing.com) | neutral | Maddie Moss: buyers ask about works after completion. Draft reply (coffee / one-page summary) in PCC Drafts 14 Nov
