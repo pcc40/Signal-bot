@@ -27,7 +27,7 @@ def creds_band():
              ("Grand Designs", "Owers House, built by P Chapman Construction, featured on Channel 4")]
     # Awards belong to the houses and their project teams; linkable evidence is at /about/#recognition.
     linked = {"LABC South West awards"}
-    return '<section class="creds" aria-label="Track record"><div class="wrap">' + "".join(
+    return '<section class="creds" aria-label="Founder track record"><div class="wrap">' + "".join(
         f"<div><b>{esc(a)}</b><span>{esc(b)}" + (' <a href="/about/#recognition">Evidence</a>' if a in linked else "")
         + "</span></div>" for a, b in items) + "</div></section>"
 
@@ -142,7 +142,7 @@ def home(posts, post_cards, stages_html, svc_img):
 <p class="lede">For a one-off villa, one person represents you alongside your consultant and contractor, and keeps your budget under control by reviewing every quote, payment and variation before you commit. Led personally by Philip Chapman.</p>
 <div class="actions"><a class="btn" href="/contact/">{esc(B.CTA_LABEL)}</a><a class="btn btn--ghost" href="/why-a-client-side-project-manager/">Why client-side matters</a></div></div>
 <div class="hero-meta">{slide_caps}</div><span class="scroll-cue" aria-hidden="true"></span></section>
-
+{creds_band()}
 <section class="section" aria-labelledby="founder-h"><div class="wrap feature">
 <figure class="portrait">{pic("philip-chapman-01", "Philip Chapman, Founding Partner of Eastbridge Strategic Partners", "(max-width:900px) 100vw, 42vw", cls="reveal")}</figure>
 <div><span class="kicker">Who leads your project</span><h2 id="founder-h">Philip Chapman, Founding Partner</h2>

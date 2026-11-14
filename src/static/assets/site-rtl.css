@@ -201,11 +201,11 @@ body.has-hero .site-head:not(.stuck) .btn{background:#fff;color:var(--ink);borde
 
 /* ---------- Credentials band ---------- */
 .creds{border-bottom:1px solid var(--line)}
-.creds .wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:0}
+.creds .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
 .creds .wrap > div{padding:26px 0 26px 22px;border-left:1px solid var(--line)}
 .creds .wrap > div + div{padding-right:22px}
 .creds .wrap > div:last-child{border-left:0}
-.creds b{display:block;font-family:var(--serif);font-weight:400;font-size:var(--s-1);line-height:1.15}
+.creds b{display:block;font-family:var(--serif);font-weight:400;font-size:var(--s-2);line-height:1.15}
 .creds span{display:block;font-size:var(--s--2);color:var(--ink-soft);margin-top:6px}
 @media (max-width:1000px){.creds .wrap{grid-template-columns:1fr 1fr;column-gap:24px}.creds .wrap > div{border-left:0;border-bottom:1px solid var(--line);padding-right:0!important}}
 
