@@ -139,6 +139,9 @@ An honest answer to the last question often tells you more than the others.
 
 For how these roles fit into the overall sequence, see [how to build a villa in Dubai](/insights/how-to-build-a-villa-in-dubai/).
 
+
+Whether the role is worth paying for depends on the project; our guide [is an owner's representative worth it on a villa?](/insights/is-an-owners-representative-worth-it-villa/) covers when it is and when it is not.
+
 ## How Eastbridge can help
 
 We are an independent, client-side owner's representative. We work alongside your registered consultant and your contractor, not instead of them, and we act for the owner alone. Our [owner's representative](/services/owners-representative/) service and our [independence](/independence/) page explain how we work and what we will not do. If you are deciding whether you need us at all, [ask us](/contact/); we will tell you honestly.

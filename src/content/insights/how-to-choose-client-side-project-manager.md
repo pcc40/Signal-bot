@@ -145,6 +145,8 @@ Our published ranges are on our [fees page](/fees/): a review costs AED 9,500–
 - **An offer to replace your registered consultant**, or to take on roles the law reserves for registered offices.
 - **No questions about you.** A good project manager asks about your budget, your timescale, how decisions are made in your family and how often you are in Dubai, before proposing anything.
 
+Not sure you need one? Our guide to whether [an owner's representative is worth it](/insights/is-an-owners-representative-worth-it-villa/) sets out the cases for and against.
+
 ## How Eastbridge can help
 
 We are a client-side project manager for private villa owners in Dubai and Abu Dhabi, and we expect to be tested on every question above. If you are comparing firms, we are happy to talk it through on a free first call, and to tell you plainly whether your project needs a full appointment or a single review. See [owner's representation](/services/owners-representative/), our [Island E worked example](/case-studies/island-e-waterfront-villa/) (a hypothetical worked example of how we would approach a waterfront villa), or [contact us](/contact/).
