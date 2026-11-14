@@ -1164,6 +1164,14 @@ html,body{overflow-x:clip}
   .cookie-banner__in{padding:10px 12px 12px}
   .cookie-banner .btn{min-height:38px}
 }
+/* 14 Nov 2026: on phones, lift the hero text and buttons clear of the cookie banner while it is open. */
+@media (max-width:760px){
+  .cb-open .hero-meta{display:none}
+  .cookie-banner .cb-more{display:none}
+  .hero .wrap{padding-bottom:calc(60px + 30px + env(safe-area-inset-bottom,0px))}
+  .hero .actions .btn--ghost{display:none}
+  .cb-open .hero .wrap{padding-bottom:calc(var(--cb-h,96px) + 60px + 26px)}
+}
 @media (min-width:761px){
   .cb-open .hero .wrap{padding-bottom:max(clamp(64px,11vh,130px),calc(var(--cb-h,0px) + 68px))}
   .cb-open .hero-meta{bottom:calc(var(--cb-h,0px) + 132px)}

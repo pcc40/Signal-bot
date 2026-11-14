@@ -466,8 +466,8 @@ def consent_banner():
     return ('<section class="cookie-banner" id="cookie-banner" aria-labelledby="cookie-banner-h" hidden><div class="cookie-banner__in">'
             '<h2 class="cookie-banner__h" id="cookie-banner-h">Analytics cookies</h2>'
             '<p class="cookie-banner__p">With your agreement, we use Google Analytics cookies to see which pages are useful. '
-            'Nothing is measured unless you accept, and we use no advertising cookies. You can change your choice at any time '
-            'with Cookie settings at the foot of each page. See our <a href="/privacy/">privacy notice</a>.</p>'
+            '<span class="cb-more">Nothing is measured unless you accept, and we use no advertising cookies. You can change your choice at any time '
+            'with Cookie settings at the foot of each page.</span> See our <a href="/privacy/">privacy notice</a>.</p>'
             '<div class="cookie-banner__acts"><button class="btn" type="button" data-consent="granted">Accept analytics</button>'
             '<button class="btn btn--ghost" type="button" data-consent="denied">Decline</button></div></div></section>')
 
