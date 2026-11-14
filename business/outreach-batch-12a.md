@@ -454,7 +454,7 @@ Would a short members' guide on villa projects be useful to Club Italia?
 Kind regards,
 ```
 
-## 23. German Emirati Joint Council for Industry and Commerce (AHK)
+## 23. German Emirati Joint Council for Industry and Commerce (AHK): DROPPED on review 14 Nov (opening line a generalisation, not a site fact). Not sent.
 
 **To:** daniela.calligaro@ahkuae.com
 **Person:** Daniela Calligaro (Director Dubai Office and Regional Membership)
@@ -494,7 +494,7 @@ Would a short members' talk on villa projects fit the FBC programme?
 Kind regards,
 ```
 
-## 25. Swiss Business Council UAE
+## 25. Swiss Business Council UAE: DROPPED on review 14 Nov (chairman named on site may be out of date). Not sent.
 
 **To:** dubai@swissbcuae.com
 **Person:** Peter Harradine (Chairman, as listed on the site)

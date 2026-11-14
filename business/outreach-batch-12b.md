@@ -136,7 +136,7 @@ Will most of those buyers still be in the UK at handover?
 Kind regards,
 ```
 
-## 32. SBA Properties
+## 32. SBA Properties: DROPPED on review 14 Nov (named co-founder may no longer be active). Not sent.
 
 **To:** dxb@sbaproperty.com
 **Person:** Howard Sandrove, co-founder
@@ -296,7 +296,7 @@ Do any of your 1,200 families ask you about building or renovating?
 Kind regards,
 ```
 
-## 40. Ross Naylor
+## 40. Ross Naylor: DROPPED on review 14 Nov (EU-focused planner, weak UAE link). Not sent.
 
 **To:** hello@rossnaylor.com
 **Person:** Ross Naylor, Chartered Financial Planner
@@ -316,7 +316,7 @@ Do Dubai clients raise villa works when you review their property?
 Kind regards,
 ```
 
-## 41. Torontec MEP Engineering Consultants
+## 41. Torontec MEP Engineering Consultants: DROPPED on review 14 Nov (offers PMO representation). Not sent.
 
 **To:** torontec@eim.ae
 **Person:** Hossein Moltaji, Managing Director and founder
@@ -336,7 +336,7 @@ On villas, how often does your design change once the interiors arrive?
 Kind regards,
 ```
 
-## 42. Structural Solutions
+## 42. Structural Solutions: DROPPED on review 14 Nov (works for the owner on approvals, close to our role). Not sent.
 
 **To:** info@structuralsolutions.ae
 **Person:** none published (team greeting)
