@@ -616,6 +616,7 @@ def page(path, title, description, body, crumbs=None, schema=None, og=None, og_t
     body = deprioritise_slides(body)
     ld ="".join(f'<script type="application/ld+json">{json.dumps(s, ensure_ascii=False)}</script>' for s in schema)
     og_img = url(og or og_image("quay-house-01"))
+    og_dims = ('\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta property="og:image:type" content="image/jpeg">' if og_img.endswith("-og.jpg") else "")
     robots = "noindex,nofollow" if (noindex or not C.INDEXABLE) else "index,follow,max-image-preview:large,max-snippet:-1"
     verif = ""
     if C.GSC_VERIFICATION:
@@ -647,7 +648,7 @@ def page(path, title, description, body, crumbs=None, schema=None, og=None, og_t
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:url" content="{url(path)}">
-<meta property="og:image" content="{og_img}">
+<meta property="og:image" content="{og_img}">{og_dims}
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#1F2629">
