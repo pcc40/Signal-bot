@@ -6,7 +6,7 @@ Written by the cloud session; created as DRAFTS in Outlook (philip@eastbridgestr
 
 ## 1. Capital Zone — Jinu Kurian (reply all: keep gourav@capitalzone.ae and bharat@capitalzone.ae)
 Find: email from info@capitalzone.ae, subject "Re: Equity released to renovate" (12 Nov).
-Status: pending
+Status: drafted 2026-11-14
 
 Dear Jinu,
 
@@ -22,7 +22,7 @@ Kind regards,
 
 ## 2. Chartered Conveyancing — Maddie Moss
 Find: email from maddie@charteredconveyancing.com, subject "Agents sell, banks lend" (12 Nov).
-Status: pending
+Status: drafted 2026-11-14
 
 Dear Maddie,
 
@@ -36,7 +36,7 @@ Kind regards,
 
 ## 3. MM Studio+ — Mattia Michelon (reply all: keep design@mattiamichelon.com)
 Find: email from info@mattiamichelon.com, subject "Re: Design support alongside Eastbridge's villa owner representation" (13 Nov).
-Status: pending
+Status: drafted 2026-11-14
 
 Dear Mattia,
 
