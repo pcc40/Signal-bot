@@ -27,6 +27,22 @@ Link goes in the **first comment**, added by the scheduled task at ~9:04 am UAE.
 
 Takeaways: decision/question hooks win; first-comment links beat link cards; don't double-post; audience still UK-heavy, so UAE-morning timing is a test — compare after two weeks.
 
+## Analytics snapshot (14 Nov 2026, ~17:00 UAE)
+
+| Posted | Topic | Link | Impr. | Reached | Out-of-network | Reactions/comments |
+|---|---|---|---|---|---|---|
+| 5 Nov | Island E worked example | in body | 144 | 39 | 31% | 0/0 |
+| 6 Nov | What a builder knows | in body (card) | 106 | 14 | 8% | 0/0 |
+| 9 Nov | Calculator launch | in body (card) | 91 | 29 | 37% | 0/0 |
+| 9 Nov | Quay House (same day) | in body | 75 | 18 | 20% | 0/0 |
+| 10 Nov | PM fees | in body (card) | 205 | 115 | 74% | 0/0 |
+| 11 Nov | Design & build vs architect | first comment | 326 | 172 | 68% | 1/1 |
+| 12 Nov | Snagging checklist | first comment | 49 | 11 | 6% | 0/1 |
+| 13 Nov | Stalled build | first comment | 235 | 139 | 78% | 2/4 (incl. real reply from David Thurin) |
+| 14 Nov | How long to build (8h) | first comment | 86 | 32 | 33% | 1/1 |
+
+Takeaways (14 Nov): problem/decision hooks (stalled build, D&B vs architect, PM fees) reach 115–172 members, mostly out of network, top industry construction/architecture; "free download"/announcement-style posts stay in-network (11–29 reached). Engagement is still very low and no followers gained per post: end posts with a question to invite comments.
+
 ## Schedule
 
 | Date | Day | Topic | Comment link | Status |
