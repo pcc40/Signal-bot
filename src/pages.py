@@ -608,11 +608,11 @@ def partners():
                 f'<p>{esc(p["desc"])}</p><p class="small muted" translate="no">{esc(host)}</p></li>')
     cards = "".join(card(p) for p in C.PARTNERS)
     body = B.page_head(crumbs, "Partners", "Eastbridge works alongside independent firms whose services complement owner-side project management on villas in Dubai and Abu Dhabi.") + f'''
-<section class="section--tight"><div class="wrap split"><div><h2>Recommended on merit</h2></div><div class="prose">
+<section class="section--tight"><div class="wrap"><h2>Our partners</h2><ul class="partner-cards">{cards}</ul></div></section>
+<section class="section paper"><div class="wrap split"><div><h2>Recommended on merit</h2></div><div class="prose">
 <p>We neither pay nor accept referral fees, so every recommendation we make is on merit. You appoint and pay any firm listed here directly, and nothing passes between us and them. See our <a href="/independence/">independence pledge</a>.</p>
 <p>Firms interested in partnering with us can contact Philip at <a href="mailto:{C.EMAIL}">{C.EMAIL}</a> or through our <a href="/contact/">contact page</a>.</p>
 </div></div></section>
-<section class="section paper"><div class="wrap"><h2>Our partners</h2><ul class="partner-cards">{cards}</ul></div></section>
 {B.cta_band()}'''
     page_url = B.url("/partners/")
     schema = [{"@context": "https://schema.org", "@type": "WebPage", "@id": page_url + "#webpage", "url": page_url,
