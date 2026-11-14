@@ -47,22 +47,24 @@ Takeaways (14 Nov): problem/decision hooks (stalled build, D&B vs architect, PM 
 
 ## Schedule
 
+> Tracking (14 Nov): queued links now carry `?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily`. Post the link exactly as written. The LinkedIn app often strips the referrer, so without this Google Analytics files these visits under "direct" and we cannot see what LinkedIn brings. Use the same tag on any new link added to this queue.
+
 | Date | Day | Topic | Comment link | Status |
 |---|---|---|---|---|
 | 13 Nov | Fri | Stalled build: first ten days | Full guide: https://eastbridgestrategicpartners.com/insights/stalled-villa-project-dubai/ | Posted (link comment in; 225 impr. at ~1d) |
 | 14 Nov | Sat | How long to build a villa | Full guide: https://eastbridgestrategicpartners.com/insights/how-long-to-build-a-villa-dubai/ | Posted (link comment in; 41 impr. at 35m) |
-| 15 Nov | Sun | Plot checks before you pay | Full guide: https://eastbridgestrategicpartners.com/insights/buying-a-villa-plot-in-dubai-checks/ | Queued |
-| 16 Nov | Mon | Renovation mistakes | Full guide: https://eastbridgestrategicpartners.com/insights/villa-renovation-mistakes-dubai/ | Queued |
-| 17 Nov | Tue | Renovate or rebuild | Full guide: https://eastbridgestrategicpartners.com/insights/renovate-or-rebuild-villa-dubai/ | Queued |
-| 18 Nov | Wed | Building from the UK | Full guide: https://eastbridgestrategicpartners.com/insights/building-a-villa-in-dubai-from-the-uk/ | Queued |
-| 19 Nov | Thu | Calculator embed for agents | Calculator and embed code: https://eastbridgestrategicpartners.com/tools/villa-build-cost-calculator/ | Queued |
-| 20 Nov | Fri | Defects liability period | Full guide: https://eastbridgestrategicpartners.com/insights/defects-liability-period-uae/ | Queued |
-| 21 Nov | Sat | Kitchen & bathroom costs | Full guide: https://eastbridgestrategicpartners.com/insights/villa-kitchen-bathroom-renovation-cost-dubai/ | Queued |
-| 22 Nov | Sun | Choosing a contractor | Full guide: https://eastbridgestrategicpartners.com/insights/how-to-choose-a-villa-contractor-dubai/ | Queued |
-| 23 Nov | Mon | Owner's rep vs PM vs consultant | Full guide: https://eastbridgestrategicpartners.com/insights/owners-representative-vs-project-manager-vs-consultant/ | Queued |
-| 24 Nov | Tue | Which authority covers my villa | Full guide: https://eastbridgestrategicpartners.com/insights/which-dubai-authority-covers-my-villa/ | Queued |
-| 25 Nov | Wed | Contracts: variations and delays | Full guide: https://eastbridgestrategicpartners.com/insights/villa-construction-contracts-uae/ | Queued |
-| 26 Nov | Thu | Villa owner checklist | Free download: https://eastbridgestrategicpartners.com/guides/villa-owner-checklist/ | Queued |
+| 15 Nov | Sun | Plot checks before you pay | Full guide: https://eastbridgestrategicpartners.com/insights/buying-a-villa-plot-in-dubai-checks/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 16 Nov | Mon | Renovation mistakes | Full guide: https://eastbridgestrategicpartners.com/insights/villa-renovation-mistakes-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 17 Nov | Tue | Renovate or rebuild | Full guide: https://eastbridgestrategicpartners.com/insights/renovate-or-rebuild-villa-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 18 Nov | Wed | Building from the UK | Full guide: https://eastbridgestrategicpartners.com/insights/building-a-villa-in-dubai-from-the-uk/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 19 Nov | Thu | Calculator embed for agents | Calculator and embed code: https://eastbridgestrategicpartners.com/tools/villa-build-cost-calculator/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 20 Nov | Fri | Defects liability period | Full guide: https://eastbridgestrategicpartners.com/insights/defects-liability-period-uae/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 21 Nov | Sat | Kitchen & bathroom costs | Full guide: https://eastbridgestrategicpartners.com/insights/villa-kitchen-bathroom-renovation-cost-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 22 Nov | Sun | Choosing a contractor | Full guide: https://eastbridgestrategicpartners.com/insights/how-to-choose-a-villa-contractor-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 23 Nov | Mon | Owner's rep vs PM vs consultant | Full guide: https://eastbridgestrategicpartners.com/insights/owners-representative-vs-project-manager-vs-consultant/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 24 Nov | Tue | Which authority covers my villa | Full guide: https://eastbridgestrategicpartners.com/insights/which-dubai-authority-covers-my-villa/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 25 Nov | Wed | Contracts: variations and delays | Full guide: https://eastbridgestrategicpartners.com/insights/villa-construction-contracts-uae/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 26 Nov | Thu | Villa owner checklist | Free download: https://eastbridgestrategicpartners.com/guides/villa-owner-checklist/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 
 Do not use (Phil, 14 Nov): sourcing-materials-abroad ("fly around the world" post removed).
 
