@@ -386,6 +386,9 @@ def service_page(s):
 <section class="section paper"><div class="wrap"><h2>Related services</h2>{related}</div></section>
 {founder_uk_section("/services/" + s["slug"] + "/")}{B.cta_band(contact=contact_href("service", s["slug"]))}{B.wa_page_msgs(B.WA_TPL_SERVICE, WA_TOPIC[s["slug"]])}'''
     B.page(path, s["title"], s["description"], body, crumbs,
+           # The owner's representative page also carries the full ProfessionalService node, with the independence
+           # statement in its description and ethicsPolicy (AI-visibility gap P07, 15 November 2026).
+           ([B.org_schema()] if s["slug"] == "owners-representative" else []) +
            [B.service_schema(s, path, ban), B.faq_schema(s["faqs"])], og=B.og_image(ban))
 
 # ---------------------------------------------------------------- areas

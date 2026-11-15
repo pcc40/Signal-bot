@@ -205,7 +205,7 @@ SERVICES = [
   "short": "Choosing the team",
   "name": "Help choosing your consultant and contractor",
   "title": "Choosing a Villa Contractor in Dubai | Eastbridge",
-  "description": "Independent help choosing a villa consultant and contractor in Dubai: like-for-like bid comparison, reference checks and fair contract terms.",
+  "description": "Independent contractor quote review and help choosing a villa consultant and contractor in Dubai: like-for-like bid tables and fair contract terms.",
   "h1": "The right team, chosen on the right evidence",
   "lede": "The lowest price is rarely the lowest cost. We help you see the difference before you sign.",
   "image": "gooden-heane-01",
@@ -225,17 +225,22 @@ SERVICES = [
    "Contract terms that protect you without scaring good contractors away",
   ],
   # Contractor quote review (competitor brief 2.1; paid, within the Review range per decision D2).
-  "extra": """<h2 id="quote-review">Contractor quote review</h2>
-<p>Already holding a contractor's quote? Send it to us with the draft contract before you sign. Philip spent 21 years pricing quotes like these as the builder, at P Chapman Construction, so we read one the way the contractor wrote it: where the price leaves room, what it leaves out, and which lines are likely to come back as variations.</p>
+  "extra": """<h2 id="quote-review">Independent contractor quote review</h2>
+<p>Already holding one or more contractor quotes for your villa? Send them to us with the drawings and the draft contract before you sign. We review them for you alone: the contractor does not pay us, and we take no commission from any contractor. Philip spent 21 years pricing quotes like these as the builder, at P Chapman Construction, so we read one the way the contractor wrote it: where the price leaves room, what it leaves out, and which lines are likely to come back as variations.</p>
 <h3>What we look at</h3>
-<ul><li>Scope gaps: what the drawings and specification show that the quote does not price</li>
-<li>Provisional sums and allowances: how much of the price is still an estimate</li>
-<li>The payment schedule, and whether payments run ahead of the work</li>
-<li>The variation clause: how changes are priced, agreed and instructed</li>
-<li>Exclusions and the assumptions behind the price</li></ul>
+<ul><li>Whether every bid was priced on the same drawings, specification and scope</li>
+<li>A like-for-like bid table: arithmetic, preliminaries, each element of the work, and the adjustments needed to compare the totals fairly</li>
+<li>Scope gaps: what the drawings and specification show that the quote does not price</li>
+<li>Provisional sums and PC (prime cost) sums: how much of the price is still an estimate, and whether each allowance is realistic</li>
+<li>Exclusions, qualifications and the assumptions behind the price</li>
+<li>The programme, and whether it matches the preliminaries priced</li>
+<li>The payment schedule, advance payment, retention and variation clause, and whether payments run ahead of the work</li>
+<li>Red flags, such as a front-loaded payment schedule or allowances well below what you intend to buy</li></ul>
 <h3>You receive</h3>
-<ul><li>A written report, with the questions to put to the contractor before you sign</li></ul>
-<p>""" + _fee("review", "Priced within our Review range, {fee}, and agreed in writing before we start. ", "Quoted in writing before we start. ") + """The report is a commercial review, not legal advice: for the contract's legal effect, take advice from a UAE-qualified lawyer. <a href="/fees/#quote-review">How the review is charged</a>.</p>""",
+<ul><li>A written report with the like-for-like bid table and the adjustments we made</li>
+<li>The risks in each quote, with their likely cost effect</li>
+<li>The questions to put to each contractor before you sign, and our recommendation with reasons. You choose and appoint the contractor directly.</li></ul>
+<p>""" + _fee("review", "Priced within our Review range, {fee}, and agreed in writing before we start. ", "Quoted in writing before we start. ") + """The report is a commercial review, not legal advice: for the contract's legal effect, take advice from a UAE-qualified lawyer. <a href="/fees/#quote-review">How the review is charged</a>. Read <a href="/insights/contractor-quote-review-villa-dubai/">how an independent quote review works</a>, step by step.</p>""",
   "builder_view": "When we tendered, we could tell within ten minutes whether a client's team would run the job well: clear drawings, a fair contract, sensible payment terms. Good contractors choose their clients too. A well-prepared owner gets better prices from better builders.",
   "faqs": [
    ("Can you review a contractor's quote before I sign?", "Yes. Send us the quote and the draft contract, and we review the scope gaps, provisional sums, payment schedule, variation clause and exclusions, with a written report and the questions to put to the contractor. " + _fee("review", "It is priced within our Review range, {fee}. ", "It is quoted in writing before we start. ") + "See <a href=\"/fees/#quote-review\">how the review is charged</a>."),

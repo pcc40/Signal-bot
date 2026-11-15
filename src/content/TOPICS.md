@@ -46,7 +46,7 @@
 - [ ] renovating-mortgaged-villa-dubai | Renovating a mortgaged villa in Dubai | renovate mortgaged villa dubai bank noc | bank NOC; verify with a lender or primary source first
 - [ ] villa-car-lift-basement-garage | Car lifts and basement garages in a Dubai villa | villa car lift dubai | from the builder's side; pair with villa-basement-construction-dubai; any worked example labelled hypothetical
 - [ ] villa-solar-pv-dubai | Solar panels on a Dubai villa: Shams Dubai and DEWA | villa solar panels dubai | Shams Dubai and DEWA connection steps from primary sources
-- [ ] bill-of-quantities-villa | Bills of quantities on a villa: what they are and whether you need one | bill of quantities villa | how a BOQ makes bids comparable
+- [x] bill-of-quantities-villa | Bills of quantities on a villa: what they are and whether you need one | bill of quantities villa | how a BOQ makes bids comparable (published 15 Nov 2026 as contractor-quote-review-villa-dubai, the independent quote review angle; P34/P36)
 - [ ] contract-notices-time-bars-villa | Notices and time bars in villa contracts | construction notice time bar uae | the letter that keeps or loses a claim; take legal advice
 - [ ] who-can-instruct-your-contractor | Who can instruct your contractor? | who can instruct contractor construction | limits of authority in plain English
 - [ ] review-and-comment-vs-approve-design | Review and comment versus approving a design | review and comment design construction | why the wording matters to an owner

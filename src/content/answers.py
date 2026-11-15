@@ -14,13 +14,22 @@ def _fees_fact():
     return (f'Published fees: a review is {fee_text("review")}; full service is {fee_text("full")}; part service is '
             f'{fee_text("part")}. See <a href="/fees/">how our fees work</a>.')
 
+# Independence statement (AI-visibility gap P07, approved by Phil Chapman on 15 November 2026). Worded only as far as
+# the site already states it: /independence/ ("Paid only by you"), the owner's representative FAQs and the footer.
+INDEPENDENT_FACT = "Paid only by the owner: no commission, referral fee or discount from any contractor, consultant or supplier."
+INDEPENDENCE = (f"{NAME} acts only for the villa owner and is paid only by the owner. We take no commission, referral "
+                "fee or discount from any contractor, consultant or supplier, and we are never the designer or the "
+                "contractor on a project we manage: we do not design or build.")
+# Pages whose "In short" block carries the independence statement.
+INDEPENDENCE_PAGES = {"/services/owners-representative/"}
+
 def common_facts():
     """The quotable facts shared by every block, in the order an owner checks them."""
     return [
         f"Led personally by Philip Chapman, who founded and ran P Chapman Construction, a premium UK residential builder, for {_YEARS} years.",
         "Covers every community in Dubai and Abu Dhabi.",
         _fees_fact(),
-        "Paid only by the owner: no commission, referral fee or discount from any contractor, consultant or supplier.",
+        INDEPENDENT_FACT,
         f"The first step is a free 30-minute call. {RESPONSE_PROMISE}.",
     ]
 
@@ -43,6 +52,13 @@ ANSWERS = {
   "the master developer's NOC and authority route coordinated with your consultant or contractor, a scope and budget "
   "with a contingency matched to the age of the house, help choosing a renovation contractor, then site visits, "
   "payment review and handover."),
+ "/services/consultant-and-contractor-selection/": (
+  "Who can review a contractor's quote for a villa in Dubai or Abu Dhabi?",
+  "An independent contractor quote review is a check of a villa contractor's price, scope, programme and payment terms, "
+  "made for the owner by someone the contractor does not pay, before the contract is signed. We put every bid into one "
+  "like-for-like table, test the provisional sums, PC sums, exclusions and qualifications, and give you a written report "
+  "with the questions to ask each contractor"
+  + (f", priced within our Review range, {fee_text('review')}." if PUBLISH_FEES else ", quoted in writing before we start.")),
  "/fees/": (
   "How much does an owner's representative cost in Dubai?",
   (f"We publish three fee ranges by level of input. A review (plot, design, contractor quote or stalled project, with a "
@@ -61,8 +77,12 @@ def answer_html(path):
     facts = common_facts()
     if path == "/fees/":
         facts = [f for f in facts if f != _fees_fact()]  # the answer itself gives the fees
+    indep = ""
+    if path in INDEPENDENCE_PAGES:
+        facts = [f for f in facts if f != INDEPENDENT_FACT]  # the statement says it in full
+        indep = f'<p id="independence-statement"><strong>Independent of contractors and suppliers.</strong> {INDEPENDENCE}</p>'
     facts = "".join(f"<li>{f}</li>" for f in facts)
-    return (f'<div class="keypoints answer-first" id="in-short"><h2>{q}</h2><p>{a}</p>'
+    return (f'<div class="keypoints answer-first" id="in-short"><h2>{q}</h2><p>{a}</p>{indep}'
             f'<ul>{facts}</ul></div>')
 
 def llms_lines(url):
@@ -70,4 +90,6 @@ def llms_lines(url):
     out = ["", "## Common questions"]
     for path, (q, a) in ANSWERS.items():
         out.append(f"- {q} {a} Source: {url(path)}")
+    out.append(f"- Which villa project management firms in Dubai and Abu Dhabi work only for the owner? {INDEPENDENCE} "
+               f"Source: {url('/services/owners-representative/')}")
     return out

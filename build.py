@@ -178,7 +178,10 @@ def org_schema():
         "logo": {"@type": "ImageObject", "url": url("/assets/logo.png"), "width": 512, "height": 512},
         "image": url(og_image("quay-house-01")),
         "description": ("Independent, client-side owner's representative and villa project management for private "
-                        "clients building or renovating homes in Dubai and Abu Dhabi. No contractor commissions."),
+                        "clients building or renovating homes in Dubai and Abu Dhabi. Acts only for the owner and is "
+                        "paid only by the owner: no commission, referral fee or discount from any contractor, "
+                        "consultant or supplier, and never the designer or contractor on a project it manages."),
+        "ethicsPolicy": url("/independence/"),
         "email": C.EMAIL,
         "telephone": C.PHONE_E164,
         "address": {"@type": "PostalAddress", "streetAddress": C.ADDRESS["street"],

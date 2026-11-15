@@ -102,7 +102,7 @@ The mistake is to book the contractor's start date first and hope the approvals 
 
 Three quotes for the same renovation can differ widely, and the cheapest is rarely the cheapest outcome. The differences usually sit in what each contractor has left out: different allowances for kitchens and finishes, provisional sums set at different levels, preliminaries priced differently, and exclusions buried at the back.
 
-Before comparing totals, put every quote onto the same basis: the same scope, the same allowances, the same treatment of provisional sums and the same exclusions. Our guide on [how to choose a villa contractor](/insights/how-to-choose-a-villa-contractor-dubai/) covers the checks, and a [contractor quote review](/services/consultant-and-contractor-selection/#quote-review) does it for you before you sign.
+Before comparing totals, put every quote onto the same basis: the same scope, the same allowances, the same treatment of provisional sums and the same exclusions. Our guide on [how to choose a villa contractor](/insights/how-to-choose-a-villa-contractor-dubai/) covers the checks, and a [contractor quote review](/services/consultant-and-contractor-selection/#quote-review) does it for you before you sign: see [how an independent quote review works](/insights/contractor-quote-review-villa-dubai/).
 
 ## Mistake 6: paying ahead of the work
 

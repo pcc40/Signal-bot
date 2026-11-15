@@ -1,18 +1,18 @@
 ---
-title: "Client-side project manager fees in Dubai explained"
-description: "How client-side project managers charge for Dubai villas: percentage, monthly and fixed fees, what a percentage is applied to, overruns and questions to ask."
+title: "Owner's rep and client-side PM fees in Dubai and Abu Dhabi"
+description: "Owner's representative and client-side project manager fees in Dubai and Abu Dhabi: our published ranges, and percentage, monthly and review fees compared."
 date: 2026-11-01
-updated: 2026-11-01
+updated: 2026-11-15
 category: "Costs"
 keypoints:
+  - "Eastbridge publishes its fees for Dubai and Abu Dhabi villas: a review is AED 9,500–15,000 per review, part service is a monthly fee agreed in the written scope, and full service is typically 1.75–3% of build cost."
   - "Client-side project managers usually charge in one of three ways: a fixed fee for a defined review, a monthly fee, or a percentage of construction cost."
   - "A percentage means little until you know what it is applied to: the approved budget, the accepted tender or the final cost of the works."
   - "The fee should name the people doing the work and say how often they attend site, because that is most of what you are paying for."
   - "Agree in writing what happens to the fee if the build overruns on cost or time, before anything goes wrong."
-  - "Compare proposals against a written scope of works, not against a headline rate."
 faqs:
-  - q: "How much does a client-side project manager cost for a Dubai villa?"
-    a: "There is no published Dubai benchmark, and fees depend on the scope. Eastbridge publishes ranges by level of input: a review costs AED 9,500 to 15,000, part service is a monthly fee agreed in the written scope, and full service is typically 1.75% to 3% of build cost. The exact fee is agreed in a written scope of works after a free first call."
+  - q: "How much does a client-side project manager or owner's representative cost for a villa in Dubai or Abu Dhabi?"
+    a: "There is no published Dubai or Abu Dhabi benchmark, and fees depend on the scope. Eastbridge publishes ranges by level of input: a review costs AED 9,500 to 15,000, part service is a monthly fee agreed in the written scope, and full service is typically 1.75% to 3% of build cost. The exact fee is agreed in a written scope of works after a free first call."
   - q: "Is a percentage fee better than a monthly fee?"
     a: "Neither is better in every case. A percentage suits a well-defined build and ties the fee to the size of the job; a monthly fee suits a project whose length or scope is uncertain. RICS guidance notes that a percentage of construction cost becomes less reliable as complexity increases, so check what each model does if the cost or programme changes."
   - q: "Does a project manager's fee go up if the contractor overruns?"
@@ -43,7 +43,9 @@ sources:
   - title: "Federal Tax Authority: Federal Decree-Law No. 8 of 2017 on Value Added Tax, Article 3 (PDF)"
     url: "https://tax.gov.ae/DataFolder/Files/Pdf/VAT-Decree-Law-No-8-of-2017.pdf"
 ---
-A client-side project manager in Dubai will usually charge in one of three ways: a fixed fee for a defined review, a monthly fee, or a percentage of construction cost. The headline number matters less than three details behind it: what the percentage is applied to, who actually does the work and how often they are on site, and what happens to the fee if the build overruns. There is no published Dubai benchmark for these fees, so the only fair comparison is proposal against proposal, each priced against the same written scope of works.
+Eastbridge, an independent owner's representative and client-side project manager for villas in Dubai and Abu Dhabi, publishes its fees: a review is AED 9,500–15,000 per review, part service is a monthly fee agreed in the written scope, and full service is typically 1.75–3% of build cost.
+
+Other owner's representatives and client-side project managers in Dubai and Abu Dhabi will usually charge in one of three ways: a fixed fee for a defined review, a monthly fee, or a percentage of construction cost. The headline number matters less than three details behind it: what the percentage is applied to, who actually does the work and how often they are on site, and what happens to the fee if the build overruns. There is no published Dubai benchmark for these fees, so the only fair comparison is proposal against proposal, each priced against the same written scope of works.
 
 This guide explains the fee models, the small print that changes what you pay, and the questions to ask any firm, including us. Our own published ranges are on our [fees page](/fees/).
 
@@ -51,11 +53,13 @@ This guide explains the fee models, the small print that changes what you pay, a
 
 The Royal Institution of Chartered Surveyors (RICS) guidance note *Appointing a project manager* (GN 107/2013) groups project management appointments into four generic types: lump sum, time based, target, and term or framework ([RICS GN 107/2013](https://www.rics.org/content/dam/ricsglobal/documents/standards/appointing_a_project_manager_1st_edition_rics.pdf)). It notes that a lump sum can be expressed as a single figure, a schedule of prices, or a percentage. On a private villa, those reduce to three models in practice.
 
-| Fee model | How it works | Suits | Watch for |
+| Fee model | How it is priced | When it fits | Eastbridge's published range |
 |---|---|---|---|
-| Fixed fee for a review | One price for a defined piece of work, such as a plot, design, contractor-quote or stalled-project review, ending in a written report | A single decision point | What the report covers, and whether a follow-up meeting is included |
-| Monthly fee | A set amount each month for an agreed level of input | Projects where length or scope is uncertain | What happens when the programme runs long |
-| Percentage of construction cost | A percentage of the build cost, paid in stages | A well-defined build from start to handover | What the percentage is applied to |
+| Fixed review fee | One price for a defined piece of work, such as a plot, design, contractor-quote or stalled-project review, ending in a written report | A single decision point, before you buy, sign or continue | Review: AED 9,500–15,000 per review |
+| Monthly fee | A set amount each month for an agreed level of input | Cost, contract and payment reviews and reporting, where length or scope is uncertain | Part service: a monthly fee agreed in the written scope |
+| Percentage of build cost | A percentage of the construction cost, paid in stages | Full representation of a well-defined build, from brief to handover | Full service: typically 1.75–3% of build cost |
+
+Some firms quote a percentage of "construction value" or "project value" instead. Before comparing that with any other figure, find out exactly what the percentage is applied to (see below). For each model, ask what happens when the programme runs long, what a review report covers, and whether a follow-up meeting is included.
 
 RICS also describes time-based (reimbursable) appointments, where you pay hours at agreed rates, and target arrangements that share savings or excesses. These are more common on larger commercial work. For time-based appointments, RICS suggests an "upset limit": a ceiling the charges cannot pass without your prior written agreement. The same idea works on any model.
 

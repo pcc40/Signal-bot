@@ -23,6 +23,7 @@ TOPIC = {
     "how-long-to-build-a-villa-dubai": ("cost-and-programme-control", "dubai-islands"),
     "how-to-build-a-villa-in-dubai": ("villa-construction-project-management", "dubai-islands"),
     "how-to-choose-a-villa-contractor-dubai": ("consultant-and-contractor-selection", "emirates-hills"),
+    "contractor-quote-review-villa-dubai": ("consultant-and-contractor-selection", "emirates-hills"),
     "nakheel-noc-villa-renovation": ("villa-renovation-project-management", "palm-jumeirah"),
     "owners-representative-vs-project-manager-vs-consultant": ("owners-representative", "palm-jumeirah"),
     "palm-jumeirah-villa-renovation": ("villa-renovation-project-management", "palm-jumeirah"),
