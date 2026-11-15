@@ -102,7 +102,7 @@
 # Competitor guide gap (15 Nov 2026: topics the ten ranking competitors cover and we did not). Publish these ahead of the older backlog.
 - [x] dubai-municipality-villa-over-design-warning | Dubai Municipality's villa over-design warning explained | dubai municipality villa design cost warnings | Search Console query, position 58
 - [x] changing-villa-layout-dubai-approvals | Changing a villa's layout in Dubai: what needs approval | перепланировка виллы дубай, remove wall villa dubai | Algedra "renovating without moving walls"; Russian query position 60
-- [ ] villa-renovation-abu-dhabi | Renovating a villa in Abu Dhabi: approvals, cost and process | villa renovation abu dhabi | Algedra has guides for Abu Dhabi, Khalifa City, Saadiyat; we have none for renovation
+- [x] villa-renovation-abu-dhabi | Renovating a villa in Abu Dhabi: approvals, cost and process | villa renovation abu dhabi | Algedra has guides for Abu Dhabi, Khalifa City, Saadiyat; we have none for renovation
 - [ ] villa-fit-out-timeline-dubai | How long does a villa fit-out take in Dubai? | how long villa fit out takes | Algedra ranks for build-time searches with this
 - [ ] hidden-costs-villa-renovation-dubai | Hidden costs in a Dubai villa renovation, and how cheap quotes grow | renovation hidden costs dubai, cheap fit out quote | Rady Interior has two guides
 - [ ] villa-mep-explained-owners | MEP in a Dubai villa explained for owners | MEP villa renovation uae | Tanmu "hidden importance of MEP"

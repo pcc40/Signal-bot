@@ -139,6 +139,8 @@ Usually yes, but the route is lighter than a new build. Since August 2025, DMT h
 
 That is convenient, and it also changes who holds the paperwork. If your contractor obtains the permit, make sure the scope in the permit matches the scope you are paying for, and that you receive copies. In a master community, check the developer's own requirements as well.
 
+Our guide to [renovating a villa in Abu Dhabi](/insights/villa-renovation-abu-dhabi/) sets out which renovations fit the minor works route and the order to do things in.
+
 ## Can a foreign owner build a villa in Abu Dhabi?
 
 Foreign nationals can own property in designated investment zones in Abu Dhabi ([UAE Government portal](https://u.ae/en/information-and-services/moving-to-the-uae/expatriates-buying-a-property-in-the-uae)). Confirm the ownership position for your specific plot with a UAE-qualified lawyer before you buy; this guide is not legal advice.

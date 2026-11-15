@@ -124,6 +124,8 @@ Handover is the last point at which you have real leverage. Test the air-conditi
 
 If the renovation involves moving or removing walls, read our guide to [changing a villa's layout](/insights/changing-villa-layout-dubai-approvals/) and what needs approval.
 
+Renovating in Abu Dhabi instead? The rules and authorities are different: see [renovating a villa in Abu Dhabi](/insights/villa-renovation-abu-dhabi/).
+
 ## How Eastbridge can help
 
 We act for the owner from the first renovate-or-rebuild question to handover, alongside your DM-registered consultant, who prepares and submits the NOC and permit applications, and the contractor you appoint. We arrange the condition review, set the scope, budget and programme, help you compare bids like-for-like and choose, and report on progress and payments in plain English; we never instruct the contractor or approve a payment without your written approval. See our [villa renovation project management](/services/villa-renovation-project-management/) service, or [get in touch](/contact/) to talk through your villa.
