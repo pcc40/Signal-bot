@@ -21,17 +21,6 @@ def credit_of(base):
     return f'{p["name"]}, {p["place"]}' + (f' · photograph {p["photo"]}' if p["photo"] else "")
 
 # ---------------------------------------------------------------- shared components
-def creds_band():
-    items = [("21 years", "building premium homes as P Chapman Construction"),
-             ("RIBA South West Award 2016", "Owers House, built by P Chapman Construction"),
-             ("LABC South West awards", "2018 winner and 2020 Highly Commended, for houses the company built"),
-             ("Grand Designs", "Owers House, built by P Chapman Construction, featured on Channel 4")]
-    # Awards belong to the houses and their project teams; linkable evidence is at /about/#recognition.
-    linked = {"LABC South West awards"}
-    return '<section class="creds" aria-label="Founder track record"><div class="wrap">' + "".join(
-        f"<div><b>{esc(a)}</b><span>{esc(b)}" + (' <a href="/about/#recognition">Evidence</a>' if a in linked else "")
-        + "</span></div>" for a, b in items) + "</div></section>"
-
 def triad_svg():
     nodes = [  # x, y, title, line2
         (120, 70, "Architect and consultant", "Design, approvals, statutory duties"),
@@ -92,36 +81,72 @@ def svc_cards(items, imgs):
         f'<h3>{esc(s["short"])}</h3><p>{esc(s["lede"])}</p></a>' for s in items) + "</div>"
 
 # ---------------------------------------------------------------- home
-# Home hero slideshow (brief 2026-11-05): three UAE communities first, then two houses P Chapman Construction built.
-# Each slide has its own caption in .hero-meta, shown with its slide: UAE images as the community with the image
-# credit, UK houses as P Chapman Construction's work. site.css times the cross-fade for five slides.
-HERO_SLIDES = ["uae-palm-jumeirah-01", "uae-dubai-islands-01", "uae-emirates-hills-01", "quay-house-01", "sea-glass-house-01"]
-# "Built by our founder in the UK" strip on the home page, linking to /work/
-FOUNDER_UK_STRIP = ["owers-house-01", "the-lookout-02", "saqqara-01"]
-
-def slide_caption(base):
-    if B.is_uae(base):
-        return f'{B.img_meta(base)["name"]}. {B.img_credit(base)}.'
-    p = proj_of(base)
-    return f'{p["name"]}, {p["place"]}. Built by P Chapman Construction, founded by Philip Chapman.'
+# Conversion rebuild (approved by Phil Chapman, 15 November 2026). The first screen is ONE static photograph of a
+# house P Chapman Construction built (no slideshow), captioned as UK work. Developer images of UAE communities sit
+# further down the page ("Where we work") and on the area pages.
+HERO_IMG = "quay-house-01"
+HERO_SLIDES = [HERO_IMG]            # kept for the preload in B.page()
+HERO_CAPTION = "Quay House, Cornwall. Built by our founder's UK company."
+QUOTE_REVIEW_URL = "/services/consultant-and-contractor-selection/#quote-review"
+# Three more houses under the Owers House feature, linking to /work/
+FOUNDER_UK_STRIP = ["sea-glass-house-01", "the-lookout-02", "saqqara-01"]
+# UAE communities shown lower on the home page, each with its developer credit
+HOME_AREAS = ["palm-jumeirah", "emirates-hills", "dubai-islands"]
+TIMES_URL = "https://www.thetimes.co.uk/article/wings-of-desire-9cgnbh3fg"
+PROOF_QUOTE = next(q for q in TESTIMONIALS if q[2].startswith("Blue Seas"))
 
 LABC_2020_URL = "https://www.labc.co.uk/news/labc-south-west-winners-amp-highly-commended-2020"
 LABC_2018_URL = "https://www.acornpropertygroup.org/old-station-masters-house-wins-labc-award/"
 
-def home(posts, post_cards, stages_html, svc_img):
-    """Order (review brief 2026-10-31, section 5): proposition and contact; founder evidence; three routes;
-    one real UK project; how an appointment starts, with independence; owner questions and final contact.
-    Detail lives on its own pages. posts, post_cards, stages_html and svc_img stay in the signature for pages.home()."""
+def proof_strip():
+    """Directly under the hero: the founder's record in three facts, one client quote and Philip's face and name.
+    Every fact is already stated on /about/. The house photograph is P Chapman Construction's own work (no
+    television still, no broadcaster's logo). UK work is labelled once, in the closing line."""
+    q, who, where = PROOF_QUOTE
+    return f"""<section class="proof" aria-labelledby="proof-h"><div class="wrap">
+<h2 class="sr" id="proof-h">Our founder's record</h2>
+<div class="proof-grid">
+<a class="proof-lead" href="/work/owers-house/#case-study">{pic("owers-house-01", "Owers House, Feock, Cornwall: a dark timber living wing cantilevered over a planted slope", "(max-width:900px) 100vw, 42vw")}
+<span class="proof-lead__txt"><b>Built the house featured on Channel 4's Grand Designs</b><span>Owers House, Cornwall. RIBA South West Award 2016.</span></span></a>
+<div class="proof-side">
+<ul class="proof-facts"><li><b>21 years</b><span>running a premium UK residential builder</span></li>
+<li><b>The Times</b><span>Owers House was <a href="{TIMES_URL}" rel="noopener">reported in The Times</a></span></li>
+<li class="proof-who"><img src="/assets/img/philip-chapman-thumb.webp" width="56" height="56" alt="Philip Chapman" loading="lazy" decoding="async"><b>Philip Chapman</b><span>Founding Partner. He leads every appointment personally.</span></li></ul>
+<figure class="proof-quote"><blockquote>&ldquo;{esc(q)}&rdquo;</blockquote><figcaption>{esc(who)}, {esc(where)}<br><span class="muted">Client of P Chapman Construction</span></figcaption></figure>
+<p class="proof-ref">References from past UK clients on request.</p>
+</div></div>
+<p class="proof-note small muted">UK work by P Chapman Construction, the company Philip Chapman founded and led for 21 years.</p>
+</div></section>"""
+
+def home_areas():
+    """UAE imagery, lower on the home page: three communities, each image with its developer credit."""
+    from content.areas import BY_SLUG as AREA
     import pages
-    slides = "".join(f'<figure>{pic(b, B.img_alt(b) if B.is_uae(b) else "", "100vw", eager=(i == 0))}</figure>' for i, b in enumerate(HERO_SLIDES))
-    slide_caps = "".join(f"<p>{esc(slide_caption(b))}</p>" for b in HERO_SLIDES)
+    cards = ""
+    for slug in HOME_AREAS:
+        a = AREA[slug]
+        img = pages.area_images(slug)[0]
+        cards += (f'<a class="svc-card" href="/areas/{slug}/"><figure>{pic(img, B.img_alt(img), "(max-width:600px) 100vw, (max-width:980px) 50vw, 33vw")}{B.fig_credit(img)}</figure>'
+                  f'<h3>{esc(a["name"])}</h3><p>{esc(a["tag"])}</p></a>')
+    return f"""<section class="section stone" aria-labelledby="areas-h"><div class="wrap">
+<div class="head-row"><div><span class="kicker">Where we work</span><h2 id="areas-h">Every community in Dubai and Abu Dhabi</h2></div>
+<p class="muted">Each community has its own master developer, its own rules and its own approvals route. Our area guides set out what to expect before you buy, build or renovate. <a class="link" href="/areas/">All areas</a></p></div>
+<div class="svc-grid">{cards}</div>
+<p class="strip-note small muted">{esc(pages.UAE_STRIP_NOTE)}</p>
+</div></section>"""
+
+def home(posts, post_cards, stages_html, svc_img):
+    """Order (conversion rebuild, 15 November 2026): proposition and two ways in; proof (the founder's record, one
+    client quote, Philip's face); who leads and why a UK builder's record carries over; three routes; UK houses;
+    UAE communities; how it starts; owner questions and final contact. Detail lives on its own pages.
+    posts, post_cards, stages_html and svc_img stay in the signature for pages.home()."""
+    import pages
     doors = [
      ("villa-construction-project-management", "Build a new villa", "From the plot and the first budget to handover, alongside your consultant and contractor.", "sea-glass-house-02"),
      ("villa-renovation-project-management", "Renovate or extend", "Surveys, the approvals route, budget, contractor and handover for an existing villa.", "menwinnion-01"),
      ("stalled-project-rescue", "A project in difficulty", "Over budget, behind programme or in dispute. We establish where it stands and set out the options to complete.", "polgreen-manor-01"),
     ]
     door_html = "".join(f'<a class="door" href="/services/{s}/">{pic(img, "", "(max-width:900px) 100vw, 33vw")}<div><h3>{esc(t)}</h3><p>{esc(d)}</p><span class="go">How we help</span></div></a>' for s, t, d, img in doors)
-    owers = PROJ["owers-house"]
     faqs = [
      ("What does a client-side project manager do?", "We manage your villa build or renovation from your side. We set the budget and programme with you, help you compare and choose the consultant and contractor you appoint, check the design against the budget, monitor cost, programme and quality, review payments and variations before you pay, and lead handover."),
      ("Why not leave it to the architect or the contractor?", "A properly appointed consultant has real duties for the design, approvals and statutory site inspections, and the contractor is responsible for building to the contract. Each also has its own commercial position, and neither is usually appointed to coordinate the whole project and test every price, payment and claim from your side. That independent coordination and commercial scrutiny is what we add. <a href=\"/why-a-client-side-project-manager/\">Why client-side matters</a>."),
@@ -136,58 +161,58 @@ def home(posts, post_cards, stages_html, svc_img):
                         f"We publish fee ranges by level of input. A review is {C.fee_text('review')}; part service is {C.fee_text('part')}; "
                         f"full service is {C.fee_text('full')}. The fee is agreed in a written scope of works after the free call. "
                         "See <a href=\"/fees/\">how fees work</a>."))
-    body = f'''
-<section class="hero" aria-labelledby="hero-h"><div class="slides">{slides}</div>
+    body = f"""
+<section class="hero hero--still" aria-labelledby="hero-h"><div class="slides slides--one"><figure>{pic(HERO_IMG, "Quay House, St Mawes, Cornwall: a curved timber and stone house with terraces, built by P Chapman Construction", "100vw", eager=True)}</figure></div>
 {B.hero_video_html()}<div class="wrap"><span class="kicker">Villa builds and renovations · Dubai and Abu Dhabi</span>
 <h1 id="hero-h">Building or renovating a villa? We manage it on your side.</h1>
 <p class="lede">New villa or renovation, in Dubai or Abu Dhabi. We don't build it: we work for you, alongside your consultant and contractor, checking every quote, payment and change before you commit. Led personally by Philip Chapman.</p>
-<div class="actions"><a class="btn" href="/contact/">{esc(B.CTA_LABEL)}</a><a class="btn btn--ghost" href="/approach/">How it works</a></div></div>
-<div class="hero-meta">{slide_caps}</div><span class="scroll-cue" aria-hidden="true"></span></section>
-{creds_band()}
-<section class="section" aria-labelledby="founder-h"><div class="wrap feature">
-<figure class="portrait">{pic("philip-chapman-01", "Philip Chapman, Founding Partner of Eastbridge Strategic Partners", "(max-width:900px) 100vw, 42vw", cls="reveal")}</figure>
-<div><span class="kicker">Who leads your project</span><h2 id="founder-h">Philip Chapman, Founding Partner</h2>
-<p>Philip founded P Chapman Construction and led it for 21 years, growing it into a premium UK contractor. Houses the company built have won a RIBA South West Award (Owers House, 2016, also featured on Channel 4's Grand Designs) and LABC Building Excellence Awards (<a href="{LABC_2018_URL}" rel="noopener">a 2018 win</a> and <a href="{LABC_2020_URL}" rel="noopener">a 2020 Highly Commended</a>).</p>
-<p class="muted">On the high-end houses P Chapman Construction built, he reviewed everything for the client, was on site every week and travelled with owners to choose their materials. He knows how a contractor prices a job, where variations come from and how delay claims are built. In Dubai and Abu Dhabi he puts that knowledge to work for the owner, fairly, and leads each Eastbridge appointment personally.</p>
+<div class="actions"><a class="btn" href="/contact/">{esc(B.CTA_LABEL)}</a><a class="btn btn--ghost" href="{QUOTE_REVIEW_URL}">Get a quote or contract reviewed</a></div>
+<p class="hero-cap">{esc(HERO_CAPTION)}</p></div>
+<span class="scroll-cue" aria-hidden="true"></span></section>
+{proof_strip()}
+<section class="section founder-home" aria-labelledby="founder-h"><div class="wrap feature">
+<figure class="portrait">{pic("philip-chapman-01", "Philip Chapman, Founding Partner of Eastbridge Strategic Partners", "(max-width:900px) 100vw, 42vw", cls="reveal")}<figcaption>Philip Chapman, Founding Partner. Based in Dubai.</figcaption></figure>
+<div><span class="kicker">Who leads your project</span><h2 id="founder-h">New to Dubai. Not new to building.</h2>
+<p>For 21 years Philip Chapman was the builder on the other side of the table. In the UK he priced the jobs, wrote the variations and submitted the payment applications, so he knows where budgets leak and what contractors hope owners won't check.</p>
+<p>That carries over, because contracts, money and programme work the same way on any site. On your villa he reads a quote, a contract or a payment application the way the person who wrote it would.</p>
+<p>What is local stays with the people licensed for it. Your registered UAE consultant handles the design, the authority submissions and the statutory inspections, and we work alongside them: <a href="/approach/#uae-appointments">how an appointment works in the UAE</a>.</p>
+<p>Eastbridge is licensed in Dubai (Meydan Free Zone, licence {esc(C.LICENCE_NO)}), and Philip is based here. He leads every appointment personally, and works with three independent, UAE-based project managers who attend site.</p>
 <p><a class="link" href="/about/">About Philip and Eastbridge</a></p></div>
 </div></section>
 
 <section class="section stone" aria-labelledby="what-h"><div class="wrap">
 <div class="head-row"><h2 id="what-h">Villa builds, renovations and rescues</h2>
-<p class="lede">We don't design or build. Your registered consultant designs, your contractor builds, and we work for you alongside both, keeping cost, programme and quality under your control. The trade calls this a client-side project manager, or owner's representative.</p></div>
+<p class="lede">Your registered consultant designs, your contractor builds, and we work for you alongside both, keeping cost, programme and quality under your control. The trade calls this a client-side project manager, or owner's representative.</p></div>
 <div class="doors">{door_html}</div>
 <p class="muted" style="margin-top:30px;max-width:72ch">Through construction we are on site regularly, at the frequency agreed in your scope. With the full service we also travel with you to source stone, joinery, lighting and fittings, and check what arrives against what you chose: see <a href="/services/materials-and-specialist-sourcing/">materials and specialist sourcing</a>.</p>
 <p style="margin-top:14px"><a class="link" href="/services/">All services</a> &nbsp; <a class="link" href="/approach/">How a project runs</a></p>
 </div></section>
 
-<section class="section" aria-labelledby="work-h"><div class="wrap feature">
+<section class="section" aria-labelledby="work-h"><div class="wrap">
+<div class="feature">
 <figure>{pic("owers-house-02", "Owers House, Feock: dark timber living wing cantilevered over the falling site above the Fal estuary", "(max-width:900px) 100vw, 58vw", cls="reveal")}<figcaption>{esc(credit_of("owers-house-02"))}.</figcaption></figure>
-<div><span class="kicker">UK project · Main contractor</span><h2 id="work-h">Owers House, above the Fal estuary</h2>
-<p class="muted">A steep site, a Grade II listed neighbour below and a living wing cantilevered over the falling ground. P Chapman Construction built it as main contractor. Completed in 2014, the house was featured on Channel 4's Grand Designs and won a RIBA South West Award in 2016. This was UK contracting work, not an Eastbridge appointment.</p>
+<div><span class="kicker">UK work by P Chapman Construction</span><h2 id="work-h">Owers House, above the Fal estuary</h2>
+<p class="muted">A steep site, a Grade II listed neighbour below and a living wing cantilevered over the falling ground. P Chapman Construction, the company Philip founded and led for 21 years, built it as main contractor. Completed in 2014, the house was featured on Channel 4's Grand Designs and won a RIBA South West Award in 2016.</p>
 <p><a class="btn" href="/work/owers-house/#case-study">Read the case study</a> &nbsp; <a class="link" href="/work/">See more of the work</a></p></div>
+</div>
+<div class="home-more-work">{pages.strip_html(FOUNDER_UK_STRIP)}</div>
 </div></section>
-
-<section class="section--tight" aria-labelledby="ukbuilt-h"><div class="wrap">
-<div class="head-row"><div><span class="kicker">Philip Chapman's record</span><h2 id="ukbuilt-h">Built by our founder in the UK</h2></div>
-<p class="muted">Houses built by P Chapman Construction, the company Philip founded and led for 21 years. UK contracting work, not Eastbridge appointments. <a class="link" href="/work/">See the work</a></p></div>
-{pages.strip_html(FOUNDER_UK_STRIP)}
-</div></section>
-
+{home_areas()}
 <section class="section--tight starts" aria-labelledby="starts-h"><div class="wrap">
 <div class="head-row"><div><span class="kicker">How it starts</span><h2 id="starts-h">From first call to appointment</h2></div>
 <p class="muted">You decide at each step whether to go on. <a class="link" href="/fees/">How fees work</a></p></div>
 {B.steps_html(B.start_steps())}
 <div class="split" style="margin-top:clamp(28px,3vw,44px)"><p><strong>Independent.</strong> You appoint and pay your consultant and contractor directly. We take no commission, referral fee or discount from anyone on your project. <a class="link" href="/independence/">Our independence pledge</a></p>
-<p class="muted">To see the method applied to a Dubai plot, read our <a href="{CASE_URL}">Island E worked example</a>. It is hypothetical, not a completed project.</p></div>
+<p class="muted">Already holding a contractor's quote or a draft contract? Send it to us before you sign, and we will tell you what a written review would cover. <a class="link" href="{QUOTE_REVIEW_URL}">Contractor quote review</a></p></div>
 </div></section>
 
 <section class="section--tight" aria-labelledby="hfaq-h"><div class="wrap split"><div><h2 id="hfaq-h">Questions owners ask</h2>
 <p class="muted" style="margin-top:1em"><a class="link" href="/faq/">More questions</a> &nbsp; <a class="link" href="/insights/">Insights</a> &nbsp; <a class="link" href="/guides/villa-owner-checklist/">Owner's checklist</a> &nbsp; <a class="link" href="/areas/">Where we work</a></p>
 <p class="muted small">{esc(C.COVERAGE)}</p></div>{B.faq_html(faqs)}</div></section>
-{B.cta_band("Tell us about the house you want to build.", image="sea-glass-house-08")}'''
+{B.cta_band("Tell us about the house you want to build.", image="sea-glass-house-08")}"""
     B.page("/", "Villa Build & Renovation Dubai | Managed on Your Side",
            "Building or renovating a villa in Dubai or Abu Dhabi? We manage it on the owner's side: budget, contractor, approvals and site. Led by Philip Chapman.",
-           body, schema=[B.faq_schema(faqs)], preload=f"/assets/img/{HERO_SLIDES[0]}-1280.webp", hero=True)
+           body, schema=[B.faq_schema(faqs)], preload=f"/assets/img/{HERO_IMG}-1280.webp", hero=True)
 
 # ---------------------------------------------------------------- why client-side
 MOMENTS = [
@@ -275,7 +300,7 @@ def uk_case_card():
     return f'''<section class="section"><div class="wrap feature">
 <figure>{pic("owers-house-02", "Owers House, Feock: dark timber living wing cantilevered over the falling site above the Fal estuary", "(max-width:900px) 100vw, 58vw")}<figcaption>{esc(credit_of("owers-house-02"))}.</figcaption></figure>
 <div><span class="kicker">UK project case study · Main contractor</span><h2>Owers House, Feock</h2>
-<p class="muted">A contemporary house above the Fal estuary, built by P Chapman Construction, the UK company Philip Chapman founded and led, and completed in 2014. The house was featured on Channel 4's Grand Designs and won a RIBA South West Award in 2016. This was UK contracting work, not an Eastbridge appointment.</p>
+<p class="muted">A contemporary house above the Fal estuary, built by P Chapman Construction, the UK company Philip Chapman founded and led, and completed in 2014. The house was featured on Channel 4's Grand Designs and won a RIBA South West Award in 2016.</p>
 <p><a class="btn" href="/work/owers-house/#case-study">Read the project case study</a></p></div></div></section>'''
 
 def case_hub():

@@ -2,7 +2,7 @@
 title: "How to choose a client-side project manager in Dubai"
 description: "How to choose a client-side project manager for a Dubai villa: independence, limits of authority, who attends site, reporting, fees, conflicts and red flags."
 date: 2026-11-05
-updated: 2026-11-05
+updated: 2026-11-15
 category: "Choosing a team"
 keypoints:
   - "Start with independence: ask who pays the firm, and whether it receives anything from the contractors, consultants or suppliers on your project."
@@ -101,7 +101,7 @@ Ask for these in writing:
 - How often someone attends site at each stage, and which meetings they attend.
 - Who attends the moments that matter: before concrete is poured, before walls and ceilings are closed, at commissioning and at the snagging walkround.
 
-At Eastbridge, our founder, Philip Chapman, leads every appointment personally, supported by a team of three project managers who attend site and provide cover. Site attendance is agreed in writing in the scope of each appointment.
+At Eastbridge, our founder, Philip Chapman, leads every appointment personally, supported by three independent, UAE-based project managers he works with, who attend site and provide cover. Site attendance is agreed in writing in the scope of each appointment.
 
 From the builder's side, we can tell you how this looks on the other side of the table. For 21 years we ran the contractor's site, and we knew within a month which client representatives would turn up unannounced and which would only read the monthly report. We prepared for the first kind. Questions asked on site, before something is covered up, change what gets built. Questions asked from a report change what gets argued about later.
 

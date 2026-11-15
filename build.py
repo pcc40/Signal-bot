@@ -82,8 +82,8 @@ def on_record_items():
     """The "On the record" credentials (competitor brief 1.4): used on /about/ and in the site-wide footer."""
     return [("Legal entity", esc(C.LEGAL)),
             ("Licence", esc(C.LICENCE)),
-            ("What we are", "A client-side project manager and owner's representative"),
-            ("What we are not", "A contractor, an engineering consultancy, a law firm or an estate agency"),
+            ("How we work", "As a client-side project manager and owner's representative, alongside your registered consultant and contractor"),
+            ("Where our role stops", "We are not a contractor, an engineering consultancy, a law firm or an estate agency"),
             ("How we are paid", "Only by the owner we represent"),
             # D8, approved by Phil Chapman on 15 November 2026
             ("Commissions", "We take no commission, referral fee or discount from any contractor, consultant or supplier.")]
@@ -320,6 +320,30 @@ def wa_page_msgs(tpl, topic):
 def wa_page_link(tpl, topic):
     return wa_link(tpl.replace("{topic}", topic))
 
+# Online booking (conversion rebuild, 15 Nov 2026). Empty until Phil supplies his Google Calendar booking link in
+# config.BOOKING_URL; while it is empty nothing is rendered and every page looks exactly as before.
+BOOKING_LABEL = "Pick a time for a free call"
+
+def booking_button(cls="btn", wrap=None):
+    """The "Pick a time for a free call" button, or "" when config.BOOKING_URL is empty.
+    wrap: an HTML string with {} where the button goes (so the wrapper also disappears when there is no link)."""
+    u = (getattr(C, "BOOKING_URL", "") or "").strip()
+    if not u:
+        return ""
+    # The label sits in its own <span> beside an icon, so it is one translation whatever the link is.
+    btn = f'<a class="{cls} booking-btn" href="{esc(u)}" rel="noopener">{CAL_ICON}<span>{esc(BOOKING_LABEL)}</span></a>'
+    return wrap.replace("{}", btn) if wrap else btn
+
+# Compact call to action placed part-way down area pages and articles (conversion rebuild, 15 Nov 2026).
+# The labels sit in their own <span> beside an icon so they are one translation each, whatever the page's links.
+WA_MSG_DOC = "Hello, I have a quote or contract I would like you to look at."
+
+def mid_cta(question, text, wa_href, call_href="/contact/"):
+    return (f'<aside class="mid-cta" aria-label="Ask Eastbridge"><div class="mid-cta__txt"><p class="mid-cta__q">{esc(question)}</p>'
+            f'<p class="mid-cta__t">{esc(text)}</p></div>'
+            f'<div class="mid-cta__act"><a class="btn btn--sm" href="{wa_href}" rel="noopener">{WA_ICON}<span>Send it on WhatsApp</span></a>'
+            f'<a class="mid-cta__call" href="{call_href}">{CALL_ICON}<span>Arrange a free call</span></a></div></aside>')
+
 def banner(crumbs, h1, lede=None, image="quay-house-01", credit=None, extra=""):
     l = f'<p class="lede">{lede}</p>' if lede else ""
     c = f'<span class="credit">{esc(credit)}</span>' if credit else ""
@@ -370,6 +394,8 @@ def how_it_starts():
 
 WA_ICON = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false">'
            '<path d="M20 11.6a8.2 8.2 0 0 1-12.2 7.2L4 20l1.3-3.7A8.2 8.2 0 1 1 20 11.6Z"/></svg>')
+CAL_ICON = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true" focusable="false">'
+            '<path d="M5 6h14a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1ZM4 10h16M8 3v5M16 3v5"/></svg>')
 CALL_ICON = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true" focusable="false">'
              '<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>')
 BRIEF_ICON = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true" focusable="false">'
@@ -416,7 +442,7 @@ def header(path):
 <nav class="nav" id="nav" aria-label="Main"><button class="menu-close" type="button" aria-label="Close menu">Close</button><ul>
 {a("Villa builds", "/services/villa-construction-project-management/")}{a("Renovations", "/services/villa-renovation-project-management/")}
 <li class="has-mega"><a href="/services/"{svc_cur}>Services</a>{mega}</li>
-{a("Case studies", "/case-studies/")}{a("Work", "/work/")}{a("Insights", "/insights/")}{a("About", "/about/")}
+<li><a href="/work/"{cur if path.startswith(("/work/", "/case-studies/")) else ""}>Work</a></li>{a("Fees", "/fees/")}{a("Insights", "/insights/")}{a("About", "/about/")}
 </ul><a class="btn" href="/contact/">{esc(CTA_SHORT)}</a></nav>
 </div></header>'''
 
@@ -437,7 +463,7 @@ def footer():
 <p>{esc(C.ADDRESS["street"])}<br>{esc(C.ADDRESS["locality"])}, {esc(C.ADDRESS["country_name"])}</p></div>
 <div><h3>Services</h3><ul>{svc}<li><a href="/services/">All services</a></li></ul></div>
 <div><h3>Where we work</h3><ul>{ar}<li><a href="/areas/">All areas</a></li></ul></div>
-<div><h3>Firm</h3><ul><li><a href="/why-a-client-side-project-manager/">Why client-side</a></li><li><a href="/case-studies/">Case studies</a></li><li><a href="/work/">Work</a></li><li><a href="/about/">About</a></li><li><a href="/approach/">How we work</a></li><li><a href="/independence/">Independence pledge</a></li>{'<li><a href="/partners/">Partners</a></li>' if C.PARTNERS else ""}<li><a href="/fees/">How fees work</a></li><li><a href="/tools/villa-build-cost-calculator/">Cost calculator</a></li><li><a href="/tools/renovate-or-rebuild/">Renovate or rebuild</a></li><li><a href="/tools/stage-payment-planner/">Stage payment planner</a></li><li><a href="/tools/delay-cost-estimator/">Delay cost estimator</a></li><li><a href="/insights/">Insights</a></li><li><a href="/guides/villa-owner-checklist/">Pre-construction checklist</a></li><li><a href="/guides/villa-snagging-checklist/">Snagging checklist</a></li><li><a href="/faq/">Questions</a></li><li><a href="/glossary/">Glossary</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+<div><h3>Firm</h3><ul><li><a href="/why-a-client-side-project-manager/">Why client-side</a></li><li><a href="/work/">Work</a></li><li><a href="/about/">About</a></li><li><a href="/approach/">How we work</a></li><li><a href="/independence/">Independence pledge</a></li>{'<li><a href="/partners/">Partners</a></li>' if C.PARTNERS else ""}<li><a href="/fees/">How fees work</a></li><li><a href="/tools/villa-build-cost-calculator/">Cost calculator</a></li><li><a href="/tools/renovate-or-rebuild/">Renovate or rebuild</a></li><li><a href="/tools/stage-payment-planner/">Stage payment planner</a></li><li><a href="/tools/delay-cost-estimator/">Delay cost estimator</a></li><li><a href="/insights/">Insights</a></li><li><a href="/guides/villa-owner-checklist/">Pre-construction checklist</a></li><li><a href="/guides/villa-snagging-checklist/">Snagging checklist</a></li><li><a href="/faq/">Questions</a></li><li><a href="/glossary/">Glossary</a></li><li><a href="/contact/">Contact</a></li></ul></div>
 </div>
 <section class="on-record" aria-labelledby="on-record-h"><h3 id="on-record-h">On the record</h3><dl>{"".join(f"<div><dt>{t}</dt><dd>{d}</dd></div>" for t, d in on_record_items())}</dl></section>
 <div class="legal"><span>© {year} {C.LEGAL}. {C.LICENCE}. Eastbridge acts as the client's project manager and representative. It is not a contractor and does not replace the registered consultant of record required by the authorities.</span>
@@ -509,6 +535,7 @@ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es
  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})}else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')})}
 var wm=document.getElementById('wa-msgs');if(wm){var wg=function(k){var e=wm.querySelector('[data-m="'+k+'"]');return e?e.textContent.trim():''},wtp=wg('tpl'),wt=wtp.split('{topic}').join(wtp===wg('tpl-en')?wg('topic-en'):wg('topic'));
  if(wt)document.querySelectorAll('a[href^="https://wa.me"]:not([data-wa-estimate])').forEach(function(a){a.href=a.href.split('?')[0]+'?text='+encodeURIComponent(wt)})}
+var od=function(){try{var t=location.hash.length>1&&document.getElementById(decodeURIComponent(location.hash.slice(1)));if(!t)return;var d=t.closest('details');if(d&&!d.open){d.open=true;t.scrollIntoView()}}catch(e){}};od();window.addEventListener('hashchange',od);
 if(location.hash==='#notes'){document.querySelectorAll('[data-thanks]').forEach(function(el){el.hidden=el.getAttribute('data-thanks')!=='notes'})}
 var fm=document.querySelector('form[data-enquiry]');
 if(fm){fm.setAttribute('novalidate','');var reveal=function(el){var d=el&&el.closest('details');if(d)d.open=true};
@@ -840,7 +867,7 @@ def llms_facts():
             "- What Eastbridge is: a client-side project manager and owner's representative, paid only by the owner it represents. What it is not: a contractor, an engineering consultancy, a law firm or an estate agency.",
             "- Working language: English",
             f"- Founder: {C.FOUNDER['name']}, who founded and led P Chapman Construction (UK premium residential contractor) for 21 years: {url('/about/#founder')}",
-            f"- Team: {C.FOUNDER['name']} leads every appointment personally, supported by a team of three project managers who attend site and provide cover when he is unavailable. Capacity is confirmed before an appointment is accepted.",
+            f"- Team: {C.FOUNDER['name']} leads every appointment personally, supported by three independent, UAE-based project managers he works with, who attend site and provide cover when he is unavailable. Capacity is confirmed before an appointment is accepted.",
             f"- Response: {C.RESPONSE_PROMISE} ({C.HOURS})",
             "- Portfolio: UK homes built by P Chapman Construction, the main contractor founded and led by Philip Chapman. Awards were made to the houses and their project teams, not to Philip personally or to Eastbridge: Owers House, built by P Chapman Construction and completed in 2014, was featured on Channel 4's Grand Designs and won a RIBA South West Award in 2016; The Old Station Master's House, Fowey, won Best Small New Housing Development in the LABC Building Excellence Awards South West 2018 (https://www.acornpropertygroup.org/old-station-masters-house-wins-labc-award/); Polgreen Manor was Highly Commended, Best Extension or Alteration to an Existing Dwelling, LABC South West 2020 (https://www.labc.co.uk/news/labc-south-west-winners-amp-highly-commended-2020)",
             f"- UK project case study: {url('/work/owers-house/')} (Owers House, built by P Chapman Construction as main contractor, completed in 2014; featured on Channel 4's Grand Designs; RIBA South West Award 2016)",

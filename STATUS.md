@@ -8,7 +8,7 @@ Raw URL for Master Control: `https://raw.githubusercontent.com/pcc40/eastbridge-
 - Any Code session that changes the site or sends outreach updates the relevant section and the *Last updated* line.
 - Master Control does not edit this file. It mirrors it into tracker B7 (see the last section).
 
-Last updated: 15 November 2026, AI-visibility gap fixes P07, P39/P40, P34/P36 (audit 570 pages 0/0; 1 new guide).
+Last updated: 15 November 2026, conversion rebuild of the website approved by Phil (home first screen, proof strip, fees cards, navigation, team wording; audit 570 pages 0/0).
 
 ---
 
@@ -26,9 +26,10 @@ Eastbridge Strategic Partners L.L.C-FZ (Meydan Free Zone licence 2540153.01) is 
 | Size | 102 pages × 5 languages (English, Arabic, Russian, Chinese, Hindi), all returning 200. 40 insight articles (latest: /insights/refresh-refit-or-full-villa-renovation/, 15 Nov). 4 tools: cost calculator, renovate or rebuild, stage payment planner, delay cost estimator. 2 free PDF guides. 14 service pages. 12 area pages. |
 | Brand | Keystone-arch logo (chosen 5 Nov). The Outlook signature is in `business/email-signature.html`. |
 | Images | UAE developer images, with credits, on area pages and place-based articles. The "Built by our founder in the UK" strip of Cornish houses appears on home, area, service and article pages. |
+| Conversion rebuild (15 Nov) | Home opens on one photograph of a house P Chapman Construction built, a proof strip (Grand Designs house, 21 years, The Times, one client quote) and "New to Dubai. Not new to building." with Philip's portrait. Menu: Work (includes the Island E worked example) and Fees. `/fees/` leads with three cards; ranges only, no fixed price. Team wording: three independent, UAE-based project managers. `BOOKING_URL` in `src/config.py` is empty until Phil supplies a booking link. Details: `HANDOFF.md`, "Conversion rebuild". |
 | Checks | `python3 build.py && python3 tools/i18n.py apply && python3 tools/seo_audit.py` must report 0 errors and 0 warnings. Last run: 570 pages, 0/0 (15 Nov). |
 | Forms | Netlify Forms: `brief` (contact), `estimate`, `checklist` and `notes`. Only the English pages register the forms. Success events fire only on the thank-you pages. There is a cookie banner, and GA4 runs only after the visitor consents. |
-| Rules | See `src/content/WRITING_BRIEF.md` and `HANDOFF.md`:<br>• never supervise, certify, turnkey or "on your behalf"<br>• no UAE projects or clients claimed<br>• no architect names, no turnover, no team names<br>• Island E is hypothetical |
+| Rules | See `src/content/WRITING_BRIEF.md` and `HANDOFF.md`:<br>• never supervise, certify, turnkey or "on your behalf"<br>• no UAE projects or clients claimed<br>• no architect names, no turnover, no team names (only "three independent, UAE-based project managers")<br>• Island E is hypothetical |
 
 ## 3. SEO and automation
 | Item | State |

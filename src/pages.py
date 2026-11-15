@@ -240,7 +240,7 @@ def founder_uk_section(key):
     bases = [f"{pr}-0{1 + (zlib.crc32((key + pr).encode()) % 3)}" for pr in picks]
     return f'''<section class="section--tight founder-uk" aria-labelledby="ukbuilt-h"><div class="wrap">
 <div class="head-row"><div><span class="kicker">Philip Chapman's record</span><h2 id="ukbuilt-h">Built by our founder in the UK</h2></div>
-<p class="muted">Houses built by P Chapman Construction, the company Philip founded and led for 21 years. UK contracting work, not Eastbridge appointments. <a class="link" href="/work/">See the work</a></p></div>
+<p class="muted">UK work by P Chapman Construction, the company Philip founded and led for 21 years. <a class="link" href="/work/">See the work</a></p></div>
 {strip_html(bases)}
 </div></section>
 '''
@@ -275,7 +275,7 @@ def services_hub():
     crumbs = [("Home", "/"), ("Services", "/services/")]
     body = B.banner(crumbs, "Services for villa owners", "Client-side project management from the first budget to the end of the defects period, or just the part you need.", "sea-glass-house-01", credit_of("sea-glass-house-01")) + f'''
 <section class="section"><div class="wrap">{svc_cards(SERVICES)}</div></section>
-<section class="section paper"><div class="wrap split"><div><h2>What we don't do</h2></div><div class="prose">
+<section class="section paper"><div class="wrap split"><div><h2>Where our role stops</h2></div><div class="prose">
 <p>We are not a contractor and we hold no construction contracts. We are not an engineering consultancy: the statutory design, permit submissions and statutory site inspections of your villa are carried out by the registered consultant you appoint, and we represent you alongside them. We are not lawyers; where legal advice is needed, we work with your UAE-qualified lawyer. And we are not estate agents.</p>
 <p>Keeping these lines clear is what lets us act for you alone.</p></div></div></section>
 {B.cta_band()}'''
@@ -368,13 +368,25 @@ def service_page(s):
     pj = PROJ[pslug]
     alongside = alongside_html() if s.get("alongside") else ""
     read_more = B.insight_link(*s["insight"], before="<p>Read more: ", after=".</p>") if s.get("insight") else ""
+    # Opening (conversion rebuild, 15 Nov 2026): a person reads a concrete scene first (s["scene"]), or the first
+    # paragraph of the introduction; the third-person "In short" answer box (kept for AI search) follows it.
+    if s.get("scene"):
+        opening, intro = f'<p class="scene">{s["scene"]}</p>', s["intro"]
+    else:
+        cut = s["intro"].find("</p>") + 4
+        opening, intro = (s["intro"][:cut], s["intro"][cut:]) if cut > 3 and ANS.answer_html(path) else ("", s["intro"])
+    extra = s.get("extra", "")
+    if s["slug"] == "consultant-and-contractor-selection":
+        # the home page's second button lands on #quote-review: give that section its own way to act
+        extra += (f'<p class="contact-actions quote-cta"><a class="btn" href="{contact_href("service", s["slug"])}">Ask for a quote review</a>'
+                  f'<a class="btn btn--ghost" href="{B.wa_page_link(B.WA_TPL_SERVICE, WA_TOPIC[s["slug"]])}" rel="noopener">{B.WA_ICON}<span>Send it on WhatsApp</span></a></p>')
     body = B.banner(crumbs, esc(s["h1"]), esc(s["lede"]), ban, credit_of(ban)) + f'''
 <section class="section"><div class="wrap split">
 <div class="side-sticky"><dl class="facts"><div><dt>Stage</dt><dd>{esc(s["stage"])}</dd></div><div><dt>Who it's for</dt><dd>Private villa owners and investors</dd></div><div><dt>Where</dt><dd>Dubai and Abu Dhabi</dd></div></dl>{area_p}
 <figure>{pic(strip[0], img_alt_of(strip[0], proj_of(strip[0])["name"] if not B.is_uae(strip[0]) else ""), "(max-width:900px) 100vw, 40vw")}<figcaption>{esc(B.img_caption(strip[0]) if B.is_uae(strip[0]) else credit_of(strip[0]))}</figcaption></figure></div>
-<div class="prose">{ANS.answer_html(path)}{s["intro"]}
+<div class="prose">{opening}{ANS.answer_html(path)}{intro}
 <h2>What we do</h2><ul>{does}</ul>
-<h2>What it gives you</h2><ul>{gets}</ul>{s.get("extra", "")}{alongside}{read_more}</div>
+<h2>What it gives you</h2><ul>{gets}</ul>{extra}{alongside}{read_more}</div>
 </div></section>
 {deliverables_html(s["slug"])}{month_html(s["slug"])}
 <section class="section--tight"><div class="wrap">{strip_html([ban] + strip[1:])}</div></section>
@@ -415,6 +427,14 @@ def areas_hub():
            "Villa build and renovation representation on Palm Jumeirah, Emirates Hills, Jumeirah Bay, District One, Dubai Hills, Al Barari, Saadiyat and more.",
            body, crumbs, og=B.og_image(HUB_BANNER), images=[HUB_BANNER])
 
+def after_second_section(html, block):
+    """Insert `block` after the second main (h2) section of a body, or at the end of a body with fewer sections."""
+    parts = re.split(r'(?=<h2\b)', html)
+    if len(parts) > 3:
+        parts[3] = block + parts[3]
+        return "".join(parts)
+    return html + block
+
 def area_page(a):
     path = f"/areas/{a['slug']}/"
     crumbs = [("Home", "/"), ("Areas", "/areas/"), (a["name"], path)]
@@ -436,10 +456,13 @@ def area_page(a):
                  f'<div><span class="kicker">{esc(o["kicker"])}</span><h2 id="{o["id"]}-h">{esc(o["h2"])}</h2>'
                  f'<p><a class="btn" href="{esc(o["cta_href"])}">{esc(o["cta"])}</a></p></div>'
                  f'<div class="prose">{o["body"]}</div></div></section>\n')
+    mid = B.mid_cta(f"Buying or renovating in {a['name']}?", "Send us the listing, drawing or quote on WhatsApp.",
+                    B.wa_page_link(B.WA_TPL_AREA, a["name"]), contact_href("area", a["slug"]))
+    area_body = after_second_section(a["body"], mid)
     body = B.banner(crumbs, esc(a["h1"]), esc(a["lede"]), img, credit_of(img)) + f'''
 <section class="section"><div class="wrap split">
 <div><dl class="facts"><div><dt>City</dt><dd>{esc(a["city"])}</dd></div><div><dt>Master developer</dt><dd>{esc(a["developer"])}</dd></div><div><dt>Typical work</dt><dd>{esc(a["tag"])}</dd></div></dl></div>
-<div class="prose">{ANS.answer_html(path)}<p class="muted">We cover every community in Dubai and Abu Dhabi. This page is one example of how we approach a community, not a limit on where we work.</p>{a["body"]}{srcs}</div></div></section>
+<div class="prose">{ANS.answer_html(path)}<p class="muted">We cover every community in Dubai and Abu Dhabi. This page is one example of how we approach a community, not a limit on where we work.</p>{area_body}{srcs}</div></div></section>
 {owner}<section class="section--tight"><div class="wrap">{strip_html(others)}</div></section>
 <section class="section paper"><div class="wrap split"><div><h2>Questions about {esc(a["name"])}</h2></div><div>{B.faq_html(a["faqs"])}</div></div></section>
 <section class="section"><div class="wrap"><h2>Services most relevant here</h2>{svc}</div></section>
@@ -456,13 +479,17 @@ def work_hub():
     from content.projects import RECOGNITION, TESTIMONIALS, recognition_html
     import pages_new
     rec = recognition_html(RECOGNITION[:4])
-    body = B.banner(crumbs, "Homes built by P Chapman Construction", "Selected work of P Chapman Construction, the company Philip Chapman founded and led for 21 years: private houses, country estates, developments and hotel work.", "owers-house-02", credit_of("owers-house-02")) + f'''
+    body = B.banner(crumbs, "UK work by our founder", "Homes built by P Chapman Construction, the company Philip Chapman founded and led for 21 years: private houses, country estates, developments and hotel work.", "owers-house-02", credit_of("owers-house-02")) + f'''
 <section class="section--tight"><div class="wrap"><div class="kpis kpis--text">{rec}</div><p class="small muted" style="margin-top:14px">Awards were made to the houses and the teams that designed and built them. Project teams are credited on each project page.</p></div></section>
 <section class="section--tight"><div class="wrap">{work_cards(PROJECTS)}</div></section>
 <section class="section band-dark"><div class="wrap"><div class="head-row"><h2>What P Chapman Construction's clients said</h2><p class="muted">Owners and developers on P Chapman Construction's work.</p></div>{pages_new.quotes_html(TESTIMONIALS[3:6])}</div></section>
 <section class="section"><div class="wrap split"><div><h2>Range of work</h2></div><div><p class="muted" style="margin-top:24px">P Chapman Construction worked under traditional and design-and-build contracts, for private owners, developers, hoteliers, schools and housing associations, with particular expertise in contemporary coastal houses and eco-buildings.</p></div></div></section>
+<section class="section paper" id="dubai-example" aria-labelledby="dubai-example-h"><div class="wrap split"><div><span class="kicker">In Dubai</span><h2 id="dubai-example-h">How the same discipline applies to a Dubai plot</h2></div>
+<div class="prose"><p>The houses on this page were built in the UK. To show how we would approach a villa here, we have worked one through on paper: the budget, the cash flow, the tender comparison and the programme for a waterfront plot on Dubai Islands.</p>
+<p><a class="btn" href="/case-studies/island-e-waterfront-villa/">A worked example for a Dubai Islands plot (illustrative)</a></p>
+<p class="small muted">Read the Owers House project in detail: <a href="/work/owers-house/#case-study">UK project case study</a>.</p></div></div></section>
 {B.cta_band("Bring this standard to your villa.")}'''
-    B.page("/work/", "Work: Homes Built by P Chapman Construction",
+    B.page("/work/", "UK Work by Our Founder | P Chapman Construction",
            "Private houses, estates, developments and hotel work, some award-winning, built by P Chapman Construction, the company Philip Chapman led for 21 years.",
            body, crumbs, og=B.og_image("owers-house-02"))
 
@@ -475,7 +502,7 @@ def project_case_html(p):
     src_t, src_u = c["source"]
     return f'''<section class="section stone" id="case-study" aria-labelledby="case-study-h"><div class="wrap">
 <div class="head-row"><div><span class="kicker">UK project case study</span><h2 id="case-study-h">{esc(p["name"])}: the project in detail</h2></div>
-<p class="muted">UK contracting work by P Chapman Construction as main contractor. It is not an Eastbridge appointment or a UAE project.</p></div>
+<p class="muted">UK work by P Chapman Construction, as main contractor.</p></div>
 <div class="split"><div class="prose">
 <h3>The brief</h3><p>{esc(c["brief"])}</p>
 <h3>P Chapman Construction's role</h3><p>{esc(c["role"])}</p>
@@ -557,10 +584,10 @@ def approach():
 </tbody></table>
 <p>Read more in <a href="/insights/owners-representative-vs-project-manager-vs-consultant/">owner's representative vs project manager vs consultant</a>.</p></div></div></section>
 <section class="section" id="uae-appointments"><div class="wrap split"><div><h2>How an appointment works in the UAE</h2><p class="muted">What you can expect from us on a villa in Dubai or Abu Dhabi, and where our role stops.</p></div><div class="prose">
-<h3>Who leads your project</h3><p>Our founder, Philip Chapman, leads every Eastbridge appointment personally, supported by a team of three project managers who attend site and provide cover when he is unavailable. Philip is the person you speak to from the first conversation to handover. Capacity is confirmed before an appointment is accepted.</p>
+<h3>Who leads your project</h3><p>Our founder, Philip Chapman, leads every Eastbridge appointment personally, supported by three independent, UAE-based project managers he works with, who attend site and provide cover when he is unavailable. Philip is the person you speak to from the first conversation to handover. Capacity is confirmed before an appointment is accepted.</p>
 <h3>Site attendance and reporting</h3><p>How often we attend site, which meetings we attend for you and the reports you receive are agreed in writing in the scope of each appointment, before work starts. Attendance follows the stage of the project: we are on site regularly through construction, at the frequency agreed in your scope of works, planned around key stages such as waterproofing, first fix and pre-handover. Agreeing this up front means the time committed to your project is clear from the start.</p>
 <h3>Consultants, quantity surveyors, engineers and specialists</h3><p>Where the project needs a registered consultant, a quantity surveyor, an engineer or another specialist, you appoint them and pay them directly. We help you define what is needed, compare proposals like-for-like and choose. We take no commission or referral fee from any of them, and money never passes through us.</p>
-<h3>What we do, and what we don't</h3>
+<h3>Our role, and where it stops</h3>
 <p>We provide commercial and project management on your side of the table: the brief, budget and programme, cost reporting, review of payments and variations, commercial and contractual advice, client-side site visits and reporting, decision and issues logs, and handover.</p>
 <p>We do not carry out statutory design, authority submissions or permit applications, statutory site inspection or formal approval of the works. Those duties sit with the registered consultant you appoint. We do not give legal advice; where it is needed, take advice from a UAE-qualified lawyer, and we will work alongside them.</p>
 </div></div></section>
@@ -634,7 +661,7 @@ def partners():
 MONEY_FAQS = [
  ("Do you pay contractors on my behalf?", "No. You pay your consultant, contractor and suppliers directly, and money never passes through us. We review each payment application against the work done and the contract, and recommend what to pay. We never instruct the contractor or approve a payment without your written approval."),
  ("Do you keep an approved-supplier list or take commissions?", "No. We keep no approved-supplier list: you choose and appoint your consultant, contractor and suppliers, and we help you compare them like-for-like. We are paid only by you, and take no commission or referral fee from anyone we help you appoint. See our <a href=\"/independence/\">independence pledge</a>."),
- ("Who will I deal with?", "Philip Chapman, our founder. He leads every appointment personally and is the person you speak to from the first conversation to handover. He is supported by a team of three project managers who attend site and provide cover when he is unavailable."),
+ ("Who will I deal with?", "Philip Chapman, our founder. He leads every appointment personally and is the person you speak to from the first conversation to handover. He is supported by three independent, UAE-based project managers he works with, who attend site and provide cover when he is unavailable."),
 ]
 
 FEES_ARTICLE = "client-side-project-manager-fees-dubai"
@@ -671,19 +698,47 @@ def fees():
         ("full", "Everything: regular site visits through construction, every review, the decision log, handover, and sourcing trips with you for stone, joinery, lighting and fittings (travel at cost).",
          "A truly one-off villa, where one person on your side does everything with you from brief to handover. Where the fee sits depends on the input required."),
     ]
-    level_html = "".join(
-        f'<div><h3>{esc(C.FEES[k]["name"])}</h3><p class="fee-range">{rng(k)}</p><ul><li>{esc(covers)}</li><li><span class="muted">Typical for:</span> {esc(who)}</li></ul></div>'
-        for k, covers, who in levels)
-    # Illustration from published figures only: the cost calculator's worked example and the Full service range.
+    # Top of the page (conversion rebuild, 15 Nov 2026): three cards a person can read in ten seconds. Ranges only,
+    # from config.FEES: never a day rate, an hourly rate or a fixed price (Phil, 15 Nov 2026: fees depend on the
+    # size of the project, the scope and the time it takes).
+    cards = [
+        ("review", rng("review"), "A written report on a plot, a design, a contractor's quote or a stalled project.",
+         "Suits you if you are about to buy a plot or sign a contract, or your project is in difficulty.",
+         "/contact/#brief", "Ask about a review"),
+        ("part", "<strong>A monthly fee</strong>" if show else rng("part"),
+         "Set by the time your project needs, and agreed in writing before work starts. Cost, contract and payment reviews with monthly reporting, without regular site attendance.",
+         "Suits owners with a capable team in place who want every price, payment and variation checked from their side.",
+         "/contact/", B.CTA_LABEL),
+        ("full", rng("full"), "Everything from brief to handover: regular site visits, every review, the decision log and sourcing trips with you (travel at cost).",
+         "Suits a one-off villa where you want one person on your side throughout.",
+         contact_href("service", "owners-representative"), B.CTA_LABEL),
+    ]
+    card_html = "".join(
+        f'<article class="fee-card"><h3>{esc(C.FEES[k]["name"])}</h3><p class="fee-range">{price}</p><p>{esc(what)}</p>'
+        f'<p class="fee-suits">{esc(suits)}</p><p class="fee-act"><a class="btn" href="{href}">{esc(label)}</a></p></article>'
+        for k, price, what, suits, href, label in cards)
+    # Worked example from published figures only: the cost calculator's worked example and the Full service range,
+    # drawn as two bars on one scale (the top of the contingency range is the full width).
     ex = PT.EXAMPLE
     build = PT.estimate(ex)["construction"][1]
     lo, hi = C.FEES["full"]["pct"]
     def k1000(v):
         return f"AED {round(v / 1000) * 1000:,.0f}"
-    illus = (f'<div class="notice"><p><strong>An illustration, not a quotation.</strong> The worked example in our <a href="/tools/villa-build-cost-calculator/">villa cost calculator</a> is a {ex["area"]:,} sq ft {esc(ex["tier"])} villa with a likely construction cost of {k1000(build)}. '
-             f'At our Full service range of {lo:g}–{hi:g}% of build cost, the fee on that villa would be about {k1000(build * lo / 100)}–{k1000(build * hi / 100)[4:]} over the whole project. '
-             f'On the same villa, a contingency of 10–15%, the allowance <a href="https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai" rel="noopener">Engel &amp; Völkers</a> calls widely recommended, is about {k1000(build * 0.10)}–{k1000(build * 0.15)[4:]}: money set aside because provisional sums, variations and unforeseen work are expected on almost every build. '
-             'We do not promise to save any of it. What the fee buys is someone on your side checking how that money is spent.</p></div>') if show else ""
+    def bar(name, note, v_lo, v_hi, cls=""):
+        top = build * 0.15
+        w_lo, w_hi = round(v_lo / top * 100, 1), round((v_hi - v_lo) / top * 100, 1)
+        return (f'<div class="fee-bar{cls}"><p class="fee-bar__lab"><b>{name}</b> <span class="muted">{note}</span></p>'
+                f'<div class="fee-bar__track" aria-hidden="true"><i style="width:{w_lo}%"></i><i class="fee-bar__hi" style="width:{w_hi}%"></i></div>'
+                f'<p class="fee-bar__val">About {k1000(v_lo)}–{k1000(v_hi)[4:]}</p></div>')
+    example = (f'''<section class="section--tight paper fee-example" id="example" aria-labelledby="example-h"><div class="wrap">
+<div class="head-row"><div><span class="kicker">A worked example</span><h2 id="example-h">The fee in proportion</h2></div>
+<p class="muted"><strong>An illustration, not a quotation.</strong> The worked example in our <a href="/tools/villa-build-cost-calculator/">villa cost calculator</a> is a {ex["area"]:,} sq ft {esc(ex["tier"])} villa with a likely construction cost of {k1000(build)}.</p></div>
+<div class="fee-bars">
+{bar("Our full-service fee", f"{lo:g}–{hi:g}% of build cost, over the whole project", build * lo / 100, build * hi / 100)}
+{bar("The contingency on the same villa", '10–15%, the allowance <a href="https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai" rel="noopener">Engel &amp; Völkers</a> calls widely recommended', build * 0.10, build * 0.15, " fee-bar--big")}
+</div>
+<p class="fee-example__end">A contingency is money set aside because provisional sums, variations and unforeseen work are expected on almost every build. <strong>We cannot promise a saving. We can make sure every dirham of it is checked before you pay.</strong></p>
+</div></section>''') if show else ""
     faqs = [
      ("Why don't you publish a fixed price?", "Because every one-off villa is different, and a fixed price given before we understand the plot, the design and the programme would be a guess. We publish ranges by level of input instead, agree a written scope of works after the free call and price it within the range. Any work outside that scope is quoted before it starts."),
      ("What moves a fee within its range?", "How often we attend site, how much sourcing travel the project needs, how complex the design is and how long the programme runs. For a review, it is the documents to read, the stage of the project and your timetable."),
@@ -697,60 +752,13 @@ def fees():
     reading += ['<a href="/why-a-client-side-project-manager/">Why appoint a client-side project manager</a>',
                 '<a href="/independence/">Our independence pledge</a>']
     reading_html = "".join(f"<li>{r}</li>" for r in reading)
-    body = B.banner(crumbs, "How our fees work", "Every one-off villa is different, so we agree a written scope of works and price it within published ranges. Paid only by you.", "owers-house-11", credit_of("owers-house-11")) + f'''
-<section class="section" id="scope"><div class="wrap split"><div><span class="kicker">The principle</span><h2>A written scope of works, then a fee</h2></div><div class="prose">{ANS.answer_html("/fees/")}
-<p>Every one-off villa is different: the plot, the design, the programme, and how much of the work you want us to carry. An exact price given before we understand those would be a guess, so we don't give one. After the free call we agree a written scope of works with you and price it within the published range for the level of input you need. Any work outside that scope is quoted in writing before it starts.</p>
-<p>We publish ranges by level of input, not a day rate, an hourly rate or a fixed price. That is deliberate: it is the honest way to price work that is different every time, and it means the fee you agree is the fee you pay for the scope you agreed.</p>
-</div></div></section>
-<section class="section paper" id="levels" aria-labelledby="levels-h"><div class="wrap"><div class="head-row"><div><span class="kicker">Three levels of input</span><h2 id="levels-h">Published fee ranges</h2></div><p class="muted">The free call comes first. The level, the scope and the fee are agreed in writing before any work starts.</p></div>
-<div class="compare compare--3 fee-levels">{level_html}</div>
-<div class="split" style="margin-top:clamp(28px,3vw,44px)"><div><h3>What moves a fee within its range</h3></div><div class="prose"><ul>
-<li><strong>Site visits.</strong> How often we attend site, which follows the stage of the project and is agreed in your scope.</li>
-<li><strong>Sourcing travel.</strong> How many sourcing trips you want us to make with you, and where.</li>
-<li><strong>Design complexity.</strong> Bespoke structure, façades, basements and specialist systems all take more review.</li>
-<li><strong>Programme length.</strong> A longer build means more months of reporting, payment review and site attendance.</li>
-<li><strong>For a review:</strong> the documents to read, the stage of the project and the timetable you are working to.</li>
-</ul></div></div></div></section>
-<section class="section starts" aria-labelledby="fees-starts-h"><div class="wrap"><div class="head-row"><div><span class="kicker">How it starts</span><h2 id="fees-starts-h">From a free call to a written scope</h2></div><p class="muted">The call is free. After that, you decide at each step whether to go on.</p></div>
-{B.steps_html(steps)}</div></section>
-<section class="section paper" id="limits"><div class="wrap split"><div><span class="kicker">Limits of authority</span><h2>You decide; we review and recommend</h2></div><div class="prose">
-<p><strong>We never instruct the contractor or approve a payment without your written approval.</strong></p>
-<ul><li>You appoint and pay your consultant, contractor and suppliers directly. Money never passes through us.</li>
-<li>Before each payment, we review the application against the work done and the contract, and recommend what to pay.</li>
-<li>Variations are priced and brought to you with a recommendation before anything is instructed.</li>
-<li>Statutory design, authority submissions and the consultant's statutory duties stay with your registered consultant, and legal advice with your UAE-qualified lawyer.</li></ul>
-</div></div></section>
-<section class="section" id="first-review"><div class="wrap split"><div><span class="kicker">Review</span><h2>Plot and pre-purchase review</h2>
-<dl class="facts"><div><dt>Who it's for</dt><dd>Buyers considering a villa plot, before they commit</dd></div><div><dt>How it's charged</dt><dd>{review_charge}</dd></div><div><dt>Timing</dt><dd>Within five working days of receiving the plot documents</dd></div></dl>
-<p class="small"><a class="link" href="/services/plot-due-diligence/">About the plot review</a></p></div><div class="prose">
-<h3>Scope</h3><ul><li>The master developer's design guidelines: coverage, heights, setbacks and materials</li><li>Build-by deadlines and any penalties in the sale terms</li><li>Access, levels, neighbouring plots and practical buildability</li><li>A realistic build budget range for the house you want, and the total cost of ownership</li></ul>
-<h3>You receive</h3><ul><li>A short written report you can read in fifteen minutes</li><li>A total project budget range, not just a plot price</li><li>The risks that matter, and a list of questions to put to the seller or developer</li></ul>
-<h3>Not included</h3><ul><li>Legal advice on title or the sale contract: take advice from a UAE-qualified lawyer</li><li>Valuation: use a RICS or RERA-registered valuer</li><li>Design, surveys, ground investigation or authority submissions</li></ul>
-<h3>How the quotation is set</h3>{basis("the number of plots you want reviewed, the documents available and the timetable you are working to")}
-</div></div></section>
-<section class="section paper" id="quote-review"><div class="wrap split"><div><span class="kicker">Review</span><h2>Contractor quote review</h2>
-<dl class="facts"><div><dt>Who it's for</dt><dd>Owners holding a contractor's quote and draft contract, before they sign</dd></div><div><dt>How it's charged</dt><dd>{review_charge}</dd></div></dl>
-<p class="small"><a class="link" href="/services/consultant-and-contractor-selection/#quote-review">About the contractor quote review</a></p></div><div class="prose">
-<h3>Scope</h3><ul><li>Scope gaps: what the drawings and specification show that the quote does not price</li><li>Provisional sums and allowances: how much of the price is still an estimate</li><li>The payment schedule, and whether payments run ahead of the work</li><li>The variation clause, and the exclusions and assumptions behind the price</li></ul>
-<h3>You receive</h3><ul><li>A written report, with the questions to put to the contractor before you sign</li></ul>
-<h3>Not included</h3><ul><li>Legal advice on the contract: take advice from a UAE-qualified lawyer</li></ul>
-<h3>How the quotation is set</h3>{basis("the size of the quote, the number of quotes you want compared and the documents that come with them")}
-</div></div></section>
-<section class="section"><div class="wrap split"><div><span class="kicker">Review</span><h2>Project health check</h2>
-<dl class="facts"><div><dt>Who it's for</dt><dd>Owners whose project is under way and stalled, late, over budget or in dispute</dd></div><div><dt>How it's charged</dt><dd>{review_charge}</dd></div><div><dt>Timing</dt><dd>We start within a week; the full picture within two to three weeks</dd></div></dl>
-<p class="small"><a class="link" href="/services/stalled-project-rescue/">About stalled project rescue</a></p></div><div class="prose">
-<h3>Scope</h3><ul><li>An independent review of progress, quality, payments and the contract position</li><li>A realistic cost and time to complete</li><li>The options: continue, renegotiate or replace the contractor</li></ul>
-<h3>You receive</h3><ul><li>The full picture: where the project stands on progress, quality, payments and the contract</li><li>Clear options, each with its costs and risks</li><li>A recovery plan for the option you choose</li></ul>
-<h3>Not included</h3><ul><li>Legal advice on withholding payment, termination or disputes: take advice from a UAE-qualified lawyer</li><li>Statutory site inspection, formal approval of work or engineering investigation, which remain with the registered consultant and any engineer you appoint</li><li>Running the recovery through to completion, which would be a separate scope of works if you want one</li></ul>
-<h3>How the quotation is set</h3>{basis("the size and stage of the villa, the volume of contract and payment records to review, and the site visits the review needs")}
-</div></div></section>
-<section class="section paper"><div class="wrap prose">
-<h2>What's included</h2><ul><li>All our time, reporting and site visits as set out in your scope of works</li><li>Travel within Dubai and to Abu Dhabi</li></ul>
-<h2>What's not included</h2><ul><li>Fees of the consultant, contractor, quantity surveyors, engineers, testing labs or lawyers you appoint; you pay them directly</li><li>Authority and master developer fees</li><li>Sourcing trips and other international travel, charged at cost and agreed with you before you travel</li></ul>
-<h2>What we never charge</h2><p>We never take commission, referral fees, mark-ups or rebates from anyone on your project. See our <a href="/independence/">independence pledge</a>.</p>
-</div></section>
-<section class="section" id="worth-it"><div class="wrap split"><div><span class="kicker">Value</span><h2>Is it worth it?</h2></div><div class="prose">
-<p>Our fee is an addition to your project budget, so it should earn its place. On a truly one-off villa, what it buys is:</p>
+    def fold(i, title, inner, kicker=""):
+        """One collapsed section of the detail. The site script opens it when the address points at it (#limits etc.)."""
+        k = f'<span class="fold__k">{esc(kicker)}</span> ' if kicker else ""
+        return f'<details class="fold" id="{i}"><summary>{k}{esc(title)}</summary><div class="fold__body prose">{inner}</div></details>'
+    def review_facts(rows):
+        return '<dl class="facts">' + "".join(f"<div><dt>{a}</dt><dd>{b}</dd></div>" for a, b in rows) + "</dl>"
+    worth = f'''<p>Our fee is an addition to your project budget, so it should earn its place. On a truly one-off villa, what it buys is:</p>
 <ul><li><strong>Everything reviewed.</strong> Every drawing, quote, payment application and variation, checked from your side before you commit or pay.</li>
 <li><strong>Regular site presence.</strong> Someone who knows what was agreed, on site through construction, observing and recording progress and quality.</li>
 <li><strong>Sourcing alongside you.</strong> Stone, joinery, lighting and fittings chosen with you, with samples, lead times and deliveries checked against what you chose.</li>
@@ -761,12 +769,63 @@ def fees():
 <li><strong>Payment applications ahead of progress.</strong> Money paid for work not yet done, or not done properly, is hard to recover.</li>
 <li><strong>Programme overrun.</strong> Each extra month carries the contractor's time-related costs and your own rent and finance. Our <a href="/tools/delay-cost-estimator/">delay cost estimator</a> shows the monthly figure.</li>
 <li><strong>Wrong or late materials.</strong> Stone, joinery or fittings that arrive late, or differ from the sample, hold up every trade that follows.</li></ul>
-{illus}
 <p>A common argument is that a separate project manager is one more margin on the project, and that a design-and-build contract costs no more. Integrated contracts have real strengths, including one contract and no gap between designer and builder. But on any contract, someone has to check the quote, the variations and the payments from the owner's side, and an in-house reviewer reports to the contractor's owner. Our fee is the cost of that check being independent.</p>
 <p>If we don't think your project needs us, we'll say so on the free call.</p>
-<h3>Further reading</h3><ul>{reading_html}</ul>
+<h3>Further reading</h3><ul>{reading_html}</ul>'''
+    folds = "".join([
+        fold("scope", "How it starts: a free call, then a written scope of works", f'''{B.steps_html(steps, "steps steps--compact")}
+<p>Every one-off villa is different: the plot, the design, the programme, and how much of the work you want us to carry. An exact price given before we understand those would be a guess, so we don't give one. After the free call we agree a written scope of works with you and price it within the published range for the level of input you need. Any work outside that scope is quoted in writing before it starts.</p>
+<p>We publish ranges by level of input, not a day rate, an hourly rate or a fixed price. That is deliberate: it is the honest way to price work that is different every time, and it means the fee you agree is the fee you pay for the scope you agreed.</p>'''),
+        fold("moves", "What moves a fee within its range", '''<ul>
+<li><strong>Site visits.</strong> How often we attend site, which follows the stage of the project and is agreed in your scope.</li>
+<li><strong>Sourcing travel.</strong> How many sourcing trips you want us to make with you, and where.</li>
+<li><strong>Design complexity.</strong> Bespoke structure, façades, basements and specialist systems all take more review.</li>
+<li><strong>Programme length.</strong> A longer build means more months of reporting, payment review and site attendance.</li>
+<li><strong>For a review:</strong> the documents to read, the stage of the project and the timetable you are working to.</li>
+</ul>'''),
+        fold("limits", "You decide; we review and recommend", '''<p><strong>We never instruct the contractor or approve a payment without your written approval.</strong></p>
+<ul><li>You appoint and pay your consultant, contractor and suppliers directly. Money never passes through us.</li>
+<li>Before each payment, we review the application against the work done and the contract, and recommend what to pay.</li>
+<li>Variations are priced and brought to you with a recommendation before anything is instructed.</li>
+<li>Statutory design, authority submissions and the consultant's statutory duties stay with your registered consultant, and legal advice with your UAE-qualified lawyer.</li></ul>''', "Limits of authority"),
+        fold("first-review", "Plot and pre-purchase review", f'''{review_facts([("Who it's for", "Buyers considering a villa plot, before they commit"), ("How it's charged", review_charge), ("Timing", "Within five working days of receiving the plot documents")])}
+<p class="small"><a class="link" href="/services/plot-due-diligence/">About the plot review</a></p>
+<h3>Scope</h3><ul><li>The master developer's design guidelines: coverage, heights, setbacks and materials</li><li>Build-by deadlines and any penalties in the sale terms</li><li>Access, levels, neighbouring plots and practical buildability</li><li>A realistic build budget range for the house you want, and the total cost of ownership</li></ul>
+<h3>You receive</h3><ul><li>A short written report you can read in fifteen minutes</li><li>A total project budget range, not just a plot price</li><li>The risks that matter, and a list of questions to put to the seller or developer</li></ul>
+<h3>Not included</h3><ul><li>Legal advice on title or the sale contract: take advice from a UAE-qualified lawyer</li><li>Valuation: use a RICS or RERA-registered valuer</li><li>Design, surveys, ground investigation or authority submissions</li></ul>
+<h3>How the quotation is set</h3>{basis("the number of plots you want reviewed, the documents available and the timetable you are working to")}''', "Review"),
+        fold("quote-review", "Contractor quote review", f'''{review_facts([("Who it's for", "Owners holding a contractor's quote and draft contract, before they sign"), ("How it's charged", review_charge)])}
+<p class="small"><a class="link" href="/services/consultant-and-contractor-selection/#quote-review">About the contractor quote review</a></p>
+<h3>Scope</h3><ul><li>Scope gaps: what the drawings and specification show that the quote does not price</li><li>Provisional sums and allowances: how much of the price is still an estimate</li><li>The payment schedule, and whether payments run ahead of the work</li><li>The variation clause, and the exclusions and assumptions behind the price</li></ul>
+<h3>You receive</h3><ul><li>A written report, with the questions to put to the contractor before you sign</li></ul>
+<h3>Not included</h3><ul><li>Legal advice on the contract: take advice from a UAE-qualified lawyer</li></ul>
+<h3>How the quotation is set</h3>{basis("the size of the quote, the number of quotes you want compared and the documents that come with them")}''', "Review"),
+        fold("health-check", "Project health check", f'''{review_facts([("Who it's for", "Owners whose project is under way and stalled, late, over budget or in dispute"), ("How it's charged", review_charge), ("Timing", "We start within a week; the full picture within two to three weeks")])}
+<p class="small"><a class="link" href="/services/stalled-project-rescue/">About stalled project rescue</a></p>
+<h3>Scope</h3><ul><li>An independent review of progress, quality, payments and the contract position</li><li>A realistic cost and time to complete</li><li>The options: continue, renegotiate or replace the contractor</li></ul>
+<h3>You receive</h3><ul><li>The full picture: where the project stands on progress, quality, payments and the contract</li><li>Clear options, each with its costs and risks</li><li>A recovery plan for the option you choose</li></ul>
+<h3>Not included</h3><ul><li>Legal advice on withholding payment, termination or disputes: take advice from a UAE-qualified lawyer</li><li>Statutory site inspection, formal approval of work or engineering investigation, which remain with the registered consultant and any engineer you appoint</li><li>Running the recovery through to completion, which would be a separate scope of works if you want one</li></ul>
+<h3>How the quotation is set</h3>{basis("the size and stage of the villa, the volume of contract and payment records to review, and the site visits the review needs")}''', "Review"),
+        fold("included", "What is included, and what is not", '''<h3>What's included</h3><ul><li>All our time, reporting and site visits as set out in your scope of works</li><li>Travel within Dubai and to Abu Dhabi</li></ul>
+<h3>What's not included</h3><ul><li>Fees of the consultant, contractor, quantity surveyors, engineers, testing labs or lawyers you appoint; you pay them directly</li><li>Authority and master developer fees</li><li>Sourcing trips and other international travel, charged at cost and agreed with you before you travel</li></ul>
+<h3>What we never charge</h3><p>We never take commission, referral fees, mark-ups or rebates from anyone on your project. See our <a href="/independence/">independence pledge</a>.</p>'''),
+        fold("worth-it", "Is it worth it?", worth),
+    ])
+    # A plain page head (no photograph), so the three cards sit on the first screen.
+    body = B.page_head(crumbs, "How our fees work", "Every one-off villa is different, so we agree a written scope of works and price it within published ranges. Paid only by you.") + f'''
+<section class="fee-top" id="levels" aria-labelledby="levels-h"><div class="wrap">
+<h2 class="sr" id="levels-h">Published fee ranges</h2>
+<div class="fee-cards">{card_html}</div>
+<p class="fee-top-note muted">The free call comes first. The level, the scope and the fee are agreed in writing before any work starts.</p>
+</div></section>
+{example}
+<section class="section--tight" id="why-fees-vary" aria-labelledby="vary-h"><div class="wrap split"><div><h2 id="vary-h">Why the fee varies</h2></div><div class="prose">
+<p>No two villas ask the same of us. The fee follows three things: the size of the project, the scope you want us to carry, and the time it takes, which means how often we are on site and how long the build runs. That is why we publish ranges and not a fixed price, and why the figure is agreed in a written scope of works before we start.</p>
+{ANS.answer_html("/fees/")}
 </div></div></section>
-<section class="section paper"><div class="wrap split"><div><h2>Questions about fees and money</h2></div><div>{B.faq_html(faqs)}</div></div></section>
+<section class="section--tight paper fee-detail" aria-labelledby="detail-h"><div class="wrap split"><div><span class="kicker">The detail</span><h2 id="detail-h">Scope, limits and what is included</h2><p class="muted">Open what you need. Nothing here changes the three ranges above.</p></div>
+<div class="folds">{folds}</div></div></section>
+<section class="section"><div class="wrap split"><div><h2>Questions about fees and money</h2></div><div>{B.faq_html(faqs)}</div></div></section>
 {B.cta_band("Start with a free 30-minute call.", f"{C.RESPONSE_PROMISE} to arrange a time. We will tell you which first step, if any, would help.")}'''
     fee_desc = (f"Owner's representative fees in Dubai: review {C.FEES['review']['range']}; full service "
                 f"{C.fee_text('full')}; part service a monthly fee. All agreed in a written scope." if show else
@@ -817,7 +876,7 @@ def about():
 <p>Philip Chapman founded <a href="{C.FOUNDER["company_uk_url"]}" rel="noopener">P Chapman Construction</a> and led it for 21 years, growing it into a premium contractor with a reputation for exceptionally demanding private houses.</p>
 <p>Houses the company built have been recognised in their own right. Owers House, built by P Chapman Construction and completed in 2014, was featured on Channel 4's Grand Designs, won a RIBA South West Award in 2016 and was reported in <a href="https://www.thetimes.co.uk/article/wings-of-desire-9cgnbh3fg" rel="noopener">The Times</a>. The Old Station Master's House in Fowey won Best Small New Housing Development in the LABC Building Excellence Awards South West 2018 (<a href="https://www.acornpropertygroup.org/old-station-masters-house-wins-labc-award/" rel="noopener">source</a>), and Polgreen Manor was Highly Commended in the 2020 South West awards (<a href="https://www.labc.co.uk/news/labc-south-west-winners-amp-highly-commended-2020" rel="noopener">source</a>). These awards belong to the houses and the teams that designed and built them. Alongside one-off houses it delivered country-house restorations, multi-unit developments, hotel and spa work, and schools, under both traditional and design-and-build contracts.</p>
 <p>Two decades as the builder meant pricing tenders, programming complex sites, managing subcontractors, administering JCT contracts, preparing and defending extension of time and variation claims, and handing finished homes to owners and design teams who expected them to be perfect. It also meant seeing, from the inside, exactly where owners lose money and time.</p>
-<p>In Dubai and Abu Dhabi, Philip works on the other side of the table: for the owner, never the builder. He leads every Eastbridge appointment personally, supported by a team of three project managers who attend site and provide cover when he is unavailable, and he is the person you speak to from the first conversation to handover.</p>
+<p>In Dubai and Abu Dhabi, Philip works on the other side of the table: for the owner, never the builder. He leads every Eastbridge appointment personally, supported by three independent, UAE-based project managers he works with, who attend site and provide cover when he is unavailable, and he is the person you speak to from the first conversation to handover.</p>
 <p>Away from work he is a high-altitude mountaineer, which may explain a fondness for planning, contingency and getting everyone home safely.</p>
 </div></div></div></section>
 <section class="section stone" id="one-off"><div class="wrap split"><div><h2>One person on your side, plot to keys</h2></div><div class="prose">
@@ -837,7 +896,7 @@ def about():
 <section class="section paper" id="who"><div class="wrap split"><div><h2>Who you'll deal with</h2></div><div class="prose">
 <ul>
 <li><strong>Philip leads.</strong> Philip leads every appointment personally and is the person you speak to from the first conversation to handover. Messages by WhatsApp, phone or email reach him, and he replies personally within one working day.</li>
-<li><strong>Three project managers on site.</strong> A team of three project managers supports him. They attend site and provide cover when he is unavailable. Capacity is confirmed before an appointment is accepted.</li>
+<li><strong>Three independent, UAE-based project managers.</strong> Philip works with three independent project managers based in the UAE, who attend site and provide cover when he is unavailable. Capacity is confirmed before an appointment is accepted.</li>
 <li><strong>Site attendance agreed in writing.</strong> How often we attend site and what we report are agreed in the scope of each appointment, before work starts.</li>
 <li><strong>Specialists appointed and paid by you.</strong> Where the project needs a DM-registered consultant, a quantity surveyor, a lawyer or another specialist, you appoint and pay them directly. We help you define what is needed, compare proposals and choose, and we take no commission or referral fee from any of them.</li>
 <li><strong>Where our role stops.</strong> Our role is commercial and project management on your side. Statutory design, authority submissions and statutory site inspections stay with your registered consultant, and legal advice with your UAE-qualified lawyer.</li>
@@ -855,7 +914,7 @@ FAQ_ALL = [
  ("Do I need an owner's representative to build a villa in Dubai?", "It isn't required by law. It is most valuable on bespoke villas, major renovations, and projects where the owner is often abroad or has not built before. We will tell you honestly if you don't need us."),
  ("How is that different from the consultant I have to appoint?", "In Dubai, a registered consultant carries the statutory design, submission and site inspection responsibilities. They owe you proper professional care in that role. We add independent coordination and commercial scrutiny alongside them, acting only for you on cost, time, decisions, contracts and quality."),
  MONEY_FAQS[2],
- ("Who attends site, and who covers when Philip is away?", "Philip leads every appointment and attends site himself. He is supported by a team of three project managers who attend site and provide cover when he is unavailable, for example when he is travelling. How often we attend site is agreed in writing in your appointment."),
+ ("Who attends site, and who covers when Philip is away?", "Philip leads every appointment and attends site himself. He is supported by three independent, UAE-based project managers he works with, who attend site and provide cover when he is unavailable, for example when he is travelling. How often we attend site is agreed in writing in your appointment."),
  ("How often will you be on site?", "It is agreed in writing in the scope of your appointment, before work starts. We are on site regularly through construction, at the frequency agreed in your scope of works, planned around key stages. See <a href=\"/approach/#uae-appointments\">how an appointment works in the UAE</a>."),
  ("Who appoints the quantity surveyor, engineers and other specialists?", "You do, and you pay them directly. We help you work out what is needed, compare proposals like-for-like and choose. We take no commission or referral fee from anyone we help you appoint."),
  ("Do you handle permits, statutory site inspections or legal advice?", "No. Statutory design, authority submissions and statutory site inspections are the duties of the registered consultant you appoint, and legal advice should come from a UAE-qualified lawyer. Our role is commercial and project management on your side, alongside them."),
@@ -912,10 +971,12 @@ def contact():
         return f'<p class="err" id="{i}-err" hidden>{msg}</p>'
     steps = B.start_steps()
     next_steps = [("We reply within one working day", "A personal reply from Philip, by the method you choose in the form.")] + steps
-    body = B.banner(crumbs, "Arrange a free 30-minute call", "Tell us a little about your project and how you would like us to reply. Philip replies personally within one working day to agree a time; the form does not book a slot automatically. Nothing you send is published, and it is shared only with the service providers named in our privacy notice.", "the-lookout-02", credit_of("the-lookout-02")) + f'''
+    body = B.banner(crumbs, "Arrange a free 30-minute call", "Tell us a little about your project and how you would like us to reply. Philip replies personally within one working day to agree a time; the form does not book a slot automatically. Nothing you send is published, and it is shared only with the service providers named in our privacy notice.", "the-lookout-02", credit_of("the-lookout-02"),
+                    # Online booking: rendered only when config.BOOKING_URL is set; with it empty the page is unchanged.
+                    B.booking_button(wrap='<p class="actions booking-actions">{}</p>')) + f'''
 <section class="section--tight"><div class="wrap split contact-grid">
 <div class="contact-side">
-<h2 class="h-sm">Prefer to talk?</h2>
+{B.booking_button(wrap='<h2 class="h-sm">Pick a time yourself</h2><p class="contact-actions">{}</p>')}<h2 class="h-sm">Prefer to talk?</h2>
 <p class="contact-actions"><a class="btn" href="{B.wa_link()}" rel="noopener">Message us on WhatsApp</a><a class="btn btn--ghost" href="tel:{C.PHONE_E164}">Call {C.PHONE_DISPLAY}</a></p>
 <p>Email <a href="mailto:{C.EMAIL}">{C.EMAIL}</a></p>
 <p class="muted small">{esc(C.HOURS)}. UK and European clients are welcome to arrange calls in their own time zone.</p>
@@ -1058,6 +1119,11 @@ def guide_cta(p=None):
         return pages_guides.snag_cta_block()
     return pages_guides.cta_block()
 
+def ARTICLE_MID_CTA():
+    """Mid-article call to action (after the second main section): reuses the service WhatsApp template."""
+    return B.mid_cta("Have a quote or contract you are unsure about?", "Send it to us on WhatsApp.",
+                     B.wa_page_link(B.WA_TPL_SERVICE, "a quote or contract"))
+
 def insights(posts):
     crumbs = [("Home", "/"), ("Insights", "/insights/")]
     items = "".join(f'<li><a href="/insights/{p["slug"]}/"><div><h3>{esc(p["title"])}</h3><p>{esc(p["description"])}</p></div><div class="meta">{esc(p.get("category",""))}<br>{datetime.date.fromisoformat(str(p["date"])).strftime("%-d %b %Y")}</div></a></li>' for p in posts)
@@ -1090,6 +1156,10 @@ def insights(posts):
             if len(parts) > k:
                 alt = img_alt_of(ins, "" if B.is_uae(ins) else f'{proj_of(ins)["name"]}, {proj_of(ins)["place"]}')
                 parts[k] = f'<figure>{pic(ins, alt, "(max-width:760px) 100vw, 720px")}<figcaption>{esc(caption_of(ins))}</figcaption></figure>' + parts[k]
+        if len(parts) > 3:
+            parts[3] = ARTICLE_MID_CTA() + parts[3]
+        else:
+            parts.append(ARTICLE_MID_CTA())
         body_html = "".join(parts)
         meta = f'{esc(p.get("category",""))} · {d.strftime("%-d %B %Y")}{upd} · {mins} min read · By <a href="/about/#founder">{esc(C.FOUNDER["name"])}</a>'
         body = "<article>" + B.banner(c, esc(p["title"]), None, hero_img, credit_of(hero_img), f'<p class="article-meta">{meta}</p>') + f'''

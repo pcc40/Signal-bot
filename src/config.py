@@ -18,6 +18,9 @@ PUBLISH_FEES = True  # Approved by the owner on 31 October 2026. True shows the 
 # never with reduced motion or Save-Data, and fades in only once Vimeo reports it is playing.
 HERO_VIDEO = False
 HERO_VIDEO_VIMEO_ID = "219974514"
+# Online booking link for the free call (for example a Google Calendar appointment schedule). Leave "" until Phil
+# supplies it: while it is empty no "Pick a time for a free call" button is rendered anywhere and the site is unchanged.
+BOOKING_URL = ""
 
 # Published fee ranges by level of input, confirmed by the owner on 1 November 2026 (competitor brief, D1).
 # Shown only when PUBLISH_FEES is True. Ranges only: never publish a day rate, an hourly rate or a fixed price.
