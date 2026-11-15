@@ -45,15 +45,37 @@ Takeaways: decision/question hooks win; first-comment links beat link cards; don
 
 Takeaways (14 Nov): problem/decision hooks (stalled build, D&B vs architect, PM fees) reach 115–172 members, mostly out of network, top industry construction/architecture; "free download"/announcement-style posts stay in-network (11–29 reached). Engagement is still very low and no followers gained per post: end posts with a question to invite comments.
 
+## Analytics snapshot (15 Nov 2026, Sun ~09:30 UAE — weekly review)
+
+| Posted | Topic | Link | Impr. | Change vs 14 Nov |
+|---|---|---|---|---|
+| 5 Nov | Island E worked example | in body | 147 | +3 |
+| 6 Nov | What a builder knows | in body (card) | 108 | +2 |
+| 9 Nov | Calculator launch | in body (card) | 95 | +4 |
+| 9 Nov | Quay House (same day) | in body | 77 | +2 |
+| 10 Nov | PM fees | in body (card) | 208 | +3 |
+| 11 Nov | Design & build vs architect | first comment | **338** (best) | +12 |
+| 12 Nov | Snagging checklist | first comment | **53** (worst) | +4 |
+| 13 Nov | Stalled build | first comment | 249 | +14 |
+| 14 Nov | How long to build | first comment | 99 | +13 |
+| 15 Nov | Plot checks | first comment | 22 at ~30 min | — |
+
+Best, 11 Nov D&B vs architect: 338 impr., 179 members reached, 69% out of network, 1 reaction / 1 comment, 1 profile view, 0 followers gained; top seniority Senior 32%, top industry Architecture and Planning 26%, top location London Area 11%.
+Worst, 12 Nov snagging checklist: 53 impr., 11 reached, 94% in network, 0 reactions / 1 comment (the link); too few for a location breakdown.
+
+vs 14 Nov baseline: first-comment posts 11–14 Nov average ~185 impressions (baseline ~174). Engagement still flat: reactions remain in single figures across all posts, no followers gained.
+
+Takeaways (15 Nov): the split holds and is now clear. Decision/risk hooks where the owner might be on the wrong side (D&B vs architect 338, stalled build 249, PM fees 208) reach 140–180 members, mostly out of network. Checklist/"how long"/informational posts (snagging 53, how long 99) stay in network. Audience is architecture/construction professionals and senior people, London still the top location. No change to the 16–26 Nov posts (all already decision-hooked and ending with a question). For posts from 27 Nov, pick topics that carry a risk or a "who works for you" decision (e.g. how-to-choose-client-side-project-manager, owner-site-visits, villa-construction-cost) ahead of checklists and timelines; the 26 Nov checklist post is the test of whether a question hook rescues a checklist.
+
 ## Schedule
 
 > Tracking (14 Nov): queued links now carry `?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily`. Post the link exactly as written. The LinkedIn app often strips the referrer, so without this Google Analytics files these visits under "direct" and we cannot see what LinkedIn brings. Use the same tag on any new link added to this queue.
 
 | Date | Day | Topic | Comment link | Status |
 |---|---|---|---|---|
-| 13 Nov | Fri | Stalled build: first ten days | Full guide: https://eastbridgestrategicpartners.com/insights/stalled-villa-project-dubai/ | Posted (link comment in; 225 impr. at ~1d) |
-| 14 Nov | Sat | How long to build a villa | Full guide: https://eastbridgestrategicpartners.com/insights/how-long-to-build-a-villa-dubai/ | Posted (link comment in; 41 impr. at 35m) |
-| 15 Nov | Sun | Plot checks before you pay | Full guide: https://eastbridgestrategicpartners.com/insights/buying-a-villa-plot-in-dubai-checks/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 13 Nov | Fri | Stalled build: first ten days | Full guide: https://eastbridgestrategicpartners.com/insights/stalled-villa-project-dubai/ | Posted (link comment in; 249 impr. at ~2d) |
+| 14 Nov | Sat | How long to build a villa | Full guide: https://eastbridgestrategicpartners.com/insights/how-long-to-build-a-villa-dubai/ | Posted (link comment in; 99 impr. at ~1d) |
+| 15 Nov | Sun | Plot checks before you pay | Full guide: https://eastbridgestrategicpartners.com/insights/buying-a-villa-plot-in-dubai-checks/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (link comment in; 22 impr. at ~30m; https://www.linkedin.com/feed/update/urn:li:activity:7527596274146115584/) |
 | 16 Nov | Mon | Renovation mistakes | Full guide: https://eastbridgestrategicpartners.com/insights/villa-renovation-mistakes-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 | 17 Nov | Tue | Renovate or rebuild | Full guide: https://eastbridgestrategicpartners.com/insights/renovate-or-rebuild-villa-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 | 18 Nov | Wed | Building from the UK | Full guide: https://eastbridgestrategicpartners.com/insights/building-a-villa-in-dubai-from-the-uk/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
