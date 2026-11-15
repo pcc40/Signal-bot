@@ -9,7 +9,7 @@
 
 ## What changes from Monday
 - **Follow-ups first.** One short follow-up to every firm in batches 4–9 that has not replied or bounced: subject "Re: <original subject>", 25–45 words, quoting nothing, offering one concrete thing:
-  - referrers (studios, agencies, inspectors, valuers, brokers, holiday homes, specialists): a referral partnership like Fedari's, with a listing on our Partners page (https://eastbridgestrategicpartners.com/partners/) for firms we work with;
+  - referrers (studios, agencies, inspectors, valuers, brokers, holiday homes, specialists): an offer to meet for a coffee first. Phil decided on 15 Nov: no referral or partnership offers until he has met the firm;
   - advisers (wealth, law, insurance, conveyancers, mortgage): a one-page owner's checklist they can give clients (https://eastbridgestrategicpartners.com/guides/villa-owner-checklist/).
   One link only, in the follow-up. Close with a yes/no question.
 - **Named people.** New research finds the founder or a named partner on the firm's own site and writes "Dear <first name>". Personal addresses only if the firm publishes them; otherwise the general address with the person's name in the greeting.
