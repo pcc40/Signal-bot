@@ -113,7 +113,7 @@ def proof_strip():
 <li><b>The Times</b><span>Owers House was <a href="{TIMES_URL}" rel="noopener">reported in The Times</a></span></li>
 <li class="proof-who"><img src="/assets/img/philip-chapman-thumb.webp" width="56" height="56" alt="Philip Chapman" loading="lazy" decoding="async"><b>Philip Chapman</b><span>Founding Partner. He leads every appointment personally.</span></li></ul>
 <figure class="proof-quote"><blockquote>&ldquo;{esc(q)}&rdquo;</blockquote><figcaption>{esc(who)}, {esc(where)}<br><span class="muted">Client of P Chapman Construction</span></figcaption></figure>
-<p class="proof-ref">References from past UK clients on request.</p>
+<p class="proof-ref">References from past UK clients are shared at appointment stage, before you sign.</p>
 </div></div>
 <p class="proof-note small muted">UK work by P Chapman Construction, the company Philip Chapman founded and led for 21 years.</p>
 </div></section>"""

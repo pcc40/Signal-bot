@@ -17,6 +17,7 @@ Eastbridge is NOT an engineering consultancy office. Under Dubai Law No. 14 of 2
 - Authority route: say "Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits" — do not assert which authority covers a specific community.
 - Never use the words supervise, supervision, certify or certification anywhere on the site, even about other parties (owner's decision, 15 November 2026): for the registered consultant's role say "statutory site inspection"; for payments say "approved" or "valued". Never say we manage or direct the architect, engineer or contractor: we work alongside them and coordinate the owner's decisions.
 - Do not give legal advice; say "take advice from a UAE-qualified lawyer" where relevant.
+- Client references and client details (names, contact details, addresses) are shared only at a serious appointment stage, before the owner signs. Never offer them "on request", and never offer to put a reader in touch with a past client earlier than that (owner's decision, 15 November 2026). The approved line is: "References from past UK clients are shared at appointment stage, before you sign."
 
 ## Format (Markdown file with YAML front matter)
 File: src/content/insights/<slug>.md

@@ -1301,3 +1301,20 @@ html:not([lang^="en"]) .prose .scene{line-height:1.6}
 html:not([lang^="en"]) .proof-lead__txt b{font-size:var(--s-2);line-height:1.2}
 @media (min-width:1101px) and (max-width:1300px){html[lang="hi"] .mega,html[lang^="zh"] .mega{transform:translateX(-56%)}}
 @media (min-width:761px) and (max-width:1300px){.hero-cap{position:static;margin:20px 0 0;max-width:none;text-align:left}}
+
+/* ---- 15 Nov 2026: phones, a slimmer cookie bar. One line of text with the privacy link, the two buttons side by side,
+   flush on top of the action bar, so the hero's first button stays in view (checked at 390 x 844 in all five languages). ---- */
+.cookie-banner .cb-short{display:none}
+@media (max-width:760px){
+  .cookie-banner .cb-long{display:none}
+  .cookie-banner .cb-short{display:inline}
+  .cookie-banner{inset-inline:0;bottom:calc(61px + env(safe-area-inset-bottom,0px));border-inline:0;border-bottom:0;box-shadow:0 -8px 24px rgba(10,14,16,.24)}
+  .cookie-banner__in{padding:8px 14px 10px}
+  .cookie-banner__p{font-size:.74rem;line-height:1.35;margin:0 0 7px}
+  .cookie-banner__acts{flex-wrap:nowrap;gap:8px}
+  .cookie-banner__acts .btn{flex:1 1 0;min-height:36px;padding:.3em .6em;font-size:.8rem}
+  /* Russian runs longest: a smaller headline and sub-headline and a one-line button keep the first button above the bar. */
+  html[lang="ru"] .hero--still h1{font-size:min(1.95rem,8vw);max-width:none}
+  html[lang="ru"] .hero--still .lede{font-size:.92rem;line-height:1.45}
+  html[lang="ru"] .hero--still .actions .btn:not(.btn--ghost){font-size:min(.86rem,3.7vw);padding-inline:.7em}
+}

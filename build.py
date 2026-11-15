@@ -492,14 +492,17 @@ def conversion_marker(event, pending, guide=""):
 def consent_banner():
     """Cookie choice for Google Analytics (Consent Mode v2, see analytics()). Static HTML so tools/i18n.py
     translates it; hidden until SCRIPT finds no stored choice. Bottom of the screen, non-blocking (not a
-    dialog): the page stays usable and nothing is measured until "Accept analytics"."""
+    dialog): the page stays usable and nothing is measured until "Accept analytics". Phones show the one-line
+    question (.cb-short) so the bar stays slim and the hero's first button is in view; wider screens show the
+    full sentence (.cb-long). site.css switches between them."""
     if not C.GA4_ID:
         return ""
     return ('<section class="cookie-banner" id="cookie-banner" aria-labelledby="cookie-banner-h" hidden><div class="cookie-banner__in">'
             '<h2 class="cookie-banner__h" id="cookie-banner-h">Analytics cookies</h2>'
-            '<p class="cookie-banner__p">With your agreement, we use Google Analytics cookies to see which pages are useful. '
+            '<p class="cookie-banner__p"><span class="cb-short">May we use Google Analytics cookies? <a href="/privacy/">Privacy notice</a></span>'
+            '<span class="cb-long">With your agreement, we use Google Analytics cookies to see which pages are useful. '
             '<span class="cb-more">Nothing is measured unless you accept, and we use no advertising cookies. You can change your choice at any time '
-            'with Cookie settings at the foot of each page.</span> See our <a href="/privacy/">privacy notice</a>.</p>'
+            'with Cookie settings at the foot of each page.</span> See our <a href="/privacy/">privacy notice</a>.</span></p>'
             '<div class="cookie-banner__acts"><button class="btn" type="button" data-consent="granted">Accept analytics</button>'
             '<button class="btn btn--ghost" type="button" data-consent="denied">Decline</button></div></div></section>')
 

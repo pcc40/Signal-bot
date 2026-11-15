@@ -659,7 +659,7 @@ def partners():
 
 # Money and working questions, shared by /faq/, /independence/ and /fees/ (FAQPage markup on each).
 MONEY_FAQS = [
- ("Do you pay contractors on my behalf?", "No. You pay your consultant, contractor and suppliers directly, and money never passes through us. We review each payment application against the work done and the contract, and recommend what to pay. We never instruct the contractor or approve a payment without your written approval."),
+ ("Do you pay contractors for me?", "No. You pay your consultant, contractor and suppliers directly, and money never passes through us. We review each payment application against the work done and the contract, and recommend what to pay. We never instruct the contractor or approve a payment without your written approval."),
  ("Do you keep an approved-supplier list or take commissions?", "No. We keep no approved-supplier list: you choose and appoint your consultant, contractor and suppliers, and we help you compare them like-for-like. We are paid only by you, and take no commission or referral fee from anyone we help you appoint. See our <a href=\"/independence/\">independence pledge</a>."),
  ("Who will I deal with?", "Philip Chapman, our founder. He leads every appointment personally and is the person you speak to from the first conversation to handover. He is supported by three independent, UAE-based project managers he works with, who attend site and provide cover when he is unavailable."),
 ]

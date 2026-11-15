@@ -13,6 +13,7 @@
 **Hard rules (never break):**
 - Never use: supervise/supervision, certify, turnkey, "on your behalf", obtain/submit permits, prequalify, engineer (verb).
 - Never claim UAE projects or clients, UAE experience, team names or extra team detail, turnover, or name architects as partners. The one approved team line (Phil, 15 Nov 2026) is that Philip is supported by three independent, UAE-based project managers he works with, who attend site and provide cover when he is unavailable. Say only "independent" and "UAE-based" about them: no Dubai project experience, years, names, qualifications or nationalities.
+- Client references and client details (names, contact details) are shared only at a serious appointment stage, before the owner signs: never "on request", and never offered in outreach, on the site or in a first conversation (Phil, 15 Nov 2026). Approved line: "References from past UK clients are shared at appointment stage, before you sign."
 - British English, no exclamation marks.
 - Outreach never mentions referrals, referral fees or partnership offers (Phil, 15 Nov: he refers no one until he has met them).
 - Cold email: sent through Bird from philip@ (sending domain verified), 50/day limit, one at a time, no open/click tracking. Primo Capital is do-not-contact. Logs in business/outreach-batch-*-log.md; status in STATUS.md.
