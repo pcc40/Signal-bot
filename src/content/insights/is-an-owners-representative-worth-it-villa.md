@@ -17,7 +17,7 @@ faqs:
   - q: "Will an owner's representative save me money?"
     a: "No honest firm can promise a saving. What a client-side project manager does is reduce the chances of the costs that sink villa budgets: an incomplete scope, variations priced without challenge, payments ahead of progress and defects found too late. Whether that outweighs the fee depends on the project."
   - q: "What is the difference between an owner's representative and the registered consultant?"
-    a: "In Dubai the supervision consultant is a registered engineering consultancy with statutory duties. An owner's representative works alongside it on the owner's side, on brief, budget, programme, commercial matters and independent reporting, and does not take on the consultant's statutory role."
+    a: "In Dubai the consultant of record is a registered engineering consultancy with statutory duties. An owner's representative works alongside it on the owner's side, on brief, budget, programme, commercial matters and independent reporting, and does not take on the consultant's statutory role."
   - q: "How much does an owner's representative cost in Dubai?"
     a: "There is no published Dubai benchmark. Fees are charged as a percentage, a monthly fee or a fixed fee per stage. Our guide to client-side project manager fees explains how each works and what to ask before you agree one."
 sources:
@@ -47,7 +47,7 @@ A client-side project manager, or owner's representative, is the one adviser pai
 - **Independent site visits** at the moments that matter, with written reports and dated photographs.
 - **Decisions made on time**, so the programme does not stall waiting for you.
 
-None of this replaces the registered consultant. In Dubai, only consultancies registered with Dubai Municipality may practise engineering consultancy, including supervision ([Al Tamimi](https://www.tamimi.com/news/dubai-issues-new-law-regulating-engineering-consultancy-activities-key-takeaway-points/)). We work alongside your consultant and contractor; we do not take on their statutory roles. Our article on [owner's representative, project manager and consultant](/insights/owners-representative-vs-project-manager-vs-consultant/) sets out who does what.
+None of this replaces the registered consultant. In Dubai, only consultancies registered with Dubai Municipality may practise engineering consultancy, including statutory site inspection ([Al Tamimi](https://www.tamimi.com/news/dubai-issues-new-law-regulating-engineering-consultancy-activities-key-takeaway-points/)). We work alongside your consultant and contractor; we do not take on their statutory roles. Our article on [owner's representative, project manager and consultant](/insights/owners-representative-vs-project-manager-vs-consultant/) sets out who does what.
 
 ## When is an owner's representative worth it?
 
@@ -77,7 +77,7 @@ Over-design is a real risk here. In August 2025 Dubai Municipality warned villa 
 
 ### Payments ahead of progress
 
-A large deposit or a payment certified before the work is done removes your leverage. Checking that each payment matches what is actually on site is one of the simplest and most valuable things anyone on your side can do.
+A large deposit or a payment approved before the work is done removes your leverage. Checking that each payment matches what is actually on site is one of the simplest and most valuable things anyone on your side can do.
 
 ### Defects found too late
 

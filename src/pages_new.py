@@ -6,6 +6,7 @@ from content.services import SERVICES, BY_SLUG as SVC
 from content.areas import AREAS
 from content.projects import PROJECTS, BY_SLUG as PROJ, RECOGNITION, TESTIMONIALS
 import content.case_island_e as CS
+import content.answers as ANS
 
 esc = H.escape
 pic = B.picture
@@ -123,8 +124,8 @@ def home(posts, post_cards, stages_html, svc_img):
     owers = PROJ["owers-house"]
     faqs = [
      ("What does a client-side project manager do?", "We manage your villa build or renovation from your side. We set the budget and programme with you, help you compare and choose the consultant and contractor you appoint, check the design against the budget, monitor cost, programme and quality, review payments and variations before you pay, and lead handover."),
-     ("Why not leave it to the architect or the contractor?", "A properly appointed consultant has real duties for the design, approvals and statutory supervision, and the contractor is responsible for building to the contract. Each also has its own commercial position, and neither is usually appointed to coordinate the whole project and test every price, payment and claim from your side. That independent coordination and commercial scrutiny is what we add. <a href=\"/why-a-client-side-project-manager/\">Why client-side matters</a>."),
-     ("Do you replace the registered consultant?", "No. Your villa needs a registered consultant for the statutory design, permit submissions and supervision duties. We help you choose them and work alongside them and the contractor, so that what is delivered matches what you agreed to pay for."),
+     ("Why not leave it to the architect or the contractor?", "A properly appointed consultant has real duties for the design, approvals and statutory site inspections, and the contractor is responsible for building to the contract. Each also has its own commercial position, and neither is usually appointed to coordinate the whole project and test every price, payment and claim from your side. That independent coordination and commercial scrutiny is what we add. <a href=\"/why-a-client-side-project-manager/\">Why client-side matters</a>."),
+     ("Do you replace the registered consultant?", "No. Your villa needs a registered consultant for the statutory design, permit submissions and statutory site inspection duties. We help you choose them and work alongside them and the contractor, so that what is delivered matches what you agreed to pay for."),
      ("Can you guarantee the budget or the completion date?", "No one can honestly guarantee either on a construction project. What we provide are controls that bring problems to light early: a cost plan and a monthly forecast final cost, programme monitoring, payment review against work done, variations priced before you instruct them, a decision log and records kept from the first day."),
      ("How are you paid?", "By you alone. We take no commission, referral fee or discount from any contractor, consultant or supplier. See <a href=\"/fees/\">how fees work</a>."),
      ("What happens after I get in touch?", "Send a short note through the contact form or on WhatsApp and we will reply to arrange the free 30-minute call at a time that suits you. There is no obligation to go further."),
@@ -206,7 +207,7 @@ def why_page():
     moments = "".join(f"<li><b>{esc(t)}</b><span>{esc(d)}</span></li>" for t, d in MOMENTS)
     faqs = [
      ("Isn't the architect supposed to protect my budget?", "A good architect will design to a budget if asked, but their job is the design. In August 2025 Dubai Municipality formally warned villa consultancies about over-designing villas and inflating build costs. An independent cost check at every design stage is a sensible safeguard alongside the architect's own work."),
-     ("Doesn't the registered consultant supervise the contractor?", "The consultant of record carries statutory supervision duties: that the building is built to the approved design and the code. That is an important duty, but it is not usually the same scope as reviewing every payment from your side, testing the price of every variation and every delay claim, or managing your overall programme and budget. We add that, alongside them."),
+     ("Doesn't the registered consultant check the contractor's work?", "The consultant of record carries statutory site inspection duties: that the building is built to the approved design and the code. That is an important duty, but it is not usually the same scope as reviewing every payment from your side, testing the price of every variation and every delay claim, or managing your overall programme and budget. We add that, alongside them."),
      ("Will good contractors resent an owner's project manager?", "In our experience the opposite. Good contractors prefer an informed client: decisions are made on time, information arrives when it should and payments are made promptly for work done. The contractors who dislike scrutiny are the ones you most need it with."),
      ("When is it too late to bring you in?", "It is never too late to help, but the earlier the better. Most of a project's cost is fixed by the brief, the design and the contract. We also take on projects that have stalled or are in dispute."),
      ("What does it cost?", "Every one-off villa is different, so we agree a written scope of works after the free call and price it within our published ranges: a review, part service or full service, depending on the input you need. Work outside the scope is quoted before it starts. See <a href=\"/fees/\">how fees work</a>. We will tell you if we do not think your project needs us."),
@@ -366,6 +367,7 @@ def case_page():
                     CASE_HERO, B.img_credit(CASE_HERO),
                     '<span class="tag">Worked example · Hypothetical</span>') + f'''
 <section class="section--tight"><div class="wrap">{notice}</div></section>
+<section class="section--tight"><div class="wrap prose">{ANS.answer_html(path)}</div></section>
 <section class="section--tight"><div class="wrap">{pages.strip_html(CASE_STRIP, note=CASE_STRIP_NOTE)}</div></section>
 <section class="section--tight"><div class="wrap">
 <h2>What is published, what is assumed, what is invented</h2>

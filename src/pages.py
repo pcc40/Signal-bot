@@ -276,7 +276,7 @@ def services_hub():
     body = B.banner(crumbs, "Services for villa owners", "Client-side project management from the first budget to the end of the defects period, or just the part you need.", "sea-glass-house-01", credit_of("sea-glass-house-01")) + f'''
 <section class="section"><div class="wrap">{svc_cards(SERVICES)}</div></section>
 <section class="section paper"><div class="wrap split"><div><h2>What we don't do</h2></div><div class="prose">
-<p>We are not a contractor and we hold no construction contracts. We are not an engineering consultancy: the statutory design, permit submissions and supervision of your villa are carried out by the registered consultant you appoint, and we represent you alongside them. We are not lawyers; where legal advice is needed, we work with your UAE-qualified lawyer. And we are not estate agents.</p>
+<p>We are not a contractor and we hold no construction contracts. We are not an engineering consultancy: the statutory design, permit submissions and statutory site inspections of your villa are carried out by the registered consultant you appoint, and we represent you alongside them. We are not lawyers; where legal advice is needed, we work with your UAE-qualified lawyer. And we are not estate agents.</p>
 <p>Keeping these lines clear is what lets us act for you alone.</p></div></div></section>
 {B.cta_band()}'''
     schema = [{"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [
@@ -439,7 +439,7 @@ def area_page(a):
     body = B.banner(crumbs, esc(a["h1"]), esc(a["lede"]), img, credit_of(img)) + f'''
 <section class="section"><div class="wrap split">
 <div><dl class="facts"><div><dt>City</dt><dd>{esc(a["city"])}</dd></div><div><dt>Master developer</dt><dd>{esc(a["developer"])}</dd></div><div><dt>Typical work</dt><dd>{esc(a["tag"])}</dd></div></dl></div>
-<div class="prose"><p class="muted">We cover every community in Dubai and Abu Dhabi. This page is one example of how we approach a community, not a limit on where we work.</p>{a["body"]}{srcs}</div></div></section>
+<div class="prose">{ANS.answer_html(path)}<p class="muted">We cover every community in Dubai and Abu Dhabi. This page is one example of how we approach a community, not a limit on where we work.</p>{a["body"]}{srcs}</div></div></section>
 {owner}<section class="section--tight"><div class="wrap">{strip_html(others)}</div></section>
 <section class="section paper"><div class="wrap split"><div><h2>Questions about {esc(a["name"])}</h2></div><div>{B.faq_html(a["faqs"])}</div></div></section>
 <section class="section"><div class="wrap"><h2>Services most relevant here</h2>{svc}</div></section>
@@ -549,7 +549,7 @@ def approach():
 <table><thead><tr><th>Party</th><th>Their role</th></tr></thead><tbody>
 <tr><td>You, the owner</td><td>Decide, approve and pay. Appoint the consultant and contractor.</td></tr>
 <tr><td>Eastbridge</td><td>Represent you: brief, budget, programme, appointments advice, cost control, reporting, variations and claims, handover.</td></tr>
-<tr><td>Registered consultant</td><td>Statutory design, authority submissions and the supervision duties required by law.</td></tr>
+<tr><td>Registered consultant</td><td>Statutory design, authority submissions and the site inspection duties required by law.</td></tr>
 <tr><td>Main contractor</td><td>Build the villa to the contract, manage subcontractors and site safety.</td></tr>
 <tr><td>Other specialists</td><td>Quantity surveyors, engineers, testing labs and lawyers, appointed and paid by you when the project needs them.</td></tr>
 <tr><td>Master developer</td><td>Review the design against the community guidelines and issue NOCs.</td></tr>
@@ -562,7 +562,7 @@ def approach():
 <h3>Consultants, quantity surveyors, engineers and specialists</h3><p>Where the project needs a registered consultant, a quantity surveyor, an engineer or another specialist, you appoint them and pay them directly. We help you define what is needed, compare proposals like-for-like and choose. We take no commission or referral fee from any of them, and money never passes through us.</p>
 <h3>What we do, and what we don't</h3>
 <p>We provide commercial and project management on your side of the table: the brief, budget and programme, cost reporting, review of payments and variations, commercial and contractual advice, client-side site visits and reporting, decision and issues logs, and handover.</p>
-<p>We do not carry out statutory design, authority submissions or permit applications, statutory supervision or certification of the works. Those duties sit with the registered consultant you appoint. We do not give legal advice; where it is needed, take advice from a UAE-qualified lawyer, and we will work alongside them.</p>
+<p>We do not carry out statutory design, authority submissions or permit applications, statutory site inspection or formal approval of the works. Those duties sit with the registered consultant you appoint. We do not give legal advice; where it is needed, take advice from a UAE-qualified lawyer, and we will work alongside them.</p>
 </div></div></section>
 <section class="section"><div class="wrap split"><div><h2>Why a builder's background matters</h2></div><div class="prose">
 <p>Many owner's representatives come from consultancy. Philip came from contracting. For 21 years our founder, Philip Chapman, ran P Chapman Construction, a premium building company whose houses have won RIBA and LABC recognition, pricing tenders, running sites, preparing and defending extension of time and variation claims under JCT contracts, and handing over houses to demanding owners and architects.</p>
@@ -585,7 +585,7 @@ def independence():
      ("Your information stays yours", "Your plans, budget and personal details are confidential. We never publish a client's name, address or project without written permission."),
     ]
     lis = "".join(f"<li><strong>{esc(t)}</strong>{esc(d)}</li>" for t, d in items)
-    body = B.banner(crumbs, "Our independence pledge", "In a market where many project managers also design, build or take referral fees, independence has to be written down. This is ours, and it is written into every Eastbridge appointment.", "the-lookout-09", credit_of("the-lookout-09")) + f'''
+    body = B.banner(crumbs, "Our independence pledge", "In a market where many project managers also design, build or take referral fees, independence has to be written down. This is ours, and it is written into every Eastbridge appointment. We take no commission, referral fee or discount from any contractor, consultant or supplier.", "the-lookout-09", credit_of("the-lookout-09")) + f'''
 <section class="section"><div class="wrap"><ul class="pledge">{lis}</ul></div></section>
 <section class="section paper"><div class="wrap split"><div><h2>Why it matters</h2></div><div class="prose">
 <p>When the person checking the contractor's invoices also earns a referral fee from that contractor, the check is not independent. When a design-and-build company's in-house project manager reports to the same owner as the builders, the check is not independent. When a consultant reviews the cost of a design they produced, the check is not independent.</p>
@@ -741,7 +741,7 @@ def fees():
 <p class="small"><a class="link" href="/services/stalled-project-rescue/">About stalled project rescue</a></p></div><div class="prose">
 <h3>Scope</h3><ul><li>An independent review of progress, quality, payments and the contract position</li><li>A realistic cost and time to complete</li><li>The options: continue, renegotiate or replace the contractor</li></ul>
 <h3>You receive</h3><ul><li>The full picture: where the project stands on progress, quality, payments and the contract</li><li>Clear options, each with its costs and risks</li><li>A recovery plan for the option you choose</li></ul>
-<h3>Not included</h3><ul><li>Legal advice on withholding payment, termination or disputes: take advice from a UAE-qualified lawyer</li><li>Statutory supervision, certification of work or engineering investigation, which remain with the registered consultant and any engineer you appoint</li><li>Running the recovery through to completion, which would be a separate scope of works if you want one</li></ul>
+<h3>Not included</h3><ul><li>Legal advice on withholding payment, termination or disputes: take advice from a UAE-qualified lawyer</li><li>Statutory site inspection, formal approval of work or engineering investigation, which remain with the registered consultant and any engineer you appoint</li><li>Running the recovery through to completion, which would be a separate scope of works if you want one</li></ul>
 <h3>How the quotation is set</h3>{basis("the size and stage of the villa, the volume of contract and payment records to review, and the site visits the review needs")}
 </div></div></section>
 <section class="section paper"><div class="wrap prose">
@@ -840,7 +840,7 @@ def about():
 <li><strong>Three project managers on site.</strong> A team of three project managers supports him. They attend site and provide cover when he is unavailable. Capacity is confirmed before an appointment is accepted.</li>
 <li><strong>Site attendance agreed in writing.</strong> How often we attend site and what we report are agreed in the scope of each appointment, before work starts.</li>
 <li><strong>Specialists appointed and paid by you.</strong> Where the project needs a DM-registered consultant, a quantity surveyor, a lawyer or another specialist, you appoint and pay them directly. We help you define what is needed, compare proposals and choose, and we take no commission or referral fee from any of them.</li>
-<li><strong>Where our role stops.</strong> Our role is commercial and project management on your side. Statutory design, authority submissions and supervision stay with your registered consultant, and legal advice with your UAE-qualified lawyer.</li>
+<li><strong>Where our role stops.</strong> Our role is commercial and project management on your side. Statutory design, authority submissions and statutory site inspections stay with your registered consultant, and legal advice with your UAE-qualified lawyer.</li>
 </ul>
 <p><strong>We never publish a client's name, address or photographs without written consent.</strong></p>
 <p>More detail in <a href="/approach/#uae-appointments">how an appointment works in the UAE</a> and <a href="/fees/">how our fees work</a>.</p></div></div></section>
@@ -853,12 +853,12 @@ def about():
 FAQ_ALL = [
  ("What is an owner's representative?", "An owner's representative is a professional who acts only for the person paying for a building project. On a villa, we set the budget and programme, help appoint the consultant and contractor, control cost and time, report progress, handle variations and claims, and lead handover."),
  ("Do I need an owner's representative to build a villa in Dubai?", "It isn't required by law. It is most valuable on bespoke villas, major renovations, and projects where the owner is often abroad or has not built before. We will tell you honestly if you don't need us."),
- ("How is that different from the consultant I have to appoint?", "In Dubai, a registered consultant carries the statutory design, submission and supervision responsibilities. They owe you proper professional care in that role. We add independent coordination and commercial scrutiny alongside them, acting only for you on cost, time, decisions, contracts and quality."),
+ ("How is that different from the consultant I have to appoint?", "In Dubai, a registered consultant carries the statutory design, submission and site inspection responsibilities. They owe you proper professional care in that role. We add independent coordination and commercial scrutiny alongside them, acting only for you on cost, time, decisions, contracts and quality."),
  MONEY_FAQS[2],
  ("Who attends site, and who covers when Philip is away?", "Philip leads every appointment and attends site himself. He is supported by a team of three project managers who attend site and provide cover when he is unavailable, for example when he is travelling. How often we attend site is agreed in writing in your appointment."),
  ("How often will you be on site?", "It is agreed in writing in the scope of your appointment, before work starts. We are on site regularly through construction, at the frequency agreed in your scope of works, planned around key stages. See <a href=\"/approach/#uae-appointments\">how an appointment works in the UAE</a>."),
  ("Who appoints the quantity surveyor, engineers and other specialists?", "You do, and you pay them directly. We help you work out what is needed, compare proposals like-for-like and choose. We take no commission or referral fee from anyone we help you appoint."),
- ("Do you handle permits, supervision or legal advice?", "No. Statutory design, authority submissions and supervision are the duties of the registered consultant you appoint, and legal advice should come from a UAE-qualified lawyer. Our role is commercial and project management on your side, alongside them."),
+ ("Do you handle permits, statutory site inspections or legal advice?", "No. Statutory design, authority submissions and statutory site inspections are the duties of the registered consultant you appoint, and legal advice should come from a UAE-qualified lawyer. Our role is commercial and project management on your side, alongside them."),
  MONEY_FAQS[0],
  MONEY_FAQS[1],
  ("How do your fees work?", "The first call is free and takes about 30 minutes. Every one-off villa is different, so we then agree a written scope of works and price it within our published ranges for the level of input you need; any work outside that scope is quoted before it starts." + (f" A review (plot, design, contractor quote or stalled project) is {C.fee_text('review')}; part service, with cost, contract and payment reviews and monthly reporting, is {C.fee_text('part')}; full service is {C.fee_text('full')}, depending on the input required." if C.PUBLISH_FEES else "") + " We never publish a day rate, an hourly rate or a fixed price. See <a href=\"/fees/\">how fees work</a>."),
@@ -1043,7 +1043,7 @@ def legal():
     body = B.page_head(crumbs, "Website terms", None) + f'''<section class="section--tight"><div class="wrap prose">
 <p>This website is operated by {esc(C.LEGAL)}, {esc(C.LICENCE)}, {esc(C.ADDRESS["street"])}, {esc(C.ADDRESS["locality"])}, {esc(C.ADDRESS["country_name"])}.</p>
 <h2>About the information on this site</h2><p>Articles and guides on this site are general information, not advice for your specific project. Costs, timelines and regulations change; figures are drawn from the sources cited and should be checked for your circumstances. Nothing on this site is legal, financial, valuation or engineering advice.</p>
-<h2>Our role</h2><p>Eastbridge acts as an owner's representative and adviser. It is not a contractor, an engineering consultancy office, a law firm or a real estate broker. Statutory design, authority submissions and supervision of construction are carried out by registered consultants appointed by the client.</p>
+<h2>Our role</h2><p>Eastbridge acts as an owner's representative and adviser. It is not a contractor, an engineering consultancy office, a law firm or a real estate broker. Statutory design, authority submissions and statutory site inspections are carried out by registered consultants appointed by the client.</p>
 <h2>Projects shown</h2><p>Projects shown on this site were delivered in the United Kingdom by P Chapman Construction, the company established and led by our founder, acting as main contractor. Photographs are credited to their photographers and used with permission.</p>
 <h2>Liability</h2><p>Our services are provided only under a written appointment, which sets out our scope, fees and liability. To the extent permitted by law, we accept no liability for reliance on information on this website.</p>
 <h2>Law</h2><p>These terms are governed by the laws of the Emirate of Dubai and the federal laws of the UAE.</p>
@@ -1094,7 +1094,7 @@ def insights(posts):
         meta = f'{esc(p.get("category",""))} · {d.strftime("%-d %B %Y")}{upd} · {mins} min read · By <a href="/about/#founder">{esc(C.FOUNDER["name"])}</a>'
         body = "<article>" + B.banner(c, esc(p["title"]), None, hero_img, credit_of(hero_img), f'<p class="article-meta">{meta}</p>') + f'''
 <section class="section--tight"><div class="wrap article-grid"><div class="prose">
-{('<div class="keypoints"><h2>Key points</h2><ul>' + kp + '</ul></div>') if kp else ""}
+{ANS.answer_html(path)}{('<div class="keypoints"><h2>Key points</h2><ul>' + kp + '</ul></div>') if kp else ""}
 {toc}
 {body_html}
 {related.block_html(p, posts, SVC, AREA, esc)}

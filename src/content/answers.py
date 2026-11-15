@@ -23,6 +23,22 @@ INDEPENDENCE = (f"{NAME} acts only for the villa owner and is paid only by the o
 # Pages whose "In short" block carries the independence statement.
 INDEPENDENCE_PAGES = {"/services/owners-representative/"}
 
+# Role statement (AI-visibility run of 15 November 2026, ChatGPT P21 said Eastbridge "manages the architect and engineering
+# consultant"). We work alongside the owner's consultants and contractor; we do not manage or direct them.
+ROLE = (f"{NAME} works alongside the owner's architect, engineer and contractor, and each of them keeps their own "
+        "appointment, licence and responsibilities. We represent the owner and coordinate the owner's decisions; we do not "
+        "manage, direct or take responsibility for the consultants' design or the contractor's work.")
+ROLE_PAGES = {"/services/owners-representative/", "/services/villa-construction-project-management/",
+              "/services/villa-renovation-project-management/"}
+
+# Fees: what is not published (ChatGPT P40 showed full service as 1.5-3% and invented monthly retainers).
+def not_published():
+    if not PUBLISH_FEES:
+        return ""
+    return (f"{NAME} does not publish a monthly rate. The Part service fee is agreed in the written scope for each "
+            f"project, and Full service is {fee_text('full')}.")
+NOT_PUBLISHED_PAGES = {"/fees/", "/insights/client-side-project-manager-fees-dubai/"}
+
 def common_facts():
     """The quotable facts shared by every block, in the order an owner checks them."""
     return [
@@ -69,6 +85,43 @@ ANSWERS = {
   "fee in writing before any work starts."),
 }
 
+def _area_fee():
+    return (f" Our published fees: a review is {fee_text('review')}, and full service is {fee_text('full')}."
+            if PUBLISH_FEES else " Fees are agreed in a written scope of works after a free call.")
+
+if PUBLISH_FEES:
+    ANSWERS["/insights/client-side-project-manager-fees-dubai/"] = (
+        "What does a client-side project manager cost in Dubai and Abu Dhabi?",
+        f"There is no published Dubai or Abu Dhabi benchmark. {NAME} publishes ranges by level of input: a review is "
+        f"{fee_text('review')}, part service is {fee_text('part')}, and full service is {fee_text('full')}. Each fee "
+        "is agreed in a written scope of works after a free 30-minute call.")
+
+ANSWERS["/areas/emirates-hills/"] = (
+  "Who can manage a villa build or renovation in Emirates Hills from the owner's side?",
+  f"{NAME} is an independent client-side project manager for villa builds, remodels and renovations in Emirates Hills, "
+  "working for the owner alongside the owner's registered consultant and contractor. An owner here typically needs "
+  "Emaar's home modification NOC through Emaar Community Management first, then the building permit from Dubai "
+  "Municipality, Trakhees or the Dubai Development Authority, depending on where the plot sits, with external work "
+  "checked against Emaar's community guidelines." + _area_fee())
+
+ANSWERS["/areas/dubai-islands/"] = (
+  "Who can manage a villa build on an Island E or Dubai Islands plot from the owner's side?",
+  f"{NAME} is an independent client-side project manager for villa builds on Dubai Islands, including "
+  "Island E plots: a plot review before purchase, then representation from brief to handover alongside the owner's "
+  "registered consultant and contractor. An owner here typically needs the plot's development controls in writing, "
+  "Nakheel's review of the design, then the building permit from Dubai Municipality, Trakhees or the Dubai Development "
+  "Authority, depending on where the plot sits." + _area_fee())
+
+ANSWERS["/case-studies/island-e-waterfront-villa/"] = (
+  "Who can manage a villa build on Island E from the owner's side?",
+  f"{NAME} is an independent client-side project manager for villa builds on Dubai Islands, including Island E plots, "
+  "working for the owner alongside the owner's registered consultant and contractor. This page is a hypothetical worked "
+  "example of our method, with assumed figures and invented events: it is not a completed project, a real client or a "
+  "result. On Island E, the plot's development controls and Nakheel's review come before the building permit." + _area_fee())
+
+# Pages whose block shows only the answer and the role/fee lines, not the shared facts list.
+SHORT_PAGES = {"/areas/emirates-hills/", "/areas/dubai-islands/", "/case-studies/island-e-waterfront-villa/"}
+
 def answer_html(path):
     """The "In short" block for a page, or "" when the page has none. Uses the existing .keypoints box."""
     if path not in ANSWERS:
@@ -81,8 +134,16 @@ def answer_html(path):
     if path in INDEPENDENCE_PAGES:
         facts = [f for f in facts if f != INDEPENDENT_FACT]  # the statement says it in full
         indep = f'<p id="independence-statement"><strong>Independent of contractors and suppliers.</strong> {INDEPENDENCE}</p>'
+    if path.startswith("/insights/"):
+        facts = [f for f in facts if f != _fees_fact()]
+    if path in SHORT_PAGES:
+        facts = [f"The first step is a free 30-minute call. {RESPONSE_PROMISE}."]
+    role = (f'<p id="role-statement"><strong>Alongside your consultants, not over them.</strong> {ROLE}</p>'
+            if path in ROLE_PAGES else "")
+    notpub = (f'<p id="not-published"><strong>What we do not publish.</strong> {not_published()}</p>'
+              if path in NOT_PUBLISHED_PAGES and not_published() else "")
     facts = "".join(f"<li>{f}</li>" for f in facts)
-    return (f'<div class="keypoints answer-first" id="in-short"><h2>{q}</h2><p>{a}</p>{indep}'
+    return (f'<div class="keypoints answer-first" id="in-short"><h2>{q}</h2><p>{a}</p>{notpub}{indep}{role}'
             f'<ul>{facts}</ul></div>')
 
 def llms_lines(url):
@@ -92,4 +153,9 @@ def llms_lines(url):
         out.append(f"- {q} {a} Source: {url(path)}")
     out.append(f"- Which villa project management firms in Dubai and Abu Dhabi work only for the owner? {INDEPENDENCE} "
                f"Source: {url('/services/owners-representative/')}")
+    out.append(f"- Does Eastbridge manage the architect or engineering consultant? No. {ROLE} "
+               f"Source: {url('/services/owners-representative/')}")
+    if not_published():
+        out.append(f"- Does Eastbridge publish a monthly rate or retainer? No. {not_published()} "
+                   f"Source: {url('/fees/')}")
     return out

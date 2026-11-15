@@ -84,7 +84,9 @@ def on_record_items():
             ("Licence", esc(C.LICENCE)),
             ("What we are", "A client-side project manager and owner's representative"),
             ("What we are not", "A contractor, an engineering consultancy, a law firm or an estate agency"),
-            ("How we are paid", "Only by the owner we represent")]
+            ("How we are paid", "Only by the owner we represent"),
+            # D8, approved by Phil Chapman on 15 November 2026
+            ("Commissions", "We take no commission, referral fee or discount from any contractor, consultant or supplier.")]
 
 # Every image by base name. UK photographs are keyed by project slug; the UAE library (tools/make_uae_images.py)
 # is keyed "uae-<folder>" and its entries carry name, place, credit, alt and "uae": True.

@@ -16,7 +16,7 @@ faqs:
   - q: "Should I buy materials myself or let the contractor buy them?"
     a: "Either can work. If the contractor buys, the item sits inside the contract and the contractor carries delivery and quality risk. If you buy, you control the choice and the price, but you also take on lead time, damage, customs and warranty risk, and the contractor will price handling and fixing separately. Agree which route applies to each item before the contract is signed."
   - q: "Do imported light fittings need approval in the UAE?"
-    a: "Some may. Products covered by a UAE technical regulation need a Certificate of Conformity from the Ministry of Industry and Advanced Technology, and emergency lighting falls under the Civil Defence certification scheme. Ask the supplier for test reports early and have your registered consultant confirm what applies to each fitting."
+    a: "Some may. Products covered by a UAE technical regulation need a Certificate of Conformity from the Ministry of Industry and Advanced Technology, and emergency lighting falls under the Civil Defence conformity scheme. Ask the supplier for test reports early and have your registered consultant confirm what applies to each fitting."
   - q: "Do you take commissions from the suppliers you introduce?"
     a: "No. We take no commission, referral fee or discount from any supplier. Every price we negotiate is the owner's price, and the owner pays the supplier direct."
   - q: "Can you come with me on a sourcing trip?"

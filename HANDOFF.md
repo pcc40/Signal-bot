@@ -13,6 +13,13 @@ Brief: `reports/brief-uae-images-and-content-2026-11-05.md`. Branches merged: `e
 - `TRANSLATION_BRIEF.md`: "Developer and place names in credits stay in Latin script."
 - **Still to do:** the Languages steps for all new and changed English text (new articles, deepened area pages, alt text and credits, related-reading strings, the new links); then IndexNow for the changed URLs in all five languages; then re-check Netlify Core Web Vitals and PageSpeed Insights. Screenshots of this round: `reports/screens/uae-*.png`.
 
+## AI-visibility corrections (15 November 2026, from the ChatGPT/Gemini run of 15 Nov)
+- Role statement (`ROLE` in `src/content/answers.py`) in the "In short" block of `/services/owners-representative/`, `/services/villa-construction-project-management/` and `/services/villa-renovation-project-management/`, and in llms.txt "Common questions": we work alongside the owner's architect, engineer and contractor and do not manage, direct or take responsibility for their work (fixes ChatGPT P21).
+- Fees: "What we do not publish" line (`not_published()`) on `/fees/` and a new "In short" block on `/insights/client-side-project-manager-fees-dubai/`, both from `config.FEES`; also in llms.txt (fixes P40's 1.5% and invented monthly retainers).
+- New "In short" blocks on `/areas/emirates-hills/`, `/areas/dubai-islands/` and `/case-studies/island-e-waterfront-villa/` (P17, P19); the Island E block repeats that it is hypothetical.
+- D8 sentence added to "On the record" (footer and `/about/#on-the-record`) and the `/independence/` lead.
+- The site no longer uses supervise, supervision, certify or certification (English or translations); the consultant's role is "statutory site inspection". Rule added to WRITING_BRIEF.md and TRANSLATION_BRIEF.md. Only remaining match: the BSI source URL (`.../assessment-and-certification/...`) in the sourcing article, which cannot be changed.
+
 ## UAE images (November 2026, branch `eb7/images`)
 Source: `reports/brief-uae-images-and-content-2026-11-05.md` (sections 1, 2 and the image checks in 4).
 

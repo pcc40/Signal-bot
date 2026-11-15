@@ -528,7 +528,7 @@ def sp_out(p):
 <tfoot><tr><th scope="row">Total</th><td data-v="sum-value">{aed(sum(r["value"] for r in p["rows"]))}</td><td data-v="sum-ret">{aed(p["retTotal"])}</td><td data-v="sum-rec">{aed(p["adv"])}</td><td data-v="sum-pay">{aed(p["total"])}</td><td></td><td></td><td></td></tr></tfoot></table></div>
 <p class="calc-reviewed">Last reviewed: {PT.month_year(PT.RATES_REVIEWED)}, by {esc(C.FOUNDER["name"])}</p>
 <p class="calc-note calc-js" data-js-note>Showing the example below. Switch on JavaScript to change the inputs.</p>
-<p class="calc-flag">An illustration of a typical schedule, not your contract and not legal advice. Payment is shown in the month the work is valued; in practice certification and payment follow some weeks later. Excludes variations, VAT and fees. <a href="#sources">Sources and assumptions</a></p>
+<p class="calc-flag">An illustration of a typical schedule, not your contract and not legal advice. Payment is shown in the month the work is valued; in practice approval and payment follow some weeks later. Excludes variations, VAT and fees. <a href="#sources">Sources and assumptions</a></p>
 {actions_html("Hello, I used your stage payment planner and would like to talk through my build budget.")}
 {print_foot(SP_PATH, "Typical advance and retention percentages from Al Tamimi &amp; Company and DLA Piper; the example contract sum from the Eastbridge cost calculator.")}
 </div>'''
@@ -663,7 +663,7 @@ def delay_cost_estimator():
 <li><strong>Contractor's extended site costs.</strong> Off by default. If the delay is on the owner's side (late decisions, late design information, late payment), the contractor may be entitled to more time and its time-related costs. The estimator spreads Turner &amp; Townsend's preliminaries, 12% of construction cost on a 2,500 m² project in Dubai and 15% in Abu Dhabi,{tt25} over a construction phase of 8–14 months:{reca} the shortest build gives the highest monthly figure. Treat it as an order of magnitude; the contract and the records decide what is actually due.</li>
 <li><strong>Professional fees.</strong> Whatever monthly fees continue under your appointments. There is no published benchmark, so nothing is assumed.</li>
 </ol>
-<p>From the builder's side, the cost of delay was always easier to see from the contractor's chair than from the owner's: site cabins, supervision and plant hire run by the week whether work moves or not. The owner's costs are quieter but often larger, because rent and finance never stop. When a build has stalled, our guide to <a href="{STALLED}">what to do when a villa build stalls</a> covers the first ten days, and a <a href="/services/stalled-project-rescue/">stalled project review</a> puts a number on the way back.</p>
+<p>From the builder's side, the cost of delay was always easier to see from the contractor's chair than from the owner's: site cabins, site management and plant hire run by the week whether work moves or not. The owner's costs are quieter but often larger, because rent and finance never stop. When a build has stalled, our guide to <a href="{STALLED}">what to do when a villa build stalls</a> covers the first ten days, and a <a href="/services/stalled-project-rescue/">stalled project review</a> puts a number on the way back.</p>
 </div></div></section>'''
     data = {"kind": "dc", "escalation": ESCALATION, "prelims": PRELIMS, "buildMonths": BUILD_MONTHS}
     faqs = [

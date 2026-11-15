@@ -120,7 +120,7 @@ What helps:
 
 Sometimes. A power of attorney can make life easier for authority submissions, utility connections, handover formalities and signing documents when you cannot travel. It can also be dangerous if it is drawn too widely. A general power of attorney over your property affairs is a very different instrument from one limited to specific tasks on a specific project.
 
-A power of attorney signed in the UK typically needs to go through notarisation and attestation steps before it can be used in the UAE. On the UK side, the Legalisation Office can attach an apostille to a document such as a power of attorney, provided it has first been certified by a UK public official such as a notary or solicitor ([GOV.UK](https://www.gov.uk/get-document-legalised)); UAE attestation follows. The detail changes and depends on the purpose, so take advice from a UAE-qualified lawyer on scope, form and process before you sign anything.
+A power of attorney signed in the UK typically needs to go through notarisation and attestation steps before it can be used in the UAE. On the UK side, the Legalisation Office can attach an apostille to a document such as a power of attorney, provided it has first been attested by a UK public official such as a notary or solicitor ([GOV.UK](https://www.gov.uk/get-document-legalised)); UAE attestation follows. The detail changes and depends on the purpose, so take advice from a UAE-qualified lawyer on scope, form and process before you sign anything.
 
 ## How does UAE construction practice differ from the UK?
 

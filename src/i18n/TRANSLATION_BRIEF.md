@@ -35,7 +35,7 @@ elsewhere (Chinese: 迪拜, 阿布扎比, 朱美拉棕榈岛, 杰贝阿里棕榈
 |---|---|---|---|---|
 | client-side project manager | مدير مشروع من جانب المالك | менеджер проекта на стороне заказчика | 业主方项目经理 | क्लाइंट-साइड प्रोजेक्ट मैनेजर |
 | owner's representative | ممثل المالك | представитель заказчика | 业主代表 | ओनर्स रिप्रेज़ेंटेटिव (मालिक का प्रतिनिधि) |
-| registered consultant (consultant of record) | الاستشاري المسجّل | зарегистрированный консультант (проектировщик) | 注册顾问(设计及监理单位) | पंजीकृत कंसल्टेंट |
+| registered consultant (consultant of record) | الاستشاري المسجّل | зарегистрированный консультант (проектировщик) | 注册顾问(法定设计单位) | पंजीकृत कंसल्टेंट |
 | main contractor | المقاول الرئيسي | генеральный подрядчик | 总承包商 | मुख्य ठेकेदार |
 | master developer | المطوّر الرئيسي | мастер-девелопер | 总开发商 | मास्टर डेवलपर |
 | plot | قطعة الأرض | участок | 地块 | प्लॉट |
@@ -50,6 +50,7 @@ elsewhere (Chinese: 迪拜, 阿布扎比, 朱美拉棕榈岛, 杰贝阿里棕榈
   registered consultant. Do not translate "project manager" as "engineer" or "consultant". Do not add claims.
 - The Island E case study is illustrative. Keep every word that signals that ("illustrative", "modelled", "fictional").
 - Do not add or imply that Eastbridge has completed projects or clients in the UAE.
+- Do not use words meaning "supervise", "supervision", "certify" or "certification" (e.g. إشراف, надзор, 监理/监督, पर्यवेक्षण). For the consultant's statutory role, translate "statutory site inspection" literally.
 - Don't soften or strengthen numbers, guarantees or legal statements. Translate "about", "typically", "can" faithfully.
 - Hindi: natural modern Hindi as used by educated professionals; common English business terms may be written in
   Devanagari (प्रोजेक्ट, बजट, कॉन्ट्रैक्टर). Not Sanskritised, not Hinglish in Latin script.

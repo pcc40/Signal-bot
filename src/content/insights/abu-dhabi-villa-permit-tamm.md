@@ -95,9 +95,9 @@ The sequence below is how we would plan it from the owner's side. Your registere
 
 ### What changed in October 2026?
 
-Circular No. 9 of 2026, issued by DMT's Urban Planning and Permits Centre, replaces traditional phase-closure permits with certified technical reports for designated categories of project. The registered consultant responsible for supervising the works and the contractor prepare a dated, signed report with photographs covering the works, inspections and corrective actions, and the two share legal liability for non-compliance. The centre continues unannounced site visits. The circular does not waive mandatory field inspections where physical verification is required, or clearances from other bodies such as Abu Dhabi Civil Defence ([WAM](https://www.wam.ae/en/article/c2qm3pn-uppc-issues-circular-streamline-construction), [Khaleej Times](https://www.khaleejtimes.com/uae/abu-dhabi-replaces-paper-permits-for-buildings-with-digital-reports-new-directive)).
+Circular No. 9 of 2026, issued by DMT's Urban Planning and Permits Centre, replaces traditional phase-closure permits with signed technical reports for designated categories of project. The registered consultant responsible for inspecting the works and the contractor prepare a dated, signed report with photographs covering the works, inspections and corrective actions, and the two share legal liability for non-compliance. The centre continues unannounced site visits. The circular does not waive mandatory field inspections where physical verification is required, or clearances from other bodies such as Abu Dhabi Civil Defence ([WAM](https://www.wam.ae/en/article/c2qm3pn-uppc-issues-circular-streamline-construction), [Khaleej Times](https://www.khaleejtimes.com/uae/abu-dhabi-replaces-paper-permits-for-buildings-with-digital-reports-new-directive)).
 
-For an owner, this is a meaningful shift. More of the assurance that work matches the approved drawings now rests on reports written by the people doing and supervising the work. That makes it more important, not less, that the owner has an independent view of what is actually happening on site.
+For an owner, this is a meaningful shift. More of the assurance that work matches the approved drawings now rests on reports written by the people doing and inspecting the work. That makes it more important, not less, that the owner has an independent view of what is actually happening on site.
 
 ## How is the Abu Dhabi permit process different from Dubai?
 
@@ -110,7 +110,7 @@ For an owner, this is a meaningful shift. More of the assurance that work matche
 | Sustainability | Estidama Pearl rating, minimum 1 Pearl for new villas | The relevant Dubai authority's green building requirements |
 | Consultant regulation | Licensing and classification through TAMM | Dubai Law No. 14 of 2025 on engineering consultancy |
 | Small works | Contractors can obtain minor works permits directly (since August 2025) | Depends on the authority and the master developer |
-| Construction stages | Certified joint reports replace phase-closure permits for designated categories (Circular No. 9 of 2026) | Staged inspections by the authority |
+| Construction stages | Signed joint reports replace phase-closure permits for designated categories (Circular No. 9 of 2026) | Staged inspections by the authority |
 
 Sources: [DMT](https://www.dmt.gov.ae/en/Media-Centre/News/Binaa-Construction-Permits-Platform-Launched), [Dubai Municipality](https://www.dm.gov.ae/dubai-launches-single-window-for-building-permits/), [Law No. 14 of 2025](https://www.dm.gov.ae/documents/law-no-14-of-2025-regulating-engineering-consultancy-practice-in-the-emirate-of-dubai-municipality/), and the other sources listed below.
 

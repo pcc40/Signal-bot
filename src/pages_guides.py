@@ -77,7 +77,7 @@ def landing():
 <h2>Why we wrote it</h2>
 <div class="prose">
 <p>Our founder, {esc(C.FOUNDER["name"])}, ran {esc(C.FOUNDER["company_uk"])}, a premium residential builder in the UK, for {C.FOUNDED_TRACK_RECORD_YEARS} years. From the contractor’s side we saw where budgets leak, how variations and delay claims are built, and which questions owners rarely ask. This checklist puts those questions in order.</p>
-<p>It is written for private owners, including those living overseas, who want to stay in control of a villa project without becoming construction experts. It is general information, not legal or engineering advice: your registered consultant carries out the design, authority submissions and statutory supervision, and a UAE-qualified lawyer should review your contracts.</p>
+<p>It is written for private owners, including those living overseas, who want to stay in control of a villa project without becoming construction experts. It is general information, not legal or engineering advice: your registered consultant carries out the design, authority submissions and statutory site inspections, and a UAE-qualified lawyer should review your contracts.</p>
 <p>If you would rather talk it through, <a href="/contact/">arrange a free 30-minute call</a> or read how a <a href="/why-a-client-side-project-manager/">client-side project manager</a> works alongside your consultant and contractor.</p>
 </div></div></section>
 {B.cta_band("Would a second pair of eyes help?")}'''

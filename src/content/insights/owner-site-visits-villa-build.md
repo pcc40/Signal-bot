@@ -31,7 +31,7 @@ This guide explains what happens on site at each stage, what to look at, and how
 
 ## What does the owner's site visit actually do?
 
-It is worth being clear about what an owner's visit is not. Your registered consultant is responsible for supervising the works under the building permit, and Dubai Municipality's procedures provide for staged inspections, for example of foundations and slabs, and a joint completion inspection before the completion certificate is issued ([Dubai Municipality](https://dmpmedia.dm.gov.ae/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf)). In Abu Dhabi the municipality's own inspections follow the permit issued through TAMM. Those checks are about compliance with the approved drawings and the regulations.
+It is worth being clear about what an owner's visit is not. Your registered consultant is responsible for inspecting the works under the building permit, and Dubai Municipality's procedures provide for staged inspections, for example of foundations and slabs, and a joint completion inspection before the completion certificate is issued ([Dubai Municipality](https://dmpmedia.dm.gov.ae/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf)). In Abu Dhabi the municipality's own inspections follow the permit issued through TAMM. Those checks are about compliance with the approved drawings and the regulations.
 
 The owner's visit answers different questions:
 
