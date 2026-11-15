@@ -124,6 +124,9 @@ For a light refresh, sometimes. For a full renovation with new services, waterpr
 
 [Engel & Völkers](https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai) says a contingency of 10–15% of total project cost is widely recommended. On an older villa with original services, we would plan at the upper end. The important part is who controls it: the [contingency](/glossary/#contingency) is the owner's money, released only against approved changes, not an extra line in the contractor's price.
 
+
+One of the costliest mistakes is taking out a wall on a contractor's word. Our guide to [changing a villa's layout](/insights/changing-villa-layout-dubai-approvals/) sets out who has to approve what.
+
 ## How Eastbridge can help
 
 We represent the owner on villa renovations in Dubai and Abu Dhabi, alongside your DM-registered consultant and the contractor. Before work starts we help you fix the scope, review the quotes like-for-like and plan the programme around the approvals; once it starts, we review every payment and variation before you approve it. Read more about [villa renovation project management](/services/villa-renovation-project-management/), or [get in touch](/contact/) to talk through your villa.

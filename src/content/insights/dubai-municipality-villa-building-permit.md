@@ -155,6 +155,9 @@ Three habits make the most difference.
 
 If you are planning a renovation or extension rather than a new build, the same authorities apply, but the route starts with an alteration application; our guide to [renovating a Palm Jumeirah villa](/insights/palm-jumeirah-villa-renovation/) shows how a Nakheel NOC fits ahead of the permit.
 
+
+Before the permit is issued is also the time to question the structure: see [Dubai Municipality's over-design warning](/insights/dubai-municipality-villa-over-design-warning/).
+
 ## How Eastbridge can help
 
 We represent the owner through design and approvals, alongside your DM-registered consultant, who prepares and submits the drawings. We help you write the brief, review the design against your budget before it is submitted, and keep an approvals tracker so you always know what is waiting and on whom. Our [design and approvals management](/services/design-and-approvals/) service explains how we work. To talk through your plot and programme, [contact us](/contact/).

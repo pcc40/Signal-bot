@@ -136,6 +136,9 @@ Our founder spent 21 years running a premium building company whose houses won R
 
 To run your own numbers, try our [villa build and renovation cost calculator](/tools/villa-build-cost-calculator/), which uses the same construction rates per square foot, applies its own stated assumptions to the other lines, and shows its sources. For the full sequence from plot to keys, see [how to build a villa in Dubai](/insights/how-to-build-a-villa-in-dubai/). If you are refurbishing an existing villa rather than building new, see [villa renovation costs in Dubai](/insights/villa-renovation-cost-dubai/).
 
+
+Structure is one of the biggest cost lines, and it can be heavier than it needs to be. Our guide to [Dubai Municipality's over-design warning](/insights/dubai-municipality-villa-over-design-warning/) explains what the Municipality found and the questions to ask your consultant.
+
 ## How Eastbridge can help
 
 We represent the owner, alongside your registered consultant and your contractor. We help you set a realistic budget from the brief, compare bids like-for-like and choose, then track cost and programme through the build with independent client-side reporting. Our [cost and programme control](/services/cost-and-programme-control/) service is built for exactly this. If you are at the budgeting stage, [get in touch](/contact/).

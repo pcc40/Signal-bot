@@ -100,6 +100,9 @@ If you are buying an Emaar villa with plans to change it, check before you commi
 
 Arabian Ranches and Emirates Living include some of Dubai's older villa communities. Renovating an older house often means replacing services that the approval process does not show you, such as wiring, water pipes, drains and air conditioning. Survey and open up before you design, so the submission reflects what the house actually needs. Our guide to [rewiring and replumbing an older Dubai villa](/insights/older-villa-mep-renovation/) sets out what to check.
 
+
+For internal changes specifically, see our guide to [changing a villa's layout](/insights/changing-villa-layout-dubai-approvals/).
+
 ## What we do and what we don't
 
 We represent the owner. Your DM-registered consultant prepares the drawings, makes the submissions and confirms the authority route; your contractor carries out the work and obtains its own access permits. Our part is keeping all of that in the right order: a brief that fits the community's guidelines, a programme that treats approvals as a phase of their own, bids compared like-for-like, and independent client-side site visits and reporting through to handover. See our [renovation project management](/services/villa-renovation-project-management/) service, or [contact us](/contact/) to talk through your villa.
