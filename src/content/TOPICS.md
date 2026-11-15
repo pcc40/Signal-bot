@@ -108,7 +108,7 @@
 - [ ] villa-mep-explained-owners (overlaps older-villa-mep-renovation; only publish as a new-build MEP explainer) | MEP in a Dubai villa explained for owners | MEP villa renovation uae | Tanmu "hidden importance of MEP"
 - [x] villa-exterior-facade-renovation-dubai (published as villa-exterior-changes-dubai) | Changing a villa's exterior or façade: approvals and cost | villa exterior renovation dubai | Algedra (Palm Jumeirah exterior approvals), Rady
 - [ ] which-renovations-add-value-dubai-villa | Which renovations add value to a Dubai villa? | do renovations add value dubai | Smart Renovation; overlaps renovating-villa-to-sell-dubai (publish one, not both)
-- [ ] refit-or-full-renovation-villa | Refresh, refit or full renovation: which does your villa need? | refit vs renovation uae | Rady Interior
+- [x] refit-or-full-renovation-villa (published as refresh-refit-or-full-villa-renovation) | Refresh, refit or full renovation: which does your villa need? | refit vs renovation uae | Rady Interior
 - [ ] villa-fit-out-snags (overlaps villa-snagging-checklist-dubai; only publish as a renovation-specific snag list) | Fit-out snags: what to check before you pay the final bill | fit out snags | Algedra
 - [ ] architect-and-interior-designer-together-villa | Running the architect and interior designer together on a villa | architecture and interior design together villa | Algedra; overlaps villa-interior-fit-out-integration (publish one)
 - [x] emirates-hills-villa-renovation (15 Nov: area page /areas/emirates-hills/ retitled to target renovation instead of a competing page) | Renovating an Emirates Hills villa | villa renovation emirates hills | Search Console query, position 65; Algedra "emirates hills mansion renovation"

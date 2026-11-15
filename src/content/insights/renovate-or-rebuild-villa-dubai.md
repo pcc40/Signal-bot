@@ -129,6 +129,8 @@ Rebuilding tends to make sense when:
 
 Renovation tends to make sense when the structure is sound, the services can be upgraded in sections, the family likes the house and its position on the plot, and time out of the house matters.
 
+If renovation is the answer, our guide to [refresh, refit or full renovation](/insights/refresh-refit-or-full-villa-renovation/) helps you choose how far to go.
+
 ## How to decide without guessing
 
 Most owners face this decision with two numbers: a contractor's price for a renovation and a rough idea of what a new villa costs. Neither is enough. The renovation price was given for what the contractor could see, and the new-build figure leaves out demolition, fees, approvals, contingency and the cost of living elsewhere for a year or more.

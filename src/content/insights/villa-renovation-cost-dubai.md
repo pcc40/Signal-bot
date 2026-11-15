@@ -87,6 +87,8 @@ On almost every line. Set side by side, the published figures look like this.
 
 The gaps are less errors than different definitions. A low kitchen figure is replacing units; a high one is rebuilding the room, with new drainage, waterproofing, electrics and ventilation behind it. A whole-villa band describes an average house and an average scope, and none of the sources says which. Treat any single figure as the start of a conversation, not a budget.
 
+Not sure which level of work your villa needs? Our guide to [refresh, refit or full renovation](/insights/refresh-refit-or-full-villa-renovation/) helps you decide before you price.
+
 ### Why we do not publish per-community renovation rates
 
 No published source we have found supports a location premium for renovation: Property Finder names communities only as examples of villa types, and Bayut ties its costs to the property type and the extent of the work. So we do not publish AED per sq ft rates by community; what moves a renovation price is the scope and the condition of the house, and community rules on access, working hours and approvals need pricing for your villa rather than an area rate.
