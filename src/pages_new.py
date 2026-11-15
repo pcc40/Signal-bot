@@ -137,10 +137,10 @@ def home(posts, post_cards, stages_html, svc_img):
                         "See <a href=\"/fees/\">how fees work</a>."))
     body = f'''
 <section class="hero" aria-labelledby="hero-h"><div class="slides">{slides}</div>
-{B.hero_video_html()}<div class="wrap"><span class="kicker">Client-side project management · Dubai and Abu Dhabi</span>
-<h1 id="hero-h">Your villa, managed from your side of the table.</h1>
-<p class="lede">For a one-off villa, one person represents you alongside your consultant and contractor, and keeps your budget under control by reviewing every quote, payment and variation before you commit. Led personally by Philip Chapman.</p>
-<div class="actions"><a class="btn" href="/contact/">{esc(B.CTA_LABEL)}</a><a class="btn btn--ghost" href="/why-a-client-side-project-manager/">Why client-side matters</a></div></div>
+{B.hero_video_html()}<div class="wrap"><span class="kicker">Villa builds and renovations · Dubai and Abu Dhabi</span>
+<h1 id="hero-h">Building or renovating a villa? We manage it on your side.</h1>
+<p class="lede">New villa or renovation, in Dubai or Abu Dhabi. We don't build it: we work for you, alongside your consultant and contractor, checking every quote, payment and change before you commit. Led personally by Philip Chapman.</p>
+<div class="actions"><a class="btn" href="/contact/">{esc(B.CTA_LABEL)}</a><a class="btn btn--ghost" href="/approach/">How it works</a></div></div>
 <div class="hero-meta">{slide_caps}</div><span class="scroll-cue" aria-hidden="true"></span></section>
 {creds_band()}
 <section class="section" aria-labelledby="founder-h"><div class="wrap feature">
@@ -152,8 +152,8 @@ def home(posts, post_cards, stages_html, svc_img):
 </div></section>
 
 <section class="section stone" aria-labelledby="what-h"><div class="wrap">
-<div class="head-row"><h2 id="what-h">Three ways we help</h2>
-<p class="lede">A client-side project manager, also called an owner's representative, does not design or build. We work alongside your registered consultant and your contractor, adding independent cost, programme and commercial control from your side.</p></div>
+<div class="head-row"><h2 id="what-h">Villa builds, renovations and rescues</h2>
+<p class="lede">We don't design or build. Your registered consultant designs, your contractor builds, and we work for you alongside both, keeping cost, programme and quality under your control. The trade calls this a client-side project manager, or owner's representative.</p></div>
 <div class="doors">{door_html}</div>
 <p class="muted" style="margin-top:30px;max-width:72ch">Through construction we are on site regularly, at the frequency agreed in your scope. With the full service we also travel with you to source stone, joinery, lighting and fittings, and check what arrives against what you chose: see <a href="/services/materials-and-specialist-sourcing/">materials and specialist sourcing</a>.</p>
 <p style="margin-top:14px"><a class="link" href="/services/">All services</a> &nbsp; <a class="link" href="/approach/">How a project runs</a></p>
@@ -184,8 +184,8 @@ def home(posts, post_cards, stages_html, svc_img):
 <p class="muted" style="margin-top:1em"><a class="link" href="/faq/">More questions</a> &nbsp; <a class="link" href="/insights/">Insights</a> &nbsp; <a class="link" href="/guides/villa-owner-checklist/">Owner's checklist</a> &nbsp; <a class="link" href="/areas/">Where we work</a></p>
 <p class="muted small">{esc(C.COVERAGE)}</p></div>{B.faq_html(faqs)}</div></section>
 {B.cta_band("Tell us about the house you want to build.", image="sea-glass-house-08")}'''
-    B.page("/", "Villa Project Management Dubai | Client-Side Project Manager",
-           "Client-side project management for villa builds and renovations in Dubai and Abu Dhabi, led by Philip Chapman, founder of a UK builder of award-winning homes.",
+    B.page("/", "Villa Build & Renovation Dubai | Managed on Your Side",
+           "Building or renovating a villa in Dubai or Abu Dhabi? We manage it on the owner's side: budget, contractor, approvals and site. Led by Philip Chapman.",
            body, schema=[B.faq_schema(faqs)], preload=f"/assets/img/{HERO_SLIDES[0]}-1280.webp", hero=True)
 
 # ---------------------------------------------------------------- why client-side

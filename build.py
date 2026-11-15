@@ -401,16 +401,17 @@ def header(path):
             f'<a class="mega-feature" href="/case-studies/island-e-waterfront-villa/">{picture("uae-island-e-01", "", "240px")}'
             f'<small class="mega-credit">{esc(img_credit("uae-island-e-01"))}. For illustration</small>'
             f'<span>Worked project example (hypothetical): how we would manage an Island E villa</span></a></div>')
-    svc_cur = cur if path.startswith("/services/") else ""
+    svc_cur = cur if path.startswith("/services/") and not path.startswith(("/services/villa-construction-project-management/", "/services/villa-renovation-project-management/")) else ""
     return f'''<a class="skip" href="#main">Skip to content</a>
-<div class="utility"><div class="wrap"><span class="u-left">Client-side project management for private villas in Dubai and Abu Dhabi</span>
+<div class="utility"><div class="wrap"><span class="u-left">Villa builds and renovations in Dubai and Abu Dhabi, managed on the owner's side</span>
 <span class="u-right"><a href="tel:{C.PHONE_E164}">{C.PHONE_DISPLAY}</a><a href="{wa_link()}" rel="noopener">WhatsApp</a><a href="mailto:{C.EMAIL}">{C.EMAIL}</a></span></div></div>
 <header class="site-head"><div class="wrap">
 {logo()}
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
 <nav class="nav" id="nav" aria-label="Main"><button class="menu-close" type="button" aria-label="Close menu">Close</button><ul>
+{a("Villa builds", "/services/villa-construction-project-management/")}{a("Renovations", "/services/villa-renovation-project-management/")}
 <li class="has-mega"><a href="/services/"{svc_cur}>Services</a>{mega}</li>
-{a("Why client-side", "/why-a-client-side-project-manager/")}{a("Case studies", "/case-studies/")}{a("Work", "/work/")}{a("Insights", "/insights/")}{a("About", "/about/")}
+{a("Case studies", "/case-studies/")}{a("Work", "/work/")}{a("Insights", "/insights/")}{a("About", "/about/")}
 </ul><a class="btn" href="/contact/">{esc(CTA_SHORT)}</a></nav>
 </div></header>'''
 
