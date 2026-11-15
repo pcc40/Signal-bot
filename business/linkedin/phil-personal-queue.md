@@ -87,6 +87,12 @@ Takeaways (15 Nov): the split holds and is now clear. Decision/risk hooks where 
 | 24 Nov | Tue | Which authority covers my villa | Full guide: https://eastbridgestrategicpartners.com/insights/which-dubai-authority-covers-my-villa/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 | 25 Nov | Wed | Contracts: variations and delays | Full guide: https://eastbridgestrategicpartners.com/insights/villa-construction-contracts-uae/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 | 26 Nov | Thu | Villa owner checklist | Free download: https://eastbridgestrategicpartners.com/guides/villa-owner-checklist/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 27 Nov | Fri | Dubai Municipality over-design warning | Full guide: https://eastbridgestrategicpartners.com/insights/dubai-municipality-villa-over-design-warning/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 28 Nov | Sat | Changing a villa's layout: approvals | Full guide: https://eastbridgestrategicpartners.com/insights/changing-villa-layout-dubai-approvals/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 29 Nov | Sun | Refresh, refit or full renovation | Full guide: https://eastbridgestrategicpartners.com/insights/refresh-refit-or-full-villa-renovation/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 30 Nov | Mon | Changing a villa's exterior | Full guide: https://eastbridgestrategicpartners.com/insights/villa-exterior-changes-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 1 Dec | Tue | Springs, Meadows and Lakes renovation | Full guide: https://eastbridgestrategicpartners.com/insights/springs-meadows-lakes-villa-renovation/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 2 Dec | Wed | Renovating a villa in Abu Dhabi | Full guide: https://eastbridgestrategicpartners.com/insights/villa-renovation-abu-dhabi/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 
 Do not use (Phil, 14 Nov): sourcing-materials-abroad ("fly around the world" post removed).
 
@@ -323,3 +329,120 @@ Which of these did you settle too late?
 The checklist: link in the first comment 👇
 
 #DubaiVillas #AbuDhabi #VillaConstruction #DubaiRealEstate #ProjectManagement
+
+### 27 Nov — Dubai Municipality over-design warning
+Is your villa's structure bigger than it needs to be? Dubai Municipality thinks some are.
+
+In August 2025 it warned several engineering consultancies that their villa designs went beyond the Dubai Building Code with no proven engineering need, raising owners' costs.
+
+From 21 years on the builder's side, the reasons are rarely sinister:
+
+• Caution costs the designer nothing; the owner pays for it
+• Reusing the last villa's design is quicker than refining a new one
+• Fees tied to build cost reward a heavier building
+• Nobody asks to see the structural numbers
+
+The answer isn't cutting steel on site. It's asking your consultant to explain the design against the code before tender, and comparing quantities across bids.
+
+Have you ever asked to see your structural quantities?
+
+The full explainer: link in the first comment 👇
+
+#DubaiVillas #DubaiMunicipality #VillaConstruction #DubaiRealEstate #ProjectManagement
+
+### 28 Nov — changing a villa's layout
+Want to knock through a wall in your Dubai villa? Ask who has to approve it first.
+
+Even partitioning a living room can need a permit under Dubai's Local Order No. 3 of 1999, and in a master community the developer's consent comes first.
+
+On the builder's side, I've seen "just a partition" turn out to carry a beam, or hide a drainage stack or the main AC duct. Before anything comes down:
+
+• Get the approved drawings and compare them with the house
+• Ask a registered structural engineer, in writing
+• Open up a small inspection hole before the design relies on it
+• Check what services move with the wall
+
+Unapproved changes tend to surface at resale.
+
+What's the one wall you'd move if you could?
+
+Who approves what: link in the first comment 👇
+
+#DubaiVillas #VillaRenovation #DubaiRealEstate #Nakheel #Emaar
+
+### 29 Nov — refresh, refit or full renovation
+Does your villa need a refresh, a refit or a full renovation? The house usually decides, not the brief.
+
+A refresh changes surfaces. A refit replaces kitchens and bathrooms. A full renovation renews what's behind the walls.
+
+The question I'd ask first, after 21 years pricing these jobs:
+
+• Are the air-conditioning, wiring and pipes near the end of their life?
+• Is the roof and wet-area waterproofing sound?
+• Does the layout work for how you live?
+• How long will you keep the villa?
+
+The most expensive outcome is a refit that should have been a full renovation: new kitchens in front of old pipes that fail two years later.
+
+Which did you start as, and which did you end up doing?
+
+How to decide: link in the first comment 👇
+
+#DubaiVillas #VillaRenovation #DubaiRealEstate #AbuDhabi #ProjectManagement
+
+### 30 Nov — changing a villa's exterior
+Planning a new façade for your Dubai villa? Check whether you're allowed to change it at all.
+
+The outside is what master developers control most tightly:
+
+• Emaar's Arabian Ranches guidance: external changes that alter the villa's look are not permitted
+• Emirates Living: changes to the exterior are not permitted
+• Nakheel: changes are possible if they don't affect the façade and structure
+• Repainting no longer needs a Dubai Municipality maintenance permit, but community colour rules still apply
+
+From the builder's side: exterior approvals are won or lost before the drawings are finished. And a sample panel on the real wall settles more arguments than any rendering.
+
+Have you had an exterior change refused?
+
+What each developer allows: link in the first comment 👇
+
+#DubaiVillas #VillaRenovation #DubaiRealEstate #Emaar #Nakheel
+
+### 1 Dec — Springs, Meadows and Lakes
+Renovating in The Springs, The Meadows or The Lakes? One rulebook covers all three.
+
+They're Emaar communities in Emirates Living. Any alteration needs Emaar's approval, and changes to the exterior are not permitted. So the value is made inside, in the garden within the rules, and in renewing what has aged.
+
+What I'd plan for:
+
+• Springs townhouses: shared walls change structure, noise, waterproofing and access
+• Meadows and Lakes villas: survey the services, roofs and wet areas before design
+• Gardens: pools, pergolas and shade structures need Emaar's approval too
+• Contractors need their own community entry permits
+
+And don't let anyone price your house from the one next door.
+
+Which community are you in?
+
+The full guide: link in the first comment 👇
+
+#DubaiVillas #TheSprings #TheMeadows #VillaRenovation #Emaar
+
+### 2 Dec — renovating in Abu Dhabi
+Renovating a villa in Abu Dhabi? Don't assume Dubai's rules apply.
+
+Abu Dhabi's Department of Municipalities and Transport sets the rules, and permits run through TAMM. Since August 2025, contractors can get approval directly for defined minor works:
+
+• Non-structural changes and interior finishes
+• Pools, canopies, shade structures and fences
+• Extensions of up to 25 square metres
+
+Structural work and larger extensions still need a full permit through a registered consultant, and in a master community the developer's consent comes first.
+
+From the builder's side: when the contractor holds the paperwork, someone on the owner's side should check the approved scope matches what you're paying for.
+
+Renovated in both emirates? What surprised you?
+
+The full guide: link in the first comment 👇
+
+#AbuDhabi #VillaRenovation #AbuDhabiRealEstate #Saadiyat #ProjectManagement
