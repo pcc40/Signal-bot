@@ -2,7 +2,7 @@
 title: "Villa renovation timeline in Dubai, phase by phase"
 description: "How long a Dubai villa renovation takes, phase by phase: survey, design, NOC, permit, long-lead items, strip-out, MEP, finishes, snagging and what stretches it."
 date: 2026-11-05
-updated: 2026-11-05
+updated: 2026-11-15
 category: "Renovation"
 keypoints:
   - "Published guides put the work on site at about two to three months for a smaller interior refresh and 150–210 days for structural work on a luxury villa; the months before anyone starts on site come on top."
@@ -22,6 +22,8 @@ faqs:
   - q: "Why do villa renovations overrun their programme?"
     a: "In our experience the common causes are late decisions on finishes, discoveries after strip-out that need redesign, design changes after the NOC that have to go back for approval, and long-lead items ordered too late. Very few overruns come from the building work itself."
 sources:
+  - title: "Dubai Development Authority: fit-out permit (service time and validity)"
+    url: "https://dda.gov.ae/en/planning-development/construction/permits-nocs/fit-out-permit"
   - title: "Property Finder: Average costs for villa renovation in Dubai (September 2025)"
     url: "https://www.propertyfinder.ae/blog/villa-renovation-dubai/"
   - title: "A Dubai renovation contractor: villa renovation guide to costs, timeline and permits (2026; figures not sourced by the publisher)"
@@ -91,6 +93,8 @@ Added end to end, the phases before the work on site come to roughly 15–32 wee
 **The master-developer NOC.** In Nakheel communities, Nakheel says an NOC from its Urban Planning team is needed before any alteration, requested through its online services ([Nakheel](https://www.nakheel.com/en/contact-us)). It has said that villa modification applications are assessed case by case ([Gulf News](https://gulfnews.com/news/gulf/uae/jumeirah-islands-owners-prevented-from-modifying-villas-without-approval-1.1172089)), and it does not publish a single turnaround. Nakheel approvals carry an expiry date, so check yours and keep the contractor's start within it. Emaar communities follow a similar pattern: in Arabian Ranches, any alteration needs Emaar's approval through a home modification NOC ([Emaar Community Management](https://www.ecm.ae/en/communities/arabian-ranches/lifestyle/faqs/home-modifications-arabian-ranches/)). Our [Nakheel NOC guide](/insights/nakheel-noc-villa-renovation/) covers the process in detail.
 
 **The authority permit.** Where the scope needs one, your DM-registered consultant applies to Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits, with service-authority NOCs gathered through Dubai's unified window ([Dubai Municipality](https://www.dm.gov.ae/dubai-launches-single-window-for-building-permits/); [Build in Dubai](https://buildindubai.gov.ae/)). Light interior work often needs less, but confirm it in writing.
+
+Published service times are short once a complete application is in. The Dubai Development Authority, for example, lists two working days for a fit-out permit, valid for six months, with structural work, change of use or extra floor area needing a separate building modification request ([Dubai Development Authority](https://dda.gov.ae/en/planning-development/construction/permits-nocs/fit-out-permit)). The weeks go on preparing a complete submission and answering comments, not on the authority's clock.
 
 **Tender and contract.** Pricing a renovation takes contractors longer than pricing a new build, because they are pricing risk as well as work. Give them the survey findings and the approved drawings, and you get prices you can compare. Our guide on [how to choose a villa contractor in Dubai](/insights/how-to-choose-a-villa-contractor-dubai/) covers the comparison.
 

@@ -103,15 +103,15 @@
 - [x] dubai-municipality-villa-over-design-warning | Dubai Municipality's villa over-design warning explained | dubai municipality villa design cost warnings | Search Console query, position 58
 - [x] changing-villa-layout-dubai-approvals | Changing a villa's layout in Dubai: what needs approval | перепланировка виллы дубай, remove wall villa dubai | Algedra "renovating without moving walls"; Russian query position 60
 - [x] villa-renovation-abu-dhabi | Renovating a villa in Abu Dhabi: approvals, cost and process | villa renovation abu dhabi | Algedra has guides for Abu Dhabi, Khalifa City, Saadiyat; we have none for renovation
-- [ ] villa-fit-out-timeline-dubai | How long does a villa fit-out take in Dubai? | how long villa fit out takes | Algedra ranks for build-time searches with this
-- [ ] hidden-costs-villa-renovation-dubai | Hidden costs in a Dubai villa renovation, and how cheap quotes grow | renovation hidden costs dubai, cheap fit out quote | Rady Interior has two guides
-- [ ] villa-mep-explained-owners | MEP in a Dubai villa explained for owners | MEP villa renovation uae | Tanmu "hidden importance of MEP"
+- [x] villa-fit-out-timeline-dubai (covered by villa-renovation-timeline-dubai; DDA permit times added 15 Nov instead of a competing page) | How long does a villa fit-out take in Dubai? | how long villa fit out takes | Algedra ranks for build-time searches with this
+- [ ] hidden-costs-villa-renovation-dubai (largely covered by villa-renovation-cost-dubai 'hidden costs' and villa-renovation-mistakes-dubai; only publish with a distinct angle) | Hidden costs in a Dubai villa renovation, and how cheap quotes grow | renovation hidden costs dubai, cheap fit out quote | Rady Interior has two guides
+- [ ] villa-mep-explained-owners (overlaps older-villa-mep-renovation; only publish as a new-build MEP explainer) | MEP in a Dubai villa explained for owners | MEP villa renovation uae | Tanmu "hidden importance of MEP"
 - [ ] villa-exterior-facade-renovation-dubai | Changing a villa's exterior or façade: approvals and cost | villa exterior renovation dubai | Algedra (Palm Jumeirah exterior approvals), Rady
 - [ ] which-renovations-add-value-dubai-villa | Which renovations add value to a Dubai villa? | do renovations add value dubai | Smart Renovation; overlaps renovating-villa-to-sell-dubai (publish one, not both)
 - [ ] refit-or-full-renovation-villa | Refresh, refit or full renovation: which does your villa need? | refit vs renovation uae | Rady Interior
-- [ ] villa-fit-out-snags | Fit-out snags: what to check before you pay the final bill | fit out snags | Algedra
+- [ ] villa-fit-out-snags (overlaps villa-snagging-checklist-dubai; only publish as a renovation-specific snag list) | Fit-out snags: what to check before you pay the final bill | fit out snags | Algedra
 - [ ] architect-and-interior-designer-together-villa | Running the architect and interior designer together on a villa | architecture and interior design together villa | Algedra; overlaps villa-interior-fit-out-integration (publish one)
-- [ ] emirates-hills-villa-renovation | Renovating an Emirates Hills villa | villa renovation emirates hills | Search Console query, position 65; Algedra "emirates hills mansion renovation"
-- [ ] al-barari-villa-renovation | Renovating an Al Barari villa, kitchens included | villa renovation al barari, kitchen renovation al barari | Search Console queries, positions 94-97
-- [ ] arabian-ranches-villa-renovation | Renovating an Arabian Ranches villa | arabian ranches villa renovation | Algedra
+- [x] emirates-hills-villa-renovation (15 Nov: area page /areas/emirates-hills/ retitled to target renovation instead of a competing page) | Renovating an Emirates Hills villa | villa renovation emirates hills | Search Console query, position 65; Algedra "emirates hills mansion renovation"
+- [x] al-barari-villa-renovation (15 Nov: area page /areas/al-barari/ retitled to target renovation instead of a competing page) | Renovating an Al Barari villa, kitchens included | villa renovation al barari, kitchen renovation al barari | Search Console queries, positions 94-97
+- [x] arabian-ranches-villa-renovation (already covered: area page /areas/arabian-ranches/ is titled for renovation) | Renovating an Arabian Ranches villa | arabian ranches villa renovation | Algedra
 - [ ] meadows-springs-lakes-villa-renovation | Renovating in The Meadows, The Springs and The Lakes | meadows villa renovation, lakes villa renovation | Rawda Al Aqsa community pages
