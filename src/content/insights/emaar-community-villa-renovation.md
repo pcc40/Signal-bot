@@ -33,7 +33,7 @@ sources:
 ---
 In an Emaar community, the developer's approval comes before anything else. Emaar Community Management says any alteration to a villa has to be approved by Emaar, through a home modification NOC requested on the community portal. Contractors then need a digital permit to get through the gate, and your consultant confirms whether the work also needs an authority permit. Getting the order right is what keeps a renovation from stalling in its first month.
 
-This guide covers Emaar's villa communities such as [Arabian Ranches](/areas/arabian-ranches/), [Dubai Hills Estate](/areas/dubai-hills-estate/) and Emirates Living (The Springs, The Meadows and The Lakes). Each community has its own guidelines, so treat this as the route, not the rulebook. For the broader process, start with [how to plan a villa renovation in Dubai](/insights/how-to-plan-a-villa-renovation-dubai/).
+This guide covers Emaar's villa communities such as [Arabian Ranches](/areas/arabian-ranches/), [Dubai Hills Estate](/areas/dubai-hills-estate/) and Emirates Living ([The Springs, The Meadows and The Lakes](/insights/springs-meadows-lakes-villa-renovation/)). Each community has its own guidelines, so treat this as the route, not the rulebook. For the broader process, start with [how to plan a villa renovation in Dubai](/insights/how-to-plan-a-villa-renovation-dubai/).
 
 ## What needs Emaar's approval
 
