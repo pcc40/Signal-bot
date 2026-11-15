@@ -57,6 +57,8 @@ Nakheel's day-to-day community services now sit with Nakheel Community Managemen
 
 Nakheel's customer FAQ says owners can make changes as long as they do not affect the external façade and structure, and that an NOC from its Urban Planning team is needed before any alteration ([Nakheel](https://www.nakheel.com/en/contact-us)). Whether façade, structural or extension work is possible at all in your community is for Nakheel to confirm in writing before you design it.
 
+For how other developers treat exterior changes, see our guide to [changing a villa's exterior in Dubai](/insights/villa-exterior-changes-dubai/).
+
 Nakheel publishes its rules to owners through its portal, and requirements change. The table below is our planning guide, not Nakheel's published rules: treat it as a guide to how the conversation usually goes rather than a ruling.
 
 | Type of work | Nakheel NOC? | Authority permit? | What usually drives the review |

@@ -43,6 +43,8 @@ Some work does not need a NOC. The Arabian Ranches guidance says interior painti
 
 The tighter rules are on the outside. The Emirates Living guidance says external changes to the villa are not permitted. The Arabian Ranches guidance restricts changes that alter the villa's look and points owners to the home modification guidelines for items such as balconies. Both say lights cannot be fitted on top of boundary walls or on their community-facing side. If your plans touch the façade, the roof line or the boundary, ask Emaar Community Management early, before the architect commits to a design.
 
+Our guide to [changing a villa's exterior](/insights/villa-exterior-changes-dubai/) compares what the main developers allow.
+
 ## The approval sequence
 
 The order matters more than any single step. This is the sequence we plan around.
