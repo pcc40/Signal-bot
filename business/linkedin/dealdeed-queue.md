@@ -1,7 +1,8 @@
 # DealDeed LinkedIn page: post queue
 
 Page: https://www.linkedin.com/company/dealdeed/ (admin id 146955358)
-Rhythm (Phil, 15 Nov): one post EVERY day, 7 days a week, 12:00 Dubai (08:00 UK), scheduled in LinkedIn's own scheduler from the page admin. Keep at least the next three days queued at all times.
+Rhythm (Phil, 15 Nov): one post EVERY day, 7 days a week, scheduled in LinkedIn's own scheduler from the page admin.
+TIME (Phil, 16 Nov): 09:00 UAE = 5:00 AM in LinkedIn's time list (LinkedIn shows Greenwich Mean Time). Not 8:00 AM. Keep at least the next three days queued at all times.
 Source: only what is published on https://dealdeed.ae/desk (and /desk#briefs, /launch-radar) on the day of writing. Never a unit/villa/plot number, developer type code, party name, Phil's UK number, a percentage fee, or a figure not on the site.
 NEVER describe anything as "off-market" or "exclusive" (Phil, 10 Nov: never claim off-market in Dubai). Prices and "below comparable" wording only exactly as the desk states them.
 Images (Phil, 11 Nov): every post carries an image. Use a DealDeed-branded card built from business/linkedin/cards/card-template-*.html (own typography, figures only from the site) or DealDeed's own listing photos; never third-party/developer renders. Open with a one-line hook and close with a question or clear call to action. Upload via the composer's "Add media" → "Upload from computer" input.
@@ -11,7 +12,7 @@ Mix: opportunity, buyer brief, opportunity, market/launch radar, "how the desk w
 
 ## Queued
 
-### Mon 16 Nov 2026, 12:00 Dubai — Abu Dhabi launch radar (with image card: cards/2026-11-16-abu-dhabi-launch-radar.png)
+### Mon 16 Nov 2026, 09:00 UAE — Abu Dhabi launch radar (with image card: cards/2026-11-16-abu-dhabi-launch-radar.png)
 AED 12.97bn of homes sold in Abu Dhabi in a single month.
 
 That was October: 35% up on October 2025, with 77% of it off-plan (ADREC data, as analysed by Springfield Properties).
@@ -30,7 +31,7 @@ dealdeed.ae/launches
 
 #AbuDhabi #AbuDhabiRealEstate #OffPlan #YasIsland #AlReemIsland
 
-### Tue 17 Nov 2026, 12:00 Dubai — How the desk works (with image card: cards/2026-11-17-how-the-desk-works.png)
+### Tue 17 Nov 2026, 09:00 UAE — How the desk works (with image card: cards/2026-11-17-how-the-desk-works.png)
 Nobody pays DealDeed until a deal completes.
 
 Here is how the desk works, in three steps.
@@ -49,7 +50,7 @@ dealdeed.ae
 
 #DubaiRealEstate #AbuDhabiRealEstate #RealEstateAgents #RERA #PropertyInvestment
 
-### Wed 18 Nov 2026, 12:00 Dubai — Nad Al Sheba Gardens Ph 4 corner townhouse (with image card: cards/2026-11-18-nad-al-sheba-townhouse.png)
+### Wed 18 Nov 2026, 09:00 UAE — Nad Al Sheba Gardens Ph 4 corner townhouse (with image card: cards/2026-11-18-nad-al-sheba-townhouse.png)
 Priced under every recent sale of its type in the finished phase.
 
 A 3-bedroom corner townhouse in Nad Al Sheba Gardens Phase 4 by Meraas:
@@ -68,7 +69,7 @@ dealdeed.ae/desk
 
 #NadAlSheba #Meraas #DubaiRealEstate #DubaiTownhouses #OffPlan
 
-### Thu 19 Nov 2026, 12:00 Dubai — Palm Springs vs Bay Estate (card: cards/2026-11-19-palm-springs-vs-bay-estate.png)
+### Thu 19 Nov 2026, 09:00 UAE — Palm Springs vs Bay Estate (card: cards/2026-11-19-palm-springs-vs-bay-estate.png)
 Two Nakheel EOIs open at once. They are very different purchases.
 
 Palm Springs (beside Palm Jebel Ali): three-bed townhouses from AED 3.8m, 10% down, AED 50,000 EOI, handover est. October 2030. A new town for about 50,000 people.
@@ -80,7 +81,7 @@ https://dealdeed.ae/palm-springs?utm_source=linkedin&utm_medium=social&utm_campa
 
 #DubaiRealEstate #Nakheel #PalmJebelAli #DubaiIslands #OffPlan
 
-### Fri 20 Nov 2026, 12:00 Dubai — Hudayriyat Island (card: cards/2026-11-20-hudayriyat-island.png)
+### Fri 20 Nov 2026, 09:00 UAE — Hudayriyat Island (card: cards/2026-11-20-hudayriyat-island.png)
 Hudayriyat Island did AED 28.62bn of property transactions in the first nine months of 2026, second only to Al Reem (ADREC).
 
 Four Modon communities, two of them sold out on launch day:
@@ -96,7 +97,7 @@ Which of the four would you buy into today?
 
 #AbuDhabiRealEstate #Hudayriyat #Modon #OffPlan #UAEProperty
 
-### Sat 21 Nov 2026, 12:00 Dubai — Sellers: out before handover (card: cards/2026-11-21-sell-off-plan-before-handover.png)
+### Sat 21 Nov 2026, 09:00 UAE — Sellers: out before handover (card: cards/2026-11-21-sell-off-plan-before-handover.png)
 Selling an off-plan home before completion is routine in Dubai. The numbers that matter are rarely explained up front: the developer's NOC, the Oqood assignment, the DLD transfer fee, and what is actually left once the buyer has reimbursed what you have paid.
 
 We set it out step by step, with the costs:
@@ -107,7 +108,7 @@ https://dealdeed.ae/register?as=seller&utm_source=linkedin&utm_medium=social&utm
 
 #DubaiRealEstate #OffPlan #DubaiProperty #PropertyInvestment #DealDeed
 
-### Sun 22 Nov 2026, 12:00 Dubai — Dubai Islands corner garden villa (card: cards/2026-11-22-dubai-islands-garden-villa.png)
+### Sun 22 Nov 2026, 09:00 UAE — Dubai Islands corner garden villa (card: cards/2026-11-22-dubai-islands-garden-villa.png)
 65% paid, and one of only seven of its layout in the community.
 
 A 4-bedroom premium garden villa on a corner plot on Dubai Islands:
@@ -124,7 +125,7 @@ dealdeed.ae/desk
 
 #DubaiIslands #DubaiVillas #DubaiRealEstate #OffPlan #DubaiProperty
 
-### Mon 23 Nov 2026, 12:00 Dubai — Canopies: two days to go (card: cards/2026-11-23-canopies-two-days.png)
+### Mon 23 Nov 2026, 09:00 UAE — Canopies: two days to go (card: cards/2026-11-23-canopies-two-days.png)
 The Canopies Sanctuary opens on Wednesday.
 
 If you are weighing it, the three numbers that matter:
@@ -145,17 +146,18 @@ Figures from Aldar's launch details to agents; confirm final terms on launch day
 | Wed 11 Nov 08:00 UK | Al Barari villa | Posted (confirmed live in LinkedIn 11 Nov) |
 | Thu 12 Nov 08:00 UK | Buyer brief: ready 3-bed Marina/Beachfront/Palm + image card | Rescheduled 11 Nov with image (text-only version deleted) |
 | Fri 13 Nov 08:00 UK | Athlon townhouse below purchase price + image card | Rescheduled 11 Nov with image (text-only version deleted) |
-| Mon 16 Nov 08:00 UK | Abu Dhabi launch radar (Oct AED 12.97bn; Man City Ph2, Riviera Ph2, Orchard, One&Only Al Maryah) + image card | Scheduled 11 Nov |
+| Mon 16 Nov 08:00 UK (moved to 05:00 UK / 09:00 UAE on 16 Nov) | Abu Dhabi launch radar (Oct AED 12.97bn; Man City Ph2, Riviera Ph2, Orchard, One&Only Al Maryah) + image card | Scheduled 11 Nov |
 | Thu 12 Nov 08:00 UK | Buyer brief: ready 3-bed + image card | Posted (confirmed live in LinkedIn 13 Nov) |
-| Tue 17 Nov 08:00 UK | How the desk works (3 steps, fixed fee on completion) + image card | Scheduled 13 Nov (Browser 2); queue confirmed: Fri 13, Mon 16, Tue 17 |
+| Tue 17 Nov 08:00 UK (moved to 05:00 UK / 09:00 UAE on 16 Nov) | How the desk works (3 steps, fixed fee on completion) + image card | Scheduled 13 Nov (Browser 2); queue confirmed: Fri 13, Mon 16, Tue 17 |
 | Fri 13 Nov 08:00 UK | Athlon townhouse below purchase price + image card | Posted (confirmed live in LinkedIn 13 Nov) |
-| Wed 18 Nov 08:00 UK | Opportunity: Nad Al Sheba Gardens Ph 4 corner townhouse, AED 5.1M, 60% paid + image card | Scheduled 13 Nov (Browser 2); queue confirmed: Mon 16, Tue 17, Wed 18 |
+| Wed 18 Nov 08:00 UK (moved to 05:00 UK / 09:00 UAE on 16 Nov) | Opportunity: Nad Al Sheba Gardens Ph 4 corner townhouse, AED 5.1M, 60% paid + image card | Scheduled 13 Nov (Browser 2); queue confirmed: Mon 16, Tue 17, Wed 18 |
 | Sun 15 Nov ~07:15 UK | Launch radar: The Canopies Sanctuary (from AED 1.66m, opens 25 Nov) + card | Posted live 15 Nov at Phil's request (Browser 1); pinned to page Featured |
-| Thu 19 Nov 08:00 UK | Launch radar: Palm Springs vs Bay Estate + card | Scheduled 15 Nov |
-| Fri 20 Nov 08:00 UK | Market note: Hudayriyat Island AED 28.62bn + card | Scheduled 15 Nov |
-| Sat 21 Nov 08:00 UK | Seller guide: out before handover + card | Scheduled 15 Nov |
-| Sun 22 Nov 08:00 UK | Opportunity: Dubai Islands corner garden villa, AED 12M, 65% paid + card | Scheduled 15 Nov |
-| Mon 23 Nov 08:00 UK | Launch radar: Canopies two days to go + card | Scheduled 15 Nov; queue confirmed daily Mon 16 to Mon 23 |
+| Thu 19 Nov 08:00 UK (moved to 05:00 UK / 09:00 UAE on 16 Nov) | Launch radar: Palm Springs vs Bay Estate + card | Scheduled 15 Nov |
+| Fri 20 Nov 08:00 UK (moved to 05:00 UK / 09:00 UAE on 16 Nov) | Market note: Hudayriyat Island AED 28.62bn + card | Scheduled 15 Nov |
+| Sat 21 Nov 08:00 UK (moved to 05:00 UK / 09:00 UAE on 16 Nov) | Seller guide: out before handover + card | Scheduled 15 Nov |
+| Sun 22 Nov 08:00 UK (moved to 05:00 UK / 09:00 UAE on 16 Nov) | Opportunity: Dubai Islands corner garden villa, AED 12M, 65% paid + card | Scheduled 15 Nov |
+| Mon 23 Nov 08:00 UK (moved to 05:00 UK / 09:00 UAE on 16 Nov) | Launch radar: Canopies two days to go + card | Scheduled 15 Nov; queue confirmed daily Mon 16 to Mon 23 |
+| 16 Nov | All queued posts Mon 16 to Mon 23 rescheduled to 5:00 AM GMT (09:00 UAE) at Phil's request | Confirmed in LinkedIn scheduled list |
 
 ## Page profile changes (15 Nov)
 - Tagline: "Private deal-matching desk for Dubai and Abu Dhabi property. Motivated sellers and verified buyers, agent to agent." (no off-market wording)
