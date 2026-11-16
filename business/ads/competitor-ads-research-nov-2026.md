@@ -25,11 +25,11 @@ Dates are first shown to last shown. "Live" means last shown on 15 or 16 Novembe
 | **Stonehaven Project Management Services LLC** (stonehaven.ae) | **45 ads (31 text, 14 image), Oct 2025 to 29 Apr 2026. Nothing since.** Landing page: landing.stonehaven.ae. Text headlines: "Dubai Project Consultants - Get Independent Consulting"; "UAE Construction Consultant - Building Consultants UAE"; "Expert Cost Consultancy - Stonehaven Cost Management"; "UAE Quantity Surveying - Leading UAE Specialists"; "BOQ Preparation Experts - Exact Takeoffs. Zero Stress."; "Property Development Managers - Plan Right, Build Profitably"; "Design & Build Contractors - Integrated Project Solutions" ("Full Turnkey Management"). Descriptions: "Your Real Estate & Construction Projects Delivered On-Time, On-Budget, And Built To Last"; "Construction Consultancy Trusted By Developers Across The UAE For Major Projects". Image ads (hi-vis staff with tablets): "Protect Your Development From Delays and Overruns", "Build Complex Developments Without Construction Headaches", button "Talk To An Expert". Longest-running text ad: 191 days. | None found. |
 | **Bauhaus Project Management** (bauhausproject.ae) | No ads ever recorded. | **1 active video ad, started 11 Nov 2026** (Page has 44 likes; no link or button, so most likely a boosted post): "A finished villa is the result. But what does it take to get there? An endless list of suppliers and countless decisions along the way. At Bauhaus Project Management, we bring all the moving parts together, managing the budget, programme and quality from start to finish. So our clients can focus on the vision, while we focus on making it happen. Planning to build or renovate a villa in Dubai? Let's talk." |
 | **Kikoola Project Management LLC** (new; not on the original list) | Not checked by name. | **1 active dynamic-creative ad, started 11 Nov 2026** (Page has 3 likes). Headline "Request a Consultation", CTA "Sign up" to a Meta instant form: "Kikoola manages luxury villa builds and renovations in Dubai, from planning and contractor coordination through to handover. Request a consultation to discuss your scope, budget and timeline." |
-| **Project Wizards** (projectwizards.ae) | No ads ever recorded. | None found. |
+| **Project Wizards** (projectwizards.ae) | No ads ever recorded. | None found (the only near match was "Wood Wizards Dubai", a joinery firm). |
 | **DNA Project Management** (dnaprojectmanagement.com) | No ads ever recorded. | None found (the search returned only unrelated drama-app ads). |
-| **NU Projects** (nuprojects.ae) | No ads ever recorded (nuprojects.ae). "Nuu Projects Ltd" (GB) is a different firm. | See the Meta status line below the table. |
+| **NU Projects** (nuprojects.ae) | No ads ever recorded (nuprojects.ae). "Nuu Projects Ltd" (GB) is a different firm. | None found (three attempts; the results were unrelated). |
 | **NEXTSTEP** (nextstep-pm.com) | No ads ever recorded. | None found. |
-| **Prime Project Partners** (Ras Al Khaimah; prime-project-partners.vercel.app) | Not in the Transparency Center. | None found (first run, three attempts). |
+| **Prime Project Partners** (Ras Al Khaimah; prime-project-partners.vercel.app) | Not in the Transparency Center. | None found (the results included "Prime Estate Partners", an unrelated agency). |
 | **North 51 Consulting** | Not found under "north 51" or "north51". | None found (the "North 51" search returned unrelated ads). |
 | **HPM** | No UAE advertiser named HPM (only US, UK and other HPM firms). | None found. |
 | **Turner & Townsend** (residential) | Recruitment ads only: Belgian project-manager jobs (5 text ads, Jul to Oct 2026), plus 2025 corporate "Transform Together" display ads (agency account). Nothing residential and nothing in the UAE. | None found in AE. |
@@ -60,7 +60,7 @@ On **"villa project management Dubai", "villa renovation Dubai", "villa construc
 
 | Advertiser | Running since | Format / CTA | The hook in their words |
 |---|---|---|---|
-| **Trust Group Construction LLC** | **11 Mar 2026 (8 months)** | Image / Get quote (instant form) | "Do you own an apartment or villa in Dubai? If you're planning a renovation, you've probably faced common problems: missed deadlines, budget increases during the project, constant contractor management … What you get: fixed budget and timeline in the contract, transparent step-by-step renovation process, regular photo and video progress reports, full contractor and quality management … get a preliminary renovation estimate in 1 minute." |
+| **Trust Group Construction LLC** | **11 Mar 2026 (8 months)** | Before/after image ("Own property in Dubai? Turnkey apartment renovation without your involvement"), Instagram / Get offer, with the text pointing to "Get quote" | "Do you own an apartment or villa in Dubai? If you're planning a renovation, you've probably faced common problems: missed deadlines, budget increases during the project, constant contractor management … What you get: fixed budget and timeline in the contract, transparent step-by-step renovation process, regular photo and video progress reports, full contractor and quality management … get a preliminary renovation estimate in 1 minute." |
 | **Bond Homes Real Estate** (Bond Interiors) | **3 May 2026 (6.5 months)**; two video versions plus an image added 21 Oct | Video / Get quote | Headline "Free Consultation", link line "Fast, tailored 24h quotes designed for luxury villa renovations"; "Several record-breaking achievements, Dubai's greatest in-house capabilities, and award-winning designers … 800-BOND-UAE". |
 | **Azulejon Tiles** | 8 Jun 2026 (5 months) | Founder video / WhatsApp | "Are you planning to renovate your villa in Dubai? I'm Abel, founder of AzulejON. One of the biggest mistakes I see homeowners make is choosing flooring based only on price …" |
 | **Maison De Nova** | 6 Aug 2026 (3+ months), refreshed 12 Oct | Video / WhatsApp | "Premium Villa Renovation Dubai – Free villa consultation · design + build under one roof". |
@@ -226,7 +226,7 @@ Descriptions:
 ## 5. Changes to the draft plan (`campaign-plan-nov-2026.md`)
 
 1. **Add the community ad groups** (ad set B). This is the most proven structure found: Dar Al Naseeb has run it for about 280 days. Eastbridge's /areas/ pages already exist. Give it about 30% of the Google budget.
-2. **Remove "contractor" from the negative keyword list.** As a broad negative it would block ad group 4 ("contractor quote review dubai") and ad group 6 ("contractor stopped work villa dubai", "villa contractor dispute dubai"). Use narrower negatives instead: "contractor jobs", "contractor license", "contractor vacancy". Also add: "golden visa", "valuation", "snagging company" (if not wanted), "nakheel noc", "permit", "approval", "NOC". Approvals searchers want someone to get permits, which Eastbridge cannot offer.
+2. **Remove "contractor" from the negative keyword list.** As a broad negative it would block ad group 4 ("contractor quote review dubai") and ad group 6 ("contractor stopped work villa dubai", "villa contractor dispute dubai"). Use narrower negatives instead: "contractor jobs", "contractor license", "contractor vacancy". Also add: "golden visa", "valuation", "nakheel noc", "trakhees", "permit", "approval", "NOC". Approvals searchers want someone to get permits, which Eastbridge cannot offer.
 3. **State fees as the full published ranges.** Change "Published fees: reviews from AED 9,500" to "Reviews AED 9,500–15,000. Full service typically 1.75–3% of build cost." "From AED 9,500" is not the published range.
 4. **Add a WhatsApp message asset** to the Google campaign, and make "Send WhatsApp message" the default Meta CTA instead of Learn more. It is the market norm on both platforms.
 5. **Start Meta with a founder video**, not only stills. Philip-to-camera is the format that lasts (Azulejon 5 months, TaskRight scaling). Keep the portrait still as a second variation.
@@ -242,4 +242,34 @@ Descriptions:
 
 All in `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/` (scratch space: copy anything worth keeping).
 
-SCREENSHOT_LIST_PLACEHOLDER
+Best ads (named by advertiser, format and dates):
+- Meta ad cards from the Ad Library:
+  - `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/best/meta_ad_trust_group_914823674654563.png`
+  - `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/best/meta_ad_taskright_2245057043004115.png`
+  - `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/best/meta_ad_bond_homes_961668243040773.png`
+  - `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/best/meta_ad_bauhaus_4644254355901205.png`
+  - `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/best/meta_ad_kikoola_1884879566012213.png`
+  - `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/best/meta_ad_twyst_2190921874855021.png`
+  - `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/best/meta_ad_redesign_fitout_2016354652364367.png`
+  - `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/best/meta_ad_smart_renovation_1453476976899652.png`
+- Google ad renderings from the Transparency Center: `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/best/google_*.png` (28 files, covering Dar Al Naseeb, Luxedesign, Algedra, Smart Renovation, Cavendish Maxwell, DMDC, Stonehaven, BG Villas and Artagroup; the file names carry the first and last shown dates).
+
+Contact sheets of the Google ads:
+- `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/sheet_stonehaven_ae_text.png`
+- `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/sheet_dar_al_naseeb_text.png`
+- `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/sheet_luxedesign_text.png`
+- `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/sheet_smartrenovation_ae_text.png`
+- `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/sheet_dmdc_text.png`
+- `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/sheet_algedra_text.png`
+- `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/sheet_capital_associated_text.png`
+- `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/sheet_turner_townsend_gb_text.png`
+- `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/sheet_cavendish.png`
+- `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/sheet_images1.png` (Stonehaven, Luxedesign, Capital Associated and Smart Renovation display ads)
+- `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/sheet_villa_builders.png` (Artagroup, BG Villas, Optimal)
+
+Transparency Center advertiser pages: `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/google_stonehaven_advertiser_page.png`, `google_luxedesign_advertiser_page.png`, `google_dmdc_advertiser_page.png` and `google_cavendish_maxwell_advertiser_page.png` (same folder).
+
+Meta search-result pages: `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/final/meta_*.png`. Raw data: `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/final/meta_*.json` (one file per Meta search; `_EMPTY` means no ads returned in three attempts), `/tmp/claude-0/-home-user/83db516c-6210-58dd-9e07-f7c64ebf2422/scratchpad/ads-research/gatc_creatives_round1.json` and `gatc_creatives_round2.json` (every Google creative with its dates), and `gatc_suggestions*.json` (advertiser lookups). Scripts: `meta_scrape.js`, `meta_shot.js`, `gatc_sugg.js`, `gatc_creatives.js` and `run3.py` in the same folder. They can be re-run in about four weeks to see which ads are still live.
+
+
+Copies of the 36 "best" screenshots are kept in business/ads/competitor-screens/ (the scratchpad copies are temporary).
