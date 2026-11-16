@@ -2,7 +2,7 @@
 title: "Villa fit-out in Dubai: what owners need to know"
 description: "Fitting out a new, shell-and-core or stripped villa in Dubai: what a fit-out covers, who does what, approvals, the interfaces that cause delays and cost control."
 date: 2026-11-12
-updated: 2026-11-12
+updated: 2026-11-16
 category: "Process"
 hero: "uae-dubai-hills-estate-01"
 keypoints:
@@ -10,7 +10,7 @@ keypoints:
   - "It usually involves at least three parties (an interior designer, a fit-out contractor and the services installers), and the gaps between their scopes are where cost and delay come from."
   - "In a master community, fit-out works generally need the developer's consent and contractor access permits; anything affecting structure or services may need an authority permit too."
   - "Decide the design and order long-lead items (joinery, stone, sanitaryware, lighting) before the contractor starts; late decisions are the most common cause of fit-out overruns."
-  - "Turnkey design-and-fit-out is convenient, but it means the firm checking the work is the firm doing it; an owner-side check keeps it honest."
+  - "A single design-and-fit-out firm is convenient, but it means the firm checking the work is the firm doing it; an owner-side check keeps it honest."
 faqs:
   - q: "What is a villa fit-out?"
     a: "A fit-out is the work that turns a built structure into a finished home: partitions, ceilings, floors, wall finishes, joinery, kitchens, bathrooms, lighting, and the final connection of air conditioning, electrics and plumbing. It applies to new shell-and-core villas, to developer villas being upgraded, and to older villas stripped back for renovation."
@@ -18,8 +18,8 @@ faqs:
     a: "They overlap. A fit-out finishes a space; a renovation changes an existing one, and may include structural work, extensions and new services as well as a fit-out. Many Dubai villa projects are both: the house is stripped, services are renewed, and then it is fitted out."
   - q: "Do I need approval for a villa fit-out in Dubai?"
     a: "In a master community, usually yes. Developers such as Emaar and Nakheel require their consent for alterations, and contractors need community access permits. Work that changes structure, services or the exterior is more likely to need an authority permit as well, through your registered consultant."
-  - q: "Should I use one turnkey design-and-fit-out company?"
-    a: "It can be simpler, with one contract and one point of responsibility. The trade-off is that the same firm designs, prices and checks its own work. If you choose turnkey, insist on a detailed priced scope, a clear specification, and independent checks before payments are released."
+  - q: "Should I use one design-and-fit-out company?"
+    a: "It can be simpler, with one contract and one point of responsibility. The trade-off is that the same firm designs, prices and checks its own work. If you choose one firm for both, insist on a detailed priced scope, a clear specification, and independent checks before payments are released."
 sources:
   - title: "Emaar Community Management: home modifications, Arabian Ranches"
     url: "https://www.ecm.ae/en/communities/arabian-ranches/lifestyle/faqs/home-modifications-arabian-ranches/"
@@ -78,11 +78,11 @@ There is no reliable single rate for a villa fit-out, because the specification 
 
 Our [villa build and renovation cost calculator](/tools/villa-build-cost-calculator/) gives a sourced range, and our [kitchen and bathroom cost guide](/insights/villa-kitchen-bathroom-renovation-cost-dubai/) covers the two rooms that drive most fit-out budgets.
 
-## Turnkey or separate designer and contractor?
+## One design-and-fit-out firm, or a separate designer and contractor?
 
 | Route | Advantages | Watch out for |
 |---|---|---|
-| Turnkey design-and-fit-out company | One contract, one point of responsibility, often faster | The firm designs, prices and checks its own work; specification can drift to what suits the firm |
+| One design-and-fit-out company | One contract, one point of responsibility, often faster | The firm designs, prices and checks its own work; specification can drift to what suits the firm |
 | Separate interior designer and fit-out contractor | Design independent of construction; competitive tender on a full design | More interfaces for the owner to manage; needs a complete design before tender |
 
 Either route can work. What matters is a detailed priced scope, a fixed specification, payments against progress you have seen, and someone on your side checking the work before it is covered. Our guide to [design-and-build or a separate architect](/insights/design-build-vs-separate-architect-villa/) explains who checks whom under each route.

@@ -31,6 +31,36 @@ ROLE = (f"{NAME} works alongside the owner's architect, engineer and contractor,
 ROLE_PAGES = {"/services/owners-representative/", "/services/villa-construction-project-management/",
               "/services/villa-renovation-project-management/"}
 
+# How the owner's decisions reach the consultant and contractor (Phil Chapman, 16 November 2026: how he worked for UK
+# clients whose builds he project-managed). Wording rules: "in your name, with your written approval", never "on your
+# behalf"; we never instruct the contractor or approve a payment without the owner's written approval.
+DECISIONS_TITLE = "How your decisions reach the team"
+DECISIONS_STEPS = [
+    ("We agree it with you.", "We sit down with you, on site or on a video call such as Teams, go through what needs deciding, with the facts and our recommendation, and agree each decision."),
+    ("We issue it in writing.", "We send your decisions to your consultant and contractor in writing, in your name and only with your written approval."),
+    ("You sign what must be signed.", "Anything that needs your own signature, such as contract documents, certain notices and payments, we prepare and send to you to sign, and we track it so it goes in on time."),
+]
+DECISIONS_CLOSE = ("So you meet every obligation and notice deadline under your contract, even when you are abroad. "
+                   "We never instruct the contractor or approve a payment without your written approval.")
+DECISIONS_FAQ = ("How do my instructions reach the contractor?",
+                 "Through us, in writing. We sit down with you, on site or on a video call such as Teams, go through what needs "
+                 "deciding and agree it. We then issue your decisions to your consultant and contractor in writing, in your name and "
+                 "only with your written approval. Anything that needs your own signature, such as contract documents, certain notices "
+                 "and payments, we prepare and send to you to sign, and we track it so it goes in on time. That way you meet every "
+                 "obligation and notice deadline under your contract, even when you are abroad. We never instruct the contractor or "
+                 "approve a payment without your written approval.")
+DECISIONS_LLMS = ("How the owner's decisions reach the team: Eastbridge agrees each decision with the owner, on site or on a video "
+                  "call (for example Teams), then issues it to the owner's consultant and contractor in writing, in the owner's name and "
+                  "only with the owner's written approval. Anything that needs the owner's own signature (contract documents, certain "
+                  "notices, payments) is prepared and sent to the owner to sign, and tracked so it goes in on time, so the owner meets "
+                  "every obligation and notice deadline under the contract, even when abroad. Eastbridge never instructs the contractor "
+                  "or approves a payment without the owner's written approval.")
+
+def decisions_html(heading="h2", hid="decisions-h"):
+    """The 'How your decisions reach the team' block: a heading, three steps and the closing line."""
+    steps = "".join(f"<li><strong>{a}</strong> {b}</li>" for a, b in DECISIONS_STEPS)
+    return (f'<{heading} id="{hid}">{DECISIONS_TITLE}</{heading}><ol>{steps}</ol><p>{DECISIONS_CLOSE}</p>')
+
 # Fees: what is not published (ChatGPT P40 showed full service as 1.5-3% and invented monthly retainers).
 def not_published():
     if not PUBLISH_FEES:

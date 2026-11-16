@@ -51,6 +51,8 @@ elsewhere (Chinese: 迪拜, 阿布扎比, 朱美拉棕榈岛, 杰贝阿里棕榈
 - The Island E case study is illustrative. Keep every word that signals that ("illustrative", "modelled", "fictional").
 - Do not add or imply that Eastbridge has completed projects or clients in the UAE.
 - Do not use words meaning "supervise", "supervision", "certify" or "certification" (e.g. إشراف, надзор, 监理/监督, पर्यवेक्षण). For the consultant's statutory role, translate "statutory site inspection" literally.
+- Do not use words meaning "turnkey" (Phil, 16 Nov 2026), even where the English says "keys": not 交钥匙 (Chinese), «под ключ» (Russian), تسليم المفتاح بنظام / تسليم المفتاح in the turnkey sense (Arabic) or टर्नकी (Hindi). "Plot to keys" and "handover of the keys" are about the owner moving in: Chinese 从地块到交房 / 交房 / 交付钥匙 (or 拿到钥匙); Arabic تسليم المفاتيح (plural, the literal handover) is fine. A firm that designs and fits out is "one design-and-fit-out firm" (一家公司包揽设计和装修).
+- "In your name, with your written approval" (how we issue the owner's decisions): translate literally (باسمكم وبموافقتكم الكتابية / от вашего имени и только с вашего письменного согласия / 以您的名义、且仅在您书面批准后 / आपके नाम से और केवल आपकी लिखित मंज़ूरी के साथ). Never "on your behalf" (نيابة عنكم, 代表您, आपकी ओर से as agency).
 - Don't soften or strengthen numbers, guarantees or legal statements. Translate "about", "typically", "can" faithfully.
 - Hindi: natural modern Hindi as used by educated professionals; common English business terms may be written in
   Devanagari (प्रोजेक्ट, बजट, कॉन्ट्रैक्टर). Not Sanskritised, not Hinglish in Latin script.

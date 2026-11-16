@@ -3,20 +3,20 @@
 *Review copy for Phil Chapman. Generated from `src/content/plot_to_keys.py`; edit the text there, not here.*
 
 **Page title:** Plot to keys in Dubai: every decision a villa owner makes  
-**Description:** The 16 stages and 129 decisions between buying a villa plot in Dubai or Abu Dhabi and getting the keys: who is responsible for what, and what we do.  
+**Description:** The 16 stages and 131 decisions between buying a villa plot in Dubai or Abu Dhabi and getting the keys: who is responsible for what, and what we do.  
 **Live page:** https://eastbridgestrategicpartners.com/insights/plot-to-keys-villa-owner-decisions-dubai/
 
-You have bought a plot, or you are about to. You have a plan with a plot number on it, a folder from the developer and a figure in your head for what the house should cost. Someone has told you to find an architect. Someone else knows a contractor. Nobody has told you that between today and the day you are handed the keys you will make 129 decisions, most of them once, many of them before a single block is laid, and almost all of them about something you have never had to decide before.
+You have bought a plot, or you are about to. You have a plan with a plot number on it, a folder from the developer and a figure in your head for what the house should cost. Someone has told you to find an architect. Someone else knows a contractor. Nobody has told you that between today and the day you are handed the keys you will make 131 decisions, most of them once, many of them before a single block is laid, and almost all of them about something you have never had to decide before.
 
 ## In short
 
-Building a villa in Dubai or Abu Dhabi takes an owner through 16 stages and the 129 decisions listed below, from checking the plot to the end of the defects period. Your registered consultant designs and deals with the authority; your contractor builds. Every decision about money, time and what you accept is yours. Eastbridge sits beside you for each one.
+Building a villa in Dubai or Abu Dhabi takes an owner through 16 stages and the 131 decisions listed below, from checking the plot to the end of the defects period. Your registered consultant designs and deals with the authority; your contractor builds. Every decision about money, time and what you accept is yours. Eastbridge sits beside you for each one.
 
 Every stage below is set out the same way: what you have to decide, what it costs you if it goes wrong, who is responsible, and what Eastbridge does. Rules differ between communities and between authorities, so where a rule varies, or we could not confirm it from a primary source, we say so.
 
 ## Key points
 
-- An owner building a villa in Dubai or Abu Dhabi goes through 16 stages and makes the 129 decisions listed in this guide, from checking the plot to releasing the last of the retention.
+- An owner building a villa in Dubai or Abu Dhabi goes through 16 stages and makes the 131 decisions listed in this guide, from checking the plot to releasing the last of the retention.
 - Statutory design, authority submissions and statutory site inspections stay with your registered consultant; building, site safety and the works insurance stay with your contractor; every decision on money, time and acceptance stays with you.
 - The decisions that fix most of the cost come before construction: what the plot allows, the brief, the budget, the design freeze and the contract.
 - Rules vary by plot: the permit authority is Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits, and each master developer has its own guidelines, deadlines and deposits.
@@ -32,7 +32,7 @@ Every stage below is set out the same way: what you have to decide, what it cost
 | 4 | Choosing the architect and registered consultant | 3 to 6 weeks | our planning allowance | 8 |
 | 5 | Design: concept, developed and detailed | 3 to 6 months | our planning allowance | 10 |
 | 6 | Surveys and approvals | 4 to 8 weeks for a straightforward project | Optimal Engineering | 7 |
-| 7 | Tender and choosing the contractor | 4 to 8 weeks | our planning allowance | 9 |
+| 7 | Tender and choosing the contractor | about 4 weeks for the bill of quantities, then 4 to 8 weeks to tender | our planning allowance | 11 |
 | 8 | The contract | 2 to 4 weeks | our planning allowance | 10 |
 | 9 | Before work starts | 2 to 4 weeks | our planning allowance | 8 |
 | 10 | Construction | 12 to 18 months, typically | Optimal Engineering | 10 |
@@ -42,7 +42,7 @@ Every stage below is set out the same way: what you have to decide, what it cost
 | 14 | Snagging and handover | 4 to 8 weeks | our planning allowance | 7 |
 | 15 | The defects period and the years after | commonly 12 months, then 10 years of liability for the structure | Kayrouz & Associates | 7 |
 | 16 | When things go wrong | at any point | our planning allowance | 6 |
-| | **Total** | | | **129** |
+| | **Total** | | | **131** |
 
 ## Stage 1 of 16: Before you buy the plot
 
@@ -263,38 +263,44 @@ Read more: [Dubai villa building permits](https://eastbridgestrategicpartners.co
 
 ## Stage 7 of 16: Tender and choosing the contractor
 
-*Typical duration: 4 to 8 weeks (our planning allowance)*
+*Typical duration: about 4 weeks for the bill of quantities, then 4 to 8 weeks to tender (our planning allowance)*
 
-Contractor bids rarely compare directly. On paper the cheapest wins. In the final account it often does not.
+This stage starts when your consultant releases the final construction drawings. A bill of quantities is prepared from them and goes to the shortlisted contractors with the tender pack. Contractor bids rarely compare directly. On paper the cheapest wins. In the final account it often does not.
 
 ### What you have to decide
 
 1. Who to invite, and whether each is licensed and classified for your villa.
 2. Whether the drawings are complete enough to price.
-3. A priced bill of quantities, or drawings and specification only.
-4. Which items are left as provisional sums, and at what allowance.
-5. How bidders' questions are answered, so that all price the same thing.
-6. How to compare: on like-for-like totals, not the headline price.
-7. Who to interview, and which past clients to call.
-8. What to negotiate first: price, programme and the named site team.
-9. Who to appoint.
+3. Who prepares the bill of quantities from the final construction drawings: your consultant or an independent quantity surveyor you appoint.
+4. Which quantity surveyor to appoint, if you appoint your own: best value, not the lowest fee.
+5. Allowing about four weeks after the final construction drawings are released for the bill of quantities to be prepared and checked before it goes to the contractors.
+6. Which items are left as provisional sums, and at what allowance.
+7. How bidders' questions are answered, so that all price the same thing.
+8. How to compare: on like-for-like totals, not the headline price.
+9. Who to interview, and which past clients to call.
+10. What to negotiate first: price, programme and the named site team.
+11. Who to appoint.
 
 ### What it costs you if it goes wrong
 
-Since January 2026, contractors in Dubai must be on a single register and may only take work within their classification. Fines go up to AED 100,000, and an owner who engages a non-compliant contractor can be investigated too ([Mayer Brown on Dubai Law No. 7 of 2025](https://www.mayerbrown.com/en/insights/publications/2025/09/dubai-overhauls-construction-sector-with-new-law-to-regulate-contracting-activities-what-employers-need-to-know-part-2)). Existing contractors were given a year to comply, so check on the day you appoint.
+On the contractor's side, we learned that an item missing from the bill of quantities does not go away: it comes back as a variation, priced after the contract is signed, when there is no competition left to keep the price honest. Since January 2026, contractors in Dubai must be on a single register and may only take work within their classification. Fines go up to AED 100,000, and an owner who engages a non-compliant contractor can be investigated too ([Mayer Brown on Dubai Law No. 7 of 2025](https://www.mayerbrown.com/en/insights/publications/2025/09/dubai-overhauls-construction-sector-with-new-law-to-regulate-contracting-activities-what-employers-need-to-know-part-2)). Existing contractors were given a year to comply, so check on the day you appoint.
 
 ### Who is responsible
 
-- **Your registered consultant** normally puts together the bid package: drawings, specification and any bill of quantities.
+- **Your registered consultant** releases the final construction drawings and normally puts together the tender pack with the specification.
+- **A quantity surveyor** (your consultant's or one you appoint) measures the drawings and prepares the bill of quantities.
 - **You** decide who is invited and who is appointed.
 
 ### What Eastbridge does at this stage
 
+- If you want an independent quantity surveyor, we help you find one: we invite proposals, review them with you and recommend the one that offers the best value, not just the lowest fee.
+- We prepare the appointment for you to sign, so the surveyor is appointed directly by you.
+- If you wish, we then review the bill of quantities in full against the drawings and specification before it goes to the contractors, so gaps, provisional sums and quantities you would pay for later are caught at tender, not in the final account.
 - We check each bidder's licence and registration through the official registries.
 - We put every bid into one like-for-like table: exclusions, provisional sums, preliminaries and programme.
 - We call past clients, sit beside you at the interviews and give you a written recommendation.
 
-**You receive:** Normalised tender comparison; Reference call notes; Written recommendation.
+**You receive:** Quantity surveyor proposal comparison; Bill of quantities check notes; Normalised tender comparison; Reference call notes; Written recommendation.
 
 Read more: [How to choose a villa contractor](https://eastbridgestrategicpartners.com/insights/how-to-choose-a-villa-contractor-dubai/) · [Contractor quote review](https://eastbridgestrategicpartners.com/services/consultant-and-contractor-selection/#quote-review) · [How a quote review works](https://eastbridgestrategicpartners.com/insights/contractor-quote-review-villa-dubai/) · [Provisional sums](https://eastbridgestrategicpartners.com/glossary/#provisional-sum)
 
@@ -409,6 +415,8 @@ Delay is paid for monthly. Turner & Townsend puts a contractor's preliminaries, 
 - We are on site regularly, at the frequency agreed in your scope of works, and photograph work before it is covered up.
 - We check each payment application against the work in place and the contract, and recommend an amount before you pay.
 - We test each variation: is it a genuine change, is the price fair, and what does it do to time?
+- We agree each decision with you, on site or on a video call, then issue it to your consultant and contractor in writing, in your name and only with your written approval.
+- We prepare anything that needs your own signature, such as certain notices and payments, send it to you to sign and track it, so every notice deadline under your contract is met even when you are abroad.
 - We never instruct the contractor or approve a payment without your written approval.
 
 **You receive:** Site note after every visit; Monthly cost and programme report; Payment-application review notes; Variation register; Decision log.
@@ -628,9 +636,21 @@ Read more: [What to do when a villa build stalls](https://eastbridgestrategicpar
 
 ## What this adds up to
 
-16 stages and 129 decisions, before counting the ones that repeat every month. None is beyond an intelligent owner. The difficulty is that you meet each one for the first time, across the table from people who have met it a hundred times and who each have a commercial interest in your answer.
+16 stages and 131 decisions, before counting the ones that repeat every month. None is beyond an intelligent owner. The difficulty is that you meet each one for the first time, across the table from people who have met it a hundred times and who each have a commercial interest in your answer.
 
 That is the gap we fill. Philip Chapman spent 21 years as the builder on the other side of that table, in the UK, at P Chapman Construction. He leads every appointment personally, supported by three independent, UAE-based project managers he works with, who attend site and provide cover when he is unavailable. We work for you alone, and take no commission, referral fee or discount from any contractor, consultant or supplier.
+
+
+
+### How your decisions reach the team
+
+**We agree it with you.** We sit down with you, on site or on a video call such as Teams, go through what needs deciding, with the facts and our recommendation, and agree each decision.
+
+**We issue it in writing.** We send your decisions to your consultant and contractor in writing, in your name and only with your written approval.
+
+**You sign what must be signed.** Anything that needs your own signature, such as contract documents, certain notices and payments, we prepare and send to you to sign, and we track it so it goes in on time.
+
+So you meet every obligation and notice deadline under your contract, even when you are abroad. We never instruct the contractor or approve a payment without your written approval.
 
 
 
@@ -664,7 +684,7 @@ Arrange a free 30-minute call Or start with the free pre-construction checklist
 ## Questions
 
 **How many decisions does an owner make when building a villa in Dubai?**  
-This guide lists 129 across 16 stages, from checking the plot before purchase to the end of the defects period. Some are made once, such as basement or no basement. Others repeat: every monthly payment and every variation is a decision of its own, so the real number on a two-year build is higher.
+This guide lists 131 across 16 stages, from checking the plot before purchase to the end of the defects period. Some are made once, such as basement or no basement. Others repeat: every monthly payment and every variation is a decision of its own, so the real number on a two-year build is higher.
 
 **How long does it take from buying a plot to getting the keys?**  
 Engel & Völkers says most villas take 12 to 24 months from approval to completion. Design, approvals and choosing a contractor come before that. For a one-off villa, plan on two years or more from plot to keys; see [how long it takes to build a villa in Dubai](https://eastbridgestrategicpartners.com/insights/how-long-to-build-a-villa-dubai/).
@@ -718,7 +738,7 @@ Yes. A review answers one question, such as a plot before you buy or a contracto
 
 ## The home page section
 
-**129 decisions. One person beside you for all of them.**
+**131 decisions. One person beside you for all of them.**
 
 - **Before you buy the plot.** You decide whether this plot can take the house you want, and what the whole project will cost. We read the developer's rules and the sale terms, and price the whole project before you commit.
 - **Brief and budget.** You decide the rooms, the size, the quality and the total you are prepared to spend. We turn that into a brief, a budget and a programme your consultant can design to.

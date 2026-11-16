@@ -2,6 +2,7 @@
 owner's registered consultant and contractor. It does not supervise as consultant of record, submit permits,
 prepare tender documents, prequalify contractors or certify anything."""
 from config import fee_text as _fee_text, PUBLISH_FEES as _SHOW, COVERAGE as _COVERAGE
+from content.answers import DECISIONS_FAQ as _DECISIONS_FAQ
 
 # The full-service, one-off villa story (competitor brief 2.0). P Chapman Construction's record is the evidence.
 ONE_OFF_STORY = ("For a truly one-off villa, one person on your side does the work with you. We review every drawing, quote, "
@@ -58,6 +59,7 @@ SERVICES = [
    ("Is an owner's representative worth it on a villa?", "On a straightforward build with an experienced owner who lives in Dubai, perhaps not. On a bespoke villa, a major renovation, or any project where you are often abroad, it gives you regular cost reporting, programme monitoring, review of every payment and variation, and early warning of risks, from someone who works only for you. We will tell you honestly if you don't need us. See <a href=\"/fees/#worth-it\">is it worth it?</a>"),
    ("Who will I deal with, and how often will you be on site?", "Philip Chapman, our founder, leads every appointment personally and is your point of contact throughout. He is supported by three independent, UAE-based project managers he works with, who attend site and provide cover when he is unavailable. Site attendance and reporting are agreed in writing in the scope of your appointment: we are on site regularly through construction, at the frequency agreed in your scope of works, planned around key stages such as waterproofing, first fix and pre-handover."),
    ("Who appoints the quantity surveyor and engineers?", "You do, and you pay them directly. We help you work out which specialists the project needs, compare their proposals like-for-like and choose. We take no commission or referral fee from any of them."),
+   _DECISIONS_FAQ,
    ("Do you take commission from contractors or suppliers?", "No. We take no commission, referral fee or discount from any consultant, contractor or supplier. Our only income on your project is the fee you pay us. That is written into our appointment."),
    ("Do you replace the architect or the consultant?", "No. Your registered consultant designs, submits for permits and carries the statutory responsibilities. We represent you alongside them and check the design against your budget and brief at each stage."),
   ],
@@ -217,10 +219,12 @@ SERVICES = [
   "image": "gooden-heane-01",
   "stage": "Before appointment",
   "intro": """<p>Contractor bids for a villa rarely compare directly. One excludes the pool, one carries a large provisional sum for MEP, one assumes a programme nobody could achieve, and one has priced the drawings exactly as drawn, knowing the gaps will become variations. On paper the cheapest bid wins. In the final account it often doesn't.</p>
-<p>Philip wrote and priced these bids himself for 21 years. We help you and your consultant put bids on an equal footing, test the assumptions, call the references that matter and agree a contract that is fair to both sides. You appoint directly; we advise.</p>""",
+<p>Philip wrote and priced these bids himself for 21 years. We help you and your consultant put bids on an equal footing, test the assumptions, call the references that matter and agree a contract that is fair to both sides. You appoint directly; we advise.</p>
+<p>If you want an independent quantity surveyor to prepare the bill of quantities, we help you select and appoint one in the same way: we invite proposals, review them with you, recommend the one that offers the best value rather than the lowest fee, and prepare the appointment for you to sign.</p>""",
   "does": [
    "Shortlisting consultants and contractors suited to your type of villa",
    "Checking licences and registrations through the official registries",
+   "Help selecting and appointing an independent quantity surveyor, if you want one: proposals compared on best value, appointment prepared for you to sign",
    "Like-for-like comparison of bids: exclusions, provisional sums, preliminaries, programme",
    "Reference calls with past clients, not just showcase projects",
    "Advice on contract terms: payment, retention, bonds, delay and variations",
@@ -592,6 +596,8 @@ DELIVERABLES = {
  "consultant-and-contractor-selection": [
   ("Shortlist with reasons", "Consultants and contractors suited to your type of villa."),
   ("Licence and registration check record", "What was checked, where and when, through the official registries."),
+  ("Quantity surveyor proposal comparison", "Quantity surveyors' proposals set out side by side, with our recommendation on best value, not the lowest fee. You sign the appointment."),
+  ("Bill of quantities check notes", "The bill of quantities checked against the drawings and specification before it goes to the contractors: gaps, provisional sums and quantities flagged."),
   ("Normalised tender comparison", "Bids set out like-for-like: exclusions, provisional sums, preliminaries and programme."),
   ("Reference call notes", "What past clients said, not only the showcase projects."),
   ("Contract terms notes", "Payment, retention, bonds, delay and variation terms, with points to raise before you sign."),

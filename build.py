@@ -870,6 +870,10 @@ LLMS_SUMMARY = ("Independent, client-side owner's representative and villa proje
                 "residential construction company for 21 years. Paid only by the client; no contractor commissions. "
                 "Not a contractor or engineering consultancy: works alongside the client's registered consultant.")
 
+def _decisions_llms():
+    from content.answers import DECISIONS_LLMS
+    return DECISIONS_LLMS
+
 def llms_facts():
     return [f"- Contact: {C.EMAIL}, {C.PHONE_DISPLAY} (WhatsApp available); {C.HOURS}",
             f"- Office: {C.ADDRESS['street']}, {C.ADDRESS['locality']}, {C.ADDRESS['country_name']}",
@@ -879,6 +883,7 @@ def llms_facts():
             "- Working language: English",
             f"- Founder: {C.FOUNDER['name']}, who founded and led P Chapman Construction (UK premium residential contractor) for 21 years: {url('/about/#founder')}",
             f"- Team: {C.FOUNDER['name']} leads every appointment personally, supported by three independent, UAE-based project managers he works with, who attend site and provide cover when he is unavailable. Capacity is confirmed before an appointment is accepted.",
+            f"- {_decisions_llms()} {url('/services/owners-representative/#decisions')}",
             f"- Response: {C.RESPONSE_PROMISE} ({C.HOURS})",
             "- Portfolio: UK homes built by P Chapman Construction, the main contractor founded and led by Philip Chapman. Awards were made to the houses and their project teams, not to Philip personally or to Eastbridge: Owers House, built by P Chapman Construction and completed in 2014, was featured on Channel 4's Grand Designs and won a RIBA South West Award in 2016; The Old Station Master's House, Fowey, won Best Small New Housing Development in the LABC Building Excellence Awards South West 2018 (https://www.acornpropertygroup.org/old-station-masters-house-wins-labc-award/); Polgreen Manor was Highly Commended, Best Extension or Alteration to an Existing Dwelling, LABC South West 2020 (https://www.labc.co.uk/news/labc-south-west-winners-amp-highly-commended-2020)",
             f"- UK project case study: {url('/work/owers-house/')} (Owers House, built by P Chapman Construction as main contractor, completed in 2014; featured on Channel 4's Grand Designs; RIBA South West Award 2016)",

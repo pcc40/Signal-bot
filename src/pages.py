@@ -381,6 +381,9 @@ def service_page(s):
         cut = s["intro"].find("</p>") + 4
         opening, intro = (s["intro"][:cut], s["intro"][cut:]) if cut > 3 and ANS.answer_html(path) else ("", s["intro"])
     extra = s.get("extra", "")
+    if s["slug"] == "owners-representative":
+        # How the owner's decisions reach the consultant and contractor (Phil Chapman, 16 Nov 2026)
+        extra += f'<div id="decisions">{ANS.decisions_html(hid="decisions-h")}</div>'
     if s["slug"] == "consultant-and-contractor-selection":
         # the home page's second button lands on #quote-review: give that section its own way to act
         extra += (f'<p class="contact-actions quote-cta"><a class="btn" href="{contact_href("service", s["slug"])}">Ask for a quote review</a>'
@@ -825,7 +828,7 @@ def fees():
 </div></section>
 {example}
 <section class="section--tight" id="why-fees-vary" aria-labelledby="vary-h"><div class="wrap split"><div><h2 id="vary-h">Why the fee varies</h2></div><div class="prose">
-<p>No two villas ask the same of us. The fee follows three things: the size of the project, the scope you want us to carry, and the time it takes, which means how often we are on site and how long the build runs. That is why we publish ranges and not a fixed price, and why the figure is agreed in a written scope of works before we start.</p>
+<p>No two villas ask the same of us, and the fee follows what your project requires. Some owners want us beside them at every site meeting and every decision; others want only the contract, the payments and a monthly report checked. Three things set the fee: the size of the project, the scope you want us to carry, and the time it takes, which means how often we are on site and how long the build runs. That is why we publish ranges and not a fixed price, and why the figure is agreed in a written scope of works before we start.</p>
 {ANS.answer_html("/fees/")}
 </div></div></section>
 <section class="section--tight paper fee-detail" aria-labelledby="detail-h"><div class="wrap split"><div><span class="kicker">The detail</span><h2 id="detail-h">Scope, limits and what is included</h2><p class="muted">Open what you need. Nothing here changes the three ranges above.</p></div>
@@ -881,6 +884,7 @@ def about():
 <p>Philip Chapman founded <a href="{C.FOUNDER["company_uk_url"]}" rel="noopener">P Chapman Construction</a> and led it for 21 years, growing it into a premium contractor with a reputation for exceptionally demanding private houses.</p>
 <p>Houses the company built have been recognised in their own right. Owers House, built by P Chapman Construction and completed in 2014, was featured on Channel 4's Grand Designs, won a RIBA South West Award in 2016 and was reported in <a href="https://www.thetimes.co.uk/article/wings-of-desire-9cgnbh3fg" rel="noopener">The Times</a>. The Old Station Master's House in Fowey won Best Small New Housing Development in the LABC Building Excellence Awards South West 2018 (<a href="https://www.acornpropertygroup.org/old-station-masters-house-wins-labc-award/" rel="noopener">source</a>), and Polgreen Manor was Highly Commended in the 2020 South West awards (<a href="https://www.labc.co.uk/news/labc-south-west-winners-amp-highly-commended-2020" rel="noopener">source</a>). These awards belong to the houses and the teams that designed and built them. Alongside one-off houses it delivered country-house restorations, multi-unit developments, hotel and spa work, and schools, under both traditional and design-and-build contracts.</p>
 <p>Two decades as the builder meant pricing tenders, programming complex sites, managing subcontractors, administering JCT contracts, preparing and defending extension of time and variation claims, and handing finished homes to owners and design teams who expected them to be perfect. It also meant seeing, from the inside, exactly where owners lose money and time.</p>
+<p>As well as running P Chapman Construction, Philip project-managed builds for some UK clients from their side. He sat down with each client, in person or on Teams, agreed their decisions and issued them to the team in writing in the client's name, and prepared anything the client had to sign so that it went in on time. Eastbridge works the same way: see <a href="/services/owners-representative/#decisions">how your decisions reach the team</a>.</p>
 <p>In Dubai and Abu Dhabi, Philip works on the other side of the table: for the owner, never the builder. He leads every Eastbridge appointment personally, supported by three independent, UAE-based project managers he works with, who attend site and provide cover when he is unavailable, and he is the person you speak to from the first conversation to handover.</p>
 <p>Away from work he is a high-altitude mountaineer, which may explain a fondness for planning, contingency and getting everyone home safely.</p>
 </div></div></div></section>
@@ -924,6 +928,7 @@ FAQ_ALL = [
  ("Who appoints the quantity surveyor, engineers and other specialists?", "You do, and you pay them directly. We help you work out what is needed, compare proposals like-for-like and choose. We take no commission or referral fee from anyone we help you appoint."),
  ("Do you handle permits, statutory site inspections or legal advice?", "No. Statutory design, authority submissions and statutory site inspections are the duties of the registered consultant you appoint, and legal advice should come from a UAE-qualified lawyer. Our role is commercial and project management on your side, alongside them."),
  MONEY_FAQS[0],
+ ANS.DECISIONS_FAQ,
  MONEY_FAQS[1],
  ("How do your fees work?", "The first call is free and takes about 30 minutes. Every one-off villa is different, so we then agree a written scope of works and price it within our published ranges for the level of input you need; any work outside that scope is quoted before it starts." + (f" A review (plot, design, contractor quote or stalled project) is {C.fee_text('review')}; part service, with cost, contract and payment reviews and monthly reporting, is {C.fee_text('part')}; full service is {C.fee_text('full')}, depending on the input required." if C.PUBLISH_FEES else "") + " We never publish a day rate, an hourly rate or a fixed price. See <a href=\"/fees/\">how fees work</a>."),
  ("How do I arrange the free call?", "Send the short form on our <a href=\"/contact/\">contact page</a>, message us on WhatsApp or call. Philip replies personally to agree a time that suits you; there is no automatic booking."),

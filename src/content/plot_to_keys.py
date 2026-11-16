@@ -21,6 +21,7 @@ Every external fact carries a source from SRC; where a rule varies or could not 
 """
 import re
 from config import fee_text, PUBLISH_FEES, FEES, RESPONSE_PROMISE
+from content.answers import DECISIONS_TITLE, DECISIONS_STEPS, DECISIONS_CLOSE
 
 SLUG = "plot-to-keys-villa-owner-decisions-dubai"
 PATH = f"/insights/{SLUG}/"
@@ -236,12 +237,14 @@ def _stages():
             ("/insights/abu-dhabi-villa-permit-tamm/", "Abu Dhabi permits through TAMM"), ("/insights/nakheel-noc-villa-renovation/", "The Nakheel NOC")],
  },
  {"id": "tender", "title": "Tender and choosing the contractor",
-  "when": ("4 to 8 weeks", "ours"),
-  "lede": "Contractor bids rarely compare directly. On paper the cheapest wins. In the final account it often does not.",
+  "when": ("about 4 weeks for the bill of quantities, then 4 to 8 weeks to tender", "ours"),
+  "lede": "This stage starts when your consultant releases the final construction drawings. A bill of quantities is prepared from them and goes to the shortlisted contractors with the tender pack. Contractor bids rarely compare directly. On paper the cheapest wins. In the final account it often does not.",
   "decide": [
    "Who to invite, and whether each is licensed and classified for your villa.",
    "Whether the drawings are complete enough to price.",
-   "A priced bill of quantities, or drawings and specification only.",
+   "Who prepares the bill of quantities from the final construction drawings: your consultant or an independent quantity surveyor you appoint.",
+   "Which quantity surveyor to appoint, if you appoint your own: best value, not the lowest fee.",
+   "Allowing about four weeks after the final construction drawings are released for the bill of quantities to be prepared and checked before it goes to the contractors.",
    "Which items are left as provisional sums, and at what allowance.",
    "How bidders' questions are answered, so that all price the same thing.",
    "How to compare: on like-for-like totals, not the headline price.",
@@ -249,17 +252,22 @@ def _stages():
    "What to negotiate first: price, programme and the named site team.",
    "Who to appoint.",
   ],
-  "cost": f"Since January 2026, contractors in Dubai must be on a single register and may only take work within their classification. Fines go up to AED 100,000, and an owner who engages a non-compliant contractor can be investigated too ({c('law7', 'Mayer Brown on Dubai Law No. 7 of 2025')}). Existing contractors were given a year to comply, so check on the day you appoint.",
+  "cost": "On the contractor's side, we learned that an item missing from the bill of quantities does not go away: it comes back as a variation, priced after the contract is signed, when there is no competition left to keep the price honest. "
+          f"Since January 2026, contractors in Dubai must be on a single register and may only take work within their classification. Fines go up to AED 100,000, and an owner who engages a non-compliant contractor can be investigated too ({c('law7', 'Mayer Brown on Dubai Law No. 7 of 2025')}). Existing contractors were given a year to comply, so check on the day you appoint.",
   "who": [
-   ("Your registered consultant", "normally puts together the bid package: drawings, specification and any bill of quantities."),
+   ("Your registered consultant", "releases the final construction drawings and normally puts together the tender pack with the specification."),
+   ("A quantity surveyor", "(your consultant's or one you appoint) measures the drawings and prepares the bill of quantities."),
    ("You", "decide who is invited and who is appointed."),
   ],
   "eb": [
+   "If you want an independent quantity surveyor, we help you find one: we invite proposals, review them with you and recommend the one that offers the best value, not just the lowest fee.",
+   "We prepare the appointment for you to sign, so the surveyor is appointed directly by you.",
+   "If you wish, we then review the bill of quantities in full against the drawings and specification before it goes to the contractors, so gaps, provisional sums and quantities you would pay for later are caught at tender, not in the final account.",
    "We check each bidder's licence and registration through the official registries.",
    "We put every bid into one like-for-like table: exclusions, provisional sums, preliminaries and programme.",
    "We call past clients, sit beside you at the interviews and give you a written recommendation.",
   ],
-  "docs": ["Normalised tender comparison", "Reference call notes", "Written recommendation"],
+  "docs": ["Quantity surveyor proposal comparison", "Bill of quantities check notes", "Normalised tender comparison", "Reference call notes", "Written recommendation"],
   "links": [("/insights/how-to-choose-a-villa-contractor-dubai/", "How to choose a villa contractor"), ("/services/consultant-and-contractor-selection/#quote-review", "Contractor quote review"),
             ("/insights/contractor-quote-review-villa-dubai/", "How a quote review works"), ("/glossary/#provisional-sum", "Provisional sums")],
  },
@@ -347,6 +355,8 @@ def _stages():
    "We are on site regularly, at the frequency agreed in your scope of works, and photograph work before it is covered up.",
    "We check each payment application against the work in place and the contract, and recommend an amount before you pay.",
    "We test each variation: is it a genuine change, is the price fair, and what does it do to time?",
+   "We agree each decision with you, on site or on a video call, then issue it to your consultant and contractor in writing, in your name and only with your written approval.",
+   "We prepare anything that needs your own signature, such as certain notices and payments, send it to you to sign and track it, so every notice deadline under your contract is met even when you are abroad.",
    "We never instruct the contractor or approve a payment without your written approval.",
   ],
   "docs": ["Site note after every visit", "Monthly cost and programme report", "Payment-application review notes", "Variation register", "Decision log"],
@@ -664,7 +674,8 @@ def _fee_section():
            'who each have a commercial interest in your answer.</p>',
            '<p>That is the gap we fill. Philip Chapman spent 21 years as the builder on the other side of that table, in the UK, at P Chapman Construction. '
            'He leads every appointment personally, supported by three independent, UAE-based project managers he works with, who attend site and provide cover when he is unavailable. '
-           'We work for you alone, and take no commission, referral fee or discount from any contractor, consultant or supplier.</p>']
+           'We work for you alone, and take no commission, referral fee or discount from any contractor, consultant or supplier.</p>',
+           f'<h3>{DECISIONS_TITLE}</h3>' + "".join(f"<p><b>{t}</b> {d}</p>" for t, d in DECISIONS_STEPS) + f'<p>{DECISIONS_CLOSE}</p>']
     if PUBLISH_FEES:
         lo, hi = FEES["full"]["pct"]
         out.append(
