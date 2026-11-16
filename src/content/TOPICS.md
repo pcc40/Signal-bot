@@ -1,5 +1,6 @@
 # Insight backlog — the SEO engine publishes from the top down
 # Format: - [ ] slug | working title | target query | angle from the builder's side
+- [x] plot-to-keys-villa-owner-decisions-dubai | From plot to keys: every decision a villa owner makes in Dubai | building a villa on a plot in dubai step by step | PILLAR GUIDE (Phil, 16 Nov 2026): 16 stages, every owner decision counted, who is responsible and what we do at each; generated from src/content/plot_to_keys.py. Link new articles to its matching stage (#before-you-buy, #contract, #construction ...)
 - [x] dubai-municipality-villa-building-permit | Dubai villa building permits: what happens, step by step | dubai municipality building permit villa | what the consultant submits, what the owner signs, where programmes slip
 - [x] nakheel-noc-villa-renovation | Nakheel NOC for villa renovations explained | nakheel noc renovation | what triggers an NOC, sequencing with contractor mobilisation
 - [x] villa-renovation-cost-dubai | What a villa renovation really costs in Dubai | villa renovation cost dubai | the three hidden costs in older villas

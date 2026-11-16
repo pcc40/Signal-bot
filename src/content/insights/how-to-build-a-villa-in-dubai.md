@@ -2,7 +2,7 @@
 title: "How to build a villa in Dubai: plot to keys, step by step"
 description: "The stages of building a villa in Dubai, from plot checks to handover: who does what, how long each step takes, and which late decisions cost owners the most."
 date: 2026-10-29
-updated: 2026-11-01
+updated: 2026-11-16
 category: "Process"
 keypoints:
   - "A custom villa in Dubai typically takes 12–24 months from plot to keys, and 24–36 months for custom luxury, according to a property information website."
@@ -47,7 +47,7 @@ sources:
   - title: "Al Tamimi: Dubai law regulating engineering consultancy activities"
     url: "https://www.tamimi.com/news/dubai-issues-new-law-regulating-engineering-consultancy-activities-key-takeaway-points/"
 ---
-To build a villa in Dubai you check the plot, set a brief and budget, appoint a registered consultant to design it, secure master-developer and authority approvals, choose a contractor, build, then complete inspections, connect services and hand over. A [property information website](https://realestateclubdubai.com/dubai-villa-architects) puts the whole journey at 12–24 months from plot to keys, and 24–36 months for a custom luxury villa. The owner appoints every party and makes every key decision; the order in which those decisions are made decides most of the cost.
+To build a villa in Dubai you check the plot, set a brief and budget, appoint a registered consultant to design it, secure master-developer and authority approvals, choose a contractor, build, then complete inspections, connect services and hand over. A [property information website](https://realestateclubdubai.com/dubai-villa-architects) puts the whole journey at 12–24 months from plot to keys, and 24–36 months for a custom luxury villa. The owner appoints every party and makes every key decision; the order in which those decisions are made decides most of the cost. For the decisions themselves, see [from plot to keys: every decision a villa owner makes](/insights/plot-to-keys-villa-owner-decisions-dubai/).
 
 ## What are the stages of building a villa in Dubai?
 

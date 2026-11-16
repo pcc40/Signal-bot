@@ -7,6 +7,7 @@ from content.areas import AREAS
 from content.projects import PROJECTS, BY_SLUG as PROJ, RECOGNITION, TESTIMONIALS
 import content.case_island_e as CS
 import content.answers as ANS
+import content.plot_to_keys as PTK
 
 esc = H.escape
 pic = B.picture
@@ -179,6 +180,7 @@ def home(posts, post_cards, stages_html, svc_img):
 <p>Eastbridge is licensed in Dubai (Meydan Free Zone, licence {esc(C.LICENCE_NO)}), and Philip is based here. He leads every appointment personally, and works with three independent, UAE-based project managers who attend site.</p>
 <p><a class="link" href="/about/">About Philip and Eastbridge</a></p></div>
 </div></section>
+{PTK.home_section()}
 
 <section class="section stone" aria-labelledby="what-h"><div class="wrap">
 <div class="head-row"><h2 id="what-h">Villa builds, renovations and rescues</h2>

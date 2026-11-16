@@ -748,8 +748,16 @@ def load_insights():
         if meta.get("draft"):
             continue
         meta["slug"] = meta.get("slug") or f.stem
-        meta["html"] = nofollow_links(markdown.markdown(body, extensions=["tables", "toc", "attr_list", "sane_lists"]))
-        meta["words"] = len(re.findall(r"\w+", body))
+        if meta.get("generator"):
+            # A pillar guide whose body, key points, FAQs and sources are built from structured data in
+            # src/content/<generator>.py (e.g. plot_to_keys), so counts in the text are always the true counts.
+            import importlib
+            gen = importlib.import_module("content." + meta["generator"])
+            gen.insight_meta(meta, mid_cta=mid_cta(*gen.MID_CTA[:2], wa_page_link(WA_TPL_SERVICE, gen.MID_CTA[2])))
+            meta["html"] = nofollow_links(meta["html"])
+        else:
+            meta["html"] = nofollow_links(markdown.markdown(body, extensions=["tables", "toc", "attr_list", "sane_lists"]))
+            meta["words"] = len(re.findall(r"\w+", body))
         posts.append(meta)
     posts.sort(key=lambda p: str(p["date"]), reverse=True)
     return posts
@@ -998,12 +1006,14 @@ def page_text(path):
 
 def write_llms(posts):
     from content.services import SERVICES
+    from content import plot_to_keys as PTK
     from content.areas import AREAS
     head = [f"# {C.NAME}", "", f"> {LLMS_SUMMARY}", ""] + llms_facts()
     idx = head + [
         f"- Full text of the key pages and every article, in one file: {url('/llms-full.txt')}"] + llms_describe() + [
         "", "## Start here",
         f"- [Why a client-side project manager]({url('/why-a-client-side-project-manager/')}): what an owner's representative does, and where it adds value",
+        f"- [{PTK.H1}]({url(PTK.PATH)}): {PTK.LLMS_SUMMARY}",
         f"- [Island E: worked project example]({url('/case-studies/island-e-waterfront-villa/')}): a hypothetical example of how we would manage a villa on Dubai Islands: budget structure, cash flow, tender comparison and programme (not a completed project)",
         f"- [Owers House, UK project case study]({url('/work/owers-house/')}): a RIBA award-winning house built by P Chapman Construction as main contractor",
         f"- [Full text for AI assistants]({url('/llms-full.txt')}): services, about, fees, FAQ and all insights as plain text",

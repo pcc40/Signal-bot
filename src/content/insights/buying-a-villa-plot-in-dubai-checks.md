@@ -2,7 +2,7 @@
 title: "Buying a villa plot in Dubai: checks to make before you pay"
 description: "The checks to make before buying a villa plot in Dubai: title, affection plan, design guidelines, build-by deadlines, ground, utilities and build budget."
 date: 2026-10-24
-updated: 2026-11-01
+updated: 2026-11-16
 category: "Plots"
 keypoints:
   - "Read the affection plan and the master developer's design guidelines before you agree a price; they decide what you can actually build."
@@ -44,7 +44,7 @@ sources:
 
 Before you pay for a villa plot in Dubai, confirm the title and affection plan, read the master developer's design guidelines and any build-by deadline, understand the service charges, and get a realistic view of ground conditions, utilities and neighbouring plots. Then price the villa the plot actually allows, not the one you imagine, and test whether plot plus build stacks up against likely exit values.
 
-This is a practical checklist from the owner's side. It is not legal advice or a valuation. Use a UAE-qualified lawyer for the transaction and an independent valuer for price.
+This is a practical checklist from the owner's side. It is not legal advice or a valuation. Use a UAE-qualified lawyer for the transaction and an independent valuer for price. For what comes after the purchase, see [from plot to keys: every decision a villa owner makes](/insights/plot-to-keys-villa-owner-decisions-dubai/).
 
 ## Why plot checks matter more than the price
 

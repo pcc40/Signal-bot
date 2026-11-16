@@ -7,6 +7,7 @@ import config as C
 from content.services import SERVICES, BY_SLUG as SVC, DELIVERABLES, OUTCOMES, SPECIMENS, MONTH_ON_PROJECT, WA_TOPIC
 import content.services as SV
 import content.answers as ANS
+import content.plot_to_keys as PTK
 from content.areas import AREAS, BY_SLUG as AREA
 from content.projects import PROJECTS, BY_SLUG as PROJ
 
@@ -274,7 +275,8 @@ def home(posts):
 def services_hub():
     crumbs = [("Home", "/"), ("Services", "/services/")]
     body = B.banner(crumbs, "Services for villa owners", "Client-side project management from the first budget to the end of the defects period, or just the part you need.", "sea-glass-house-01", credit_of("sea-glass-house-01")) + f'''
-<section class="section"><div class="wrap">{svc_cards(SERVICES)}</div></section>
+<section class="section--tight"><div class="wrap">{PTK.link_block("ptk-link--wide")}</div></section>
+<section class="section" style="padding-top:0"><div class="wrap">{svc_cards(SERVICES)}</div></section>
 <section class="section paper"><div class="wrap split"><div><h2>Where our role stops</h2></div><div class="prose">
 <p>We are not a contractor and we hold no construction contracts. We are not an engineering consultancy: the statutory design, permit submissions and statutory site inspections of your villa are carried out by the registered consultant you appoint, and we represent you alongside them. We are not lawyers; where legal advice is needed, we work with your UAE-qualified lawyer. And we are not estate agents.</p>
 <p>Keeping these lines clear is what lets us act for you alone.</p></div></div></section>
@@ -355,6 +357,9 @@ def service_enquiry_html(s):
             f'<a class="btn btn--ghost" href="{B.wa_page_link(B.WA_TPL_SERVICE, WA_TOPIC[s["slug"]])}" rel="noopener">Ask on WhatsApp</a></p>'
             f'</div></div></section>')
 
+# Service pages that carry the "From plot to keys" guide link (16 Nov 2026): the two main routes for a new villa, and the plot review.
+PTK_LINK_PAGES = {"owners-representative", "villa-construction-project-management", "plot-due-diligence"}
+
 def service_page(s):
     path = f"/services/{s['slug']}/"
     crumbs = [("Home", "/"), ("Services", "/services/"), (s["short"], path)]
@@ -386,7 +391,7 @@ def service_page(s):
 <figure>{pic(strip[0], img_alt_of(strip[0], proj_of(strip[0])["name"] if not B.is_uae(strip[0]) else ""), "(max-width:900px) 100vw, 40vw")}<figcaption>{esc(B.img_caption(strip[0]) if B.is_uae(strip[0]) else credit_of(strip[0]))}</figcaption></figure></div>
 <div class="prose">{opening}{ANS.answer_html(path)}{intro}
 <h2>What we do</h2><ul>{does}</ul>
-<h2>What it gives you</h2><ul>{gets}</ul>{extra}{alongside}{read_more}</div>
+<h2>What it gives you</h2><ul>{gets}</ul>{extra}{alongside}{read_more}{PTK.link_block() if s["slug"] in PTK_LINK_PAGES else ""}</div>
 </div></section>
 {deliverables_html(s["slug"])}{month_html(s["slug"])}
 <section class="section--tight"><div class="wrap">{strip_html([ban] + strip[1:])}</div></section>
@@ -1135,12 +1140,13 @@ def insights(posts):
     for i, p in enumerate(posts):
         path = f"/insights/{p['slug']}/"
         c = [("Home", "/"), ("Insights", "/insights/"), (p["title"], path)]
-        kp = "".join(f"<li>{esc(k)}</li>" for k in p.get("keypoints", []))
+        pillar = bool(p.get("pillar"))      # a generated guide lays out its own key points, stage menu and mid-page call to action
+        kp = "" if pillar else "".join(f"<li>{esc(k)}</li>" for k in p.get("keypoints", []))
         faqs = [(f["q"], f["a"]) for f in p.get("faqs", [])]
         srcs = "".join(f'<li><a href="{esc(s["url"])}" rel="{"nofollow noopener" if s.get("nofollow") else B.rel_for(s["url"])}">{esc(s["title"])}</a></li>' for s in p.get("sources", []))
         heads = re.findall(r'<h2 id="([^"]+)">(.*?)</h2>', p["html"])
         toc = ("<nav class=\"toc\" aria-label=\"In this article\"><strong>In this article</strong><ol>" +
-               "".join(f'<li><a href="#{h}">{t}</a></li>' for h, t in heads) + "</ol></nav>") if len(heads) > 2 else ""
+               "".join(f'<li><a href="#{h}">{t}</a></li>' for h, t in heads) + "</ol></nav>") if len(heads) > 2 and not pillar else ""
         d = datetime.date.fromisoformat(str(p["date"]))
         u = datetime.date.fromisoformat(str(p.get("updated", p["date"])))
         mins = max(3, round(p["words"] / 230))
@@ -1151,19 +1157,21 @@ def insights(posts):
         hero_img = post_img(p)
         body_html = p["html"]
         inline = inline_imgs(hero_img)
-        parts = re.split(r'(?=<h2 id=)', body_html)
+        parts = [body_html] if pillar else re.split(r'(?=<h2 id=)', body_html)
         for k, ins in zip((2, 5), inline):
             if len(parts) > k:
                 alt = img_alt_of(ins, "" if B.is_uae(ins) else f'{proj_of(ins)["name"]}, {proj_of(ins)["place"]}')
                 parts[k] = f'<figure>{pic(ins, alt, "(max-width:760px) 100vw, 720px")}<figcaption>{esc(caption_of(ins))}</figcaption></figure>' + parts[k]
-        if len(parts) > 3:
+        if pillar:
+            pass
+        elif len(parts) > 3:
             parts[3] = ARTICLE_MID_CTA() + parts[3]
         else:
             parts.append(ARTICLE_MID_CTA())
         body_html = "".join(parts)
         meta = f'{esc(p.get("category",""))} · {d.strftime("%-d %B %Y")}{upd} · {mins} min read · By <a href="/about/#founder">{esc(C.FOUNDER["name"])}</a>'
-        body = "<article>" + B.banner(c, esc(p["title"]), None, hero_img, credit_of(hero_img), f'<p class="article-meta">{meta}</p>') + f'''
-<section class="section--tight"><div class="wrap article-grid"><div class="prose">
+        body = "<article>" + B.banner(c, esc(p.get("h1") or p["title"]), None, hero_img, credit_of(hero_img), f'<p class="article-meta">{meta}</p>') + f'''
+<section class="section--tight"><div class="wrap article-grid"><div class="prose{" ptk" if pillar else ""}">
 {ANS.answer_html(path)}{('<div class="keypoints"><h2>Key points</h2><ul>' + kp + '</ul></div>') if kp else ""}
 {toc}
 {body_html}
