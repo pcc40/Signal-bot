@@ -83,3 +83,21 @@ Dear editor,
 A short follow-up on my note of 7 November offering an 800-word contributed piece on five questions to ask before signing a design-and-build villa contract. I am happy to adapt the angle or length to suit, and can deliver within a week. If it is not one for you, no reply is needed.
 
 Kind regards,
+
+---
+
+## 7. Saif Elite QS — Mudassir Saif (positive: wants to meet; reply all: keep Alessio@ and altaf@saifeliteqs.com)
+Find: the reply from info@saifeliteqs.com, subject "Re: Owner's representative and QS: complementary roles" (16 Nov, 10:04 Dubai). Reply all.
+Phil: check the two slots suit you (calendar is clear Tue–Fri) and that a Meydan Business Centre meeting room is free, or swap in a café, before sending.
+Status: pending
+
+Dear Mudassir,
+
+Thank you, I would be glad to meet.
+
+Our office is at the Business Centre, Meydan Grandstand, 6th Floor, Meydan Road, Nad Al Sheba. Would Wednesday 18 November at 10:00 or Thursday 19 November at 14:00 suit you? If neither works, send me a time that does and I will fit around it.
+
+I would like to hear how you run tenders and cost plans on private villa projects, and I can explain where an owner's representative sits alongside the QS.
+
+Kind regards,
+
