@@ -47,3 +47,39 @@ I will share the brochure with my UK contacts as discussed, and when a plot or a
 I look forward to staying in touch.
 
 Kind regards,
+
+---
+
+## 4. Construction Week — Julianne Tolentino (press pitch follow-up; reply all: keep shehzin.shaikh@itp.com)
+Find: Phil's SENT email to julianne.tolentino@itp.com, subject "Opinion pitch: Why villa budgets leak – a builder's view from the owner's side" (7 Nov). Reply to that sent email.
+Status: pending
+
+Dear Julianne,
+
+A short follow-up on my note of 7 November offering an 800-word opinion piece on why villa budgets in Dubai leak, from a builder's view on the owner's side. I am happy to adapt the angle or length to suit, and can deliver within a week. If it is not one for you, no reply is needed.
+
+Kind regards,
+
+---
+
+## 5. Gulf News — Property editor (press pitch follow-up)
+Find: Phil's SENT email to readers@gulfnews.com, subject "Property: Building a Dubai villa from the UK – what overseas owners get wrong (guest piece offer)" (7 Nov). Reply to that sent email.
+Status: pending
+
+Dear Property editor,
+
+A short follow-up on my note of 7 November offering an 800-word guest piece on what overseas owners get wrong when building a villa in Dubai from the UK. I am happy to adapt the angle or length to suit, and can deliver within a week. If it is not one for you, no reply is needed.
+
+Kind regards,
+
+---
+
+## 6. Khaleej Times — editor (press pitch follow-up; reply all: keep news@khaleejtimes.com)
+Find: Phil's SENT email to letters@khaleejtimes.com, subject "Contribution: Five questions to ask before signing a design-and-build villa contract" (7 Nov). Reply to that sent email.
+Status: pending
+
+Dear editor,
+
+A short follow-up on my note of 7 November offering an 800-word contributed piece on five questions to ask before signing a design-and-build villa contract. I am happy to adapt the angle or length to suit, and can deliver within a week. If it is not one for you, no reply is needed.
+
+Kind regards,

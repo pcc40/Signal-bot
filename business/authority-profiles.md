@@ -337,6 +337,6 @@ Philip Chapman
 
 | Outlet | Sent | To | Follow-up due | Result |
 |---|---|---|---|---|
-| Construction Week ME | 7 Nov 2026 | julianne.tolentino@itp.com, cc shehzin.shaikh@itp.com | 14 Nov 2026 | awaiting |
-| Gulf News (Property) | 7 Nov 2026 | readers@gulfnews.com | 14 Nov 2026 | awaiting |
-| Khaleej Times | 7 Nov 2026 | letters@khaleejtimes.com, cc news@khaleejtimes.com | 14 Nov 2026 | awaiting |
+| Construction Week ME | 7 Nov 2026 | julianne.tolentino@itp.com, cc shehzin.shaikh@itp.com | 14 Nov 2026 | no reply by 16 Nov; final follow-up drafted 16 Nov (reply-drafts.md, Eastbridge Outlook) |
+| Gulf News (Property) | 7 Nov 2026 | readers@gulfnews.com | 14 Nov 2026 | no reply by 16 Nov; final follow-up drafted 16 Nov (reply-drafts.md, Eastbridge Outlook) |
+| Khaleej Times | 7 Nov 2026 | letters@khaleejtimes.com, cc news@khaleejtimes.com | 14 Nov 2026 | no reply by 16 Nov; final follow-up drafted 16 Nov (reply-drafts.md, Eastbridge Outlook) |
