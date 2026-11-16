@@ -12,25 +12,6 @@ Mix: opportunity, buyer brief, opportunity, market/launch radar, "how the desk w
 
 ## Queued
 
-### Mon 16 Nov 2026, 09:00 UAE — Abu Dhabi launch radar (with image card: cards/2026-11-16-abu-dhabi-launch-radar.png)
-AED 12.97bn of homes sold in Abu Dhabi in a single month.
-
-That was October: 35% up on October 2025, with 77% of it off-plan (ADREC data, as analysed by Springfield Properties).
-
-What has moved since:
-• Manchester City Yas Residences Phase 2: Ohana says about 92% sold within 48 hours. Remaining villas on request.
-• Riviera Residences Phase 2 on Al Reem: announced 4 November, designed by Herzog & de Meuron.
-• The Orchard at Sobha City: four-bedroom villas from AED 9.1m.
-• One&Only Private Residences, Al Maryah Island: announced, not yet priced.
-
-First releases are allocated before they reach a portal. When the price is public, the allocation is already done.
-
-We track every Abu Dhabi launch, dated and sourced. Which one are you watching?
-
-dealdeed.ae/launches
-
-#AbuDhabi #AbuDhabiRealEstate #OffPlan #YasIsland #AlReemIsland
-
 ### Tue 17 Nov 2026, 09:00 UAE — How the desk works (with image card: cards/2026-11-17-how-the-desk-works.png)
 Nobody pays DealDeed until a deal completes.
 
@@ -158,6 +139,7 @@ Figures from Aldar's launch details to agents; confirm final terms on launch day
 | Sun 22 Nov 08:00 UK (moved to 05:00 UK / 09:00 UAE on 16 Nov) | Opportunity: Dubai Islands corner garden villa, AED 12M, 65% paid + card | Scheduled 15 Nov |
 | Mon 23 Nov 08:00 UK (moved to 05:00 UK / 09:00 UAE on 16 Nov) | Launch radar: Canopies two days to go + card | Scheduled 15 Nov; queue confirmed daily Mon 16 to Mon 23 |
 | 16 Nov | All queued posts Mon 16 to Mon 23 rescheduled to 5:00 AM GMT (09:00 UAE) at Phil's request | Confirmed in LinkedIn scheduled list |
+| Mon 16 Nov 05:00 UK (09:00 UAE) | Abu Dhabi launch radar (Oct AED 12.97bn) + image card | Posted (confirmed live in LinkedIn 16 Nov); queue re-checked 16 Nov 15:40 UTC: Tue 17 to Mon 23, one per day, all 5:00 AM |
 
 ## Page profile changes (15 Nov)
 - Tagline: "Private deal-matching desk for Dubai and Abu Dhabi property. Motivated sellers and verified buyers, agent to agent." (no off-market wording)
