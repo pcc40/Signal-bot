@@ -52,7 +52,7 @@ Kind regards,
 
 ## 4. Construction Week — Julianne Tolentino (press pitch follow-up; reply all: keep shehzin.shaikh@itp.com)
 Find: Phil's SENT email to julianne.tolentino@itp.com, subject "Opinion pitch: Why villa budgets leak – a builder's view from the owner's side" (7 Nov). Reply to that sent email.
-Status: pending
+Status: drafted 2026-11-16
 
 Dear Julianne,
 
@@ -64,7 +64,7 @@ Kind regards,
 
 ## 5. Gulf News — Property editor (press pitch follow-up)
 Find: Phil's SENT email to readers@gulfnews.com, subject "Property: Building a Dubai villa from the UK – what overseas owners get wrong (guest piece offer)" (7 Nov). Reply to that sent email.
-Status: pending
+Status: drafted 2026-11-16
 
 Dear Property editor,
 
@@ -76,7 +76,7 @@ Kind regards,
 
 ## 6. Khaleej Times — editor (press pitch follow-up; reply all: keep news@khaleejtimes.com)
 Find: Phil's SENT email to letters@khaleejtimes.com, subject "Contribution: Five questions to ask before signing a design-and-build villa contract" (7 Nov). Reply to that sent email.
-Status: pending
+Status: drafted 2026-11-16
 
 Dear editor,
 
