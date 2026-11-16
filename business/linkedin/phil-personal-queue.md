@@ -14,6 +14,16 @@ Link goes in the **first comment**, added by the scheduled task at ~9:04 am UAE.
 - End every post with a direct question to readers (added 14 Nov: engagement is the weak spot). No announcement or "Free download" hooks.
 - Phil gets a push at 8:45 UAE with the day's post and article link, and the live post link after 9:00.
 - Comment text: "Full guide: <link>"; checklists "Free download: <link>"; calculator "Calculator and embed code: <link>".
+- **Company page repost (Phil, 16 Nov):** every personal post is also reposted on the Eastbridge Strategic Partners page the same morning. After the link comment is in: on today's post, click "Switch to different account" (the avatar ▾ under the post) → select Eastbridge Strategic Partners → Save → Repost → "Repost instantly"; check the "Repost successful" toast. Never pick DealDeed. Never "Repost with thoughts". Report it in the push.
+
+## Profile and pages (updated 16 Nov 2026, Premium trial to ~16 Dec)
+
+- Headline restored to: "Client-side villa project manager, Dubai & Abu Dhabi | On the owner's side only, no contractor commissions | 21 years building high-end homes in the UK | Founding Partner, Eastbridge" (a Premium AI rewrite had replaced it).
+- About rewritten (builder's side → owner's side, British English); top skills: Owners Representative, Contract Management, Cost Management, Tender Management, Residential Construction.
+- Services published on Phil's profile (Project Management, Budgeting, Real Estate; contact for pricing; Open Profile on), the Eastbridge page and the DealDeed page (LinkedIn has no "construction" service category).
+- 7 personal posts (5–15 Nov) reposted on the Eastbridge page; snagging, D&B and PM fees were already there as page posts.
+- Follow invites: Eastbridge page 19 (all monthly credits, refill 1 Dec) to construction/architecture/property connections; DealDeed 112 (Premium Page, 300/month, auto-invite of engagers already on).
+- 16 Nov: D&B vs architect post at 3,986 impressions (from 338 on 15 Nov), the first breakout.
 
 ## Analytics snapshot (12 Nov 2026, ~15:00 UK)
 
