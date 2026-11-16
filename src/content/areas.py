@@ -205,26 +205,58 @@ AREAS = [
   "slug": "district-one",
   "name": "District One, MBR City",
   "city": "Dubai",
-  "developer": "Meydan Sobha",
+  "developer": "Meydan and Nakheel",
   "tag": "Lagoon-front plots and contemporary mansions",
   "title": "District One Villa Project Management | Eastbridge",
   "description": "Building or fitting out a villa in District One, MBR City? Independent owner\'s representation on budget, team, quality and handover.",
   "h1": "District One: contemporary villas around the lagoon",
   "lede": "Large contemporary villas, lagoon frontage and the Downtown skyline. Many owners here are customising, extending or completing houses to a far higher standard than delivered.",
   "image": "sea-glass-house-02",
-  "body": """<h2>Typical projects</h2>
-<p>District One in Mohammed Bin Rashid Al Maktoum City combines developer-built villas, mansions and plots for private builds. There are three kinds of project here: private builds on plots, the upgrade of developer villas to a bespoke specification, and fit-out of shell-and-core mansions. Each has a different relationship with the master developer and a different set of risks.</p>
-<h2>Things to plan for</h2>
+  "body": """<p>This page sets out what is particular to District One. It is one example of where we work, not a limit: we cover every community in Dubai and Abu Dhabi.</p>
+<h2>What makes District One different</h2>
+<p>District One sits in Mohammed Bin Rashid City and is built around a Crystal Lagoons lagoon. A 2014 report on the original project gave the lagoon as 90 acres of water, with a three-metre boardwalk and an eight-metre beach, and described 1,500 villas of four to eight bedrooms, in more than 18 floor plans and three design themes: Contemporary, Modern Arabic and Mediterranean (<a href="https://www.worldconstructionnetwork.com/projects/mohammad-bin-rashid-city-district-one-dubai/" rel="noopener">World Construction Network, 2014</a>). Treat those as the launch figures. The community has been added to since, so check the current plan with the master developer before you rely on them.</p>
+<p>It was launched as a Meydan Sobha project. Today Nakheel lists District One among its developments, with villas, mansions, waterfront residences and bespoke plots where owners build their own homes (<a href="https://www.nakheel.com/en/developments/nakheel-collections/district-one" rel="noopener">Nakheel</a>), and the District One West site presents Meydan as the development company with Nakheel managing the project (<a href="https://west.district1.com/" rel="noopener">District One West</a>). In practice that means more than one name may appear on your title, your handover pack and your consent letters, and the first job is to find out which party you deal with for design review and for alterations.</p>
+<p>What sets it apart is the scale of the houses and the water. Many owners are not building from nothing: they are changing a developer villa or mansion to a far higher standard than the one delivered, or completing a shell. The big glazed elevations that make the lagoon views also decide how the work is detailed.</p>
+<h2>Plot, shell or finished villa: new build versus renovation</h2>
 <ul>
-<li><strong>Developer guidelines.</strong> Design and alteration work is reviewed against the community's guidelines before the authority permit. Your consultant prepares the submissions.</li>
-<li><strong>Upgrading developer villas.</strong> Changing finishes is straightforward. Moving services, enlarging openings or adding floor area is not, and should be priced with that in mind.</li>
-<li><strong>Glass and heat.</strong> Large glazed façades facing the lagoon look spectacular and bring real solar gain. Glazing specification and cooling capacity need to be designed together.</li>
+<li><strong>Building on a plot.</strong> A full design and approval cycle, then a build of a year or more. Engel &amp; Völkers says most villas take 12 to 24 months from approval to completion, and puts luxury construction at AED 900 to 1,400 per sq ft before land, design, approvals and interiors (<a href="https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai" rel="noopener">Engel &amp; Völkers, December 2025</a>). Our guide to <a href="/insights/how-to-build-a-villa-in-dubai/">how to build a villa in Dubai</a> sets out the stages.</li>
+<li><strong>Completing a shell-and-core villa.</strong> Establish exactly what was delivered, what was tested and which warranties came with it. The joint between the developer's work and your fit-out contractor's is where responsibility for a defect is hardest to pin down.</li>
+<li><strong>Renovating a developer villa or mansion.</strong> Changing finishes is straightforward. Moving services, enlarging openings or adding floor area is not, and should be priced with that in mind. Our <a href="/tools/renovate-or-rebuild/">renovate-or-rebuild tool</a> and <a href="/tools/villa-build-cost-calculator/">villa build and renovation cost calculator</a> give a sourced first range for each route.</li>
 </ul>
-<h2>How we help</h2>
-<p>Whether you are building on a plot or reworking a completed villa, we set the budget, help you choose the team, review cost and quality for you and represent you through handover. Our background is contemporary, heavily glazed houses, which is exactly where detailing and coordination matter most.</p>""",
+<h2>The approval route: master developer first</h2>
+<p>Design and alteration work in a master-planned community is normally reviewed against the community's guidelines before the authority permit. We have not found the District One alteration guidelines published, so ask the master developer in writing which guidelines and which application route apply to your property, and keep the reply. Once you have consent, your registered consultant applies for the building permit from Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits, through Dubai's <a href="https://www.dm.gov.ae/dubai-launches-single-window-for-building-permits/" rel="noopener">unified permit window</a>. We review the applications with you and keep the contractor's start date tied to approvals in hand. Our guide to <a href="/insights/which-dubai-authority-covers-my-villa/">which Dubai authority covers your villa</a> explains why the authority is set plot by plot.</p>
+<h2>Typical villa stock, and what to investigate</h2>
+<p>The stock is large contemporary villas and mansions, many with lagoon frontage, plus plots for private builds. None of the points below is a diagnosis of any house; they are the things worth checking before a price is agreed.</p>
+<ul>
+<li><strong>Glass and heat.</strong> Large glazed façades facing the lagoon bring real solar gain. Glazing specification and cooling capacity need to be designed together, and any added load checked against the existing supply.</li>
+<li><strong>Waterproofing and drainage.</strong> Test terraces, roofs and wet rooms where you plan to build over or open them up, and record the result.</li>
+<li><strong>What has already been changed.</strong> If you are buying a villa a previous owner has altered, ask for the consent and drawings for each change. Unapproved work becomes the new owner's problem.</li>
+<li><strong>Handover records.</strong> As-built drawings, warranties and the defects history tell you what you are working with. If they are missing, ask the developer or seller early.</li>
+<li><strong>The garden and pool.</strong> External works need consent as well. Optimal Engineering Consultants' 2026 guide puts a basic fibreglass pool at AED 80,000 to 120,000 and a standard concrete villa pool at AED 150,000 to 250,000 (<a href="https://www.optimal.ae/blog/cost-to-build-a-villa-in-dubai" rel="noopener">Optimal, 2026</a>). Give outdoor works their own drawings, approval and place in the programme.</li>
+</ul>
+<h2>Where District One projects go wrong</h2>
+<ul>
+<li><strong>Scope creep.</strong> A kitchen becomes the ground floor, which becomes the whole house. Decide scope and budget together, and record every later change with its cost and time.</li>
+<li><strong>Quotes that are not comparable.</strong> One contractor allows for new cooling, another assumes the old system stays. On the contractor's side, a low price built on assumptions is usually recovered later in variations. Our guide to <a href="/insights/how-to-choose-a-villa-contractor-dubai/">choosing a villa contractor</a> shows how to compare quotes like-for-like.</li>
+<li><strong>Designing before the guidelines are read.</strong> A detailed design that is then refused is wasted fees and months.</li>
+</ul>
+<p>Our article on <a href="/insights/villa-renovation-mistakes-dubai/">villa renovation mistakes in Dubai</a> covers these from the builder's side.</p>
+<h2>How we help in District One</h2>
+<p>Whether you are building on a plot or reworking a completed villa, we set the budget, help you compare contractor quotes like-for-like and choose, track the approvals against the programme, observe and record progress on site, and review every payment application and variation before you pay. You appoint the consultant and contractor and pay them directly; we review and recommend. Our background is contemporary, heavily glazed houses, which is exactly where detailing and coordination matter most.</p>""",
   "faqs": [
-   ("Can I modify a developer-built villa in District One?", "Yes, subject to the community guidelines, a developer NOC and an authority permit for anything beyond interior finishes. Work that moves services or changes structure needs careful pricing."),
+   ("Can I modify a developer-built villa in District One?", "Usually yes, subject to the community's guidelines, the master developer's consent and an authority permit for anything beyond interior finishes. We have not found the alteration guidelines published, so ask the master developer in writing which apply. Work that moves services or changes structure needs careful pricing."),
+   ("Who is the master developer of District One?", "It was launched as a Meydan Sobha project. Nakheel now lists District One among its developments, and the District One West site presents Meydan as the development company with Nakheel managing the project. Confirm which party handles consents for your property."),
+   ("How big is the District One lagoon?", "A 2014 report on the original project gave the Crystal Lagoons lagoon as 90 acres of water. Check the current master plan for the latest figure."),
    ("Do you handle fit-out of shell-and-core villas?", "Yes. We represent you through interior design, fit-out procurement and delivery, alongside your designer and contractor."),
+   ("How long does it take to build a villa on a District One plot?", "Engel & Völkers says most villas take 12 to 24 months from approval to completion. Design and the developer and authority approvals come first. Our guide to <a href=\"/insights/how-long-to-build-a-villa-dubai/\">how long it takes to build a villa in Dubai</a> sets out each stage."),
+  ],
+  "sources": [
+   ("World Construction Network: Mohammed Bin Rashid City District One (2014)", "https://www.worldconstructionnetwork.com/projects/mohammad-bin-rashid-city-district-one-dubai/"),
+   ("Nakheel: District One", "https://www.nakheel.com/en/developments/nakheel-collections/district-one"),
+   ("District One West", "https://west.district1.com/"),
+   ("Engel & Völkers: construction cost in Dubai (December 2025)", "https://www.engelvoelkers.com/ae/en/resources/construction-cost-dubai"),
+   ("Optimal Engineering Consultants: cost to build a villa in Dubai (2026)", "https://www.optimal.ae/blog/cost-to-build-a-villa-in-dubai"),
+   ("Dubai Municipality: Dubai launches single window for building permits", "https://www.dm.gov.ae/dubai-launches-single-window-for-building-permits/"),
   ],
   "services": ["villa-renovation-project-management", "villa-construction-project-management", "cost-and-programme-control"],
  },
