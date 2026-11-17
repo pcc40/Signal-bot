@@ -64,3 +64,63 @@ Notes:
 | eb-fu1-b6-23 | Maven PDC | info@mavenpdc.com | em_01m7hbhyndfp4bw8ckpbn42kg8 | Delivered |
 | eb-fu1-b6-24 | Secret Gardens | contact@secretgardens.ae | em_01m7hbj9bqe9facvhv39tsfxk7 | Delivered |
 | eb-fu1-b6-25 | OASES SCAPE | info@oasesscape.ae | em_01m7hbjpxcez183kbetrkdz3vg | Delivered |
+
+## Tue 17 Nov
+
+First follow-ups to batch 7 (`business/outbox/day-tue.json`, 47 items), sent 17 Nov 2026 04:49:50–04:58:37 UTC (08:49–08:58 UAE) through Bird, one at a time, from philip@, reply-to philip@, no BCC/CC, category marketing, tracking off, tagged campaign/key, key as idempotency key.
+
+Before sending: no item's address or domain appeared in `business/replies.md`; nothing had been sent earlier today.
+
+Result: 47 sent, 46 delivered, 0 deferred, 0 bounced, 1 rejected by Bird (recipient_suppressed: SHH Architecture & Interiors, sam@shh.co.uk; not resent, added to replies.md), 0 skipped, 0 not sent. Today's Bird count 47/50.
+
+Replies found in the morning check: fäm Properties (passed to fäm Interiors, tried to phone Phil; draft #8). Call list: business/call-list.md (fäm, Lloyd Ellis, Get Snagging, Kredium).
+
+| Key | Firm | To | Bird id | Status |
+|---|---|---|---|---|
+| eb-fu1-b7-01 | C'est ici Design | hello@cesticidecor.com | em_01m7kxe0xee0nsveepfkvsfja9 | Delivered |
+| eb-fu1-b7-02 | Styled Habitat | info@styledhabitat.com | em_01m7kxeg6qekpvqwm5qhvxwgr1 | Delivered |
+| eb-fu1-b7-03 | Lulie Fisher Design Studio | info@luliefisher.com | em_01m7kxetaxfc3smvdqe3z9vg1m | Delivered |
+| eb-fu1-b7-04 | Lina Jabre Interiors | id@linajabre.com | em_01m7kxf4k2ezrrc163ne1fj43e | Delivered |
+| eb-fu1-b7-05 | LivHoli Interiors | info@livholi.com | em_01m7kxfefmfjh9df1y6z1yq5xj | Delivered |
+| eb-fu1-b7-06 | BEAD Architects & Engineers | info@bead-architects.com | em_01m7kxfrdjfffaq0spce7weaxz | Delivered |
+| eb-fu1-b7-07 | Harf Noon Design Studio | hello@harfnoondesignstudio.com | em_01m7kxg549eravvbcm9c13mmag | Delivered |
+| eb-fu1-b7-08 | Maria Morris Global | info@mariamorrisglobal.com | em_01m7kxgfb1edzacqerg555cw1x | Delivered |
+| eb-fu1-b7-09 | House Hunters Real Estate | ops@househuntersdubai.com | em_01m7kxgsfze4ctjy4sc1b21n6e | Delivered |
+| eb-fu1-b7-10 | K Estates | info@kestates.ae | em_01m7kxh8q3e4bsz9v65t9wrxff | Delivered |
+| eb-fu1-b7-11 | John Taylor Dubai | dubai@john-taylor.com | em_01m7kxhk72f0xt57shn1fx9xvp | Delivered |
+| eb-fu1-b7-12 | XIS Real Estate | info@xisrealestate.com | em_01m7kxhxvgfgw8n5ts219m4g93 | Delivered |
+| eb-fu1-b7-13 | Moonstay | info@moonstayad.com | em_01m7kxj7yffwjv2am89xsppmf1 | Delivered |
+| eb-fu1-b7-14 | SHH Architecture & Interiors | sam@shh.co.uk | em_01m7kxjje5e8cakrb7g22hq515 | REJECTED by Bird (recipient_suppressed); not resent |
+| eb-fu1-b7-15 | 1508 London | projects@1508london.com | em_01m7kxjwkyfwkshhpneg134kpv | Delivered |
+| eb-fu1-b7-16 | Gunter & Co | info@gunterandco.com | em_01m7kxk7dre4h9186p2qnqh7kk | Delivered |
+| eb-fu1-b7-17 | Legacy Private | hello@legacyprivate.ae | em_01m7kxknkhea9tvr13m7qv4cj5 | Delivered |
+| eb-fu1-b7-18 | Pharos MFO | info@pharosmfo.com | em_01m7kxm09eebrb147jgmn43cxw | Delivered |
+| eb-fu1-b7-19 | GSB | clientimpact@gsbglobal.com | em_01m7kxmbacem7s0hbajvtksybz | Delivered |
+| eb-fu1-b7-20 | Habib Al Mulla and Partners | info@habibalmulla.com | em_01m7kxmp0gfcjt0kfsqkrmt99y | Delivered |
+| eb-fu1-b7-21 | Stephenson Harwood (Dubai) | Info.dubai@stephensonharwood.com | em_01m7kxn0qbfnvaz21kn135f7sj | Delivered |
+| eb-fu1-b7-23 | Dezire Project Consultant | dezire@dezireconsultant.com | em_01m7kxnba3ej9vwqrf0q856jjn | Delivered |
+| eb-fu1-b7-24 | Poolsco Landscaping | info@poolscolandscaping.com | em_01m7kxnngte4j88zcgnexncp4h | Delivered |
+| eb-fu1-b7-25 | Panamera Landscapes | info@panameralandscape.com | em_01m7kxp51dff79f9nbypfnr5t6 | Delivered |
+| eb-fu1-b7-26 | Holo | info@holo.ae | em_01m7kxpfzffp48bzc51zsz7rbq | Delivered |
+| eb-fu1-b7-27 | Lion Mortgage | info@lionmortgage.ae | em_01m7kxptqmf1t8htzet3bt11k4 | Delivered |
+| eb-fu1-b7-28 | Mortgage Hub | info@mortgagehub.ae | em_01m7kxq5waeg5sh3t8c1k5pt3s | Delivered |
+| eb-fu1-b7-29 | Cozmo Mortgages | info@cozmomortgages.com | em_01m7kxqh97ewqaxwtsjrn3tgtt | Delivered |
+| eb-fu1-b7-30 | Elite Mortgage | contact@elitecapital.ae | em_01m7kxqyereh18h9a1gb9n4zg3 | Delivered |
+| eb-fu1-b7-31 | First Choice Mortgage Broker (FCMB) | mortgages@fcmb.ae | em_01m7kxr9czemqby6amd27qe0ph | Delivered |
+| eb-fu1-b7-32 | LUX Holiday Home | info@luxholidayhome.com | em_01m7kxrm90f9w8acek3mp7qsvw | Delivered |
+| eb-fu1-b7-34 | One Perfect Stay | homes@oneperfectstay.com | em_01m7kxrytnfj6tezbyjsy70hxf | Delivered |
+| eb-fu1-b7-35 | Mai de Luxe | service@maideluxe.com | em_01m7kxs9mzf59a8kbpysjs7fhz | Delivered |
+| eb-fu1-b7-36 | Daniels Luxury Holiday Homes | info@danielsholidayhomes.com | em_01m7kxsn00fahvbsxwbracbs7a | Delivered |
+| eb-fu1-b7-37 | Custom Controls | enquiries@customcontrols.co.uk | em_01m7kxsze4frht5adtew86c3yg | Delivered |
+| eb-fu1-b7-38 | LuxSmart | info@luxsmart.ae | em_01m7kxta2geansqxyjrjw77ny3 | Delivered |
+| eb-fu1-b7-39 | Waiz | info@waiz.ae | em_01m7kxtmk2etarchgbmjyttge4 | Delivered |
+| eb-fu1-b7-40 | John Cullen Lighting (Middle East) | MESales@johncullenlighting.com | em_01m7kxtzfcf9qtvdxpfepadq4r | Delivered |
+| eb-fu1-b7-41 | dpa lighting consultants (Dubai) | dubai@dpalighting.com | em_01m7kxvd4kextbas32w7dqka8r | Delivered |
+| eb-fu1-b7-42 | Townberry Interiors | info@townberryinteriors.com | em_01m7kxvqcte4gt8q9pzemecmas | Delivered |
+| eb-fu1-b7-43 | Keys Please | info@keysplease.ae | em_01m7kxw24veqhavnem706kz2bn | Delivered |
+| eb-fu1-b7-44 | Property Inspection Dubai | info@propertyinspectiondubai.ae | em_01m7kxwcg1ec2bpwes2rgv9ywh | Delivered |
+| eb-fu1-b7-45 | Ample Inspections | info@ampleinspections.com | em_01m7kxwq5te3ca6rays1rd0k6r | Delivered |
+| eb-fu1-b7-46 | RAMI Property Inspections | ops@ramipropertyinspections.com | em_01m7kxx1bdfp0rek2vxdesevry | Delivered |
+| eb-fu1-b7-48 | GTA Inspectors | info@gtainspectors.com | em_01m7kxxch4ebessb4tengy2sy2 | Delivered |
+| eb-fu1-b7-49 | Eagle Eye Property Inspection | info@eagleeyepropertyinspection.com | em_01m7kxxrxbfr9r5ga1b0as1r8k | Delivered |
+| eb-fu1-b7-50 | Moduline Engineering Consultancy | info@moduline.ae | em_01m7kxy3mef5hrt470kmx444my | Delivered |
