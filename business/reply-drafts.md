@@ -118,3 +118,18 @@ I am not selling anything. I would simply like to meet Mazen for half an hour an
 
 Kind regards,
 
+---
+
+## 9. Construction Week — Julianne Tolentino (thank-you and link request; reply all: keep shehzin.shaikh@itp.com)
+Find: Julianne's latest email in the thread "RE: Opinion pitch: Why villa budgets leak – a builder's view from the owner's side" (17 Nov). Reply all.
+Why: the author line in the piece has no web address. A link from Construction Week would be the site's first link from a recognised publication (Search Console shows none yet), which helps Google and the AI assistants trust the site.
+Status: pending
+
+Dear Julianne,
+
+Thank you, I am delighted it is running.
+
+One small request: could the author line at the end include our web address, eastbridgestrategicpartners.com? If a link is possible, that would be very kind. And if you need a headshot, I am happy to send one.
+
+Kind regards,
+
