@@ -101,3 +101,20 @@ I would like to hear how you run tenders and cost plans on private villa project
 
 Kind regards,
 
+---
+
+## 8. fäm Properties / fäm Interiors — Marco Material and Mazen Abdoh (reply all: keep mazen.a@, heena.k@, Chanelk.L@famdevelopments.com and cc@famproperties.com)
+Find: the email from marco.m@famproperties.com, subject "Re: Fw: Owner-side support for your Palm Jumeirah villa buyers" (16 Nov, 17:43 Dubai). Reply all.
+Phil: they also sent you a WhatsApp from +971 52 216 2430 — answering that first is quicker; this email covers the same ground.
+Status: pending
+
+Dear Marco, dear Mazen,
+
+Thank you for passing my note on, and sorry I missed your call.
+
+To explain: I am an independent project manager for villa owners in Dubai and Abu Dhabi. I sit on the owner's side of a build or renovation, checking quotes, changes and stage payments, after 21 years running a building company in the UK. Your Palm Jumeirah villa buyers are often the people who go on to renovate.
+
+I am not selling anything. I would simply like to meet Mazen for half an hour and hear how fäm Interiors works with buyers after they complete. Would Wednesday or Thursday this week suit, at your office?
+
+Kind regards,
+

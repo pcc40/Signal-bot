@@ -2,6 +2,7 @@
 
 One line per reply, bounce or opt-out, newest first: date | firm | address | type (positive / neutral / not now / no / auto-reply / bounce / sales pitch / unsubscribe) | note. Firms here get no further automatic outreach or follow-up (auto-replies excepted only if marked "follow up ok").
 
+2026-11-16 | fäm Properties | info@famproperties.com (passed to Mazen Abdoh, BD Manager fäm Interiors, mazen.a@famdevelopments.com, +971 52 129 4733; reply from Marco Material, call centre, marco.m@famproperties.com, +971 52 216 2430) | neutral (engaged) | forwarded internally to fäm Interiors; they tried to phone Phil and sent him a WhatsApp. Draft reply in reply-drafts.md #8; Phil to answer the WhatsApp
 2026-11-16 | Saif Elite QS | info@saifeliteqs.com (reply from Mudassir Saif, Sr. QS & Cost Consultant, +971 50 505 3679; cc Alessio@, altaf@) | positive | replied to the 16 Nov meet-first follow-up: happy to meet at Phil's office, asked for location and availability. Draft reply in reply-drafts.md #7
 2026-11-16 | Engel & Völkers Dubai | dubai@engelvoelkers.com | unsubscribe (probable) | follow-up blocked by Bird: recipient_suppressed (most likely used the unsubscribe link). Do not contact
 2026-11-16 | Prime by betterhomes | info@bhomes.com | unsubscribe (probable) | follow-up blocked by Bird: recipient_suppressed (most likely used the unsubscribe link). Do not contact
