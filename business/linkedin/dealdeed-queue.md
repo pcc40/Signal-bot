@@ -12,25 +12,6 @@ Mix: opportunity, buyer brief, opportunity, market/launch radar, "how the desk w
 
 ## Queued
 
-### Tue 17 Nov 2026, 09:00 UAE — How the desk works (with image card: cards/2026-11-17-how-the-desk-works.png)
-Nobody pays DealDeed until a deal completes.
-
-Here is how the desk works, in three steps.
-
-01 Register a brief, privately. Agents submit motivated mandates or buyer briefs. Owners and investors register their position and are paired with a vetted RERA-licensed agent. Free, in minutes.
-
-02 We verify, then match. Every deal is benchmarked to Dubai Land Department transactions, the seller's position evidenced and the all-in cost normalised. Only then is it matched, and you see only what fits.
-
-03 Agents close, we step back. The two licensed agents handle representation, negotiation and transfer. When the deal completes, each agent pays a fixed introduction fee. If nothing closes, no one pays anything.
-
-DealDeed is an introducer, not a brokerage. Buyers and sellers never pay us.
-
-Holding a mandate or a brief that deserves a careful match?
-
-dealdeed.ae
-
-#DubaiRealEstate #AbuDhabiRealEstate #RealEstateAgents #RERA #PropertyInvestment
-
 ### Wed 18 Nov 2026, 09:00 UAE — Nad Al Sheba Gardens Ph 4 corner townhouse (with image card: cards/2026-11-18-nad-al-sheba-townhouse.png)
 Priced under every recent sale of its type in the finished phase.
 
@@ -140,6 +121,7 @@ Figures from Aldar's launch details to agents; confirm final terms on launch day
 | Mon 23 Nov 08:00 UK (moved to 05:00 UK / 09:00 UAE on 16 Nov) | Launch radar: Canopies two days to go + card | Scheduled 15 Nov; queue confirmed daily Mon 16 to Mon 23 |
 | 16 Nov | All queued posts Mon 16 to Mon 23 rescheduled to 5:00 AM GMT (09:00 UAE) at Phil's request | Confirmed in LinkedIn scheduled list |
 | Mon 16 Nov 05:00 UK (09:00 UAE) | Abu Dhabi launch radar (Oct AED 12.97bn) + image card | Posted (confirmed live in LinkedIn 16 Nov); queue re-checked 16 Nov 15:40 UTC: Tue 17 to Mon 23, one per day, all 5:00 AM |
+| Tue 17 Nov 05:00 UK (09:00 UAE) | How the desk works (3 steps, fixed fee on completion) + image card | Posted (confirmed live in LinkedIn 17 Nov); queue checked 17 Nov 13:30 UTC (Browser 1): Wed 18 to Mon 23, one per day, all 5:00 AM, nothing new needed |
 
 ## Page profile changes (15 Nov)
 - Tagline: "Private deal-matching desk for Dubai and Abu Dhabi property. Motivated sellers and verified buyers, agent to agent." (no off-market wording)
