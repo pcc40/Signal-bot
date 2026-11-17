@@ -106,7 +106,7 @@ From 15 June to 15 September, outdoor work under direct sunlight is banned from 
 
 ### Ramadan working hours
 
-In February 2026 the Ministry announced that normal private-sector working hours would be reduced by two hours a day during Ramadan ([MoHRE](https://mohre.gov.ae/en/media-center/news/12/2/2026/reduction-of-working-hours-for-private-sector-employees-by-two-hours-daily-during-the-holy-month-of)). Ramadan follows the lunar calendar, so it moves earlier each year. Contractors adjust shifts, but a month of shorter days is a month of lower output, and it should appear in the programme rather than as a surprise.
+In February 2026 the Ministry announced that normal private-sector working hours would be reduced by two hours a day during Ramadan ([MoHRE](https://mohre.gov.ae/en/media-center/news/12/2/2026/reduction-of-working-hours-for-private-sector-employees-by-two-hours-daily-during-the-holy-month-of)). Ramadan follows the lunar calendar, so it moves earlier each year. Contractors adjust shifts, but a month of shorter days is a month of lower output, and it should appear in the programme rather than as a surprise. The [Dubai construction calendar guide](/insights/dubai-construction-calendar-villa-programme/) lists the likely 2027 Ramadan and Eid dates.
 
 ### NOC and permit comments
 

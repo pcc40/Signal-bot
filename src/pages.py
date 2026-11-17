@@ -94,6 +94,7 @@ POST_IMG = {
     "older-villa-mep-renovation": "uae-arabian-ranches-02",
     "emaar-community-villa-renovation": "uae-arabian-ranches-03",
     # general Dubai
+    "dubai-construction-calendar-villa-programme": "uae-dubai-skyline-villas-01",
     "how-to-build-a-villa-in-dubai": "uae-dubai-skyline-villas-01",
     "how-to-choose-client-side-project-manager": "uae-dubai-skyline-villas-01",
     "building-a-villa-in-dubai-from-the-uk": "uae-dubai-skyline-villas-01",
@@ -1002,10 +1003,8 @@ def contact():
 <p class="hp"><label>Leave this empty <input name="company_site" tabindex="-1" autocomplete="off"></label></p>
 <p class="form-prefill small" data-prefill="service" hidden>You are asking about: <b></b>. <a href="#f-service">Change</a></p>
 <p class="form-prefill small" data-prefill="area" hidden>Community: <b></b>. <a href="#f-area">Change</a></p>
-<p class="form-note small muted">Three fields are required: your name, your email and a few words about the project. Everything under Optional details helps us reply usefully, but you can leave it blank.</p>
 <div class="row"><div class="field"><label for="f-name">Your name {req}</label><input id="f-name" name="name" autocomplete="name" required aria-describedby="f-name-err">{err("f-name", "Please tell us your name.")}</div>
 <div class="field"><label for="f-email">Email {req}</label><input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="f-email-err">{err("f-email", "Please enter an email address we can reply to, such as name@example.com.")}</div></div>
-<fieldset class="field"><legend>How would you like us to reply? {opt}</legend><div class="checks">{methods}</div></fieldset>
 <div class="field"><label for="f-phone">Phone or WhatsApp number <span class="opt ph-opt">Optional</span><span class="opt ph-req" hidden>Needed for a call or WhatsApp</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" minlength="7" pattern="\\+?[0-9][0-9 \\(\\)\\-]{{6,}}" aria-describedby="f-phone-hint f-phone-err"><p class="hint" id="f-phone-hint">Include the country code, for example +971 or +44.</p>{err("f-phone", "Please enter a phone number with its country code, for example +971 50 123 4567.")}</div>
 <div class="field"><label for="f-msg">Tell us about the project {req}</label><textarea id="f-msg" name="message" required minlength="10" aria-describedby="f-msg-hint f-msg-err"></textarea><p class="hint" id="f-msg-hint">Plot or villa, community, stage, when you want to start, and anything that is worrying you.</p>{err("f-msg", "Please add a few words about your project.")}</div>
 <details class="form-more" id="f-more" data-form-more><summary><span class="form-more__t">Optional details</span> <span class="form-more__d">Service, community, project stage, property type and size, budget and where you are based</span></summary><div class="form-more__body">

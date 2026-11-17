@@ -61,7 +61,6 @@ def landing():
 <p class="hp"><label>Leave this empty <input name="company_site" tabindex="-1" autocomplete="off"></label></p>
 <div><label for="g-name">Your name</label><input id="g-name" name="name" autocomplete="name" required></div>
 <div><label for="g-email">Email</label><input id="g-email" name="email" type="email" autocomplete="email" required></div>
-<div><label for="g-stage">Where is your project now?</label><select id="g-stage" name="stage">{opts}</select></div>
 <p class="small muted">We use your name and email to show you the download and to keep a record of the request. We never sell or publish your details. See our <a href="/privacy/">privacy notice</a>.</p>
 <div><label class="consent" for="g-mkt"><input id="g-mkt" name="marketing_opt_in" type="checkbox" value="yes"> <span>Optional: also send me Eastbridge notes for villa owners by email, no more than once a month. I can unsubscribe at any time by replying to any note or writing to {C.EMAIL}.</span></label></div>
 <p class="submit-row"><button class="btn" type="submit">Get the checklist</button><span class="small muted">We never pass your details to contractors or suppliers.</span></p>
@@ -171,7 +170,6 @@ def snag_landing():
 <p class="hp"><label>Leave this empty <input name="company_site" tabindex="-1" autocomplete="off"></label></p>
 <div><label for="g-name">Your name</label><input id="g-name" name="name" autocomplete="name" required></div>
 <div><label for="g-email">Email</label><input id="g-email" name="email" type="email" autocomplete="email" required></div>
-<div><label for="g-stage">Where is your project now?</label><select id="g-stage" name="stage">{opts}</select></div>
 <p class="small muted">We use your name and email to show you the download and to keep a record of the request. We never sell or publish your details. See our <a href="/privacy/">privacy notice</a>.</p>
 <div><label class="consent" for="g-mkt"><input id="g-mkt" name="marketing_opt_in" type="checkbox" value="yes"> <span>Optional: also send me Eastbridge notes for villa owners by email, no more than once a month. I can unsubscribe at any time by replying to any note or writing to {C.EMAIL}.</span></label></div>
 <p class="submit-row"><button class="btn" type="submit">Get the snagging checklist</button><span class="small muted">We never pass your details to contractors or suppliers.</span></p>
