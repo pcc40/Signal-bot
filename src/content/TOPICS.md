@@ -23,7 +23,7 @@
 - [x] villa-kitchen-bathroom-renovation-cost-dubai | Kitchen and bathroom renovation costs in a Dubai villa | villa kitchen renovation cost dubai | at least two independent sources; sources-disagree table
 - [x] villa-fit-out-dubai | Fitting out a shell-and-core or new villa in Dubai | villa fit out dubai | what a fit-out contract covers and leaves out; who manages the interface between designer, fit-out contractor and MEP; approvals for fit-out works
 - [x] how-to-choose-villa-renovation-company-dubai | How to choose a villa renovation company in Dubai | villa renovation company dubai | 10 checks from the builder's side; design-build firm vs contractor plus designer; licence, insurance, references, BOQ; no company names
-- [ ] jumeirah-islands-villa-renovation | Renovating a Jumeirah Islands villa | jumeirah islands villa renovation | Nakheel NOC sequence, lakeside works, older MEP
+- [x] jumeirah-islands-villa-renovation (not written as an article on 17 Nov 2026: /areas/jumeirah-islands/ was deepened on 1 Nov and covers the same search; a second page would compete with it. Revisit only with a distinct angle, e.g. a lake-plot case) | Renovating a Jumeirah Islands villa | jumeirah islands villa renovation | Nakheel NOC sequence, lakeside works, older MEP
 - [x] defects-liability-period-uae | The defects period: what to do in the first year | defects liability period uae | keeping leverage after handover
 - [ ] snagging-developer-villa-handover | Snagging a developer villa before you accept it | villa snagging dubai | the 20 items we check first
 - [ ] dubai-islands-plot-guide | Building on a Dubai Islands plot | dubai islands plots | infrastructure timing and guidelines; link the Island E worked example (/case-studies/island-e-waterfront-villa/) and /areas/dubai-islands/
@@ -41,7 +41,7 @@
 - [ ] renovating-villa-to-sell-dubai | Renovating a Dubai villa to sell: where the budget should go | villa renovation roi dubai | what buyers pay for versus owner taste; no promised returns
 - [ ] design-fees-villa-dubai | Villa design fees in Dubai: what's normal | villa design fees dubai | scope gaps between design packages
 # Added from the competitor brief, lower priority.
-- [ ] dubai-construction-calendar-villa-programme | The Dubai construction calendar and your villa programme | construction working hours ramadan dubai | Ramadan hours, the midday break 15 June to 15 September (cite MoHRE), Eid; merges summer-midday-break-villa-programme
+- [x] dubai-construction-calendar-villa-programme | The Dubai construction calendar and your villa programme | construction working hours ramadan dubai | Ramadan hours, the midday break 15 June to 15 September (cite MoHRE), Eid; merges summer-midday-break-villa-programme
 - [ ] best-time-to-renovate-villa-dubai | The best time of year to renovate a Dubai villa | best time to renovate villa dubai | summer working limits, approvals lead time, living elsewhere
 - [ ] villa-renovation-rules-gated-communities-dubai | Renovation rules in Dubai's gated communities | villa renovation rules dubai community | Emaar, Nakheel, Meraas and Dubai Holding NOC routes compared from primary sources
 - [ ] renovating-mortgaged-villa-dubai | Renovating a mortgaged villa in Dubai | renovate mortgaged villa dubai bank noc | bank NOC; verify with a lender or primary source first

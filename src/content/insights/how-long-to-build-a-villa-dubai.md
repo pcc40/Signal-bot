@@ -109,7 +109,7 @@ Add a basement and the substructure stage can easily double. Dubai Municipality'
 
 It changes the working day. The UAE midday break, run by the Ministry of Human Resources and Emiratisation, bans outdoor work under direct sunlight from 12:30pm to 3pm every day between 15 June and 15 September. 2026 was its 22nd consecutive year. Exemptions include concrete pours and asphalt laying where the work cannot be interrupted (Khaleej Times).
 
-Contractors adapt with early starts, shaded work areas and by shifting internal trades into the hottest months. Even so, three months of shortened outdoor days, combined with heat and humidity, reduce output on structural and external work. In our view, a programme that shows the same weekly progress in August as in January has not been thought through. Ask the contractor how the summer is reflected in its programme, and which activities it plans to do then.
+Contractors adapt with early starts, shaded work areas and by shifting internal trades into the hottest months. Even so, three months of shortened outdoor days, combined with heat and humidity, reduce output on structural and external work. In our view, a programme that shows the same weekly progress in August as in January has not been thought through. Ask the contractor how the summer is reflected in its programme, and which activities it plans to do then. Our guide to the [Dubai construction calendar](/insights/dubai-construction-calendar-villa-programme/) sets out the Ramadan, Eid and summer dates to plan around.
 
 ## What makes a villa build take longer?
 

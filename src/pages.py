@@ -94,6 +94,7 @@ POST_IMG = {
     "older-villa-mep-renovation": "uae-arabian-ranches-02",
     "emaar-community-villa-renovation": "uae-arabian-ranches-03",
     # general Dubai
+    "dubai-construction-calendar-villa-programme": "uae-dubai-skyline-villas-01",
     "how-to-build-a-villa-in-dubai": "uae-dubai-skyline-villas-01",
     "how-to-choose-client-side-project-manager": "uae-dubai-skyline-villas-01",
     "building-a-villa-in-dubai-from-the-uk": "uae-dubai-skyline-villas-01",

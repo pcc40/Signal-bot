@@ -93,7 +93,7 @@ A real budget adds design fees, approval charges, any master-developer charge fo
 
 ## Step 5: Build a realistic programme
 
-On site, published guides put a smaller interior refresh at about two to three months and structural work on a luxury villa at 150–210 days. Survey, design, approvals and tender come before that. Our [villa renovation timeline](/insights/villa-renovation-timeline-dubai/) breaks the whole journey into phases with our planning allowances, and explains what stretches a Dubai programme: the summer midday break from 15 June to 15 September ([Gulf News](https://gulfnews.com/uae/government/midday-outdoor-work-ban-returns-across-uae-for-22nd-year-1.500567381)), shorter working hours in Ramadan, NOC comments and long-lead imports.
+On site, published guides put a smaller interior refresh at about two to three months and structural work on a luxury villa at 150–210 days. Survey, design, approvals and tender come before that. Our [villa renovation timeline](/insights/villa-renovation-timeline-dubai/) breaks the whole journey into phases with our planning allowances, and explains what stretches a Dubai programme: the summer midday break from 15 June to 15 September ([Gulf News](https://gulfnews.com/uae/government/midday-outdoor-work-ban-returns-across-uae-for-22nd-year-1.500567381)), shorter working hours in Ramadan (see the [Dubai construction calendar](/insights/dubai-construction-calendar-villa-programme/)), NOC comments and long-lead imports.
 
 If time out of the house has a cost, the [delay cost estimator](/tools/delay-cost-estimator/) shows what each month of slippage adds in rent and finance.
 
