@@ -1,12 +1,12 @@
 # Why villa budgets leak, and how owners can catch it early
 
-*Private owners in Dubai rarely lose money in one dramatic moment. A builder who spent 21 years pricing one-off homes explains where it goes instead.*
+*Private owners in Dubai rarely lose money in one dramatic moment. A builder who has spent 21 years pricing one-off homes explains where it goes instead.*
 
 By Philip Chapman, founding partner, Eastbridge Strategic Partners
 
 Ask an owner whose villa came in well over budget what went wrong, and you will usually hear about one moment. The rock under the pool. The stone that doubled in price. The month the site went quiet. Those moments happen, but in my experience they rarely account for the gap. Most of the overspend arrives quietly, a line at a time, and much of it could have been seen months earlier by anyone who knew which pages to read.
 
-For 21 years I ran a building company in Cornwall, pricing and building one-off houses for private clients, many of them on the coast. I priced those jobs, built them and, a few times, argued about them in adjudication. When a tender landed on my desk, I read the drawings for what was missing before I read them for what was there. Every builder does, and nobody in the trade would call it sharp practice. It is how you stay in business. It also means the contractor's team knows where the money is likely to move long before the owner does.
+In 2005 I founded a building company in Cornwall, and I have spent the 21 years since pricing and building one-off houses for private clients, many of them on the coast. When a tender landed on my desk, I read the drawings for what was missing before I read them for what was there. Every builder does, and nobody in the trade would call it sharp practice. It is how you stay in business. It also means the contractor's team knows where the money is likely to move long before the owner does.
 
 The first place is the design itself. A contractor can only price what it is shown, and where the drawings stop, the tender fills the gap with provisional sums: an allowance for the kitchen, one for the joinery, another for the lighting control. On paper they look like costs. In practice they are placeholders, and nothing stops them being set low enough to help a bid look competitive. When the owner finally chooses the kitchen they actually want, the allowance is swapped for a real price and the difference lands with them. On a luxury villa with a dozen of these, that difference can swallow the contingency before the frame is up. Ask who set each allowance and what specification sits behind it. If nobody can tell you, it's a guess, and you are the one carrying it.
 
@@ -20,7 +20,7 @@ Owners don't need to treat their contractor as an opponent. Most contractors I h
 
 Since moving to Dubai, I have been struck by how ambitious the private villas here are, and by how capable the consultants and contractors building them can be. The gap is on the owner's side of the table. A large developer has someone reading every tender, programme and payment the way the contractor does. A family building one house often has nobody doing that job, whether it is an independent quantity surveyor, a project manager or a consultant with the time and the brief to do it properly. That, more than any single surprise, is where the money goes.
 
-*Philip Chapman is founding partner of Eastbridge Strategic Partners, an independent client-side project manager for villas in Dubai and Abu Dhabi. For 21 years he ran P Chapman Construction, a UK builder whose Owers House won a RIBA South West Award in 2016 and featured on Channel 4's Grand Designs.*
+*Philip Chapman is founding partner of Eastbridge Strategic Partners, an independent client-side project manager for villas in Dubai and Abu Dhabi. He founded P Chapman Construction, a UK builder, in 2005; its Owers House won a RIBA South West Award in 2016 and featured on Channel 4's Grand Designs.*
 
 ---
 
