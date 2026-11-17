@@ -87,7 +87,7 @@ Takeaways (15 Nov): the split holds and is now clear. Decision/risk hooks where 
 | 14 Nov | Sat | How long to build a villa | Full guide: https://eastbridgestrategicpartners.com/insights/how-long-to-build-a-villa-dubai/ | Posted (link comment in; 99 impr. at ~1d) |
 | 15 Nov | Sun | Plot checks before you pay | Full guide: https://eastbridgestrategicpartners.com/insights/buying-a-villa-plot-in-dubai-checks/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (link comment in; 22 impr. at ~30m, 353 at ~1d; https://www.linkedin.com/feed/update/urn:li:activity:7527596274146115584/) |
 | 16 Nov | Mon | Renovation mistakes | Full guide: https://eastbridgestrategicpartners.com/insights/villa-renovation-mistakes-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (link comment in ~9:47 UAE; 9 impr. at ~45m; https://www.linkedin.com/feed/update/urn:li:activity:7527958635377782784/) |
-| 17 Nov | Tue | Renovate or rebuild | Full guide: https://eastbridgestrategicpartners.com/insights/renovate-or-rebuild-villa-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 17 Nov | Tue | Renovate or rebuild | Full guide: https://eastbridgestrategicpartners.com/insights/renovate-or-rebuild-villa-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (link comment in ~9:03 UAE; 9 impr. at ~5m; https://www.linkedin.com/feed/update/urn:li:activity:7528321033704079360/) |
 | 18 Nov | Wed | Building from the UK | Full guide: https://eastbridgestrategicpartners.com/insights/building-a-villa-in-dubai-from-the-uk/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 | 19 Nov | Thu | Calculator embed for agents | Calculator and embed code: https://eastbridgestrategicpartners.com/tools/villa-build-cost-calculator/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 | 20 Nov | Fri | Defects liability period | Full guide: https://eastbridgestrategicpartners.com/insights/defects-liability-period-uae/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
@@ -104,7 +104,8 @@ Takeaways (15 Nov): the split holds and is now clear. Decision/risk hooks where 
 | 1 Dec | Tue | Springs, Meadows and Lakes renovation | Full guide: https://eastbridgestrategicpartners.com/insights/springs-meadows-lakes-villa-renovation/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 | 2 Dec | Wed | Renovating a villa in Abu Dhabi | Full guide: https://eastbridgestrategicpartners.com/insights/villa-renovation-abu-dhabi/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 
-Queue check 16 Nov: 10 posts scheduled in LinkedIn, 17–26 Nov, all at 5:00 AM UK. Company-page repost not done by the daily task (its prompt says "do not repost"); flagged to Phil.
+Queue check 16 Nov: 10 posts scheduled in LinkedIn, 17–26 Nov, all at 5:00 AM UK.
+Queue check 17 Nov: 9 posts scheduled, 18–26 Nov, all at 5:00 AM UK; next 7 days covered, nothing added or changed. Company-page repost still not done by the daily task (prompt says do not repost). Company-page repost not done by the daily task (its prompt says "do not repost"); flagged to Phil.
 
 Do not use (Phil, 14 Nov): sourcing-materials-abroad ("fly around the world" post removed).
 
