@@ -12,7 +12,7 @@ That experience shapes how I look at villa budgets in Dubai today. A signed cont
 
 ## Allowances that are not yet costs
 
-Start with the allowances. Kitchens, joinery and lighting often appear in a tender as provisional sums or other allowances because the specification is unfinished. The money is in the price, but the eventual cost is still open. A tender with realistic allowances can look expensive beside one that leaves the same items underfunded, which can favour the cheaper-looking bid.
+Start with the allowances. Kitchens, joinery and lighting often appear in a tender as provisional sums or other allowances because the specification is unfinished. The money is in the price, but the eventual cost is still open. In practice, an allowance is a number everyone has agreed to revisit later. A tender with realistic allowances may look expensive beside one that leaves the same items underfunded, which can favour the cheaper-looking bid.
 
 Before comparing totals, put those allowances on the same basis. Ask what each one covers: supply only, or installation too? Are mark-ups included? What specification supports the figure? If the kitchen you intend to buy already costs more than the allowance, that difference belongs in the forecast now. Better to know it today than to find out at handover.
 
@@ -34,7 +34,9 @@ I have been on the contractor's side of those conversations. An owner may hear a
 
 Payments need the same care. Agreed advances and payments for materials can be perfectly legitimate, so money paid will not always match work installed. Each application should still be checked against the contract and supported by evidence. The owner needs to know what has been paid for, where it is and what protection applies. An unexplained lead over progress leaves less money to finish with if the contractor gets into difficulty.
 
-Each month, ask for the expected final cost against the approved budget, including committed expenditure, the estimated cost of work not yet ordered, changes awaiting agreement and an allowance for remaining risks. A report showing only invoices paid tells you where the money has gone. It does not tell you whether you can afford to finish.
+## Knowing what it will cost to finish
+
+Some owners here are building from abroad, seeing the site in photographs and the budget in invoices. For them especially, a cost report needs to look forward. Each month, ask for the expected final cost against the approved budget, including committed expenditure, the estimated cost of work not yet ordered, changes awaiting agreement and an allowance for remaining risks. A report showing only invoices paid tells you where the money has gone. It does not tell you whether you can afford to finish.
 
 Keep the contingency separate and review it as risks become clearer. Spending it on a kitchen that was under-allowed from the start leaves less for work that is genuinely unforeseen.
 
@@ -42,7 +44,7 @@ Most contractors want a properly defined job and a settled final account as much
 
 Before signing, ask what is still unpriced. During the build, ask what the house is now expected to cost at completion. Those two answers will tell you more than any reassurance that the job is still on budget.
 
-*Philip Chapman is founding partner of Eastbridge Strategic Partners, an independent client-side project management firm for villas in Dubai and Abu Dhabi. He founded P Chapman Construction in 2005. The company built Owers House, which won a RIBA South West Award in 2016 and featured on Channel 4's Grand Designs.*
+*Philip Chapman is founding partner of Eastbridge Strategic Partners, an independent client-side project management firm for villa owners in Dubai and Abu Dhabi. He founded P Chapman Construction in 2005. The company built Owers House, which won a RIBA South West Award in 2016 and featured on Channel 4's Grand Designs.*
 
 ---
 
