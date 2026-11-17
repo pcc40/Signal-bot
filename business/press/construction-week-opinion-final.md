@@ -4,25 +4,33 @@
 
 By Philip Chapman
 
-Ask an owner why their villa went over budget and you may hear about the stone that doubled in price, or the month the site went quiet. Those events matter. But in my experience, the gap often starts earlier, in a tender that looks more complete than it is.
+Ask an owner why their villa went over budget, and you may hear about the stone that doubled in price, or the month the site went quiet. Those events matter. But in my experience, the gap often starts earlier, in a tender that looks more complete than it is.
 
 I founded P Chapman Construction in Cornwall in 2005 and have spent 21 years pricing and building one-off homes. When a tender landed on my desk, I read the drawings for what was missing before I read them for what was there. Unresolved details had to be allowed for, excluded or clarified, and the owner needed to understand those qualifications.
 
 That experience shapes how I look at villa budgets in Dubai today. A signed contract can give an owner confidence without giving them the cost certainty they think they have bought.
 
+## Allowances that are not yet costs
+
 Start with the allowances. Kitchens, joinery and lighting often appear in a tender as provisional sums or other allowances because the specification is unfinished. The money is in the price, but the eventual cost is still open. A tender with realistic allowances can look expensive beside one that leaves the same items underfunded, which can favour the cheaper-looking bid.
 
 Before comparing totals, put those allowances on the same basis. Ask what each one covers: supply only, or installation too? Are mark-ups included? What specification supports the figure? If the kitchen you intend to buy already costs more than the allowance, that difference belongs in the forecast now. Better to know it today than to find out at handover.
 
-Check what sits outside the building contract as well. Landscaping, utility connections and professional fees still need funding, whoever procures them. A tender can be within budget while the cost of actually finishing the home is already beyond it.
+Check what sits outside the building contract as well. Landscaping, DEWA connections, authority and master-developer fees, and professional fees still need funding, whoever procures them. A tender can be within budget while the cost of actually finishing the home is already beyond it.
+
+## The cost of time
 
 Time needs the same scrutiny. Preliminaries cover the cost of running the site. Turner & Townsend's 2025 UAE market intelligence reports Dubai preliminaries of 12 per cent on a 2,500 sq m project. That is a general benchmark, not a villa quotation, and only some of it keeps running when a programme slips.
 
 So the useful question is which costs continue, and who is responsible for the delay under the contract. Put the owner's own decisions on the programme, with dates, alongside the construction activities. A tile selection made after its order deadline can hold up delivery and subsequent work. Owners should see that before the decision becomes late.
 
+## Changes agreed on a good day
+
 Changes on site are the most familiar source of trouble, and they usually happen on a good day. The owner walks through and asks to move a wall or upgrade the windows. The team agrees to get on with it. The cost conversation waits until the work is done and there is little room left to reconsider.
 
 I have been on the contractor's side of those conversations. An owner may hear agreement to a change as agreement that it is minor. The contractor may hear an instruction to proceed at extra cost. That misunderstanding can arise even when both are acting in good faith. Write down the scope, the price and the effect on completion before authorising the work. Where something urgent has to proceed before a price is settled, record the instruction and agree how it will be valued. Keep unresolved changes visible in the forecast.
+
+## Paying for what is there
 
 Payments need the same care. Agreed advances and payments for materials can be perfectly legitimate, so money paid will not always match work installed. Each application should still be checked against the contract and supported by evidence. The owner needs to know what has been paid for, where it is and what protection applies. An unexplained lead over progress leaves less money to finish with if the contractor gets into difficulty.
 
