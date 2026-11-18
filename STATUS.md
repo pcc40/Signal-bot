@@ -75,6 +75,8 @@ Emails are sent from philip@eastbridgestrategicpartners.com through Bird (sendin
 - 16 Nov: first follow-ups sent to batches 4–6: 50 sent, 48 delivered; Engel & Völkers Dubai and Prime by betterhomes blocked by Bird as suppressed (probable unsubscribes, now do-not-contact). Log: business/outreach-log-16-20-nov.md. Call list: business/call-list.md.
 - 16 Nov (pm): **Saif Elite QS** (Mudassir Saif) replied to the follow-up: wants to meet at Phil's office (draft #7). **fäm Properties** passed the follow-up to fäm Interiors (Mazen Abdoh) and tried to phone Phil (draft #8).
 - 17 Nov: first follow-ups sent to batch 7: 47 sent, 46 delivered; SHH Architecture & Interiors blocked by Bird as suppressed (probable unsubscribe, now do-not-contact). Next: Wed 18 Nov (day-wed.json, 50).
+- 17 Nov: **Construction Week** accepted the op-ed "Why villa budgets leak"; going live this week; asked for Phil's LinkedIn (draft #9). Daily publication watch scheduled 13:23 Dubai.
+- 18 Nov: follow-ups to batches 8–9 plus 7 new (batch 10): 50 sent, 47 delivered, 1 deferred (Luca Armo); Conveyance.ae and Kelly Hoppen blocked as suppressed (now do-not-contact). Next: Thu 19 Nov (day-thu.json, 36).
 **Next batch:** the daily run (07:41 Dubai, Tue 10 – Fri 13 Nov) researches and sends up to 25 new firms a day, excluding everyone above.
 
 ## 5. Open items for Phil

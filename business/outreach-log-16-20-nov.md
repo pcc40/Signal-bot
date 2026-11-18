@@ -124,3 +124,66 @@ Replies found in the morning check: fäm Properties (passed to fäm Interiors, t
 | eb-fu1-b7-48 | GTA Inspectors | info@gtainspectors.com | em_01m7kxxch4ebessb4tengy2sy2 | Delivered |
 | eb-fu1-b7-49 | Eagle Eye Property Inspection | info@eagleeyepropertyinspection.com | em_01m7kxxrxbfr9r5ga1b0as1r8k | Delivered |
 | eb-fu1-b7-50 | Moduline Engineering Consultancy | info@moduline.ae | em_01m7kxy3mef5hrt470kmx444my | Delivered |
+
+## Wed 18 Nov
+
+Follow-ups to batches 8 and 9 (43) plus first emails from batch 10 (7) (`business/outbox/day-wed.json`, 50 items), sent 18 Nov 2026 04:50:29–05:02:05 UTC (08:50–09:02 UAE) through Bird, one at a time, same settings as Mon/Tue.
+
+Before sending: no item's address or domain appeared in `business/replies.md`; nothing had been sent earlier today. Morning reply check: Construction Week (Julianne) asked for Phil's LinkedIn profile to tag him; draft #9 updated. No other replies.
+
+Result: 50 sent, 47 delivered, 1 deferred (Luca Armo Design, 450 soft bounce, Bird retrying), 0 bounced, 2 rejected by Bird (recipient_suppressed: Conveyance.ae, Kelly Hoppen Interiors; not resent, added to replies.md), 0 skipped, 0 not sent. Money Maestro returned Bad Gateway once; nothing was created, retried once, delivered. Today's Bird count 50/50.
+
+Call list: business/call-list.md (Western VAS, Transparent PM, Independent Snagging, Maestro Snaggers, Compton Conveyancing).
+
+| Key | Firm | To | Bird id | Status |
+|---|---|---|---|---|
+| eb-fu1-b8-01 | Prime Inspections & Snagging | connect@primeinspections.ae | em_01m7pfvy3ze85t41cgsmvf7aj0 | Delivered |
+| eb-fu1-b8-02 | Dubshy | hello@dubshy.com | em_01m7pfwg2rffaryfzebzhg95ky | Delivered |
+| eb-fu1-b8-03 | Property Snagging (PropertySnagging.ae) | hello@propertysnagging.ae | em_01m7pfww5geg8804h10q95nwy0 | Delivered |
+| eb-fu1-b8-04 | The Snag Master | connect@thesnagmaster.ae | em_01m7pfx7ymf45t998dxgpbe8ag | Delivered |
+| eb-fu1-b8-05 | Get Snagging | info@getsnagging.com | em_01m7pfxjgnebtamgwjppgcw43h | Delivered |
+| eb-fu1-b8-06 | SmartSnag | info@smartsnag.ae | em_01m7pfxy2ce51ts57tsr1thpqx | Delivered |
+| eb-fu1-b8-07 | Hitches & Glitches (Farnek) | hg@farnek.com | em_01m7pfy9n5ejz80d75eva4wq5v | Delivered |
+| eb-fu1-b8-08 | We Will Fix It | info@wewillfixit.com | em_01m7pfyngae8x95tkambm5bn83 | Delivered |
+| eb-fu1-b8-09 | HomePro (Imdaad) | info@imdaad.ae | em_01m7pfz1m5ecfttzz01g8vbybb | Delivered |
+| eb-fu1-b8-10 | mplus (Emrill) | helpdesk@mplus.ae | em_01m7pfzd0pf328f63qpc1hm0yt | Delivered |
+| eb-fu1-b8-11 | Khidmah (Inspire Home) | info@khidmah.com | em_01m7pfzwaheqebtdc7eszhdsmz | Delivered |
+| eb-fu1-b8-12 | Edge DXB | customercare@edgedxb.com | em_01m7pg093yezhvj8a2kzvfm0vt | Delivered |
+| eb-fu1-b8-13 | MAK Property Conveyancers | info@makdubai.com | em_01m7pg0pg2erkarh7hn5e5szn1 | Delivered |
+| eb-fu1-b8-14 | Compton Conveyancing | info@comptonconveyancing.com | em_01m7pg13qbfa08tksjq8kcx805 | Delivered |
+| eb-fu1-b8-15 | Clarity Conveyancing | info@clarity.ae | em_01m7pg1gp8f6wreyd3qymtb6zn | Delivered |
+| eb-fu1-b8-16 | Conveyance.ae | hello@conveyance.ae | em_01m7pg1wref9vvvfndv6sd1vr1 | REJECTED by Bird (recipient_suppressed); not resent |
+| eb-fu1-b8-18 | Studio Morosi | studio@studiomorosi.com | em_01m7pg28tefv7s2cxkasfcezr6 | Delivered |
+| eb-fu1-b8-19 | kiklos architects | info@kiklosarchitects.com | em_01m7pg2nref1mbapgxd823ktjw | Delivered |
+| eb-fu1-b8-20 | ZNERA | info@znera.space | em_01m7pg3259f4h9hpy8esqn1z02 | Delivered |
+| eb-fu1-b8-22 | Layan Halwani Interior Architecture | info@layanhalwani.com | em_01m7pg3f4det19aveg6d226zge | Delivered |
+| eb-fu1-b8-23 | Dimora Interiors | info@designdimora.com | em_01m7pg3wfyehtta53rm08zpfn8 | Delivered |
+| eb-fu1-b8-26 | Apricity Real Estate | info@apricityrealestate.ae | em_01m7pg498mee88hr6952j3f4c9 | Delivered |
+| eb-fu1-b8-27 | Family Homes DXB | info@familyhomesdxb.com | em_01m7pg4p6mfwyrwvnnyrzy1qth | Delivered |
+| eb-fu1-b8-28 | Fairway Homes | contact@fairwayhomes.ae | em_01m7pg54aye6a9j2xphrq71wk4 | Delivered |
+| eb-fu1-b8-29 | Mirabella Properties | hello@mirabellaproperties.com | em_01m7pg5jkyek381ne6yj5e4cg9 | Delivered |
+| eb-fu1-b8-30 | Belleview Real Estate | info@belleview.ae | em_01m7pg61veepqb6rp45gs52ck3 | Delivered |
+| eb-fu1-b8-31 | Newstead | info@newsteadluxury.com | em_01m7pg6efae68rgfqagwm4z0hq | Delivered |
+| eb-fu1-b8-32 | Lloyd Ellis, Dubai Hills villa specialist | lloydellis@IMARAgroup.ae | em_01m7pg6vecfkr99y04wmme2cbm | Delivered (old IMARA address; he is now at The Oppenheim Group) |
+| eb-fu1-b8-33 | La Maison Real Estate | info@lamaison-re.com | em_01m7pg779yfk6thparrvkjcqda | Delivered |
+| eb-fu1-b8-34 | Crest Range Properties | info@crestrangeproperties.com | em_01m7pg7mfffcm9w30kypdwzk5y | Delivered |
+| eb-fu1-b8-35 | Hopkins Architects | dubai@hopkins.ae | em_01m7pg81kjekwrgf6nt0rghqm5 | Delivered |
+| eb-fu1-b8-36 | State of Architecture | hello@stateofarchitecture.com | em_01m7pg8egmfr7atbztkj9v65fh | Delivered |
+| eb-fu1-b8-37 | Kelly Hoppen Interiors | newprojects@kellyhoppen.co.uk | em_01m7pg8vb8f4xrty1c47skec4g | REJECTED by Bird (recipient_suppressed); not resent |
+| eb-fu1-b8-38 | Money Maestro | info@moneymaestro.ae | em_01m7pga6p4f09vwfdqt7kr9n28 | Delivered (first attempt Bad Gateway, nothing created; retried once) |
+| eb-fu1-b8-41 | Kredium | info@kredium.ae | em_01m7pgam29exx8ba54nqnk3ffr | Delivered |
+| eb-fu1-b8-43 | Mortgease | enquiries@mortgease.ae | em_01m7pgb253e2zrfz6qne1tcp14 | Delivered |
+| eb-fu1-b8-45 | Livbnb | hello@livbnb.com | em_01m7pgbdyxftrr514qxqsxqah5 | Delivered |
+| eb-fu1-b8-46 | Kennedy Towers | info@kennedytowers.com | em_01m7pgbvewfngtwp8cd3x0tpy6 | Delivered |
+| eb-fu1-b8-47 | Tee Dee Technologies | info@teedeetech.com | em_01m7pgc80zfcgv93202d0y0p7v | Delivered |
+| eb-fu1-b8-48 | Sans Souci | europe@sanssoucilighting.com | em_01m7pgcnbfemnsxn22nj3a83av | Delivered |
+| eb-fu1-b8-49 | Easi Landscapes | info@easilandscapes.ae | em_01m7pgd2pcfsnahraatdk8jvaj | Delivered |
+| eb-fu1-b8-50 | KLG Landscaping | info@klg.ae | em_01m7pgdgk0e0hbtg5860v47jag | Delivered |
+| eb-fu1-b9-01 | Maestro Snaggers | info@maestrosnaggers.ae | em_01m7pge10feayaveas47zejzdn | Delivered |
+| eb-b10-live-01 | Novembre Studio (Fabio Novembre) | info@novembre.it | em_01m7pgee0pe0vs5jzrxjgt1ame | Delivered |
+| eb-b10-live-02 | UNICA Architects | info@unicaarchitects.com | em_01m7pgesy8ebhaw7hty5f0s5g6 | Delivered |
+| eb-b10-live-03 | Vorbild Architecture | info@vorbild.co.uk | em_01m7pgfb45fnyse2y7xh0qh2a7 | Delivered |
+| eb-b10-live-04 | Studio DS | info@studiods.co.uk | em_01m7pgftz8fgy8whnahxdkhx13 | Delivered |
+| eb-b10-live-05 | Amar Sabeh El Leil Architecture Studio | studio@amarsabeh.com | em_01m7pgg9zheb4s3ca7zncbcdg3 | Delivered |
+| eb-b10-live-06 | Luca Armo Design | info@lucaarmo.it | em_01m7pggsagfwqad9bvf1bpsxw3 | Deferred (450 soft bounce, one.com mailbox; Bird retrying) |
+| eb-b10-live-07 | Studio Matteo Nunziati | info@matteonunziati.com | em_01m7pgh65aezfvd0k7tdmx0f0r | Delivered |

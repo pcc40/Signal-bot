@@ -2,6 +2,8 @@
 
 One line per reply, bounce or opt-out, newest first: date | firm | address | type (positive / neutral / not now / no / auto-reply / bounce / sales pitch / unsubscribe) | note. Firms here get no further automatic outreach or follow-up (auto-replies excepted only if marked "follow up ok").
 
+2026-11-18 | Conveyance.ae | hello@conveyance.ae | unsubscribe (probable) | follow-up blocked by Bird: recipient_suppressed (most likely used the unsubscribe link). Do not contact
+2026-11-18 | Kelly Hoppen Interiors | newprojects@kellyhoppen.co.uk | unsubscribe (probable) | follow-up blocked by Bird: recipient_suppressed (most likely used the unsubscribe link). Do not contact
 2026-11-17 | Construction Week (ITP) | julianne.tolentino@itp.com (cc shehzin.shaikh@itp.com) | positive (press) | Julianne Tolentino: happy to run the opinion piece "Why villa budgets leak"; asked for the draft. Op-ed written 17 Nov in business/press/construction-week-opinion-final.md (another session, with Phil); Phil sent it; 17 Nov: Julianne says it reads very well, going live this week, asked for Phil's LinkedIn profile (draft #9)
 2026-11-17 | SHH Architecture & Interiors | sam@shh.co.uk | unsubscribe (probable) | follow-up blocked by Bird: recipient_suppressed (most likely used the unsubscribe link). Do not contact
 2026-11-16 | fäm Properties | info@famproperties.com (passed to Mazen Abdoh, BD Manager fäm Interiors, mazen.a@famdevelopments.com, +971 52 129 4733; reply from Marco Material, call centre, marco.m@famproperties.com, +971 52 216 2430) | neutral (engaged) | forwarded internally to fäm Interiors; they tried to phone Phil and sent him a WhatsApp. Draft reply in reply-drafts.md #8; Phil to answer the WhatsApp
