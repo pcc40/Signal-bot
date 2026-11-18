@@ -89,7 +89,7 @@ Kind regards,
 ## 7. Saif Elite QS — Mudassir Saif (positive: wants to meet; reply all: keep Alessio@ and altaf@saifeliteqs.com)
 Find: the reply from info@saifeliteqs.com, subject "Re: Owner's representative and QS: complementary roles" (16 Nov, 10:04 Dubai). Reply all.
 Phil: check the two slots suit you (calendar is clear Tue–Fri) and that a Meydan Business Centre meeting room is free, or swap in a café, before sending.
-Status: pending
+Status: drafted 2026-11-18
 
 Dear Mudassir,
 
@@ -106,7 +106,7 @@ Kind regards,
 ## 8. fäm Properties / fäm Interiors — Marco Material and Mazen Abdoh (reply all: keep mazen.a@, heena.k@, Chanelk.L@famdevelopments.com and cc@famproperties.com)
 Find: the email from marco.m@famproperties.com, subject "Re: Fw: Owner-side support for your Palm Jumeirah villa buyers" (16 Nov, 17:43 Dubai). Reply all.
 Phil: they also sent you a WhatsApp from +971 52 216 2430 — answering that first is quicker; this email covers the same ground.
-Status: pending
+Status: drafted 2026-11-18
 
 Dear Marco, dear Mazen,
 
@@ -123,7 +123,7 @@ Kind regards,
 ## 9. Construction Week — Julianne Tolentino (LinkedIn profile + link request; reply all: keep shehzin.shaikh@itp.com)
 Find: Julianne's latest email (17 Nov, 15:26 Dubai) in the thread "RE: Opinion pitch: Why villa budgets leak – a builder's view from the owner's side": "We will schedule this to go live some time this week … Can you please share your LinkedIn profile so we know to tag the right one?" Reply all.
 Why: she needs the LinkedIn profile to tag you. The author line has no web address; a link from Construction Week would be the site's first link from a recognised publication.
-Status: pending
+Status: not drafted 2026-11-18 (superseded: Phil already replied to Julianne on 17 Nov at 11:31 with his LinkedIn link)
 
 Dear Julianne,
 
