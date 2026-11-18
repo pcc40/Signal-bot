@@ -120,16 +120,17 @@ Kind regards,
 
 ---
 
-## 9. Construction Week — Julianne Tolentino (thank-you and link request; reply all: keep shehzin.shaikh@itp.com)
-Find: Julianne's latest email in the thread "RE: Opinion pitch: Why villa budgets leak – a builder's view from the owner's side" (17 Nov). Reply all.
-Why: the author line in the piece has no web address. A link from Construction Week would be the site's first link from a recognised publication (Search Console shows none yet), which helps Google and the AI assistants trust the site.
+## 9. Construction Week — Julianne Tolentino (LinkedIn profile + link request; reply all: keep shehzin.shaikh@itp.com)
+Find: Julianne's latest email (17 Nov, 15:26 Dubai) in the thread "RE: Opinion pitch: Why villa budgets leak – a builder's view from the owner's side": "We will schedule this to go live some time this week … Can you please share your LinkedIn profile so we know to tag the right one?" Reply all.
+Why: she needs the LinkedIn profile to tag you. The author line has no web address; a link from Construction Week would be the site's first link from a recognised publication.
 Status: pending
 
 Dear Julianne,
 
-Thank you, I am delighted it is running.
+Thank you, that is good to hear.
 
-One small request: could the author line at the end include our web address, eastbridgestrategicpartners.com? If a link is possible, that would be very kind. And if you need a headshot, I am happy to send one.
+My LinkedIn profile is https://www.linkedin.com/in/philip-chapman-eastbridge/ and the company page is https://www.linkedin.com/company/eastbridge-strategic-partners/
+
+One small request: could the author line include our web address, eastbridgestrategicpartners.com? If a link is possible, that would be very kind. I am happy to send a headshot if useful.
 
 Kind regards,
-
