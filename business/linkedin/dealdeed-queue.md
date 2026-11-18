@@ -12,25 +12,6 @@ Mix: opportunity, buyer brief, opportunity, market/launch radar, "how the desk w
 
 ## Queued
 
-### Wed 18 Nov 2026, 09:00 UAE — Nad Al Sheba Gardens Ph 4 corner townhouse (with image card: cards/2026-11-18-nad-al-sheba-townhouse.png)
-Priced under every recent sale of its type in the finished phase.
-
-A 3-bedroom corner townhouse in Nad Al Sheba Gardens Phase 4 by Meraas:
-• 2,750 sq ft built-up on a 2,841 sq ft plot
-• 3 bedrooms, maid's room and an upstairs family room
-• Asking AED 5,100,000, about AED 1,855 per sq ft
-• 60% already paid to Meraas; handover expected Q2 2027
-
-The same type in the ready Phase 2 sold at AED 5.55M in July 2026 and AED 6.0M in February 2026, as reported by the listing agent and checked against the Land Department register before introduction.
-
-The owner wants out before handover. The unit is released to registered buyers on agreed terms.
-
-Is this the kind of deal you are looking for? Ask the desk.
-
-dealdeed.ae/desk
-
-#NadAlSheba #Meraas #DubaiRealEstate #DubaiTownhouses #OffPlan
-
 ### Thu 19 Nov 2026, 09:00 UAE — Palm Springs vs Bay Estate (card: cards/2026-11-19-palm-springs-vs-bay-estate.png)
 Two Nakheel EOIs open at once. They are very different purchases.
 
@@ -122,6 +103,7 @@ Figures from Aldar's launch details to agents; confirm final terms on launch day
 | 16 Nov | All queued posts Mon 16 to Mon 23 rescheduled to 5:00 AM GMT (09:00 UAE) at Phil's request | Confirmed in LinkedIn scheduled list |
 | Mon 16 Nov 05:00 UK (09:00 UAE) | Abu Dhabi launch radar (Oct AED 12.97bn) + image card | Posted (confirmed live in LinkedIn 16 Nov); queue re-checked 16 Nov 15:40 UTC: Tue 17 to Mon 23, one per day, all 5:00 AM |
 | Tue 17 Nov 05:00 UK (09:00 UAE) | How the desk works (3 steps, fixed fee on completion) + image card | Posted (confirmed live in LinkedIn 17 Nov); queue checked 17 Nov 13:30 UTC (Browser 1): Wed 18 to Mon 23, one per day, all 5:00 AM, nothing new needed |
+| Wed 18 Nov 05:00 UK (09:00 UAE) | Opportunity: Nad Al Sheba Gardens Ph 4 corner townhouse, AED 5.1M, 60% paid + image card | Posted (confirmed live in LinkedIn 18 Nov); queue checked 18 Nov 14:40 UTC (Browser 2): Thu 19 to Sun 22 seen, one per day, all 5:00 AM, nothing new needed |
 
 ## Page profile changes (15 Nov)
 - Tagline: "Private deal-matching desk for Dubai and Abu Dhabi property. Motivated sellers and verified buyers, agent to agent." (no off-market wording)
