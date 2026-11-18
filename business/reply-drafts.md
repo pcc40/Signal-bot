@@ -140,7 +140,7 @@ Kind regards,
 ## 10. fäm Interiors — Heena Raees Khan for Mazen Abdoh (CONFIRM MEETING Thu 19 Nov 14:30; reply all: keep Chanelk.L@, mazen.a@, MohammadK.S@famdevelopments.com)
 Find: Heena's email of 18 Nov (14:32 Dubai), "Re: Fw: Owner-side support for your Palm Jumeirah villa buyers": Mazen can meet tomorrow, Thu 19 Nov, at 2:30 pm at Bay Square Building 1, Office 207, Business Bay; she asks you to confirm by email and will send a calendar invitation. Reply all, but remove cc@famproperties.com (that group bounces).
 Phil: send today. If Saif Elite QS takes the Thu 14:00 slot offered to them, move Saif, not fäm.
-Status: pending
+Status: drafted 2026-11-18
 
 Dear Heena,
 
@@ -154,7 +154,7 @@ Kind regards,
 
 ## 11. Khidmah — Customer Care (asked what the meeting is for)
 Find: the email from services@khidmah.com, subject "Re: Move-out technical reports" (18 Nov, 09:18 Dubai). Reply to services@khidmah.com only (the Salesforce and Purecloud addresses are their ticket system; leave them as they come).
-Status: pending
+Status: drafted 2026-11-18
 
 Dear Khidmah team,
 
