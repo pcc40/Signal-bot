@@ -2,6 +2,8 @@
 
 One line per reply, bounce or opt-out, newest first: date | firm | address | type (positive / neutral / not now / no / auto-reply / bounce / sales pitch / unsubscribe) | note. Firms here get no further automatic outreach or follow-up (auto-replies excepted only if marked "follow up ok").
 
+2026-11-18 | fäm Interiors (fäm Properties) | heena.k@famdevelopments.com for Mazen Abdoh | positive (meeting) | Mazen can meet Thu 19 Nov 14:30, Bay Square Building 1, Office 207, Business Bay; confirm by email (draft #10). cc@famproperties.com bounces (Google group); drop it from replies
+2026-11-18 | Khidmah (Inspire Home) | services@khidmah.com | neutral (customer care) | ticketed reply to the 18 Nov follow-up: asked the purpose of the meeting. Draft #11
 2026-11-18 | Conveyance.ae | hello@conveyance.ae | unsubscribe (probable) | follow-up blocked by Bird: recipient_suppressed (most likely used the unsubscribe link). Do not contact
 2026-11-18 | Kelly Hoppen Interiors | newprojects@kellyhoppen.co.uk | unsubscribe (probable) | follow-up blocked by Bird: recipient_suppressed (most likely used the unsubscribe link). Do not contact
 2026-11-17 | Construction Week (ITP) | julianne.tolentino@itp.com (cc shehzin.shaikh@itp.com) | positive (press) | Julianne Tolentino: happy to run the opinion piece "Why villa budgets leak"; asked for the draft. Op-ed written 17 Nov in business/press/construction-week-opinion-final.md (another session, with Phil); Phil sent it; 17 Nov: Julianne says it reads very well, going live this week, asked for Phil's LinkedIn profile (draft #9)

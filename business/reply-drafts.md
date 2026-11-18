@@ -134,3 +134,35 @@ My LinkedIn profile is https://www.linkedin.com/in/philip-chapman-eastbridge/ an
 One small request: could the author line include our web address, eastbridgestrategicpartners.com? If a link is possible, that would be very kind. I am happy to send a headshot if useful.
 
 Kind regards,
+
+---
+
+## 10. fäm Interiors — Heena Raees Khan for Mazen Abdoh (CONFIRM MEETING Thu 19 Nov 14:30; reply all: keep Chanelk.L@, mazen.a@, MohammadK.S@famdevelopments.com)
+Find: Heena's email of 18 Nov (14:32 Dubai), "Re: Fw: Owner-side support for your Palm Jumeirah villa buyers": Mazen can meet tomorrow, Thu 19 Nov, at 2:30 pm at Bay Square Building 1, Office 207, Business Bay; she asks you to confirm by email and will send a calendar invitation. Reply all, but remove cc@famproperties.com (that group bounces).
+Phil: send today. If Saif Elite QS takes the Thu 14:00 slot offered to them, move Saif, not fäm.
+Status: pending
+
+Dear Heena,
+
+Thank you. I confirm I will be at Bay Square Building 1, Office 207, at 2:30 pm tomorrow, Thursday 19 November, to meet Mazen. Sorry again that I missed your calls.
+
+I look forward to it.
+
+Kind regards,
+
+---
+
+## 11. Khidmah — Customer Care (asked what the meeting is for)
+Find: the email from services@khidmah.com, subject "Re: Move-out technical reports" (18 Nov, 09:18 Dubai). Reply to services@khidmah.com only (the Salesforce and Purecloud addresses are their ticket system; leave them as they come).
+Status: pending
+
+Dear Khidmah team,
+
+Thank you for coming back to me.
+
+I am an independent project manager for villa owners in Dubai and Abu Dhabi, after 21 years running a building company in the UK. When a move-out or condition report shows that a villa needs more than repairs, owners often need someone on their side to scope the work, check contractors' quotes and keep the job on budget.
+
+I would like 20 minutes with whoever manages your villa communities or technical reports, to understand how you handle those cases. Would Monday 23 or Tuesday 24 November suit, in person or by phone?
+
+Kind regards,
+
