@@ -12,18 +12,6 @@ Mix: opportunity, buyer brief, opportunity, market/launch radar, "how the desk w
 
 ## Queued
 
-### Thu 19 Nov 2026, 09:00 UAE — Palm Springs vs Bay Estate (card: cards/2026-11-19-palm-springs-vs-bay-estate.png)
-Two Nakheel EOIs open at once. They are very different purchases.
-
-Palm Springs (beside Palm Jebel Ali): three-bed townhouses from AED 3.8m, 10% down, AED 50,000 EOI, handover est. October 2030. A new town for about 50,000 people.
-
-Bay Estate (Dubai Islands): three-bed townhouses averaging AED 5.9m, 20% down, AED 100,000 EOI, handover est. January 2031. 357 homes and 60 plots on the water.
-
-Which one suits your buyer? Side by side, with every price and payment date:
-https://dealdeed.ae/palm-springs?utm_source=linkedin&utm_medium=social&utm_campaign=palm-springs
-
-#DubaiRealEstate #Nakheel #PalmJebelAli #DubaiIslands #OffPlan
-
 ### Fri 20 Nov 2026, 09:00 UAE — Hudayriyat Island (card: cards/2026-11-20-hudayriyat-island.png)
 Hudayriyat Island did AED 28.62bn of property transactions in the first nine months of 2026, second only to Al Reem (ADREC).
 
@@ -104,6 +92,7 @@ Figures from Aldar's launch details to agents; confirm final terms on launch day
 | Mon 16 Nov 05:00 UK (09:00 UAE) | Abu Dhabi launch radar (Oct AED 12.97bn) + image card | Posted (confirmed live in LinkedIn 16 Nov); queue re-checked 16 Nov 15:40 UTC: Tue 17 to Mon 23, one per day, all 5:00 AM |
 | Tue 17 Nov 05:00 UK (09:00 UAE) | How the desk works (3 steps, fixed fee on completion) + image card | Posted (confirmed live in LinkedIn 17 Nov); queue checked 17 Nov 13:30 UTC (Browser 1): Wed 18 to Mon 23, one per day, all 5:00 AM, nothing new needed |
 | Wed 18 Nov 05:00 UK (09:00 UAE) | Opportunity: Nad Al Sheba Gardens Ph 4 corner townhouse, AED 5.1M, 60% paid + image card | Posted (confirmed live in LinkedIn 18 Nov); queue checked 18 Nov 14:40 UTC (Browser 2): Thu 19 to Sun 22 seen, one per day, all 5:00 AM, nothing new needed |
+| Thu 19 Nov 05:00 UK (09:00 UAE) | Launch radar: Palm Springs vs Bay Estate + card | Posted (confirmed live in LinkedIn 19 Nov); queue checked 19 Nov 16:30 UTC (deviceId fddc85a8, now named "Browser 1"): Fri 20 to Mon 23, one per day, all 5:00 AM, nothing new needed |
 
 ## Page profile changes (15 Nov)
 - Tagline: "Private deal-matching desk for Dubai and Abu Dhabi property. Motivated sellers and verified buyers, agent to agent." (no off-market wording)
