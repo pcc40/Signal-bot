@@ -51,7 +51,7 @@ The [defects liability period](/glossary/#defects-liability-period) is a stretch
 
 It usually starts at handover, which in the contract may be called taking over or practical completion. In Dubai that follows the authority's completion inspection and completion certificate ([Dubai Municipality](https://dmpmedia.dm.gov.ae/uploads/2020/06/Residential-Buildings_Building-Permits-Procedures.pdf)). Check three things in your contract before you accept the keys: how long the period is, whether different parts of the work have different periods, and what notice you must give to require the contractor to return.
 
-If you are still at the snagging stage, start with our [villa snagging checklist](/insights/villa-snagging-checklist-dubai/). Anything you record and agree at handover should not need to wait for the defects period.
+If you are still at the snagging stage, start with our [villa snagging checklist](/insights/villa-snagging-checklist-dubai/). Anything you record and agree at handover should not need to wait for the defects period. If you are taking a villa from a developer, the process is different; see [snagging a developer villa before you accept it](/insights/snagging-developer-villa-handover/).
 
 ## What is decennial liability in the UAE?
 

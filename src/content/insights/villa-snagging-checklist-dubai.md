@@ -42,7 +42,7 @@ sources:
 
 Snagging a new villa in Dubai means testing every system under real conditions and inspecting every finish before you accept the keys, then holding enough leverage to get the defects fixed. Start with waterproofing, air conditioning, drainage, the pool and electrics, because those are expensive to put right later. Collect the completion certificate, as-built drawings, warranties and operation and maintenance manuals before you sign off.
 
-Below is the checklist we use, a way to grade each defect, the documents to collect, how long the builder stays liable, and the contractor's view of how snag lists get closed or stalled. If you want it on paper, download the [printable villa snagging checklist](/guides/villa-snagging-checklist/), with tick boxes, a severity column and a snag log.
+Below is the checklist we use, a way to grade each defect, the documents to collect, how long the builder stays liable, and the contractor's view of how snag lists get closed or stalled. If you want it on paper, download the [printable villa snagging checklist](/guides/villa-snagging-checklist/), with tick boxes, a severity column and a snag log. Buying from a developer rather than building your own? See [snagging a developer villa before you accept it](/insights/snagging-developer-villa-handover/).
 
 ## When should you snag a new villa?
 
