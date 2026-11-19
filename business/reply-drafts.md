@@ -171,7 +171,7 @@ Kind regards,
 ## 12. DaZERO Design Lab — Luca Armocida (interior architect, Italy; reply all: keep info@lucaarmo.it)
 Find: the email from luca.armo82@gmail.com, subject "Re: Villa N7 on Frond N" (18 Nov, 15:41 Dubai). Reply all.
 Note: he offers to work with us on future villas and asks for a call. Keep to meeting first: no talk of passing clients either way until you have met.
-Status: pending
+Status: drafted 2026-11-19
 
 Dear Luca,
 
@@ -186,7 +186,7 @@ Kind regards,
 ## 13. Laura Jiménez Arquitectura — Laura Jiménez Conde (architect, Estepona, Spain)
 Find: the email from info@laurajimenezarquitectura.com, subject "Re: [SPAM] Villa 169 in District One" (19 Nov, 12:50 Dubai). Reply, and delete "[SPAM] " from the subject line (her server added it).
 Note: she designed Villa 169 six years ago; her client never built it and may have sold the plot with the design. A short thank-you is enough; no further follow-up.
-Status: pending
+Status: drafted 2026-11-19
 
 Dear Laura,
 
