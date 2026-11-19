@@ -187,3 +187,52 @@ Call list: business/call-list.md (Western VAS, Transparent PM, Independent Snagg
 | eb-b10-live-05 | Amar Sabeh El Leil Architecture Studio | studio@amarsabeh.com | em_01m7pgg9zheb4s3ca7zncbcdg3 | Delivered |
 | eb-b10-live-06 | Luca Armo Design | info@lucaarmo.it | em_01m7pggsagfwqad9bvf1bpsxw3 | Deferred (450 soft bounce, one.com mailbox; Bird retrying) |
 | eb-b10-live-07 | Studio Matteo Nunziati | info@matteonunziati.com | em_01m7pgh65aezfvd0k7tdmx0f0r | Delivered |
+
+## Thu 19 Nov
+
+Follow-ups to batch 9 (30) plus first emails from batch 11 (6) (`business/outbox/day-thu.json`, 36 items), sent 19 Nov 2026 04:49:47–04:56:38 UTC (08:49–08:56 UAE) through Bird, one at a time, same settings as Mon–Wed.
+
+Before sending: no item's address or domain appeared in `business/replies.md`; nothing had been sent earlier today. Morning reply check: Luca Armocida (DaZERO Design Lab, interior architect) replied positively and asked for a call (draft #12); fäm meeting confirmed for today 14:30 (draft #10 created 18 Nov).
+
+Result: 36 sent, 34 delivered, 0 deferred, 1 bounced (Host and Stay, info@hostandstay.ae, 550 5.1.1 address does not exist), 1 rejected by Bird (Gargash Insurance, recipient_suppressed; not resent), 0 skipped, 0 not sent. Today's Bird count 36/50.
+
+Call list: business/call-list.md (ValuStrat, LeakDtech, CasaViva, Haven Edition, Lockton MENA).
+
+| Key | Firm | To | Bird id | Status |
+|---|---|---|---|---|
+| eb-fu1-b9-02 | Independent Snagging | hello@independentsnagging.ae | em_01m7s27brye59szmc75xgn4v81 | Delivered |
+| eb-fu1-b9-04 | Property Snagging DXB | info@propertysnaggingdxb.com | em_01m7s27qkcf7jrqw4y3vkv8j0v | Delivered |
+| eb-fu1-b9-05 | Inspectors.ae | info@inspectors.ae | em_01m7s282m7f5w8ap8vdb19nq5w | Delivered |
+| eb-fu1-b9-06 | LeakDtech | info@leakdtech.com | em_01m7s28dwxef6by9m9yjdbq5sr | Delivered |
+| eb-fu1-b9-07 | CasaViva (by WhyteHaus) | info@casavivauae.com | em_01m7s28r9cemft5wkgkr69sw47 | Delivered |
+| eb-fu1-b9-08 | Haven Edition | info@havenedition.com | em_01m7s292xyf2abwtrczc6s7tsw | Delivered |
+| eb-fu1-b9-09 | Transparent Property Management | support@transparentpm.ae | em_01m7s29k9re93btgrhrar9dzsv | Delivered |
+| eb-fu1-b9-10 | ZAV Maintenance | info@zavservices.com | em_01m7s29xzqeperfbnvyqfh2etz | Delivered |
+| eb-fu1-b9-13 | Western VAS (Western Valuers & Surveyors) | info@westernvas.com | em_01m7s2a9a9etetfzy85wzrpc7s | Delivered |
+| eb-fu1-b9-14 | ValuStrat | business.enquiries@valustrat.com | em_01m7s2akree8vr6qnmckt7v09z | Delivered |
+| eb-fu1-b9-15 | Credence & Co. (CNCO) | info@cnco.ae | em_01m7s2aye8e09vb8tmkmvg67xm | Delivered |
+| eb-fu1-b9-16 | N.A.M Chartered Valuers | admin@namcharteredvaluer.com | em_01m7s2b91sebmse6cq1n5dpmg6 | Delivered |
+| eb-fu1-b9-17 | Corvian Advisory | contact@corvianadvisory.com | em_01m7s2bkjmeczrrxka9mw0vfam | Delivered |
+| eb-fu1-b9-18 | Venne Studio | inquiry@vennestudio.com | em_01m7s2by7afhwsf4mvhzepacjf | Delivered |
+| eb-fu1-b9-19 | Heliya Design Studio | heliya@heliyadesignstudio.com | em_01m7s2c8q1ekwvc98kvbhxkn0g | Delivered |
+| eb-fu1-b9-35 | Helen Green Design | enquiries@helengreendesign.com | em_01m7s2cmxrevq8y53a2hmcd94f | Delivered |
+| eb-fu1-b9-36 | Bergman Design House | info@bergmaninteriors.com | em_01m7s2czzde6na84ghcyyqppmx | Delivered |
+| eb-fu1-b9-38 | Cavenwell Group | hello@cavenwellgroup.com | em_01m7s2dcqyfh3bv0ajx53vyrjg | Delivered |
+| eb-fu1-b9-39 | Lockton MENA (Private Clients) | contact@mena.lockton.com | em_01m7s2dqgjfjj80v2tma66646q | Delivered |
+| eb-fu1-b9-40 | Gargash Insurance | hodubai@gargashinsurance.com | em_01m7s2e2ccfgevkc1ev4kzg5ya | REJECTED by Bird (recipient_suppressed); not resent |
+| eb-fu1-b9-41 | Simply Mortgage | info@simplymortgage.ae | em_01m7s2edw7fahb6fnm22zz4hq6 | Delivered |
+| eb-fu1-b9-42 | Mortgage Market | info@mortgagemarket.ae | em_01m7s2esg6e9391b7ae8cj6k55 | Delivered |
+| eb-fu1-b9-43 | Prime Rate Hub | info@primeratehub.com | em_01m7s2f4q7ec5a6707w4d6nh41 | Delivered |
+| eb-fu1-b9-44 | New Arabian Holiday Homes | reservations@newarabianholidayhomes.com | em_01m7s2ffgbfvkts9a966z588gn | Delivered |
+| eb-fu1-b9-45 | Royale Stays | chrisv@royalestays.com | em_01m7s2ftq2em7vjfzqwmn1t7se | Delivered |
+| eb-fu1-b9-46 | Host and Stay | info@hostandstay.ae | em_01m7s2g5f7eb7tbxcg8c584r97 | BOUNCED (hard, 550 5.1.1 recipient address rejected) |
+| eb-fu1-b9-47 | OBEGI Home | uae@obegihome.com | em_01m7s2ggf8fvqarf581r4jstr0 | Delivered |
+| eb-fu1-b9-48 | Studio 971 | hello@studio971.ae | em_01m7s2gvy4fvzsg9qhaygz9d2t | Delivered |
+| eb-fu1-b9-49 | Smart Citizens | info@smartcitizens.ae | em_01m7s2h9bye3zvpt7j5rwh08mv | Delivered |
+| eb-fu1-b9-50 | WILDEN Design | hello@wildendesign.com | em_01m7s2hnkafh5vt0qhrfey42sn | Delivered |
+| eb-b11-live-01 | Laura Jiménez Arquitectura | info@laurajimenezarquitectura.com | em_01m7s2j23me4yv9j6mxnvej8wt | Delivered |
+| eb-b11-live-02 | GHT Architektur & Design | hagenauer@ght-architektur.at | em_01m7s2jddzezkae75gjt10982s | Delivered |
+| eb-b11-live-06 | AMAART Architects | clients@amaart.it | em_01m7s2jrrwe5tbqh5qx9e73tw0 | Delivered |
+| eb-b11-live-07 | MAWD (March and White Design) | newbusiness@mawd.co | em_01m7s2k3wpegptkdext7hakaya | Delivered |
+| eb-b11-live-08 | Shalini Misra Design | info@shalinimisra.com | em_01m7s2kfjpekfsj8tzmk0cf7rg | Delivered |
+| eb-b11-live-09 | Dubai First | info@dubaifirst.co.uk | em_01m7s2kxq1exkagc1z9cnpwxhx | Delivered |

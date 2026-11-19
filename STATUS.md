@@ -77,6 +77,8 @@ Emails are sent from philip@eastbridgestrategicpartners.com through Bird (sendin
 - 17 Nov: first follow-ups sent to batch 7: 47 sent, 46 delivered; SHH Architecture & Interiors blocked by Bird as suppressed (probable unsubscribe, now do-not-contact). Next: Wed 18 Nov (day-wed.json, 50).
 - 17 Nov: **Construction Week** accepted the op-ed "Why villa budgets leak"; going live this week; asked for Phil's LinkedIn (draft #9). Daily publication watch scheduled 13:23 Dubai.
 - 18 Nov: follow-ups to batches 8–9 plus 7 new (batch 10): 50 sent, 47 delivered, 1 deferred (Luca Armo); Conveyance.ae and Kelly Hoppen blocked as suppressed (now do-not-contact). Next: Thu 19 Nov (day-thu.json, 36).
+- 18 Nov (pm): **fäm Interiors** meeting set: Mazen Abdoh, Thu 19 Nov 14:30, Bay Square 1, Office 207. **Khidmah** customer care asked the meeting's purpose (draft #11). **Luca Armocida** (DaZERO Design Lab, interior architect, Italy) replied positively and asked for a call (draft #12).
+- 19 Nov: follow-ups to batch 9 plus 6 new (batch 11): 36 sent, 34 delivered; Host and Stay bounced (dead address); Gargash Insurance blocked as suppressed (now do-not-contact). Next: Fri 20 Nov (day-fri.json, 39).
 **Next batch:** the daily run (07:41 Dubai, Tue 10 – Fri 13 Nov) researches and sends up to 25 new firms a day, excluding everyone above.
 
 ## 5. Open items for Phil
