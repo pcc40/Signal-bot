@@ -2,6 +2,8 @@
 
 One line per reply, bounce or opt-out, newest first: date | firm | address | type (positive / neutral / not now / no / auto-reply / bounce / sales pitch / unsubscribe) | note. Firms here get no further automatic outreach or follow-up (auto-replies excepted only if marked "follow up ok").
 
+2026-11-19 | Laura Jiménez Arquitectura | info@laurajimenezarquitectura.com | neutral | Villa 169 (District One) was designed 6 years ago but never built by her client; plot may have been sold. Her server tagged our email [SPAM]. Short thank-you draft #13; no further follow-up
+2026-11-19 | Inspectors.ae | info@inspectors.ae (Faith, +971 50 774 0231) | neutral (holding) | "We received your email and we will check on it." No reply needed; on the 16 Nov call list (ask for Fouad Bayoumy)
 2026-11-19 | Host and Stay | info@hostandstay.ae | bounce | hard bounce 550 5.1.1, address does not exist
 2026-11-19 | Gargash Insurance | hodubai@gargashinsurance.com | unsubscribe (probable) | follow-up blocked by Bird: recipient_suppressed (most likely used the unsubscribe link). Do not contact
 2026-11-18 | Luca Armo Design / DaZERO Design Lab (Luca Armocida) | info@lucaarmo.it (reply from luca.armo82@gmail.com) | positive | interior architect, Italy (Villa N7, Palm): interiors took about a year; wants to work together on future Dubai/Abu Dhabi villas and asked for a call. Draft #12 (video call, meet first)

@@ -181,3 +181,18 @@ I would be glad to have a call and hear more about how you work. Would Monday 23
 
 Kind regards,
 
+---
+
+## 13. Laura Jiménez Arquitectura — Laura Jiménez Conde (architect, Estepona, Spain)
+Find: the email from info@laurajimenezarquitectura.com, subject "Re: [SPAM] Villa 169 in District One" (19 Nov, 12:50 Dubai). Reply, and delete "[SPAM] " from the subject line (her server added it).
+Note: she designed Villa 169 six years ago; her client never built it and may have sold the plot with the design. A short thank-you is enough; no further follow-up.
+Status: pending
+
+Dear Laura,
+
+Thank you for taking the time to reply, and for explaining. It is a striking design, and I hope it gets built one day.
+
+If you ever have a client building in Dubai or Abu Dhabi who would like an independent check on the contractor's side of things, I would be glad to talk.
+
+Kind regards,
+
