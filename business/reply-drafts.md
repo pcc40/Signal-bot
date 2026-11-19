@@ -166,3 +166,18 @@ I would like 20 minutes with whoever manages your villa communities or technical
 
 Kind regards,
 
+---
+
+## 12. DaZERO Design Lab — Luca Armocida (interior architect, Italy; reply all: keep info@lucaarmo.it)
+Find: the email from luca.armo82@gmail.com, subject "Re: Villa N7 on Frond N" (18 Nov, 15:41 Dubai). Reply all.
+Note: he offers to work with us on future villas and asks for a call. Keep to meeting first: no talk of passing clients either way until you have met.
+Status: pending
+
+Dear Luca,
+
+Thank you for the detail on Villa N7. A year for interiors at that scale, with the rooftop alongside, matches what I would expect, and you are right that joinery, lighting and finishes decisions have to keep pace with the contractor's programme.
+
+I would be glad to have a call and hear more about how you work. Would Monday 23 November at 11:00 or Tuesday 24 November at 15:00 Dubai time (08:00 or 12:00 in Italy) suit you, on Teams or WhatsApp video?
+
+Kind regards,
+

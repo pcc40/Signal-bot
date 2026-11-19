@@ -2,6 +2,7 @@
 
 One line per reply, bounce or opt-out, newest first: date | firm | address | type (positive / neutral / not now / no / auto-reply / bounce / sales pitch / unsubscribe) | note. Firms here get no further automatic outreach or follow-up (auto-replies excepted only if marked "follow up ok").
 
+2026-11-18 | Luca Armo Design / DaZERO Design Lab (Luca Armocida) | info@lucaarmo.it (reply from luca.armo82@gmail.com) | positive | interior architect, Italy (Villa N7, Palm): interiors took about a year; wants to work together on future Dubai/Abu Dhabi villas and asked for a call. Draft #12 (video call, meet first)
 2026-11-18 | fäm Interiors (fäm Properties) | heena.k@famdevelopments.com for Mazen Abdoh | positive (meeting) | Mazen can meet Thu 19 Nov 14:30, Bay Square Building 1, Office 207, Business Bay; confirm by email (draft #10). cc@famproperties.com bounces (Google group); drop it from replies
 2026-11-18 | Khidmah (Inspire Home) | services@khidmah.com | neutral (customer care) | ticketed reply to the 18 Nov follow-up: asked the purpose of the meeting. Draft #11
 2026-11-18 | Conveyance.ae | hello@conveyance.ae | unsubscribe (probable) | follow-up blocked by Bird: recipient_suppressed (most likely used the unsubscribe link). Do not contact
