@@ -12,22 +12,6 @@ Mix: opportunity, buyer brief, opportunity, market/launch radar, "how the desk w
 
 ## Queued
 
-### Fri 20 Nov 2026, 09:00 UAE — Hudayriyat Island (card: cards/2026-11-20-hudayriyat-island.png)
-Hudayriyat Island did AED 28.62bn of property transactions in the first nine months of 2026, second only to Al Reem (ADREC).
-
-Four Modon communities, two of them sold out on launch day:
-• Nawayef Village: 378 homes, about AED 2bn, gone in a day (May 2025)
-• Bashayer: AED 3bn in a day (Dec 2025), final phase AED 1.25bn in a day (Jul 2026)
-• Hudayriyat Golf Estates: 1,700 homes, AED 13bn+ within days; four-bed golf homes average about AED 7.4m
-• Wadeem Gardens: four-bed villas from AED 8.7m on a 25/75 plan, up to 75% off-plan finance
-
-Prices, plans, handover and resale rules compared:
-https://dealdeed.ae/insights/hudayriyat-island-villas-guide?utm_source=linkedin&utm_medium=social&utm_campaign=hudayriyat
-
-Which of the four would you buy into today?
-
-#AbuDhabiRealEstate #Hudayriyat #Modon #OffPlan #UAEProperty
-
 ### Sat 21 Nov 2026, 09:00 UAE — Sellers: out before handover (card: cards/2026-11-21-sell-off-plan-before-handover.png)
 Selling an off-plan home before completion is routine in Dubai. The numbers that matter are rarely explained up front: the developer's NOC, the Oqood assignment, the DLD transfer fee, and what is actually left once the buyer has reimbursed what you have paid.
 
@@ -93,6 +77,7 @@ Figures from Aldar's launch details to agents; confirm final terms on launch day
 | Tue 17 Nov 05:00 UK (09:00 UAE) | How the desk works (3 steps, fixed fee on completion) + image card | Posted (confirmed live in LinkedIn 17 Nov); queue checked 17 Nov 13:30 UTC (Browser 1): Wed 18 to Mon 23, one per day, all 5:00 AM, nothing new needed |
 | Wed 18 Nov 05:00 UK (09:00 UAE) | Opportunity: Nad Al Sheba Gardens Ph 4 corner townhouse, AED 5.1M, 60% paid + image card | Posted (confirmed live in LinkedIn 18 Nov); queue checked 18 Nov 14:40 UTC (Browser 2): Thu 19 to Sun 22 seen, one per day, all 5:00 AM, nothing new needed |
 | Thu 19 Nov 05:00 UK (09:00 UAE) | Launch radar: Palm Springs vs Bay Estate + card | Posted (confirmed live in LinkedIn 19 Nov); queue checked 19 Nov 16:30 UTC (deviceId fddc85a8, now named "Browser 1"): Fri 20 to Mon 23, one per day, all 5:00 AM, nothing new needed |
+| Fri 20 Nov 05:00 UK (09:00 UAE) | Market note: Hudayriyat Island AED 28.62bn + card | Posted (confirmed live in LinkedIn 20 Nov); queue checked 20 Nov 13:30 UTC (Browser 1): Sat 21 to Mon 23, one per day, all 5:00 AM, nothing new needed |
 
 ## Page profile changes (15 Nov)
 - Tagline: "Private deal-matching desk for Dubai and Abu Dhabi property. Motivated sellers and verified buyers, agent to agent." (no off-market wording)
