@@ -201,7 +201,7 @@ Kind regards,
 ## 14. DaZERO Design Lab — Luca Armocida (follow-up; reply all: keep info@lucaarmo.it)
 Find: Luca's second email of 19 Nov (23:29 Dubai) in "Re: Villa N7 on Frond N": Villa N7 is complete; he asks whether you are representing an owner with an upcoming project; he is finishing another Dubai project for a friend of the N7 owner and may visit Dubai in December. Reply to that latest email.
 Note: be straight that there is no project to put forward today (never imply UAE clients). Meet first.
-Status: pending
+Status: drafted 2026-11-20
 
 Dear Luca,
 
@@ -218,7 +218,7 @@ Kind regards,
 ## 15. Maison Vendôme — Arthur (contractor asking about tenders; reply all: keep louis.matthieu@maisonvendome.ae)
 Find: the email from arthurmaisonvendome@gmail.com, subject "Dubai villa renovations | Maison Vendôme" (20 Nov, 07:01 Dubai). Reply all.
 Note: inbound from a contractor. Stay independent: no tender details, no promises; ask for a profile for the file.
-Status: pending
+Status: drafted 2026-11-20
 
 Dear Arthur,
 
