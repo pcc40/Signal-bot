@@ -79,6 +79,8 @@ Emails are sent from philip@eastbridgestrategicpartners.com through Bird (sendin
 - 18 Nov: follow-ups to batches 8–9 plus 7 new (batch 10): 50 sent, 47 delivered, 1 deferred (Luca Armo); Conveyance.ae and Kelly Hoppen blocked as suppressed (now do-not-contact). Next: Thu 19 Nov (day-thu.json, 36).
 - 18 Nov (pm): **fäm Interiors** meeting set: Mazen Abdoh, Thu 19 Nov 14:30, Bay Square 1, Office 207. **Khidmah** customer care asked the meeting's purpose (draft #11). **Luca Armocida** (DaZERO Design Lab, interior architect, Italy) replied positively and asked for a call (draft #12).
 - 19 Nov: follow-ups to batch 9 plus 6 new (batch 11): 36 sent, 34 delivered; Host and Stay bounced (dead address); Gargash Insurance blocked as suppressed (now do-not-contact). Next: Fri 20 Nov (day-fri.json, 39).
+- 19–20 Nov: **fäm Interiors** meeting held Thu 19 Nov 14:30 (outcome not yet logged). **Luca Armocida** (DaZERO) looking for projects, may visit Dubai in December (draft #14). **Laura Jiménez** (Villa 169) never built (draft #13). **Maison Vendôme**, a contractor, asked about tenders (draft #15). Inspectors.ae holding reply; Khidmah chased (send draft #11).
+- 20 Nov: batch 12 first emails (developers, schools, business councils, UK agents, expat advisers, engineers): 39 sent, 36 delivered, 1 deferred (MERKA); Tritium and Structural Designs bounced. **Week 16–20 Nov: 222 sent, 211 delivered.** The week's plan is complete; next week's outreach needs a new plan and Phil's approval.
 **Next batch:** the daily run (07:41 Dubai, Tue 10 – Fri 13 Nov) researches and sends up to 25 new firms a day, excluding everyone above.
 
 ## 5. Open items for Phil

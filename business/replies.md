@@ -2,6 +2,8 @@
 
 One line per reply, bounce or opt-out, newest first: date | firm | address | type (positive / neutral / not now / no / auto-reply / bounce / sales pitch / unsubscribe) | note. Firms here get no further automatic outreach or follow-up (auto-replies excepted only if marked "follow up ok").
 
+2026-11-20 | Tritium MEP Design | design@tritiumarch.design | bounce | hard bounce 550 5.1.1, address does not exist
+2026-11-20 | Structural Designs | info@structuraldesigns.ae | bounce | 554 5.7.1 relay access denied (their mail server); try by phone if wanted
 2026-11-20 | Maison Vendôme (contractor, inbound) | arthurmaisonvendome@gmail.com (cc louis.matthieu@maisonvendome.ae) | inbound sales | Dubai construction/renovation contractor asking whether we have villa tenders coming up. Not outreach; draft #15 (no tender; send profile for file)
 2026-11-19 | Luca Armo Design / DaZERO (follow-up) | luca.armo82@gmail.com | positive | asked what the call is for; then clarified he is looking for upcoming projects, is finishing another Dubai job for a friend of the N7 owner, may visit Dubai in December. Draft #14 (honest: no project today; meet in December)
 2026-11-19 | Khidmah (chaser) | services@khidmah.com | neutral | customer care chased again for the meeting's purpose; draft #11 (created 18 Nov) answers it, Phil to send

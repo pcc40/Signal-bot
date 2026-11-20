@@ -236,3 +236,55 @@ Call list: business/call-list.md (ValuStrat, LeakDtech, CasaViva, Haven Edition,
 | eb-b11-live-07 | MAWD (March and White Design) | newbusiness@mawd.co | em_01m7s2k3wpegptkdext7hakaya | Delivered |
 | eb-b11-live-08 | Shalini Misra Design | info@shalinimisra.com | em_01m7s2kfjpekfsj8tzmk0cf7rg | Delivered |
 | eb-b11-live-09 | Dubai First | info@dubaifirst.co.uk | em_01m7s2kxq1exkagc1z9cnpwxhx | Delivered |
+
+## Fri 20 Nov
+
+First emails from batch 12 (`business/outbox/day-fri.json`, 39 items: developers and master communities, schools, business councils, UK agents, expat advisers, engineers), sent 20 Nov 2026 04:50:13–04:57:40 UTC (08:50–08:57 UAE) through Bird, one at a time, same settings as Mon–Thu.
+
+Before sending: no item's address or domain appeared in `business/replies.md`; nothing had been sent earlier today. Morning reply check: Luca Armocida follow-up (draft #14), Maison Vendôme contractor inbound (draft #15), Khidmah chaser (draft #11 already created).
+
+Result: 39 sent, 36 delivered, 1 deferred (MERKA, 421, Bird retrying), 2 bounced (Structural Designs: their server refused, 554 relay access denied; Tritium MEP Design: 550 address does not exist), 0 rejected, 0 skipped, 0 not sent. Today's Bird count 39/50.
+
+Week 16–20 Nov total: 222 sent, 211 delivered, 2 deferred at check time, 3 bounced, 6 rejected as suppressed (probable unsubscribes).
+
+| Key | Firm | To | Bird id | Status |
+|---|---|---|---|---|
+| eb-b12-live-01 | Al Barari | customerservice@albarari.community | em_01m7vmmwnqe0d98jd0pbdfk0z6 | Delivered |
+| eb-b12-live-02 | Zaya (ZUHHA Island) | reception@zaya.com | em_01m7vmn9nfffw9pgmk0whqkanw | Delivered |
+| eb-b12-live-03 | Bloom Holding | customerservice@bloomholding.com | em_01m7vmnmvwehmte49h0zb7abf5 | Delivered |
+| eb-b12-live-04 | Jubail Island (JIIC) | info@jubailisland.ae | em_01m7vmnzrfenzr0hq3akr0vekg | Delivered |
+| eb-b12-live-05 | Falconcity of Wonders | info@falconcity.com | em_01m7vmpawgfn9sngt6hdr7nyzq | Delivered |
+| eb-b12-live-06 | IMKAN Properties | hello@imkan.ae | em_01m7vmppkrej4vd0xwfxgn66fy | Delivered |
+| eb-b12-live-07 | Ellington Properties | customercare@ellingtongroup.com | em_01m7vmq1mzfwdapyeen43xdqgq | Delivered |
+| eb-b12-live-08 | The Sustainable City (SEE Holding) | info@thesustainablecity.com | em_01m7vmqca7enpv4w4y7150b7cv | Delivered |
+| eb-b12-live-09 | Jumeirah English Speaking School (JESS) | admissions@jess.sch.ae | em_01m7vmqq8vffmby2w9eavm5fzs | Delivered |
+| eb-b12-live-10 | Dubai British School Emirates Hills | admissions@dubaibritishschool.ae | em_01m7vmr35netzbbk757rdrwh99 | Delivered |
+| eb-b12-live-11 | Emirates International School Meadows | rosine@eischools.ae | em_01m7vmre3zetyse2tf6h145r7y | Delivered |
+| eb-b12-live-12 | Hartland International School | admissions@hartlandinternational.com | em_01m7vmrs0fej6a2vg0wgdszvje | Delivered |
+| eb-b12-live-13 | Fairgreen International School | sdillow@fairgreen.ae | em_01m7vms3xyf6js3ey50196vn0d | Delivered |
+| eb-b12-live-14 | Canadian International School Abu Dhabi | admissions@cisabudhabi.com | em_01m7vmsernfpx92f96a1m3rrqp | Delivered |
+| eb-b12-live-15 | Repton Abu Dhabi | admissions@reptonabudhabi.org | em_01m7vmssyqe61aw8hkj73yga3f | Delivered |
+| eb-b12-live-16 | Swedish Business Council UAE | lisa.naeckter@sbcuae.se | em_01m7vmt5pje23twp8mdr7j1ef0 | Delivered |
+| eb-b12-live-17 | Norwegian Business Council Dubai | hkj@norwegianbusinesscouncil.com | em_01m7vmtgmde8dvkgkw9ncp7zx6 | Delivered |
+| eb-b12-live-18 | Netherlands Business Council UAE | office@nlbcuae.com | em_01m7vmtx9jfvpbd176b8ggmhw6 | Delivered |
+| eb-b12-live-19 | Canadian Business Council Dubai | cbc@cbc-dubai.com | em_01m7vmv8bke4qan7tb704c9tbh | Delivered |
+| eb-b12-live-20 | Canadian Business Council Abu Dhabi | admin@cbcabudhabi.com | em_01m7vmvkyyesbtnqybna9p6xc4 | Delivered |
+| eb-b12-live-21 | CCI France UAE | claireanne.russelle@ccifranceuae.com | em_01m7vmvz9cft1tk5vgf08c6w0s | Delivered |
+| eb-b12-live-22 | Italian Industry & Commerce Office in the UAE (IICUAE) | l.terrana@iicuae.com | em_01m7vmwaj6e6tt2cd5h9gna891 | Delivered |
+| eb-b12-live-24 | Finnish Business Council UAE | erika@fbcuae.fi | em_01m7vmwpthew4sbwvvdbhkbxtv | Delivered |
+| eb-b12-live-26 | Benham and Reeves (Middle East) | mea@benhams.com | em_01m7vmx2d3f6m9t7am48vn1m5h | Delivered |
+| eb-b12-live-27 | Nest Seekers International (Dubai) | Djawad@nestseekers.com | em_01m7vmxdtjfvy9xap1gy3pv9s6 | Delivered |
+| eb-b12-live-28 | Spot Blue International Property | jwalker@spotblue.com | em_01m7vmxt57e66s9c20cepytky1 | Delivered |
+| eb-b12-live-29 | Your Overseas Home | info@youroverseashome.com | em_01m7vmy5d4fj78rbdkwdj8wqdx | Delivered |
+| eb-b12-live-30 | Domus Nova | londonsales@domusnova.com | em_01m7vmygqefahsskv244kam1t0 | Delivered |
+| eb-b12-live-31 | Invicta International Properties | info@invictaproperty.com | em_01m7vmyw04exd9v8dnvndppm5j | Delivered |
+| eb-b12-live-33 | Viara Properties | info@viaraproperties.com | em_01m7vmz86dec7t2mv6nktn683t | Delivered |
+| eb-b12-live-34 | Canaccord Wealth (Dubai) | enquiries@canaccord.com | em_01m7vmzkerejzbxxbjvb1j04m6 | Delivered |
+| eb-b12-live-35 | Kevin Crowther | kevin@kevincrowther.com | em_01m7vmzyrxe84b2trsg0a19pgy | Delivered |
+| eb-b12-live-36 | The Expat Advisors | hello@expatadvisors.co.uk | em_01m7vn0c6hfe6aw2s4452p95p8 | Delivered |
+| eb-b12-live-37 | IFA.AE Private Office | Privateoffice@ifa.ae | em_01m7vn0qgyfppvbhgyd1a58trr | Delivered |
+| eb-b12-live-38 | My Intelligent Investor | info@myintelligentinvestor.com | em_01m7vn1375f418a4qzeadj54t9 | Delivered |
+| eb-b12-live-39 | Finance Haggis | info@financehaggis.com | em_01m7vn1erteknt05082cwc6qf9 | Delivered |
+| eb-b12-live-43 | Structural Designs | info@structuraldesigns.ae | em_01m7vn1t3ved69qbvaj9mrwvm2 | BOUNCED (554 5.7.1 relay access denied: their mail server) |
+| eb-b12-live-44 | Tritium MEP Design | design@tritiumarch.design | em_01m7vn255ceydtw9t5cefyxart | BOUNCED (hard, 550 5.1.1 address does not exist) |
+| eb-b12-live-45 | MERKA | info@merka.ae | em_01m7vn2gxtec88x72wvccc1gjd | Deferred (421 soft bounce; Bird retrying) |
