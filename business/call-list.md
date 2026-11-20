@@ -1,64 +1,58 @@
-# Call list — Thu 19 Nov 2026
+# Call list — Fri 20 Nov 2026
 
-Five firms emailed Fri 13 Nov, each sent a follow-up this morning; none has replied and none is in `replies.md`. Numbers are from each firm's own website. All five meet villa owners when something goes wrong or needs checking: a valuer, a leak specialist, two home-management firms for owners abroad, and a private-client insurer.
-
-**Today 14:30:** fäm Interiors, Mazen Abdoh, Bay Square Building 1, Office 207, Business Bay.
+Friday: most firms work the morning only, so call before 12:00. First, one call to firm up a meeting; then four firms emailed Fri 13 Nov and followed up Thu 19 Nov with no reply (none in `replies.md`). Numbers are from each firm's own website.
 
 Same rule as always: you are not after work; ask to meet for a coffee; no talk of referrals until you have met.
 
 ---
 
-## 1. ValuStrat (Dubai)
+## 1. Saif Elite QS — fix the meeting (they asked to meet)
 
-- **Phone:** +971 4 326 2233 (mobile +971 55 341 3000; WhatsApp +971 55 213 9453)
-- **Ask for:** Declan King MRICS, Senior Partner and Group Head, Real Estate
-- **What we emailed:** "Older freehold villas", Fri 13 Nov; follow-up this morning (business.enquiries@valustrat.com)
-- **Why call:** RICS valuers who value villas and also do technical due diligence and project monitoring for lenders. Same professional language as you; owners of older villas weighing a renovation need both.
+- **Phone / WhatsApp:** Mudassir Saif, +971 50 505 3679
+- **Why call:** he asked on 16 Nov to meet at your office; your reply (18 Nov) offered Wed 10:00 or Thu 14:00 and nothing has come back. A quick call settles a date for next week.
 - **Opening:**
-  > Good morning, could I speak to Declan King? It's Phil Chapman from Eastbridge. I emailed about older freehold villas.
-  > I'm an independent project manager on the owner's side of villa renovations, after twenty-one years running a building firm in the UK.
-  > I'd value half an hour over coffee to hear how you see renovation and value in the older communities. Would next week suit?
+  > Hello Mudassir, it's Phil Chapman from Eastbridge. Thank you for your email about meeting. I wanted to find a time that suits you next week. Would Monday or Tuesday work, at Meydan or somewhere nearer you?
 
-## 2. LeakDtech
+## 2. Mortgage Market (self-build finance)
 
-- **Phone:** +971 50 640 4510
-- **Ask for:** whoever runs the villa leak checks (no one is named on the site)
-- **What we emailed:** "Finding the leak first", Fri 13 Nov; follow-up this morning (info@leakdtech.com)
-- **Why call:** they find leaks in villas without opening walls, and their reports go to owners, landlords and insurers. Once the leak is found, the owner faces a repair that often turns into a renovation.
+- **Phone:** 800 346 2623 (800-FINANCE); WhatsApp +971 50 797 1760
+- **Ask for:** an adviser on Construction Finance (Self-Build); Shubham Chichani is listed this week (+971 54 704 1875)
+- **What we emailed:** first email 13 Nov, follow-up 19 Nov (info@mortgagemarket.ae)
+- **Why call:** they finance building a new villa on land the owner already holds, with money released at each stage. Every one of those owners needs the stages checked before the bank releases money.
 - **Opening:**
-  > Hello, it's Phil Chapman from Eastbridge. I emailed about villa owners once you've found the leak.
-  > I work on the owner's side of villa repairs and renovations, after twenty-one years as a builder in the UK.
-  > I'd like to buy you a coffee and understand how you work. Would next week suit?
+  > Hello, it's Phil Chapman from Eastbridge. I emailed about your self-build construction finance.
+  > I'm an independent project manager on the owner's side of villa builds, after twenty-one years running a building firm in the UK.
+  > I'd like to buy one of your construction-finance advisers a coffee and understand how the stage releases work. Would next week suit?
 
-## 3. CasaViva (by WhyteHaus)
+## 3. Property Snagging DXB
 
-- **Phone:** +971 50 107 5810 (or +971 58 548 8157)
-- **Ask for:** the person who runs the service (no one is named)
-- **What we emailed:** "A trusted presence", Fri 13 Nov; follow-up this morning (info@casavivauae.com)
-- **Why call:** weekly villa checks for owners who live abroad, with every quote approved by the owner. When a check turns up something bigger than maintenance, the owner needs an independent person on the job.
+- **Phone / WhatsApp:** +971 50 904 8254 (open 24 hours)
+- **Ask for:** Inzmam Tariq, CEO (the other team names on their site look like placeholders)
+- **What we emailed:** "Until the defects are fixed", 13 Nov; follow-up 19 Nov (info@propertysnaggingdxb.com)
+- **Why call:** villa-specific snagging (pools, roofs, boundary walls, multi-zone AC), so they meet villa owners at handover with defect lists in hand.
 - **Opening:**
-  > Hello, it's Phil Chapman from Eastbridge. I emailed about the owners you look after while they're abroad.
+  > Hello, could I speak to Inzmam? It's Phil Chapman from Eastbridge. I emailed about villa owners waiting for defects to be fixed.
+  > I work on the owner's side of villa builds and renovations, after twenty-one years as a builder in the UK.
+  > I'd like to meet for a coffee and hear how you work. Would next week suit?
+
+## 4. Credence & Co. (CNCO)
+
+- **Phone:** +971 4 8790 747 (mobile +971 58 985 5344)
+- **Ask for:** the snagging and inspection team, or the RICS valuers (no one is named)
+- **What we emailed:** first email 13 Nov, follow-up 19 Nov (info@cnco.ae)
+- **Why call:** RICS valuers who also snag and inspect before handover or purchase, in Dubai and Abu Dhabi.
+- **Opening:**
+  > Good morning, it's Phil Chapman from Eastbridge. I emailed about villa owners after your inspections.
   > I'm an independent project manager on the owner's side of villa work, after twenty-one years running a UK building firm.
-  > I'd like to meet for a coffee and hear how you handle the bigger jobs. Would next week work?
+  > I'd like to meet one of your team for a coffee and understand how you work. Would next week work?
 
-## 4. Haven Edition (Abu Dhabi and Dubai)
+## 5. N.A.M Chartered Valuers
 
-- **Phone:** +971 50 620 1224 (office +971 2 234 6262)
-- **Ask for:** the founder or whoever leads home management (no one is named)
-- **What we emailed:** "Before issues escalate", Fri 13 Nov; follow-up this morning (info@havenedition.com)
-- **Why call:** home management for owners living away, across Abu Dhabi and Dubai; a natural fit for our Abu Dhabi side.
+- **Phone / WhatsApp:** +971 55 252 9750
+- **Ask for:** one of the MRICS valuers or building surveyors (no one is named)
+- **What we emailed:** first email 13 Nov, follow-up 19 Nov (admin@namcharteredvaluer.com)
+- **Why call:** chartered valuers and building surveyors doing structural surveys and dispute support; owners in a dispute with a contractor often need an independent project manager next.
 - **Opening:**
-  > Hello, it's Phil Chapman from Eastbridge. I emailed about owners who live away from their villas.
-  > I work on the owner's side of villa renovations in Abu Dhabi and Dubai, after twenty-one years as a UK builder.
-  > I'd like to meet and understand how you work. Would a coffee next week suit?
-
-## 5. Lockton MENA, Private Clients
-
-- **Phone:** +971 4 373 8777 (DIFC) or +971 4 373 8726 (Dubai Hills)
-- **Ask for:** the private clients team; the page names Adeeb Al Naser, CEO Retail (UAE)
-- **What we emailed:** "Insured homes under renovation", Fri 13 Nov; follow-up this morning (contact@mena.lockton.com)
-- **Why call:** they insure high-value homes; a renovation changes the risk, and insurers want to know who is checking the contractor.
-- **Opening:**
-  > Good morning, could I speak to someone in Private Clients? It's Phil Chapman from Eastbridge. I emailed about insured homes going through renovation.
-  > I'm an independent project manager on the owner's side of villa renovations, after twenty-one years running a UK building firm.
-  > I'd like to understand how you look at a client's home during works. Could we meet for a coffee next week?
+  > Hello, it's Phil Chapman from Eastbridge. I emailed last week and again yesterday.
+  > I'm an independent project manager on the owner's side of villa builds, after twenty-one years as a UK builder. I see you do structural surveys and dispute support.
+  > I'd like to meet for a coffee and compare notes. Would next week suit?
