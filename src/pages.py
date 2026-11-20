@@ -241,6 +241,13 @@ def press_section():
     items = "".join(f'<li><span class="kicker">{esc(a["outlet"])} · {esc(a["date"])}</span><h3><a href="{a["url"]}" rel="noopener" target="_blank">{esc(a["title"])}</a></h3><p>{esc(a["summary"])}</p></li>' for a in C.PRESS)
     return f'''<section class="section--tight" id="press" aria-labelledby="press-h"><div class="wrap split"><div><h2 id="press-h">In the press</h2><p class="muted">Articles by Philip in other publications.</p></div><div class="prose"><ul class="press-list">{items}</ul></div></div></section>'''
 
+def insights_press():
+    """/insights/: Philip's articles in other publications (config.PRESS), above the article list."""
+    if not getattr(C, "PRESS", None):
+        return ""
+    items = "".join(f'<li><span class="kicker">{esc(a["outlet"])} · {esc(a["date"])}</span><h3><a href="{a["url"]}" rel="noopener" target="_blank">{esc(a["title"])}</a></h3><p>{esc(a["summary"])}</p></li>' for a in C.PRESS)
+    return f'<section class="section--tight" aria-labelledby="ins-press-h"><div class="wrap split"><div><h2 id="ins-press-h">Published elsewhere</h2><p class="muted">Philip writing for other publications.</p></div><div class="prose"><ul class="press-list">{items}</ul></div></div></section>'
+
 def founder_uk_section(key):
     import zlib
     projs = sorted({b.rsplit("-", 1)[0] for b in UK_QUALITY_POOL})
@@ -392,6 +399,10 @@ def service_page(s):
     if s["slug"] == "owners-representative":
         # How the owner's decisions reach the consultant and contractor (Phil Chapman, 16 Nov 2026)
         extra += f'<div id="decisions">{ANS.decisions_html(hid="decisions-h")}</div>'
+    if s["slug"] == "cost-and-programme-control" and getattr(C, "PRESS", None):
+        a = C.PRESS[0]
+        extra += (f'<p class="press-note">Philip wrote about how villa budgets leak, and what to ask so it does not happen to yours, '
+                  f'for {esc(a["outlet"])}: <a href="{a["url"]}" rel="noopener" target="_blank">{esc(a["title"])}</a>.</p>')
     if s["slug"] == "consultant-and-contractor-selection":
         # the home page's second button lands on #quote-review: give that section its own way to act
         extra += (f'<p class="contact-actions quote-cta"><a class="btn" href="{contact_href("service", s["slug"])}">Ask for a quote review</a>'
@@ -1145,7 +1156,7 @@ def insights(posts):
     crumbs = [("Home", "/"), ("Insights", "/insights/")]
     items = "".join(f'<li><a href="/insights/{p["slug"]}/"><div><h3>{esc(p["title"])}</h3><p>{esc(p["description"])}</p></div><div class="meta">{esc(p.get("category",""))}<br>{datetime.date.fromisoformat(str(p["date"])).strftime("%-d %b %Y")}</div></a></li>' for p in posts)
     body = B.banner(crumbs, "Insights", "Straight answers for villa owners in Dubai and Abu Dhabi: costs, approvals, contracts and choosing a team, written from the builder's side of the table. New to the jargon? Start with our <a href=\"/glossary/\">villa construction glossary</a>.", "quay-house-04", credit_of("quay-house-04")) + f'''
-<section class="section"><div class="wrap">{post_cards(posts)}</div></section>{B.cta_band()}'''
+{insights_press()}<section class="section"><div class="wrap">{post_cards(posts)}</div></section>{B.cta_band()}'''
     B.page("/insights/", "Villa Building Insights: Dubai & Abu Dhabi | Eastbridge",
            "Guides for villa owners in Dubai and Abu Dhabi: build costs, approvals, contractors, contracts, snagging and renovation, from the builder's side.",
            body, crumbs)

@@ -166,7 +166,11 @@ def person_schema():
             "alumniOf": {"@type": "Organization", "name": C.FOUNDER["company_uk"], "url": C.FOUNDER["company_uk_url"]},
             "knowsAbout": ["Residential construction", "Owner's representation", "Construction project management",
                            "JCT contracts", "Extension of time claims", "Construction cost management", "Villa construction"],
-            **({"sameAs": list(C.FOUNDER["same_as"])} if C.FOUNDER.get("same_as") else {})}
+            **({"sameAs": list(C.FOUNDER["same_as"])} if C.FOUNDER.get("same_as") else {}),
+            **({"subjectOf": [{"@type": "Article", "headline": a["title"], "url": a["url"],
+                               "author": {"@id": PERSON_ID},
+                               "publisher": {"@type": "Organization", "name": a["outlet"]}} for a in C.PRESS]}
+               if getattr(C, "PRESS", None) else {})}
 
 def org_schema():
     return {
@@ -886,6 +890,7 @@ def llms_facts():
             f"- {_decisions_llms()} {url('/services/owners-representative/#decisions')}",
             f"- Response: {C.RESPONSE_PROMISE} ({C.HOURS})",
             "- Portfolio: UK homes built by P Chapman Construction, the main contractor founded and led by Philip Chapman. Awards were made to the houses and their project teams, not to Philip personally or to Eastbridge: Owers House, built by P Chapman Construction and completed in 2014, was featured on Channel 4's Grand Designs and won a RIBA South West Award in 2016; The Old Station Master's House, Fowey, won Best Small New Housing Development in the LABC Building Excellence Awards South West 2018 (https://www.acornpropertygroup.org/old-station-masters-house-wins-labc-award/); Polgreen Manor was Highly Commended, Best Extension or Alteration to an Existing Dwelling, LABC South West 2020 (https://www.labc.co.uk/news/labc-south-west-winners-amp-highly-commended-2020)",
+            *[f"- Press: {C.FOUNDER['name']} wrote '{a['title']}' for {a['outlet']} ({a['date']}): {a['url']}" for a in getattr(C, 'PRESS', [])],
             f"- UK project case study: {url('/work/owers-house/')} (Owers House, built by P Chapman Construction as main contractor, completed in 2014; featured on Channel 4's Grand Designs; RIBA South West Award 2016)",
             *([f"- Fees: published as ranges by level of input, never as a day rate, hourly rate or fixed price. Every one-off villa is different, so the fee is agreed in a written scope of works after the free 30-minute first call, and any work outside that scope is quoted before it starts. Review (plot, design, contractor-quote or stalled-project review, with a written report): {C.fee_text('review')}. Part service (cost, contract and payment reviews and monthly reporting, without regular site attendance): {C.fee_text('part')}. Full service (every review, regular site visits and sourcing trips with the owner, travel at cost): {C.fee_text('full')}, depending on the input required. Paid only by the owner, who pays consultants, contractors and suppliers directly; Eastbridge never instructs the contractor or approves a payment without the owner's written approval: {url('/fees/')}"] if C.PUBLISH_FEES else []),
             f"- Worked project example: {url('/case-studies/island-e-waterfront-villa/')} (hypothetical, showing method only; not a completed Eastbridge project, a real client or a promise of savings; all outcomes are modelled)"]
