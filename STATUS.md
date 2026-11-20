@@ -8,7 +8,7 @@ Raw URL for Master Control: `https://raw.githubusercontent.com/pcc40/eastbridge-
 - Any Code session that changes the site or sends outreach updates the relevant section and the *Last updated* line.
 - Master Control does not edit this file. It mirrors it into tracker B7 (see the last section).
 
-Last updated: 19 November 2026, daily SEO engine (new article /insights/snagging-developer-villa-handover/ in 5 languages; audit 585 pages 0/0). Earlier: 18 November 2026, daily SEO engine (no publishing day; audit 580 pages 0/0; live checks all 200). Earlier: 17 November 2026, daily SEO engine (new article /insights/dubai-construction-calendar-villa-programme/ in 5 languages; audit 580 pages 0/0). Earlier: 16 November 2026, daily SEO engine (District One page deepened in 5 languages; audit 575 pages 0/0). Earlier: 15 November 2026, conversion rebuild of the website approved by Phil (home first screen, proof strip, fees cards, navigation, team wording; audit 570 pages 0/0).
+Last updated: 20 November 2026, daily SEO engine (no publishing; audit 585 pages 0/0; live checks all 200). Earlier: 19 November 2026, daily SEO engine (new article /insights/snagging-developer-villa-handover/ in 5 languages; audit 585 pages 0/0). Earlier: 18 November 2026, daily SEO engine (no publishing day; audit 580 pages 0/0; live checks all 200). Earlier: 17 November 2026, daily SEO engine (new article /insights/dubai-construction-calendar-villa-programme/ in 5 languages; audit 580 pages 0/0). Earlier: 16 November 2026, daily SEO engine (District One page deepened in 5 languages; audit 575 pages 0/0). Earlier: 15 November 2026, conversion rebuild of the website approved by Phil (home first screen, proof strip, fees cards, navigation, team wording; audit 570 pages 0/0).
 
 ---
 
