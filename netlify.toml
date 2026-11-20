@@ -1,6 +1,9 @@
 [build]
   command = "pip install markdown pyyaml beautifulsoup4 && python3 build.py && python3 tools/i18n.py apply"
   publish = "dist"
+  # Skip the build (and its deploy credits) when a push changes nothing the site is built from,
+  # e.g. outreach logs in business/, reports/, STATUS.md. Exit 0 = skip. Netlify charges credits per production deploy.
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- src build.py tools netlify netlify.toml package.json package-lock.json assets-src"
 
 [build.environment]
   PYTHON_VERSION = "3.11"
