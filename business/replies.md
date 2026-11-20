@@ -2,6 +2,9 @@
 
 One line per reply, bounce or opt-out, newest first: date | firm | address | type (positive / neutral / not now / no / auto-reply / bounce / sales pitch / unsubscribe) | note. Firms here get no further automatic outreach or follow-up (auto-replies excepted only if marked "follow up ok").
 
+2026-11-20 | Maison Vendôme (contractor, inbound) | arthurmaisonvendome@gmail.com (cc louis.matthieu@maisonvendome.ae) | inbound sales | Dubai construction/renovation contractor asking whether we have villa tenders coming up. Not outreach; draft #15 (no tender; send profile for file)
+2026-11-19 | Luca Armo Design / DaZERO (follow-up) | luca.armo82@gmail.com | positive | asked what the call is for; then clarified he is looking for upcoming projects, is finishing another Dubai job for a friend of the N7 owner, may visit Dubai in December. Draft #14 (honest: no project today; meet in December)
+2026-11-19 | Khidmah (chaser) | services@khidmah.com | neutral | customer care chased again for the meeting's purpose; draft #11 (created 18 Nov) answers it, Phil to send
 2026-11-19 | Laura Jiménez Arquitectura | info@laurajimenezarquitectura.com | neutral | Villa 169 (District One) was designed 6 years ago but never built by her client; plot may have been sold. Her server tagged our email [SPAM]. Short thank-you draft #13; no further follow-up
 2026-11-19 | Inspectors.ae | info@inspectors.ae (Faith, +971 50 774 0231) | neutral (holding) | "We received your email and we will check on it." No reply needed; on the 16 Nov call list (ask for Fouad Bayoumy)
 2026-11-19 | Host and Stay | info@hostandstay.ae | bounce | hard bounce 550 5.1.1, address does not exist

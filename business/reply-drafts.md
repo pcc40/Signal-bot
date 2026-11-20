@@ -196,3 +196,37 @@ If you ever have a client building in Dubai or Abu Dhabi who would like an indep
 
 Kind regards,
 
+---
+
+## 14. DaZERO Design Lab — Luca Armocida (follow-up; reply all: keep info@lucaarmo.it)
+Find: Luca's second email of 19 Nov (23:29 Dubai) in "Re: Villa N7 on Frond N": Villa N7 is complete; he asks whether you are representing an owner with an upcoming project; he is finishing another Dubai project for a friend of the N7 owner and may visit Dubai in December. Reply to that latest email.
+Note: be straight that there is no project to put forward today (never imply UAE clients). Meet first.
+Status: pending
+
+Dear Luca,
+
+Thank you, that is clear.
+
+To be straightforward: I have no project ready to discuss with you today. This would be a general introduction, so that each of us knows how the other works before a project comes up.
+
+If you are in Dubai in December, I would very much like to meet in person; let me know your dates and I will fit around them. Otherwise a 20-minute video call before then would be a good start.
+
+Kind regards,
+
+---
+
+## 15. Maison Vendôme — Arthur (contractor asking about tenders; reply all: keep louis.matthieu@maisonvendome.ae)
+Find: the email from arthurmaisonvendome@gmail.com, subject "Dubai villa renovations | Maison Vendôme" (20 Nov, 07:01 Dubai). Reply all.
+Note: inbound from a contractor. Stay independent: no tender details, no promises; ask for a profile for the file.
+Status: pending
+
+Dear Arthur,
+
+Thank you for getting in touch.
+
+I have no tender to share at the moment. When an owner I work for invites proposals, the contractors are chosen with the owner, and I take no commission, fee or discount from any contractor.
+
+You are welcome to send a short company profile with your trade licence, insurance and two or three recent villa projects, and I will keep it on file.
+
+Kind regards,
+
