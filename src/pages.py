@@ -234,6 +234,13 @@ UK_QUALITY_POOL = [f"{p}-0{i}" for p in ("owers-house", "quay-house", "sea-glass
                    "polgreen-manor", "trelowen", "morvoren", "blue-seas", "menwinnion", "gooden-heane", "esplanade-road")
                    for i in (1, 2, 3)]
 
+def press_section():
+    """/about/#press: articles by or quoting Philip in other publications (config.PRESS)."""
+    if not getattr(C, "PRESS", None):
+        return ""
+    items = "".join(f'<li><span class="kicker">{esc(a["outlet"])} · {esc(a["date"])}</span><h3><a href="{a["url"]}" rel="noopener" target="_blank">{esc(a["title"])}</a></h3><p>{esc(a["summary"])}</p></li>' for a in C.PRESS)
+    return f'''<section class="section--tight" id="press" aria-labelledby="press-h"><div class="wrap split"><div><h2 id="press-h">In the press</h2><p class="muted">Articles by Philip in other publications.</p></div><div class="prose"><ul class="press-list">{items}</ul></div></div></section>'''
+
 def founder_uk_section(key):
     import zlib
     projs = sorted({b.rsplit("-", 1)[0] for b in UK_QUALITY_POOL})
@@ -889,6 +896,7 @@ def about():
 <p>In Dubai and Abu Dhabi, Philip works on the other side of the table: for the owner, never the builder. He leads every Eastbridge appointment personally, supported by three independent, UAE-based project managers he works with, who attend site and provide cover when he is unavailable, and he is the person you speak to from the first conversation to handover.</p>
 <p>Away from work he is a high-altitude mountaineer, which may explain a fondness for planning, contingency and getting everyone home safely.</p>
 </div></div></div></section>
+{press_section()}
 <section class="section stone" id="one-off"><div class="wrap split"><div><h2>One person on your side, plot to keys</h2></div><div class="prose">
 <p>{esc(SV.ONE_OFF_STORY)}</p>
 <p>{esc(SV.UK_RECORD)} That is the service Eastbridge offers owners of one-off villas in Dubai and Abu Dhabi, alongside the registered consultant and the contractor they appoint. Snagging and handover are one stage of it, not a separate product.</p>

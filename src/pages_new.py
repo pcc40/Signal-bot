@@ -99,6 +99,12 @@ PROOF_QUOTE = next(q for q in TESTIMONIALS if q[2].startswith("Blue Seas"))
 LABC_2020_URL = "https://www.labc.co.uk/news/labc-south-west-winners-amp-highly-commended-2020"
 LABC_2018_URL = "https://www.acornpropertygroup.org/old-station-masters-house-wins-labc-award/"
 
+def press_note():
+    if not getattr(C, "PRESS", None):
+        return ""
+    a = C.PRESS[0]
+    return f' Read Philip in <a href="{a["url"]}" rel="noopener" target="_blank">{esc(a["outlet"])}</a>: {esc(a["title"])}.'
+
 def proof_strip():
     """Directly under the hero: the founder's record in three facts, one client quote and Philip's face and name.
     Every fact is already stated on /about/. The house photograph is P Chapman Construction's own work (no
@@ -116,7 +122,7 @@ def proof_strip():
 <figure class="proof-quote"><blockquote>&ldquo;{esc(q)}&rdquo;</blockquote><figcaption>{esc(who)}, {esc(where)}<br><span class="muted">Client of P Chapman Construction</span></figcaption></figure>
 <p class="proof-ref">References from past UK clients are shared at appointment stage, before you sign.</p>
 </div></div>
-<p class="proof-note small muted">UK work by P Chapman Construction, the company Philip Chapman founded and led for 21 years.</p>
+<p class="proof-note small muted">UK work by P Chapman Construction, the company Philip Chapman founded and led for 21 years.{press_note()}</p>
 </div></section>"""
 
 def home_areas():

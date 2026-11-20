@@ -77,6 +77,15 @@ FOUNDER = {
     "same_as": ["https://www.linkedin.com/in/philip-chapman-eastbridge/"],
 }
 
+# Press: articles by or quoting Philip in other publications. Shown on /about/#press and the home proof strip.
+PRESS = [
+    {"outlet": "Construction Week Middle East",
+     "title": "Why villa budgets overrun, and how owners can spot it early",
+     "url": "https://www.constructionweekonline.com/business/insights/why-villa-budgets-overrun-and-how-owners-can-spot-it-early",
+     "date": "November 2026",
+     "summary": "Philip on where villa budgets leak, and the two questions every owner should keep asking: what is still unpriced, and what the house is now expected to cost at completion."},
+]
+
 # Partners shown on /partners/ (approved by Phil, 12 Nov 2026). Independent firms whose services complement owner-side
 # project management. No referral fees are paid or accepted either way. Each entry: name, url, desc (one line, from the
 # firm's own site) and optional logo (a path under src/static, e.g. "/assets/partners/fedari.svg"; the card shows the
