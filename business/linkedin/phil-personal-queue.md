@@ -112,6 +112,8 @@ Queue check 19 Nov: 7 posts scheduled, 20–26 Nov, all at 5:00 AM UK; next 7 da
 
 Queue check 20 Nov: 6 posts scheduled, 21–26 Nov, all at 5:00 AM UK; added 27 Nov (DM over-design warning, text as drafted below, page checked 200 and facts match) at 5:00 AM UK, "Post scheduled" toast seen. Now 7 scheduled, 21–27 Nov. Impressions at ~9:10 UAE: 19 Nov calculator 4,114 (boosted with Premium All-in-One), 18 Nov 93, 17 Nov 166, 16 Nov 113, 15 Nov 447, 14 Nov 206, 13 Nov 436, 12 Nov 97, 11 Nov D&B 21,830.
 
+Extra post 20 Nov (Phil's request, live): Construction Week op-ed "Why villa budgets overrun, and how owners can spot it early" (published 19 Nov, byline Philip Chapman, bio names Eastbridge but no link). Posted ~10:30 UAE on Phil's profile (link in body, tags Construction Week Middle East; https://www.linkedin.com/feed/update/urn:li:activity:7529494027566497793/) and on the Eastbridge page. Second personal post that day, by Phil's choice: compare its reach and the 20 Nov defects post's reach with the 9 Nov double post.
+
 Do not use (Phil, 14 Nov): sourcing-materials-abroad ("fly around the world" post removed).
 
 Unused topics for later: villa-construction-cost-dubai, how-to-build-a-villa-dubai, owner-site-visits-villa-build, older-villa-mep-renovation, villa-extension-dubai, palm-jumeirah-villa-renovation, nakheel-noc-villa-renovation, emaar-community-villa-renovation, abu-dhabi-villa-permit-tamm, villa-fit-out-dubai, villa-renovation-timeline-dubai, how-to-choose-client-side-project-manager.
