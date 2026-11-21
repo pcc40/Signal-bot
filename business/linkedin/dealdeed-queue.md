@@ -12,17 +12,6 @@ Mix: opportunity, buyer brief, opportunity, market/launch radar, "how the desk w
 
 ## Queued
 
-### Sat 21 Nov 2026, 09:00 UAE — Sellers: out before handover (card: cards/2026-11-21-sell-off-plan-before-handover.png)
-Selling an off-plan home before completion is routine in Dubai. The numbers that matter are rarely explained up front: the developer's NOC, the Oqood assignment, the DLD transfer fee, and what is actually left once the buyer has reimbursed what you have paid.
-
-We set it out step by step, with the costs:
-https://dealdeed.ae/insights/sell-off-plan-before-handover-dubai?utm_source=linkedin&utm_medium=social&utm_campaign=wk2026-11-16
-
-If you, or an agent you work with, has an off-plan home that needs a buyer before the next instalment, the desk is open. Introductions are agent to agent, and the agent pays DealDeed a fixed introduction fee only when the deal completes:
-https://dealdeed.ae/register?as=seller&utm_source=linkedin&utm_medium=social&utm_campaign=wk2026-11-16
-
-#DubaiRealEstate #OffPlan #DubaiProperty #PropertyInvestment #DealDeed
-
 ### Sun 22 Nov 2026, 09:00 UAE — Dubai Islands corner garden villa (card: cards/2026-11-22-dubai-islands-garden-villa.png)
 65% paid, and one of only seven of its layout in the community.
 
@@ -55,6 +44,22 @@ Figures from Aldar's launch details to agents; confirm final terms on launch day
 
 #AbuDhabiRealEstate #YasIsland #Aldar #OffPlan #DealDeed
 
+### Tue 24 Nov 2026, 09:00 UAE — Buyer brief: 5-bed villa, Tilal Al Ghaf (card: cards/2026-11-24-tilal-al-ghaf-5-bed-brief.png)
+More than one buyer on the desk is asking for the same home: a 5-bedroom villa in Tilal Al Ghaf.
+
+The brief, as it stands:
+• 5-bedroom villa in Alaya or Harmony
+• Budget AED 11–13M
+• Cash or funded, ready to move
+• Motivated or below-market sellers preferred; upgraded villas and better plots favoured
+
+Agents: if you hold a matching villa, on a portal or not, submit it with verified pricing evidence. Introduction terms are agreed in writing before anyone is connected, your client stays yours, and DealDeed's fixed introduction fee is paid by the agent only when the deal completes.
+
+Hold one that fits? Send it to the desk:
+https://dealdeed.ae/desk?utm_source=linkedin&utm_medium=social&utm_campaign=wk2026-11-23#briefs
+
+#TilalAlGhaf #DubaiVillas #DubaiRealEstate #DubaiProperty #DealDeed
+
 ## Posted / scheduled log
 | Date | Post | Status |
 |---|---|---|
@@ -78,6 +83,8 @@ Figures from Aldar's launch details to agents; confirm final terms on launch day
 | Wed 18 Nov 05:00 UK (09:00 UAE) | Opportunity: Nad Al Sheba Gardens Ph 4 corner townhouse, AED 5.1M, 60% paid + image card | Posted (confirmed live in LinkedIn 18 Nov); queue checked 18 Nov 14:40 UTC (Browser 2): Thu 19 to Sun 22 seen, one per day, all 5:00 AM, nothing new needed |
 | Thu 19 Nov 05:00 UK (09:00 UAE) | Launch radar: Palm Springs vs Bay Estate + card | Posted (confirmed live in LinkedIn 19 Nov); queue checked 19 Nov 16:30 UTC (deviceId fddc85a8, now named "Browser 1"): Fri 20 to Mon 23, one per day, all 5:00 AM, nothing new needed |
 | Fri 20 Nov 05:00 UK (09:00 UAE) | Market note: Hudayriyat Island AED 28.62bn + card | Posted (confirmed live in LinkedIn 20 Nov); queue checked 20 Nov 13:30 UTC (Browser 1): Sat 21 to Mon 23, one per day, all 5:00 AM, nothing new needed |
+| Sat 21 Nov 05:00 UK (09:00 UAE) | Seller guide: out before handover + card | Posted (confirmed live in LinkedIn 21 Nov) |
+| Tue 24 Nov 05:00 UK (09:00 UAE) | Buyer brief: 5-bed villa, Tilal Al Ghaf (Alaya/Harmony), AED 11–13M + card | Scheduled 21 Nov 17:30 UTC (Browser 1); queue confirmed: Sun 22, Mon 23, Tue 24, one per day, all 5:00 AM |
 
 ## Page profile changes (15 Nov)
 - Tagline: "Private deal-matching desk for Dubai and Abu Dhabi property. Motivated sellers and verified buyers, agent to agent." (no off-market wording)
