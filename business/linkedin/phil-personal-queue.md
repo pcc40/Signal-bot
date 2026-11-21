@@ -91,14 +91,14 @@ Takeaways (15 Nov): the split holds and is now clear. Decision/risk hooks where 
 | 18 Nov | Wed | Building from the UK | Full guide: https://eastbridgestrategicpartners.com/insights/building-a-villa-in-dubai-from-the-uk/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (link comment in ~9:08 UAE; 5 impr. at ~5m; not reposted to Eastbridge page by the daily task; https://www.linkedin.com/feed/update/urn:li:activity:7528683414695268352/) |
 | 19 Nov | Thu | Calculator embed for agents | Calculator and embed code: https://eastbridgestrategicpartners.com/tools/villa-build-cost-calculator/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (link comment in ~9:07 UAE by another session on Phil's prompt, and again ~9:12 by the daily task: DUPLICATE link comment, flagged to Phil to delete one; 26 impr. at ~15m; not reposted to Eastbridge page by the daily task; https://www.linkedin.com/feed/update/urn:li:activity:7529045833640484864/) |
 | 20 Nov | Fri | Defects liability period | Full guide: https://eastbridgestrategicpartners.com/insights/defects-liability-period-uae/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (link comment in ~9:10 UAE; 5 impr. at ~5m; not reposted to Eastbridge page by the daily task; https://www.linkedin.com/feed/update/urn:li:activity:7529408194826141696/) |
-| 21 Nov | Sat | Kitchen & bathroom costs | Full guide: https://eastbridgestrategicpartners.com/insights/villa-kitchen-bathroom-renovation-cost-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 21 Nov | Sat | Kitchen & bathroom costs | Full guide: https://eastbridgestrategicpartners.com/insights/villa-kitchen-bathroom-renovation-cost-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (link comment already in and pinned ~10:00 UAE; daily task ran late, ~21:15 UAE; 144 impr., 1 reaction, real comment from David Thurin at ~12h; not reposted to Eastbridge page by the daily task; https://www.linkedin.com/feed/update/urn:li:activity:7529770587443904513/) |
 | 22 Nov | Sun | Choosing a contractor | Full guide: https://eastbridgestrategicpartners.com/insights/how-to-choose-a-villa-contractor-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 | 23 Nov | Mon | Owner's rep vs PM vs consultant | Full guide: https://eastbridgestrategicpartners.com/insights/owners-representative-vs-project-manager-vs-consultant/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 | 24 Nov | Tue | Which authority covers my villa | Full guide: https://eastbridgestrategicpartners.com/insights/which-dubai-authority-covers-my-villa/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 | 25 Nov | Wed | Contracts: variations and delays | Full guide: https://eastbridgestrategicpartners.com/insights/villa-construction-contracts-uae/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 | 26 Nov | Thu | Villa owner checklist | Free download: https://eastbridgestrategicpartners.com/guides/villa-owner-checklist/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 | 27 Nov | Fri | Dubai Municipality over-design warning | Full guide: https://eastbridgestrategicpartners.com/insights/dubai-municipality-villa-over-design-warning/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued(scheduled in LinkedIn 20 Nov, 5:00 AM UK) |
-| 28 Nov | Sat | Changing a villa's layout: approvals | Full guide: https://eastbridgestrategicpartners.com/insights/changing-villa-layout-dubai-approvals/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 28 Nov | Sat | Changing a villa's layout: approvals | Full guide: https://eastbridgestrategicpartners.com/insights/changing-villa-layout-dubai-approvals/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 21 Nov, 5:00 AM UK) |
 | 29 Nov | Sun | Refresh, refit or full renovation | Full guide: https://eastbridgestrategicpartners.com/insights/refresh-refit-or-full-villa-renovation/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 | 30 Nov | Mon | Changing a villa's exterior | Full guide: https://eastbridgestrategicpartners.com/insights/villa-exterior-changes-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 | 1 Dec | Tue | Springs, Meadows and Lakes renovation | Full guide: https://eastbridgestrategicpartners.com/insights/springs-meadows-lakes-villa-renovation/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
@@ -111,6 +111,8 @@ Queue check 18 Nov: 8 posts scheduled, 19–26 Nov, all at 5:00 AM UK; next 7 da
 Queue check 19 Nov: 7 posts scheduled, 20–26 Nov, all at 5:00 AM UK; next 7 days covered, nothing added or changed. 18 Nov post at 69 impressions after ~1d.
 
 Queue check 20 Nov: 6 posts scheduled, 21–26 Nov, all at 5:00 AM UK; added 27 Nov (DM over-design warning, text as drafted below, page checked 200 and facts match) at 5:00 AM UK, "Post scheduled" toast seen. Now 7 scheduled, 21–27 Nov. Impressions at ~9:10 UAE: 19 Nov calculator 4,114 (boosted with Premium All-in-One), 18 Nov 93, 17 Nov 166, 16 Nov 113, 15 Nov 447, 14 Nov 206, 13 Nov 436, 12 Nov 97, 11 Nov D&B 21,830.
+
+Queue check 21 Nov (run ~21:15 UAE, late): 6 posts scheduled, 22–27 Nov, all at 5:00 AM UK; added 28 Nov (layout approvals, text as drafted below with "inspection hole" changed to "inspection opening" to match the article; page 200, facts checked) at 5:00 AM UK. Now 7 scheduled, 22–28 Nov. Impressions at ~21:15 UAE: 21 Nov kitchen 144 (12h), 20 Nov Construction Week op-ed 139, 20 Nov defects 67, 19 Nov calculator 9,255 (boosted), 18 Nov 111, 17 Nov 176, 16 Nov 118, 15 Nov 452, 14 Nov 213. Note: on 20 Nov the second same-day post (op-ed, 139) out-reached the scheduled defects post (67).
 
 Extra post 20 Nov (Phil's request, live): Construction Week op-ed "Why villa budgets overrun, and how owners can spot it early" (published 19 Nov, byline Philip Chapman, bio names Eastbridge but no link). Posted ~10:30 UAE on Phil's profile (link in body, tags Construction Week Middle East; https://www.linkedin.com/feed/update/urn:li:activity:7529494027566497793/) and on the Eastbridge page. Second personal post that day, by Phil's choice: compare its reach and the 20 Nov defects post's reach with the 9 Nov double post.
 
@@ -379,7 +381,7 @@ On the builder's side, I've seen "just a partition" turn out to carry a beam, or
 
 • Get the approved drawings and compare them with the house
 • Ask a registered structural engineer, in writing
-• Open up a small inspection hole before the design relies on it
+• Open up a small inspection opening before the design relies on it
 • Check what services move with the wall
 
 Unapproved changes tend to surface at resale.
