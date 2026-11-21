@@ -92,6 +92,7 @@ POST_IMG = {
     "emirates-hills-villa-cost": "uae-emirates-hills-01",
     "defects-liability-period-uae": "uae-dubai-hills-estate-02",
     "older-villa-mep-renovation": "uae-arabian-ranches-02",
+    "survey-older-villa-before-buying-dubai": "uae-jumeirah-islands-01",
     "emaar-community-villa-renovation": "uae-arabian-ranches-03",
     # general Dubai
     "dubai-construction-calendar-villa-programme": "uae-dubai-skyline-villas-01",

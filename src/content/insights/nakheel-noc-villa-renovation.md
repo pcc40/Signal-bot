@@ -84,7 +84,7 @@ The detail depends on the scope, and Nakheel confirms the requirements when it r
 - the details of the consultant and contractor who will carry out the work;
 - written landlord consent if a tenant is applying.
 
-Fees are not published as a single schedule. Nakheel told Gulf News that villa modification applications are "assessed on a case-by-case basis" and that "various costs apply"; owners in that report described charges tied to the added floor area of extensions ([Gulf News](https://gulfnews.com/news/gulf/uae/jumeirah-islands-owners-prevented-from-modifying-villas-without-approval-1.1172089)). The practical point is simple: on an extension, the Nakheel charge for added area is a real line in the budget, so ask for it to be confirmed before the design is frozen, not after.
+Fees are not published as a single schedule. Nakheel told Gulf News that villa modification applications are "assessed on a case-by-case basis" and that "various costs apply"; owners in that report described charges tied to the added floor area of extensions ([Gulf News](https://gulfnews.com/news/gulf/uae/jumeirah-islands-owners-prevented-from-modifying-villas-without-approval-1.1172089)). The practical point is simple: on an extension, the Nakheel charge for added area is a real line in the budget, so ask for it to be confirmed before the design is frozen, not after. Our [villa extension guide](/insights/villa-extension-dubai/) sets out the rest of the approval and cost picture.
 
 ## How does the Nakheel NOC fit with the building permit?
 

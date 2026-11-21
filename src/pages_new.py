@@ -290,7 +290,7 @@ def why_page():
     article = {"@context": "https://schema.org", "@type": "Article", "headline": "Why appoint a client-side project manager",
                "author": {"@id": B.PERSON_ID}, "publisher": {"@id": B.ORG_ID}, "mainEntityOfPage": B.url(path),
                "image": B.url(B.og_image("quay-house-02")), "inLanguage": "en-GB"}
-    B.page(path, "Why Use a Client-Side Project Manager for a Dubai Villa",
+    B.page(path, "Owner's-Side Villa Project Manager in Dubai: Why It Pays",
            "Why appoint a client-side project manager on a Dubai villa: what each party is responsible for, the gap an owner's side fills, and the moments that matter.",
            body, crumbs, [B.faq_schema(faqs), article], og=B.og_image("quay-house-02"))
 

@@ -37,7 +37,7 @@ This guide covers Emaar's villa communities such as [Arabian Ranches](/areas/ara
 
 ## What needs Emaar's approval
 
-Emaar Community Management's guidance for Arabian Ranches and Emirates Living is short and clear: any alteration to the villa has to be approved by Emaar. In practice that covers most renovation work beyond redecorating, such as kitchen and bathroom remodels, structural or layout changes, extensions, pergolas, pools, fences and gates, and anything that changes the outside.
+Emaar Community Management's guidance for Arabian Ranches and Emirates Living is short and clear: any alteration to the villa has to be approved by Emaar. In practice that covers most renovation work beyond redecorating, such as kitchen and bathroom remodels, structural or layout changes, extensions, pergolas, pools, fences and gates, and anything that changes the outside. If you are adding space, see our [villa extension guide](/insights/villa-extension-dubai/).
 
 Some work does not need a NOC. The Arabian Ranches guidance says interior painting and regular maintenance can go ahead without one. The contractor still needs a permit to enter the community (see below).
 

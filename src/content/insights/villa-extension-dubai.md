@@ -1,8 +1,8 @@
 ---
-title: "Extending a Dubai villa: approvals, rules and cost"
+title: "Villa extension in Dubai: approvals, rules and cost"
 description: "How to extend a villa in Dubai or Abu Dhabi: master developer NOC, authority permit, built-up area limits, what extension charges look like and where budgets go wrong."
 date: 2026-11-12
-updated: 2026-11-12
+updated: 2026-11-21
 category: "Renovation"
 hero: "uae-arabian-ranches-01"
 keypoints:

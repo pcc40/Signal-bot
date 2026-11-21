@@ -66,7 +66,7 @@ Two patterns repeat. First, earlier owners add circuits, sockets and air-conditi
 
 ## How to survey before you tender
 
-The aim is to turn unknowns into priced items before the contract is signed. In our experience a few days of investigation repays itself many times over.
+The aim is to turn unknowns into priced items before the contract is signed. In our experience a few days of investigation repays itself many times over. If you have not bought the villa yet, see [surveying an older villa before you buy](/insights/survey-older-villa-before-buying-dubai/).
 
 1. **Get the drawings.** Ask the developer or the community management office for the original approved drawings and any later NOCs. They show what was approved, which is not always what was built, but they tell you where to look.
 2. **Electrical testing.** Have a qualified electrical contractor inspect and test the installation and report in writing on its condition, the distribution boards and the capacity of the existing supply.
