@@ -77,6 +77,36 @@ vs 14 Nov baseline: first-comment posts 11–14 Nov average ~185 impressions (ba
 
 Takeaways (15 Nov): the split holds and is now clear. Decision/risk hooks where the owner might be on the wrong side (D&B vs architect 338, stalled build 249, PM fees 208) reach 140–180 members, mostly out of network. Checklist/"how long"/informational posts (snagging 53, how long 99) stay in network. Audience is architecture/construction professionals and senior people, London still the top location. No change to the 16–26 Nov posts (all already decision-hooked and ending with a question). For posts from 27 Nov, pick topics that carry a risk or a "who works for you" decision (e.g. how-to-choose-client-side-project-manager, owner-site-visits, villa-construction-cost) ahead of checklists and timelines; the 26 Nov checklist post is the test of whether a question hook rescues a checklist.
 
+## Analytics snapshot (22 Nov 2026, Sun ~9:15 UAE — weekly review)
+
+| Posted | Topic | Link | Impr. | Note |
+|---|---|---|---|---|
+| 5 Nov | Island E worked example | in body | 169 | |
+| 6 Nov | What a builder knows | in body (card) | 140 | |
+| 9 Nov | Calculator launch | in body (card) | 138 | |
+| 9 Nov | Quay House | in body | 112 | |
+| 10 Nov | PM fees | in body (card) | 250 | |
+| 11 Nov | Design & build vs architect | first comment | 21,844 | boosted (Premium) |
+| 12 Nov | Snagging checklist | first comment | 101 | |
+| 13 Nov | Stalled build | first comment | 453 | |
+| 14 Nov | How long to build | first comment | 215 | |
+| 15 Nov | Plot checks | first comment | **455** (best unboosted) | |
+| 16 Nov | Renovation mistakes | first comment | 127 | |
+| 17 Nov | Renovate or rebuild | first comment | 179 | |
+| 18 Nov | Building from the UK | first comment | 123 | |
+| 19 Nov | Calculator embed | first comment | 9,452 | boosted; 49 reactions, 3 comments (incl. Elad Barzilay) |
+| 20 Nov | Defects liability period | first comment | **77** (worst) | |
+| 20 Nov | Construction Week op-ed | in body | 171 | second post that day; currently boosted |
+| 21 Nov | Kitchen & bathroom costs | first comment | 211 | at ~1d |
+| 22 Nov | Choosing a contractor | first comment | 12 at ~10 min | |
+
+Best (unboosted), 15 Nov plot checks: 455 impr., 219 members reached, 57% out of network, 0 reactions / 4 comments / 1 repost, 3 profile viewers, 0 followers; Senior 39%, Construction 16%, 2–10 employees 14%, **top location Dubai 10%** (first time Dubai, not London, tops a post).
+Worst, 20 Nov defects liability: 77 impr., 36 reached, 46% out of network, 0 reactions / 1 comment (the link) / 1 repost, 0 profile viewers; Senior 42%, Construction 39%, Founder 17%; no location breakdown shown.
+
+vs 14 Nov baseline (~174 avg per first-comment post, 4 reactions across 9 posts): unboosted first-comment posts 13–21 Nov now average ~230 (+32%). Reactions remain low on unboosted posts (0–4 each); boosted posts (D&B, calculator) are the only ones with real reach and the calculator the only one with meaningful reactions. Followers 433.
+
+Takeaways (22 Nov): risk/decision hooks on a costly mistake (plot checks 455, stalled build 453) still lead; after-the-fact/informational topics (defects 77, renovation mistakes 127, building from the UK 123) trail. Plot checks drawing Dubai as the top location suggests the UAE-morning slot is starting to reach local owners. On 20 Nov the second same-day post (op-ed 171) out-reached the scheduled one (77), unlike 9 Nov. Queue 23–29 Nov unchanged (all decision-hooked, each ending with a question). For the posts from 30 Nov, prefer topics where the owner can lose money before committing (villa-construction-cost-dubai, how-to-choose-client-side-project-manager, owner-site-visits-villa-build) and lead with the money at stake in the first line; keep checklists and post-handover topics rarer. The 26 Nov checklist post is still the test of whether a question hook rescues a checklist.
+
 ## Schedule
 
 > Tracking (14 Nov): queued links now carry `?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily`. Post the link exactly as written. The LinkedIn app often strips the referrer, so without this Google Analytics files these visits under "direct" and we cannot see what LinkedIn brings. Use the same tag on any new link added to this queue.
@@ -92,14 +122,14 @@ Takeaways (15 Nov): the split holds and is now clear. Decision/risk hooks where 
 | 19 Nov | Thu | Calculator embed for agents | Calculator and embed code: https://eastbridgestrategicpartners.com/tools/villa-build-cost-calculator/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (link comment in ~9:07 UAE by another session on Phil's prompt, and again ~9:12 by the daily task: DUPLICATE link comment, flagged to Phil to delete one; 26 impr. at ~15m; reposted on Eastbridge page 21 Nov (catch-up); https://www.linkedin.com/feed/update/urn:li:activity:7529045833640484864/) |
 | 20 Nov | Fri | Defects liability period | Full guide: https://eastbridgestrategicpartners.com/insights/defects-liability-period-uae/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (link comment in ~9:10 UAE; 5 impr. at ~5m; reposted on Eastbridge page 21 Nov (catch-up); https://www.linkedin.com/feed/update/urn:li:activity:7529408194826141696/) |
 | 21 Nov | Sat | Kitchen & bathroom costs | Full guide: https://eastbridgestrategicpartners.com/insights/villa-kitchen-bathroom-renovation-cost-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (link comment already in and pinned ~10:00 UAE; daily task ran late, ~21:15 UAE; 144 impr., 1 reaction, real comment from David Thurin at ~12h; reposted on Eastbridge page ~21:20 UAE; https://www.linkedin.com/feed/update/urn:li:activity:7529770587443904513/) |
-| 22 Nov | Sun | Choosing a contractor | Full guide: https://eastbridgestrategicpartners.com/insights/how-to-choose-a-villa-contractor-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 22 Nov | Sun | Choosing a contractor | Full guide: https://eastbridgestrategicpartners.com/insights/how-to-choose-a-villa-contractor-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (link comment in ~9:08 UAE; reposted on Eastbridge page ~9:09 UAE, toast seen; 12 impr. at ~10m; https://www.linkedin.com/feed/update/urn:li:activity:7530132983903596544/) |
 | 23 Nov | Mon | Owner's rep vs PM vs consultant | Full guide: https://eastbridgestrategicpartners.com/insights/owners-representative-vs-project-manager-vs-consultant/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 | 24 Nov | Tue | Which authority covers my villa | Full guide: https://eastbridgestrategicpartners.com/insights/which-dubai-authority-covers-my-villa/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 | 25 Nov | Wed | Contracts: variations and delays | Full guide: https://eastbridgestrategicpartners.com/insights/villa-construction-contracts-uae/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 | 26 Nov | Thu | Villa owner checklist | Free download: https://eastbridgestrategicpartners.com/guides/villa-owner-checklist/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 | 27 Nov | Fri | Dubai Municipality over-design warning | Full guide: https://eastbridgestrategicpartners.com/insights/dubai-municipality-villa-over-design-warning/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued(scheduled in LinkedIn 20 Nov, 5:00 AM UK) |
 | 28 Nov | Sat | Changing a villa's layout: approvals | Full guide: https://eastbridgestrategicpartners.com/insights/changing-villa-layout-dubai-approvals/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 21 Nov, 5:00 AM UK) |
-| 29 Nov | Sun | Refresh, refit or full renovation | Full guide: https://eastbridgestrategicpartners.com/insights/refresh-refit-or-full-villa-renovation/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 29 Nov | Sun | Refresh, refit or full renovation | Full guide: https://eastbridgestrategicpartners.com/insights/refresh-refit-or-full-villa-renovation/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 22 Nov, 5:00 AM UK) |
 | 30 Nov | Mon | Changing a villa's exterior | Full guide: https://eastbridgestrategicpartners.com/insights/villa-exterior-changes-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 | 1 Dec | Tue | Springs, Meadows and Lakes renovation | Full guide: https://eastbridgestrategicpartners.com/insights/springs-meadows-lakes-villa-renovation/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 | 2 Dec | Wed | Renovating a villa in Abu Dhabi | Full guide: https://eastbridgestrategicpartners.com/insights/villa-renovation-abu-dhabi/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
@@ -113,6 +143,8 @@ Queue check 19 Nov: 7 posts scheduled, 20–26 Nov, all at 5:00 AM UK; next 7 da
 Queue check 20 Nov: 6 posts scheduled, 21–26 Nov, all at 5:00 AM UK; added 27 Nov (DM over-design warning, text as drafted below, page checked 200 and facts match) at 5:00 AM UK, "Post scheduled" toast seen. Now 7 scheduled, 21–27 Nov. Impressions at ~9:10 UAE: 19 Nov calculator 4,114 (boosted with Premium All-in-One), 18 Nov 93, 17 Nov 166, 16 Nov 113, 15 Nov 447, 14 Nov 206, 13 Nov 436, 12 Nov 97, 11 Nov D&B 21,830.
 
 Queue check 21 Nov (run ~21:15 UAE, late): 6 posts scheduled, 22–27 Nov, all at 5:00 AM UK; added 28 Nov (layout approvals, text as drafted below with "inspection hole" changed to "inspection opening" to match the article; page 200, facts checked) at 5:00 AM UK. Now 7 scheduled, 22–28 Nov. Impressions at ~21:15 UAE: 21 Nov kitchen 144 (12h), 20 Nov Construction Week op-ed 139, 20 Nov defects 67, 19 Nov calculator 9,255 (boosted), 18 Nov 111, 17 Nov 176, 16 Nov 118, 15 Nov 452, 14 Nov 213. Note: on 20 Nov the second same-day post (op-ed, 139) out-reached the scheduled defects post (67).
+
+Queue check 22 Nov (~9:10 UAE): 6 posts scheduled, 23–28 Nov, all at 5:00 AM UK; added 29 Nov (refresh/refit/renovation; page 200, facts checked; text edited to match the article: "A refit replaces rooms and fittings", "renews the services behind the walls", roof dropped from the waterproofing bullet, and the closing line now "the half-way house: new kitchens and bathrooms in front of old pipes and wiring that will need replacing within a few years") at 5:00 AM UK. "Post scheduled" toast seen; Scheduled tab shows 7, 23–29 Nov. Today's post reposted on the Eastbridge page (seen on the page's published list); 19–21 Nov were caught up on 21 Nov.
 
 Phil confirmed 21 Nov: ALL posts are reposted on the Eastbridge page. Daily task prompt updated (step 1b) to repost every day and catch up the previous 3 days. Catch-up done 21 Nov for 16, 18, 19, 20 and 21 Nov; 5–15 and 17 Nov were already on the page.
 
@@ -394,19 +426,19 @@ Who approves what: link in the first comment 👇
 
 #DubaiVillas #VillaRenovation #DubaiRealEstate #Nakheel #Emaar
 
-### 29 Nov — refresh, refit or full renovation
+### 29 Nov — refresh, refit or full renovation (as scheduled 22 Nov)
 Does your villa need a refresh, a refit or a full renovation? The house usually decides, not the brief.
 
-A refresh changes surfaces. A refit replaces kitchens and bathrooms. A full renovation renews what's behind the walls.
+A refresh changes surfaces. A refit replaces rooms and fittings. A full renovation renews the services behind the walls, and often the layout.
 
-The question I'd ask first, after 21 years pricing these jobs:
+The questions I'd ask first, after 21 years pricing these jobs:
 
 • Are the air-conditioning, wiring and pipes near the end of their life?
-• Is the roof and wet-area waterproofing sound?
+• Is the waterproofing sound?
 • Does the layout work for how you live?
 • How long will you keep the villa?
 
-The most expensive outcome is a refit that should have been a full renovation: new kitchens in front of old pipes that fail two years later.
+The most expensive outcome is the half-way house: new kitchens and bathrooms in front of old pipes and wiring that will need replacing within a few years.
 
 Which did you start as, and which did you end up doing?
 
