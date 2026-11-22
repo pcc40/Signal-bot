@@ -12,23 +12,6 @@ Mix: opportunity, buyer brief, opportunity, market/launch radar, "how the desk w
 
 ## Queued
 
-### Sun 22 Nov 2026, 09:00 UAE — Dubai Islands corner garden villa (card: cards/2026-11-22-dubai-islands-garden-villa.png)
-65% paid, and one of only seven of its layout in the community.
-
-A 4-bedroom premium garden villa on a corner plot on Dubai Islands:
-• Asking AED 12,000,000
-• 65% already paid
-• Handover Q3 2027
-• Photos, a video and the full brochure are on the desk
-
-An off-plan resale, verified against the developer's statement of account before it is shown. Full detail is released to registered buyers on agreed terms, through their appointed agent.
-
-Buyers and agents: does this fit a brief you hold? Ask the desk.
-
-dealdeed.ae/desk
-
-#DubaiIslands #DubaiVillas #DubaiRealEstate #OffPlan #DubaiProperty
-
 ### Mon 23 Nov 2026, 09:00 UAE — Canopies: two days to go (card: cards/2026-11-23-canopies-two-days.png)
 The Canopies Sanctuary opens on Wednesday.
 
@@ -60,6 +43,26 @@ https://dealdeed.ae/desk?utm_source=linkedin&utm_medium=social&utm_campaign=wk20
 
 #TilalAlGhaf #DubaiVillas #DubaiRealEstate #DubaiProperty #DealDeed
 
+### DRAFT, NOT YET SCHEDULED: Wed 25 Nov 2026, 09:00 UAE — DAMAC Islands 5-bed corner villa (card: cards/2026-11-25-damac-islands-corner-villa.png)
+Corner plot, roughly double the land, at the original price.
+
+A 5-bedroom villa on DAMAC Islands, now on the desk:
+• Asking AED 3,320,000, at original price
+• 3,178 sq ft built-up on a 2,900 sq ft corner plot
+• 5 bedrooms plus maid's room, 6 bathrooms, Vastu-compliant
+• Near the community entrance and shops
+• Handover Q4 2028, balance on the developer's payment plan
+
+DAMAC is selling standard-plot five-beds in this cluster at around AED 3.21M. This is the corner, for about AED 107,000 more.
+
+Checked against the developer's statement of account before introduction. Full detail is released to registered buyers through their appointed agent.
+
+Buyers and agents: does this fit a brief you hold? Ask the desk.
+
+dealdeed.ae/desk
+
+#DAMACIslands #DubaiVillas #DubaiRealEstate #OffPlan #DubaiProperty
+
 ## Posted / scheduled log
 | Date | Post | Status |
 |---|---|---|
@@ -85,6 +88,8 @@ https://dealdeed.ae/desk?utm_source=linkedin&utm_medium=social&utm_campaign=wk20
 | Fri 20 Nov 05:00 UK (09:00 UAE) | Market note: Hudayriyat Island AED 28.62bn + card | Posted (confirmed live in LinkedIn 20 Nov); queue checked 20 Nov 13:30 UTC (Browser 1): Sat 21 to Mon 23, one per day, all 5:00 AM, nothing new needed |
 | Sat 21 Nov 05:00 UK (09:00 UAE) | Seller guide: out before handover + card | Posted (confirmed live in LinkedIn 21 Nov) |
 | Tue 24 Nov 05:00 UK (09:00 UAE) | Buyer brief: 5-bed villa, Tilal Al Ghaf (Alaya/Harmony), AED 11–13M + card | Scheduled 21 Nov 17:30 UTC (Browser 1); queue confirmed: Sun 22, Mon 23, Tue 24, one per day, all 5:00 AM |
+| Sun 22 Nov 05:00 UK (09:00 UAE) | Opportunity: Dubai Islands corner garden villa, AED 12M, 65% paid + card | Posted per schedule (not re-checked in LinkedIn 22 Nov: Chrome not connected) |
+| Wed 25 Nov 05:00 UK (09:00 UAE) | Opportunity: DAMAC Islands 5-bed corner villa, AED 3.32M, at original price + card | NOT SCHEDULED 22 Nov 17:30 UTC: no Chrome browser connected (both extensions dropped). Draft + card ready under Queued; next run should schedule it |
 
 ## Page profile changes (15 Nov)
 - Tagline: "Private deal-matching desk for Dubai and Abu Dhabi property. Motivated sellers and verified buyers, agent to agent." (no off-market wording)
