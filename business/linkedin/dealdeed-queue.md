@@ -16,7 +16,7 @@ Impressions 19–23 Nov: 26 (Palm Springs vs Bay Estate comparison, the only pos
 2. One "so what" line after the facts: what the figures tell a buyer or agent (compare price vs plan, entry vs premium). Interpretation only, never a new figure.
 3. End with ONE specific question an agent or investor can answer from experience (e.g. "Which matters more to five-bed buyers right now, the plot or the upgrade?"). No "Agree?", "Comment YES" or other engagement bait.
 4. Then the link on its own line with a short label ("Ask the desk:", "Submit a villa:"), then 2–3 hashtags (max 3; always #DealDeed or the area tag first).
-5. Short paragraphs (1–3 lines), 120–180 words, British English, no emojis, no exclamation marks.
+5. Short paragraphs (1–3 lines), 120–160 words, British English, no emojis, no exclamation marks.
 6. Prefer comparison/decision posts ("X vs Y", "five under AED 5m", "three numbers that matter") over single-listing posts; when a listing is the subject, frame it as a decision (premium worth it? plan vs price?).
 7. Edit queued posts via scheduled list → "..." → Edit post: click in text, cmd+a, Delete (the card stays), type the new text, click Schedule. Do NOT press Escape in the editor (it opens "Discard changes?").
 
