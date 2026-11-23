@@ -6,26 +6,11 @@ TIME (Phil, 16 Nov): 09:00 UAE = 5:00 AM in LinkedIn's time list (LinkedIn shows
 Source: only what is published on https://dealdeed.ae/desk (and /desk#briefs, /launch-radar) on the day of writing. Never a unit/villa/plot number, developer type code, party name, Phil's UK number, a percentage fee, or a figure not on the site.
 NEVER describe anything as "off-market" or "exclusive" (Phil, 10 Nov: never claim off-market in Dubai). Prices and "below comparable" wording only exactly as the desk states them.
 Images (Phil, 11 Nov): every post carries an image. Use a DealDeed-branded card built from business/linkedin/cards/card-template-*.html (own typography, figures only from the site) or DealDeed's own listing photos; never third-party/developer renders. Open with a one-line hook and close with a question or clear call to action. Upload via the composer's "Add media" → "Upload from computer" input.
-Browser (Phil, 13 Nov): LinkedIn is signed in on Chrome "Browser 2" (deviceId fddc85a8-0b48-4d7a-9b25-8bd48df4ee0f). If two browsers are connected, select_browser that one. (15 Nov: also signed in on "Browser 1", used when it is the only one connected.)
+Browser (23 Nov: LinkedIn also signed in on deviceId 78b31cb7, shown as "Browser 1"; names swap between runs, so pick whichever responds). Browser (Phil, 13 Nov): LinkedIn is signed in on Chrome "Browser 2" (deviceId fddc85a8-0b48-4d7a-9b25-8bd48df4ee0f). If two browsers are connected, select_browser that one. (15 Nov: also signed in on "Browser 1", used when it is the only one connected.)
 Link previews: attach the image card BEFORE typing the text, or LinkedIn swaps in the site's link preview (developer render) when the post contains a URL.
 Mix: opportunity, buyer brief, opportunity, market/launch radar, "how the desk works", seller guide — then repeat. Weekends are fine for launch radar and guides. Max 5 hashtags.
 
 ## Queued
-
-### Mon 23 Nov 2026, 09:00 UAE — Canopies: two days to go (card: cards/2026-11-23-canopies-two-days.png)
-The Canopies Sanctuary opens on Wednesday.
-
-If you are weighing it, the three numbers that matter:
-• AED 1.66m for a studio, AED 2.3m for a one-bed (Aldar's starting prices)
-• 15% paid by the end of 2027
-• 45% on handover in Q1 2031, which can be mortgaged
-
-Every type, size and payment date, with a worked example:
-https://dealdeed.ae/the-canopies-sanctuary?utm_source=linkedin&utm_medium=social&utm_campaign=canopies-sanctuary
-
-Figures from Aldar's launch details to agents; confirm final terms on launch day.
-
-#AbuDhabiRealEstate #YasIsland #Aldar #OffPlan #DealDeed
 
 ### Tue 24 Nov 2026, 09:00 UAE — Buyer brief: 5-bed villa, Tilal Al Ghaf (card: cards/2026-11-24-tilal-al-ghaf-5-bed-brief.png)
 More than one buyer on the desk is asking for the same home: a 5-bedroom villa in Tilal Al Ghaf.
@@ -43,7 +28,7 @@ https://dealdeed.ae/desk?utm_source=linkedin&utm_medium=social&utm_campaign=wk20
 
 #TilalAlGhaf #DubaiVillas #DubaiRealEstate #DubaiProperty #DealDeed
 
-### DRAFT, NOT YET SCHEDULED: Wed 25 Nov 2026, 09:00 UAE — DAMAC Islands 5-bed corner villa (card: cards/2026-11-25-damac-islands-corner-villa.png)
+### Wed 25 Nov 2026, 09:00 UAE — DAMAC Islands 5-bed corner villa (card: cards/2026-11-25-damac-islands-corner-villa.png)
 Corner plot, roughly double the land, at the original price.
 
 A 5-bedroom villa on DAMAC Islands, now on the desk:
@@ -62,6 +47,25 @@ Buyers and agents: does this fit a brief you hold? Ask the desk.
 dealdeed.ae/desk
 
 #DAMACIslands #DubaiVillas #DubaiRealEstate #OffPlan #DubaiProperty
+
+### Thu 26 Nov 2026, 09:00 UAE — Abu Dhabi launch radar: five releases under AED 5m (card: cards/2026-11-26-abu-dhabi-under-5m.png)
+Buying into an Abu Dhabi launch does not have to start at AED 5m.
+
+Five releases on our launch radar with a published from-price below that, cheapest first:
+• Radisson Residences Tower 3, Al Reem: studios from AED 950,000, 40/60 plan, at registration
+• The Canopies Sanctuary, Yas Island (Aldar): studios from AED 1.66m, 55/45, released 25 November
+• Sobha City River Cove, Al Bahyah: 1 and 2-bedroom apartments from AED 2.34m
+• Al Ghadeer Parks (Aldar): 3-bed townhouses c. AED 2.4m, 55/45, handover Q2 2031
+• Ramhan Island Villas (Eagle Hills): villas c. AED 4.6m at launch, 10/40/50
+
+These are developers' launch figures, and they move as homes are allocated.
+
+Which would you shortlist for a first Abu Dhabi purchase?
+
+Every release, with plans and handover dates:
+https://dealdeed.ae/launches?utm_source=linkedin&utm_medium=social&utm_campaign=launch-radar
+
+#AbuDhabiRealEstate #AbuDhabi #OffPlan #UAEProperty #DealDeed
 
 ## Posted / scheduled log
 | Date | Post | Status |
@@ -89,7 +93,9 @@ dealdeed.ae/desk
 | Sat 21 Nov 05:00 UK (09:00 UAE) | Seller guide: out before handover + card | Posted (confirmed live in LinkedIn 21 Nov) |
 | Tue 24 Nov 05:00 UK (09:00 UAE) | Buyer brief: 5-bed villa, Tilal Al Ghaf (Alaya/Harmony), AED 11–13M + card | Scheduled 21 Nov 17:30 UTC (Browser 1); queue confirmed: Sun 22, Mon 23, Tue 24, one per day, all 5:00 AM |
 | Sun 22 Nov 05:00 UK (09:00 UAE) | Opportunity: Dubai Islands corner garden villa, AED 12M, 65% paid + card | Posted per schedule (not re-checked in LinkedIn 22 Nov: Chrome not connected) |
-| Wed 25 Nov 05:00 UK (09:00 UAE) | Opportunity: DAMAC Islands 5-bed corner villa, AED 3.32M, at original price + card | NOT SCHEDULED 22 Nov 17:30 UTC: no Chrome browser connected (both extensions dropped). Draft + card ready under Queued; next run should schedule it |
+| Wed 25 Nov 05:00 UK (09:00 UAE) | Opportunity: DAMAC Islands 5-bed corner villa, AED 3.32M, at original price + card | Not scheduled 22 Nov (Chrome offline); scheduled 23 Nov ~10:00 UTC once Phil reopened Chrome (deviceId 78b31cb7, "Browser 1") |
+| Mon 23 Nov 05:00 UK (09:00 UAE) | Launch radar: Canopies two days to go + card | Posted (confirmed live in LinkedIn 23 Nov) |
+| Thu 26 Nov 05:00 UK (09:00 UAE) | Launch radar: Abu Dhabi, five releases under AED 5m (Radisson T3, Canopies Sanctuary, River Cove, Al Ghadeer Parks, Ramhan) + card | Scheduled 23 Nov; queue confirmed: Tue 24, Wed 25, Thu 26, one per day, all 5:00 AM |
 
 ## Page profile changes (15 Nov)
 - Tagline: "Private deal-matching desk for Dubai and Abu Dhabi property. Motivated sellers and verified buyers, agent to agent." (no off-market wording)
