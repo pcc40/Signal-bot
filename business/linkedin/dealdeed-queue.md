@@ -107,7 +107,6 @@ Every release, with plans and handover dates: https://dealdeed.ae/launches?utm_s
 | Wed 25 Nov 05:00 UK (09:00 UAE) | Opportunity: DAMAC Islands 5-bed corner villa, AED 3.32M, at original price + card | Not scheduled 22 Nov (Chrome offline); scheduled 23 Nov ~10:00 UTC once Phil reopened Chrome (deviceId 78b31cb7, "Browser 1") |
 | Mon 23 Nov 05:00 UK (09:00 UAE) | Launch radar: Canopies two days to go + card | Posted (confirmed live in LinkedIn 23 Nov) |
 | Thu 26 Nov 05:00 UK (09:00 UAE) | Launch radar: Abu Dhabi, five releases under AED 5m (Radisson T3, Canopies Sanctuary, River Cove, Al Ghadeer Parks, Ramhan) + card | Scheduled 23 Nov; queue confirmed: Tue 24, Wed 25, Thu 26, one per day, all 5:00 AM; re-checked 23 Nov 13:35 UTC (Browser 2), nothing new needed |
-
 | 23 Nov | Tue 24, Wed 25, Thu 26 rewritten for engagement at Phil's request (insight hooks, one specific question, 3 hashtags); edited in LinkedIn, cards kept | Confirmed in scheduled list: one per day, all 5:00 AM |
 
 ## Page profile changes (15 Nov)
