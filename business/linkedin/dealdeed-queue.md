@@ -95,7 +95,7 @@ https://dealdeed.ae/launches?utm_source=linkedin&utm_medium=social&utm_campaign=
 | Sun 22 Nov 05:00 UK (09:00 UAE) | Opportunity: Dubai Islands corner garden villa, AED 12M, 65% paid + card | Posted per schedule (not re-checked in LinkedIn 22 Nov: Chrome not connected) |
 | Wed 25 Nov 05:00 UK (09:00 UAE) | Opportunity: DAMAC Islands 5-bed corner villa, AED 3.32M, at original price + card | Not scheduled 22 Nov (Chrome offline); scheduled 23 Nov ~10:00 UTC once Phil reopened Chrome (deviceId 78b31cb7, "Browser 1") |
 | Mon 23 Nov 05:00 UK (09:00 UAE) | Launch radar: Canopies two days to go + card | Posted (confirmed live in LinkedIn 23 Nov) |
-| Thu 26 Nov 05:00 UK (09:00 UAE) | Launch radar: Abu Dhabi, five releases under AED 5m (Radisson T3, Canopies Sanctuary, River Cove, Al Ghadeer Parks, Ramhan) + card | Scheduled 23 Nov; queue confirmed: Tue 24, Wed 25, Thu 26, one per day, all 5:00 AM |
+| Thu 26 Nov 05:00 UK (09:00 UAE) | Launch radar: Abu Dhabi, five releases under AED 5m (Radisson T3, Canopies Sanctuary, River Cove, Al Ghadeer Parks, Ramhan) + card | Scheduled 23 Nov; queue confirmed: Tue 24, Wed 25, Thu 26, one per day, all 5:00 AM; re-checked 23 Nov 13:35 UTC (Browser 2), nothing new needed |
 
 ## Page profile changes (15 Nov)
 - Tagline: "Private deal-matching desk for Dubai and Abu Dhabi property. Motivated sellers and verified buyers, agent to agent." (no off-market wording)
