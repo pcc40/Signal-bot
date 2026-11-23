@@ -35,3 +35,5 @@ All 23 delivered; no bounces, deferrals or send errors.
 Not sent: XBD Collective, Riccardo Vicarelli Architects and Studio Shizen were dropped from this batch because none publishes an email address. Contact them by phone, LinkedIn or their web form instead.
 
 Follow-ups: same process as batch 2. Day 4 and day 10 follow-ups are prepared as drafts from the templates in `business/outreach-kit.md` (b) for Philip to approve. Do not follow up anyone who replies or asks not to be contacted.
+
+**23 Nov 2026: final (last) follow-up drafts** created in Outlook (Eastbridge mailbox) for all 23 firms, as replies to the 13 Nov day-4 follow-ups; none had replied, bounced or opted out. Link: what-the-contractor-knows (Cavaro: design-build-vs-separate-architect-villa). For Philip to review and send; these are the last emails to these firms.

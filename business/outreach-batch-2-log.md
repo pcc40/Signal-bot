@@ -23,3 +23,5 @@ Emails and sources: `business/outreach-batch-2.md`. Bird tag: `campaign:outreach
 | 15–20 | Alsuwaidi, Wimbledon Wealth, AES International, Skybound Wealth, MDO Landscape, Desert Landscape | see batch file | Accepted, still processing at 20:40 UTC |
 
 Follow-ups: day 4 and day 10 templates are in `business/outreach-kit.md` (b). Do not follow up anyone who replies or asks not to be contacted.
+
+**23 Nov 2026: final (last) follow-up drafts** created in Outlook (Eastbridge mailbox) as replies to the 13 Nov day-4 follow-ups, for Philip to review and send: B1, Al Mujassam, Settle, B8, Algedra, Spazio, G&M, Dubai Sotheby's, Christie's, Allsopp & Allsopp, BSA, Alsuwaidi, Wimbledon Wealth, Skybound, MDO, Desert Landscape (16). Not drafted: Aparna Kaushik (replied 6 Nov), Driven Properties (holding reply 14 Nov, forwarding internally), AES International (Ben Roberts replied 6 Nov; Philip answered), Galadari (bounced). These are the last emails to these firms.
