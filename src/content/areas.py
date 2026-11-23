@@ -329,27 +329,53 @@ AREAS = [
   "name": "Al Barari",
   "city": "Dubai",
   "developer": "Al Barari",
-  "tag": "Landscape-led homes and plot builds",
+  "tag": "Landscape-led renovations and plot builds",
   "title": "Al Barari Villa Renovation & Project Management",
-  "description": "Renovating or building a villa in Al Barari, kitchens and gardens included? Client-side project management for landscape-led homes, from brief to handover.",
+  "description": "Renovating a villa or building on a plot in Al Barari? Approvals, typical villa stock, garden-led detailing and client-side project management.",
   "h1": "Al Barari: homes that sit inside the landscape",
-  "lede": "Dense planting, water features and some of the largest private houses in Dubai. Here the landscape is as much a part of the project as the building.",
+  "lede": "A low-density community in Dubailand where the gardens came first. Large villas, big plots and mature planting make the landscape as much a part of the project as the house.",
   "image": "quay-house-03",
-  "body": """<h2>The character of Al Barari projects</h2>
-<p>Al Barari is defined by its gardens. Plot builds and renovations here tend to be large, garden-facing houses where the boundary between inside and outside is deliberately blurred. That raises the importance of landscape design, irrigation, outdoor rooms, shading and the detailing of large openings.</p>
+  "body": """<p>This page sets out what is particular to Al Barari. It is one example of where we work, not a limit: we cover every community in Dubai and Abu Dhabi.</p>
+<h2>What makes Al Barari different</h2>
+<p>Al Barari was planned around its planting. In 2012 The National reported the whole development at 14.2 million sq ft, with about 80 per cent of the first phase given over to greenery, around four million plants and 189 villas in that phase (<a href="https://www.thenationalnews.com/lifestyle/home/dubai-s-eco-conscious-al-barari-development-bucks-housing-trends-1.359832" rel="noopener">The National, 2012</a>). Bayut's current area guide gives different figures, about 18 million sq ft with around 60 per cent green space, which reflects later phases such as The Nest and the Seventh Heaven and Ashjar apartments (<a href="https://www.bayut.com/area-guides/al-barari" rel="noopener">Bayut</a>). Whichever figure you take, the gardens dominate, and the community sits in Dubailand off Sheikh Mohammed Bin Zayed Road.</p>
+<p>Three things follow for a building project. The plots are large and the houses are big, so services, glazing and outdoor works are a bigger share of the budget than in a typical villa. Mature planting around and between plots has to be protected while you build. And the house is designed to open onto the garden, so the junctions between inside and outside carry more risk than usual.</p>
+<h2>Typical villa stock</h2>
+<ul>
+<li><strong>The Residences.</strong> The original 189 villas. Bayut lists the Acacia and Bromellia types as six-bedroom houses from about 13,858 sq ft of living space, and Camellia and Dahlia as five-bedroom houses of about 12,713 sq ft.</li>
+<li><strong>The Reserve.</strong> In 2013 The National described 28 six-bedroom villas on plots of 30,000 to 75,000 sq ft (<a href="https://www.thenationalnews.com/business/the-reserve-homes-in-dubai-s-wilderness-1.658951" rel="noopener">The National, 2013</a>).</li>
+<li><strong>The Nest.</strong> Bayut lists 55 four-bedroom villas on plots of about 9,000 to 15,000 sq ft.</li>
+<li><strong>Plots.</strong> Residential plots are offered for sale on Fountain Drive and elsewhere in the community, for owners who want to build their own house.</li>
+</ul>
+<p>The earliest villas are now well over a decade old. That says nothing certain about any one house, but it tells you where to look before agreeing a price: roofs and terraces, pool plant and pipework, the air conditioning and controls, irrigation and garden drainage, and the large sliding doors and their thresholds.</p>
+<h2>Renovate, or build on a plot?</h2>
+<p>Most owners of existing villas here are renewing a large house: new kitchens, bathrooms and finishes, services replacement, and garden, pool and outdoor-room remodels. On houses of this size, the services and the envelope can cost more than the interiors, so test them first. A condition survey and a few targeted openings in roofs, wet rooms and ceiling voids turn a contractor's allowance into a price.</p>
+<p>An owner with a plot is starting a full new build: brief, design, approvals, tender and construction. The work is the same as on any Dubai plot, with more weight on landscape and on keeping the site tidy within a planted community. Our <a href="/tools/villa-build-cost-calculator/">villa build and renovation cost calculator</a> gives indicative ranges with every source listed, and our <a href="/insights/renovate-or-rebuild-villa-dubai/">renovate or rebuild guide</a> helps when an older house might be better replaced.</p>
+<h2>The approval route</h2>
+<p>As in other Dubai master communities, the master developer's no-objection certificate comes before the authority permit, and the authority depends on where the plot sits. Ask the community's management for its current design guidelines and modification process before design work goes far, and confirm in writing which authority your consultant will submit to. External changes, extensions, pools, pergolas and landscape works are the items most likely to need review. Your registered consultant or licensed contractor makes the applications; we review the submissions with you and keep the programme honest about how long they take.</p>
 <h2>What to plan for</h2>
 <ul>
-<li><strong>Landscape as a package.</strong> Landscape should be designed and budgeted from the start, not left as a provisional sum for the end.</li>
-<li><strong>Protecting what's there.</strong> Mature planting and neighbouring gardens need protecting during construction. That affects access, logistics and cost.</li>
-<li><strong>Indoor-outdoor detailing.</strong> Level thresholds, large sliding glass and covered terraces are beautiful and unforgiving if detailed poorly. Water and heat get in through the junctions.</li>
+<li><strong>Landscape as a package.</strong> Design and budget the landscape from the start, not as a provisional sum for the end. On a garden-led house it is a major part of the cost.</li>
+<li><strong>Protecting what is there.</strong> Mature trees, planting and neighbouring gardens need protecting during the works. That affects access, storage, deliveries and cost, so put it in the tender.</li>
+<li><strong>Indoor-outdoor detailing.</strong> Level thresholds, large sliding glass and covered terraces look effortless and are unforgiving if detailed poorly. Water and heat get in through the junctions.</li>
+<li><strong>Irrigation and drainage.</strong> Garden levels, irrigation runs and storm drainage need designing with the house, so water is kept away from the building.</li>
 </ul>
-<h2>How we help</h2>
-<p>Several of the houses in our UK portfolio were built into wooded and landscaped sites, with green roofs, timber decks and structures designed to disappear into their setting. We bring the same attention to the junction between house and garden, and represent you from brief to handover.</p>""",
+<h2>How we help in Al Barari</h2>
+<p>Several of the houses in our founder's UK portfolio were built into wooded and landscaped sites, with green roofs, timber decks and structures designed to sit quietly in their setting. We bring the same attention to the junction between house and garden. We sit on your side of the table from brief to the end of the defects period: an early condition review or plot appraisal, a clear scope and budget, a like-for-like comparison of contractor quotes, the approvals tracked alongside the works, regular site visits to observe and record progress, and a properly run handover. You appoint the consultant and contractor and pay them directly; we review and recommend.</p>""",
   "faqs": [
-   ("Do Al Barari projects need developer approval?", "Yes. Design and external works are reviewed against the community guidelines before the authority permit."),
-   ("How should I budget for landscaping?", "Budget it as its own package from the start. Published guides put landscaping at roughly AED 100 to 500 per sq ft of garden, and Al Barari projects tend towards the upper end."),
+   ("Do Al Barari projects need developer approval?", "Expect the master developer's no-objection certificate before any authority permit for external changes, extensions, pools and landscape works. Ask the community's management for its current guidelines and process, and confirm in writing which authority your consultant will submit to."),
+   ("What villas are there in Al Barari?", "Bayut lists The Residences, 189 villas of five and six bedrooms, and The Nest, 55 four-bedroom villas. The National described The Reserve in 2013 as 28 six-bedroom villas on plots of 30,000 to 75,000 sq ft. Residential plots are also offered for owners who want to build."),
+   ("How should I budget for landscaping in Al Barari?", "As its own package from the start. Published guides put landscaping at roughly AED 100 to 500 per sq ft of garden, and garden-led houses here tend towards the upper end. Our cost calculator gives an indicative range for the house itself."),
+   ("What should I check before buying an older Al Barari villa?", "Roofs and terraces, pool plant and pipework, the air conditioning and controls, irrigation and garden drainage, the large sliding doors and their thresholds, and whether every alteration has the approvals behind it. Our <a href=\"/insights/survey-older-villa-before-buying-dubai/\">guide to surveying an older villa before you buy</a> sets out the steps."),
+   ("Can I build my own villa on a plot in Al Barari?", "Yes, plots are offered for sale. A plot build runs through brief, design, the master developer's approval, the authority permit, tender and construction. Check the plot's design guidelines and permitted area before you buy."),
+   ("Do you only work in Al Barari and the other communities listed?", "No. We cover every community in Dubai and Abu Dhabi. The area pages are examples of what is particular to each place."),
   ],
-  "services": ["villa-construction-project-management", "design-and-approvals", "site-visits-and-reporting"],
+  "sources": [
+   ("The National: Dubai's eco-conscious Al Barari development (June 2012)", "https://www.thenationalnews.com/lifestyle/home/dubai-s-eco-conscious-al-barari-development-bucks-housing-trends-1.359832"),
+   ("The National: The Reserve homes in Dubai's wilderness (March 2013)", "https://www.thenationalnews.com/business/the-reserve-homes-in-dubai-s-wilderness-1.658951"),
+   ("Bayut: Al Barari area guide", "https://www.bayut.com/area-guides/al-barari"),
+   ("Property Finder: land for sale in Al Barari, Fountain Drive", "https://www.propertyfinder.ae/en/plp/buy/land-for-sale-dubai-al-barari-fountain-drive-65577890.html"),
+  ],
+  "services": ["villa-renovation-project-management", "villa-construction-project-management", "design-and-approvals"],
  },
  {
   "slug": "dubai-islands",
