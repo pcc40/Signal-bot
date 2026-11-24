@@ -116,7 +116,7 @@ MEP sits in the middle of the programme and drives everything around it:
 - **Testing and commissioning** before finishes: electrical test certificates, pressure tests and air-conditioning commissioning records should be in the handover file.
 - **Second fix and finishes** follow, then [snagging and handover](/services/snagging-and-handover/).
 
-Long-lead items matter here too. Air-conditioning plant, distribution boards and water heaters can set the date more than the site work does; our [villa renovation timeline](/insights/villa-renovation-timeline-dubai/) shows where they fit.
+Long-lead items matter here too. Air-conditioning plant, distribution boards and water heaters can set the date more than the site work does; our [villa renovation timeline](/insights/villa-renovation-timeline-dubai/) shows where they fit. Whole-house MEP work is also the hardest kind to do with the family still at home; our guide to [living in your villa during a renovation](/insights/living-in-villa-during-renovation-dubai/) explains when staying in works and when it does not.
 
 ## What we do and what we don't
 

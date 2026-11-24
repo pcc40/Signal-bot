@@ -118,7 +118,7 @@ Every change should go through a written change request with a price and a time 
 
 ## Should you live in the villa while it is renovated?
 
-For a light refresh, sometimes. For a full renovation with new services, waterproofing or structural work, it usually costs more than it saves. The contractor has to phase the work around the family, keep power, water and cooling running, and protect occupied rooms, all of which takes time and money. In summer, the [midday break](https://www.khaleejtimes.com/uae/uae-midday-break-starts-june-15-work-under-direct-sunlight-banned-during-peak-afternoon-hours?amp=1) from 15 June to 15 September also shortens productive outdoor hours.
+For a light refresh, sometimes. For a full renovation with new services, waterproofing or structural work, it usually costs more than it saves. The contractor has to phase the work around the family, keep power, water and cooling running, and protect occupied rooms, all of which takes time and money. In summer, the [midday break](https://www.khaleejtimes.com/uae/uae-midday-break-starts-june-15-work-under-direct-sunlight-banned-during-peak-afternoon-hours?amp=1) from 15 June to 15 September also shortens productive outdoor hours. If you do decide to stay, our guide to [living in your villa during a renovation](/insights/living-in-villa-during-renovation-dubai/) covers phasing, dust and AC protection, and insurance.
 
 ## How much contingency should you hold?
 
