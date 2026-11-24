@@ -23,23 +23,6 @@ Impressions 19–23 Nov: 26 (Palm Springs vs Bay Estate comparison, the only pos
 ## Queued
 (Rewritten 23 Nov for engagement at Phil's request; edited in LinkedIn, cards unchanged, all 5:00 AM.)
 
-### Tue 24 Nov 2026, 09:00 UAE — Buyer brief: 5-bed villa, Tilal Al Ghaf (card: cards/2026-11-24-tilal-al-ghaf-5-bed-brief.png)
-Several buyers on our desk want the same home: a five-bedroom villa in Tilal Al Ghaf.
-
-The brief:
-• 5-bedroom villa in Alaya or Harmony
-• Budget AED 11–13M
-• Cash or funded, ready to move
-• Motivated sellers preferred; upgraded villas and better plots favoured
-
-Agents with a matching villa can submit it with verified pricing evidence. Terms are agreed in writing before anyone is introduced, your client stays yours, and DealDeed's fixed introduction fee is paid by the agent only when the deal completes.
-
-If you work Tilal Al Ghaf: which matters more to five-bed buyers right now, the plot or the upgrade?
-
-Submit a villa: https://dealdeed.ae/desk?utm_source=linkedin&utm_medium=social&utm_campaign=wk2026-11-23#briefs
-
-#TilalAlGhaf #DubaiRealEstate #DealDeed
-
 ### Wed 25 Nov 2026, 09:00 UAE — DAMAC Islands 5-bed corner villa (card: cards/2026-11-25-damac-islands-corner-villa.png)
 What is a corner plot worth on DAMAC Islands? On this villa, about AED 107,000.
 
@@ -78,6 +61,26 @@ Every release, with plans and handover dates: https://dealdeed.ae/launches?utm_s
 
 #AbuDhabiRealEstate #OffPlan #DealDeed
 
+### Fri 27 Nov 2026, 09:00 UAE — How the desk works: the DealDeed Standard, five tests (card: cards/2026-11-27-five-tests.png)
+Two five-bedroom villas in Tilal Al Ghaf, on the same day: one at AED 1,376 per sq ft, the other at AED 2,117.
+
+That spread, from the transactions behind our Q1 resale benchmark of AED 2,053 per sq ft, is why a single "below market" price claim means very little on its own.
+
+So before any deal reaches the DealDeed register, it has to pass five tests:
+1. Distress measured against paid-in equity, not the asking price
+2. Value benchmarked to registered DLD transactions, never portal listings
+3. The buyer's all-in cost normalised, every fee added back
+4. The commission structure examined
+5. The seller's situation evidenced, not asserted
+
+Fail one and the deal is declined. If it benchmarks at parity with DLD, we say so rather than dress it up.
+
+Agents: which "discount" do you see most often that does not survive a look at the registered transactions?
+
+Read the Standard: https://dealdeed.ae/the-standard?utm_source=linkedin&utm_medium=social&utm_campaign=wk2026-11-23
+
+#DealDeed #DubaiRealEstate #TilalAlGhaf
+
 ## Posted / scheduled log
 | Date | Post | Status |
 |---|---|---|
@@ -108,6 +111,8 @@ Every release, with plans and handover dates: https://dealdeed.ae/launches?utm_s
 | Mon 23 Nov 05:00 UK (09:00 UAE) | Launch radar: Canopies two days to go + card | Posted (confirmed live in LinkedIn 23 Nov) |
 | Thu 26 Nov 05:00 UK (09:00 UAE) | Launch radar: Abu Dhabi, five releases under AED 5m (Radisson T3, Canopies Sanctuary, River Cove, Al Ghadeer Parks, Ramhan) + card | Scheduled 23 Nov; queue confirmed: Tue 24, Wed 25, Thu 26, one per day, all 5:00 AM; re-checked 23 Nov 13:35 UTC (Browser 2), nothing new needed |
 | 23 Nov | Tue 24, Wed 25, Thu 26 rewritten for engagement at Phil's request (insight hooks, one specific question, 3 hashtags); edited in LinkedIn, cards kept | Confirmed in scheduled list: one per day, all 5:00 AM |
+| Tue 24 Nov 05:00 UK (09:00 UAE) | Buyer brief: 5-bed villa, Tilal Al Ghaf + card | Posted (confirmed live in LinkedIn 24 Nov) |
+| Fri 27 Nov 05:00 UK (09:00 UAE) | How the desk works: the DealDeed Standard, five tests (TAG same-day 5-bed spread AED 1,376 vs 2,117 psf; Q1 benchmark AED 2,053 psf, from dealdeed.ae home/the-standard) + card | Scheduled 24 Nov ~13:50 UTC; queue confirmed: Wed 25, Thu 26, Fri 27, one per day, all 5:00 AM |
 
 ## Page profile changes (15 Nov)
 - Tagline: "Private deal-matching desk for Dubai and Abu Dhabi property. Motivated sellers and verified buyers, agent to agent." (no off-market wording)
