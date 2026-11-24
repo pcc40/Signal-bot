@@ -2,6 +2,8 @@
 
 One line per reply, bounce or opt-out, newest first: date | firm | address | type (positive / neutral / not now / no / auto-reply / bounce / sales pitch / unsubscribe) | note. Firms here get no further automatic outreach or follow-up (auto-replies excepted only if marked "follow up ok").
 
+2026-11-24 | Virtuzone (accountant, not outreach) | rawan.alharakeh@virtuzone.com | admin | VAT report 1 Aug–31 Oct 2026 attached: no VAT payable; Phil to review, sign, stamp and return so she can file
+2026-11-23 | Khidmah (Inspire Home) | services@khidmah.com | no | customer care: no process for arranging direct meetings. Close; no further outreach to Khidmah
 2026-11-23 | We Will Fix It | info@wewillfixit.com | newsletter | Black Friday promotional email (they added philip@ to their mailing list); not a reply. No action
 2026-11-20 | Virtuzone (accountant, not outreach) | rawan.alharakeh@virtuzone.com | admin | VAT report data ready; asks Phil (1) about the VIP Rent A Car invoice not fully settled per bank records, (2) to reshare the June 2026 bank statement with closing balance
 2026-11-20 | JESS (Jumeirah English Speaking School) | admissions@jess.sch.ae | auto-reply | admissions acknowledgement; not a reply
