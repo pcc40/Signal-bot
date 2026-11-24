@@ -15,10 +15,17 @@ Impressions 19–23 Nov: 26 (Palm Springs vs Bay Estate comparison, the only pos
 1. Hook = the insight, not the inventory. Lead with the tension or the number that matters (e.g. "What is a corner plot worth on DAMAC Islands? On this villa, about AED 107,000."), never "Now on the desk:".
 2. One "so what" line after the facts: what the figures tell a buyer or agent (compare price vs plan, entry vs premium). Interpretation only, never a new figure.
 3. End with ONE specific question an agent or investor can answer from experience (e.g. "Which matters more to five-bed buyers right now, the plot or the upgrade?"). No "Agree?", "Comment YES" or other engagement bait.
-4. Then the link on its own line with a short label ("Ask the desk:", "Submit a villa:"), then 2–3 hashtags (max 3; always #DealDeed or the area tag first).
+4. Then a pointer line ("Ask the desk: link in the first comment.") — never the URL itself (see Reach rules) — then 2–3 hashtags (max 3; always #DealDeed or the area tag first).
 5. Short paragraphs (1–3 lines), 120–160 words, British English, no emojis, no exclamation marks.
 6. Prefer comparison/decision posts ("X vs Y", "five under AED 5m", "three numbers that matter") over single-listing posts; when a listing is the subject, frame it as a decision (premium worth it? plan vs price?).
 7. Edit queued posts via scheduled list → "..." → Edit post: click in text, cmd+a, Delete (the card stays), type the new text, click Schedule. Do NOT press Escape in the editor (it opens "Discard changes?").
+
+## Reach rules (Phil, 24 Nov: "we are not getting hardly any views", drastically improve)
+Diagnosis 24 Nov (Windsor.ai linkedin_organic, account 146955358): 13 posts 11–24 Nov averaged ~25 impressions but only 2–21 unique viewers each; page had 58 followers. Distribution, not wording, is the bottleneck.
+1. NO LINKS IN THE POST TEXT. End with a pointer line ("Ask the desk: link in the first comment."), then hashtags. Once the post is live (after 05:00 GMT), add the dealdeed.ae link (with UTM) as a comment from the DealDeed page on that post. Each run: comment the link on today's post if it is not there yet.
+2. PDF CAROUSELS: at least two posts a week are LinkedIn document posts (composer "+" / document icon → Choose file → title → Done; then type text). Build from cards/carousel-template-*.html, 6 pages 1080x1350, rendered with Playwright page.pdf({width:'1080px',height:'1350px',printBackground:true}); page 1 = the hook, last page = CTA + URL. Guides, comparisons, "how the desk works" and launch round-ups suit carousels; single listings stay as image cards.
+3. FOLLOWER INVITES: Phil approved (24 Nov) using the page's "Invite to follow" credits on his connections. 24 Nov: ~175 sent (75 "Followers of similar pages", 100 "Connections"), 82 credits left; credits refill on the 1st of each month. Each run: if credits remain and invitable connections are listed, send one batch of up to 50 (prefer "Followers of similar pages").
+4. Track: each run, pull last-7-day post impressions/unique impressions with Windsor.ai (linkedin_organic, account 146955358) and note them in the log row.
 
 ## Queued
 (Rewritten 23 Nov for engagement at Phil's request; edited in LinkedIn, cards unchanged, all 5:00 AM.)
@@ -37,7 +44,8 @@ Checked against the developer's statement of account before introduction. Full d
 
 Would your buyers pay that for the corner, or keep the difference?
 
-Ask the desk: https://dealdeed.ae/desk?utm_source=linkedin&utm_medium=social&utm_campaign=wk2026-11-23
+Ask the desk: link in the first comment.
+First comment (add once live): https://dealdeed.ae/desk?utm_source=linkedin&utm_medium=social&utm_campaign=wk2026-11-23
 
 #DAMACIslands #DubaiRealEstate #OffPlan
 
@@ -57,27 +65,24 @@ These are developers' launch figures and they move as homes are allocated.
 
 Which would you shortlist for a first Abu Dhabi purchase, and why?
 
-Every release, with plans and handover dates: https://dealdeed.ae/launches?utm_source=linkedin&utm_medium=social&utm_campaign=launch-radar
+Every release, with plans and handover dates: link in the first comment.
+First comment (add once live): https://dealdeed.ae/launches?utm_source=linkedin&utm_medium=social&utm_campaign=launch-radar
 
 #AbuDhabiRealEstate #OffPlan #DealDeed
 
-### Fri 27 Nov 2026, 09:00 UAE — How the desk works: the DealDeed Standard, five tests (card: cards/2026-11-27-five-tests.png)
+### Fri 27 Nov 2026, 09:00 UAE — How the desk works: the DealDeed Standard, five tests — PDF CAROUSEL (doc: cards/2026-11-27-five-tests-carousel.pdf, title "The DealDeed Standard: five tests every deal must pass"; single card 2026-11-27-five-tests.png kept but not used)
 Two five-bedroom villas in Tilal Al Ghaf, on the same day: one at AED 1,376 per sq ft, the other at AED 2,117.
 
 That spread, from the transactions behind our Q1 resale benchmark of AED 2,053 per sq ft, is why a single "below market" price claim means very little on its own.
 
-So before any deal reaches the DealDeed register, it has to pass five tests:
-1. Distress measured against paid-in equity, not the asking price
-2. Value benchmarked to registered DLD transactions, never portal listings
-3. The buyer's all-in cost normalised, every fee added back
-4. The commission structure examined
-5. The seller's situation evidenced, not asserted
+So before any deal reaches the DealDeed register, it has to pass five tests. Swipe through them below.
 
 Fail one and the deal is declined. If it benchmarks at parity with DLD, we say so rather than dress it up.
 
 Agents: which "discount" do you see most often that does not survive a look at the registered transactions?
 
-Read the Standard: https://dealdeed.ae/the-standard?utm_source=linkedin&utm_medium=social&utm_campaign=wk2026-11-23
+The full Standard: link in the first comment.
+First comment (add once live): https://dealdeed.ae/the-standard?utm_source=linkedin&utm_medium=social&utm_campaign=wk2026-11-23
 
 #DealDeed #DubaiRealEstate #TilalAlGhaf
 
@@ -113,6 +118,7 @@ Read the Standard: https://dealdeed.ae/the-standard?utm_source=linkedin&utm_medi
 | 23 Nov | Tue 24, Wed 25, Thu 26 rewritten for engagement at Phil's request (insight hooks, one specific question, 3 hashtags); edited in LinkedIn, cards kept | Confirmed in scheduled list: one per day, all 5:00 AM |
 | Tue 24 Nov 05:00 UK (09:00 UAE) | Buyer brief: 5-bed villa, Tilal Al Ghaf + card | Posted (confirmed live in LinkedIn 24 Nov) |
 | Fri 27 Nov 05:00 UK (09:00 UAE) | How the desk works: the DealDeed Standard, five tests (TAG same-day 5-bed spread AED 1,376 vs 2,117 psf; Q1 benchmark AED 2,053 psf, from dealdeed.ae home/the-standard) + card | Scheduled 24 Nov ~13:50 UTC; queue confirmed: Wed 25, Thu 26, Fri 27, one per day, all 5:00 AM |
+| 24 Nov ~15:00 UTC | Reach changes at Phil's request: ~175 follower invites sent; links removed from Wed 25 / Thu 26 text (now "link in the first comment"); Fri 27 replaced by a 6-page PDF carousel (image version deleted) | Queue confirmed: Wed 25, Thu 26, Fri 27, one per day, all 5:00 AM |
 
 ## Page profile changes (15 Nov)
 - Tagline: "Private deal-matching desk for Dubai and Abu Dhabi property. Motivated sellers and verified buyers, agent to agent." (no off-market wording)
