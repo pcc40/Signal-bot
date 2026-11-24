@@ -14,6 +14,10 @@ Link goes in the **first comment**, added by the scheduled task at ~9:04 am UAE.
 - End every post with a direct question to readers (added 14 Nov: engagement is the weak spot). No announcement or "Free download" hooks.
 - Phil gets a push at 8:45 UAE with the day's post and article link, and the live post link after 9:00.
 - Comment text: "Full guide: <link>"; checklists "Free download: <link>"; calculator "Calculator and embed code: <link>".
+- (24 Nov) First line must name something concrete and local (an authority, a community, an AED figure, a document, a specific situation) and suggest the reader may be wrong or about to lose money/time before committing. No abstract openers.
+- (24 Nov) Closing question: a two-way choice or a one-line experience question that architects, contractors, agents AND owners can answer. Not owner-only.
+- (24 Nov) Bullets short (2–8 words where possible); body 110–160 words. Include one local hashtag (e.g. #DubaiMunicipality, #Emaar, #Nakheel) in the five.
+- (24 Nov) Keep post-handover and checklist topics rare (max one a week).
 - **Company page repost (Phil, 16 Nov):** every personal post is also reposted on the Eastbridge Strategic Partners page the same morning. After the link comment is in: on today's post, click "Switch to different account" (the avatar ▾ under the post) → select Eastbridge Strategic Partners → Save → Repost → "Repost instantly"; check the "Repost successful" toast. Never pick DealDeed. Never "Repost with thoughts". Report it in the push.
 
 ## Profile and pages (updated 16 Nov 2026, Premium trial to ~16 Dec)
@@ -107,6 +111,37 @@ vs 14 Nov baseline (~174 avg per first-comment post, 4 reactions across 9 posts)
 
 Takeaways (22 Nov): risk/decision hooks on a costly mistake (plot checks 455, stalled build 453) still lead; after-the-fact/informational topics (defects 77, renovation mistakes 127, building from the UK 123) trail. Plot checks drawing Dubai as the top location suggests the UAE-morning slot is starting to reach local owners. On 20 Nov the second same-day post (op-ed 171) out-reached the scheduled one (77), unlike 9 Nov. Queue 23–29 Nov unchanged (all decision-hooked, each ending with a question). For the posts from 30 Nov, prefer topics where the owner can lose money before committing (villa-construction-cost-dubai, how-to-choose-client-side-project-manager, owner-site-visits-villa-build) and lead with the money at stake in the first line; keep checklists and post-handover topics rarer. The 26 Nov checklist post is still the test of whether a question hook rescues a checklist.
 
+## Full review (24 Nov 2026, ~23:30 UAE, at Phil's request) — what's working
+
+Organic posts only (D&B 11 Nov and calculator 19 Nov were paid boosts; excluded). Figures at review time:
+
+| Posted | Topic | Impr. | Reached | Out-of-network | React. | Comments (incl. link) | Profile viewers |
+|---|---|---|---|---|---|---|---|
+| 24 Nov | Which authority approves your villa | **1,075** | **790** | **91%** | 3 | 5 (2 real + Phil's 2 replies) | 4 |
+| 15 Nov | Plot checks before you pay | 472 | 220 | 55% | 0 | 5 | 3 |
+| 13 Nov | Stalled build: first ten days | 465 | 245 | 67% | 4 | 6 | 2 |
+| 21 Nov | Kitchen & bathroom: AED 15k or 150k | 362 | 216 | 67% | 2 | 4 | 1 |
+| 14 Nov | How long to build | 224 | 53 | 21% | 0 | 1 | 1 |
+| 22 Nov | Three bids: take the lowest? | 203 | 108 | 50% | 1 | 4 | 0 |
+| 17 Nov | Renovate or rebuild | 187 | 83 | 40% | 1 | 1 | 0 |
+| 16 Nov | Renovation mistakes | 136 | 57 | 31% | 1 | 1 | 0 |
+| 18 Nov | Building from the UK | 134 | 66 | 42% | 1 | 1 | 0 |
+| 23 Nov | Owner's rep vs PM vs consultant | 125 | 80 | 60% | 0 | 1 | 0 |
+| 12 Nov | Snagging checklist | 107 | 20 | 4% | 1 | 1 | 0 |
+| 20 Nov | Defects liability period | 103 | 40 | 36% | 0 | 1 | 0 |
+
+What the winners share (24 Nov, 15 Nov, 13 Nov, 21 Nov) and the losers lack:
+1. **First line names something concrete and local**: Dubai Municipality / Trakhees / DDA; "AED 15,000 or AED 150,000"; the plot deposit; "your build has gone quiet". Losers open with an abstract question ("Who works only for you?", "Is the contractor finished with you?").
+2. **It tells the reader they may be wrong, or about to lose money or time, BEFORE they commit** ("you could be wrong", "should you pay the deposit? Not yet"). After-handover and checklist topics (defects 103, snagging 107) stay in-network.
+3. **The closing question is easy for professionals to answer from experience, ideally a two-way choice** ("which took longer: the developer's approval or the permit?"). 24 Nov drew an interior architect and an estate agent adding their own experience. Questions aimed only at owners ("Have you asked your PM that?") draw nothing. The audience is ~25–50% construction/architecture, Senior 30–40%: write the question for them as well as owners.
+4. **Phil replied to both real comments within hours**: replies keep the thread active and widen reach. Keep doing it (Phil's own replies, not automated).
+5. **Short, scannable bullets** (24 Nov: three bullets of 2–4 words; ~140 words). Long explanatory bullets trail.
+6. **Local hashtags in the set** (#DubaiMunicipality, #BuildingPermit) and Dubai as top location on the winners.
+7. Possible factor to test (not proven, one data point): on 24 Nov the link comment went in ~55 min after posting, and the post had 172 impressions before any link was on it. Test: on alternate days add the link comment at ~60 min instead of ~5 min; compare 24h reach.
+
+Rules added from this review (binding from 25 Nov): see "Rules" items marked (24 Nov).
+Tomorrow's post (25 Nov, contracts) rewritten to the pattern: concrete builder's-side first line ("Just a small change."), local authority named, short bullets, two-way professional question ("which causes more disputes: variations or delays?"). Edited in LinkedIn's Scheduled list, still 5:00 AM UK; text below.
+
 ## Schedule
 
 > Tracking (14 Nov): queued links now carry `?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily`. Post the link exactly as written. The LinkedIn app often strips the referrer, so without this Google Analytics files these visits under "direct" and we cannot see what LinkedIn brings. Use the same tag on any new link added to this queue.
@@ -150,7 +185,7 @@ Queue check 23 Nov (task fired ~10:07 UAE, late): today's post went out at 9:00 
 
 Queue check 24 Nov (task fired ~9:54 UAE, late): today's post went out at 9:00; link comment added ~9:55 UAE and reposted on the Eastbridge page (toast seen); 22 and 23 Nov confirmed on the page's published list. 6 posts scheduled, 25–30 Nov, all at 5:00 AM UK; added 1 Dec (Springs/Meadows/Lakes, text as drafted below; page 200, facts checked against the article) at 5:00 AM UK. Scheduled tab shows 7, 25 Nov–1 Dec. Impressions at ~9:55 UAE: 24 Nov 178 (~55m, best early start so far), 23 Nov 108, 22 Nov 184, 21 Nov kitchen 333, 20 Nov op-ed 193, 20 Nov defects 98, 19 Nov calculator 9,628 (boosted), 18 Nov 130, 17 Nov 183, 16 Nov 132, 15 Nov 465. Followers 474.
 
-24 Nov follow-up (~23:00 UAE, Phil said it was better received): which-authority post at 1,063 impr. (boosted), 784 reached, 91% out of network, 3 reactions / 5 comments / 1 repost, 4 profile viewers, 0 followers; Senior 37%, Construction 24%, top location Dubai 11%, top job title Project Manager.
+24 Nov follow-up (~23:00 UAE, Phil said it was better received): which-authority post at 1,063 impr. (NOT boosted: Phil tried a free-credit boost but it never ran; Boost tab shows £0.00 of £40.00 spent, so all reach is organic), 784 reached, 91% out of network, 3 reactions / 5 comments / 1 repost, 4 profile viewers, 0 followers; Senior 37%, Construction 24%, top location Dubai 11%, top job title Project Manager.
 
 Phil confirmed 21 Nov: ALL posts are reposted on the Eastbridge page. Daily task prompt updated (step 1b) to repost every day and catch up the previous 3 days. Catch-up done 21 Nov for 16, 18, 19, 20 and 21 Nov; 5–15 and 17 Nov were already on the page.
 
@@ -353,25 +388,27 @@ How to find out: link in the first comment 👇
 
 #DubaiVillas #DubaiMunicipality #BuildingPermit #DubaiRealEstate #VillaConstruction
 
-### 25 Nov — construction contracts (replaces "sourcing materials abroad", removed at Phil's request)
-Your villa contract is signed. Will it protect you when the first change or delay arrives?
+### 25 Nov — construction contracts (REWRITTEN 24 Nov after the full review; live in LinkedIn's Scheduled list)
+"Just a small change." On a Dubai villa site walk, few words cost owners more.
 
-Most disputes I've seen didn't start with a bad contract. They started with a reasonable one that nobody administered. Before you sign, know:
+For 21 years I was the builder. A change asked for on site, without paper, came back later with a price and a time claim attached.
 
-• Lump sum or remeasure: it decides who carries the risk of quantities changing
-• How variations are instructed: in writing, and priced before the work is done
-• How delays are notified, and what records back an extension of time
-• When the performance bond expires. One that expires before completion protects no one
+Unmanaged variations are the biggest cause of budget overruns I've seen. A sound procedure has four steps:
 
-Dubai Municipality publishes guidance contract forms for private villas. They're in Arabic, not mandatory, and can be amended by agreement.
+• An instruction in writing, from the person the contract names
+• A price, and any time effect, before the work is done
+• Agreement on the cost and the time
+• A line in a variation register, checked monthly against the budget
 
-General information, not legal advice: take advice from a UAE-qualified lawyer before you sign.
+Written instructions protect both sides, the contractor included.
 
-Which clause do you wish you'd read more carefully?
+Dubai Municipality publishes guidance contract forms for private villas: in Arabic, not mandatory, and they can be amended by agreement. General information, not legal advice.
+
+On your projects, which causes more disputes: variations or delays?
 
 Variations and delays, explained: link in the first comment 👇
 
-#DubaiVillas #ConstructionContracts #VillaConstruction #DubaiRealEstate #ProjectManagement
+#DubaiVillas #ConstructionContracts #DubaiMunicipality #VillaConstruction #DubaiRealEstate
 
 ### 26 Nov — pre-construction checklist
 Where is the money on a villa won or lost? Mostly before a single block is laid.
