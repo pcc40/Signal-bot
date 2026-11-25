@@ -25,29 +25,11 @@ Diagnosis 24 Nov (Windsor.ai linkedin_organic, account 146955358): 13 posts 11�
 1. NO LINKS IN THE POST TEXT. End with a pointer line ("Ask the desk: link in the first comment."), then hashtags. Once the post is live (after 05:00 GMT), add the dealdeed.ae link (with UTM) as a comment from the DealDeed page on that post. Each run: comment the link on today's post if it is not there yet.
 2. PDF CAROUSELS: at least two posts a week are LinkedIn document posts (composer "+" / document icon → Choose file → title → Done; then type text). Build from cards/carousel-template-*.html, 6 pages 1080x1350, rendered with Playwright page.pdf({width:'1080px',height:'1350px',printBackground:true}); page 1 = the hook, last page = CTA + URL. Guides, comparisons, "how the desk works" and launch round-ups suit carousels; single listings stay as image cards.
 3. FOLLOWER INVITES: Phil approved (24 Nov) using the page's "Invite to follow" credits on his connections. 24 Nov: ~175 sent (75 "Followers of similar pages", 100 "Connections"), 82 credits left; credits refill on the 1st of each month. Send further batches only when Phil asks in a live session, not from the scheduled run.
-4. Track: each run, pull last-7-day post impressions/unique impressions with Windsor.ai (linkedin_organic, account 146955358) and note them in the log row.
+4. First-comment links: LinkedIn attaches a link preview to the comment, and the dealdeed.ae/desk preview title reads "Off-Market..." (site meta title). Click the X on the preview before clicking Comment, so only the bare link shows.
+5. Track: each run, pull last-7-day post impressions/unique impressions with Windsor.ai (linkedin_organic, account 146955358) and note them in the log row.
 
 ## Queued
 (Rewritten 23 Nov for engagement at Phil's request; edited in LinkedIn, cards unchanged, all 5:00 AM.)
-
-### Wed 25 Nov 2026, 09:00 UAE — DAMAC Islands 5-bed corner villa (card: cards/2026-11-25-damac-islands-corner-villa.png)
-What is a corner plot worth on DAMAC Islands? On this villa, about AED 107,000.
-
-DAMAC is selling standard-plot five-bedroom villas in the Maldives cluster at around AED 3.21M. This corner villa is on the desk at AED 3,320,000, its original price, with roughly double the land.
-
-• 5 bedrooms plus maid's room, 6 bathrooms, Vastu-compliant
-• 3,178 sq ft built-up on a 2,900 sq ft corner plot
-• Near the community entrance and shops
-• Handover Q4 2028, balance on the developer's payment plan
-
-Checked against the developer's statement of account before introduction. Full detail goes to registered buyers through their appointed agent.
-
-Would your buyers pay that for the corner, or keep the difference?
-
-Ask the desk: link in the first comment.
-First comment (add once live): https://dealdeed.ae/desk?utm_source=linkedin&utm_medium=social&utm_campaign=wk2026-11-23
-
-#DAMACIslands #DubaiRealEstate #OffPlan
 
 ### Thu 26 Nov 2026, 09:00 UAE — Abu Dhabi launch radar: five releases under AED 5m (card: cards/2026-11-26-abu-dhabi-under-5m.png)
 From AED 950,000 to AED 4.6m: five Abu Dhabi launches you can still buy into for under AED 5m.
@@ -85,6 +67,24 @@ The full Standard: link in the first comment.
 First comment (add once live): https://dealdeed.ae/the-standard?utm_source=linkedin&utm_medium=social&utm_campaign=wk2026-11-23
 
 #DealDeed #DubaiRealEstate #TilalAlGhaf
+
+### Sat 28 Nov 2026, 09:00 UAE — Seller guide: missed an off-plan payment — PDF CAROUSEL (doc: cards/2026-11-28-missed-payment-carousel.pdf, title "Missed an off-plan payment in Dubai? What happens next"; source dealdeed.ae/insights/missed-off-plan-payment-dubai)
+Missed an off-plan payment in Dubai? The late charge is rarely what costs you. The retention is.
+
+Penalties on an overdue instalment commonly run at 1–2% a month, and many developers allow a grace period of 15 to 30 days. Caught early, it is a manageable problem.
+
+Let arrears build and the DLD serves notice, typically 30 days. If the contract is then cancelled, the developer may keep up to 25% of the price on a project under 60% complete, and up to 40% between 60% and 80%.
+
+The exit most owners miss: once the developer's minimum threshold is paid, often 30–40%, the contract can usually be assigned to a buyer who clears the arrears.
+
+The four steps, in order, are in the guide below. General information, not legal advice.
+
+Agents: how early do your off-plan clients tell you they are struggling with a payment?
+
+Ask the desk: link in the first comment.
+First comment (add once live, remove the link preview before posting): https://dealdeed.ae/insights/missed-off-plan-payment-dubai?utm_source=linkedin&utm_medium=social&utm_campaign=wk2026-11-23
+
+#DealDeed #DubaiRealEstate #OffPlan
 
 ## Posted / scheduled log
 | Date | Post | Status |
@@ -128,3 +128,5 @@ First comment (add once live): https://dealdeed.ae/the-standard?utm_source=linke
 - Specialties added: Abu Dhabi new launches, Dubai new launches, Property deal matching, UK buyers in the UAE
 - Featured: Canopies Sanctuary post (swap after 25 Nov)
 - Custom button already "Register" → dealdeed.ae/register, left as is
+| Wed 25 Nov 05:00 UK (09:00 UAE) | Opportunity: DAMAC Islands 5-bed corner villa + card | Posted (confirmed live in LinkedIn 25 Nov; 23 impressions by 13:45 UTC). First-comment desk link added 25 Nov ~13:55 UTC as DealDeed, link preview removed |
+| Sat 28 Nov 05:00 UK (09:00 UAE) | Seller guide: missed an off-plan payment (1–2%/month penalty, 30-day DLD notice, 25%/40% retention by build stage, assignment exit) — 6-page PDF carousel | Scheduled 25 Nov ~13:50 UTC (deviceId fddc85a8, "Browser 1"); queue confirmed: Thu 26, Fri 27, Sat 28, one per day, all 5:00 AM. Impressions shown in LinkedIn 25 Nov: 25 Nov 23, 24 Nov 17, 23 Nov 21, 22 Nov 10, 21 Nov 15 (Windsor pull not run) |
