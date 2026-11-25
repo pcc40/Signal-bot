@@ -142,6 +142,41 @@ What the winners share (24 Nov, 15 Nov, 13 Nov, 21 Nov) and the losers lack:
 Rules added from this review (binding from 25 Nov): see "Rules" items marked (24 Nov).
 Tomorrow's post (25 Nov, contracts) rewritten to the pattern: concrete builder's-side first line ("Just a small change."), local authority named, short bullets, two-way professional question ("which causes more disputes: variations or delays?"). Edited in LinkedIn's Scheduled list, still 5:00 AM UK; text below.
 
+## Nightly review 25 Nov 2026 (~21:50 UAE, automated; NO live LinkedIn data)
+
+Claude in Chrome was not reachable from this cloud run (no browser tools connected), so no analytics, Boost tab or comments could be read and nothing was edited in LinkedIn. Figures below are the last ones recorded in this file.
+
+| Posted | Topic | Impr. | Reached | Out-of-network | React. | Comments | Link comment |
+|---|---|---|---|---|---|---|---|
+| 25 Nov | Contracts: variations and delays | 6 at ~7m (no later figure) | – | – | – | – | ~7 min |
+| 24 Nov | Which authority approves your villa | 1,075 | 790 | 91% | 3 | 5 | ~55 min |
+| 23 Nov | Owner's rep vs PM vs consultant | 125 | 80 | 60% | 0 | 1 | ~75 min |
+| 22 Nov | Three bids: take the lowest? | 203 | 108 | 50% | 1 | 4 | ~8 min |
+| 21 Nov | Kitchen & bathroom costs | 362 | 216 | 67% | 2 | 4 | ~60 min |
+| 20 Nov | Defects liability period | 103 | 40 | 36% | 0 | 1 | ~10 min |
+| 19 Nov | Calculator embed (boosted, excluded) | 9,628 | – | – | 49 | 3 | ~7 min |
+| 18 Nov | Building from the UK | 134 | 66 | 42% | 1 | 1 | ~8 min |
+| 17 Nov | Renovate or rebuild | 187 | 83 | 40% | 1 | 1 | ~3 min |
+| 16 Nov | Renovation mistakes | 136 | 57 | 31% | 1 | 1 | ~47 min |
+| 15 Nov | Plot checks | 472 | 220 | 55% | 0 | 5 | – |
+| 14 Nov | How long to build | 224 | 53 | 21% | 0 | 1 | – |
+| 13 Nov | Stalled build | 465 | 245 | 67% | 4 | 6 | – |
+| 12 Nov | Snagging checklist | 107 | 20 | 4% | 1 | 1 | – |
+
+Organic average 12–24 Nov (12 posts): ~299 impressions, ~165 reached.
+
+Takeaways:
+1. 25 Nov (contracts) cannot be judged yet; it is the first post written fully to the 24 Nov pattern. Read it in the next run with Chrome.
+2. Link-timing test, from the schedule column (to test, not proven): late link comment (~47–75 min) posts 16, 21, 23, 24 Nov average ~425 impr.; early (~3–10 min) posts 17, 18, 20, 22 Nov average ~157 (medians 249 vs 160, so not only the 24 Nov outlier). Topic strength is mixed in, so keep alternating: 25 Nov was early (~7 min), 26 Nov should be ~60 min, 27 Nov ~5 min.
+3. Checklist and after-handover topics stay in network (snagging 107, defects 103). Tomorrow's checklist post is the planned test of whether a pattern rewrite rescues one.
+4. Owner-only closing questions (23 Nov "Have you asked your PM that?") drew nothing; the queued 27, 28, 30 Nov and 1 Dec posts still had owner-only closers.
+
+Changed tonight (file only; LinkedIn still holds the old texts, see below):
+- 26 Nov checklist rewritten to the pattern: concrete builder's-side first line, six short stage bullets taken from the page, two-way question for professionals and owners, disclaimer kept from the page. Old first line "Where is the money on a villa won or lost?" → new "Building a villa in Dubai or Abu Dhabi? I watched owners ask the right questions at the wrong stage."
+- Closing questions on 27, 28, 30 Nov and 1 Dec changed from owner-only to two-way professional questions (rule from 24 Nov). Everything else unchanged; all six pages returned 200 and the figures were checked against them.
+- **Not done:** the 26 Nov edit in LinkedIn's Scheduled list (no browser). Unless Phil edits it before 9:00 UAE, the old 26 Nov text posts. The next run with Chrome should edit whichever of 27 Nov–1 Dec is next.
+- Rules unchanged (no new evidence).
+
 ## Schedule
 
 > Tracking (14 Nov): queued links now carry `?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily`. Post the link exactly as written. The LinkedIn app often strips the referrer, so without this Google Analytics files these visits under "direct" and we cannot see what LinkedIn brings. Use the same tag on any new link added to this queue.
@@ -161,7 +196,7 @@ Tomorrow's post (25 Nov, contracts) rewritten to the pattern: concrete builder's
 | 23 Nov | Mon | Owner's rep vs PM vs consultant | Full guide: https://eastbridgestrategicpartners.com/insights/owners-representative-vs-project-manager-vs-consultant/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (task ran late: link comment in ~10:15 UAE; reposted on Eastbridge page ~10:17 UAE, toast seen; 41 impr. at ~1h15m; https://www.linkedin.com/feed/update/urn:li:activity:7530495396998144000/) |
 | 24 Nov | Tue | Which authority covers my villa | Full guide: https://eastbridgestrategicpartners.com/insights/which-dubai-authority-covers-my-villa/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (task ran late: link comment in ~9:55 UAE; reposted on Eastbridge page ~9:56 UAE, toast seen; 178 impr., 2 reactions at ~55m; https://www.linkedin.com/feed/update/urn:li:activity:7530857764756152321/) |
 | 25 Nov | Wed | Contracts: variations and delays | Full guide: https://eastbridgestrategicpartners.com/insights/villa-construction-contracts-uae/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (link comment in ~9:07 UAE; reposted on Eastbridge page ~9:08 UAE, toast seen; 6 impr. at ~7m; https://www.linkedin.com/feed/update/urn:li:activity:7531220138071879680/) |
-| 26 Nov | Thu | Villa owner checklist | Free download: https://eastbridgestrategicpartners.com/guides/villa-owner-checklist/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 26 Nov | Thu | Villa owner checklist | Free download: https://eastbridgestrategicpartners.com/guides/villa-owner-checklist/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (text rewritten in this file 25 Nov night; LinkedIn edit NOT done, no browser). Link-timing test: add the link comment at ~60 min |
 | 27 Nov | Fri | Dubai Municipality over-design warning | Full guide: https://eastbridgestrategicpartners.com/insights/dubai-municipality-villa-over-design-warning/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued(scheduled in LinkedIn 20 Nov, 5:00 AM UK) |
 | 28 Nov | Sat | Changing a villa's layout: approvals | Full guide: https://eastbridgestrategicpartners.com/insights/changing-villa-layout-dubai-approvals/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 21 Nov, 5:00 AM UK) |
 | 29 Nov | Sun | Refresh, refit or full renovation | Full guide: https://eastbridgestrategicpartners.com/insights/refresh-refit-or-full-villa-renovation/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 22 Nov, 5:00 AM UK) |
@@ -424,22 +459,27 @@ Variations and delays, explained: link in the first comment 👇
 
 #DubaiVillas #ConstructionContracts #DubaiMunicipality #VillaConstruction #DubaiRealEstate
 
-### 26 Nov — pre-construction checklist
-Where is the money on a villa won or lost? Mostly before a single block is laid.
+### 26 Nov — pre-construction checklist (REWRITTEN 25 Nov nightly review; LinkedIn still holds the old text unless Phil edits it)
+Building a villa in Dubai or Abu Dhabi? I watched owners ask the right questions at the wrong stage. By then, the answers cost money.
 
-By the time you sign the build contract, the big decisions are already made:
+For 21 years I was the builder. We saw where budgets leak, and which questions owners rarely ask.
 
-• The plot, and what it really allows
-• The design, and whether it's finished
-• The budget, and whether it's realistic
-• The contract, and who carries which risk
-• The team, and who works for you
+So I've put them in order, six stages:
 
-After 21 years on the builder's side, these are the questions I'd want every owner in Dubai and Abu Dhabi to settle first. I've put them into a free pre-construction checklist.
+• Before you buy the plot
+• Brief and budget
+• Choosing consultant and contractor
+• Contract terms
+• Monthly checks on site
+• Snagging and handover
 
-Which of these did you settle too late?
+Ten pages, one tick box per question.
 
-The checklist: link in the first comment 👇
+General information, not legal advice: a UAE-qualified lawyer should still review your contract.
+
+Consultants, contractors and owners: which gets rushed more, the brief or the contract?
+
+The free checklist: link in the first comment 👇
 
 #DubaiVillas #AbuDhabi #VillaConstruction #DubaiRealEstate #ProjectManagement
 
@@ -457,7 +497,7 @@ From 21 years on the builder's side, the reasons are rarely sinister:
 
 The answer isn't cutting steel on site. It's asking your consultant to explain the design against the code before tender, and comparing quantities across bids.
 
-Have you ever asked to see your structural quantities?
+Engineers and QSs: have you priced a villa that could have used less steel? What drove it?
 
 The full explainer: link in the first comment 👇
 
@@ -477,7 +517,7 @@ On the builder's side, I've seen "just a partition" turn out to carry a beam, or
 
 Unapproved changes tend to surface at resale.
 
-What's the one wall you'd move if you could?
+Architects and engineers: behind a "simple" partition, what do you find more often, a beam or services?
 
 Who approves what: link in the first comment 👇
 
@@ -515,7 +555,7 @@ The outside is what master developers control most tightly:
 
 From the builder's side: exterior approvals are won or lost before the drawings are finished. And a sample panel on the real wall settles more arguments than any rendering.
 
-Have you had an exterior change refused?
+Architects and owners: which is harder to get approved, a new façade or a garden structure?
 
 What each developer allows: link in the first comment 👇
 
@@ -535,7 +575,7 @@ What I'd plan for:
 
 And don't let anyone price your house from the one next door.
 
-Which community are you in?
+Contractors and owners in Emirates Living: what holds a renovation up more, Emaar's approval or the entry permits?
 
 The full guide: link in the first comment 👇
 
