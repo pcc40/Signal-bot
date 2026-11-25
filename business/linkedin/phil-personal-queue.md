@@ -168,6 +168,18 @@ Tomorrow's post (25 Nov, contracts) rewritten to the pattern: concrete builder's
 | 30 Nov | Mon | Changing a villa's exterior | Full guide: https://eastbridgestrategicpartners.com/insights/villa-exterior-changes-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 23 Nov, 5:00 AM UK) |
 | 1 Dec | Tue | Springs, Meadows and Lakes renovation | Full guide: https://eastbridgestrategicpartners.com/insights/springs-meadows-lakes-villa-renovation/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 24 Nov, 5:00 AM UK) |
 | 2 Dec | Wed | Renovating a villa in Abu Dhabi | Full guide: https://eastbridgestrategicpartners.com/insights/villa-renovation-abu-dhabi/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 25 Nov, 5:00 AM UK) |
+| 3 Dec | Thu | Extending your villa: the developer's charge | Full guide: https://eastbridgestrategicpartners.com/insights/villa-extension-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Drafted 25 Nov, approved by Phil 25 Nov; scheduling in LinkedIn 25 Nov |
+| 4 Dec | Fri | What your drawings don't say (quote review) | Full guide: https://eastbridgestrategicpartners.com/insights/contractor-quote-review-villa-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Drafted 25 Nov, approved by Phil 25 Nov; scheduling in LinkedIn 25 Nov |
+| 5 Dec | Sat | Survey before Form F (older villa) | Full guide: https://eastbridgestrategicpartners.com/insights/survey-older-villa-before-buying-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Drafted 25 Nov, approved by Phil 25 Nov; scheduling in LinkedIn 25 Nov |
+| 6 Dec | Sun | Three Cornish houses, filmed (UK build proof) | The films: https://eastbridgestrategicpartners.com/work/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Drafted 25 Nov, approved by Phil 25 Nov; scheduling in LinkedIn 25 Nov |
+| 7 Dec | Mon | Living in your villa during the works | Full guide: https://eastbridgestrategicpartners.com/insights/living-in-villa-during-renovation-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Drafted 25 Nov, approved by Phil 25 Nov; scheduling in LinkedIn 25 Nov |
+| 8 Dec | Tue | Villas built before 2014: the services | Full guide: https://eastbridgestrategicpartners.com/insights/older-villa-mep-renovation/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Drafted 25 Nov, approved by Phil 25 Nov; scheduling in LinkedIn 25 Nov |
+| 9 Dec | Wed | Emaar's NOC comes first | Full guide: https://eastbridgestrategicpartners.com/insights/emaar-community-villa-renovation/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Drafted 25 Nov, approved by Phil 25 Nov; scheduling in LinkedIn 25 Nov |
+| 10 Dec | Thu | The six site visits that matter | Full guide: https://eastbridgestrategicpartners.com/insights/owner-site-visits-villa-build/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Drafted 25 Nov, approved by Phil 25 Nov; scheduling in LinkedIn 25 Nov |
+| 11 Dec | Fri | Ramadan 2027 in your programme | Full guide: https://eastbridgestrategicpartners.com/insights/dubai-construction-calendar-villa-programme/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Drafted 25 Nov, approved by Phil 25 Nov; scheduling in LinkedIn 25 Nov |
+| 12 Dec | Sat | Al Barari: the garden is the house | Full guide: https://eastbridgestrategicpartners.com/areas/al-barari/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Drafted 25 Nov, approved by Phil 25 Nov; scheduling in LinkedIn 25 Nov |
+| 13 Dec | Sun | Who on your team is paid only by you? | Full guide: https://eastbridgestrategicpartners.com/insights/is-an-owners-representative-worth-it-villa/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Drafted 25 Nov, approved by Phil 25 Nov; scheduling in LinkedIn 25 Nov |
+| 14 Dec | Mon | 131 decisions from plot to keys | Full guide: https://eastbridgestrategicpartners.com/insights/plot-to-keys-villa-owner-decisions-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Drafted 25 Nov, approved by Phil 25 Nov; scheduling in LinkedIn 25 Nov |
 
 Queue check 16 Nov: 10 posts scheduled in LinkedIn, 17–26 Nov, all at 5:00 AM UK.
 Queue check 17 Nov: 9 posts scheduled, 18–26 Nov, all at 5:00 AM UK; next 7 days covered, nothing added or changed. Company-page repost still not done by the daily task (prompt says do not repost). Company-page repost not done by the daily task (its prompt says "do not repost"); flagged to Phil.
@@ -547,3 +559,253 @@ Worked on villas in both emirates? Which approvals route was quicker?
 The full guide: link in the first comment 👇
 
 #AbuDhabi #VillaRenovation #AbuDhabiRealEstate #Saadiyat #ProjectManagement
+
+### 3 Dec — Extending your villa: the developer's charge (drafted and approved 25 Nov)
+Extending your villa in Dubai? The developer may charge you before the contractor does.
+
+In 2018, Gulf News reported Jumeirah Islands owners quoting about AED 300 per sq ft for added floor area. That's on top of the build.
+
+The order matters:
+• The developer's answer, in writing
+• Then the authority permit
+• Then the full design
+
+From the builder's side: extension budgets rarely break on the new rooms. They break at the junction with the old house. The roof, the foundations, the AC that can't cope.
+
+Get the developer's position and a proper look at the existing house before you pay for full drawings.
+
+Which takes longer in your experience: the developer's NOC or the building permit?
+
+The full guide: link in the first comment 👇
+
+#VillaExtension #DubaiVillas #JumeirahIslands #Nakheel #VillaRenovation
+
+### 4 Dec — What your drawings don't say (quote review) (drafted and approved 25 Nov)
+Before you sign a villa contract in Dubai, list what your drawings don't say. The contractor already has.
+
+For 21 years I priced quotes as the builder. The first thing we did with any tender set was list the gaps. Those lines decided whether a job made money.
+
+When I review a quote for an owner, I check:
+• Same drawing revision for every bidder
+• Provisional and PC sums
+• Exclusions priced back in
+• Payments tied to progress
+• Registration on Dubai Municipality's BPS app
+
+None of it is about catching anyone out. It's about knowing the real number before you commit, not after the first variation.
+
+Contractors and QSs: which causes more arguments later, provisional sums or exclusions?
+
+The full guide: link in the first comment 👇
+
+#DubaiVillas #VillaConstruction #DubaiMunicipality #Tendering #ProjectManagement
+
+### 5 Dec — Survey before Form F (older villa) (drafted and approved 25 Nov)
+Buying an older villa in Dubai? Once Form F is signed, walking away usually has a cost. Survey before, not after.
+
+Listing photos show fresh paint. They don't show the AC, the roof or the drains.
+
+Before you book a survey, ask the seller for:
+• The villa's age and major works
+• AC servicing records
+• Recent DEWA bills
+• Approvals for every extension or pool
+
+A high DEWA bill for the size of house can point to a tired AC system, poor insulation or a hidden leak.
+
+Gulf News has described an inspection contingency clause that lets the deal fall away if major issues can't be agreed. Ask a UAE lawyer and your agent how to word it.
+
+Agents and buyers: how often do you see a survey done before Form F?
+
+The full guide: link in the first comment 👇
+
+#DubaiRealEstate #DubaiVillas #DLD #PropertyBuying #VillaRenovation
+
+### 6 Dec — Three Cornish houses, filmed (UK build proof) (drafted and approved 25 Nov)
+Before Dubai, I spent 21 years building one-off houses in Cornwall. Three of them were filmed.
+
+• Quay House, St Mawes: curved, green-roofed, set into the trees
+• Sea Glass House, St Mawes: a replacement house on a steep plot
+• Owers House, Feock: two wings and a cantilever above the estuary
+
+As the builder, I learned where one-off houses go wrong: the junctions, the long-lead items and the decisions made too late.
+
+Steep plots, waterfronts, big spans. Dubai's villa plots raise the same questions in a different climate.
+
+That's the experience I now bring to the owner's side of the table in Dubai and Abu Dhabi.
+
+Architects and builders: on a one-off house, which is harder to get right, the structure or the finishes?
+
+The films: link in the first comment 👇
+
+#Cornwall #BespokeHomes #VillaConstruction #DubaiVillas #Architecture
+
+### 7 Dec — Living in your villa during the works (drafted and approved 25 Nov)
+Planning to live in your Dubai villa while it's renovated? Work can legally start at 6am.
+
+Gulf News, citing Dubai Municipality, gives permitted hours of 6am to 8pm on weekdays and 7am to 8pm at weekends.
+
+Staying in usually works for:
+• A kitchen only
+• One or two bathrooms
+• Pool and landscaping
+
+It gets hard with:
+• Rewiring or re-plumbing throughout
+• AC replacement in summer
+• New flooring in every room
+
+From the builder's side: if you're staying, the contractor must know before they price. Phasing, dust control and a working bathroom all cost money. Added later, they become variations.
+
+Contractors: would you rather price a villa with the family living in it, or empty?
+
+The full guide: link in the first comment 👇
+
+#DubaiVillas #VillaRenovation #DubaiMunicipality #HomeRenovation #DubaiLiving
+
+### 8 Dec — Villas built before 2014: the services (drafted and approved 25 Nov)
+Renovating a Dubai villa built before 2014? The real budget is behind the walls.
+
+Dubai Municipality's green building regulations became mandatory for all new buildings in March 2014. Older villas were built before them, and their services often show it.
+
+What a walk-round quote can't see:
+• The cable behind the sockets
+• The joints in the water pipes
+• The fall of the drains
+• The AC's real condition
+
+As the builder, the first thing I priced on any old house was the services. A tidy kitchen quote is worth little if day one of strip-out finds a corroded pipe run.
+
+Survey and open up before you tender. Then decide what to replace, not just repair.
+
+MEP contractors and consultants: what do you find more often in older villas, tired wiring or failing pipework?
+
+The full guide: link in the first comment 👇
+
+#DubaiVillas #VillaRenovation #DubaiMunicipality #MEP #ArabianRanches
+
+### 9 Dec — Emaar's NOC comes first (drafted and approved 25 Nov)
+Renovating in Arabian Ranches or Dubai Hills Estate? Emaar's approval comes before anything else.
+
+Emaar Community Management says any alteration to a villa must be approved by Emaar. That means a home modification NOC, requested on the community portal.
+
+The order I plan around:
+• Read the community guidelines
+• Design with a registered consultant
+• Emaar's NOC
+• Authority permit, if needed
+• The contractor's gate permit
+
+Get it out of order and the contractor waits at the gate, or work gets built that Emaar won't accept.
+
+And in Emirates Living, Emaar's guidance says external changes aren't permitted at all.
+
+Consultants and contractors: which holds you up more, the NOC or the gate permit?
+
+The full guide: link in the first comment 👇
+
+#Emaar #ArabianRanches #DubaiHills #VillaRenovation #DubaiVillas
+
+### 10 Dec — The six site visits that matter (drafted and approved 25 Nov)
+Building a villa in Dubai or Abu Dhabi? You don't need to be on site every week. You do need someone there six times.
+
+• Setting out
+• Before each major pour
+• First fix
+• Before walls are closed
+• The pre-handover walk
+• End of the defects period
+
+These are the points where a problem is still cheap to fix, and where the evidence disappears once the next trade covers it.
+
+As the builder, I knew which visits mattered. Clients who came before the plasterboard went on caught things that would have cost far more later.
+
+And tie every payment to work someone on your side has actually seen.
+
+Consultants and contractors: which of the six do owners miss most often?
+
+The full guide: link in the first comment 👇
+
+#DubaiVillas #VillaConstruction #AbuDhabi #DubaiMunicipality #ProjectManagement
+
+### 11 Dec — Ramadan 2027 in your programme (drafted and approved 25 Nov)
+Starting a villa build in Dubai early in 2027? Ramadan is expected to begin around 8 February. Is it in your contractor's programme?
+
+Three interruptions every Dubai programme should show:
+• Ramadan: working hours cut by two a day
+• The Eid holidays
+• The midday outdoor work break, 15 June to 15 September
+
+None of them stops a build. They cause trouble when a pour, a delivery or an approval lands in the wrong week.
+
+From the builder's side: plan Ramadan for work that depends on few outside parties. Finishes, joinery, second fix. Keep big pours and long-lead deliveries out of it.
+
+Ask to see these dates in the programme before you sign.
+
+Contractors: what slips more in Ramadan, deliveries or inspections?
+
+The full guide: link in the first comment 👇
+
+#DubaiConstruction #Ramadan #DubaiVillas #VillaConstruction #ProjectManagement
+
+### 12 Dec — Al Barari: the garden is the house (drafted and approved 25 Nov)
+Renovating in Al Barari? Budget for the garden as if it's part of the house. Here, it is.
+
+Published guides put landscaping at roughly AED 100 to 500 per sq ft of garden. Garden-led houses in Al Barari tend towards the upper end.
+
+In 2013, The National described plots at The Reserve of 30,000 to 75,000 sq ft. On plots like that, the outside can rival the inside.
+
+What I'd plan for:
+• Irrigation and drainage, early
+• Machine access that spares the planting
+• Pools and structures cleared first
+• Who maintains it afterwards
+
+From the builder's side: landscaping is usually priced last and cut first. On a plot like this, that's backwards.
+
+Landscape architects and builders: should the garden be designed before the house, or after?
+
+The full guide: link in the first comment 👇
+
+#AlBarari #DubaiVillas #VillaRenovation #Landscaping #LuxuryHomes
+
+### 13 Dec — Who on your team is paid only by you? (drafted and approved 25 Nov)
+Building a villa in Dubai? Count the people on your team who are paid only by you.
+
+The contractor earns more on variations. The designer is judged on how it looks. The registered consultant has duties to the authority. Each can be excellent and still not be on your side when interests part.
+
+An owner's representative is worth it when three things are true:
+• A lot of money is at stake
+• You can't give it the time
+• Nobody else answers only to you
+
+When none of them apply, you probably don't need one. I'd rather say that than sell it.
+
+If you're weighing it up for your own villa, message me.
+
+Owners, consultants and contractors: does an owner's rep make a project smoother, or add a layer?
+
+The full guide: link in the first comment 👇
+
+#OwnersRepresentative #DubaiVillas #VillaConstruction #DubaiRealEstate #ProjectManagement
+
+### 14 Dec — 131 decisions from plot to keys (drafted and approved 25 Nov)
+From plot to keys, a Dubai villa owner makes 131 decisions. Most plan for the first ten.
+
+I've mapped every one, stage by stage: plot, brief, design, approvals, tender, build, handover. For each, who decides, and what stays with you.
+
+The ones owners often leave too late:
+• Finishes and long-lead items
+• Who supplies what
+• The payment schedule
+• Who checks variations
+
+A late decision rarely costs much on its own. It costs the programme, and the programme costs money.
+
+As the builder, I saw more projects slip waiting on owner decisions than on anything we did on site.
+
+Contractors and architects: which decision do clients leave latest?
+
+The full guide: link in the first comment 👇
+
+#DubaiVillas #VillaConstruction #DubaiMunicipality #PlotToKeys #ProjectManagement
