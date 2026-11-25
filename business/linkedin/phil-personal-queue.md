@@ -177,6 +177,12 @@ Changed tonight (file only; LinkedIn still holds the old texts, see below):
 - **Not done:** the 26 Nov edit in LinkedIn's Scheduled list (no browser). Unless Phil edits it before 9:00 UAE, the old 26 Nov text posts. The next run with Chrome should edit whichever of 27 Nov–1 Dec is next.
 - Rules unchanged (no new evidence).
 
+
+### Live follow-up 25 Nov 2026 (~22:10 UAE, run by hand at Phil's request after the cloud run had no browser)
+- Chrome reached. 25 Nov contracts post at ~13h: 156 impressions, 92 reached, 54% out of network, 1 reaction, 1 comment, 1 repost, 1 save, 1 profile viewer; top industry construction 38%, senior 27%, Dubai 10%. 24 Nov authority post now 1,399 impressions.
+- LinkedIn Scheduled list EDITED to match this file: 26 Nov (checklist rewrite), 27, 28, 30 Nov and 1 Dec (two-way professional closing questions). Each showed "Post schedule updated". List re-checked: 19 posts, one a day 26 Nov to 14 Dec, all 5:00 AM.
+- Nightly task prompt fixed (25 Nov): it now enables/loads Claude in Chrome first, retries for ~8 min, and adds Eastbridge company-page figures from Windsor (linkedin_organic) as a backup signal.
+
 ## Schedule
 
 > Tracking (14 Nov): queued links now carry `?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily`. Post the link exactly as written. The LinkedIn app often strips the referrer, so without this Google Analytics files these visits under "direct" and we cannot see what LinkedIn brings. Use the same tag on any new link added to this queue.
@@ -196,7 +202,7 @@ Changed tonight (file only; LinkedIn still holds the old texts, see below):
 | 23 Nov | Mon | Owner's rep vs PM vs consultant | Full guide: https://eastbridgestrategicpartners.com/insights/owners-representative-vs-project-manager-vs-consultant/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (task ran late: link comment in ~10:15 UAE; reposted on Eastbridge page ~10:17 UAE, toast seen; 41 impr. at ~1h15m; https://www.linkedin.com/feed/update/urn:li:activity:7530495396998144000/) |
 | 24 Nov | Tue | Which authority covers my villa | Full guide: https://eastbridgestrategicpartners.com/insights/which-dubai-authority-covers-my-villa/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (task ran late: link comment in ~9:55 UAE; reposted on Eastbridge page ~9:56 UAE, toast seen; 178 impr., 2 reactions at ~55m; https://www.linkedin.com/feed/update/urn:li:activity:7530857764756152321/) |
 | 25 Nov | Wed | Contracts: variations and delays | Full guide: https://eastbridgestrategicpartners.com/insights/villa-construction-contracts-uae/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (link comment in ~9:07 UAE; reposted on Eastbridge page ~9:08 UAE, toast seen; 6 impr. at ~7m; https://www.linkedin.com/feed/update/urn:li:activity:7531220138071879680/) |
-| 26 Nov | Thu | Villa owner checklist | Free download: https://eastbridgestrategicpartners.com/guides/villa-owner-checklist/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (text rewritten in this file 25 Nov night; LinkedIn edit NOT done, no browser). Link-timing test: add the link comment at ~60 min |
+| 26 Nov | Thu | Villa owner checklist | Free download: https://eastbridgestrategicpartners.com/guides/villa-owner-checklist/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (text rewritten 25 Nov night; LinkedIn edited 25 Nov ~22:00 UAE). Link-timing test: add the link comment at ~60 min |
 | 27 Nov | Fri | Dubai Municipality over-design warning | Full guide: https://eastbridgestrategicpartners.com/insights/dubai-municipality-villa-over-design-warning/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued(scheduled in LinkedIn 20 Nov, 5:00 AM UK) |
 | 28 Nov | Sat | Changing a villa's layout: approvals | Full guide: https://eastbridgestrategicpartners.com/insights/changing-villa-layout-dubai-approvals/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 21 Nov, 5:00 AM UK) |
 | 29 Nov | Sun | Refresh, refit or full renovation | Full guide: https://eastbridgestrategicpartners.com/insights/refresh-refit-or-full-villa-renovation/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 22 Nov, 5:00 AM UK) |
@@ -459,7 +465,7 @@ Variations and delays, explained: link in the first comment 👇
 
 #DubaiVillas #ConstructionContracts #DubaiMunicipality #VillaConstruction #DubaiRealEstate
 
-### 26 Nov — pre-construction checklist (REWRITTEN 25 Nov nightly review; LinkedIn still holds the old text unless Phil edits it)
+### 26 Nov — pre-construction checklist (REWRITTEN 25 Nov nightly review; LinkedIn edited 25 Nov)
 Building a villa in Dubai or Abu Dhabi? I watched owners ask the right questions at the wrong stage. By then, the answers cost money.
 
 For 21 years I was the builder. We saw where budgets leak, and which questions owners rarely ask.
