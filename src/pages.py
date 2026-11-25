@@ -50,6 +50,7 @@ SVC_IMG = {
  # Renovation (the Nakheel NOC service) and plot due diligence use UAE library images (owner's decision, 5 Nov 2026);
  # the "From the builder's side" feature on each stays a UK project built by P Chapman Construction.
  "villa-renovation-project-management": ("uae-palm-jumeirah-02", ["uae-jumeirah-islands-02", "uae-palm-jumeirah-03", "uae-jumeirah-islands-03"], "menwinnion"),
+ "villa-extension-project-management": ("uae-arabian-ranches-02", ["uae-jumeirah-islands-04", "uae-arabian-ranches-03", "uae-al-barari-02"], "polgreen-manor"),
  "plot-due-diligence": ("uae-dubai-islands-01", ["uae-palm-jebel-ali-01", "uae-dubai-islands-02", "uae-island-e-03"], "saqqara"),
  "design-and-approvals": ("owers-house-01", ["owers-house-07", "owers-house-05", "the-lookout-04"], "owers-house"),
  "consultant-and-contractor-selection": ("gooden-heane-01", ["gooden-heane-02", "gooden-heane-03", "gooden-heane-05"], "gooden-heane"),

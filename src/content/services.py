@@ -117,7 +117,7 @@ SERVICES = [
   "scene": "You have three quotes for the same renovation and they do not compare. One leaves out the kitchen, one allows a round sum for the air conditioning, and the cheapest says nothing about the master developer's approval. We put all three into one table, line by line, so you can see what each price really covers before you choose.",
   "intro": """<p>A large share of Dubai's best villas are not new. They are fifteen or twenty-year-old houses on outstanding plots, waiting for a new layout, a new façade, a pool, an extension or a complete strip-out. Renovation can create a great deal of value. It also carries more unknowns than a new build, because nobody knows what is behind the walls until they come down.</p>
 <p>We start with what can be known: a condition survey arranged through the right specialists, the master developer's renovation rules and NOC requirements, and a realistic budget with a contingency set for the age of the house. Then we help you choose a contractor who is good at this kind of work, which is a different skill from building new.</p>
-<p>Planning a renovation? Our <a href="/insights/how-to-plan-a-villa-renovation-dubai/">step-by-step plan for a villa renovation in Dubai</a> links every renovation guide and tool we publish, from renovate or rebuild to snagging.</p>""",
+<p>Planning a renovation? Our <a href="/insights/how-to-plan-a-villa-renovation-dubai/">step-by-step plan for a villa renovation in Dubai</a> links every renovation guide and tool we publish, from renovate or rebuild to snagging. Moving walls or adding rooms? Read <a href="/insights/changing-villa-layout-dubai-approvals/">which layout changes need approval</a> first. Adding space? See <a href="/services/villa-extension-project-management/">villa extensions</a>.</p>""",
   "does": [
    "Condition review of the existing villa before design, arranged with the right specialists",
    "Master developer NOC and authority route coordinated with your consultant or contractor",
@@ -140,7 +140,46 @@ SERVICES = [
    ("How much does a villa renovation cost in Dubai?", "Published guides disagree. <a href=\"https://www.propertyfinder.ae/blog/villa-renovation-dubai/\" rel=\"noopener\">Property Finder</a> (September 2025) runs from about AED 250,000–400,000 for a three-bedroom townhouse refresh to AED 1.5–3.5 million or more for structural work on a luxury villa, while <a href=\"https://smartrenovation.ae/villa-renovation-in-dubai-complete-2026-guide-to-costs-timeline-permits/\" rel=\"nofollow noopener\">a Dubai renovation contractor's 2026 guide</a> (the publisher gives no sources) puts mid-range work at AED 400,000–800,000 and luxury from AED 1 million. Full strip-outs of large villas on prime plots go well beyond that. Our <a href=\"/insights/villa-renovation-cost-dubai/\">villa renovation cost guide</a> sets out a worked budget and the hidden costs in older villas."),
    ("Should I renovate or knock down and rebuild?", "It depends on the structure, the plot's current guidelines and how much of the existing house survives your brief. When more than about half the house is changing, the comparison is worth doing properly. We do it with real numbers."),
   ],
-  "related": ["owners-representative", "stalled-project-rescue", "snagging-and-handover"],
+  "related": ["villa-extension-project-management", "owners-representative", "stalled-project-rescue"],
+ },
+ {
+  "slug": "villa-extension-project-management",
+  "short": "Villa extensions",
+  "name": "Villa extension project management",
+  "title": "Villa Extension Dubai & Abu Dhabi | Eastbridge",
+  "description": "Planning a villa extension in Dubai or Abu Dhabi? Developer NOC, permit route, budget, contractor bids and site visits, managed from the owner's side.",
+  "h1": "Villa extensions in Dubai and Abu Dhabi, managed on your side",
+  "lede": "An extension is new structure tied to an old house. The developer's answer, the junction with the existing building and the capacity of the services decide what it really costs. We help you settle all three before you commit.",
+  "image": "polgreen-manor-01",
+  "stage": "Before design to handover",
+  "scene": "You want another bedroom suite and a bigger living room. One contractor says it is simple, another says the developer will never allow it, and nobody has looked at whether the air conditioning can cope. We start with a written answer from the developer and a look at the house, so the design is drawn for something that can be approved and built.",
+  "intro": """<p>Many villas in Dubai's established communities are on good plots but short of space for the family living in them. Extending can be the right answer. It is also one of the harder kinds of building work to get right, because the new structure has to work with a house that has stood for fifteen or twenty years.</p>
+<p>In a master community, the master developer decides first whether an extension is possible at all, and some developers charge for added floor area. The building permit then comes from Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits. In Abu Dhabi, minor works including extensions of up to 25 square metres can be permitted through TAMM by the contractor; larger extensions follow the full permit route.</p>
+<p>We work alongside your registered consultant and your contractor, from the first question to the developer through to handover. Our guide to <a href="/insights/villa-extension-dubai/">villa extensions in Dubai: approvals, rules and cost</a> sets out the rules and the budget items in detail.</p>""",
+  "does": [
+   "A written answer from the master developer on whether an extension is allowed, and any charge for added area, before design fees are spent",
+   "Condition review of the existing house, arranged with the right specialists: structure, roof and terraces, services capacity",
+   "Extend, renovate or rebuild comparison when the brief keeps growing",
+   "A budget built up from its parts, including the junction with the existing house and a contingency set for its age",
+   "Master developer NOC and authority permit tracked with your consultant",
+   "Help selecting a contractor and agreeing the contract, with bids compared like for like",
+   "Site visits, reporting and payment review through the works",
+   "Snagging and handover",
+  ],
+  "gets": [
+   "A clear answer on what is allowed before you pay for full designs",
+   "A budget that prices the connection to the old house, not just the new floor area",
+   "Bids you can compare on the same scope",
+   "Reports you can read from anywhere in the world",
+  ],
+  "builder_view": "In 21 years of extending houses, the defects we were called back for were nearly always at the junction: water where the new roof met the old wall, or a crack where new foundations met old ones. Designing and pricing that junction properly at the start costs far less than putting it right afterwards.",
+  "faqs": [
+   ("Do I need approval to extend my villa in Dubai?", "Yes. In a master community you need the master developer's no-objection certificate first, and because an extension adds built-up area it also needs a building permit from Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits. Your registered consultant prepares and submits the permit drawings. See our <a href=\"/insights/villa-extension-dubai/\">villa extension guide</a>."),
+   ("How much does a villa extension cost in Dubai?", "We have not found a reliable published rate for extensions, so we build the budget from its parts: the new construction, the connection to the existing house, services upgrades, finishes to match, design and approvals, any developer charge for added area, and a contingency. Our <a href=\"/tools/villa-build-cost-calculator/\">villa cost calculator</a> gives a sourced first range for new space."),
+   ("Should I extend or rebuild?", "An extension makes sense when the house is sound and the brief is mostly about space. When the brief grows towards new structure, services and finishes throughout, compare it with a rebuild on the same basis. Our <a href=\"/tools/renovate-or-rebuild/\">renovate-or-rebuild tool</a> is a starting point."),
+   ("When should we involve you?", "Before you commission full designs. The developer's answer and the condition of the house decide what is worth drawing, and that is where most of the cost of an extension is set."),
+  ],
+  "related": ["villa-renovation-project-management", "design-and-approvals", "consultant-and-contractor-selection"],
  },
  {
   "slug": "plot-due-diligence",
@@ -568,6 +607,16 @@ DELIVERABLES = {
   ("Decision log", "What you decided, when, and what it changed."),
   ("Snag list and close-out document list", "Defects tracked to close-out and the handover file checked item by item."),
  ],
+ "villa-extension-project-management": [
+  ("Developer position note", "What the master developer says about an extension on your villa, and any charge for added area, in writing."),
+  ("Condition summary", "Structure, roof and terraces and services capacity, from the specialists you appoint, in plain English."),
+  ("Budget build-up", "New construction, the junction with the existing house, services, finishes, approvals and contingency, line by line."),
+  ("Approvals tracker", "Master developer NOC and authority permit status, followed with your consultant."),
+  ("Normalised tender comparison", "Extension bids set out like-for-like."),
+  ("Site note after every visit", "Photographs, progress and anything found once the existing house is opened up."),
+  ("Payment-application review notes and variation register", "A recommendation before every payment, and every change logged."),
+  ("Snag list and close-out document list", "Defects tracked to close-out and the handover documents collected."),
+ ],
  "villa-renovation-project-management": [
   ("Condition summary", "What the specialists you appoint found, in plain English, and what it means for scope and budget."),
   ("Renovate-or-rebuild comparison", "Prepared where the numbers are close, on the same basis for both options."),
@@ -677,6 +726,7 @@ DELIVERABLES = {
 OUTCOMES = {
  "owners-representative": "One person on your side from brief to handover, so you always know where the cost, the programme and the decisions stand.",
  "villa-construction-project-management": "A design checked against your budget at every stage, a contractor chosen on like-for-like bids, and every payment and change reviewed before you approve it.",
+ "villa-extension-project-management": "An extension the developer has agreed in principle, priced with the junction to the old house included, before design and building start.",
  "villa-renovation-project-management": "A renovation scoped and priced on what the house actually needs, with the approvals route and the budget clear before work starts.",
  "plot-due-diligence": "A written answer on whether the plot suits the house you want, and what the whole project is likely to cost, before you commit.",
  "design-and-approvals": "A design checked against your brief and budget before it goes for approval, and the approvals your consultant submits tracked through to the permit.",
@@ -728,6 +778,7 @@ WA_TOPIC = {
  "owners-representative": "owner's representation for my villa",
  "villa-construction-project-management": "building a new villa",
  "villa-renovation-project-management": "renovating my villa",
+ "villa-extension-project-management": "extending my villa",
  "plot-due-diligence": "a plot review",
  "design-and-approvals": "the design and approvals for my villa",
  "consultant-and-contractor-selection": "choosing a consultant and contractor",

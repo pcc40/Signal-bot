@@ -690,7 +690,7 @@ def calculator():
          "citation": [u for k, _, u in SOURCES if k not in NOFOLLOW]},
         B.faq_schema(FAQS),
     ]
-    B.page(CALC_PATH, "Villa Build Cost Calculator: Dubai & Abu Dhabi | Eastbridge",
+    B.page(CALC_PATH, "Villa Build & Renovation Cost Calculator: Dubai, Abu Dhabi",
            "Estimate the cost to build or renovate a villa in Dubai or Abu Dhabi: low, likely and high totals with fees, approvals, contingency and timeline, all sourced.",
            body, crumbs, schema)
 

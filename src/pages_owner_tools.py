@@ -354,7 +354,7 @@ def rr_out(e):
 {rr_table("nb", RR_NEW_LINES, e, "Knock down and rebuild")}
 <h3 class="calc-h">Approvals</h3>
 <ul class="tool-approvals">
-<li><b>Renovate.</b> Cosmetic work often needs no permit, though your master developer may still require an NOC. Structural changes, extensions, façade changes and a new pool need the master developer's NOC and a permit from Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits.</li>
+<li><b>Renovate.</b> Cosmetic work often needs no permit, though your master developer may still require an NOC. Structural changes, <a href="/insights/villa-extension-dubai/">extensions</a>, façade changes and a new pool need the master developer's NOC and a permit from Dubai Municipality, Trakhees or the Dubai Development Authority, depending on where your plot sits.</li>
 <li><b>Rebuild.</b> Approval to demolish, then the full sequence for a new villa: design to the current Dubai Building Code, authority NOCs, the building permit, staged inspections and a completion certificate before connection.</li>
 </ul>
 <p class="calc-note calc-js" data-js-note>Showing the example below. Switch on JavaScript to change the inputs.</p>

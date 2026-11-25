@@ -107,4 +107,4 @@ An extension makes sense when the house is sound and the brief is mostly about s
 
 ## How we help
 
-We represent the owner from the first question to the developer through to handover. We help you get a clear answer on what is allowed, review the condition survey with you, keep the design within a realistic budget, compare contractor bids like for like and make independent site visits to record progress and quality, alongside your registered consultant and the contractor. See [villa renovation and extension project management](/services/villa-renovation-project-management/) or [contact us](/contact/) to talk through your plans.
+We represent the owner from the first question to the developer through to handover. We help you get a clear answer on what is allowed, review the condition survey with you, keep the design within a realistic budget, compare contractor bids like for like and make independent site visits to record progress and quality, alongside your registered consultant and the contractor. See [villa extension project management](/services/villa-extension-project-management/) or [contact us](/contact/) to talk through your plans.

@@ -27,6 +27,7 @@ TOPIC = {
     "contractor-quote-review-villa-dubai": ("consultant-and-contractor-selection", "emirates-hills"),
     "nakheel-noc-villa-renovation": ("villa-renovation-project-management", "palm-jumeirah"),
     "owners-representative-vs-project-manager-vs-consultant": ("owners-representative", "palm-jumeirah"),
+    "villa-extension-dubai": ("villa-extension-project-management", "jumeirah-islands"),
     "palm-jumeirah-villa-renovation": ("villa-renovation-project-management", "palm-jumeirah"),
     "renovate-or-rebuild-villa-dubai": ("villa-renovation-project-management", "jumeirah-islands"),
     "sourcing-materials-abroad-dubai-villa": ("materials-and-specialist-sourcing", "al-barari"),

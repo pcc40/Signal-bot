@@ -427,7 +427,7 @@ def header(path):
     cur = ' aria-current="page"'
     def a(n, p):
         return f'<li><a href="{p}"{cur if path.startswith(p) else ""}>{n}</a></li>'
-    col1 = ["owners-representative", "villa-construction-project-management", "villa-renovation-project-management", "plot-due-diligence", "materials-and-specialist-sourcing", "overseas-owners", "development-advisory"]
+    col1 = ["owners-representative", "villa-construction-project-management", "villa-renovation-project-management", "villa-extension-project-management", "plot-due-diligence", "materials-and-specialist-sourcing", "overseas-owners", "development-advisory"]
     col2 = ["design-and-approvals", "consultant-and-contractor-selection", "cost-and-programme-control", "site-visits-and-reporting", "variations-delays-and-claims", "stalled-project-rescue", "snagging-and-handover"]
     l1 = "".join(f'<li><a href="/services/{s}/">{esc(S[s]["short"])}</a></li>' for s in col1)
     l2 = "".join(f'<li><a href="/services/{s}/">{esc(S[s]["short"])}</a></li>' for s in col2)
