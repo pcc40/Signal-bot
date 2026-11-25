@@ -160,14 +160,14 @@ Tomorrow's post (25 Nov, contracts) rewritten to the pattern: concrete builder's
 | 22 Nov | Sun | Choosing a contractor | Full guide: https://eastbridgestrategicpartners.com/insights/how-to-choose-a-villa-contractor-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (link comment in ~9:08 UAE; reposted on Eastbridge page ~9:09 UAE, toast seen; 12 impr. at ~10m; https://www.linkedin.com/feed/update/urn:li:activity:7530132983903596544/) |
 | 23 Nov | Mon | Owner's rep vs PM vs consultant | Full guide: https://eastbridgestrategicpartners.com/insights/owners-representative-vs-project-manager-vs-consultant/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (task ran late: link comment in ~10:15 UAE; reposted on Eastbridge page ~10:17 UAE, toast seen; 41 impr. at ~1h15m; https://www.linkedin.com/feed/update/urn:li:activity:7530495396998144000/) |
 | 24 Nov | Tue | Which authority covers my villa | Full guide: https://eastbridgestrategicpartners.com/insights/which-dubai-authority-covers-my-villa/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (task ran late: link comment in ~9:55 UAE; reposted on Eastbridge page ~9:56 UAE, toast seen; 178 impr., 2 reactions at ~55m; https://www.linkedin.com/feed/update/urn:li:activity:7530857764756152321/) |
-| 25 Nov | Wed | Contracts: variations and delays | Full guide: https://eastbridgestrategicpartners.com/insights/villa-construction-contracts-uae/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 25 Nov | Wed | Contracts: variations and delays | Full guide: https://eastbridgestrategicpartners.com/insights/villa-construction-contracts-uae/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (link comment in ~9:07 UAE; reposted on Eastbridge page ~9:08 UAE, toast seen; 6 impr. at ~7m; https://www.linkedin.com/feed/update/urn:li:activity:7531220138071879680/) |
 | 26 Nov | Thu | Villa owner checklist | Free download: https://eastbridgestrategicpartners.com/guides/villa-owner-checklist/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
 | 27 Nov | Fri | Dubai Municipality over-design warning | Full guide: https://eastbridgestrategicpartners.com/insights/dubai-municipality-villa-over-design-warning/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued(scheduled in LinkedIn 20 Nov, 5:00 AM UK) |
 | 28 Nov | Sat | Changing a villa's layout: approvals | Full guide: https://eastbridgestrategicpartners.com/insights/changing-villa-layout-dubai-approvals/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 21 Nov, 5:00 AM UK) |
 | 29 Nov | Sun | Refresh, refit or full renovation | Full guide: https://eastbridgestrategicpartners.com/insights/refresh-refit-or-full-villa-renovation/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 22 Nov, 5:00 AM UK) |
 | 30 Nov | Mon | Changing a villa's exterior | Full guide: https://eastbridgestrategicpartners.com/insights/villa-exterior-changes-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 23 Nov, 5:00 AM UK) |
 | 1 Dec | Tue | Springs, Meadows and Lakes renovation | Full guide: https://eastbridgestrategicpartners.com/insights/springs-meadows-lakes-villa-renovation/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 24 Nov, 5:00 AM UK) |
-| 2 Dec | Wed | Renovating a villa in Abu Dhabi | Full guide: https://eastbridgestrategicpartners.com/insights/villa-renovation-abu-dhabi/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued |
+| 2 Dec | Wed | Renovating a villa in Abu Dhabi | Full guide: https://eastbridgestrategicpartners.com/insights/villa-renovation-abu-dhabi/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 25 Nov, 5:00 AM UK) |
 
 Queue check 16 Nov: 10 posts scheduled in LinkedIn, 17–26 Nov, all at 5:00 AM UK.
 Queue check 17 Nov: 9 posts scheduled, 18–26 Nov, all at 5:00 AM UK; next 7 days covered, nothing added or changed. Company-page repost still not done by the daily task (prompt says do not repost). Company-page repost not done by the daily task (its prompt says "do not repost"); flagged to Phil.
@@ -184,6 +184,8 @@ Queue check 22 Nov (~9:10 UAE): 6 posts scheduled, 23–28 Nov, all at 5:00 AM U
 Queue check 23 Nov (task fired ~10:07 UAE, late): today's post went out at 9:00 with no link comment; link comment added ~10:15 UAE and reposted on the Eastbridge page (toast seen). 20–22 Nov confirmed on the page's published list. 6 posts scheduled, 24–29 Nov, all at 5:00 AM UK; added 30 Nov (exterior changes, text as drafted below; page 200, facts checked against the article) at 5:00 AM UK. "Post scheduled" toast seen; Scheduled tab shows 7, 24–30 Nov. Impressions at ~10:15 UAE: 23 Nov 41 (~1h15m), 22 Nov contractor 178, 21 Nov kitchen 306, 20 Nov op-ed 190, 20 Nov defects 97, 19 Nov calculator 9,563 (boosted), 18 Nov 129. Followers 456.
 
 Queue check 24 Nov (task fired ~9:54 UAE, late): today's post went out at 9:00; link comment added ~9:55 UAE and reposted on the Eastbridge page (toast seen); 22 and 23 Nov confirmed on the page's published list. 6 posts scheduled, 25–30 Nov, all at 5:00 AM UK; added 1 Dec (Springs/Meadows/Lakes, text as drafted below; page 200, facts checked against the article) at 5:00 AM UK. Scheduled tab shows 7, 25 Nov–1 Dec. Impressions at ~9:55 UAE: 24 Nov 178 (~55m, best early start so far), 23 Nov 108, 22 Nov 184, 21 Nov kitchen 333, 20 Nov op-ed 193, 20 Nov defects 98, 19 Nov calculator 9,628 (boosted), 18 Nov 130, 17 Nov 183, 16 Nov 132, 15 Nov 465. Followers 474.
+
+Queue check 25 Nov (~9:05 UAE, on time): today's post live at 9:00; link comment added ~9:07 UAE (posting as Philip Chapman); reposted on the Eastbridge page ~9:08 UAE (toast seen), actor switched back to Philip Chapman afterwards; 22–24 Nov confirmed on the page's published list. 6 posts scheduled, 26 Nov–1 Dec, all at 5:00 AM UK; added 2 Dec (Abu Dhabi renovation; page 200, facts checked against the article) at 5:00 AM UK, closing question changed to the 24 Nov rule ("Worked on villas in both emirates? Which approvals route was quicker?"). "Post scheduled" toast seen; Scheduled tab shows 7, 26 Nov–2 Dec. Followers 502.
 
 24 Nov follow-up (~23:00 UAE, Phil said it was better received): which-authority post at 1,063 impr. (NOT boosted: Phil tried a free-credit boost but it never ran; Boost tab shows £0.00 of £40.00 spent, so all reach is organic), 784 reached, 91% out of network, 3 reactions / 5 comments / 1 repost, 4 profile viewers, 0 followers; Senior 37%, Construction 24%, top location Dubai 11%, top job title Project Manager.
 
@@ -527,7 +529,7 @@ The full guide: link in the first comment 👇
 
 #DubaiVillas #TheSprings #TheMeadows #VillaRenovation #Emaar
 
-### 2 Dec — renovating in Abu Dhabi
+### 2 Dec — renovating in Abu Dhabi (as scheduled 25 Nov)
 Renovating a villa in Abu Dhabi? Don't assume Dubai's rules apply.
 
 Abu Dhabi's Department of Municipalities and Transport sets the rules, and permits run through TAMM. Since August 2025, contractors can get approval directly for defined minor works:
@@ -540,7 +542,7 @@ Structural work and larger extensions still need a full permit through a registe
 
 From the builder's side: when the contractor holds the paperwork, someone on the owner's side should check the approved scope matches what you're paying for.
 
-Renovated in both emirates? What surprised you?
+Worked on villas in both emirates? Which approvals route was quicker?
 
 The full guide: link in the first comment 👇
 
