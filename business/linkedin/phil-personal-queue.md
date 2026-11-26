@@ -184,6 +184,42 @@ Changed tonight (file only; LinkedIn still holds the old texts, see below):
 - LinkedIn Scheduled list EDITED to match this file: 26 Nov (checklist rewrite), 27, 28, 30 Nov and 1 Dec (two-way professional closing questions). Each showed "Post schedule updated". List re-checked: 19 posts, one a day 26 Nov to 14 Dec, all 5:00 AM.
 - Nightly task prompt fixed (25 Nov): it now enables/loads Claude in Chrome first, retries for ~8 min, and adds Eastbridge company-page figures from Windsor (linkedin_organic) as a backup signal.
 
+## Nightly review 26 Nov 2026 (~22:00 UAE, automated; NO live LinkedIn data)
+
+Claude in Chrome was not reachable from this cloud run (no browser tools after 4 retries, 21:48–21:57 UAE), so no post analytics, Boost tab or comments were read and nothing was edited in LinkedIn. Personal-post figures are the latest in this file. "Eastbridge page" = impressions of the page's own post on the same topic, from Windsor (linkedin_organic, account 146962089, pulled 26 Nov ~21:50 UAE); Windsor does not report the page's reposts of Phil's posts, so "–" means the page only reposted (or nothing in Windsor yet).
+
+| Posted | Topic | Impr. | Reached | Out-of-network | React. | Comments | Link comment | Eastbridge page |
+|---|---|---|---|---|---|---|---|---|
+| 26 Nov | Villa owner checklist | 18 at ~12h | 9 | 26% | 0 | 0 real | ~5h (by hand) | page ran its own checklist post (not yet in Windsor) |
+| 25 Nov | Contracts: variations and delays | 176 at ~1d | 99 | 51% | 1 | 1 | ~7 min | 13 (page's own "sourcing" post that day, Do-not-use topic) |
+| 24 Nov | Which authority approves your villa | 1,399 | 790+ | 91% | 3 | 5 | ~55 min | 38 |
+| 23 Nov | Owner's rep vs PM vs consultant | 125 | 80 | 60% | 0 | 1 | ~75 min | – |
+| 22 Nov | Three bids: take the lowest? | 203 | 108 | 50% | 1 | 4 | ~8 min | – (1 page impr. that day) |
+| 21 Nov | Kitchen & bathroom costs | 362 | 216 | 67% | 2 | 4 | ~60 min | – |
+| 20 Nov | Defects liability period | 103 | 40 | 36% | 0 | 1 | ~10 min | – |
+| 20 Nov | Construction Week op-ed (2nd post) | 193 | – | – | – | – | in body | 41 |
+| 19 Nov | Calculator embed (boosted, excluded) | 9,628 | – | – | 49 | 3 | ~7 min | 20 |
+| 18 Nov | Building from the UK | 134 | 66 | 42% | 1 | 1 | ~8 min | 18 |
+| 17 Nov | Renovate or rebuild | 187 | 83 | 40% | 1 | 1 | ~3 min | 18 |
+| 16 Nov | Renovation mistakes | 136 | 57 | 31% | 1 | 1 | ~47 min | – |
+| 15 Nov | Plot checks | 472 | 220 | 55% | 0 | 5 | – | – |
+| 14 Nov | How long to build | 224 | 53 | 21% | 0 | 1 | – | – |
+| 13 Nov | Stalled build | 465 | 245 | 67% | 4 | 6 | – | – |
+
+Organic average 12–25 Nov (13 posts, boosted excluded): ~290 impressions, ~160 reached. Eastbridge page: 0–47 impressions a day over 13–24 Nov, 10 organic followers gained in 14 days; its own posts reach 13–41, far below Phil's.
+
+Takeaways:
+1. 26 Nov checklist: 18 impressions at 12h, about 6% of the average and the worst result so far. Second time a checklist/download post has stayed in network (12 Nov snagging 107, 4% out of network). A rewrite to the 24 Nov pattern did not rescue it. Confounders: the link went in ~5h late, and the account hit a sign-in security check that morning. The rule "no checklist/download posts unless Phil asks" (26 Nov) stands.
+2. 25 Nov contracts (first full-pattern post): 176 at ~1d, below average. Concrete first line and two-way question alone don't lift a post; the winners also carry a local authority or AED figure *and* a "you may be wrong before you commit" angle (24 Nov authority, 21 Nov AED spread, 15 Nov plot deposit). To test.
+3. Link-timing test (to test, not proven): early link (~3–10 min), 17, 18, 20, 22, 25 Nov, average ~161 impressions; late link (~47–75 min), 16, 21, 23, 24 Nov, average ~425 (median ~249). 26 Nov (~5h) is left out because of the checklist topic and the account issue. Keep alternating: 27 Nov link at ~5 min, 28 Nov at ~60 min.
+4. Second-signal check: the Eastbridge page's own posts never reached more than 41 impressions in 14 days, so all meaningful reach comes from Phil's profile. That is consistent with the 26 Nov rule against direct page posts.
+
+Changed tonight (file only; LinkedIn NOT edited, no browser):
+- 27 Nov (tomorrow): left as Phil rewrote and scheduled it this evening (already to the pattern; LinkedIn edited 26 Nov ~21:30 UAE).
+- 29 Nov rewritten: it broke two rules (abstract first line; closing question only owners could answer). Old first line "Does your villa need a refresh, a refit or a full renovation? The house usually decides, not the brief." → new "AED 120 per sq ft, or AED 450 and up? Published Dubai renovation rates cover both." Short builder's-side bullets (drainage, wiring, waterproofing found at strip-out); two-way question for professionals ("what turns up first, old wiring or failed waterproofing?"); #AbuDhabi → #Emaar as the local tag; 131 words. Every figure and claim checked against the page (200). **LinkedIn still holds the 22 Nov text**: edit it before 29 Nov 5:00 AM UK, or leave the old text to post.
+- 28 Nov, 30 Nov, 1 Dec and 2 Dec checked against the rules: no change (concrete local first line, short bullets, two-way professional question, local hashtag). All four pages returned 200.
+- Rules unchanged. The checklist rule was already added on 26 Nov; the evidence now covers two posts (12 and 26 Nov).
+
 ## Schedule
 
 > Tracking (14 Nov): queued links now carry `?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily`. Post the link exactly as written. The LinkedIn app often strips the referrer, so without this Google Analytics files these visits under "direct" and we cannot see what LinkedIn brings. Use the same tag on any new link added to this queue.
@@ -206,7 +242,7 @@ Changed tonight (file only; LinkedIn still holds the old texts, see below):
 | 26 Nov | Thu | Villa owner checklist | Free download: https://eastbridgestrategicpartners.com/guides/villa-owner-checklist/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Scheduled for 9:00 UAE (not verified). Daily task ~9:05 UAE could NOT add the link comment or the Eastbridge repost: Browser 1 was signed out of LinkedIn and stopped at a reCAPTCHA security check; Browser 2 is signed in to a different, empty "Philip Chapman" account (philip-chapman-9a9258449, 0 followers). Phil to sign in and add both by hand. Link-timing test: add the link comment at ~60 min |
 | 27 Nov | Fri | Dubai Municipality over-design warning | Full guide: https://eastbridgestrategicpartners.com/insights/dubai-municipality-villa-over-design-warning/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (rewritten with Phil 26 Nov evening; LinkedIn edited 26 Nov, 5:00 AM UK) |
 | 28 Nov | Sat | Changing a villa's layout: approvals | Full guide: https://eastbridgestrategicpartners.com/insights/changing-villa-layout-dubai-approvals/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 21 Nov, 5:00 AM UK) |
-| 29 Nov | Sun | Refresh, refit or full renovation | Full guide: https://eastbridgestrategicpartners.com/insights/refresh-refit-or-full-villa-renovation/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 22 Nov, 5:00 AM UK) |
+| 29 Nov | Sun | Refresh, refit or full renovation | Full guide: https://eastbridgestrategicpartners.com/insights/refresh-refit-or-full-villa-renovation/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 22 Nov, 5:00 AM UK). Text REWRITTEN in this file 26 Nov nightly review; LinkedIn NOT edited (no browser): edit before 29 Nov 5:00 AM UK |
 | 30 Nov | Mon | Changing a villa's exterior | Full guide: https://eastbridgestrategicpartners.com/insights/villa-exterior-changes-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 23 Nov, 5:00 AM UK) |
 | 1 Dec | Tue | Springs, Meadows and Lakes renovation | Full guide: https://eastbridgestrategicpartners.com/insights/springs-meadows-lakes-villa-renovation/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 24 Nov, 5:00 AM UK) |
 | 2 Dec | Wed | Renovating a villa in Abu Dhabi | Full guide: https://eastbridgestrategicpartners.com/insights/villa-renovation-abu-dhabi/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 25 Nov, 5:00 AM UK) |
@@ -536,25 +572,28 @@ Who approves what: link in the first comment 👇
 
 #DubaiVillas #VillaRenovation #DubaiRealEstate #Nakheel #Emaar
 
-### 29 Nov — refresh, refit or full renovation (as scheduled 22 Nov)
-Does your villa need a refresh, a refit or a full renovation? The house usually decides, not the brief.
+### 29 Nov — refresh, refit or full renovation (REWRITTEN 26 Nov nightly review; LinkedIn NOT edited, still holds the 22 Nov text)
+AED 120 per sq ft, or AED 450 and up? Published Dubai renovation rates cover both. On a villa, your finishes rarely decide which one you pay. The house does.
 
 A refresh changes surfaces. A refit replaces rooms and fittings. A full renovation renews the services behind the walls, and often the layout.
 
-The questions I'd ask first, after 21 years pricing these jobs:
+For 21 years I was the builder. The jobs that ran away usually started as refits. Then the strip-out found:
 
-• Are the air-conditioning, wiring and pipes near the end of their life?
-• Is the waterproofing sound?
-• Does the layout work for how you live?
-• How long will you keep the villa?
+• Failed drainage
+• Wiring that wouldn't pass
+• Tired waterproofing
 
-The most expensive outcome is the half-way house: new kitchens and bathrooms in front of old pipes and wiring that will need replacing within a few years.
+Each one priced as a variation, with the crew waiting.
 
-Which did you start as, and which did you end up doing?
+The fix: a survey with some opening-up before you choose the level, not after the strip-out.
+
+Contractors and owners: when the walls open, what turns up first, old wiring or failed waterproofing?
 
 How to decide: link in the first comment 👇
 
-#DubaiVillas #VillaRenovation #DubaiRealEstate #AbuDhabi #ProjectManagement
+#DubaiVillas #VillaRenovation #DubaiRealEstate #Emaar #ProjectManagement
+
+(Old LinkedIn text, 22 Nov, first line: "Does your villa need a refresh, a refit or a full renovation? The house usually decides, not the brief." Closing question "Which did you start as, and which did you end up doing?". Same link and label.)
 
 ### 30 Nov — changing a villa's exterior
 Planning a new façade for your Dubai villa? Check whether you're allowed to change it at all.
