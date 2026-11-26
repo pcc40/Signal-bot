@@ -92,7 +92,7 @@ Many older villas have been extended or altered over the years: an enclosed terr
 
 Why it matters to a buyer:
 
-- **Transfer.** In a case published by fäm Properties, a villa with an older pool needed new drawings and approvals from Dubai Municipality and the developer before the NOC for sale and transfer could be issued. The approvals took about four weeks.
+- **Transfer.** In a case published by fäm Properties, a villa with an older pool needed new drawings and approvals from Dubai Municipality and the developer before the NOC for sale and transfer could be issued. The approvals took about four weeks. If you are on the other side of the sale, our guide to [renovating a villa to sell](/insights/renovating-villa-to-sell-dubai/) covers what to fix and check before listing.
 - **Your future plans.** If you plan to renovate, the community will look at the villa as it stands. Unapproved work found then is yours to resolve.
 - **Quality.** Work done without approval was also done without inspection, so it deserves a closer look in the survey.
 

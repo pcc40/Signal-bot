@@ -167,7 +167,7 @@ Living in the villa during the works rarely saves money once services, waterproo
 - **Decide early, order early.** Finishes and long-lead items fixed before work starts protect the programme.
 - **Read the contract.** See [villa construction contracts in the UAE](/insights/villa-construction-contracts-uae/), and take advice from a UAE-qualified lawyer.
 
-The mistakes that push renovations over budget are surprisingly consistent; we set out the seven we saw most often as the contractor in [villa renovation mistakes, from the builder's side](/insights/villa-renovation-mistakes-dubai/).
+The mistakes that push renovations over budget are surprisingly consistent; we set out the seven we saw most often as the contractor in [villa renovation mistakes, from the builder's side](/insights/villa-renovation-mistakes-dubai/). If you are renovating to sell, our guide to [where the budget should go before a sale](/insights/renovating-villa-to-sell-dubai/) sets out what buyers pay for and what they replace.
 
 If the scope keeps growing towards new structure, a new envelope and full services replacement, stop and price a rebuild properly alongside it. Our [Palm Jumeirah renovation guide](/insights/palm-jumeirah-villa-renovation/) covers that decision and the approvals sequence, and our guide to [what it costs to build a villa in Dubai](/insights/villa-construction-cost-dubai/) gives the new-build comparison.
 

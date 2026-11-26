@@ -38,7 +38,7 @@
 # Section 3.8 also asks for a critical / major / minor defect-severity scheme in /insights/villa-snagging-checklist-dubai/ (do it once, with the snagging tables).
 # Section 3.12 (not a new article): add a Palm Jumeirah owner briefing (Villa Status Report, buying additional area, roof-level restrictions) to /insights/palm-jumeirah-villa-renovation/; figures only if confirmed from Nakheel documents.
 # Moved up: competitors already rank for these.
-- [ ] renovating-villa-to-sell-dubai | Renovating a Dubai villa to sell: where the budget should go | villa renovation roi dubai | what buyers pay for versus owner taste; no promised returns
+- [x] renovating-villa-to-sell-dubai | Renovating a Dubai villa to sell: where the budget should go | villa renovation roi dubai | what buyers pay for versus owner taste; no promised returns
 - [ ] design-fees-villa-dubai | Villa design fees in Dubai: what's normal | villa design fees dubai | scope gaps between design packages
 # Added from the competitor brief, lower priority.
 - [x] dubai-construction-calendar-villa-programme | The Dubai construction calendar and your villa programme | construction working hours ramadan dubai | Ramadan hours, the midday break 15 June to 15 September (cite MoHRE), Eid; merges summer-midday-break-villa-programme

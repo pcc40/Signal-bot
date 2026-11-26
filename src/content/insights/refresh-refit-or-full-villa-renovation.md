@@ -48,7 +48,7 @@ The house, more than the brief. Four questions settle most cases:
 1. **Are the services near the end of their life?** Air-conditioning, wiring and boards, water pipes and drainage. If they are, a refit puts new rooms in front of systems that will fail behind them. Our guide to [rewiring and replumbing an older Dubai villa](/insights/older-villa-mep-renovation/) explains what to check.
 2. **Is the envelope sound?** Roof and terrace waterproofing, wet areas, windows and sealants. Leaks undo finishes.
 3. **Does the layout work for the way you live?** If it does, a refit can deliver most of what you want. If it does not, you are in full-renovation territory, with structural advice and approvals.
-4. **How long will you keep the villa?** A short hold argues for doing less, well. A long hold argues for renewing what is ageing while the house is open.
+4. **How long will you keep the villa?** A short hold argues for doing less, well. A long hold argues for renewing what is ageing while the house is open. If you are renovating to sell, see [where the budget should go before a sale](/insights/renovating-villa-to-sell-dubai/).
 
 If the answers point to the structure, the services and the layout all at once, the question may no longer be which renovation but whether to renovate at all. Our guide to [renovating or rebuilding](/insights/renovate-or-rebuild-villa-dubai/) works through that decision.
 
