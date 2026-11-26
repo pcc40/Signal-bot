@@ -7,3 +7,9 @@ Phil asked on 25 Nov to grow the network with more high-net-worth connections, l
 - **Chairmen, CEOs, founders and investors (11):** Abdulaziz Al Sarawi, Saad Al Janabi, Francois Tarabay, Lara Arab, Feras Kalthoum, Julia Zaikina, Marie-Laure El Halaissi Faoro, Alaric Errington, Anissa Boulahya, Umer S. (villa investor), Konstantin H.
 
 Total over 24–25 Nov: 64. LinkedIn caps invitations at about 100–200 a week, so wait until about 28 Nov before the next batch.
+
+## Acceptance check, 26 Nov 2026 (~9:40 UAE)
+
+- 25 Nov batch: 6 of 38 accepted. Neil Cabral, Tamour Pervez and Sabine Waltner accepted on 25 Nov. Kishan Mashru, Wissam Kafsi and Anissa Boulahya accepted on 26 Nov. 31 are still pending. Matein Khalid is in neither list (possibly withdrawn or shown under another name).
+- 24 Nov batch: names were not recorded. 25 invitations sent "2 days ago" are still pending, which suggests about 1 of 26 accepted. This is not confirmed by name.
+- Sent tab: 172 pending in total, the oldest from 3 weeks ago. Connections: 441.
