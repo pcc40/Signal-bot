@@ -18,6 +18,7 @@ Link goes in the **first comment**, added by the scheduled task at ~9:04 am UAE.
 - (24 Nov) Closing question: a two-way choice or a one-line experience question that architects, contractors, agents AND owners can answer. Not owner-only.
 - (24 Nov) Bullets short (2–8 words where possible); body 110–160 words. Include one local hashtag (e.g. #DubaiMunicipality, #Emaar, #Nakheel) in the five.
 - (24 Nov) Keep post-handover and checklist topics rare (max one a week).
+- **No direct Eastbridge page posts (Phil, 26 Nov):** the Eastbridge Strategic Partners page carries ONLY instant reposts of Phil's personal posts. No session, scheduled task, connector (Windsor linkedin_organic create_post, Typefully, n8n) or LinkedIn page scheduler may write, schedule or publish a post as the page. If you find one queued in the page's "View all scheduled posts", leave it and tell Phil.
 - **Company page repost (Phil, 16 Nov):** every personal post is also reposted on the Eastbridge Strategic Partners page the same morning. After the link comment is in: on today's post, click "Switch to different account" (the avatar ▾ under the post) → select Eastbridge Strategic Partners → Save → Repost → "Repost instantly"; check the "Repost successful" toast. Never pick DealDeed. Never "Repost with thoughts". Report it in the push.
 
 ## Profile and pages (updated 16 Nov 2026, Premium trial to ~16 Dec)
@@ -203,7 +204,7 @@ Changed tonight (file only; LinkedIn still holds the old texts, see below):
 | 24 Nov | Tue | Which authority covers my villa | Full guide: https://eastbridgestrategicpartners.com/insights/which-dubai-authority-covers-my-villa/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (task ran late: link comment in ~9:55 UAE; reposted on Eastbridge page ~9:56 UAE, toast seen; 178 impr., 2 reactions at ~55m; https://www.linkedin.com/feed/update/urn:li:activity:7530857764756152321/) |
 | 25 Nov | Wed | Contracts: variations and delays | Full guide: https://eastbridgestrategicpartners.com/insights/villa-construction-contracts-uae/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Posted (link comment in ~9:07 UAE; reposted on Eastbridge page ~9:08 UAE, toast seen; 6 impr. at ~7m; https://www.linkedin.com/feed/update/urn:li:activity:7531220138071879680/) |
 | 26 Nov | Thu | Villa owner checklist | Free download: https://eastbridgestrategicpartners.com/guides/villa-owner-checklist/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Scheduled for 9:00 UAE (not verified). Daily task ~9:05 UAE could NOT add the link comment or the Eastbridge repost: Browser 1 was signed out of LinkedIn and stopped at a reCAPTCHA security check; Browser 2 is signed in to a different, empty "Philip Chapman" account (philip-chapman-9a9258449, 0 followers). Phil to sign in and add both by hand. Link-timing test: add the link comment at ~60 min |
-| 27 Nov | Fri | Dubai Municipality over-design warning | Full guide: https://eastbridgestrategicpartners.com/insights/dubai-municipality-villa-over-design-warning/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued(scheduled in LinkedIn 20 Nov, 5:00 AM UK) |
+| 27 Nov | Fri | Dubai Municipality over-design warning | Full guide: https://eastbridgestrategicpartners.com/insights/dubai-municipality-villa-over-design-warning/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (rewritten with Phil 26 Nov evening; LinkedIn edited 26 Nov, 5:00 AM UK) |
 | 28 Nov | Sat | Changing a villa's layout: approvals | Full guide: https://eastbridgestrategicpartners.com/insights/changing-villa-layout-dubai-approvals/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 21 Nov, 5:00 AM UK) |
 | 29 Nov | Sun | Refresh, refit or full renovation | Full guide: https://eastbridgestrategicpartners.com/insights/refresh-refit-or-full-villa-renovation/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 22 Nov, 5:00 AM UK) |
 | 30 Nov | Mon | Changing a villa's exterior | Full guide: https://eastbridgestrategicpartners.com/insights/villa-exterior-changes-dubai/?utm_source=linkedin&utm_medium=social&utm_campaign=phil-daily | Queued (scheduled in LinkedIn 23 Nov, 5:00 AM UK) |
@@ -243,6 +244,8 @@ Queue check 25 Nov (~9:05 UAE, on time): today's post live at 9:00; link comment
 Queue check 26 Nov (~9:05 UAE): NOT DONE. LinkedIn unreachable as Phil: Browser 1 (fddc85a8…) signed out and blocked by a reCAPTCHA "quick security check" on sign-in (not attempted); Browser 2 (78b31cb7…) is logged in to a different, empty Philip Chapman account (philip-chapman-9a9258449). No link comment, no Eastbridge repost, Scheduled list not checked. Per this file, 27 Nov–14 Dec were already scheduled on 25 Nov, so the next 7 days should still be covered.
 
 26 Nov evening (~21:20 UAE, Phil live): checklist post at 12h has 18 impressions, 9 reached, 74% in network, 1 repost, 0 reactions, 0 comments apart from the link. This is the weakest result so far (25 Nov contracts post: 176 impressions, 99 reached, 51% out of network). Phil added the link comment by hand at ~5h. The Eastbridge page did not repost it: the page ran its own checklist post (link in the body) 5h ago instead. The page also ran a "fly around the world" sourcing post 1 day ago, which is on the Do-not-use list. Likely causes: a checklist/download topic (these always stay in network), a generic first line, the late link, and possibly the account itself was held back (security check this morning after 64 connection requests in 2 days; unproven). The pattern rewrite did NOT rescue the checklist, so: no more checklist or download posts unless Phil asks for one.
+
+26 Nov (~21:40 UAE), at Phil's request, where the direct Eastbridge page posts come from: 10 direct page posts since ~12 Nov (D&B, PM fees, defects, renovate/rebuild, building from the UK, agents/calculator, Construction Week, authorities, sourcing, checklist), written in the page's voice, each published at exactly ~12:00 UTC (activity timestamps 17, 18, 19, 24, 25 and 26 Nov at 12:00:0x UTC). That precision points to a scheduler, not a live session. Checked: the page's LinkedIn scheduled list is EMPTY (nothing more queued); no scheduled task posts to the page; Windsor has no export tasks; Typefully has no accounts; the repo and git history hold none of these texts. n8n could not be checked (connector failing, 404). Most likely a batch scheduled in LinkedIn when the page was set up, now used up. Rule added above so nothing new gets written. 27 Nov post rewritten (DM over-design) and edited in LinkedIn 26 Nov ~21:30 UAE, "Post schedule updated" seen, still 27 Nov 5:00 AM.
 
 24 Nov follow-up (~23:00 UAE, Phil said it was better received): which-authority post at 1,063 impr. (NOT boosted: Phil tried a free-credit boost but it never ran; Boost tab shows £0.00 of £40.00 spent, so all reach is organic), 784 reached, 91% out of network, 3 reactions / 5 comments / 1 repost, 4 profile viewers, 0 followers; Senior 37%, Construction 24%, top location Dubai 11%, top job title Project Manager.
 
@@ -493,25 +496,25 @@ The free checklist: link in the first comment 👇
 
 #DubaiVillas #AbuDhabi #VillaConstruction #DubaiRealEstate #ProjectManagement
 
-### 27 Nov — Dubai Municipality over-design warning
-Is your villa's structure bigger than it needs to be? Dubai Municipality thinks some are.
+### 27 Nov — Dubai Municipality over-design warning (REWRITTEN 26 Nov evening with Phil; LinkedIn edited 26 Nov)
+Dubai Municipality has warned villa consultants for designing more structure than the code requires. Owners were paying for it.
 
-In August 2025 it warned several engineering consultancies that their villa designs went beyond the Dubai Building Code with no proven engineering need, raising owners' costs.
+In August 2025 it said several offices' villa designs went beyond the Dubai Building Code with no proven engineering need, pushing up construction costs. Earlier that year it suspended two offices for six months.
 
-From 21 years on the builder's side, the reasons are rarely sinister:
+For 21 years I was the builder. I priced what was drawn. Why it happens:
 
-• Caution costs the designer nothing; the owner pays for it
-• Reusing the last villa's design is quicker than refining a new one
-• Fees tied to build cost reward a heavier building
-• Nobody asks to see the structural numbers
+• Caution costs the designer nothing
+• Last villa's design, reused
+• Fees tied to build cost
+• Nobody asks for the numbers
 
-The answer isn't cutting steel on site. It's asking your consultant to explain the design against the code before tender, and comparing quantities across bids.
+The fix isn't cutting steel on site. It's before tender: ask your consultant to take you through the design against the code, and compare steel and concrete quantities across bids.
 
-Engineers and QSs: have you priced a villa that could have used less steel? What drove it?
+Engineers, QSs and contractors: where does the extra usually sit, the foundations or the frame?
 
 The full explainer: link in the first comment 👇
 
-#DubaiVillas #DubaiMunicipality #VillaConstruction #DubaiRealEstate #ProjectManagement
+#DubaiMunicipality #DubaiBuildingCode #DubaiVillas #VillaConstruction #DubaiRealEstate
 
 ### 28 Nov — changing a villa's layout
 Want to knock through a wall in your Dubai villa? Ask who has to approve it first.
