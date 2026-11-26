@@ -5,3 +5,5 @@ Indexing: 542 indexed, 12 not indexed (7 crawled - currently not indexed; 3 alte
 Performance, last 7 days (17-23 Nov): 6 clicks, 296 impressions, CTR 2%, average position 34.5 (25 Nov report: 5 / 291 / 1.7% / 31.9).
 
 Top queries by impressions: villa extension in dubai 16; перепланировка виллы дубай 12; dubai municipality villa design cost warnings 12; villa extension dubai 12; emirates hills villa renovation 9; villa renovation in al barari 7; villa extension 6; p chapman construction 5.
+
+By country, 17-23 Nov (Windsor; it counts impressions differently, so its totals are higher than the Search Console screen): UAE 5 clicks / 417 impressions; UK 2 / 22; US 1 / 40; India 0 / 21; Russia 0 / 10.
